@@ -1,6 +1,6 @@
 {
- "schema": "artifact-ledger-v2",
- "n_files": 203,
+ "schema": "artifact-ledger-v3",
+ "n_files": 209,
  "files": [
   {
    "path": "Makefile",
@@ -9,8 +9,13 @@
   },
   {
    "path": "README.md",
-   "sha256": "64da4d2795ccdb82105baf95a21f571d5cdf14f4e61029c21f846074e0084045",
-   "bytes": 10104
+   "sha256": "eb8be91a3cb8e16abb7ca44addb3006681579d2d09c40e1724f4203587f86045",
+   "bytes": 2360
+  },
+  {
+   "path": "artifact_ledger.json",
+   "sha256": "cdead3308e0600c1636e5d45cd4014aef12c1925aa0742173d0a25a28c3fc26e",
+   "bytes": 32858
   },
   {
    "path": "data/cells/cp0_GT-v1.json",
@@ -313,6 +318,21 @@
    "bytes": 1774008
   },
   {
+   "path": "figures/checkpoint_sensitivity_schematic.pdf",
+   "sha256": "0df24dd6803b7518c8bdfb05e280d1602374263ff492b45df7626dec1e9d239d",
+   "bytes": 53219
+  },
+  {
+   "path": "figures/dose_response.pdf",
+   "sha256": "9fa6118ed75f2f94e68ff3a5c71d35ef226986b2d085981686ec38c5529244b6",
+   "bytes": 20887
+  },
+  {
+   "path": "figures/original_trajectory.pdf",
+   "sha256": "c2590ba545804a513c297145e7ad638ea9aa5cd866c2fd1fc3207ff5f53051e2",
+   "bytes": 21194
+  },
+  {
    "path": "manifests/exclusions.jsonl",
    "sha256": "474a17ee76aca8d83430563b19ec24fb6e8a04a42dd1afadba8879e8269b4354",
    "bytes": 5686
@@ -321,6 +341,21 @@
    "path": "manifests/round3_provenance.json",
    "sha256": "8feb321a9e024ac9daa66a54344b2d70be3396812a70b7d884456a3d6bc917f6",
    "bytes": 14368
+  },
+  {
+   "path": "paper/main_mmsys.pdf",
+   "sha256": "64cfb5c4d9bc00e7e0825087f71361efb23071d1817d06e2605b47cad137de55",
+   "bytes": 571267
+  },
+  {
+   "path": "paper/main_mmsys.tex",
+   "sha256": "c656ea11975708cd0a20381f89558186226e41880a0fdf378f608dbc7b8fb775",
+   "bytes": 131020
+  },
+  {
+   "path": "paper/references.bib",
+   "sha256": "041d307aba06996ed22b20d016c832c651f4f32174b0dd59e17f41b97b3a2f51",
+   "bytes": 16361
   },
   {
    "path": "requirements.lock.txt",
@@ -341,6 +376,11 @@
    "path": "results/bleu_diagnostics/bleu_decomposition.json",
    "sha256": "90862c12632d567fcb6d5e0a12b8fbd246b02ca43c51ffff47dcb9cf39fcee60",
    "bytes": 36530
+  },
+  {
+   "path": "results/checkpoint_registry.json",
+   "sha256": "ba1b2daa9e0f14577b8f4125f1e5862dcd0d3dbca36e559e125db6499616cbe2",
+   "bytes": 12518
   },
   {
    "path": "results/evaluator_extension/seed_index_1_GT-v1.json",
@@ -1001,16 +1041,6 @@
    "path": "scripts/reviewer_round2_diagnostics.py",
    "sha256": "4b153880a562ba7420337e608235e23dd58af35152e34d8e1fe9e3b7dd3a977a",
    "bytes": 2231
-  },
-  {
-   "path": "tests/__pycache__/test_checkpoint_gt_alignment.cpython-310.pyc",
-   "sha256": "91e0c355adfcf4a9ca84eaad4470c99a16252a897b7c4aa0d14b28f544ccdd98",
-   "bytes": 911
-  },
-  {
-   "path": "tests/__pycache__/test_checkpoint_gt_alignment.cpython-312.pyc",
-   "sha256": "6744a71c3beb20fa611fbe52a383f6bb9cc9790eea050cd076f4906db1250ab5",
-   "bytes": 1392
   },
   {
    "path": "tests/test_checkpoint_gt_alignment.py",
