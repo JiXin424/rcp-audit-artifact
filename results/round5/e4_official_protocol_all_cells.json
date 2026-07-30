@@ -1,0 +1,156 @@
+{
+  "original": {
+    "GT-v1": {
+      "chrf_official": 34.58509769785496,
+      "wer_official": 85.77470203767781,
+      "rouge_official": 35.19608041310144
+    },
+    "PT-v1": {
+      "chrf_official": 19.027939992366928,
+      "wer_official": 101.678841471229,
+      "rouge_official": 17.255835698396783
+    },
+    "TN-PTCOMP-v1": {
+      "chrf_official": 41.88345504687552,
+      "wer_official": 77.35486351403307,
+      "rouge_official": 45.17009856128972
+    },
+    "TN-PURE-v1": {
+      "chrf_official": 47.819668044429186,
+      "wer_official": 71.86979366910163,
+      "rouge_official": 53.06615579608732
+    }
+  },
+  "seed_101": {
+    "GT-v1": {
+      "chrf_official": 26.896704500699776,
+      "wer_official": 90.6958861976163,
+      "rouge_official": 28.98762031153011
+    },
+    "PT-v1": {
+      "chrf_official": 19.47766463962037,
+      "wer_official": 103.84467512495195,
+      "rouge_official": 19.573853916573047
+    },
+    "TN-PTCOMP-v1": {
+      "chrf_official": 25.68049160291152,
+      "wer_official": 92.97706010508779,
+      "rouge_official": 27.477246985835112
+    },
+    "TN-PURE-v1": {
+      "chrf_official": 25.583233929017506,
+      "wer_official": 93.64347046007946,
+      "rouge_official": 27.631970523328377
+    }
+  },
+  "seed_202": {
+    "GT-v1": {
+      "chrf_official": 27.34401143032598,
+      "wer_official": 89.13238498013585,
+      "rouge_official": 29.845568358042975
+    },
+    "PT-v1": {
+      "chrf_official": 18.23348896589869,
+      "wer_official": 99.7436883250032,
+      "rouge_official": 19.446347630458522
+    },
+    "TN-PTCOMP-v1": {
+      "chrf_official": 26.051279047819687,
+      "wer_official": 91.91336665385109,
+      "rouge_official": 28.081893595859064
+    },
+    "TN-PURE-v1": {
+      "chrf_official": 25.404586798397116,
+      "wer_official": 92.65667051134179,
+      "rouge_official": 28.1773978334027
+    }
+  },
+  "seed_303": {
+    "GT-v1": {
+      "chrf_official": 29.73798261200118,
+      "wer_official": 92.77201076509036,
+      "rouge_official": 30.43769048019082
+    },
+    "PT-v1": {
+      "chrf_official": 19.298995019884178,
+      "wer_official": 105.88235294117648,
+      "rouge_official": 17.029733449940775
+    },
+    "TN-PTCOMP-v1": {
+      "chrf_official": 28.858740432358953,
+      "wer_official": 93.73317954632834,
+      "rouge_official": 29.321766917921565
+    },
+    "TN-PURE-v1": {
+      "chrf_official": 28.533049658882415,
+      "wer_official": 94.29706523132128,
+      "rouge_official": 29.929223815155492
+    }
+  },
+  "seed_404": {
+    "GT-v1": {
+      "chrf_official": 25.10283001388852,
+      "wer_official": 91.73394848135332,
+      "rouge_official": 27.425423155952323
+    },
+    "PT-v1": {
+      "chrf_official": 18.875914948275344,
+      "wer_official": 100.12815583749838,
+      "rouge_official": 19.183874745782532
+    },
+    "TN-PTCOMP-v1": {
+      "chrf_official": 24.048434374636535,
+      "wer_official": 92.78482634884018,
+      "rouge_official": 26.09284180942505
+    },
+    "TN-PURE-v1": {
+      "chrf_official": 23.90083361243855,
+      "wer_official": 93.60502370882993,
+      "rouge_official": 27.123369372692952
+    }
+  },
+  "seed_505": {
+    "GT-v1": {
+      "chrf_official": 27.981284202743307,
+      "wer_official": 90.77277970011534,
+      "rouge_official": 29.1450555436849
+    },
+    "PT-v1": {
+      "chrf_official": 18.474823351026345,
+      "wer_official": 104.11380238369858,
+      "rouge_official": 15.325651811533788
+    },
+    "TN-PTCOMP-v1": {
+      "chrf_official": 26.869104641802732,
+      "wer_official": 92.47725233884402,
+      "rouge_official": 27.569631259412137
+    },
+    "TN-PURE-v1": {
+      "chrf_official": 26.203740345719773,
+      "wer_official": 94.18172497757273,
+      "rouge_official": 27.84582236159362
+    }
+  },
+  "seed_606": {
+    "GT-v1": {
+      "chrf_official": 27.36969121507858,
+      "wer_official": 92.72074843009099,
+      "rouge_official": 28.7418760522771
+    },
+    "PT-v1": {
+      "chrf_official": 19.42171212441597,
+      "wer_official": 104.54953223119313,
+      "rouge_official": 18.090325729965027
+    },
+    "TN-PTCOMP-v1": {
+      "chrf_official": 27.214825337459132,
+      "wer_official": 95.25823401255927,
+      "rouge_official": 27.7224600998876
+    },
+    "TN-PURE-v1": {
+      "chrf_official": 26.99122863291139,
+      "wer_official": 96.18095604254773,
+      "rouge_official": 28.59238140730518
+    }
+  }
+}

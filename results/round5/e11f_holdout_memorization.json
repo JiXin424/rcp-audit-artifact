@@ -1,0 +1,30 @@
+{
+ "original": {
+  "holdout_GT_bleu": 76.98983545348597,
+  "n": 525
+ },
+ "seed_101": {
+  "holdout_GT_bleu": 6.4976644203886895,
+  "n": 525
+ },
+ "seed_303": {
+  "holdout_GT_bleu": 7.600604938099291,
+  "n": 525
+ },
+ "wd0_seed202": {
+  "holdout_GT_bleu": 10.434256740617508,
+  "n": 525
+ },
+ "ladder_f0.75": {
+  "holdout_GT_bleu": 4.860127033397002,
+  "n": 525
+ },
+ "cfaith404": {
+  "holdout_GT_bleu": 7.432700345134167,
+  "n": 525
+ },
+ "cfaith101": {
+  "holdout_GT_bleu": 7.604439900202502,
+  "n": 525
+ }
+}

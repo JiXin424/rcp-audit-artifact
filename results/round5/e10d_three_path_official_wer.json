@@ -1,0 +1,19 @@
+{
+ "protocol": "official jiwer 3.1.0 with official normalization, 0-100 scale",
+ "path_A_canonical": {
+  "bleu4": 12.777,
+  "wer_official": 85.77470203767781
+ },
+ "path_B_noop": {
+  "bleu4": 12.777,
+  "wer_official": 85.77470203767781
+ },
+ "path_C_double_subsample": {
+  "bleu4": 6.646382959399387,
+  "wer_official": 86.85121107266436
+ },
+ "legacy_custom_wer": {
+  "A": 79.26,
+  "C": 80.26
+ }
+}

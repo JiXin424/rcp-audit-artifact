@@ -1,0 +1,82 @@
+{
+ "n_items": 50,
+ "sampling": "uniform random from 641 PHX-public references, seed 20260729, frozen before inspection",
+ "auditor": "single auditor (authors' assistant, German-literate); no second annotator available -- agreement unmeasurable, documented as limitation",
+ "families": {
+  "NUM": {
+   "tp": 12,
+   "fp": 0,
+   "fn": 4,
+   "precision": 1.0,
+   "recall": 0.75,
+   "fn_examples": [
+    "einem grad (inflected eins)",
+    "achtundzwanzigsten (ordinal)",
+    "ein grad",
+    "zwanzigsten (ordinal)"
+   ]
+  },
+  "TEMP": {
+   "tp": 11,
+   "fp": 0,
+   "fn": 3,
+   "precision": 1.0,
+   "recall": 0.786,
+   "fn_examples": [
+    "sechs in 'sechs bis zwanzig grad' (range start)",
+    "einem grad",
+    "ein grad"
+   ]
+  },
+  "TIME": {
+   "tp": 41,
+   "fp": 1,
+   "fn": 0,
+   "precision": 0.976,
+   "recall": 1.0,
+   "fp_examples": [
+    "abend in 'guten abend liebe zuschauer' (greeting, not temporal)"
+   ]
+  },
+  "PLACE": {
+   "tp": 39,
+   "fp": 4,
+   "fn": 5,
+   "precision": 0.907,
+   "recall": 0.886,
+   "fp_examples": [
+    "oder x3 (conjunction 'or', not the river Oder)",
+    "wald in 'bayerischen wald' (generic token)"
+   ],
+   "fn_examples": [
+    "ostbayern (compound)",
+    "thüringens, sachsens (genitives)",
+    "ungarn (lexicon gap)",
+    "mittelmeer (lexicon gap)"
+   ]
+  },
+  "EVENT": {
+   "tp": 66,
+   "fp": 0,
+   "fn": 16,
+   "precision": 1.0,
+   "recall": 0.805,
+   "fn_examples": [
+    "unwetter/unwetterwarnungen (lexicon gap)",
+    "freundlicher x2 (inflection)",
+    "regnet/schneit (verb forms)",
+    "warme (inflection)",
+    "dauerfrost, bewölkung, sonnenscheindauer, gewitterluft, wolkenlücken (compounds)",
+    "feuchte, durchwachsen, erfreulich (lexicon gaps)"
+   ]
+  }
+ },
+ "overall": {
+  "tp": 169,
+  "fp": 5,
+  "fn": 28,
+  "precision": 0.971,
+  "recall": 0.858
+ },
+ "interpretation": "extractor is conservative (high precision, moderate recall); the same extractor is applied to all systems, so comparative slot-F1 conclusions are unbiased while absolute values underestimate true slot content"
+}

@@ -1,0 +1,63 @@
+{
+ "B": 10000,
+ "conditions": {
+  "original_refs_full641": {
+   "n": 641,
+   "ref_mode": "orig",
+   "GT": 12.777148564612425,
+   "PURE": 23.78873705447203,
+   "gap": 11.011588489859605
+  },
+  "human_refs_full641": {
+   "n": 641,
+   "ref_mode": "human",
+   "GT": 5.659470937652426,
+   "PURE": 6.779660133509986,
+   "gap": 1.1201891958575603
+  },
+  "human_refs_highconf461": {
+   "n": 461,
+   "ref_mode": "human",
+   "GT": 7.347195345666542,
+   "PURE": 8.662292913370004,
+   "gap": 1.3150975677034626
+  },
+  "dual_refs_full641": {
+   "n": 641,
+   "ref_mode": "dual",
+   "GT": 14.965550989179569,
+   "PURE": 26.51227246622905,
+   "gap": 11.54672147704948
+  },
+  "dual_refs_highconf461": {
+   "n": 461,
+   "ref_mode": "dual",
+   "GT": 17.57428460012364,
+   "PURE": 28.672196625038275,
+   "gap": 11.097912024914635
+  }
+ },
+ "attenuation": {
+  "gap_original_refs": 11.011588489859605,
+  "gap_human_refs": 1.1201891958575603,
+  "gap_original_ci": [
+   9.613303211231807,
+   12.43164731339254
+  ],
+  "gap_human_ci": [
+   0.37515535679746753,
+   1.9140126020526635
+  ],
+  "attenuation_abs": 9.891399294002046,
+  "attenuation_abs_ci": [
+   8.429395726849782,
+   11.323264894069142
+  ],
+  "ratio_remaining": 0.10172821086522844,
+  "ratio_remaining_ci": [
+   0.03504729542343661,
+   0.1714704240585133
+  ],
+  "note": "descriptive contrast of two corpus gaps on paired resamples; not a causal attribution"
+ }
+}

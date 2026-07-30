@@ -1,0 +1,76 @@
+{
+ "note": "human back-translations: Czehmann et al. 2026 (CC BY-NC-SA 4.0), joined by PHOENIX test ID",
+ "against_original_references": {
+  "label": "original speech-transcribed references (baseline)",
+  "n": 641,
+  "scores": {
+   "GT_decode": {
+    "bleu4": 12.777,
+    "chrf": 34.585
+   },
+   "PURE_decode": {
+    "bleu4": 23.789,
+    "chrf": 47.82
+   },
+   "original_reference_as_hyp": {
+    "bleu4": 100.0,
+    "chrf": 100.0
+   },
+   "donor_transcript_as_hyp": {
+    "bleu4": 27.339,
+    "chrf": 52.489
+   }
+  },
+  "PURE_minus_GT_bleu": 11.012,
+  "PURE_minus_GT_chrf": 13.235
+ },
+ "against_human_full": {
+  "label": "human back-translations, all confidences",
+  "n": 641,
+  "scores": {
+   "GT_decode": {
+    "bleu4": 5.665,
+    "chrf": 32.75
+   },
+   "PURE_decode": {
+    "bleu4": 6.787,
+    "chrf": 35.022
+   },
+   "original_reference_as_hyp": {
+    "bleu4": 11.872,
+    "chrf": 46.599
+   },
+   "donor_transcript_as_hyp": {
+    "bleu4": 6.939,
+    "chrf": 36.244
+   }
+  },
+  "PURE_minus_GT_bleu": 1.122,
+  "PURE_minus_GT_chrf": 2.272
+ },
+ "against_human_highconf": {
+  "label": "human back-translations, confidence=1.0 subset",
+  "n": 461,
+  "scores": {
+   "GT_decode": {
+    "bleu4": 7.347,
+    "chrf": 35.119
+   },
+   "PURE_decode": {
+    "bleu4": 8.662,
+    "chrf": 37.389
+   },
+   "original_reference_as_hyp": {
+    "bleu4": 14.643,
+    "chrf": 49.733
+   },
+   "donor_transcript_as_hyp": {
+    "bleu4": 8.849,
+    "chrf": 38.821
+   }
+  },
+  "PURE_minus_GT_bleu": 1.315,
+  "PURE_minus_GT_chrf": 2.27
+ },
+ "n_empty_human_bt": 0
+}

@@ -1,0 +1,174 @@
+{
+ "registry": {
+  "released_original": {
+   "family": "released SLRTP2025 evaluator",
+   "count": 1,
+   "ids": [
+    "best.ckpt"
+   ],
+   "role": "audit target; not trained by us"
+  },
+  "reconstructions_primary": {
+   "family": "recipe-conditioned reconstructions (documented recipe, NLL-selected)",
+   "count": 6,
+   "ids": [
+    "seed_101",
+    "seed_202",
+    "seed_303",
+    "seed_404",
+    "seed_505",
+    "seed_606"
+   ],
+   "role": "primary gap/bootstrap/multiseed table/cells cp1-6"
+  },
+  "reconstructions_extension": {
+   "family": "recipe-conditioned reconstructions (extension)",
+   "count": 8,
+   "ids": [
+    "seed_707",
+    "seed_808",
+    "seed_909",
+    "seed_1001",
+    "seed_1102",
+    "seed_1203",
+    "seed_1304",
+    "seed_1405"
+   ],
+   "role": "multiseed table extension range; prediction interval"
+  },
+  "rescue_lr": {
+   "family": "lr rescue (A: 5e-4, B: 2e-3)",
+   "count": 8,
+   "ids": [
+    "A101",
+    "A202",
+    "A303",
+    "A404",
+    "B101",
+    "B202",
+    "B303",
+    "B404"
+   ],
+   "role": "rescue table family row; dev gate only"
+  },
+  "rescue2": {
+   "family": "expanded rescue (bs128/bs512/drop0.2/wd0/ls0.1/ep600lr5e4)",
+   "count": 12,
+   "ids": [
+    "bs128x101",
+    "bs128x202",
+    "bs512x101",
+    "bs512x202",
+    "drop101",
+    "drop202",
+    "wd0x101",
+    "wd0x202",
+    "ls101",
+    "ls202",
+    "ep600x101",
+    "ep600x202"
+   ],
+   "role": "rescue table family rows; wd0/bs512 also in dose-response, pass-through, perturbation, config table"
+  },
+  "ladder": {
+   "family": "train-pool subsampling ladder",
+   "count": 4,
+   "ids": [
+    "f0.125",
+    "f0.25",
+    "f0.5",
+    "f0.75"
+   ],
+   "role": "dose-response fig; gap table"
+  },
+  "config_faithful": {
+   "family": "config-faithful (3000ep, BLEU-selected)",
+   "count": 4,
+   "ids": [
+    "cfaith101",
+    "cfaith202",
+    "cfaith303",
+    "cfaith404"
+   ],
+   "role": "config-faithful table; dose-response fig"
+  },
+  "big_arch": {
+   "family": "large-capacity alternative architectures (A1-A4)",
+   "count": 4,
+   "ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "role": "competence-matched attempt (E-A')"
+  },
+  "confirmation": {
+   "family": "frozen-protocol confirmation seeds",
+   "count": 2,
+   "ids": [
+    "seed_1506",
+    "seed_1607"
+   ],
+   "role": "confirmation experiment (E-D')"
+  },
+  "bt_retrained_holdout": {
+   "family": "E13 BT retrained on train-core (525 excluded)",
+   "count": 1,
+   "ids": [
+    "bt_retrained"
+   ],
+   "role": "holdout series table"
+  },
+  "crossfit_bt": {
+   "family": "cross-fit BT_A/B (half-pool each)",
+   "count": 2,
+   "ids": [
+    "BT_A",
+    "BT_B"
+   ],
+   "role": "holdout series table (cross-fit row)"
+  }
+ },
+ "total_trained": 51,
+ "per_analysis": {
+  "dose_response figure": [
+   "reconstructions_primary",
+   "reconstructions_extension",
+   "rescue2 (wd0,bs512)",
+   "ladder",
+   "config_faithful",
+   "released_original"
+  ],
+  "multiseed table": [
+   "reconstructions_primary",
+   "reconstructions_extension"
+  ],
+  "rescue table": [
+   "rescue_lr",
+   "rescue2"
+  ],
+  "config_faithful table": [
+   "config_faithful",
+   "released_original",
+   "family ranges"
+  ],
+  "perturbation table": [
+   "released_original",
+   "rescue2 (wd0)"
+  ],
+  "pass-through": [
+   "released_original",
+   "reconstructions_primary",
+   "reconstructions_extension",
+   "rescue2 (wd0,bs512)",
+   "ladder",
+   "config_faithful"
+  ],
+  "holdout series": [
+   "bt_retrained_holdout",
+   "crossfit_bt",
+   "released_original"
+  ]
+ }
+}

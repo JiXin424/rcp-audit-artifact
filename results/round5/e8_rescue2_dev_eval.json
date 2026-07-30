@@ -1,0 +1,98 @@
+{
+ "rescue2_bs128_seed101": {
+  "dev_bleu4": 0.07404318952106091,
+  "dev_wer": 0.8457111537407509,
+  "dev_nll": 0.0,
+  "abs_dbleu": 0.059743329048076846,
+  "abs_dwer": 0.07084132639079199,
+  "gate_pass": false
+ },
+ "rescue2_bs128_seed202": {
+  "dev_bleu4": 0.06812589180948692,
+  "dev_wer": 0.8403672238969581,
+  "dev_nll": 0.0,
+  "abs_dbleu": 0.06566062675965084,
+  "abs_dwer": 0.06549739654699915,
+  "gate_pass": false
+ },
+ "rescue2_bs512_seed101": {
+  "dev_bleu4": 0.09157094539935626,
+  "dev_wer": 0.815702932310222,
+  "dev_nll": 0.0,
+  "abs_dbleu": 0.0422155731697815,
+  "abs_dwer": 0.040833104960263045,
+  "gate_pass": false
+ },
+ "rescue2_bs512_seed202": {
+  "dev_bleu4": 0.08832674341553996,
+  "dev_wer": 0.8261167443135106,
+  "dev_nll": 0.0,
+  "abs_dbleu": 0.045459775153597795,
+  "abs_dwer": 0.05124691696355166,
+  "gate_pass": false
+ },
+ "rescue2_drop0.2_seed101": {
+  "dev_bleu4": 0.06913026624118189,
+  "dev_wer": 0.852151274321732,
+  "dev_nll": 0.0,
+  "abs_dbleu": 0.06465625232795587,
+  "abs_dwer": 0.07728144697177308,
+  "gate_pass": false
+ },
+ "rescue2_drop0.2_seed202": {
+  "dev_bleu4": 0.07445268789229229,
+  "dev_wer": 0.8392710331597698,
+  "dev_nll": 0.0,
+  "abs_dbleu": 0.05933383067684547,
+  "abs_dwer": 0.0644012058098109,
+  "gate_pass": false
+ },
+ "rescue2_wd0_seed101": {
+  "dev_bleu4": 0.09824129467680034,
+  "dev_wer": 0.8247465058920253,
+  "dev_nll": 0.0,
+  "abs_dbleu": 0.03554522389233741,
+  "abs_dwer": 0.049876678542066344,
+  "gate_pass": false
+ },
+ "rescue2_wd0_seed202": {
+  "dev_bleu4": 0.09920437860804666,
+  "dev_wer": 0.8051520964647849,
+  "dev_nll": 0.0,
+  "abs_dbleu": 0.03458213996109109,
+  "abs_dwer": 0.03028226911482601,
+  "gate_pass": false
+ },
+ "rescue2_ep600lr5e4_seed101": {
+  "dev_bleu4": 0.08205767157720595,
+  "dev_wer": 0.8655796108522883,
+  "dev_nll": 0.0,
+  "abs_dbleu": 0.05172884699193181,
+  "abs_dwer": 0.09070978350232939,
+  "gate_pass": false
+ },
+ "rescue2_ep600lr5e4_seed202": {
+  "dev_bleu4": 0.08266968579813286,
+  "dev_wer": 0.830090435735818,
+  "dev_nll": 0.0,
+  "abs_dbleu": 0.0511168327710049,
+  "abs_dwer": 0.05522060838585907,
+  "gate_pass": false
+ },
+ "rescue2_ls0.1_seed101": {
+  "dev_bleu4": 0.07372011100734958,
+  "dev_wer": 0.8348862702110167,
+  "dev_nll": 0.0,
+  "abs_dbleu": 0.060066407561788174,
+  "abs_dwer": 0.060016442861057784,
+  "gate_pass": false
+ },
+ "rescue2_ls0.1_seed202": {
+  "dev_bleu4": 0.06746715604650425,
+  "dev_wer": 0.8385859139490272,
+  "dev_nll": 0.0,
+  "abs_dbleu": 0.06631936252263351,
+  "abs_dwer": 0.06371608659906824,
+  "gate_pass": false
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "n_items": 50,
+ "design": "stratified by system: 25 GT-decode + 25 PURE-decode (original evaluator), seeds 20260730",
+ "auditor": "single auditor; consistency with the 50-item reference audit rules",
+ "by_system": {
+  "GT-decode": {
+   "overall": {
+    "tp": 72,
+    "fp": 3,
+    "fn": 7.5,
+    "precision": 0.96,
+    "recall": 0.906
+   },
+   "families": {
+    "NUM": {
+     "tp": 3,
+     "fp": 0,
+     "fn": 0
+    },
+    "TEMP": {
+     "tp": 3,
+     "fp": 0,
+     "fn": 0
+    },
+    "TIME": {
+     "tp": 20,
+     "fp": 1,
+     "fn": 0,
+     "fp_note": "abend greeting"
+    },
+    "PLACE": {
+     "tp": 20,
+     "fp": 1,
+     "fn": 1,
+     "fp_note": "norden direction",
+     "fn_note": "deutschlands genitive"
+    },
+    "EVENT": {
+     "tp": 24,
+     "fp": 1,
+     "fn": 6.5,
+     "fp_note": "schönen greeting",
+     "fn_note": "hoch/tief/hochdruckeinfluss pressure systems, winterwetter, schauern"
+    }
+   }
+  },
+  "PURE-decode": {
+   "overall": {
+    "tp": 77,
+    "fp": 2,
+    "fn": 16,
+    "precision": 0.975,
+    "recall": 0.828
+   },
+   "families": {
+    "NUM": {
+     "tp": 6,
+     "fp": 0,
+     "fn": 3,
+     "fn_note": "ordinals achtzehnten/elften/sechzehnten"
+    },
+    "TEMP": {
+     "tp": 5,
+     "fp": 0,
+     "fn": 1,
+     "fn_note": "zehn in 'bis zehn (grad)'"
+    },
+    "TIME": {
+     "tp": 25,
+     "fp": 1,
+     "fn": 0,
+     "fp_note": "abend greeting"
+    },
+    "PLACE": {
+     "tp": 19,
+     "fp": 1,
+     "fn": 0,
+     "fp_note": "oder conjunction"
+    },
+    "EVENT": {
+     "tp": 22,
+     "fp": 0,
+     "fn": 11,
+     "fn_note": "regnet x5, mildere, feuchte+kalte, schauern, warnungen, unwetterwarnungen"
+    }
+   }
+  }
+ },
+ "key_finding": "extractor recall is systematically LOWER on PURE hypotheses (0.83) than on GT hypotheses (0.91): donor-transcript-style outputs use more inflected verbs and compounds (regnet, unwetterwarnungen) that the lexicon misses. The same-extractor-applied-to-all argument does NOT establish strict cross-system unbiasedness; the bias direction understates PURE slot content, so the PURE>GT slot-F1 advantage is, if anything, underestimated."
+}

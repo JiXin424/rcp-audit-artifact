@@ -1,0 +1,689 @@
+[
+ {
+  "id": "01April_2011_Friday_tagesschau-3387",
+  "text": "am montag überall wechselhaft und deutlich kühler .",
+  "slots": {
+   "TIME": {
+    "montag": 1
+   },
+   "EVENT": {
+    "wechselhaft": 1,
+    "kühler": 1
+   }
+  }
+ },
+ {
+  "id": "17June_2010_Thursday_tagesschau-3903",
+  "text": "es gelten entsprechende unwetterwarnungen des deutschen wetterdienstes .",
+  "slots": {}
+ },
+ {
+  "id": "04May_2010_Tuesday_heute-460",
+  "text": "der donnerstag wird dann richtig krass da erwarten wir unwetter in deutschland und große temperaturunterschiede sechs bis zwanzig grad .",
+  "slots": {
+   "NUM": {
+    "sechs": 1,
+    "zwanzig": 1
+   },
+   "TEMP": {
+    "zwanzig": 1
+   },
+   "TIME": {
+    "donnerstag": 1
+   },
+   "PLACE": {
+    "deutschland": 1
+   }
+  }
+ },
+ {
+  "id": "22August_2010_Sunday_tagesschau-1344",
+  "text": "morgen vielerorts schauer vor allem im süden und osten noch einige gewitter mitunter regnet es kräftig auch unwetter sind weiter möglich .",
+  "slots": {
+   "TIME": {
+    "morgen": 1
+   },
+   "PLACE": {
+    "süden": 1,
+    "osten": 1
+   },
+   "EVENT": {
+    "schauer": 1,
+    "gewitter": 1
+   }
+  }
+ },
+ {
+  "id": "17February_2010_Wednesday_heute-1478",
+  "text": "dazu gehört ein tiefdruckgebiet mit milder luft im gepäck .",
+  "slots": {
+   "EVENT": {
+    "milder": 1
+   }
+  }
+ },
+ {
+  "id": "30November_2009_Monday_tagesschau-5750",
+  "text": "im westen und nordwesten weitgehend trocken hier und da wolkenlücken örtlich bildet sich nebel .",
+  "slots": {
+   "PLACE": {
+    "westen": 1,
+    "nordwesten": 1
+   },
+   "EVENT": {
+    "trocken": 1,
+    "nebel": 1
+   }
+  }
+ },
+ {
+  "id": "29March_2010_Monday_tagesschau-8387",
+  "text": "sie bringen kräftige schauer und gewitter .",
+  "slots": {
+   "EVENT": {
+    "schauer": 1,
+    "gewitter": 1
+   }
+  }
+ },
+ {
+  "id": "05March_2011_Saturday_tagesschau-5447",
+  "text": "morgen reichen die temperaturen von einem grad im vogtland bis neun grad am oberrhein .",
+  "slots": {
+   "NUM": {
+    "neun": 1
+   },
+   "TEMP": {
+    "neun": 1
+   },
+   "TIME": {
+    "morgen": 1
+   },
+   "PLACE": {
+    "vogtland": 1,
+    "oberrhein": 1
+   }
+  }
+ },
+ {
+  "id": "20November_2009_Friday_tagesschau-6575",
+  "text": "aber es bleibt für die jahreszeit immer noch recht mild .",
+  "slots": {
+   "EVENT": {
+    "mild": 1
+   }
+  }
+ },
+ {
+  "id": "06October_2012_Saturday_tagesschau-8742",
+  "text": "dort wird es am dienstag windig dazu gibt es einzelne schauer .",
+  "slots": {
+   "TIME": {
+    "dienstag": 1
+   },
+   "EVENT": {
+    "windig": 1,
+    "schauer": 1
+   }
+  }
+ },
+ {
+  "id": "30November_2009_Monday_tagesschau-5753",
+  "text": "schwacher bis mäßiger wind aus nord bis west .",
+  "slots": {
+   "EVENT": {
+    "wind": 1
+   }
+  }
+ },
+ {
+  "id": "06September_2010_Monday_tagesschau-1153",
+  "text": "am donnerstag noch unbeständig aber ab freitag wird es von westen langsam freundlicher .",
+  "slots": {
+   "TIME": {
+    "donnerstag": 1,
+    "freitag": 1
+   },
+   "PLACE": {
+    "westen": 1
+   },
+   "EVENT": {
+    "unbeständig": 1
+   }
+  }
+ },
+ {
+  "id": "04October_2010_Monday_heute-5953",
+  "text": "die temperaturen sind außer jetzt im regen wo es ein bisschen kühler bleibt doch ganz erfreulich .",
+  "slots": {
+   "EVENT": {
+    "regen": 1,
+    "kühler": 1
+   }
+  }
+ },
+ {
+  "id": "28August_2009_Friday_tagesschau-5881",
+  "text": "dort morgen bis zweiundzwanzig grad .",
+  "slots": {
+   "NUM": {
+    "zweiundzwanzig": 1
+   },
+   "TEMP": {
+    "zweiundzwanzig": 1
+   },
+   "TIME": {
+    "morgen": 1
+   }
+  }
+ },
+ {
+  "id": "27August_2009_Thursday_tagesschau-3267",
+  "text": "und nun die wettervorhersage für morgen freitag den achtundzwanzigsten august .",
+  "slots": {
+   "TIME": {
+    "morgen": 1,
+    "freitag": 1,
+    "august": 1
+   }
+  }
+ },
+ {
+  "id": "01November_2010_Monday_tagesschau-137",
+  "text": "die halten sich morgen recht zäh .",
+  "slots": {
+   "TIME": {
+    "morgen": 1
+   }
+  }
+ },
+ {
+  "id": "06February_2010_Saturday_tagesschau-7365",
+  "text": "der wind weht meist schwach aus ost bis nordost .",
+  "slots": {
+   "EVENT": {
+    "wind": 1
+   }
+  }
+ },
+ {
+  "id": "26August_2009_Wednesday_tagesschau-3227",
+  "text": "ab sonntag steigen dann temperaturen und sonnenscheindauer wieder .",
+  "slots": {
+   "TIME": {
+    "sonntag": 1
+   }
+  }
+ },
+ {
+  "id": "25August_2010_Wednesday_heute-6005",
+  "text": "denn im süden haben wir die schwül warme gewitterluft dabei ist es aber noch im süden sonnig .",
+  "slots": {
+   "PLACE": {
+    "süden": 2
+   },
+   "EVENT": {
+    "schwül": 1,
+    "sonnig": 1
+   }
+  }
+ },
+ {
+  "id": "08April_2010_Thursday_tagesschau-3961",
+  "text": "auch die neue woche beginnt durchwachsen und recht kühl .",
+  "slots": {
+   "EVENT": {
+    "kühl": 1
+   }
+  }
+ },
+ {
+  "id": "06May_2011_Friday_tagesschau-6435",
+  "text": "heute nacht zwölf grad in der kölner bucht und ein grad im bayerischen wald .",
+  "slots": {
+   "NUM": {
+    "zwölf": 1
+   },
+   "TEMP": {
+    "zwölf": 1
+   },
+   "TIME": {
+    "heute": 1,
+    "nacht": 1
+   },
+   "PLACE": {
+    "bucht": 1,
+    "wald": 1
+   }
+  }
+ },
+ {
+  "id": "06August_2010_Friday_tagesschau-2178",
+  "text": "sonst viel sonne ein paar lockere wolken im nordwesten fallen am nachmittag einzelne schauer .",
+  "slots": {
+   "TIME": {
+    "nachmittag": 1
+   },
+   "PLACE": {
+    "nordwesten": 1
+   },
+   "EVENT": {
+    "sonne": 1,
+    "wolken": 1,
+    "schauer": 1
+   }
+  }
+ },
+ {
+  "id": "08July_2010_Thursday_tagesschau-5389",
+  "text": "auch am montag neben sonne zum teil schwere gewitter .",
+  "slots": {
+   "TIME": {
+    "montag": 1
+   },
+   "EVENT": {
+    "sonne": 1,
+    "gewitter": 1
+   }
+  }
+ },
+ {
+  "id": "01April_2010_Thursday_tagesschau-4331",
+  "text": "am sonntag ab und an regenschauer teilweise auch gewitter .",
+  "slots": {
+   "TIME": {
+    "sonntag": 1
+   },
+   "EVENT": {
+    "regenschauer": 1,
+    "gewitter": 1
+   }
+  }
+ },
+ {
+  "id": "19November_2009_Thursday_tagesschau-3781",
+  "text": "und nun die wettervorhersage für morgen freitag den zwanzigsten november .",
+  "slots": {
+   "TIME": {
+    "morgen": 1,
+    "freitag": 1,
+    "november": 1
+   }
+  }
+ },
+ {
+  "id": "10February_2010_Wednesday_tagesschau-2514",
+  "text": "das heißt weitere schneefälle und leichten bis mäßigen dauerfrost .",
+  "slots": {
+   "EVENT": {
+    "schneefälle": 1
+   }
+  }
+ },
+ {
+  "id": "08July_2010_Thursday_tagesschau-5388",
+  "text": "richtung osten ist es meist sonnig .",
+  "slots": {
+   "PLACE": {
+    "osten": 1
+   },
+   "EVENT": {
+    "sonnig": 1
+   }
+  }
+ },
+ {
+  "id": "06October_2011_Thursday_tagesschau-823",
+  "text": "im westen und nordwesten fallen einzelne schauer .",
+  "slots": {
+   "PLACE": {
+    "westen": 1,
+    "nordwesten": 1
+   },
+   "EVENT": {
+    "schauer": 1
+   }
+  }
+ },
+ {
+  "id": "03February_2010_Wednesday_tagesschau-2061",
+  "text": "örtlich ist gefrierender regen dabei richtung nordosten auch schnee .",
+  "slots": {
+   "PLACE": {
+    "nordosten": 1
+   },
+   "EVENT": {
+    "regen": 1,
+    "schnee": 1
+   }
+  }
+ },
+ {
+  "id": "13April_2010_Tuesday_tagesschau-2314",
+  "text": "am tag sieben grad an der ostsee und fünfzehn grad am rhein .",
+  "slots": {
+   "NUM": {
+    "sieben": 1,
+    "fünfzehn": 1
+   },
+   "TEMP": {
+    "sieben": 1,
+    "fünfzehn": 1
+   },
+   "TIME": {
+    "tag": 1
+   },
+   "PLACE": {
+    "ostsee": 1,
+    "rhein": 1
+   }
+  }
+ },
+ {
+  "id": "03February_2010_Wednesday_tagesschau-2054",
+  "text": "deutschland bleibt unter tiefdruckeinfluss und in den nächsten tagen erwartet uns meist trübes wetter mit ein wenig regen oder schnee .",
+  "slots": {
+   "TIME": {
+    "tagen": 1
+   },
+   "PLACE": {
+    "deutschland": 1,
+    "oder": 1
+   },
+   "EVENT": {
+    "trübes": 1,
+    "regen": 1,
+    "schnee": 1
+   }
+  }
+ },
+ {
+  "id": "31May_2011_Tuesday_heute-1904",
+  "text": "an der elbe einzelne schauer im nordwesten aber schon wieder deutlich freundlicher .",
+  "slots": {
+   "PLACE": {
+    "elbe": 1,
+    "nordwesten": 1
+   },
+   "EVENT": {
+    "schauer": 1
+   }
+  }
+ },
+ {
+  "id": "11January_2011_Tuesday_tagesschau-8021",
+  "text": "in der nacht ist im nordosten in ostbayern und im bergland teilweise schnee oder gefrierender regen möglich .",
+  "slots": {
+   "TIME": {
+    "nacht": 1
+   },
+   "PLACE": {
+    "nordosten": 1,
+    "bergland": 1,
+    "oder": 1
+   },
+   "EVENT": {
+    "schnee": 1,
+    "regen": 1
+   }
+  }
+ },
+ {
+  "id": "27April_2010_Tuesday_heute-1039",
+  "text": "gegen späten nachmittag oder abend gibt es wahrscheinlich die ersten regenschauer im nordwesten .",
+  "slots": {
+   "TIME": {
+    "nachmittag": 1,
+    "abend": 1
+   },
+   "PLACE": {
+    "oder": 1,
+    "nordwesten": 1
+   },
+   "EVENT": {
+    "regenschauer": 1
+   }
+  }
+ },
+ {
+  "id": "11May_2010_Tuesday_heute-5994",
+  "text": "und so warm mit zwanzig grad wird es nicht mehr in den nächsten tagen .",
+  "slots": {
+   "NUM": {
+    "zwanzig": 1
+   },
+   "TEMP": {
+    "zwanzig": 1
+   },
+   "TIME": {
+    "tagen": 1
+   },
+   "EVENT": {
+    "warm": 1
+   }
+  }
+ },
+ {
+  "id": "05January_2010_Tuesday_tagesschau-2667",
+  "text": "ein weiteres tief das morgen über spanien liegt sorgt dann am freitag bei uns dafür dass es kräftig schneit .",
+  "slots": {
+   "TIME": {
+    "morgen": 1,
+    "freitag": 1
+   },
+   "PLACE": {
+    "spanien": 1
+   }
+  }
+ },
+ {
+  "id": "07April_2010_Wednesday_heute-1619",
+  "text": "hallo und guten abend liebe zuschauer .",
+  "slots": {
+   "TIME": {
+    "abend": 1
+   }
+  }
+ },
+ {
+  "id": "05March_2011_Saturday_tagesschau-5442",
+  "text": "auch morgen in der mitte und im süden gebietsweise stärkere bewölkung .",
+  "slots": {
+   "TIME": {
+    "morgen": 1
+   },
+   "PLACE": {
+    "mitte": 1,
+    "süden": 1
+   }
+  }
+ },
+ {
+  "id": "27May_2010_Thursday_tagesschau-8382",
+  "text": "am sonntag überall unbeständiges wetter teilweise kräftige regenfälle teilweise auch gewitter .",
+  "slots": {
+   "TIME": {
+    "sonntag": 1
+   },
+   "EVENT": {
+    "unbeständiges": 1,
+    "regenfälle": 1,
+    "gewitter": 1
+   }
+  }
+ },
+ {
+  "id": "24November_2011_Thursday_tagesschau-8341",
+  "text": "am sonntag legt der wind noch zu dazu von nordwesten wolken und etwas regen .",
+  "slots": {
+   "TIME": {
+    "sonntag": 1
+   },
+   "PLACE": {
+    "nordwesten": 1
+   },
+   "EVENT": {
+    "wind": 1,
+    "wolken": 1,
+    "regen": 1
+   }
+  }
+ },
+ {
+  "id": "11July_2009_Saturday_tagesschau-667",
+  "text": "auch am dienstag und mittwoch mal sonne mal wolken dazu schauer in der südosthälfte teils schwere gewitter .",
+  "slots": {
+   "TIME": {
+    "dienstag": 1,
+    "mittwoch": 1
+   },
+   "PLACE": {
+    "südosthälfte": 1
+   },
+   "EVENT": {
+    "sonne": 1,
+    "wolken": 1,
+    "schauer": 1,
+    "gewitter": 1
+   }
+  }
+ },
+ {
+  "id": "14September_2010_Tuesday_tagesschau-5223",
+  "text": "am samstag ist es in der südhälfte freundlich in der nordhälfte einzelne schauer .",
+  "slots": {
+   "TIME": {
+    "samstag": 1
+   },
+   "PLACE": {
+    "südhälfte": 1,
+    "nordhälfte": 1
+   },
+   "EVENT": {
+    "freundlich": 1,
+    "schauer": 1
+   }
+  }
+ },
+ {
+  "id": "16June_2010_Wednesday_tagesschau-8148",
+  "text": "im norden und in der mitte verläuft die nacht meist klar im süden regnet es gebietsweise .",
+  "slots": {
+   "TIME": {
+    "nacht": 1
+   },
+   "PLACE": {
+    "norden": 1,
+    "mitte": 1,
+    "süden": 1
+   },
+   "EVENT": {
+    "klar": 1
+   }
+  }
+ },
+ {
+  "id": "06October_2010_Wednesday_tagesschau-638",
+  "text": "morgen vormittag an der ostsee noch starke böen sonst weht der wind schwach bis mäßig aus ost bis südost .",
+  "slots": {
+   "TIME": {
+    "morgen": 1,
+    "vormittag": 1
+   },
+   "PLACE": {
+    "ostsee": 1
+   },
+   "EVENT": {
+    "böen": 1,
+    "wind": 1
+   }
+  }
+ },
+ {
+  "id": "22February_2010_Monday_tagesschau-3247",
+  "text": "ganz im norden fällt hier und da schnee .",
+  "slots": {
+   "PLACE": {
+    "norden": 1
+   },
+   "EVENT": {
+    "schnee": 1
+   }
+  }
+ },
+ {
+  "id": "03August_2010_Tuesday_tagesschau-2780",
+  "text": "am tag neunzehn grad an der nordsee und sechsundzwanzig grad in teilen thüringens und sachsens .",
+  "slots": {
+   "NUM": {
+    "neunzehn": 1,
+    "sechsundzwanzig": 1
+   },
+   "TEMP": {
+    "neunzehn": 1,
+    "sechsundzwanzig": 1
+   },
+   "TIME": {
+    "tag": 1
+   },
+   "PLACE": {
+    "nordsee": 1
+   }
+  }
+ },
+ {
+  "id": "14April_2010_Wednesday_tagesschau-3809",
+  "text": "wechselhaft dagegen bleibt es auch weiter in richtung südosten schuld daran ist das tief über ungarn .",
+  "slots": {
+   "PLACE": {
+    "südosten": 1
+   },
+   "EVENT": {
+    "wechselhaft": 1
+   }
+  }
+ },
+ {
+  "id": "17February_2011_Thursday_heute-387",
+  "text": "temperaturen nur so um die null grad am kältesten im norden bis minus fünf grad .",
+  "slots": {
+   "NUM": {
+    "null": 1,
+    "minusfünf": 1
+   },
+   "TEMP": {
+    "null": 1,
+    "minusfünf": 1
+   },
+   "PLACE": {
+    "norden": 1
+   }
+  }
+ },
+ {
+  "id": "08May_2010_Saturday_tagesschau-176",
+  "text": "vom mittelmeer fließt feuchte luft heran in der sich zum teil kräftige gewitter entwickeln können .",
+  "slots": {
+   "EVENT": {
+    "gewitter": 1
+   }
+  }
+ },
+ {
+  "id": "22February_2010_Monday_tagesschau-3246",
+  "text": "im südosten ist es heute nacht trocken sonst regnet es zeitweise in der nordhälfte teilweise kräftig .",
+  "slots": {
+   "TIME": {
+    "heute": 1,
+    "nacht": 1
+   },
+   "PLACE": {
+    "südosten": 1,
+    "nordhälfte": 1
+   },
+   "EVENT": {
+    "trocken": 1
+   }
+  }
+ }
+]

@@ -1,0 +1,174 @@
+{
+ "n_included": 605,
+ "n_excluded": 36,
+ "exclusion_reasons": {
+  "no_joint_match_within_predeclared_tolerances": 36
+ },
+ "tolerances": {
+  "require_same_signer": true,
+  "max_candidate_target_duration_relative": 0.35,
+  "max_candidate_target_text_word_diff": 8,
+  "min_high_low_gap": 0.12,
+  "max_cross_similarity_diff": 0.08,
+  "max_factorial_duration_range": 0.3,
+  "max_factorial_text_word_range": 6,
+  "max_low_to_high_duration_relative": 0.2,
+  "max_low_to_high_text_word_diff": 4,
+  "high_search_width": 24,
+  "high_pair_search_width": 32,
+  "low_search_width": 24
+ },
+ "high_low_definition": {
+  "high": "the seen/unseen donor pair with maximized LaBSE cosine to the query, subject to |sim(seen_high)-sim(unseen_high)| <= max_cross_similarity_diff",
+  "low": "a donor with similarity <= high_similarity - min_high_low_gap, matched across pools within the same cross-pool tolerance",
+  "min_high_low_gap": 0.12,
+  "max_cross_similarity_diff": 0.08,
+  "duration_caliper": "candidate-target relative frames diff <= 0.35; four-cell max relative range <= 0.30; low-to-high <= 0.20",
+  "word_count_caliper": "candidate-target |dwords| <= 8; four-cell max range <= 6; low-to-high <= 4",
+  "signer": "same signer required for all four cells (require_same_signer=true)",
+  "selection_order": "high pair chosen first (maximize summed similarity, then cross-pool |dsim|, then lexical IDs), then low pair; lexicographic deterministic tie-breaks"
+ },
+ "per_cell": {
+  "seen_high": {
+   "similarity": {
+    "mean": 0.8131454815549298,
+    "sd": 0.08523648835851293,
+    "median": 0.8121201992034912
+   },
+   "frames": {
+    "mean": 100.24297520661158,
+    "sd": 36.67025254340453,
+    "median": 99.0
+   },
+   "text_words": {
+    "mean": 13.305785123966942,
+    "sd": 4.47702556030889,
+    "median": 13.0
+   },
+   "same_signer_rate": 1.0
+  },
+  "seen_low": {
+   "similarity": {
+    "mean": 0.6542688882055362,
+    "sd": 0.08242497295449867,
+    "median": 0.6594216823577881
+   },
+   "frames": {
+    "mean": 99.5404958677686,
+    "sd": 35.23098467557587,
+    "median": 100.0
+   },
+   "text_words": {
+    "mean": 13.5900826446281,
+    "sd": 4.253230267501436,
+    "median": 13.0
+   },
+   "same_signer_rate": 1.0
+  },
+  "unseen_high": {
+   "similarity": {
+    "mean": 0.7762163831182748,
+    "sd": 0.09478323528349576,
+    "median": 0.7776052355766296
+   },
+   "frames": {
+    "mean": 99.2198347107438,
+    "sd": 36.29974919146636,
+    "median": 100.0
+   },
+   "text_words": {
+    "mean": 13.28595041322314,
+    "sd": 4.449036389923281,
+    "median": 13.0
+   },
+   "same_signer_rate": 1.0
+  },
+  "unseen_low": {
+   "similarity": {
+    "mean": 0.6220972730108529,
+    "sd": 0.08508842484492803,
+    "median": 0.6270568370819092
+   },
+   "frames": {
+    "mean": 98.78347107438016,
+    "sd": 35.11015387534265,
+    "median": 100.0
+   },
+   "text_words": {
+    "mean": 13.413223140495868,
+    "sd": 4.121236837526667,
+    "median": 13.0
+   },
+   "same_signer_rate": 1.0
+  }
+ },
+ "seen_vs_unseen_balance": {
+  "high": {
+   "similarity_smd": 0.40970264857269295,
+   "frames_smd": 0.028042408746949757,
+   "words_smd": 0.004444202458719776,
+   "seen_same_signer": 1.0,
+   "unseen_same_signer": 1.0
+  },
+  "low": {
+   "similarity_smd": 0.38405942174338026,
+   "frames_smd": 0.021524350958206817,
+   "words_smd": 0.042232547599724994,
+   "seen_same_signer": 1.0,
+   "unseen_same_signer": 1.0
+  }
+ },
+ "donor_reuse": {
+  "total_cell_slots": 2420,
+  "unique_donors": 1519,
+  "reuse_distribution": {
+   "1": 1028,
+   "2": 271,
+   "3": 114,
+   "4": 59,
+   "5": 26,
+   "6": 14,
+   "7": 2,
+   "8": 2,
+   "9": 2,
+   "10": 1
+  },
+  "queries_with_cross_cell_donor_collision": 0,
+  "note": "cross-cell donor identity collision was forbidden by design (validate_design); n_shared counts queries where the same donor id appears in two cells, which should be 0"
+ },
+ "selection_time_diagnostics": {
+  "seen_similarity_gap": {
+   "max": 0.5111678838729858,
+   "mean": 0.15887659334939375
+  },
+  "unseen_similarity_gap": {
+   "max": 0.5220432877540588,
+   "mean": 0.15411911010742188
+  },
+  "high_cross_exposure_similarity_diff": {
+   "max": 0.07992267608642578,
+   "mean": 0.04169332981109619
+  },
+  "low_cross_exposure_similarity_diff": {
+   "max": 0.07995569705963135,
+   "mean": 0.03294249112941017
+  },
+  "max_duration_relative_range": {
+   "max": 0.29914529914529914,
+   "mean": 0.19767080729472272
+  },
+  "max_text_word_range": {
+   "max": 6.0,
+   "mean": 3.7074380165289256
+  },
+  "all_signer_matched": {
+   "max": 1.0,
+   "mean": 1.0
+  }
+ },
+ "prespecification": {
+  "selection_blinded_to_evaluator_outcomes": true,
+  "manifest_canonical_sha256": "8574986d629cd51e58383c367f8bd41d7b61c2b0a65b3c88852532a19c45548f",
+  "status": "selection manifest and tolerances frozen before outcome scoring; main effects and interaction are the design's primary contrasts"
+ }
+}

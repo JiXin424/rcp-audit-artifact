@@ -1,0 +1,110 @@
+{
+ "original": {
+  "GT-v1": {
+   "identity": {
+    "bleu": 12.777148564612425,
+    "nll": 0.0
+   },
+   "reversal": {
+    "bleu": 7.247689261543583,
+    "nll": 0.0
+   },
+   "window_shuffle": {
+    "bleu": 11.97276251884947,
+    "nll": 0.0
+   },
+   "spatial_jitter": {
+    "bleu": 12.514093353576872,
+    "nll": 0.0
+   },
+   "hand_mask": {
+    "bleu": 1.3517155249364303,
+    "nll": 0.0
+   },
+   "face_mask": {
+    "bleu": 3.146091406967977,
+    "nll": 0.0
+   }
+  },
+  "TN-PURE-v1": {
+   "identity": {
+    "bleu": 23.788737054472033,
+    "nll": 0.0
+   },
+   "reversal": {
+    "bleu": 7.719536589106892,
+    "nll": 0.0
+   },
+   "window_shuffle": {
+    "bleu": 19.582312547174453,
+    "nll": 0.0
+   },
+   "spatial_jitter": {
+    "bleu": 23.687127745162712,
+    "nll": 0.0
+   },
+   "hand_mask": {
+    "bleu": 1.3042793821696101,
+    "nll": 0.0
+   },
+   "face_mask": {
+    "bleu": 4.060435850955115,
+    "nll": 0.0
+   }
+  }
+ },
+ "wd0_seed202": {
+  "GT-v1": {
+   "identity": {
+    "bleu": 10.728791068122627,
+    "nll": 0.0
+   },
+   "reversal": {
+    "bleu": 6.257502440495063,
+    "nll": 0.0
+   },
+   "window_shuffle": {
+    "bleu": 10.539787006109448,
+    "nll": 0.0
+   },
+   "spatial_jitter": {
+    "bleu": 10.601296816709299,
+    "nll": 0.0
+   },
+   "hand_mask": {
+    "bleu": 0.6304510062037034,
+    "nll": 0.0
+   },
+   "face_mask": {
+    "bleu": 1.5840039214235424,
+    "nll": 0.0
+   }
+  },
+  "TN-PURE-v1": {
+   "identity": {
+    "bleu": 10.982860780946604,
+    "nll": 0.0
+   },
+   "reversal": {
+    "bleu": 6.661918310504494,
+    "nll": 0.0
+   },
+   "window_shuffle": {
+    "bleu": 9.654874032442674,
+    "nll": 0.0
+   },
+   "spatial_jitter": {
+    "bleu": 10.917130234278105,
+    "nll": 0.0
+   },
+   "hand_mask": {
+    "bleu": 0.5756049775761337,
+    "nll": 0.0
+   },
+   "face_mask": {
+    "bleu": 1.4334669634838444,
+    "nll": 0.0
+   }
+  }
+ }
+}

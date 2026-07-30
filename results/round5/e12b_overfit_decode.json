@@ -1,0 +1,7 @@
+{
+ "epoch90_overfit": {
+  "train_free_bleu": 99.88964503603549,
+  "train_nll": 0.001616790859810713,
+  "exact_match": 0.995
+ }
+}

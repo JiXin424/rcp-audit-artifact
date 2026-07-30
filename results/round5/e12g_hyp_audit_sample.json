@@ -1,0 +1,753 @@
+[
+ {
+  "sys": "GT",
+  "id": "10January_2011_Monday_tagesschau-6403",
+  "hyp": "in den nächsten tagen ändert sich an diesem wetter erstmal wenig .",
+  "ref": "im verlauf der woche geht es dann unbeständig und sehr mild weiter .",
+  "slots": {
+   "TIME": {
+    "tagen": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "29March_2010_Monday_tagesschau-8388",
+  "hyp": "in den nächsten tagen wird es noch milder .",
+  "ref": "die luft die in den kommenden tagen zu uns strömt ist dann kälter .",
+  "slots": {
+   "TIME": {
+    "tagen": 1
+   },
+   "EVENT": {
+    "milder": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "21May_2010_Friday_tagesschau-5097",
+  "hyp": "auch am sonntag bleibt es unbeständig .",
+  "ref": "am sonntag ändert sich noch wenig an diesem wetter .",
+  "slots": {
+   "TIME": {
+    "sonntag": 1
+   },
+   "EVENT": {
+    "unbeständig": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "14July_2009_Tuesday_tagesschau-2425",
+  "hyp": "in der nacht klart es verbreitet auf .",
+  "ref": "teilweise ist es auch klar .",
+  "slots": {
+   "TIME": {
+    "nacht": 1
+   },
+   "EVENT": {
+    "klart": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "05July_2010_Monday_heute-8688",
+  "hyp": "und morgen haben wir eine zweiteilung also ein bisschen kühler haben wir dann in süddeutschland bis zu siebenundzwanzig grad .",
+  "ref": "also wir haben morgen höchsttemperaturen in mitteleuropa von achtzehn bis sechsundzwanzig grad .",
+  "slots": {
+   "NUM": {
+    "siebenundzwanzig": 1
+   },
+   "TEMP": {
+    "siebenundzwanzig": 1
+   },
+   "TIME": {
+    "morgen": 1
+   },
+   "PLACE": {
+    "süddeutschland": 1
+   },
+   "EVENT": {
+    "kühler": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "07February_2010_Sunday_tagesschau-499",
+  "hyp": "richtung südwesten macht sich allerdings morgen ein hoch bemerkbar .",
+  "ref": "im südwesten morgen werte um den gefrierpunkt im osten bis minus sieben grad .",
+  "slots": {
+   "TIME": {
+    "morgen": 1
+   },
+   "PLACE": {
+    "südwesten": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "06October_2011_Thursday_heute-5534",
+  "hyp": "das klappt auch am wochenende zumindest in den alpen aber nicht im laufe der nacht .",
+  "ref": "und das mit tief ophelia das die kaltluft mit kräftigen schauern richtung mitteleuropa treibt .",
+  "slots": {
+   "TIME": {
+    "wochenende": 1,
+    "nacht": 1
+   },
+   "PLACE": {
+    "alpen": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "06May_2011_Friday_tagesschau-6434",
+  "hyp": "der wind weht schwach bis mäßig im nordwesten frisch .",
+  "ref": "der wind weht schwach bis mäßig am meer auch frisch .",
+  "slots": {
+   "PLACE": {
+    "nordwesten": 1
+   },
+   "EVENT": {
+    "wind": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "24September_2009_Thursday_heute-6090",
+  "hyp": "die aussichten das winterwetter begleitet uns auch in den nächsten tagen .",
+  "ref": "die neue woche startet dann durchwachsener .",
+  "slots": {
+   "TIME": {
+    "tagen": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "21November_2011_Monday_heute-5437",
+  "hyp": "jetzt wünsche ich ihnen noch einen schönen abend .",
+  "ref": "ihnen noch einen schönen abend .",
+  "slots": {
+   "TIME": {
+    "abend": 1
+   },
+   "EVENT": {
+    "schönen": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "14September_2010_Tuesday_heute-8237",
+  "hyp": "vor allem im nordwesten sowie an den küsten muss mit einzelnen schauern gerechnet werden .",
+  "ref": "die norddeutschen kennen es ja heute schon aber es wird jetzt auch die süddeutschen treffen .",
+  "slots": {
+   "PLACE": {
+    "nordwesten": 1,
+    "küsten": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "29March_2010_Monday_tagesschau-8387",
+  "hyp": "schauer und gewitter bringen sie nicht .",
+  "ref": "sie bringen kräftige schauer und gewitter .",
+  "slots": {
+   "EVENT": {
+    "schauer": 1,
+    "gewitter": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "03February_2010_Wednesday_tagesschau-2062",
+  "hyp": "der wind weht schwach bis mäßig aus unterschiedlichen richtungen .",
+  "ref": "dazu weht ein schwacher bis mäßiger wind aus südost bis süd .",
+  "slots": {
+   "EVENT": {
+    "wind": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "24September_2009_Thursday_heute-6084",
+  "hyp": "am mittwoch an den alpen regen und im nordwesten .",
+  "ref": "morgen erwarten uns dann an der küste werte von siebzehn grad .",
+  "slots": {
+   "TIME": {
+    "mittwoch": 1
+   },
+   "PLACE": {
+    "alpen": 1,
+    "nordwesten": 1
+   },
+   "EVENT": {
+    "regen": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "07October_2010_Thursday_tagesschau-4129",
+  "hyp": "und es wird leider noch etwas kühler die luft im süden ja schon in den nächsten tagen .",
+  "ref": "das ruhige trockene und zum teil recht freundliche hochdruckwetter begleitet uns auch in den nächsten tagen .",
+  "slots": {
+   "TIME": {
+    "tagen": 1
+   },
+   "PLACE": {
+    "süden": 1
+   },
+   "EVENT": {
+    "kühler": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "15February_2011_Tuesday_heute-7911",
+  "hyp": "ein kleines tief über polen macht sich morgen im süden und südosten deutschlands bemerkbar .",
+  "ref": "am ehesten scheint sie noch hier in der osthälfte und auch am alpenrand und dann später auch im südwesten .",
+  "slots": {
+   "TIME": {
+    "morgen": 1
+   },
+   "PLACE": {
+    "polen": 1,
+    "süden": 1,
+    "südosten": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "31May_2011_Tuesday_heute-1904",
+  "hyp": "am tag fünfzehn grad bei regen im nordwesten und bis fünfundzwanzig grad im südwesten .",
+  "ref": "an der elbe einzelne schauer im nordwesten aber schon wieder deutlich freundlicher .",
+  "slots": {
+   "NUM": {
+    "fünfzehn": 1,
+    "fünfundzwanzig": 1
+   },
+   "TEMP": {
+    "fünfzehn": 1,
+    "fünfundzwanzig": 1
+   },
+   "TIME": {
+    "tag": 1
+   },
+   "PLACE": {
+    "nordwesten": 1,
+    "südwesten": 1
+   },
+   "EVENT": {
+    "regen": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "06November_2010_Saturday_tagesschau-1162",
+  "hyp": "schwacher bis mäßiger wind der im norden aus nördlichen richtungen in der mitte und im süden weht er schwach aus unterschiedlichen richtungen .",
+  "ref": "schwacher bis mäßiger auf den bergen in böen auch starker wind in der nordhälfte aus ost bis nordost sonst aus unterschiedlichen richtungen .",
+  "slots": {
+   "PLACE": {
+    "norden": 1,
+    "mitte": 1,
+    "süden": 1
+   },
+   "EVENT": {
+    "wind": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "28July_2010_Wednesday_tagesschau-871",
+  "hyp": "am samstag überall viel sonne nur einzelne schauer .",
+  "ref": "am samstag überwiegend freundlich meist trocken und wärmer .",
+  "slots": {
+   "TIME": {
+    "samstag": 1
+   },
+   "EVENT": {
+    "sonne": 1,
+    "schauer": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "19October_2010_Tuesday_tagesschau-8289",
+  "hyp": "am tag gibt es viele wolken hier und da etwas regen vor allem in der nordwesthälfte auch mal etwas schnee .",
+  "ref": "am tag dichte wolken aber auch lücken dazu einige schauer an den nordwestseiten der gebirge kann es auch längere zeit regnen oder schneien .",
+  "slots": {
+   "TIME": {
+    "tag": 1
+   },
+   "PLACE": {
+    "nordwesthälfte": 1
+   },
+   "EVENT": {
+    "wolken": 1,
+    "regen": 1,
+    "schnee": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "01June_2011_Wednesday_tagesschau-6952",
+  "hyp": "in der osthälfte ist es freundlich mit sonne und wolken .",
+  "ref": "in den übrigen gebieten viel sonne und nur ein paar lockere wolken .",
+  "slots": {
+   "PLACE": {
+    "osthälfte": 1
+   },
+   "EVENT": {
+    "freundlich": 1,
+    "sonne": 1,
+    "wolken": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "13August_2009_Thursday_tagesschau-8492",
+  "hyp": "auch am montag unbeständig und noch kühler .",
+  "ref": "die neue woche beginnt noch wechselhaft und etwas kühler .",
+  "slots": {
+   "TIME": {
+    "montag": 1
+   },
+   "EVENT": {
+    "unbeständig": 1,
+    "kühler": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "05May_2010_Wednesday_tagesschau-3348",
+  "hyp": "das tief das sich von spanien bis ins südliche mitteleuropa erstreckt weitet sich morgen weiter nach norden aus .",
+  "ref": "das kräftige mittelmeertief dehnt seinen einfluss weiter nach norden aus und sorgt morgen in fast ganz deutschland für einen wolkenverhangenen himmel .",
+  "slots": {
+   "TIME": {
+    "morgen": 1
+   },
+   "PLACE": {
+    "spanien": 1,
+    "mitteleuropa": 1,
+    "norden": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "20October_2010_Wednesday_tagesschau-8210",
+  "hyp": "heute nacht gibt es noch örtliche schauer vereinzelt auch kräftige gewitter .",
+  "ref": "heute nacht gibt es hier und da schauer an der nordsee auch kurze gewitter .",
+  "slots": {
+   "TIME": {
+    "heute": 1,
+    "nacht": 1
+   },
+   "EVENT": {
+    "schauer": 1,
+    "gewitter": 1
+   }
+  }
+ },
+ {
+  "sys": "GT",
+  "id": "02October_2012_Tuesday_tagesschau-2847",
+  "hyp": "deutschland liegt in der südosthälfte unter hochdruckeinfluss und recht freundliches wetter .",
+  "ref": "in der südosthälfte deutschlands bleibt es morgen unter leichtem hochdruckeinfluss noch recht freundlich .",
+  "slots": {
+   "PLACE": {
+    "deutschland": 1,
+    "südosthälfte": 1
+   },
+   "EVENT": {
+    "freundliches": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "13October_2009_Tuesday_tagesschau-1659",
+  "hyp": "sonst regnet es hier und da etwas .",
+  "ref": "sonst regnet es zeitweise .",
+  "slots": {}
+ },
+ {
+  "sys": "PURE",
+  "id": "25August_2010_Wednesday_heute-6005",
+  "hyp": "im süden bleibt es noch sonnig .",
+  "ref": "denn im süden haben wir die schwül warme gewitterluft dabei ist es aber noch im süden sonnig .",
+  "slots": {
+   "PLACE": {
+    "süden": 1
+   },
+   "EVENT": {
+    "sonnig": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "17February_2010_Wednesday_heute-1482",
+  "hyp": "an den alpen ist es noch mild .",
+  "ref": "da ist der boden noch gefroren am rhein wie gesagt da entspannt sich die lage bei plusgraden .",
+  "slots": {
+   "PLACE": {
+    "alpen": 1
+   },
+   "EVENT": {
+    "mild": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "06September_2009_Sunday_tagesschau-5309",
+  "hyp": "heute nacht fünfzehn grad am niederrhein und fünf grad an den alpen .",
+  "ref": "heute nacht werte zwischen vierzehn grad an der see und vier grad an den alpen .",
+  "slots": {
+   "NUM": {
+    "fünfzehn": 1,
+    "fünf": 1
+   },
+   "TEMP": {
+    "fünfzehn": 1,
+    "fünf": 1
+   },
+   "TIME": {
+    "heute": 1,
+    "nacht": 1
+   },
+   "PLACE": {
+    "niederrhein": 1,
+    "alpen": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "17April_2011_Sunday_tagesschau-2152",
+  "hyp": "und nun die wettervorhersage für morgen sonntag den achtzehnten april .",
+  "ref": "und nun die wettervorhersage für morgen montag den achtzehnten april .",
+  "slots": {
+   "TIME": {
+    "morgen": 1,
+    "sonntag": 1,
+    "april": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "23August_2010_Monday_heute-5328",
+  "hyp": "und so bleibt es dann auch in den nächsten tagen erstmal .",
+  "ref": "ja und so bleibt es dann auch erstmal am mittwoch .",
+  "slots": {
+   "TIME": {
+    "tagen": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "11April_2010_Sunday_tagesschau-8632",
+  "hyp": "und nun die wettervorhersage für morgen montag den elften april .",
+  "ref": "und nun die wettervorhersage für morgen montag den zwölften april .",
+  "slots": {
+   "TIME": {
+    "morgen": 1,
+    "montag": 1,
+    "april": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "28October_2009_Wednesday_tagesschau-4537",
+  "hyp": "im norden gibt es heute nacht noch viele wolken die gebietsweise regen bringen .",
+  "ref": "heute nacht gibt es im norden und nordosten viele wolken örtlich regnet oder nieselt es etwas .",
+  "slots": {
+   "TIME": {
+    "heute": 1,
+    "nacht": 1
+   },
+   "PLACE": {
+    "norden": 1
+   },
+   "EVENT": {
+    "wolken": 1,
+    "regen": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "08September_2010_Wednesday_tagesschau-5246",
+  "hyp": "am freitag regnet es südlich der donau ab und an noch etwas sonst ist es meist freundlich .",
+  "ref": "am samstag regnet es noch etwas in küstennähe sonst meist freundlich und trocken .",
+  "slots": {
+   "TIME": {
+    "freitag": 1
+   },
+   "PLACE": {
+    "donau": 1
+   },
+   "EVENT": {
+    "freundlich": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "24October_2010_Sunday_tagesschau-2908",
+  "hyp": "am dienstag im nordwesten etwas schnee sonst teils sonne teils wolken oder nebel dabei ist es trocken .",
+  "ref": "im osten und süden am dienstag einzelne schauer dabei bis in mittlere lagen schnee sonst teils nebel teils wolken oder sonne .",
+  "slots": {
+   "TIME": {
+    "dienstag": 1
+   },
+   "PLACE": {
+    "nordwesten": 1,
+    "oder": 1
+   },
+   "EVENT": {
+    "schnee": 1,
+    "sonne": 1,
+    "wolken": 1,
+    "nebel": 1,
+    "trocken": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "16December_2009_Wednesday_tagesschau-5914",
+  "hyp": "im nordwesten viel sonne aber auch im nordwesten .",
+  "ref": "in der mitte lockert es auch mal auf .",
+  "slots": {
+   "PLACE": {
+    "nordwesten": 2
+   },
+   "EVENT": {
+    "sonne": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "02December_2009_Wednesday_tagesschau-4045",
+  "hyp": "am sonntag eine mischung aus sonne und wolken .",
+  "ref": "im osten und südosten neben teilweise zähen nebelfeldern eine trockene mischung aus sonne und wolken .",
+  "slots": {
+   "TIME": {
+    "sonntag": 1
+   },
+   "EVENT": {
+    "sonne": 1,
+    "wolken": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "01May_2010_Saturday_tagesschau-7195",
+  "hyp": "auch am montag unbeständiges wetter teilweise regnet es kräftig auch gewitter sind mit dabei .",
+  "ref": "auch am montag mehr wolken als sonne teilweise regnet es länger und kräftig auch gewitter sind dabei .",
+  "slots": {
+   "TIME": {
+    "montag": 1
+   },
+   "EVENT": {
+    "unbeständiges": 1,
+    "gewitter": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "24September_2009_Thursday_heute-6079",
+  "hyp": "und dazu kommt jetzt auf diesem etwas ungewöhnlichen weg auch deutlich mildere luft .",
+  "ref": "und wir nehmen auch kontakt auf zu diesem hoch .",
+  "slots": {}
+ },
+ {
+  "sys": "PURE",
+  "id": "12May_2010_Wednesday_tagesschau-323",
+  "hyp": "im süden regnet es kaum und dort zeigt sich auch häufiger die sonne .",
+  "ref": "am samstag regnet es im südosten und an der ostsee dort ist es teilweise windig sonst regnet es nur vereinzelt teilweise zeigt sich die sonne .",
+  "slots": {
+   "PLACE": {
+    "süden": 1
+   },
+   "EVENT": {
+    "sonne": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "11September_2009_Friday_tagesschau-8772",
+  "hyp": "feuchte kalte luft strömt zu uns nach deutschland .",
+  "ref": "relativ kühle luft strömt zu uns nach deutschland .",
+  "slots": {
+   "PLACE": {
+    "deutschland": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "05May_2010_Wednesday_tagesschau-3353",
+  "hyp": "richtung westen gibt es neben einzelnen schauern auch sonnige abschnitte .",
+  "ref": "in teilen bayerns und sachsens gibt es neben schauern und gewittern auch wolkenlücken .",
+  "slots": {
+   "PLACE": {
+    "westen": 1
+   },
+   "EVENT": {
+    "sonnige": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "17July_2009_Friday_tagesschau-5101",
+  "hyp": "und nun die wettervorhersage für morgen samstag den sechzehnten juli .",
+  "ref": "und nun die wettervorhersage für morgen samstag den achtzehnten juli .",
+  "slots": {
+   "TIME": {
+    "morgen": 1,
+    "samstag": 1,
+    "juli": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "12December_2009_Saturday_tagesschau-4728",
+  "hyp": "in der nacht regnet es richtung süden und nordosten stellenweise leicht an der ostsee kann auch regen mit dabei sein sonst bleibt es meist trocken .",
+  "ref": "in der nacht schneit es ab und zu leicht an den küsten sowie anfangs auch in tiefen lagen ist regen mit dabei .",
+  "slots": {
+   "TIME": {
+    "nacht": 1
+   },
+   "PLACE": {
+    "süden": 1,
+    "nordosten": 1,
+    "ostsee": 1
+   },
+   "EVENT": {
+    "regen": 1,
+    "trocken": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "25August_2009_Tuesday_tagesschau-7086",
+  "hyp": "der deutsche wetterdienst hat entsprechende warnungen herausgegeben .",
+  "ref": "der deutsche wetterdienst hat entsprechende warnungen herausgegeben .",
+  "slots": {}
+ },
+ {
+  "sys": "PURE",
+  "id": "09June_2010_Wednesday_tagesschau-5961",
+  "hyp": "der deutsche wetterdienst hat entsprechende unwetterwarnungen herausgegeben .",
+  "ref": "der deutsche wetterdienst hat entsprechende unwetterwarnungen herausgegeben .",
+  "slots": {}
+ },
+ {
+  "sys": "PURE",
+  "id": "01October_2012_Monday_tagesschau-5370",
+  "hyp": "im nordwesten unter wolken heute nacht bis zehn im südosten örtlich nur zwei grad .",
+  "ref": "in den mittelgebirgen heute nacht örtlich vier im nordwesten unter wolken bis zwölf grad .",
+  "slots": {
+   "NUM": {
+    "zehn": 1,
+    "zwei": 1
+   },
+   "TEMP": {
+    "zwei": 1
+   },
+   "TIME": {
+    "heute": 1,
+    "nacht": 1
+   },
+   "PLACE": {
+    "nordwesten": 1,
+    "südosten": 1
+   },
+   "EVENT": {
+    "wolken": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "27June_2010_Sunday_tagesschau-7392",
+  "hyp": "morgen reichen die temperaturen von achtzehn grad in der lausitz bis neunundzwanzig grad am oberrhein .",
+  "ref": "morgen reichen die temperaturen von zweiundzwanzig grad an der ostsee bis zweiunddreißig grad am oberrhein .",
+  "slots": {
+   "NUM": {
+    "achtzehn": 1,
+    "neunundzwanzig": 1
+   },
+   "TEMP": {
+    "achtzehn": 1,
+    "neunundzwanzig": 1
+   },
+   "TIME": {
+    "morgen": 1
+   },
+   "PLACE": {
+    "lausitz": 1,
+    "oberrhein": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "07April_2010_Wednesday_heute-1619",
+  "hyp": "guten abend liebe zuschauer .",
+  "ref": "hallo und guten abend liebe zuschauer .",
+  "slots": {
+   "TIME": {
+    "abend": 1
+   }
+  }
+ },
+ {
+  "sys": "PURE",
+  "id": "29October_2009_Thursday_tagesschau-1013",
+  "hyp": "auch am samstag erwartet uns eine ruhige mischung aus nebel wolken und gelegentlichem sonnenschein .",
+  "ref": "und so erwartet uns eine mischung aus teilweise zähen nebelfeldern wolken und sonnenschein .",
+  "slots": {
+   "TIME": {
+    "samstag": 1
+   },
+   "EVENT": {
+    "nebel": 1,
+    "wolken": 1,
+    "sonnenschein": 1
+   }
+  }
+ }
+]

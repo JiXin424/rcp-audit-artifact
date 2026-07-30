@@ -1,0 +1,283 @@
+{
+  "experiment": "E21: Isomorphic conditioning x construction",
+  "description": "5 (conditioning: source_text, LaBSE, MSBERT, oracle_gloss, random) x 2 (construction: pure donor copy, PT+retrieval composition with alpha=0.88) = 10 cells. All use 641 PHX-public queries, 7060 train donor pool, 12.5fps BT evaluation, sacreBLEU corpus_bleu.",
+  "gt_ceiling": {
+    "sacrebleu": 0.12777148564612426,
+    "p1": 0.3703421086099453,
+    "p4": 0.06885521885521886,
+    "bp": 0.9287735072561253,
+    "hyp_len": 7863,
+    "ref_len": 8444,
+    "counts": [
+      2912,
+      1098,
+      608,
+      409
+    ],
+    "totals": [
+      7863,
+      7222,
+      6581,
+      5940
+    ],
+    "signature": "nrefs:1|tok:13a|smooth:exp|version:2.5.1",
+    "n_eval": 641,
+    "source": "test.pt GT poses @12.5fps"
+  },
+  "rows": {
+    "source_text_pure": {
+      "conditioning": "Source Text",
+      "construction": "pure donor copy",
+      "sacrebleu": 0.18605886680188768,
+      "p1": 0.47612926918839515,
+      "p4": 0.08261790612108372,
+      "bp": 1.0,
+      "hyp_len": 10892,
+      "ref_len": 8444,
+      "counts": [
+        5186,
+        2380,
+        1261,
+        741
+      ],
+      "totals": [
+        10892,
+        10251,
+        9610,
+        8969
+      ],
+      "signature": "nrefs:1|tok:13a|smooth:exp|version:2.5.1",
+      "n_eval": 641,
+      "source": "text_jaccard donors @12.5fps"
+    },
+    "source_text_composed": {
+      "conditioning": "Source Text",
+      "construction": "PT+retrieval composition",
+      "sacrebleu": 0.17800092973996517,
+      "p1": 0.45203647416413373,
+      "p4": 0.08854331958108537,
+      "bp": 0.973725210568133,
+      "hyp_len": 8225,
+      "ref_len": 8444,
+      "counts": [
+        3718,
+        1636,
+        898,
+        558
+      ],
+      "totals": [
+        8225,
+        7584,
+        6943,
+        6302
+      ],
+      "signature": "nrefs:1|tok:13a|smooth:exp|version:2.5.1",
+      "n_eval": 641,
+      "source": "text_nearest btjson (correct @12.5fps)"
+    },
+    "labse_pure": {
+      "conditioning": "Labse",
+      "construction": "pure donor copy",
+      "sacrebleu": 0.19154530726775568,
+      "p1": 0.49874115813451625,
+      "p4": 0.08725459644749144,
+      "bp": 0.9877272923218947,
+      "hyp_len": 8341,
+      "ref_len": 8444,
+      "counts": [
+        4160,
+        1842,
+        959,
+        560
+      ],
+      "totals": [
+        8341,
+        7700,
+        7059,
+        6418
+      ],
+      "signature": "nrefs:1|tok:13a|smooth:exp|version:2.5.1",
+      "n_eval": 641,
+      "source": "labse_donor_poses @12.5fps (recomputed)"
+    },
+    "labse_composed": {
+      "conditioning": "Labse",
+      "construction": "PT+retrieval composition",
+      "sacrebleu": 0.08351769085473905,
+      "p1": 0.41433923705722076,
+      "p4": 0.0562167637376551,
+      "bp": 0.6453187493721054,
+      "hyp_len": 5872,
+      "ref_len": 8444,
+      "counts": [
+        2433,
+        788,
+        367,
+        222
+      ],
+      "totals": [
+        5872,
+        5231,
+        4590,
+        3949
+      ],
+      "signature": "nrefs:1|tok:13a|smooth:exp|version:2.5.1",
+      "n_eval": 641,
+      "source": "labse_donor_poses + PT scaffold @12.5fps"
+    },
+    "msbert_pure": {
+      "conditioning": "Msbert",
+      "construction": "pure donor copy",
+      "sacrebleu": 0.1649705087800237,
+      "p1": 0.45506102823326344,
+      "p4": 0.07934712346477052,
+      "bp": 0.9597759982314673,
+      "hyp_len": 8111,
+      "ref_len": 8444,
+      "counts": [
+        3691,
+        1559,
+        791,
+        491
+      ],
+      "totals": [
+        8111,
+        7470,
+        6829,
+        6188
+      ],
+      "signature": "nrefs:1|tok:13a|smooth:exp|version:2.5.1",
+      "n_eval": 641,
+      "source": "msbert_donor_poses @12.5fps (recomputed)"
+    },
+    "msbert_composed": {
+      "conditioning": "Msbert",
+      "construction": "PT+retrieval composition",
+      "sacrebleu": 0.081237163440007,
+      "p1": 0.40557865557865563,
+      "p4": 0.05819693426864121,
+      "bp": 0.6294401767826423,
+      "hyp_len": 5772,
+      "ref_len": 8444,
+      "counts": [
+        2341,
+        744,
+        364,
+        224
+      ],
+      "totals": [
+        5772,
+        5131,
+        4490,
+        3849
+      ],
+      "signature": "nrefs:1|tok:13a|smooth:exp|version:2.5.1",
+      "n_eval": 641,
+      "source": "msbert_donor_poses + PT scaffold @12.5fps"
+    },
+    "oracle_gloss_pure": {
+      "conditioning": "Oracle Gloss",
+      "construction": "pure donor copy",
+      "sacrebleu": 0.11354284175508905,
+      "p1": 0.3526363913441024,
+      "p4": 0.048106060606060604,
+      "bp": 1.0,
+      "hyp_len": 9843,
+      "ref_len": 8444,
+      "counts": [
+        3471,
+        1255,
+        615,
+        381
+      ],
+      "totals": [
+        9843,
+        9202,
+        8561,
+        7920
+      ],
+      "signature": "nrefs:1|tok:13a|smooth:exp|version:2.5.1",
+      "n_eval": 641,
+      "source": "oracle_gloss_jaccard donors @12.5fps"
+    },
+    "oracle_gloss_composed": {
+      "conditioning": "Oracle Gloss",
+      "construction": "PT+retrieval composition",
+      "sacrebleu": 0.11783340901307054,
+      "p1": 0.36903879416851987,
+      "p4": 0.05639280505590666,
+      "bp": 0.9576796920610684,
+      "hyp_len": 8094,
+      "ref_len": 8444,
+      "counts": [
+        2987,
+        1049,
+        533,
+        348
+      ],
+      "totals": [
+        8094,
+        7453,
+        6812,
+        6171
+      ],
+      "signature": "nrefs:1|tok:13a|smooth:exp|version:2.5.1",
+      "n_eval": 641,
+      "source": "rcp btjson (correct @12.5fps)"
+    },
+    "random_pure": {
+      "conditioning": "Random",
+      "construction": "pure donor copy",
+      "sacrebleu": 0.011076029652101667,
+      "p1": 0.15301655098772024,
+      "p4": 0.002015587207739855,
+      "bp": 1.0,
+      "hyp_len": 9365,
+      "ref_len": 8444,
+      "counts": [
+        1433,
+        111,
+        31,
+        15
+      ],
+      "totals": [
+        9365,
+        8724,
+        8083,
+        7442
+      ],
+      "signature": "nrefs:1|tok:13a|smooth:exp|version:2.5.1",
+      "n_eval": 641,
+      "source": "random donors (seed=4) @12.5fps"
+    },
+    "random_composed": {
+      "conditioning": "Random",
+      "construction": "PT+retrieval composition",
+      "sacrebleu": 0.008430685035604814,
+      "p1": 0.206102877070619,
+      "p4": 0.00236096537250787,
+      "bp": 0.6235273277285537,
+      "hyp_len": 5735,
+      "ref_len": 8444,
+      "counts": [
+        1182,
+        82,
+        19,
+        9
+      ],
+      "totals": [
+        5735,
+        5094,
+        4453,
+        3812
+      ],
+      "signature": "nrefs:1|tok:13a|smooth:exp|version:2.5.1",
+      "n_eval": 641,
+      "source": "random donors (seed=4) + PT scaffold @12.5fps"
+    }
+  },
+  "alpha": 0.88,
+  "random_seed": 4,
+  "n_test": 641,
+  "n_train": 7060
+}

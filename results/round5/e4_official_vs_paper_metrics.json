@@ -1,0 +1,60 @@
+{
+  "e19_official_reference": {
+    "bleu4": 12.777148564612425,
+    "chrf": 34.58509769785496,
+    "rouge": 35.19608041310144,
+    "wer": 85.77470203767781
+  },
+  "library_versions": {
+    "jiwer": "3.1.0 (requirements pin; env 3.1.0)",
+    "sacrebleu_env": "2.5.1",
+    "official_chrf_signature": "sacrebleu.metrics.CHRF() defaults",
+    "official_wer_signature": "jiwer.wer + ExpandCommonEnglishContractions/ToLowerCase/RemoveMultipleSpaces/Strip/RemovePunctuation"
+  },
+  "systems": {
+    "GT-v1": {
+      "official_chrf": 34.58509769785496,
+      "official_wer": 85.77470203767781,
+      "official_rouge": 35.19608041310144,
+      "paper_chrf": 0.480486289322444,
+      "paper_wer": 0.7926338228327807,
+      "paper_rouge_l": 0.3533381505267151
+    },
+    "PT-v1": {
+      "official_chrf": 19.027939992366928,
+      "official_wer": 101.678841471229,
+      "official_rouge": 17.255835698396783,
+      "paper_chrf": 0.3101681371983404,
+      "paper_wer": 0.9396020843202274,
+      "paper_rouge_l": 0.1735140606122641
+    },
+    "TN-PTCOMP-v1": {
+      "official_chrf": 41.88345504687552,
+      "official_wer": 77.35486351403307,
+      "official_rouge": 45.17009856128972,
+      "paper_chrf": 0.5540677141514555,
+      "paper_wer": 0.7148270961629559,
+      "paper_rouge_l": 0.4539760361693959
+    },
+    "TN-PURE-v1": {
+      "official_chrf": 47.819668044429186,
+      "official_wer": 71.86979366910163,
+      "official_rouge": 53.06615579608732,
+      "paper_chrf": 0.6179526713893644,
+      "paper_wer": 0.6641402179062056,
+      "paper_rouge_l": 0.5330576408386734
+    }
+  },
+  "ablation": {
+    "chrf_GT": {
+      "corpus_nmax4_ws0": 0.4284832919830001,
+      "corpus_nmax4_ws1": 0.46987724492451755,
+      "corpus_nmax6_ws0": 0.3458504554627669,
+      "corpus_nmax6_ws1": 0.3846523585758847,
+      "sentence_nmax4_ws0": 0.4343672754142983,
+      "sentence_nmax4_ws1": 0.480486289322444,
+      "sentence_nmax6_ws0": 0.35482850995775683,
+      "sentence_nmax6_ws1": 0.3972877888936965
+    }
+  }
+}

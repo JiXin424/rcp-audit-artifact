@@ -1,0 +1,527 @@
+{
+ "schema": "checkpoint-registry-v1",
+ "original": {
+  "dev_bleu4_official": 13.378651856913775,
+  "dev_wer_official": 83.37019018133569,
+  "note": "released SLRTP2025 evaluator; best.ckpt = step 1820 of 2828-step run per bundle validations.txt"
+ },
+ "n_trained": 50,
+ "checkpoints": [
+  {
+   "id": "seed_101",
+   "family": "reconstructions_primary",
+   "dev_bleu4_official": 8.029,
+   "dev_wer_official": 90.683,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "seed_202",
+   "family": "reconstructions_primary",
+   "dev_bleu4_official": 7.731,
+   "dev_wer_official": 88.869,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "seed_303",
+   "family": "reconstructions_primary",
+   "dev_bleu4_official": 8.92,
+   "dev_wer_official": 92.142,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "seed_404",
+   "family": "reconstructions_primary",
+   "dev_bleu4_official": 6.784,
+   "dev_wer_official": 90.845,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "seed_505",
+   "family": "reconstructions_primary",
+   "dev_bleu4_official": 8.516,
+   "dev_wer_official": 90.299,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "seed_606",
+   "family": "reconstructions_primary",
+   "dev_bleu4_official": 7.49,
+   "dev_wer_official": 92.982,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "seed_707",
+   "family": "reconstructions_extension",
+   "dev_bleu4_official": 6.687,
+   "dev_wer_official": 92.997,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "seed_808",
+   "family": "reconstructions_extension",
+   "dev_bleu4_official": 7.3,
+   "dev_wer_official": 94.825,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "seed_909",
+   "family": "reconstructions_extension",
+   "dev_bleu4_official": 8.965,
+   "dev_wer_official": 88.206,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "seed_1001",
+   "family": "reconstructions_extension",
+   "dev_bleu4_official": 9.071,
+   "dev_wer_official": 88.471,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "seed_1102",
+   "family": "reconstructions_extension",
+   "dev_bleu4_official": 7.614,
+   "dev_wer_official": 90.904,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "seed_1203",
+   "family": "reconstructions_extension",
+   "dev_bleu4_official": 8.136,
+   "dev_wer_official": 88.854,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "seed_1304",
+   "family": "reconstructions_extension",
+   "dev_bleu4_official": 8.178,
+   "dev_wer_official": 91.434,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "seed_1405",
+   "family": "reconstructions_extension",
+   "dev_bleu4_official": 8.12,
+   "dev_wer_official": 90.461,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue_lr5e-4_seed101",
+   "family": "rescue_lr",
+   "dev_bleu4_official": 8.206,
+   "dev_wer_official": 93.13,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue_lr5e-4_seed202",
+   "family": "rescue_lr",
+   "dev_bleu4_official": 8.267,
+   "dev_wer_official": 89.312,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue_lr5e-4_seed303",
+   "family": "rescue_lr",
+   "dev_bleu4_official": 8.709,
+   "dev_wer_official": 92.481,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue_lr5e-4_seed404",
+   "family": "rescue_lr",
+   "dev_bleu4_official": 9.7,
+   "dev_wer_official": 90.122,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue_lr2e-3_seed101",
+   "family": "rescue_lr",
+   "dev_bleu4_official": 7.93,
+   "dev_wer_official": 87.483,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue_lr2e-3_seed202",
+   "family": "rescue_lr",
+   "dev_bleu4_official": 8.093,
+   "dev_wer_official": 89.872,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue_lr2e-3_seed303",
+   "family": "rescue_lr",
+   "dev_bleu4_official": 8.72,
+   "dev_wer_official": 88.81,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue_lr2e-3_seed404",
+   "family": "rescue_lr",
+   "dev_bleu4_official": 7.986,
+   "dev_wer_official": 91.611,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue2_bs128_seed101",
+   "family": "rescue2",
+   "dev_bleu4_official": 7.404,
+   "dev_wer_official": 90.992,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue2_bs128_seed202",
+   "family": "rescue2",
+   "dev_bleu4_official": 6.813,
+   "dev_wer_official": 90.417,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue2_bs512_seed101",
+   "family": "rescue2",
+   "dev_bleu4_official": 9.157,
+   "dev_wer_official": 87.764,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue2_bs512_seed202",
+   "family": "rescue2",
+   "dev_bleu4_official": 8.833,
+   "dev_wer_official": 88.884,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue2_drop0.2_seed101",
+   "family": "rescue2",
+   "dev_bleu4_official": 6.913,
+   "dev_wer_official": 91.685,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue2_drop0.2_seed202",
+   "family": "rescue2",
+   "dev_bleu4_official": 7.445,
+   "dev_wer_official": 90.299,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue2_ep600lr5e4_seed101",
+   "family": "rescue2",
+   "dev_bleu4_official": 8.206,
+   "dev_wer_official": 93.13,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue2_ep600lr5e4_seed202",
+   "family": "rescue2",
+   "dev_bleu4_official": 8.267,
+   "dev_wer_official": 89.312,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue2_ls0.1_seed101",
+   "family": "rescue2",
+   "dev_bleu4_official": 7.372,
+   "dev_wer_official": 89.828,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue2_ls0.1_seed202",
+   "family": "rescue2",
+   "dev_bleu4_official": 6.747,
+   "dev_wer_official": 90.226,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue2_wd0_seed101",
+   "family": "rescue2",
+   "dev_bleu4_official": 9.824,
+   "dev_wer_official": 88.737,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "rescue2_wd0_seed202",
+   "family": "rescue2",
+   "dev_bleu4_official": 9.92,
+   "dev_wer_official": 86.628,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "ladder_f0.125_seed101",
+   "family": "ladder",
+   "dev_bleu4_official": 4.51,
+   "dev_wer_official": 96.359,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": false
+  },
+  {
+   "id": "ladder_f0.25_seed101",
+   "family": "ladder",
+   "dev_bleu4_official": 4.559,
+   "dev_wer_official": 96.698,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": false
+  },
+  {
+   "id": "ladder_f0.5_seed101",
+   "family": "ladder",
+   "dev_bleu4_official": 5.599,
+   "dev_wer_official": 96.359,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": false
+  },
+  {
+   "id": "ladder_f0.75_seed101",
+   "family": "ladder",
+   "dev_bleu4_official": 5.865,
+   "dev_wer_official": 93.145,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": false
+  },
+  {
+   "id": "cfaith_seed101",
+   "family": "config_faithful",
+   "dev_bleu4_official": 8.913,
+   "dev_wer_official": 86.451,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "cfaith_seed202",
+   "family": "config_faithful",
+   "dev_bleu4_official": 8.585,
+   "dev_wer_official": 87.498,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "cfaith_seed303",
+   "family": "config_faithful",
+   "dev_bleu4_official": 8.668,
+   "dev_wer_official": 89.341,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "cfaith_seed404",
+   "family": "config_faithful",
+   "dev_bleu4_official": 9.514,
+   "dev_wer_official": 86.51,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "bigarch_A1",
+   "family": "big_arch",
+   "dev_bleu4_official": 6.839,
+   "dev_wer_official": 89.547,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "bigarch_A2",
+   "family": "big_arch",
+   "dev_bleu4_official": 6.872,
+   "dev_wer_official": 91.523,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "bigarch_A3",
+   "family": "big_arch",
+   "dev_bleu4_official": 7.968,
+   "dev_wer_official": 90.152,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "bigarch_A4",
+   "family": "big_arch",
+   "dev_bleu4_official": 7.713,
+   "dev_wer_official": 88.825,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "confirm_seed1506",
+   "family": "confirmation",
+   "dev_bleu4_official": 8.138,
+   "dev_wer_official": 92.437,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "confirm_seed1607",
+   "family": "confirmation",
+   "dev_bleu4_official": 7.604,
+   "dev_wer_official": 89.931,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "longsched_seed404",
+   "family": "long_schedule",
+   "dev_bleu4_official": 9.845,
+   "dev_wer_official": 87.793,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "longsched_seed505",
+   "family": "long_schedule",
+   "dev_bleu4_official": 10.022,
+   "dev_wer_official": 91.331,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true
+  },
+  {
+   "id": "bt_retrained",
+   "family": "bt_retrained_holdout",
+   "in_gate_eval": false,
+   "note": "trained on train-core only"
+  },
+  {
+   "id": "BT_A",
+   "family": "crossfit",
+   "in_gate_eval": false
+  },
+  {
+   "id": "BT_B",
+   "family": "crossfit",
+   "in_gate_eval": false
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "original_pass_through_bleu_ratio": {
+  "point": 3.094883802876887,
+  "ci": [
+   2.8932536956123553,
+   3.3284877486013835
+  ],
+  "mean_donor": 0.7951863598337838,
+  "mean_query": 0.2569357722233735
+ },
+ "original_pass_through_chrf_ratio": {
+  "point": 1.7120376350120639,
+  "ci": [
+   1.6619481554892712,
+   1.765251360399971
+  ],
+  "mean_donor": 85.17081054327305,
+  "mean_query": 49.74821160556608
+ },
+ "gate_sensitivity": {
+  "bleu\u00b10.5_wer\u00b11.5": {
+   "n_pass": 0,
+   "n_total": 36
+  },
+  "bleu\u00b10.5_wer\u00b13.0": {
+   "n_pass": 0,
+   "n_total": 36
+  },
+  "bleu\u00b10.5_wer\u00b14.5": {
+   "n_pass": 0,
+   "n_total": 36
+  },
+  "bleu\u00b11.0_wer\u00b11.5": {
+   "n_pass": 0,
+   "n_total": 36
+  },
+  "bleu\u00b11.0_wer\u00b13.0": {
+   "n_pass": 0,
+   "n_total": 36
+  },
+  "bleu\u00b11.0_wer\u00b14.5": {
+   "n_pass": 0,
+   "n_total": 36
+  },
+  "bleu\u00b11.5_wer\u00b11.5": {
+   "n_pass": 0,
+   "n_total": 36
+  },
+  "bleu\u00b11.5_wer\u00b13.0": {
+   "n_pass": 0,
+   "n_total": 36
+  },
+  "bleu\u00b11.5_wer\u00b14.5": {
+   "n_pass": 0,
+   "n_total": 36
+  },
+  "bleu\u00b12.0_wer\u00b11.5": {
+   "n_pass": 0,
+   "n_total": 36
+  },
+  "bleu\u00b12.0_wer\u00b13.0": {
+   "n_pass": 0,
+   "n_total": 36
+  },
+  "bleu\u00b12.0_wer\u00b14.5": {
+   "n_pass": 0,
+   "n_total": 36
+  }
+ }
+}

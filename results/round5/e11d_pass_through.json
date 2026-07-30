@@ -1,0 +1,152 @@
+{
+ "original": {
+  "bleu_donor": 0.7951863598337838,
+  "bleu_query": 0.2569357722233735,
+  "ratio": 3.094883802876887,
+  "source": "cache"
+ },
+ "seed_101": {
+  "bleu_donor": 0.13504134427845024,
+  "bleu_query": 0.11479687858332,
+  "ratio": 1.1763503149646768,
+  "source": "cache"
+ },
+ "seed_202": {
+  "bleu_donor": 0.1279965695634977,
+  "bleu_query": 0.10608098452215295,
+  "ratio": 1.206592964234491,
+  "source": "cache"
+ },
+ "seed_303": {
+  "bleu_donor": 0.14681647486909744,
+  "bleu_query": 0.11779197465751988,
+  "ratio": 1.2464047342441307,
+  "source": "cache"
+ },
+ "seed_404": {
+  "bleu_donor": 0.11921543247287804,
+  "bleu_query": 0.09770859684004492,
+  "ratio": 1.220112009878119,
+  "source": "cache"
+ },
+ "seed_505": {
+  "bleu_donor": 0.13403181321303947,
+  "bleu_query": 0.10963210470161258,
+  "ratio": 1.2225598840580134,
+  "source": "cache"
+ },
+ "seed_606": {
+  "bleu_donor": 0.12896093838079195,
+  "bleu_query": 0.10763317075856761,
+  "ratio": 1.1981523676382697,
+  "source": "cache"
+ },
+ "seed_707": {
+  "bleu_donor": 0.12826907679547261,
+  "bleu_query": 0.10395059359821984,
+  "ratio": 1.2339427063903676,
+  "source": "decoded"
+ },
+ "seed_808": {
+  "bleu_donor": 0.1221629763783827,
+  "bleu_query": 0.10014527876660266,
+  "ratio": 1.2198575697521818,
+  "source": "decoded"
+ },
+ "seed_909": {
+  "bleu_donor": 0.15314630231823612,
+  "bleu_query": 0.12088215143723495,
+  "ratio": 1.2669058293337336,
+  "source": "decoded"
+ },
+ "seed_1001": {
+  "bleu_donor": 0.13406859919485314,
+  "bleu_query": 0.11262014971335824,
+  "ratio": 1.1904494847155298,
+  "source": "decoded"
+ },
+ "seed_1102": {
+  "bleu_donor": 0.12744214059827066,
+  "bleu_query": 0.10661653558698549,
+  "ratio": 1.1953318488227762,
+  "source": "decoded"
+ },
+ "seed_1203": {
+  "bleu_donor": 0.13953829482667696,
+  "bleu_query": 0.11428703361473104,
+  "ratio": 1.220945984975597,
+  "source": "decoded"
+ },
+ "seed_1304": {
+  "bleu_donor": 0.14138077583966938,
+  "bleu_query": 0.11471054561012266,
+  "ratio": 1.2325002473634228,
+  "source": "decoded"
+ },
+ "seed_1405": {
+  "bleu_donor": 0.13297445512017275,
+  "bleu_query": 0.1108212661868097,
+  "ratio": 1.1999001608231021,
+  "source": "decoded"
+ },
+ "wd0_seed202": {
+  "bleu_donor": 0.17942613742197952,
+  "bleu_query": 0.13739064075201898,
+  "ratio": 1.3059560421283123,
+  "source": "decoded"
+ },
+ "bs512_seed101": {
+  "bleu_donor": 0.15457409005262107,
+  "bleu_query": 0.12212751068262605,
+  "ratio": 1.265677890170989,
+  "source": "decoded"
+ },
+ "ladder_f0.125": {
+  "bleu_donor": 0.07589530333540291,
+  "bleu_query": 0.07242121212339431,
+  "ratio": 1.0479706305673164,
+  "source": "decoded"
+ },
+ "ladder_f0.25": {
+  "bleu_donor": 0.07832833972742839,
+  "bleu_query": 0.07196134103186505,
+  "ratio": 1.0884780439645223,
+  "source": "decoded"
+ },
+ "ladder_f0.5": {
+  "bleu_donor": 0.10397772903883437,
+  "bleu_query": 0.09431996469741703,
+  "ratio": 1.102393638212227,
+  "source": "decoded"
+ },
+ "ladder_f0.75": {
+  "bleu_donor": 0.10475705931928625,
+  "bleu_query": 0.09596046552149354,
+  "ratio": 1.091668936264408,
+  "source": "decoded"
+ },
+ "cfaith101": {
+  "bleu_donor": 0.14141998892894056,
+  "bleu_query": 0.11377848546332828,
+  "ratio": 1.2429413904838922,
+  "source": "decoded"
+ },
+ "cfaith404": {
+  "bleu_donor": 0.1414910469052031,
+  "bleu_query": 0.11429359783339431,
+  "ratio": 1.237961264562294,
+  "source": "decoded"
+ },
+ "cfaith202": {
+  "bleu_donor": 0.13135561157767034,
+  "bleu_query": 0.10796372796159115,
+  "ratio": 1.2166642821411373,
+  "source": "decoded"
+ },
+ "cfaith303": {
+  "bleu_donor": 0.14572774738507785,
+  "bleu_query": 0.12052881820772489,
+  "ratio": 1.209069744083311,
+  "source": "decoded"
+ }
+}
