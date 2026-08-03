@@ -1,17 +1,21 @@
-# Sync this repo to anonymous.4open.science on every push to main.
+# Trigger anonymous.4open.science to re-mirror this repo after every push to main.
 #
-# Setup (one-time):
-#   1. Log into anonymous.4open.science and create (or open) the anonymous repo
-#      that maps to this GitHub repo (e.g. rcp-audit-artifact-B314).
-#   2. Copy the anonymous git push URL it gives you. It looks like:
-#        https://anonymous:TOKEN@anonymous.4open.science/REPO_ID.git
-#      (TOKEN is the long alphanumerical credential. REPO_ID is the 4-char ID.)
+# Mechanism: anonymous.4open.science holds a read-only mirror of this GitHub
+# repo. Its /api/repo/<id>/refresh endpoint forces a re-pull. We authenticate
+# with a Bearer API token (generated from the anonymous.4open.science profile
+# page).
+#
+# One-time setup:
+#   1. Log into https://anonymous.4open.science with GitHub.
+#   2. Open your profile / account settings -> API tokens -> Generate new token.
+#      Copy the token (shown once).
 #   3. In GitHub: Settings -> Secrets and variables -> Actions -> New repository secret
-#      Name:  ANONYMOUS_PUSH_URL
-#      Value: the full URL from step 2 (including https://anonymous:TOKEN@...)
-#   4. Push to main. The Action will mirror to anonymous.4open.science.
-#
-# The anonymous URL stays fixed; reviewers always see the latest content.
+#      Name:  ANONYMOUS_API_TOKEN
+#      Value: <paste token>
+#   4. (Optional) If your anonymous repo ID ever changes, update ANONYMOUS_REPO_ID.
+#      Default is rcp-audit-artifact-B314.
+#   5. Push to main. The Action triggers a refresh; the anonymous URL updates
+#      within a few minutes.
 
 name: Sync to anonymous.4open.science
 
@@ -27,34 +31,42 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # full history for mirror push
-
-      - name: Configure Git
-        run: |
-          git config user.name "anonymous-sync-bot"
-          git config user.email "bot@anonymous.local"
-
-      - name: Push mirror to anonymous.4open.science
+      - name: Trigger anonymous.4open.science refresh
         env:
-          ANONYMOUS_PUSH_URL: ${{ secrets.ANONYMOUS_PUSH_URL }}
+          ANONYMOUS_API_TOKEN: ${{ secrets.ANONYMOUS_API_TOKEN }}
+          ANONYMOUS_REPO_ID: ${{ vars.ANONYMOUS_REPO_ID || 'rcp-audit-artifact-B314' }}
         run: |
-          if [ -z "$ANONYMOUS_PUSH_URL" ]; then
-            echo "ERROR: ANONYMOUS_PUSH_URL secret is not set."
-            echo "Go to Settings -> Secrets and variables -> Actions -> New repository secret"
-            echo "and add the anonymous git push URL from anonymous.4open.science."
+          if [ -z "$ANONYMOUS_API_TOKEN" ]; then
+            echo "::error::ANONYMOUS_API_TOKEN secret is not set."
+            echo "Generate a token at https://anonymous.4open.science (profile -> API tokens),"
+            echo "then add it as a repository secret named ANONYMOUS_API_TOKEN."
             exit 1
           fi
-          git remote add anonymous "$ANONYMOUS_PUSH_URL"
-          echo "Pushing to anonymous.4open.science..."
-          git push --force anonymous main
-          echo "Sync complete."
+          echo "Triggering refresh for $ANONYMOUS_REPO_ID..."
+          HTTP_CODE=$(curl -sS -o /tmp/response.json -w "%{http_code}" \
+            -X POST \
+            -H "Authorization: Bearer $ANONYMOUS_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            "https://anonymous.4open.science/api/repo/$ANONYMOUS_REPO_ID/refresh")
+          echo "HTTP response: $HTTP_CODE"
+          cat /tmp/response.json
+          echo ""
+          case "$HTTP_CODE" in
+            200) echo "Refresh triggered successfully." ;;
+            401) echo "::error::Unauthorized — token invalid or expired. Regenerate at anonymous.4open.science profile."; exit 1 ;;
+            403) echo "::error::Forbidden — token owner is not the repo owner/coauthor/admin."; exit 1 ;;
+            404) echo "::error::Repo $ANONYMOUS_REPO_ID not found. Check ANONYMOUS_REPO_ID variable."; exit 1 ;;
+            409) echo "::warning::Repository is in preparing/removing/expiring state; retry later."; exit 1 ;;
+            *)   echo "::error::Unexpected HTTP $HTTP_CODE"; exit 1 ;;
+          esac
 
       - name: Summary
         if: always()
         run: |
-          echo "## Anonymous sync ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
+          echo "## Anonymous sync: ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Anonymous URL: see anonymous.4open.science for the public-facing link" >> $GITHUB_STEP_SUMMARY
+          echo "Public URL: https://anonymous.4open.science/r/${ANONYMOUS_REPO_ID}/README.md" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Note: anonymous.4open.science re-pulls from GitHub. Updates may take a few minutes to appear; hard-refresh the page to bypass cache." >> $GITHUB_STEP_SUMMARY
+        env:
+          ANONYMOUS_REPO_ID: ${{ vars.ANONYMOUS_REPO_ID || 'rcp-audit-artifact-B314' }}
