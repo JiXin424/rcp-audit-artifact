@@ -1,0 +1,60 @@
+# Sync this repo to anonymous.4open.science on every push to main.
+#
+# Setup (one-time):
+#   1. Log into anonymous.4open.science and create (or open) the anonymous repo
+#      that maps to this GitHub repo (e.g. rcp-audit-artifact-B314).
+#   2. Copy the anonymous git push URL it gives you. It looks like:
+#        https://anonymous:TOKEN@anonymous.4open.science/REPO_ID.git
+#      (TOKEN is the long alphanumerical credential. REPO_ID is the 4-char ID.)
+#   3. In GitHub: Settings -> Secrets and variables -> Actions -> New repository secret
+#      Name:  ANONYMOUS_PUSH_URL
+#      Value: the full URL from step 2 (including https://anonymous:TOKEN@...)
+#   4. Push to main. The Action will mirror to anonymous.4open.science.
+#
+# The anonymous URL stays fixed; reviewers always see the latest content.
+
+name: Sync to anonymous.4open.science
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:  # allow manual trigger from Actions tab
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history for mirror push
+
+      - name: Configure Git
+        run: |
+          git config user.name "anonymous-sync-bot"
+          git config user.email "bot@anonymous.local"
+
+      - name: Push mirror to anonymous.4open.science
+        env:
+          ANONYMOUS_PUSH_URL: ${{ secrets.ANONYMOUS_PUSH_URL }}
+        run: |
+          if [ -z "$ANONYMOUS_PUSH_URL" ]; then
+            echo "ERROR: ANONYMOUS_PUSH_URL secret is not set."
+            echo "Go to Settings -> Secrets and variables -> Actions -> New repository secret"
+            echo "and add the anonymous git push URL from anonymous.4open.science."
+            exit 1
+          fi
+          git remote add anonymous "$ANONYMOUS_PUSH_URL"
+          echo "Pushing to anonymous.4open.science..."
+          git push --force anonymous main
+          echo "Sync complete."
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## Anonymous sync ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Anonymous URL: see anonymous.4open.science for the public-facing link" >> $GITHUB_STEP_SUMMARY
