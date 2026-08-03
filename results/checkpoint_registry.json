@@ -5,7 +5,7 @@
   "dev_wer_official": 83.37019018133569,
   "note": "released SLRTP2025 evaluator; best.ckpt = step 1820 of 2828-step run per bundle validations.txt"
  },
- "n_trained": 50,
+ "n_trained": 52,
  "checkpoints": [
   {
    "id": "seed_101",
@@ -355,7 +355,7 @@
    "gate_bleu_pass": false,
    "gate_wer_pass": false,
    "in_dose_response": true,
-   "in_gate_eval": false
+   "in_gate_eval": true
   },
   {
    "id": "ladder_f0.25_seed101",
@@ -365,7 +365,7 @@
    "gate_bleu_pass": false,
    "gate_wer_pass": false,
    "in_dose_response": true,
-   "in_gate_eval": false
+   "in_gate_eval": true
   },
   {
    "id": "ladder_f0.5_seed101",
@@ -375,7 +375,7 @@
    "gate_bleu_pass": false,
    "gate_wer_pass": false,
    "in_dose_response": true,
-   "in_gate_eval": false
+   "in_gate_eval": true
   },
   {
    "id": "ladder_f0.75_seed101",
@@ -385,7 +385,7 @@
    "gate_bleu_pass": false,
    "gate_wer_pass": false,
    "in_dose_response": true,
-   "in_gate_eval": false
+   "in_gate_eval": true
   },
   {
    "id": "cfaith_seed101",
@@ -506,6 +506,28 @@
    "gate_wer_pass": false,
    "in_dose_response": true,
    "in_gate_eval": true
+  },
+  {
+   "id": "stepfaith_seed101",
+   "family": "step_faithful",
+   "dev_bleu4_official": 7.03,
+   "dev_wer_official": 92.30,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true,
+   "note": "released-config step-based validation (every 14 optimizer steps); stopped at step 4200"
+  },
+  {
+   "id": "stepfaith_seed202",
+   "family": "step_faithful",
+   "dev_bleu4_official": 7.47,
+   "dev_wer_official": 91.85,
+   "gate_bleu_pass": false,
+   "gate_wer_pass": false,
+   "in_dose_response": true,
+   "in_gate_eval": true,
+   "note": "released-config step-based validation (every 14 optimizer steps); stopped at step 4662"
   },
   {
    "id": "bt_retrained",

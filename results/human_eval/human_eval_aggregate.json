@@ -1,0 +1,1949 @@
+{
+  "n_raters": 30,
+  "n_videos": 100,
+  "n_targets": 20,
+  "per_video": [
+    {
+      "video_id": "0353B98DDD60C0D5",
+      "target": "und am mittwoch dann noch reste dieser schauer und gewitter über dem osten und über dem süden .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.966666666666667,
+      "semantic_median": 3.0,
+      "semantic_sd": 0.9994251221140299,
+      "intell_mean": 2.3333333333333335,
+      "intell_sd": 1.1841869998335197,
+      "natural_mean": 3.1666666666666665,
+      "natural_sd": 1.2340942045675145,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "08897D390D0B4B10",
+      "target": "zusammen mit der schwül heißen luft sorgt es für zum teil heftige gewitter .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.5,
+      "semantic_median": 2.0,
+      "semantic_sd": 1.137147065368355,
+      "intell_mean": 4.5,
+      "intell_sd": 0.9377154924749757,
+      "natural_mean": 4.133333333333334,
+      "natural_sd": 1.0742546199601597,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "09B72F5393F9C213",
+      "target": "und etwas kälter wird es dann im laufe des sonntags von osten .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.033333333333333,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.3514572807192966,
+      "intell_mean": 3.7333333333333334,
+      "intell_sd": 1.1724814044061258,
+      "natural_mean": 3.7666666666666666,
+      "natural_sd": 1.072648457158112,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "0CD4B828C37A7DB0",
+      "target": "zusammen mit der schwül heißen luft sorgt es für zum teil heftige gewitter .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.4,
+      "semantic_median": 1.0,
+      "semantic_sd": 1.0699661612438482,
+      "intell_mean": 1.7333333333333334,
+      "intell_sd": 1.0806553992619585,
+      "natural_mean": 1.6666666666666667,
+      "natural_sd": 1.124441112772009,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "14DF653946D1BBFB",
+      "target": "später ziehen dort auch wolken mit etwas regen auf .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.1141720290623112,
+      "intell_mean": 1.6333333333333333,
+      "intell_sd": 1.1591713250937241,
+      "natural_mean": 2,
+      "natural_sd": 1.1141720290623112,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "1AEBB6828ACD6F37",
+      "target": "richtung westen gibt es im tagesverlauf vermehrt wolken es bleibt aber weitgehend trocken .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.033333333333333,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.2452207485597395,
+      "intell_mean": 1.5666666666666667,
+      "intell_sd": 0.9352607356658147,
+      "natural_mean": 2.3,
+      "natural_sd": 1.0875470659652644,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "1B03403D3F80B760",
+      "target": "und nun die wettervorhersage für morgen samstag den einunddreißigsten oktober .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.5666666666666667,
+      "semantic_median": 1.0,
+      "semantic_sd": 0.9352607356658147,
+      "intell_mean": 2.4,
+      "intell_sd": 1.2484473115254693,
+      "natural_mean": 3.966666666666667,
+      "natural_sd": 0.9643054793328016,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "1D34B72BF5454FD0",
+      "target": "und nun die wettervorhersage für morgen samstag den sechsundzwanzigsten januar .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.5,
+      "semantic_median": 1.0,
+      "semantic_sd": 0.6822882392210131,
+      "intell_mean": 4.666666666666667,
+      "intell_sd": 0.802295557085754,
+      "natural_mean": 4.533333333333333,
+      "natural_sd": 0.8193072487266861,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "24DA8E99BB880524",
+      "target": "und etwas kälter wird es dann im laufe des sonntags von osten .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.933333333333333,
+      "semantic_median": 4.0,
+      "semantic_sd": 1.1426929274467317,
+      "intell_mean": 1.6,
+      "intell_sd": 1.0372377109252813,
+      "natural_mean": 2.3,
+      "natural_sd": 1.235955584516107,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "2A80DF33A1F8988B",
+      "target": "heute nacht ist es im süden teils klar teilweise aber auch nebel .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.5666666666666667,
+      "semantic_median": 1.0,
+      "semantic_sd": 0.8172001541568766,
+      "intell_mean": 4.366666666666666,
+      "intell_sd": 1.0333518722845685,
+      "natural_mean": 3,
+      "natural_sd": 1.3130643285972257,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "2B2CEBD978890DC2",
+      "target": "an der küste morgen kühle neun grad im breisgau bis achtzehn grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.033333333333333,
+      "semantic_median": 4.0,
+      "semantic_sd": 1.0980651740387641,
+      "intell_mean": 3.1666666666666665,
+      "intell_sd": 1.1768846465411842,
+      "natural_mean": 2.3,
+      "natural_sd": 1.316997630453711,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "2B7F330E3C029024",
+      "target": "heute nacht ist es im süden teils klar teilweise aber auch nebel .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.933333333333333,
+      "semantic_median": 4.0,
+      "semantic_sd": 1.1724814044061258,
+      "intell_mean": 2.566666666666667,
+      "intell_sd": 1.2780193008453875,
+      "natural_mean": 1.7666666666666666,
+      "natural_sd": 1.2228664272317622,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "2DD78AA8B2D869D5",
+      "target": "besonders im osten deutschlands kann es ein wenig regnen oder schneien .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.3666666666666667,
+      "semantic_median": 2.0,
+      "semantic_sd": 1.1591713250937241,
+      "intell_mean": 4.4,
+      "intell_sd": 1.0034423509719619,
+      "natural_mean": 2.6,
+      "natural_sd": 1.0699661612438482,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "2F2A6BD4A12DA60F",
+      "target": "an der küste morgen kühle neun grad im breisgau bis achtzehn grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.2666666666666666,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.0148325268098497,
+      "intell_mean": 3.2,
+      "intell_sd": 1.0635010497214474,
+      "natural_mean": 1.5333333333333334,
+      "natural_sd": 0.9371024061116425,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "2FB7DAE36DC8D538",
+      "target": "und am mittwoch dann noch reste dieser schauer und gewitter über dem osten und über dem süden .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.466666666666667,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.9371024061116425,
+      "intell_mean": 1.5,
+      "intell_sd": 0.7768193328323317,
+      "natural_mean": 4.6,
+      "natural_sd": 0.6746646676632054,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "31C84A36894C0E96",
+      "target": "sechs grad heute nacht am alpenrand bis fünfzehn grad an der oder .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.5,
+      "semantic_median": 1.0,
+      "semantic_sd": 1.0422125006694767,
+      "intell_mean": 1.6333333333333333,
+      "intell_sd": 1.0980651740387641,
+      "natural_mean": 1.4666666666666666,
+      "natural_sd": 1.0416609195243756,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "33C65373B6930E71",
+      "target": "besonders im osten deutschlands kann es ein wenig regnen oder schneien .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.3333333333333335,
+      "semantic_median": 2.0,
+      "semantic_sd": 1.124441112772009,
+      "intell_mean": 4.3,
+      "intell_sd": 1.118804780974337,
+      "natural_mean": 4.366666666666666,
+      "natural_sd": 0.9994251221140299,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "36A027103404B0C9",
+      "target": "und am mittwoch dann noch reste dieser schauer und gewitter über dem osten und über dem süden .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.966666666666667,
+      "semantic_median": 4.0,
+      "semantic_sd": 0.9643054793328016,
+      "intell_mean": 4.533333333333333,
+      "intell_sd": 0.8603661343041527,
+      "natural_mean": 4.666666666666667,
+      "natural_sd": 0.7111590022187595,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "38CE8584A90516BF",
+      "target": "am tag sieben grad an der ostsee und fünfzehn grad am rhein .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.966666666666667,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.0980651740387641,
+      "intell_mean": 4.633333333333334,
+      "intell_sd": 0.7648904962570576,
+      "natural_mean": 4.633333333333334,
+      "natural_sd": 0.7648904962570576,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "42AD8502CFB055ED",
+      "target": "richtung westen gibt es im tagesverlauf vermehrt wolken es bleibt aber weitgehend trocken .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.433333333333334,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.8976341829703132,
+      "intell_mean": 4.466666666666667,
+      "intell_sd": 0.6814453874610599,
+      "natural_mean": 4.533333333333333,
+      "natural_sd": 0.6814453874610599,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "45E537AD30C330B3",
+      "target": "zusammen mit der schwül heißen luft sorgt es für zum teil heftige gewitter .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.5333333333333334,
+      "semantic_median": 1.0,
+      "semantic_sd": 1.0080138659874618,
+      "intell_mean": 4.466666666666667,
+      "intell_sd": 0.8603661343041527,
+      "natural_mean": 4.466666666666667,
+      "natural_sd": 0.9371024061116425,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "47BEC2D7D9B983A0",
+      "target": "am tag sieben grad an der ostsee und fünfzehn grad am rhein .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.966666666666667,
+      "semantic_median": 4.0,
+      "semantic_sd": 0.8502873077655143,
+      "intell_mean": 4.333333333333333,
+      "intell_sd": 0.9589266029707683,
+      "natural_mean": 3.066666666666667,
+      "natural_sd": 1.1426929274467317,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "493A151170AD69DD",
+      "target": "dort morgen sieben grad nordöstlich der elbe teilweise nur minus ein grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.6333333333333333,
+      "semantic_median": 1.0,
+      "semantic_sd": 0.8502873077655143,
+      "intell_mean": 4.333333333333333,
+      "intell_sd": 1.0283342182227606,
+      "natural_mean": 4.433333333333334,
+      "natural_sd": 0.9714309861845772,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "4C070AA22B81CFD7",
+      "target": "besonders im osten deutschlands kann es ein wenig regnen oder schneien .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.466666666666667,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.9371024061116425,
+      "intell_mean": 4.466666666666667,
+      "intell_sd": 0.8995528902176072,
+      "natural_mean": 1.4333333333333333,
+      "natural_sd": 0.6789105539243627,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "4CF31771D9505055",
+      "target": "und nun die wettervorhersage für morgen samstag den einunddreißigsten oktober .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.2333333333333334,
+      "semantic_median": 2.0,
+      "semantic_sd": 0.9714309861845772,
+      "intell_mean": 4.5,
+      "intell_sd": 0.8610338613230188,
+      "natural_mean": 3.033333333333333,
+      "natural_sd": 0.9643054793328016,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "4ED7A29AE62CFBEE",
+      "target": "östlich also über osteuropa noch hochsommerlich warm mit um die fünfundzwanzig grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.1666666666666665,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.0854312136382618,
+      "intell_mean": 3.2333333333333334,
+      "intell_sd": 1.1351236704106018,
+      "natural_mean": 3.9,
+      "natural_sd": 1.0938700673013826,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "509E0AB7CED85259",
+      "target": "in der dahinter einfließenden kaltluft gestaltet sich das wetter morgen wechselhaft .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.533333333333333,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.7302967433402214,
+      "intell_mean": 3.8666666666666667,
+      "intell_sd": 1.1058881072455415,
+      "natural_mean": 3.966666666666667,
+      "natural_sd": 0.9278574999588488,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "5210573530480565",
+      "target": "und nun die wettervorhersage für morgen samstag den sechsundzwanzigsten januar .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.4,
+      "semantic_median": 2.0,
+      "semantic_sd": 1.0699661612438482,
+      "intell_mean": 4.166666666666667,
+      "intell_sd": 1.0199166069132668,
+      "natural_mean": 4.033333333333333,
+      "natural_sd": 1.0661996103898193,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "52DD061D9717E47D",
+      "target": "heute nacht zwölf grad in der kölner bucht ein grad in brandenburg .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.6666666666666667,
+      "semantic_median": 1.0,
+      "semantic_sd": 1.1547005383792515,
+      "intell_mean": 3.1333333333333333,
+      "intell_sd": 1.1366415543118709,
+      "natural_mean": 3.1333333333333333,
+      "natural_sd": 1.1058881072455415,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "532AE8A707988E95",
+      "target": "dort morgen sieben grad nordöstlich der elbe teilweise nur minus ein grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.2666666666666666,
+      "semantic_median": 2.0,
+      "semantic_sd": 1.2015315896469556,
+      "intell_mean": 3,
+      "intell_sd": 1.0504514628777804,
+      "natural_mean": 2.3333333333333335,
+      "natural_sd": 1.2685406585123122,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "56FFDEBB50E66AA8",
+      "target": "und nun die wettervorhersage für morgen samstag den sechsundzwanzigsten januar .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.433333333333334,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.8976341829703132,
+      "intell_mean": 2.3,
+      "intell_sd": 1.0553639672872464,
+      "natural_mean": 4.466666666666667,
+      "natural_sd": 0.7302967433402214,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "5C18044F4D891EA9",
+      "target": "und am mittwoch dann noch reste dieser schauer und gewitter über dem osten und über dem süden .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.6666666666666665,
+      "semantic_median": 4.0,
+      "semantic_sd": 1.093344547181068,
+      "intell_mean": 2.2333333333333334,
+      "intell_sd": 1.1043279539543756,
+      "natural_mean": 2.2333333333333334,
+      "natural_sd": 1.19433528860584,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "6201CBBBD5D34F74",
+      "target": "und etwas kälter wird es dann im laufe des sonntags von osten .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.7666666666666666,
+      "semantic_median": 2.0,
+      "semantic_sd": 0.9352607356658147,
+      "intell_mean": 4.533333333333333,
+      "intell_sd": 0.8193072487266861,
+      "natural_mean": 4.6,
+      "natural_sd": 0.6746646676632054,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "625AA772732C5CB8",
+      "target": "richtung westen gibt es im tagesverlauf vermehrt wolken es bleibt aber weitgehend trocken .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.233333333333333,
+      "semantic_median": 5.0,
+      "semantic_sd": 1.1043279539543756,
+      "intell_mean": 4.333333333333333,
+      "intell_sd": 1.0613372610104648,
+      "natural_mean": 4.333333333333333,
+      "natural_sd": 0.9589266029707683,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "691D00AA2A0F700A",
+      "target": "an der küste morgen kühle neun grad im breisgau bis achtzehn grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.4,
+      "semantic_median": 2.0,
+      "semantic_sd": 0.932183199398798,
+      "intell_mean": 2.5,
+      "intell_sd": 1.106407669457548,
+      "natural_mean": 4.5,
+      "natural_sd": 0.8610338613230188,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "6C69BB648CABCB53",
+      "target": "östlich also über osteuropa noch hochsommerlich warm mit um die fünfundzwanzig grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.6666666666666665,
+      "semantic_median": 4.0,
+      "semantic_sd": 0.9942362632324556,
+      "intell_mean": 4.5,
+      "intell_sd": 0.9377154924749757,
+      "natural_mean": 4.566666666666666,
+      "natural_sd": 0.7738543627276671,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "708E33DE41FCE115",
+      "target": "samstag fällt auch noch schnee .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.4,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.7701320979389589,
+      "intell_mean": 2.466666666666667,
+      "intell_sd": 1.0416609195243756,
+      "natural_mean": 3.1,
+      "natural_sd": 1.1551981469084383,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "71832AC30B91116F",
+      "target": "und nun die wettervorhersage für morgen samstag den einunddreißigsten oktober .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.533333333333333,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.8995528902176072,
+      "intell_mean": 3.3666666666666667,
+      "intell_sd": 1.1591713250937241,
+      "natural_mean": 3.9,
+      "natural_sd": 1.0288929437289247,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "74E9AB11CF983C91",
+      "target": "besonders im osten deutschlands kann es ein wenig regnen oder schneien .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.9,
+      "semantic_median": 4.0,
+      "semantic_sd": 0.8847364696279085,
+      "intell_mean": 2.9,
+      "intell_sd": 1.1249521062602221,
+      "natural_mean": 2.933333333333333,
+      "natural_sd": 1.1724814044061258,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "7558456B5C862090",
+      "target": "heute nacht zwölf grad in der kölner bucht ein grad in brandenburg .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.633333333333334,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.6686751354593717,
+      "intell_mean": 4.5,
+      "intell_sd": 0.9001915504970077,
+      "natural_mean": 4.433333333333334,
+      "natural_sd": 0.7738543627276671,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "75BD2F34A73FB5E0",
+      "target": "der nordosten deutschlands liegt morgen dank hochdruckeinfluss meist auf der sonnenseite .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.033333333333333,
+      "semantic_median": 4.0,
+      "semantic_sd": 0.9994251221140299,
+      "intell_mean": 4.466666666666667,
+      "intell_sd": 0.8995528902176072,
+      "natural_mean": 4.466666666666667,
+      "natural_sd": 0.7302967433402214,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "7974345EFB1BB740",
+      "target": "und am mittwoch dann noch reste dieser schauer und gewitter über dem osten und über dem süden .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.1666666666666665,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.1768846465411842,
+      "intell_mean": 3.9,
+      "intell_sd": 0.8847364696279085,
+      "natural_mean": 4.5,
+      "natural_sd": 0.8610338613230188,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "7A7CCD4BECB8A454",
+      "target": "ansonsten ist es meist nur locker bewölkt oder klar stellenweise bildet sich nebel .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.6666666666666667,
+      "semantic_median": 1.0,
+      "semantic_sd": 0.9222660747548281,
+      "intell_mean": 4.6,
+      "intell_sd": 0.8550055454548939,
+      "natural_mean": 4.5,
+      "natural_sd": 0.8200084103858011,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "864C0904A8D8EA87",
+      "target": "der nordosten deutschlands liegt morgen dank hochdruckeinfluss meist auf der sonnenseite .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.5666666666666667,
+      "semantic_median": 1.0,
+      "semantic_sd": 1.0400044208570938,
+      "intell_mean": 4.333333333333333,
+      "intell_sd": 0.802295557085754,
+      "natural_mean": 1.6666666666666667,
+      "natural_sd": 1.0283342182227606,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "8CB21EBD4034EC97",
+      "target": "heute nacht ist es im süden teils klar teilweise aber auch nebel .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.533333333333333,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.7302967433402214,
+      "intell_mean": 4.733333333333333,
+      "intell_sd": 0.5832922809856746,
+      "natural_mean": 4.5,
+      "natural_sd": 0.8200084103858011,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "912C425D50CD9F77",
+      "target": "samstag fällt auch noch schnee .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.466666666666667,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.8193072487266861,
+      "intell_mean": 1.7666666666666666,
+      "intell_sd": 1.19433528860584,
+      "natural_mean": 3.933333333333333,
+      "natural_sd": 1.048260737942924,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "9203B5E90274A316",
+      "target": "später ziehen dort auch wolken mit etwas regen auf .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.366666666666666,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.8087168778415269,
+      "intell_mean": 4.5,
+      "intell_sd": 0.8200084103858011,
+      "natural_mean": 4.7,
+      "natural_sd": 0.7497125886079554,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "952B139E080FD16C",
+      "target": "ansonsten ist es meist nur locker bewölkt oder klar stellenweise bildet sich nebel .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.5,
+      "semantic_median": 1.0,
+      "semantic_sd": 1.0747894741730137,
+      "intell_mean": 2.2666666666666666,
+      "intell_sd": 1.284746944983205,
+      "natural_mean": 2.3333333333333335,
+      "natural_sd": 1.2410599844719317,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "9964DE4EC1B9D6E3",
+      "target": "in der südhälfte weht der wind schwach sonst schwach bis mäßig richtung küsten frisch und stark böig .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.3,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.1788363637137231,
+      "intell_mean": 4.433333333333334,
+      "intell_sd": 0.7738543627276671,
+      "natural_mean": 1.7666666666666666,
+      "natural_sd": 1.1351236704106018,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "9C724B284D5F6874",
+      "target": "und etwas kälter wird es dann im laufe des sonntags von osten .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.3333333333333335,
+      "semantic_median": 2.0,
+      "semantic_sd": 1.1547005383792515,
+      "intell_mean": 2.3333333333333335,
+      "intell_sd": 1.2129568697262454,
+      "natural_mean": 4.166666666666667,
+      "natural_sd": 0.6989318615762461,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "A674DA634B38D475",
+      "target": "der nordosten deutschlands liegt morgen dank hochdruckeinfluss meist auf der sonnenseite .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.033333333333333,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.1885468767200222,
+      "intell_mean": 3.3333333333333335,
+      "intell_sd": 1.2410599844719317,
+      "natural_mean": 3.3333333333333335,
+      "natural_sd": 1.2954385047312087,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "A6DD4F7B2C72ABBA",
+      "target": "in der südhälfte weht der wind schwach sonst schwach bis mäßig richtung küsten frisch und stark böig .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.4,
+      "semantic_median": 2.0,
+      "semantic_sd": 1.1919268665368752,
+      "intell_mean": 3.9,
+      "intell_sd": 0.9228890171255884,
+      "natural_mean": 1.6333333333333333,
+      "natural_sd": 0.9994251221140299,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "A6EF27483E3480B2",
+      "target": "der nordosten deutschlands liegt morgen dank hochdruckeinfluss meist auf der sonnenseite .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.5666666666666667,
+      "semantic_median": 1.0,
+      "semantic_sd": 0.8172001541568766,
+      "intell_mean": 3.2666666666666666,
+      "intell_sd": 1.112106833535071,
+      "natural_mean": 4.633333333333334,
+      "natural_sd": 0.7648904962570576,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "A8AE3FA537E5E957",
+      "target": "ansonsten ist es meist nur locker bewölkt oder klar stellenweise bildet sich nebel .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.5,
+      "semantic_median": 1.0,
+      "semantic_sd": 0.6822882392210131,
+      "intell_mean": 4.4,
+      "intell_sd": 0.7239737088005909,
+      "natural_mean": 4.466666666666667,
+      "natural_sd": 0.8193072487266861,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "ABDAC7F91FE509B6",
+      "target": "später ziehen dort auch wolken mit etwas regen auf .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.7666666666666666,
+      "semantic_median": 1.5,
+      "semantic_sd": 0.8976341829703132,
+      "intell_mean": 4.566666666666666,
+      "intell_sd": 0.8583598366625749,
+      "natural_mean": 4.6,
+      "natural_sd": 0.6746646676632054,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "AD26F99C4079C3DF",
+      "target": "in der südhälfte weht der wind schwach sonst schwach bis mäßig richtung küsten frisch und stark böig .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.533333333333333,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.8603661343041527,
+      "intell_mean": 4.5,
+      "intell_sd": 0.9001915504970077,
+      "natural_mean": 3.6,
+      "natural_sd": 1.1017227888394956,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "AE40DD46593B96E7",
+      "target": "samstag fällt auch noch schnee .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.9,
+      "semantic_median": 4.0,
+      "semantic_sd": 1.0938700673013826,
+      "intell_mean": 3.2666666666666666,
+      "intell_sd": 1.2298957997167563,
+      "natural_mean": 4.333333333333333,
+      "natural_sd": 1.0283342182227606,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "B2B23888CBAA28AB",
+      "target": "und nun die wettervorhersage für morgen samstag den einunddreißigsten oktober .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.8,
+      "semantic_median": 2.0,
+      "semantic_sd": 0.8469010445797932,
+      "intell_mean": 3.433333333333333,
+      "intell_sd": 1.2780193008453875,
+      "natural_mean": 4.533333333333333,
+      "natural_sd": 0.7760791522613609,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "B393F3F492777271",
+      "target": "samstag fällt auch noch schnee .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.566666666666666,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.7738543627276671,
+      "intell_mean": 4.633333333333334,
+      "intell_sd": 0.7648904962570576,
+      "natural_mean": 4.5,
+      "natural_sd": 0.7768193328323317,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "B8C9273C2601AB70",
+      "target": "zusammen mit der schwül heißen luft sorgt es für zum teil heftige gewitter .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.8333333333333335,
+      "semantic_median": 4.0,
+      "semantic_sd": 1.2058287558794354,
+      "intell_mean": 3.1666666666666665,
+      "intell_sd": 1.2887666740841357,
+      "natural_mean": 4.366666666666666,
+      "natural_sd": 0.9994251221140299,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "B975251998760827",
+      "target": "dort morgen sieben grad nordöstlich der elbe teilweise nur minus ein grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.7,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.5349830806219241,
+      "intell_mean": 3.033333333333333,
+      "intell_sd": 1.1591713250937241,
+      "natural_mean": 4.6,
+      "natural_sd": 0.932183199398798,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "BB5114F595DE505D",
+      "target": "in der dahinter einfließenden kaltluft gestaltet sich das wetter morgen wechselhaft .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.6333333333333333,
+      "semantic_median": 1.0,
+      "semantic_sd": 0.7648904962570576,
+      "intell_mean": 4.4,
+      "intell_sd": 0.8136762043449725,
+      "natural_mean": 4.633333333333334,
+      "natural_sd": 0.6149478998583782,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "BD22355BED2CB022",
+      "target": "östlich also über osteuropa noch hochsommerlich warm mit um die fünfundzwanzig grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.2333333333333334,
+      "semantic_median": 2.0,
+      "semantic_sd": 1.1043279539543756,
+      "intell_mean": 1.6666666666666667,
+      "intell_sd": 0.8441822541139559,
+      "natural_mean": 3.433333333333333,
+      "natural_sd": 1.1651056880677462,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "BF53FD65BD8E1A07",
+      "target": "sechs grad heute nacht am alpenrand bis fünfzehn grad an der oder .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.466666666666667,
+      "semantic_median": 2.0,
+      "semantic_sd": 1.2521246311585852,
+      "intell_mean": 3.966666666666667,
+      "intell_sd": 1.1290317283753193,
+      "natural_mean": 3.3333333333333335,
+      "natural_sd": 1.2129568697262454,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "BF6F9995AD6561AF",
+      "target": "ansonsten ist es meist nur locker bewölkt oder klar stellenweise bildet sich nebel .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.1333333333333333,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.3321834121764768,
+      "intell_mean": 4.333333333333333,
+      "intell_sd": 1.0283342182227606,
+      "natural_mean": 4.366666666666666,
+      "natural_sd": 0.9278574999588488,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "C0C7409E8DDA342A",
+      "target": "und etwas kälter wird es dann im laufe des sonntags von osten .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.433333333333334,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.9714309861845772,
+      "intell_mean": 4.633333333333334,
+      "intell_sd": 0.8087168778415269,
+      "natural_mean": 4.533333333333333,
+      "natural_sd": 0.7760791522613609,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "C178A7E928B00C08",
+      "target": "und nun die wettervorhersage für morgen samstag den einunddreißigsten oktober .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.3333333333333335,
+      "semantic_median": 2.0,
+      "semantic_sd": 1.1841869998335197,
+      "intell_mean": 4.433333333333334,
+      "intell_sd": 0.8583598366625749,
+      "natural_mean": 2.3666666666666667,
+      "natural_sd": 1.2452207485597395,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "C1FCA728BA9FAC9E",
+      "target": "heute nacht zwölf grad in der kölner bucht ein grad in brandenburg .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.7666666666666666,
+      "semantic_median": 2.0,
+      "semantic_sd": 0.8583598366625749,
+      "intell_mean": 4.1,
+      "intell_sd": 0.9948141396330237,
+      "natural_mean": 1.7666666666666666,
+      "natural_sd": 0.9352607356658147,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "C3924C21D42215D5",
+      "target": "ansonsten ist es meist nur locker bewölkt oder klar stellenweise bildet sich nebel .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.666666666666667,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.7580980435789034,
+      "intell_mean": 3.8,
+      "intell_sd": 1.0635010497214474,
+      "natural_mean": 3.9,
+      "natural_sd": 0.844862771962569,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "C4414A6EA0E8F31C",
+      "target": "richtung westen gibt es im tagesverlauf vermehrt wolken es bleibt aber weitgehend trocken .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.6333333333333333,
+      "semantic_median": 1.0,
+      "semantic_sd": 0.8087168778415269,
+      "intell_mean": 3.966666666666667,
+      "intell_sd": 1.1885468767200222,
+      "natural_mean": 4.466666666666667,
+      "natural_sd": 0.9371024061116425,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "C56D25CF84CA642D",
+      "target": "östlich also über osteuropa noch hochsommerlich warm mit um die fünfundzwanzig grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.9,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.1249521062602221,
+      "intell_mean": 1.5333333333333334,
+      "intell_sd": 1.0742546199601597,
+      "natural_mean": 1.5333333333333334,
+      "natural_sd": 0.8603661343041527,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "C909D840CB8D8DE5",
+      "target": "in der südhälfte weht der wind schwach sonst schwach bis mäßig richtung küsten frisch und stark böig .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.2666666666666666,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.2298957997167563,
+      "intell_mean": 4.666666666666667,
+      "intell_sd": 0.6608945522512667,
+      "natural_mean": 4.633333333333334,
+      "natural_sd": 0.7648904962570576,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "CE9D3AF1F26A7D33",
+      "target": "in der dahinter einfließenden kaltluft gestaltet sich das wetter morgen wechselhaft .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.7333333333333334,
+      "semantic_median": 1.0,
+      "semantic_sd": 1.0806553992619585,
+      "intell_mean": 1.8333333333333333,
+      "intell_sd": 1.1472105098991154,
+      "natural_mean": 4,
+      "natural_sd": 1.0504514628777804,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "CF7F5DD27A16800F",
+      "target": "später ziehen dort auch wolken mit etwas regen auf .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.7666666666666666,
+      "semantic_median": 1.0,
+      "semantic_sd": 1.1651056880677462,
+      "intell_mean": 2.533333333333333,
+      "intell_sd": 1.2521246311585852,
+      "natural_mean": 3.3,
+      "natural_sd": 1.149212624004981,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "CFAE59DB73FA8AB5",
+      "target": "in der dahinter einfließenden kaltluft gestaltet sich das wetter morgen wechselhaft .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.6,
+      "semantic_median": 1.0,
+      "semantic_sd": 1.132589343358684,
+      "intell_mean": 3.8,
+      "intell_sd": 1.0954451150103321,
+      "natural_mean": 3.1,
+      "natural_sd": 1.1846722229638327,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "CFC400039D68F209",
+      "target": "heute nacht ist es im süden teils klar teilweise aber auch nebel .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.7666666666666666,
+      "semantic_median": 1.5,
+      "semantic_sd": 0.8976341829703132,
+      "intell_mean": 4.6,
+      "intell_sd": 0.8944271909999159,
+      "natural_mean": 3.966666666666667,
+      "natural_sd": 1.1591713250937241,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "D008CE29D6A2CE60",
+      "target": "östlich also über osteuropa noch hochsommerlich warm mit um die fünfundzwanzig grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.166666666666667,
+      "semantic_median": 5.0,
+      "semantic_sd": 1.1472105098991154,
+      "intell_mean": 1.6,
+      "intell_sd": 0.7239737088005909,
+      "natural_mean": 3.7333333333333334,
+      "natural_sd": 1.2015315896469556,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "D17C70E6871245E6",
+      "target": "und nun die wettervorhersage für morgen samstag den sechsundzwanzigsten januar .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.2333333333333334,
+      "semantic_median": 2.0,
+      "semantic_sd": 1.1651056880677462,
+      "intell_mean": 3.1333333333333333,
+      "intell_sd": 1.1058881072455415,
+      "natural_mean": 4.066666666666666,
+      "natural_sd": 0.980265035707122,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "D389BE93DCEECF8C",
+      "target": "samstag fällt auch noch schnee .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.6333333333333333,
+      "semantic_median": 2.5,
+      "semantic_sd": 1.1885468767200222,
+      "intell_mean": 4.7,
+      "intell_sd": 0.7022132498578064,
+      "natural_mean": 4.466666666666667,
+      "natural_sd": 0.6814453874610599,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "D3C6BA5D4AC4DF56",
+      "target": "später ziehen dort auch wolken mit etwas regen auf .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.033333333333333,
+      "semantic_median": 4.0,
+      "semantic_sd": 1.0661996103898193,
+      "intell_mean": 3.8666666666666667,
+      "intell_sd": 1.1058881072455415,
+      "natural_mean": 4.233333333333333,
+      "natural_sd": 1.1043279539543756,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "D3DFD0ABBDB4077A",
+      "target": "in der dahinter einfließenden kaltluft gestaltet sich das wetter morgen wechselhaft .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.1666666666666665,
+      "semantic_median": 2.0,
+      "semantic_sd": 0.9128709291752769,
+      "intell_mean": 4.3,
+      "intell_sd": 1.0875470659652644,
+      "natural_mean": 1.5666666666666667,
+      "natural_sd": 0.7738543627276671,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "D4F75D886FE2B751",
+      "target": "am tag sieben grad an der ostsee und fünfzehn grad am rhein .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.6333333333333333,
+      "semantic_median": 1.5,
+      "semantic_sd": 0.718395402284138,
+      "intell_mean": 4.466666666666667,
+      "intell_sd": 0.8193072487266861,
+      "natural_mean": 4.6,
+      "natural_sd": 0.7701320979389589,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "D5F59911F178DA4A",
+      "target": "heute nacht ist es im süden teils klar teilweise aber auch nebel .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.1666666666666665,
+      "semantic_median": 2.0,
+      "semantic_sd": 1.1768846465411842,
+      "intell_mean": 1.5,
+      "intell_sd": 0.9737945687202026,
+      "natural_mean": 2.1666666666666665,
+      "natural_sd": 1.11674815279973,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "D7A22548AEF2AEAB",
+      "target": "sechs grad heute nacht am alpenrand bis fünfzehn grad an der oder .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.966666666666667,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.2726115785600325,
+      "intell_mean": 4.4,
+      "intell_sd": 1.0034423509719619,
+      "natural_mean": 4.366666666666666,
+      "natural_sd": 0.9994251221140299,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "E0461ADBB8E03A55",
+      "target": "am tag sieben grad an der ostsee und fünfzehn grad am rhein .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.4,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.932183199398798,
+      "intell_mean": 3.566666666666667,
+      "intell_sd": 1.2780193008453875,
+      "natural_mean": 3.9,
+      "natural_sd": 1.1551981469084383,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "E0E55A124F975217",
+      "target": "zusammen mit der schwül heißen luft sorgt es für zum teil heftige gewitter .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.533333333333333,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.7302967433402214,
+      "intell_mean": 3.8333333333333335,
+      "intell_sd": 0.9128709291752769,
+      "natural_mean": 4.533333333333333,
+      "natural_sd": 0.7302967433402214,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "E31445B01ADC1665",
+      "target": "heute nacht zwölf grad in der kölner bucht ein grad in brandenburg .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.6333333333333333,
+      "semantic_median": 1.0,
+      "semantic_sd": 0.8087168778415269,
+      "intell_mean": 4.433333333333334,
+      "intell_sd": 0.9714309861845772,
+      "natural_mean": 4.3,
+      "natural_sd": 1.0553639672872464,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "E72C913B4D307878",
+      "target": "besonders im osten deutschlands kann es ein wenig regnen oder schneien .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.8666666666666667,
+      "semantic_median": 4.0,
+      "semantic_sd": 1.0416609195243756,
+      "intell_mean": 4.4,
+      "intell_sd": 0.9684683962230046,
+      "natural_mean": 4.4,
+      "natural_sd": 0.8136762043449725,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "EB2B2A0177D07A50",
+      "target": "der nordosten deutschlands liegt morgen dank hochdruckeinfluss meist auf der sonnenseite .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.6333333333333333,
+      "semantic_median": 1.0,
+      "semantic_sd": 0.7648904962570576,
+      "intell_mean": 4.433333333333334,
+      "intell_sd": 1.0063019815944514,
+      "natural_mean": 4.366666666666666,
+      "natural_sd": 0.9994251221140299,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "EBD7DCDD8E15ABBB",
+      "target": "dort morgen sieben grad nordöstlich der elbe teilweise nur minus ein grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.533333333333333,
+      "semantic_median": 4.0,
+      "semantic_sd": 1.224275530553741,
+      "intell_mean": 2.533333333333333,
+      "intell_sd": 1.224275530553741,
+      "natural_mean": 4.166666666666667,
+      "natural_sd": 1.0531834608931392,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "ED78F2964BF4FAF6",
+      "target": "richtung westen gibt es im tagesverlauf vermehrt wolken es bleibt aber weitgehend trocken .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.5,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.9377154924749757,
+      "intell_mean": 4.033333333333333,
+      "intell_sd": 1.0661996103898193,
+      "natural_mean": 1.6,
+      "natural_sd": 1.0034423509719619,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "EF5A7F113B341271",
+      "target": "an der küste morgen kühle neun grad im breisgau bis achtzehn grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.566666666666666,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.8172001541568766,
+      "intell_mean": 4.566666666666666,
+      "intell_sd": 0.8172001541568766,
+      "natural_mean": 4.466666666666667,
+      "natural_sd": 0.8193072487266861,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    },
+    {
+      "video_id": "F01B863D1F606C1C",
+      "target": "in der südhälfte weht der wind schwach sonst schwach bis mäßig richtung küsten frisch und stark böig .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.066666666666667,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.3373502709187435,
+      "intell_mean": 2,
+      "intell_sd": 0.982607368881035,
+      "natural_mean": 4.333333333333333,
+      "natural_sd": 1.0613372610104648,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "F4752727A47854AD",
+      "target": "sechs grad heute nacht am alpenrand bis fünfzehn grad an der oder .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.7,
+      "semantic_median": 1.5,
+      "semantic_sd": 0.8366600265340756,
+      "intell_mean": 4.066666666666666,
+      "intell_sd": 0.980265035707122,
+      "natural_mean": 2.2666666666666666,
+      "natural_sd": 1.1724814044061258,
+      "tech_faults": 0,
+      "rank_within_target": 4
+    },
+    {
+      "video_id": "F4DA0AD6F6AA47FE",
+      "target": "und nun die wettervorhersage für morgen samstag den sechsundzwanzigsten januar .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 2.933333333333333,
+      "semantic_median": 3.0,
+      "semantic_sd": 1.257620449659713,
+      "intell_mean": 4.433333333333334,
+      "intell_sd": 1.0400044208570938,
+      "natural_mean": 4.266666666666667,
+      "natural_sd": 1.048260737942924,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "F76C8FF8ED430ECE",
+      "target": "heute nacht zwölf grad in der kölner bucht ein grad in brandenburg .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.5,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.7768193328323317,
+      "intell_mean": 4.566666666666666,
+      "intell_sd": 0.7279320417946062,
+      "natural_mean": 4.533333333333333,
+      "natural_sd": 0.8995528902176072,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "FA4E48788BCE9625",
+      "target": "am tag sieben grad an der ostsee und fünfzehn grad am rhein .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.8666666666666667,
+      "semantic_median": 4.0,
+      "semantic_sd": 0.8603661343041527,
+      "intell_mean": 1.4666666666666666,
+      "intell_sd": 0.9732042112432566,
+      "natural_mean": 1.4,
+      "natural_sd": 0.9684683962230046,
+      "tech_faults": 0,
+      "rank_within_target": 3
+    },
+    {
+      "video_id": "FCEA270FA62CBEAA",
+      "target": "an der küste morgen kühle neun grad im breisgau bis achtzehn grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 1.7333333333333334,
+      "semantic_median": 2.0,
+      "semantic_sd": 0.784915252764901,
+      "intell_mean": 4.366666666666666,
+      "intell_sd": 1.0333518722845685,
+      "natural_mean": 4.5,
+      "natural_sd": 0.9377154924749757,
+      "tech_faults": 0,
+      "rank_within_target": 5
+    },
+    {
+      "video_id": "FE75A1B52E8AFC61",
+      "target": "dort morgen sieben grad nordöstlich der elbe teilweise nur minus ein grad .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 3.933333333333333,
+      "semantic_median": 4.0,
+      "semantic_sd": 1.0806553992619585,
+      "intell_mean": 4,
+      "intell_sd": 1.0827805840074194,
+      "natural_mean": 4.266666666666667,
+      "natural_sd": 1.0148325268098497,
+      "tech_faults": 0,
+      "rank_within_target": 2
+    },
+    {
+      "video_id": "FF7CA20E092C0F5B",
+      "target": "sechs grad heute nacht am alpenrand bis fünfzehn grad an der oder .",
+      "n_raters_semantic": 30,
+      "semantic_mean": 4.466666666666667,
+      "semantic_median": 5.0,
+      "semantic_sd": 0.8995528902176072,
+      "intell_mean": 4.566666666666666,
+      "intell_sd": 0.7738543627276671,
+      "natural_mean": 2.1,
+      "natural_sd": 0.9948141396330237,
+      "tech_faults": 0,
+      "rank_within_target": 1
+    }
+  ],
+  "by_target": {
+    "und am mittwoch dann noch reste dieser schauer und gewitter über dem osten und über dem süden .": [
+      {
+        "video_id": "2FB7DAE36DC8D538",
+        "sem_mean": 4.466666666666667,
+        "rank": 1
+      },
+      {
+        "video_id": "36A027103404B0C9",
+        "sem_mean": 3.966666666666667,
+        "rank": 2
+      },
+      {
+        "video_id": "5C18044F4D891EA9",
+        "sem_mean": 3.6666666666666665,
+        "rank": 3
+      },
+      {
+        "video_id": "7974345EFB1BB740",
+        "sem_mean": 3.1666666666666665,
+        "rank": 4
+      },
+      {
+        "video_id": "0353B98DDD60C0D5",
+        "sem_mean": 2.966666666666667,
+        "rank": 5
+      }
+    ],
+    "zusammen mit der schwül heißen luft sorgt es für zum teil heftige gewitter .": [
+      {
+        "video_id": "E0E55A124F975217",
+        "sem_mean": 4.533333333333333,
+        "rank": 1
+      },
+      {
+        "video_id": "B8C9273C2601AB70",
+        "sem_mean": 3.8333333333333335,
+        "rank": 2
+      },
+      {
+        "video_id": "08897D390D0B4B10",
+        "sem_mean": 2.5,
+        "rank": 3
+      },
+      {
+        "video_id": "45E537AD30C330B3",
+        "sem_mean": 1.5333333333333334,
+        "rank": 4
+      },
+      {
+        "video_id": "0CD4B828C37A7DB0",
+        "sem_mean": 1.4,
+        "rank": 5
+      }
+    ],
+    "und etwas kälter wird es dann im laufe des sonntags von osten .": [
+      {
+        "video_id": "C0C7409E8DDA342A",
+        "sem_mean": 4.433333333333334,
+        "rank": 1
+      },
+      {
+        "video_id": "24DA8E99BB880524",
+        "sem_mean": 3.933333333333333,
+        "rank": 2
+      },
+      {
+        "video_id": "09B72F5393F9C213",
+        "sem_mean": 3.033333333333333,
+        "rank": 3
+      },
+      {
+        "video_id": "9C724B284D5F6874",
+        "sem_mean": 2.3333333333333335,
+        "rank": 4
+      },
+      {
+        "video_id": "6201CBBBD5D34F74",
+        "sem_mean": 1.7666666666666666,
+        "rank": 5
+      }
+    ],
+    "später ziehen dort auch wolken mit etwas regen auf .": [
+      {
+        "video_id": "9203B5E90274A316",
+        "sem_mean": 4.366666666666666,
+        "rank": 1
+      },
+      {
+        "video_id": "D3C6BA5D4AC4DF56",
+        "sem_mean": 4.033333333333333,
+        "rank": 2
+      },
+      {
+        "video_id": "14DF653946D1BBFB",
+        "sem_mean": 3,
+        "rank": 3
+      },
+      {
+        "video_id": "ABDAC7F91FE509B6",
+        "sem_mean": 1.7666666666666666,
+        "rank": 4
+      },
+      {
+        "video_id": "CF7F5DD27A16800F",
+        "sem_mean": 1.7666666666666666,
+        "rank": 5
+      }
+    ],
+    "richtung westen gibt es im tagesverlauf vermehrt wolken es bleibt aber weitgehend trocken .": [
+      {
+        "video_id": "ED78F2964BF4FAF6",
+        "sem_mean": 4.5,
+        "rank": 1
+      },
+      {
+        "video_id": "42AD8502CFB055ED",
+        "sem_mean": 4.433333333333334,
+        "rank": 2
+      },
+      {
+        "video_id": "625AA772732C5CB8",
+        "sem_mean": 4.233333333333333,
+        "rank": 3
+      },
+      {
+        "video_id": "1AEBB6828ACD6F37",
+        "sem_mean": 3.033333333333333,
+        "rank": 4
+      },
+      {
+        "video_id": "C4414A6EA0E8F31C",
+        "sem_mean": 1.6333333333333333,
+        "rank": 5
+      }
+    ],
+    "und nun die wettervorhersage für morgen samstag den einunddreißigsten oktober .": [
+      {
+        "video_id": "71832AC30B91116F",
+        "sem_mean": 4.533333333333333,
+        "rank": 1
+      },
+      {
+        "video_id": "C178A7E928B00C08",
+        "sem_mean": 2.3333333333333335,
+        "rank": 2
+      },
+      {
+        "video_id": "4CF31771D9505055",
+        "sem_mean": 2.2333333333333334,
+        "rank": 3
+      },
+      {
+        "video_id": "B2B23888CBAA28AB",
+        "sem_mean": 1.8,
+        "rank": 4
+      },
+      {
+        "video_id": "1B03403D3F80B760",
+        "sem_mean": 1.5666666666666667,
+        "rank": 5
+      }
+    ],
+    "und nun die wettervorhersage für morgen samstag den sechsundzwanzigsten januar .": [
+      {
+        "video_id": "56FFDEBB50E66AA8",
+        "sem_mean": 4.433333333333334,
+        "rank": 1
+      },
+      {
+        "video_id": "F4DA0AD6F6AA47FE",
+        "sem_mean": 2.933333333333333,
+        "rank": 2
+      },
+      {
+        "video_id": "5210573530480565",
+        "sem_mean": 2.4,
+        "rank": 3
+      },
+      {
+        "video_id": "D17C70E6871245E6",
+        "sem_mean": 2.2333333333333334,
+        "rank": 4
+      },
+      {
+        "video_id": "1D34B72BF5454FD0",
+        "sem_mean": 1.5,
+        "rank": 5
+      }
+    ],
+    "heute nacht ist es im süden teils klar teilweise aber auch nebel .": [
+      {
+        "video_id": "8CB21EBD4034EC97",
+        "sem_mean": 4.533333333333333,
+        "rank": 1
+      },
+      {
+        "video_id": "2B7F330E3C029024",
+        "sem_mean": 3.933333333333333,
+        "rank": 2
+      },
+      {
+        "video_id": "D5F59911F178DA4A",
+        "sem_mean": 2.1666666666666665,
+        "rank": 3
+      },
+      {
+        "video_id": "CFC400039D68F209",
+        "sem_mean": 1.7666666666666666,
+        "rank": 4
+      },
+      {
+        "video_id": "2A80DF33A1F8988B",
+        "sem_mean": 1.5666666666666667,
+        "rank": 5
+      }
+    ],
+    "an der küste morgen kühle neun grad im breisgau bis achtzehn grad .": [
+      {
+        "video_id": "EF5A7F113B341271",
+        "sem_mean": 4.566666666666666,
+        "rank": 1
+      },
+      {
+        "video_id": "2B2CEBD978890DC2",
+        "sem_mean": 4.033333333333333,
+        "rank": 2
+      },
+      {
+        "video_id": "2F2A6BD4A12DA60F",
+        "sem_mean": 3.2666666666666666,
+        "rank": 3
+      },
+      {
+        "video_id": "691D00AA2A0F700A",
+        "sem_mean": 2.4,
+        "rank": 4
+      },
+      {
+        "video_id": "FCEA270FA62CBEAA",
+        "sem_mean": 1.7333333333333334,
+        "rank": 5
+      }
+    ],
+    "besonders im osten deutschlands kann es ein wenig regnen oder schneien .": [
+      {
+        "video_id": "4C070AA22B81CFD7",
+        "sem_mean": 4.466666666666667,
+        "rank": 1
+      },
+      {
+        "video_id": "74E9AB11CF983C91",
+        "sem_mean": 3.9,
+        "rank": 2
+      },
+      {
+        "video_id": "E72C913B4D307878",
+        "sem_mean": 3.8666666666666667,
+        "rank": 3
+      },
+      {
+        "video_id": "2DD78AA8B2D869D5",
+        "sem_mean": 2.3666666666666667,
+        "rank": 4
+      },
+      {
+        "video_id": "33C65373B6930E71",
+        "sem_mean": 2.3333333333333335,
+        "rank": 5
+      }
+    ],
+    "sechs grad heute nacht am alpenrand bis fünfzehn grad an der oder .": [
+      {
+        "video_id": "FF7CA20E092C0F5B",
+        "sem_mean": 4.466666666666667,
+        "rank": 1
+      },
+      {
+        "video_id": "D7A22548AEF2AEAB",
+        "sem_mean": 2.966666666666667,
+        "rank": 2
+      },
+      {
+        "video_id": "BF53FD65BD8E1A07",
+        "sem_mean": 2.466666666666667,
+        "rank": 3
+      },
+      {
+        "video_id": "F4752727A47854AD",
+        "sem_mean": 1.7,
+        "rank": 4
+      },
+      {
+        "video_id": "31C84A36894C0E96",
+        "sem_mean": 1.5,
+        "rank": 5
+      }
+    ],
+    "am tag sieben grad an der ostsee und fünfzehn grad am rhein .": [
+      {
+        "video_id": "E0461ADBB8E03A55",
+        "sem_mean": 4.4,
+        "rank": 1
+      },
+      {
+        "video_id": "47BEC2D7D9B983A0",
+        "sem_mean": 3.966666666666667,
+        "rank": 2
+      },
+      {
+        "video_id": "FA4E48788BCE9625",
+        "sem_mean": 3.8666666666666667,
+        "rank": 3
+      },
+      {
+        "video_id": "38CE8584A90516BF",
+        "sem_mean": 2.966666666666667,
+        "rank": 4
+      },
+      {
+        "video_id": "D4F75D886FE2B751",
+        "sem_mean": 1.6333333333333333,
+        "rank": 5
+      }
+    ],
+    "dort morgen sieben grad nordöstlich der elbe teilweise nur minus ein grad .": [
+      {
+        "video_id": "B975251998760827",
+        "sem_mean": 4.7,
+        "rank": 1
+      },
+      {
+        "video_id": "FE75A1B52E8AFC61",
+        "sem_mean": 3.933333333333333,
+        "rank": 2
+      },
+      {
+        "video_id": "EBD7DCDD8E15ABBB",
+        "sem_mean": 3.533333333333333,
+        "rank": 3
+      },
+      {
+        "video_id": "532AE8A707988E95",
+        "sem_mean": 2.2666666666666666,
+        "rank": 4
+      },
+      {
+        "video_id": "493A151170AD69DD",
+        "sem_mean": 1.6333333333333333,
+        "rank": 5
+      }
+    ],
+    "östlich also über osteuropa noch hochsommerlich warm mit um die fünfundzwanzig grad .": [
+      {
+        "video_id": "D008CE29D6A2CE60",
+        "sem_mean": 4.166666666666667,
+        "rank": 1
+      },
+      {
+        "video_id": "6C69BB648CABCB53",
+        "sem_mean": 3.6666666666666665,
+        "rank": 2
+      },
+      {
+        "video_id": "4ED7A29AE62CFBEE",
+        "sem_mean": 3.1666666666666665,
+        "rank": 3
+      },
+      {
+        "video_id": "C56D25CF84CA642D",
+        "sem_mean": 2.9,
+        "rank": 4
+      },
+      {
+        "video_id": "BD22355BED2CB022",
+        "sem_mean": 2.2333333333333334,
+        "rank": 5
+      }
+    ],
+    "in der dahinter einfließenden kaltluft gestaltet sich das wetter morgen wechselhaft .": [
+      {
+        "video_id": "509E0AB7CED85259",
+        "sem_mean": 4.533333333333333,
+        "rank": 1
+      },
+      {
+        "video_id": "D3DFD0ABBDB4077A",
+        "sem_mean": 2.1666666666666665,
+        "rank": 2
+      },
+      {
+        "video_id": "CE9D3AF1F26A7D33",
+        "sem_mean": 1.7333333333333334,
+        "rank": 3
+      },
+      {
+        "video_id": "BB5114F595DE505D",
+        "sem_mean": 1.6333333333333333,
+        "rank": 4
+      },
+      {
+        "video_id": "CFAE59DB73FA8AB5",
+        "sem_mean": 1.6,
+        "rank": 5
+      }
+    ],
+    "heute nacht zwölf grad in der kölner bucht ein grad in brandenburg .": [
+      {
+        "video_id": "7558456B5C862090",
+        "sem_mean": 4.633333333333334,
+        "rank": 1
+      },
+      {
+        "video_id": "F76C8FF8ED430ECE",
+        "sem_mean": 4.5,
+        "rank": 2
+      },
+      {
+        "video_id": "C1FCA728BA9FAC9E",
+        "sem_mean": 1.7666666666666666,
+        "rank": 3
+      },
+      {
+        "video_id": "52DD061D9717E47D",
+        "sem_mean": 1.6666666666666667,
+        "rank": 4
+      },
+      {
+        "video_id": "E31445B01ADC1665",
+        "sem_mean": 1.6333333333333333,
+        "rank": 5
+      }
+    ],
+    "samstag fällt auch noch schnee .": [
+      {
+        "video_id": "B393F3F492777271",
+        "sem_mean": 4.566666666666666,
+        "rank": 1
+      },
+      {
+        "video_id": "912C425D50CD9F77",
+        "sem_mean": 4.466666666666667,
+        "rank": 2
+      },
+      {
+        "video_id": "708E33DE41FCE115",
+        "sem_mean": 4.4,
+        "rank": 3
+      },
+      {
+        "video_id": "AE40DD46593B96E7",
+        "sem_mean": 3.9,
+        "rank": 4
+      },
+      {
+        "video_id": "D389BE93DCEECF8C",
+        "sem_mean": 2.6333333333333333,
+        "rank": 5
+      }
+    ],
+    "der nordosten deutschlands liegt morgen dank hochdruckeinfluss meist auf der sonnenseite .": [
+      {
+        "video_id": "75BD2F34A73FB5E0",
+        "sem_mean": 4.033333333333333,
+        "rank": 1
+      },
+      {
+        "video_id": "A674DA634B38D475",
+        "sem_mean": 3.033333333333333,
+        "rank": 2
+      },
+      {
+        "video_id": "EB2B2A0177D07A50",
+        "sem_mean": 1.6333333333333333,
+        "rank": 3
+      },
+      {
+        "video_id": "864C0904A8D8EA87",
+        "sem_mean": 1.5666666666666667,
+        "rank": 4
+      },
+      {
+        "video_id": "A6EF27483E3480B2",
+        "sem_mean": 1.5666666666666667,
+        "rank": 5
+      }
+    ],
+    "ansonsten ist es meist nur locker bewölkt oder klar stellenweise bildet sich nebel .": [
+      {
+        "video_id": "C3924C21D42215D5",
+        "sem_mean": 4.666666666666667,
+        "rank": 1
+      },
+      {
+        "video_id": "BF6F9995AD6561AF",
+        "sem_mean": 3.1333333333333333,
+        "rank": 2
+      },
+      {
+        "video_id": "7A7CCD4BECB8A454",
+        "sem_mean": 1.6666666666666667,
+        "rank": 3
+      },
+      {
+        "video_id": "952B139E080FD16C",
+        "sem_mean": 1.5,
+        "rank": 4
+      },
+      {
+        "video_id": "A8AE3FA537E5E957",
+        "sem_mean": 1.5,
+        "rank": 5
+      }
+    ],
+    "in der südhälfte weht der wind schwach sonst schwach bis mäßig richtung küsten frisch und stark böig .": [
+      {
+        "video_id": "AD26F99C4079C3DF",
+        "sem_mean": 4.533333333333333,
+        "rank": 1
+      },
+      {
+        "video_id": "9964DE4EC1B9D6E3",
+        "sem_mean": 3.3,
+        "rank": 2
+      },
+      {
+        "video_id": "C909D840CB8D8DE5",
+        "sem_mean": 3.2666666666666666,
+        "rank": 3
+      },
+      {
+        "video_id": "F01B863D1F606C1C",
+        "sem_mean": 3.066666666666667,
+        "rank": 4
+      },
+      {
+        "video_id": "A6DD4F7B2C72ABBA",
+        "sem_mean": 2.4,
+        "rank": 5
+      }
+    ]
+  }
+}

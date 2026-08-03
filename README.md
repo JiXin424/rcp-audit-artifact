@@ -1,53 +1,94 @@
-# Anonymous Review Artifact
+# Review Artifact — `artifact/` README
 
-## Overview
-This artifact contains the code, decoded hypotheses, sufficient statistics,
-donor registries, statistical analyses, and machine-readable checkpoint
-registry for the audit study of the released SLRTP2025 back-translation
-evaluator.
+This artifact accompanies the manuscript:
+**"A Training-Pool Replay Audit of the Released SLRTP2025 Back-Translation Evaluator: Reference-Set Sensitivity and Non-Replication Across Independently Trained Checkpoints"**
 
-## Quick Start
+Repository: https://github.com/JiXin424/RCP
+
+## 1. Layout
+
+```
+artifact/
+├── README.md                      # this file
+├── Makefile                       # `make core-audit`
+├── LICENSE                        # MIT license (source code + derived statistics)
+├── requirements.lock.txt          # Python dependency pins
+├── artifact_ledger.json           # SHA-256 ledger (221 committed files)
+├── manifests/
+│   └── exclusions.jsonl           # IDs absent from released SLRTP2025 pose materialization
+├── data/cells/                    # decoded BT hypotheses (60 cells: 15 beam-3 evaluators × 4 systems)
+│   ├── cp0_GT-v1.json             # Released evaluator × GT-v1 (641 items)
+│   ├── cp0_TN-PURE-v1.json        # Released evaluator × TN-PURE-v1
+│   ├── ...
+│   └── cp6_TN-PURE-v1.json        # seed_606 × TN-PURE
+├── results/
+│   ├── bleu_diagnostics/          # 60-cell BLEU decomposition
+│   ├── random_controls/           # 20-seed random-donor baselines
+│   ├── oracle_exact_exclusion/    # exact-text-masked oracle
+│   ├── oracle_tau05_exclusion/    # Jaccard≥0.5 masked oracle
+│   ├── evaluator_extension/       # extension seeds 707–1405 (8 cells × 4 systems)
+│   ├── round5/                    # supplementary diagnostics
+│   ├── human_eval/                # DGS human evaluation analysis (30 raters × 100 videos)
+│   ├── checkpoint_registry.json   # machine-readable registry of 55 core entries
+│   └── unified_checkpoint_registry.json  # full registry incl. distillation (71 entries)
+├── scripts/                       # 44 reproducible analysis scripts
+│   └── decode_new_systems.py, e1_analyze.py, e12c_rank_stability.py, ...
+└── tests/                         # pytest regression: checkpoint–GT alignment
+```
+
+## 2. Quick reproduction
+
 ```bash
-# Verify core reproducibility (no GPU needed, ~30 seconds)
+# Verify the core 28-cell BLEU decomposition (released evaluator + 6 primary reconstructors)
 make core-audit PYTHON=/path/to/python3
 ```
-Expected output: `checkpoint-GT alignment PASS` and a 60-cell BLEU decomposition
-JSON written to `results/bleu_diagnostics/`.
 
-## Structure
-```
-.
-├── Makefile                    # core-audit target
-├── README.md                   # this file
-├── requirements.lock.txt       # pinned dependency versions
-├── artifact_ledger.json        # SHA-256 for every file (203 entries)
-├── data/
-│   └── cells/                  # 28 decoded-hypothesis cells (7 evaluators × 4 systems)
-├── figures/
-│   ├── dose_response.pdf       # gap-vs-competence + pass-through dose-response
-│   └── original_trajectory.pdf # released evaluator training log trajectory
-├── manifests/                  # exclusion manifests, donor registries
-├── results/
-│   ├── artifact_ledger.json    # machine-readable file digests
-│   ├── checkpoint_registry.json # all 51 checkpoints with dev metrics + gate status
-│   ├── bleu_diagnostics/       # 60-cell BLEU decomposition
-│   └── round5/                 # all analysis result JSONs (E1-E13)
-├── scripts/                    # all analysis scripts (38 .py files)
-└── tests/                      # checkpoint-GT alignment regression test
-```
+This regenerates the headline GT 12.78 / PURE 23.79 / gap +11.01 (beam-3) from the artifact cells.
+The greedy-decode reproduction (gap +9.88) lives in the sibling repository `rcp-greedy-reproduction`.
 
-## Checkpoint Registry
-`results/checkpoint_registry.json` is the definitive registry of every BT
-evaluator checkpoint (50 trained + 1 released = 51 total), with per-checkpoint
-dev BLEU-4, dev WER (official protocol), competence-gate status, and which
-analyses each enters.
+## 3. Data licensing
 
-## Lightweight Reproduction
-A text-only package (no pose data needed) can reproduce every text-metric
-number and confidence interval from `data/cells/` + `results/` using the
-scripts in `scripts/`.
+Source pose tensors and signer-derived videos are **not** redistributed in this artifact. Users reconstructing the complete audit must obtain:
 
-## License
-- PHOENIX-2014T: CC BY-NC-SA 3.0 (original RWTH Aachen terms)
-- Czehmann et al. (2026) back-translations: CC BY-NC-SA 4.0 (derivative)
-- Code: available under the project license (see paper for details)
+- PHOENIX-2014T (RWTH-PHOENIX-Weather 2014T): CC BY-NC-SA 3.0, distributed by RWTH Aachen
+- Human back-translations: Czehmann et al. (2026), CC BY-NC-SA 4.0
+- SLRTP2025 pose bundle + released BT checkpoint: provider-specific terms
+
+The MIT license in `artifact/LICENSE` covers the source code, manifests, decoded hypothesis JSON files, and derived sufficient-statistic artifacts in this directory.
+
+## 4. SHA-256 ledger
+
+`artifact_ledger.json` records SHA-256 digests of 221 committed files (44 scripts, 104 result files, 60 data cells, 3 figures, plus manifests, paper sources, tests, and other supporting files). The ledger is auto-generated by `scripts/rebuild_artifact_ledger.py`. Every table and figure in the paper is reproducible from files covered by the ledger.
+
+## 5. Checkpoint inventory
+
+All trained checkpoints are in the repository root at `checkpoints/`. The canonical registry (`results/checkpoint_registry.json`) is the single source of truth for paper counts:
+
+| Family | Planned | Completed | Has gap | Has dev | Enters gate |
+|---|---|---|---|---|---|
+| Reconstructions (primary) | 6 | 6 | 6 | 6 | ✓ |
+| Reconstructions (extension) | 8 | 8 | 8 | 8 | ✓ |
+| Rescue lr | 8 | 8 | 0 | 8 | ✓ |
+| Rescue expanded | 12 | 12 | 1 | 12 | ✓ |
+| Train-pool ladder | 4 | 4 | 4 | 4 | ✓ |
+| Config-faithful | 4 | 4 | 4 | 4 | ✓ |
+| Step-faithful | 2 | 2 | 2 | 2 | ✓ |
+| Large-arch | 4 | 4 | 0 | 4 | ✓ |
+| Confirmation | 2 | 2 | 2 | 2 | ✓ |
+| Long-schedule | 2 | 2 | 1 | 2 | ✓ |
+| BT-retrained (holdout) | 1 | 1 | 0 | 0 | — |
+| Cross-fit A/B (holdout) | 2 | 2 | 0 | 0 | — |
+| Distillation students | 15 | 13 | 13 | 13 | — |
+| **Total** | **70** | **68** | **41** | **65** | **52** |
+
+The non-distillation families (52 gate-eligible + 3 holdout-only = 55 core entries) are in `results/checkpoint_registry.json`; distillation is in the unified registry. The 2 distillation OOMs (α=0.5 s303, α=0.75 s303) failed under beam-3 but completed under greedy in the sibling reproduction repository.
+
+## 6. DGS human evaluation data
+
+The per-rater response matrices (semantic adequacy, intelligibility, naturalness) for the 30-rater × 100-video feasibility study are in `results/human_eval/`:
+- `final_analysis.json`, `final_analysis_v2.json`: full per-rater analyses
+- `human_eval_aggregate.json`: aggregate statistics
+- `human_eval_with_classification.json`: per-video classifications
+- `paper_table.json`: rank-profile table for Appendix
+
+The original 100 video files and the UUID-to-system manifest were lost after the evaluation. The response CSVs/JSONs above remain intact.
