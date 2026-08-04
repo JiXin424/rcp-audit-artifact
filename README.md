@@ -34,7 +34,7 @@ artifact/
 │   ├── new_distill_dev_bleu4.json         # dev BLEU-4 for 2 re-decoded seeds
 │   ├── human_eval/                        # DGS human evaluation (30 raters × 100 videos; manifest lost)
 │   └── ...
-├── scripts/                       # 51 analysis scripts (44 original + 7 new round-2)
+├── scripts/                       # 51 analysis scripts
 │   ├── e_leakage_sanity.py               # train-pool free-decode + permutation tests
 │   ├── e_input_permutation.py            # input-side pose shuffle/zero/noise
 │   ├── e_equivariance.py                 # output-equivariance verification
