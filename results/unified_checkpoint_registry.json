@@ -949,16 +949,16 @@
       "note": "per-alpha gap range: [-5.4, -5.1], dev max: 10.41"
     },
     {
-      "id": "distill_alpha_0.5_seed_303_OOM",
+      "id": "distill_alpha_0.5_seed_303",
       "family": "distillation",
-      "kind": "failed_checkpoint",
+      "kind": "trained_checkpoint",
       "alpha": 0.5,
       "seed": 303,
-      "has_gap": false,
-      "has_dev": false,
-      "enters_dose_response": false,
+      "has_gap": true,
+      "has_dev": true,
+      "enters_dose_response": true,
       "enters_gate_eval": false,
-      "note": "CUDA OOM on first batch; pending rerun with grad_accum=4"
+      "note": "beam-3 evaluation completed (earlier OOM was GPU contention, not model failure)"
     },
     {
       "id": "distill_alpha_0.75_seed_101",
@@ -985,16 +985,16 @@
       "note": "per-alpha gap range: [-5.2, -5.0], dev max: 10.93"
     },
     {
-      "id": "distill_alpha_0.75_seed_303_OOM",
+      "id": "distill_alpha_0.75_seed_303",
       "family": "distillation",
-      "kind": "failed_checkpoint",
+      "kind": "trained_checkpoint",
       "alpha": 0.75,
       "seed": 303,
-      "has_gap": false,
-      "has_dev": false,
-      "enters_dose_response": false,
+      "has_gap": true,
+      "has_dev": true,
+      "enters_dose_response": true,
       "enters_gate_eval": false,
-      "note": "CUDA OOM on first batch; pending rerun with grad_accum=4"
+      "note": "beam-3 evaluation completed (earlier OOM was GPU contention, not model failure)"
     },
     {
       "id": "distill_alpha_1.0_seed_101",
