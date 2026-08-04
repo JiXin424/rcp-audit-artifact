@@ -87,23 +87,25 @@ def build_text_nearest_registry(
         best_lev = float("inf")
         best_hash = float("inf")
         for did, dtext, dtok, d_norm in donor_tokens:
-            # Exact-normalized-text exclusion
+            # Exact-normalized-text exclusion (cheap: string compare)
             if d_norm == q_norm:
                 continue
             jac = jaccard(q_tokens, dtok)
             if exclusion_threshold > 0 and jac > exclusion_threshold:
                 continue
-            lev = char_levenshtein(q_norm, d_norm)
-            # SHA-256 tie-break for Levenshtein ties
-            ht = float(int(hashlib.sha256(did.encode()).hexdigest(), 16))
-            if (jac > best_jac or
-                (jac == best_jac and lev < best_lev) or
-                (jac == best_jac and lev == best_lev and ht < best_hash)):
-                best_jac = jac
-                best_lev = lev
-                best_hash = ht
-                best = {"donor_id": did, "jaccard": jac, "donor_text": dtext,
-                        "levenshtein": lev, "sha256_tb": ht}
+            # Only compute Levenshtein + SHA-256 for Jaccard ties or improvements
+            # (lazy tie-breaking: avoids 4.5M Levenshtein calls)
+            if jac >= best_jac:
+                lev = char_levenshtein(q_norm, d_norm)
+                ht = float(int(hashlib.sha256(did.encode()).hexdigest(), 16))
+                if (jac > best_jac or
+                    (jac == best_jac and lev < best_lev) or
+                    (jac == best_jac and lev == best_lev and ht < best_hash)):
+                    best_jac = jac
+                    best_lev = lev
+                    best_hash = ht
+                    best = {"donor_id": did, "jaccard": jac, "donor_text": dtext,
+                            "levenshtein": lev, "sha256_tb": ht}
         if best is None:
             # All donors excluded by exact-text match; fallback to any donor
             for did, dtext, dtok, d_norm in donor_tokens:

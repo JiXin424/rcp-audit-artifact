@@ -1,0 +1,3207 @@
+[
+ {
+  "id": "27April_2010_Tuesday_heute-1028",
+  "hypothesis": "und dann haben wir auch die hitze richtung südwesten und da bleibt sie auch spanien vierzig grad .",
+  "reference": "da haben wir morgen schon die dreißig grad morgen im süden von frankreich auch und für uns wahrscheinlich schon im südwesten die fünfundzwanzig grad ."
+ },
+ {
+  "id": "28January_2010_Thursday_heute-2882",
+  "hypothesis": "liebe zuschauer guten abend .",
+  "reference": "guten abend liebe zuschauer ."
+ },
+ {
+  "id": "26July_2010_Monday_tagesschau-6266",
+  "hypothesis": "am montag breiten sich von norden dichte wolken mit schauern aus vor allem in der mitte später auch gewitter .",
+  "reference": "am mittwoch breiten sich von nordwesten neue wolken mit regen oder schauern aus örtlich sind auch gewitter dabei ."
+ },
+ {
+  "id": "04July_2010_Sunday_tagesschau-7206",
+  "hypothesis": "der wind weht schwach bis mäßig an der nordsee teilweise frisch bei kräftigen gewittern sturmböen .",
+  "reference": "abseits der gewittern weht der wind schwach bis mäßig an der küste frisch ."
+ },
+ {
+  "id": "06May_2011_Friday_tagesschau-6436",
+  "hypothesis": "am tag werte zwischen vierzehn und zwanzig grad .",
+  "reference": "am tag werte zwischen zwanzig und achtundzwanzig grad an der ostsee werte darunter ."
+ },
+ {
+  "id": "25June_2010_Friday_tagesschau-3877",
+  "hypothesis": "am samstag kommt das hoch so richtig zur geltung und bringt uns viel sonne bei meist sommerlichen temperaturen .",
+  "reference": "das hoch gewinnt wieder an kraft und beschert uns am wochenende viel sonnenschein bei meist sommerlichen temperaturen ."
+ },
+ {
+  "id": "29August_2011_Monday_tagesschau-5710",
+  "hypothesis": "im norden gibt es heute nacht noch viele wolken die gebietsweise regen bringen .",
+  "reference": "heute nacht gibt es im norden dichte wolken besonders nördlich einer linie emsland uckermark schauert es ."
+ },
+ {
+  "id": "21October_2011_Friday_tagesschau-4103",
+  "hypothesis": "das hoch über norwegen bestimmt in den kommenden beiden tagen unser wetter .",
+  "reference": "das hoch das sich richtung osteuropa verlagert bestimmt auch in den kommenden tagen unser wetter ."
+ },
+ {
+  "id": "08September_2010_Wednesday_tagesschau-5240",
+  "hypothesis": "heute nacht fällt in der osthälfte und im süden gebietsweise schnee gefrierender regen oder schnee .",
+  "reference": "am tag von schleswig holstein bis nach vorpommern und zunächst auch in brandenburg gebietsweise länger andauernder regen ."
+ },
+ {
+  "id": "27November_2011_Sunday_tagesschau-5138",
+  "hypothesis": "und nun die wettervorhersage für morgen montag den dreiundzwanzigsten november .",
+  "reference": "und nun die wettervorhersage für morgen montag den achtundzwanzigsten november ."
+ },
+ {
+  "id": "06October_2011_Thursday_heute-5535",
+  "hypothesis": "und dann wird es auch tagsüber wieder ein bisschen milder .",
+  "reference": "in den alpen wird es dann sogar schneien ."
+ },
+ {
+  "id": "01April_2010_Thursday_tagesschau-4331",
+  "hypothesis": "am sonntag mehr wolken als sonne regenschauer teilweise auch gewitter .",
+  "reference": "am sonntag ab und an regenschauer teilweise auch gewitter ."
+ },
+ {
+  "id": "05February_2010_Friday_tagesschau-2916",
+  "hypothesis": "im nordosten bleibt es trocken .",
+  "reference": "westlich des rheins und im nordosten bleibt es meist trocken ."
+ },
+ {
+  "id": "26January_2010_Tuesday_tagesschau-2784",
+  "hypothesis": "und nun die wettervorhersage für morgen mittwoch den sechsundzwanzigsten januar .",
+  "reference": "und nun die wettervorhersage für morgen mittwoch den siebenundzwanzigsten januar ."
+ },
+ {
+  "id": "26April_2010_Monday_tagesschau-7272",
+  "hypothesis": "schauer und gewitter klingen im westen und süden in der nacht ab im nordwesten und an den alpen regnet es teilweise länger .",
+  "reference": "die schauer und gewitter im norden klingen in der nacht ab an den alpen fallen noch ein paar regentropfen stellenweise bildet sich nebel ."
+ },
+ {
+  "id": "07December_2010_Tuesday_heute-5633",
+  "hypothesis": "mild wird es dagegen am alpenrand da steigen die temperaturen bis acht grad .",
+  "reference": "mit föhnunterstützung klettern die temperaturen am alpenrand bis zehn grad ."
+ },
+ {
+  "id": "11August_2009_Tuesday_tagesschau-4354",
+  "hypothesis": "in der südhälfte scheint verbreitet die sonne später gesellen sich auch ein paar quellwolken .",
+  "reference": "südlich des mains morgen verbreitet freundlich ."
+ },
+ {
+  "id": "01April_2011_Friday_tagesschau-3388",
+  "hypothesis": "ab dienstag wird es dann langsam wieder etwas freundlicher und auch ein wenig wärmer .",
+  "reference": "aber ab dienstag wird es langsam wieder freundlicher und wärmer ."
+ },
+ {
+  "id": "02March_2011_Wednesday_tagesschau-4702",
+  "hypothesis": "und nun die wettervorhersage für morgen donnerstag den dritten juni .",
+  "reference": "und nun die wettervorhersage für morgen donnerstag den dritten märz ."
+ },
+ {
+  "id": "07September_2010_Tuesday_tagesschau-1945",
+  "hypothesis": "und nun die wettervorhersage für morgen mittwoch den ersten september .",
+  "reference": "und nun die wettervorhersage für morgen mittwoch den achten september ."
+ },
+ {
+  "id": "25November_2010_Thursday_tagesschau-2527",
+  "hypothesis": "morgen fällt vor allem von baden württemberg bis nach nordrhein westfalen sowie an den küsten stellenweise regen .",
+  "reference": "heute nacht vor allem in einem streifen von baden württemberg bis nach sachsen stellenweise schneeschauer ."
+ },
+ {
+  "id": "12October_2009_Monday_tagesschau-548",
+  "hypothesis": "und nun die wettervorhersage für morgen dienstag den neunzehnten oktober .",
+  "reference": "und nun die wettervorhersage für morgen dienstag den dreizehnten oktober ."
+ },
+ {
+  "id": "26September_2009_Saturday_tagesschau-2336",
+  "hypothesis": "im süden weht der wind schwach richtung norden mäßig bis frisch mit starken bis stürmischen böen .",
+  "reference": "ganz im süden sind einzelne schauer möglich ."
+ },
+ {
+  "id": "28October_2009_Wednesday_tagesschau-4535",
+  "hypothesis": "im süden und südosten fällt meist regen sonst meist nur locker bewölkt .",
+  "reference": "im norden und nordosten deutschlands bleibt es morgen meist noch wolkenverhangen mit etwas regen ."
+ },
+ {
+  "id": "20November_2009_Friday_tagesschau-6567",
+  "hypothesis": "am nachmittag wird es zunehmend freundlicher .",
+  "reference": "am nachmittag wird es dann freundlicher ."
+ },
+ {
+  "id": "04December_2009_Friday_tagesschau-835",
+  "hypothesis": "am wochenende gibt es viele wolken die gebietsweise regen im bergland auch schnee bringen .",
+  "reference": "der sorgt wieder für wolken die regen im bergland auch schnee bringen ."
+ },
+ {
+  "id": "29September_2012_Saturday_tagesschau-2963",
+  "hypothesis": "der wind weht schwach bis mäßig an den küsten frisch bis stark mit sturmböen .",
+  "reference": "in der südhälfte weht der wind schwach sonst schwach bis mäßig richtung küsten frisch und stark böig ."
+ },
+ {
+  "id": "14December_2009_Monday_tagesschau-2093",
+  "hypothesis": "im norden und osten weht der wind schwach bis mäßig .",
+  "reference": "in den höhenlagen süddeutschlands frischer wind ."
+ },
+ {
+  "id": "04January_2010_Monday_tagesschau-8544",
+  "hypothesis": "und nun die wettervorhersage für morgen dienstag den elften januar .",
+  "reference": "und nun die wettervorhersage für morgen dienstag den fünften januar ."
+ },
+ {
+  "id": "13October_2009_Tuesday_tagesschau-1657",
+  "hypothesis": "ähnliches wetter auch am samstag .",
+  "reference": "ähnliches wetter auch am donnerstag ."
+ },
+ {
+  "id": "27August_2010_Friday_tagesschau-5164",
+  "hypothesis": "am montag ändert sich noch wenig an diesem wetter .",
+  "reference": "sonntag und montag ändert sich an diesem ungemütlichen und recht kühlen wetter noch wenig ."
+ },
+ {
+  "id": "12December_2011_Monday_tagesschau-8269",
+  "hypothesis": "nordische tiefausläufer bringen uns stürmische winde und regenwolken .",
+  "reference": "atlantische tiefausläufer bringen uns die ganze woche über regenfälle und zum teil stürmische winde ."
+ },
+ {
+  "id": "04December_2010_Saturday_tagesschau-4834",
+  "hypothesis": "und nun die wettervorhersage für morgen montag den fünften dezember .",
+  "reference": "und nun die wettervorhersage für morgen sonntag den fünften dezember ."
+ },
+ {
+  "id": "22February_2010_Monday_tagesschau-3247",
+  "hypothesis": "hier und da fällt regen .",
+  "reference": "ganz im norden fällt hier und da schnee ."
+ },
+ {
+  "id": "07February_2010_Sunday_tagesschau-499",
+  "hypothesis": "dort morgen minus sieben grad im norden werte um den gefrierpunkt .",
+  "reference": "im südwesten morgen werte um den gefrierpunkt im osten bis minus sieben grad ."
+ },
+ {
+  "id": "08April_2010_Thursday_tagesschau-3961",
+  "hypothesis": "auch die neue woche beginnt unbeständig .",
+  "reference": "auch die neue woche beginnt durchwachsen und recht kühl ."
+ },
+ {
+  "id": "06October_2010_Wednesday_tagesschau-638",
+  "hypothesis": "der wind weht schwach bis mäßig an der nordsee teilweise frisch aus ost bis südost .",
+  "reference": "morgen vormittag an der ostsee noch starke böen sonst weht der wind schwach bis mäßig aus ost bis südost ."
+ },
+ {
+  "id": "08October_2009_Thursday_tagesschau-5353",
+  "hypothesis": "morgen schwacher bis mäßiger wind aus west bis südwest .",
+  "reference": "morgen schwacher bis mäßiger ostwind ."
+ },
+ {
+  "id": "24August_2010_Tuesday_heute-3007",
+  "hypothesis": "und das wochenende wird auch noch etwas mildere luft .",
+  "reference": "ein harscher wetterwechsel seit gestern sogar mit tornados ."
+ },
+ {
+  "id": "07August_2009_Friday_tagesschau-6165",
+  "hypothesis": "es bestehen entsprechende warnungen des deutschen wetterdienstes .",
+  "reference": "es gelten entsprechende warnungen des deutschen wetterdienstes ."
+ },
+ {
+  "id": "27November_2009_Friday_tagesschau-7340",
+  "hypothesis": "am mittwoch ist es meist stark bewölkt und es regnet zeitweise .",
+  "reference": "am montag ist es meist stark bewölkt hier und da regnet es ."
+ },
+ {
+  "id": "15February_2011_Tuesday_tagesschau-7474",
+  "hypothesis": "am tag ist es im norden und osten meist stark bewölkt .",
+  "reference": "am tag ist es meist stark bewölkt oder neblig trüb ."
+ },
+ {
+  "id": "11September_2009_Friday_tagesschau-8773",
+  "hypothesis": "die erreichen uns in den nächsten tagen auch .",
+  "reference": "tiefausläufer erreichen uns zunächst nur in abgeschwächter form ."
+ },
+ {
+  "id": "04June_2010_Friday_tagesschau-1176",
+  "hypothesis": "am mittwoch vor allem in der südosthälfte wieder kräftige vereinzelt unwetterartige schauer und gewitter sonst mal sonne mal wolken .",
+  "reference": "am montag ist es wechselhaft mal sonne mal wolken vor allem in der osthälfte einige kräftige schauer und gewitter ."
+ },
+ {
+  "id": "26May_2010_Wednesday_heute-7863",
+  "hypothesis": "guten abend liebe zuschauer .",
+  "reference": "liebe zuschauer guten abend ."
+ },
+ {
+  "id": "12May_2010_Wednesday_tagesschau-323",
+  "hypothesis": "im süden regnet es kaum und dort zeigt sich auch häufiger die sonne .",
+  "reference": "am samstag regnet es im südosten und an der ostsee dort ist es teilweise windig sonst regnet es nur vereinzelt teilweise zeigt sich die sonne ."
+ },
+ {
+  "id": "27May_2011_Friday_tagesschau-8129",
+  "hypothesis": "an der nordsee morgen dreiundzwanzig am oberrhein bis neunundzwanzig grad .",
+  "reference": "an der nordsee morgen fünfzehn am hochrhein immerhin bis dreiundzwanzig grad ."
+ },
+ {
+  "id": "15December_2009_Tuesday_tagesschau-6963",
+  "hypothesis": "morgen am tag wieder sonniges märzwetter hier und da ein paar schleierwolken über dem norden halten sich teilweise dichte wolken .",
+  "reference": "am tag halten sich über dem südosten dichte wolken aus denen ein paar schneeflocken fallen ."
+ },
+ {
+  "id": "29April_2010_Thursday_heute-8626",
+  "hypothesis": "am mittwoch wird es zumindest im osten etwas freundlicher .",
+  "reference": "und das wetter bringt dort auch noch sonnenschein am vormittag zumindest ."
+ },
+ {
+  "id": "25June_2010_Friday_tagesschau-3879",
+  "hypothesis": "der schneefall wird sich aber im laufe der nacht und auch morgen immer weiter richtung alpenrand zurückziehen und dabei auch weniger werden .",
+  "reference": "das gilt auch für den abend aber im laufe der nacht werden schauer und gewitter in der südosthälfte immer seltener ."
+ },
+ {
+  "id": "20June_2011_Monday_tagesschau-1257",
+  "hypothesis": "morgen temperaturen von einundzwanzig grad an der nordsee bis dreißig am oberrhein .",
+  "reference": "am hochrhein morgen schwül warme dreißig an der nordsee frische achtzehn grad ."
+ },
+ {
+  "id": "29April_2010_Thursday_heute-8627",
+  "hypothesis": "über den alpen bilden sich am nachmittag hier und da gewitter .",
+  "reference": "nachmittags bilden sich hier in bayern kräftige gewitter ."
+ },
+ {
+  "id": "03July_2011_Sunday_tagesschau-1672",
+  "hypothesis": "am dienstag ist es überwiegend freundlich nur vereinzelt schauer oder gewitter .",
+  "reference": "am dienstag ist es in der westhälfte meist freundlich ansonsten stellenweise schauer oder gewitter ."
+ },
+ {
+  "id": "16June_2010_Wednesday_tagesschau-8148",
+  "hypothesis": "in der nacht regnet es zwischen breisgau und südostbayern im norden und in der mitte bleibt es meist trocken .",
+  "reference": "im norden und in der mitte verläuft die nacht meist klar im süden regnet es gebietsweise ."
+ },
+ {
+  "id": "26September_2009_Saturday_tagesschau-2339",
+  "hypothesis": "sobald sich der nebel gelichtet hat viel sonnenschein .",
+  "reference": "sobald sich der nebel am tag lichtet scheint die sonne ."
+ },
+ {
+  "id": "21April_2010_Wednesday_heute-3108",
+  "hypothesis": "liebe zuschauer guten abend .",
+  "reference": "guten abend liebe zuschauer ."
+ },
+ {
+  "id": "29October_2009_Thursday_tagesschau-1024",
+  "hypothesis": "am montag wechselhaft und wieder kühler .",
+  "reference": "die neue woche beginnt wechselhaft und kühler ."
+ },
+ {
+  "id": "06July_2010_Tuesday_tagesschau-2658",
+  "hypothesis": "im bergland rieselt auch schnee .",
+  "reference": "an der see lebt er auch mal ein wenig auf und kommt aus west ."
+ },
+ {
+  "id": "24September_2009_Thursday_heute-6080",
+  "hypothesis": "dann am wochenende nichts berühmtes .",
+  "reference": "allerdings erst am wochenende ."
+ },
+ {
+  "id": "25November_2009_Wednesday_tagesschau-7677",
+  "hypothesis": "am freitag weiterhin wechselhaftes wetter .",
+  "reference": "am freitag wechselhaftes schauerwetter ."
+ },
+ {
+  "id": "14September_2010_Tuesday_heute-8237",
+  "hypothesis": "es wird leider nicht mehr so heißer .",
+  "reference": "die norddeutschen kennen es ja heute schon aber es wird jetzt auch die süddeutschen treffen ."
+ },
+ {
+  "id": "12October_2009_Monday_tagesschau-561",
+  "hypothesis": "ähnliches wetter auch am donnerstag .",
+  "reference": "ähnliches wetter dann auch am donnerstag ."
+ },
+ {
+  "id": "14October_2010_Thursday_tagesschau-291",
+  "hypothesis": "heute nacht ist es teils klar teils bedeckt .",
+  "reference": "heute nacht ist es im süden teils klar teilweise aber auch nebel ."
+ },
+ {
+  "id": "06July_2011_Wednesday_tagesschau-6865",
+  "hypothesis": "dabei bleibt es meist trocken .",
+  "reference": "später ist es meist trocken ."
+ },
+ {
+  "id": "24October_2010_Sunday_tagesschau-2910",
+  "hypothesis": "am sonntag eine mischung aus sonne und wolken .",
+  "reference": "richtung südosten noch eine mischung aus nebel wolken und sonne ."
+ },
+ {
+  "id": "21November_2009_Saturday_tagesschau-4907",
+  "hypothesis": "im norden und ganz im süden bleibt es weitgehend trocken .",
+  "reference": "im norden und im westen sowie in schauernähe stürmische böen ."
+ },
+ {
+  "id": "17April_2011_Sunday_tagesschau-2152",
+  "hypothesis": "und nun die wettervorhersage für morgen sonntag den achtzehnten april .",
+  "reference": "und nun die wettervorhersage für morgen montag den achtzehnten april ."
+ },
+ {
+  "id": "24May_2011_Tuesday_tagesschau-4468",
+  "hypothesis": "ein kleines hoch über süddeutschland beschert uns morgen überwiegend freundliches wetter und steigende temperaturen .",
+  "reference": "über deutschland liegt morgen ein hochdruckgebiet das uns verbreitet sonniges und trockenes wetter beschert ."
+ },
+ {
+  "id": "04October_2010_Monday_tagesschau-4723",
+  "hypothesis": "morgen fünfzehn bis einundzwanzig im südwesten bis zweiundzwanzig grad .",
+  "reference": "im erzgebirge morgen dreizehn sonst fünfzehn bis zweiundzwanzig grad ."
+ },
+ {
+  "id": "27April_2010_Tuesday_heute-1038",
+  "hypothesis": "und es wird ja noch ein bisschen wärmer am wochenende .",
+  "reference": "ja der donnerstag wird fast noch schöner noch ein bisschen wärmer ."
+ },
+ {
+  "id": "06September_2009_Sunday_tagesschau-5309",
+  "hypothesis": "heute nacht fünfzehn grad am niederrhein und fünf grad an den alpen .",
+  "reference": "heute nacht werte zwischen vierzehn grad an der see und vier grad an den alpen ."
+ },
+ {
+  "id": "31January_2013_Thursday_tagesschau-2708",
+  "hypothesis": "in der nacht regnet es vor allem im norden und nordwesten im süden ist es teils klar teils wolkig oder neblig .",
+  "reference": "in der nacht regnet es vor allem von schleswig holstein bis zur oder sowie im süden ."
+ },
+ {
+  "id": "28July_2010_Wednesday_tagesschau-871",
+  "hypothesis": "sonst überwiegend freundlich und trocken .",
+  "reference": "am samstag überwiegend freundlich meist trocken und wärmer ."
+ },
+ {
+  "id": "06February_2010_Saturday_tagesschau-7362",
+  "hypothesis": "die gewitter breiten sich heute nacht von südwesten aus .",
+  "reference": "besonders in der südwesthälfte bildet sich nebel richtung nordosten auch wolkenlücken ."
+ },
+ {
+  "id": "23July_2009_Thursday_tagesschau-6750",
+  "hypothesis": "und nun die wettervorhersage für morgen sonntag den fünfundzwanzigsten juli .",
+  "reference": "und nun die wettervorhersage für morgen freitag den vierundzwanzigsten juli ."
+ },
+ {
+  "id": "30November_2009_Monday_tagesschau-5751",
+  "hypothesis": "am dienstag fällt in der südosthälfte bis in die tieferen lagen zum teil schnee oder schneeregen .",
+  "reference": "morgen in der südosthälfte weitere zum teil kräftige niederschläge bis in mittlere lagen schnee ."
+ },
+ {
+  "id": "18January_2011_Tuesday_tagesschau-6987",
+  "hypothesis": "und nun die wettervorhersage für morgen mittwoch den dreizehnten januar .",
+  "reference": "und nun die wettervorhersage für morgen mittwoch den neunzehnten januar ."
+ },
+ {
+  "id": "20November_2009_Friday_tagesschau-6566",
+  "hypothesis": "im nordosten ist es teilweise klar .",
+  "reference": "der hält sich morgen in manchen regionen zäh auch dichtere wolken sind zunächst noch dabei aber es bleibt weitgehend trocken ."
+ },
+ {
+  "id": "16December_2009_Wednesday_tagesschau-5913",
+  "hypothesis": "im norden und westen mal sonne mal wolken .",
+  "reference": "im norden sowie ganz im westen schneit es auch mal stärker und es kann glatt werden ."
+ },
+ {
+  "id": "28August_2009_Friday_tagesschau-5879",
+  "hypothesis": "dort sowie im bergland sind stürmische böen möglich .",
+  "reference": "im norden sind auch stürmische böen möglich ."
+ },
+ {
+  "id": "25March_2011_Friday_tagesschau-5828",
+  "hypothesis": "am montag viel sonne nur richtung küsten ist es wolkiger aber trocken .",
+  "reference": "am montag scheint verbreitet die sonne richtung küsten und alpen ist es wolkiger aber es regnet nur vereinzelt ."
+ },
+ {
+  "id": "28January_2010_Thursday_heute-2883",
+  "hypothesis": "morgen tagsüber in den mittelgebirgen bis zu zwanzig zentimeter .",
+  "reference": "in den nächsten stunden können noch bis zu fünf zentimeter schnee fallen ."
+ },
+ {
+  "id": "25November_2009_Wednesday_tagesschau-7668",
+  "hypothesis": "subtropische luft strömt zu uns .",
+  "reference": "vom atlantik strömt etwas weniger milde luft zu uns ."
+ },
+ {
+  "id": "19September_2010_Sunday_tagesschau-3802",
+  "hypothesis": "im süden schwacher im norden mäßiger bis frischer wind an den küsten starke bis stürmische böen .",
+  "reference": "dort im süden weht der wind meist nur schwach richtung norden mäßiger zeitweise auch frischer wind an den küsten starke bis stürmische böen ."
+ },
+ {
+  "id": "08February_2010_Monday_tagesschau-2797",
+  "hypothesis": "morgen erwartet uns unter leichtem hochdruckeinfluss meist noch recht ruhiges und kaltes winterwetter .",
+  "reference": "morgen erwartet uns nochmals recht ruhiges und vielerorts trockenes winterwetter ."
+ },
+ {
+  "id": "21April_2010_Wednesday_tagesschau-6235",
+  "hypothesis": "morgen milde achtzehn grad im breisgau an der ostsee nur neun grad .",
+  "reference": "an der küste morgen kühle neun grad im breisgau bis achtzehn grad ."
+ },
+ {
+  "id": "08December_2009_Tuesday_heute-4199",
+  "hypothesis": "und morgen wird es dann verbreitet sonnig und heiß .",
+  "reference": "es wird morgen ein ziemlich trüber tag bei uns in deutschland ."
+ },
+ {
+  "id": "11January_2011_Tuesday_tagesschau-8032",
+  "hypothesis": "auch am tag bleibt es im süden überwiegend freundlich .",
+  "reference": "im süden verläuft der tag teilweise freundlich ."
+ },
+ {
+  "id": "18February_2010_Thursday_tagesschau-4533",
+  "hypothesis": "in der neuen woche ändert sich an diesem wetter erstmal wenig .",
+  "reference": "auch in der neuen woche ändert sich erstmal wenig ."
+ },
+ {
+  "id": "24October_2010_Sunday_tagesschau-2909",
+  "hypothesis": "am mittwoch regnet es in der nordhälfte ab und an .",
+  "reference": "am mittwoch zieht von der nordsee regen heran der sich am donnerstag ausbreitet ."
+ },
+ {
+  "id": "01April_2011_Friday_tagesschau-3377",
+  "hypothesis": "heute nacht hält sich vielerorts hochnebel mit einzelnen tropfen nordöstlich der elbe .",
+  "reference": "nordöstlich der elbe halten sich heute nacht noch viele wolken die anfangs auch noch ein paar tropfen bringen ."
+ },
+ {
+  "id": "05April_2011_Tuesday_heute-5120",
+  "hypothesis": "und dann kommt auch wieder aus dem südwesten sehr sehr sehr warme luft zu uns .",
+  "reference": "milde luft kommt aus dem südwesten ."
+ },
+ {
+  "id": "31January_2011_Monday_heute-3053",
+  "hypothesis": "ihnen einen schönen abend und machen sie es gut .",
+  "reference": "ich wünsche ihnen noch einen schönen abend ."
+ },
+ {
+  "id": "14July_2009_Tuesday_tagesschau-2427",
+  "hypothesis": "im süden bildet sich hier und da nebel .",
+  "reference": "im süden entladen sich später hier und da heftige gewitter ."
+ },
+ {
+  "id": "05September_2009_Saturday_tagesschau-4085",
+  "hypothesis": "heute nacht in der nordwesthälfte windig bis stürmisch .",
+  "reference": "in der nacht an der see noch stürmische böen ."
+ },
+ {
+  "id": "12October_2009_Monday_tagesschau-562",
+  "hypothesis": "am freitag viele wolken die teils regen teils schnee bringen .",
+  "reference": "am freitag insgesamt viele wolken die regen bringen ."
+ },
+ {
+  "id": "26October_2009_Monday_tagesschau-1402",
+  "hypothesis": "sonst mal mehr mal weniger wolken und nur hier und da etwas regen .",
+  "reference": "richtung nordosten gibt es mehr wolken hier und da etwas regen ."
+ },
+ {
+  "id": "01June_2010_Tuesday_heute-6603",
+  "hypothesis": "guten abend liebe zuschauer .",
+  "reference": "liebe zuschauer guten abend ."
+ },
+ {
+  "id": "06May_2011_Friday_tagesschau-6435",
+  "hypothesis": "am tag drei grad im bayerischen wald und elf grad in der kölner bucht .",
+  "reference": "heute nacht zwölf grad in der kölner bucht und ein grad im bayerischen wald ."
+ },
+ {
+  "id": "04August_2011_Thursday_tagesschau-713",
+  "hypothesis": "es gibt ein paar schauer und gewitter .",
+  "reference": "vielerorts gibt es schauer und gewitter die heftig ausfallen können ."
+ },
+ {
+  "id": "05May_2010_Wednesday_tagesschau-3353",
+  "hypothesis": "richtung westen gibt es neben einzelnen schauern auch sonnige abschnitte .",
+  "reference": "in teilen bayerns und sachsens gibt es neben schauern und gewittern auch wolkenlücken ."
+ },
+ {
+  "id": "01May_2010_Saturday_tagesschau-7194",
+  "hypothesis": "am tag zwanzig grad an der nordsee und siebenundzwanzig grad in niederbayern .",
+  "reference": "am tag zwölf grad an der ostsee und bis zwanzig grad in niederbayern ."
+ },
+ {
+  "id": "20November_2009_Friday_tagesschau-6562",
+  "hypothesis": "im süden bleibt es unter hochdruckeinfluss noch trocken und teilweise recht freundlich .",
+  "reference": "ansonsten bleibt es unter hochdruckeinfluss meist trocken und tagsüber auch teilweise freundlich ."
+ },
+ {
+  "id": "22November_2011_Tuesday_heute-4646",
+  "hypothesis": "im westen und nordwesten etwas schnee .",
+  "reference": "und das wird auch am wochenende nicht passieren ."
+ },
+ {
+  "id": "06January_2011_Thursday_tagesschau-5641",
+  "hypothesis": "die aussichten .",
+  "reference": "die wassermassen die da zusammenkommen können überschwemmungen verursachen ."
+ },
+ {
+  "id": "12October_2009_Monday_tagesschau-563",
+  "hypothesis": "am tag im osten und südosten schnee oder schneeregen teilweise bis ins flachland .",
+  "reference": "im osten und südosten auch schnee oder schneeregen ."
+ },
+ {
+  "id": "17February_2011_Thursday_tagesschau-6310",
+  "hypothesis": "auch am samstag überwiegend stark bewölkt oder neblig trüb .",
+  "reference": "am tag ist es überwiegend stark bewölkt oder neblig trüb ."
+ },
+ {
+  "id": "03February_2010_Wednesday_heute-2355",
+  "hypothesis": "und das wird jetzt noch heißer auch im norden .",
+  "reference": "im norden wird es dagegen noch trocken sein ."
+ },
+ {
+  "id": "21August_2011_Sunday_tagesschau-263",
+  "hypothesis": "im süden vor allem zu beginn der nacht noch einzelne schauer sonst ist es meist klar .",
+  "reference": "in der nordhälfte gibt es zu beginn der nacht noch einzelne heftige schauer und gewitter dann klar dass dort teilweise auf ."
+ },
+ {
+  "id": "11August_2009_Tuesday_tagesschau-4356",
+  "hypothesis": "im norden zeitweise mäßiger an der ostsee auch frischer bis starker westwind .",
+  "reference": "schwacher im norden auch mäßiger an der küste frischer und zeitweise stark böiger westwind ."
+ },
+ {
+  "id": "07December_2009_Monday_tagesschau-7103",
+  "hypothesis": "hier und da zeigt sich auch mal die sonne .",
+  "reference": "richtung südwesten und nordosten lässt sich die sonne auch mal blicken ."
+ },
+ {
+  "id": "25January_2011_Tuesday_tagesschau-2993",
+  "hypothesis": "am sonntag ist es im norden recht freundlich vor allem richtung süden regnet es gebietsweise im bergland auch schnee .",
+  "reference": "am freitag ruhiges trockenes wetter vor allem im norden ist es recht freundlich ähnliches wetter am samstag nur im norden vereinzelt etwas schnee oder gefrierender sprühregen ."
+ },
+ {
+  "id": "28August_2009_Friday_tagesschau-5878",
+  "hypothesis": "der wind weht meist schwach mitunter auch mal mäßig .",
+  "reference": "es bläst ein mäßiger im norden mitunter frischer an der küste auch starker wind aus südwest bis west ."
+ },
+ {
+  "id": "21April_2010_Wednesday_heute-3109",
+  "hypothesis": "nach wie vor strömt für die jahreszeit ungewöhnlich kalte luft zu uns .",
+  "reference": "eine frostig kalte nacht liegt vor uns ."
+ },
+ {
+  "id": "05June_2010_Saturday_tagesschau-3925",
+  "hypothesis": "wolken des tiefs über der nordsee überqueren uns in der nacht und morgen .",
+  "reference": "sie ziehen in der nacht zum montag über uns hinweg ."
+ },
+ {
+  "id": "28February_2011_Monday_tagesschau-4988",
+  "hypothesis": "in den nächsten tagen kühlt es aber weiter ab .",
+  "reference": "an den temperaturen ändert sich wenig ."
+ },
+ {
+  "id": "03July_2009_Friday_tagesschau-2015",
+  "hypothesis": "in der neuen woche wird es deutlich milder aber es bleibt wechselhaft .",
+  "reference": "in der neuen woche kühlt es dann bei wechselhaftem wetter deutlich ab ."
+ },
+ {
+  "id": "02October_2010_Saturday_tagesschau-1300",
+  "hypothesis": "dabei strömt sehr kalte luft zu uns .",
+  "reference": "sehr milde luft strömt zu uns ."
+ },
+ {
+  "id": "24November_2011_Thursday_tagesschau-8341",
+  "hypothesis": "am mittwoch legt der wind noch zu und es regnet weiter .",
+  "reference": "am sonntag legt der wind noch zu dazu von nordwesten wolken und etwas regen ."
+ },
+ {
+  "id": "24October_2009_Saturday_tagesschau-4287",
+  "hypothesis": "der wind weht schwach bis mäßig an der nordsee auch frisch .",
+  "reference": "dort kann es auch stürmische böen geben ."
+ },
+ {
+  "id": "05November_2010_Friday_tagesschau-1872",
+  "hypothesis": "in der nacht breitet sich über der mitte und dem süden kräftiger regen aus .",
+  "reference": "der teilweise kräftige regen breitet sich im tagesverlauf über die mitte weiter nach süden aus ."
+ },
+ {
+  "id": "13April_2010_Tuesday_tagesschau-2318",
+  "hypothesis": "an den küsten und ganz im süden ist es auch mal wolkig .",
+  "reference": "am samstag viel sonnenschein vor allem an alpen und küsten ist es auch mal wolkig ."
+ },
+ {
+  "id": "27August_2009_Thursday_tagesschau-3268",
+  "hypothesis": "ein tief zieht dabei von der nordsee nach südwestdeutschland .",
+  "reference": "von schottland zieht ein tief nach norwegen ."
+ },
+ {
+  "id": "29August_2009_Saturday_tagesschau-5018",
+  "hypothesis": "heute nacht elf grad am niederrhein und minus ein grad im süden .",
+  "reference": "die werden heute aber erstmal seltener und ziehen sich richtung küste zurück ."
+ },
+ {
+  "id": "10February_2010_Wednesday_tagesschau-2515",
+  "hypothesis": "am montag beruhigt sich das wetter dann wieder .",
+  "reference": "am wochenende beruhigt sich dann das wetter langsam ."
+ },
+ {
+  "id": "29October_2009_Thursday_tagesschau-1013",
+  "hypothesis": "auch am samstag erwartet uns eine ruhige mischung aus nebel wolken und gelegentlichem sonnenschein .",
+  "reference": "und so erwartet uns eine mischung aus teilweise zähen nebelfeldern wolken und sonnenschein ."
+ },
+ {
+  "id": "17July_2009_Friday_tagesschau-5101",
+  "hypothesis": "und nun die wettervorhersage für morgen samstag den sechzehnten juli .",
+  "reference": "und nun die wettervorhersage für morgen samstag den achtzehnten juli ."
+ },
+ {
+  "id": "26August_2009_Wednesday_tagesschau-3226",
+  "hypothesis": "ab freitag wird es im norden windig und am samstag dann deutlich kühler .",
+  "reference": "am samstag wird es deutlich kühler und im norden sehr windig ."
+ },
+ {
+  "id": "01November_2010_Monday_tagesschau-136",
+  "hypothesis": "in der nacht breiten sich stellenweise nebel oder hochnebelfelder aus .",
+  "reference": "später breiten sich aber nebel oder hochnebelfelder aus ."
+ },
+ {
+  "id": "12December_2009_Saturday_tagesschau-4728",
+  "hypothesis": "in der nacht regnet es richtung süden und nordosten stellenweise leicht an der ostsee kann auch regen mit dabei sein sonst bleibt es meist trocken .",
+  "reference": "in der nacht schneit es ab und zu leicht an den küsten sowie anfangs auch in tiefen lagen ist regen mit dabei ."
+ },
+ {
+  "id": "27November_2009_Friday_tagesschau-7341",
+  "hypothesis": "an den alpen und im erzgebirge für längere zeit schnee .",
+  "reference": "im bergland zum teil schnee an den alpen auch für längere zeit regen oder schnee ."
+ },
+ {
+  "id": "29September_2011_Thursday_tagesschau-7236",
+  "hypothesis": "am montag ändert sich noch wenig an diesem wetter .",
+  "reference": "samstag und sonntag ändert sich an diesem wetter noch wenig ."
+ },
+ {
+  "id": "23July_2009_Thursday_tagesschau-6751",
+  "hypothesis": "am wochenende wird es unter hochdruckeinfluss freundlicher .",
+  "reference": "die schwül warme luft wird von kühlerer meeresluft verdrängt ."
+ },
+ {
+  "id": "08November_2010_Monday_tagesschau-6922",
+  "hypothesis": "das hoch über norwegen bestimmt in den kommenden beiden tagen unser wetter .",
+  "reference": "das wetter in teilen europas wird in den kommenden beiden tagen bestimmt von einem umfangreichen tiefdruckgebiet ."
+ },
+ {
+  "id": "23July_2009_Thursday_tagesschau-6752",
+  "hypothesis": "dabei gibt es zum teil kräftige schauer vereinzelt auch gewitter .",
+  "reference": "dies geht einher mit teilweise unwetterartigen gewittern ."
+ },
+ {
+  "id": "06September_2010_Monday_tagesschau-1153",
+  "hypothesis": "am donnerstag überall wechselhaft aber ab freitag wird es von südwesten langsam wieder freundlicher .",
+  "reference": "am donnerstag noch unbeständig aber ab freitag wird es von westen langsam freundlicher ."
+ },
+ {
+  "id": "06February_2010_Saturday_tagesschau-7363",
+  "hypothesis": "am alpenrand wird es anfangs auch teilweise noch regnen .",
+  "reference": "am alpenrand gibt es auch morgen noch leichten schneefall ."
+ },
+ {
+  "id": "11November_2009_Wednesday_tagesschau-8042",
+  "hypothesis": "der wind weht schwach bis mäßig aus unterschiedlichen richtungen .",
+  "reference": "der wind weht schwach bis mäßig aus süd bis südwest ."
+ },
+ {
+  "id": "14September_2010_Tuesday_heute-8239",
+  "hypothesis": "morgen weht ein schwacher bis mäßiger wind der in der südhälfte aus unterschiedlichen richtungen kommt .",
+  "reference": "und es kommt ein neues tief das uns morgen abend dann erreichen wird an der nordsee zum teil mit schweren sturmböen ."
+ },
+ {
+  "id": "23September_2010_Thursday_tagesschau-3448",
+  "hypothesis": "am wochenende meist mehr wolken als sonne gebietsweise gibt es schauer oder gewitter zum teil fällt auch kräftiger regen .",
+  "reference": "am samstag überall mehr wolken als sonne in der südosthälfte zum teil kräftiger regen richtung nordwesten nur einzelne schauer ."
+ },
+ {
+  "id": "12April_2010_Monday_tagesschau-365",
+  "hypothesis": "auch am mittwoch in der südosthälfte viele wolken und stellenweise regen richtung nordwesten ist es freundlich und trocken .",
+  "reference": "am donnerstag ist es in der südosthälfte weiterhin wechselhaft nach nordwesten hin ist es freundlich ."
+ },
+ {
+  "id": "20November_2009_Friday_tagesschau-6560",
+  "hypothesis": "und nun die wettervorhersage für morgen samstag den neunundzwanzigsten november .",
+  "reference": "und nun die wettervorhersage für morgen samstag den einundzwanzigsten november ."
+ },
+ {
+  "id": "21May_2010_Friday_tagesschau-5094",
+  "hypothesis": "der wind weht schwach bis mäßig und kommt aus nord bis nordwest .",
+  "reference": "abgesehen von schauer und gewitterböen weht der wind schwach bis mäßig aus nordwest bis nord ."
+ },
+ {
+  "id": "10August_2009_Monday_heute-6897",
+  "hypothesis": "das gilt auch für den dienstag .",
+  "reference": "entweder über den teletext oder auch über das internet ."
+ },
+ {
+  "id": "26August_2009_Wednesday_tagesschau-3213",
+  "hypothesis": "und nun die wettervorhersage für morgen donnerstag den sechsundzwanzigsten august .",
+  "reference": "und nun die wettervorhersage für morgen donnerstag den siebenundzwanzigsten august ."
+ },
+ {
+  "id": "16November_2009_Monday_tagesschau-3106",
+  "hypothesis": "von südwesten wird es später freundlicher .",
+  "reference": "von süden wird es tag für tag freundlicher ."
+ },
+ {
+  "id": "01June_2010_Tuesday_tagesschau-5009",
+  "hypothesis": "im osten frischer wind und vereinzelt sturmböen sonst weht der wind meist mäßig .",
+  "reference": "der wind weht meist mäßig im osten und an der see frischer wind mit starken böen in den hochlagen der osthälfte sturmböen ."
+ },
+ {
+  "id": "11November_2010_Thursday_tagesschau-3565",
+  "hypothesis": "im norden gibt es schauer einzelne gewitter und stürmische böen an der nordsee .",
+  "reference": "dahinter lockert es im norden und der mitte teilweise auf an der nordsee vereinzelt kurze gewitter ."
+ },
+ {
+  "id": "25September_2010_Saturday_tagesschau-3489",
+  "hypothesis": "am sonntag mal sonne mal wolken vor allem im süden und nordwesten regnet es .",
+  "reference": "am montag regnet es vor allem im norden und osten weiter und besonders im osten wird es windig etwas sonne am ehesten im süden ."
+ },
+ {
+  "id": "20October_2011_Thursday_tagesschau-506",
+  "hypothesis": "ab montag wird es dann im süden wieder freundlicher .",
+  "reference": "in der südhälfte muss dazu mit nachtfrost gerechnet werden ."
+ },
+ {
+  "id": "15May_2010_Saturday_tagesschau-5656",
+  "hypothesis": "es muss vor allem an den alpen mit überschwemmungen gerechnet werden .",
+  "reference": "am tag ist es im südosten meist stark bewölkt vor allem an den alpen muss mit regen gerechnet werden ."
+ },
+ {
+  "id": "15February_2011_Tuesday_tagesschau-7473",
+  "hypothesis": "auch gewitter sind dabei .",
+  "reference": "auch ein paar schneeflocken sind dabei ."
+ },
+ {
+  "id": "16July_2009_Thursday_tagesschau-5052",
+  "hypothesis": "heute nacht klingen letzte schauer und gewitter ab dann ist es meist klar oder nur locker bewölkt .",
+  "reference": "heute nacht gibt es im süden anfangs noch vereinzelte schauer oder gewitter sonst ist es meist klar oder nur locker bewölkt ."
+ },
+ {
+  "id": "27May_2010_Thursday_heute-1236",
+  "hypothesis": "am sonntag ist es recht freundlich .",
+  "reference": "ab sonntag geht es dann wieder abwärts es wird wechselhafter ."
+ },
+ {
+  "id": "16September_2010_Thursday_tagesschau-6278",
+  "hypothesis": "die aussichten am sonntag schneit es etwas im süden und osten etwas im süden .",
+  "reference": "am sonntag im norden und an den alpen mal sonne mal wolken und ab und an schauer sonst ist es recht freundlich ."
+ },
+ {
+  "id": "09March_2011_Wednesday_heute-1741",
+  "hypothesis": "im westen beruhigt sich das wetter schon wieder .",
+  "reference": "und das wetter im südöstlichen mittelmeer das beruhigt sich nur langsam ."
+ },
+ {
+  "id": "03June_2011_Friday_tagesschau-7644",
+  "hypothesis": "die aussichten am sonntag mal sonne mal wolken vor allem am nachmittag schauer und gewitter die im süden und südosten unwetterartig ausfallen können .",
+  "reference": "vor allem im süden können die gewitter unwetterartig ausfallen ."
+ },
+ {
+  "id": "12April_2010_Monday_heute-7690",
+  "hypothesis": "an der nordsee etwas sonne .",
+  "reference": "morgen bleibt durch diese wetterlage der norden begünstigt mit relativ viel sonne hauptsächlich an der nordsee ."
+ },
+ {
+  "id": "03October_2012_Wednesday_tagesschau-7654",
+  "hypothesis": "heute nacht verlagern sich kräftige regenfälle von nordwesten in die mitte .",
+  "reference": "dabei breiten sich heute nacht von nordwesten regenfälle bis in die mitte aus ."
+ },
+ {
+  "id": "08February_2010_Monday_heute-1498",
+  "hypothesis": "und dann kommt auch der regen auf .",
+  "reference": "und im westen haben wir kaum noch schnee aber es gibt eben auch ausnahmen die mittelgebirge ."
+ },
+ {
+  "id": "30October_2009_Friday_tagesschau-2273",
+  "hypothesis": "abseits davon scheint häufig die sonne .",
+  "reference": "in der osthälfte scheint abseits der nebelgebiete häufig die sonne ."
+ },
+ {
+  "id": "20April_2011_Wednesday_tagesschau-3086",
+  "hypothesis": "morgen am tag viel sonnenschein hier und da ein paar quellwolken ganz im osten können diese auch dichter beieinander liegen .",
+  "reference": "auch am tag wieder viel sonnenschein später bilden sich hier und da ein paar quellwolken ."
+ },
+ {
+  "id": "25January_2013_Friday_tagesschau-7811",
+  "hypothesis": "und nun die wettervorhersage für morgen samstag den sechsundzwanzigsten juni .",
+  "reference": "und nun die wettervorhersage für morgen samstag den sechsundzwanzigsten januar ."
+ },
+ {
+  "id": "14August_2009_Friday_tagesschau-73",
+  "hypothesis": "am sonntag eine mischung aus sonne und wolken .",
+  "reference": "am sonntag im nordwesten eine mischung aus sonne und wolken mit einigen zum teil gewittrigen schauern ."
+ },
+ {
+  "id": "09August_2009_Sunday_tagesschau-1186",
+  "hypothesis": "die nächsten tage bringen noch nicht den durchbruch zum frühlingswetter .",
+  "reference": "abseits der gewitter schwacher bis mäßiger wind ."
+ },
+ {
+  "id": "19October_2010_Tuesday_tagesschau-8290",
+  "hypothesis": "am dienstag ist es recht freundlich nur an den alpen regnet es vereinzelt .",
+  "reference": "am abend zum teil bis in tiefere lagen ."
+ },
+ {
+  "id": "13July_2009_Monday_tagesschau-7508",
+  "hypothesis": "es lenkt sehr warme luft in die südöstlichen teile deutschlands in den nordwesten dagegen gelangt nur mäßig warme luft .",
+  "reference": "das hoch lenkt schwül heiße luft in den südosten das tief nur mäßig warme meeresluft in den nordwesten ."
+ },
+ {
+  "id": "08May_2010_Saturday_tagesschau-175",
+  "hypothesis": "morgen wandern diese wolken südostwärts und werden dabei immer dünner .",
+  "reference": "in deutschland gibt es nur schwache luftdruckunterschiede ."
+ },
+ {
+  "id": "14October_2009_Wednesday_tagesschau-526",
+  "hypothesis": "in der nacht temperaturen zwischen minus vier und minus zwölf grad an den küsten .",
+  "reference": "heute nacht plus vier grad an der ostsee bis minus vier grad in den mittelgebirgen ."
+ },
+ {
+  "id": "10August_2009_Monday_heute-6902",
+  "hypothesis": "schwül warm wird dann der mittwoch mit bis zu dreißig grad .",
+  "reference": "mit der leicht kühleren luft dann bis vierundzwanzig grad in der nordhälfte ."
+ },
+ {
+  "id": "03August_2010_Tuesday_tagesschau-2780",
+  "hypothesis": "am tag neunzehn grad an der nordsee dreiunddreißig grad am alpenrand und in der lausitz .",
+  "reference": "am tag neunzehn grad an der nordsee und sechsundzwanzig grad in teilen thüringens und sachsens ."
+ },
+ {
+  "id": "08May_2010_Saturday_tagesschau-176",
+  "hypothesis": "im süden hält sich morgen noch feuchtere luft in der sich einzelne schauer und gewitter entwickeln können .",
+  "reference": "vom mittelmeer fließt feuchte luft heran in der sich zum teil kräftige gewitter entwickeln können ."
+ },
+ {
+  "id": "05July_2010_Monday_heute-8688",
+  "hypothesis": "da haben wir morgen höchsttemperaturen von minus zehn bis minus zwanzig grad .",
+  "reference": "also wir haben morgen höchsttemperaturen in mitteleuropa von achtzehn bis sechsundzwanzig grad ."
+ },
+ {
+  "id": "24August_2010_Tuesday_heute-3006",
+  "hypothesis": "guten abend liebe zuschauer .",
+  "reference": "liebe zuschauer guten abend ."
+ },
+ {
+  "id": "18November_2009_Wednesday_tagesschau-5578",
+  "hypothesis": "und nun die wettervorhersage für morgen samstag den neunzehnten november .",
+  "reference": "und nun die wettervorhersage für morgen donnerstag den neunzehnten november ."
+ },
+ {
+  "id": "06June_2010_Sunday_tagesschau-6363",
+  "hypothesis": "im norden machen sich wolken des tiefs über dem atlantik bemerkbar .",
+  "reference": "gewitterschauer örtlich mit hagel starkregen und sturmböen ziehen in der nacht ostwärts im norden regnet es länger ."
+ },
+ {
+  "id": "29March_2010_Monday_tagesschau-8387",
+  "hypothesis": "schauer und gewitter werden .",
+  "reference": "sie bringen kräftige schauer und gewitter ."
+ },
+ {
+  "id": "26October_2009_Monday_tagesschau-1403",
+  "hypothesis": "abseits davon scheint häufig die sonne .",
+  "reference": "am freitag scheint abseits der nebelgebiete häufig die sonne ."
+ },
+ {
+  "id": "28September_2010_Tuesday_heute-8355",
+  "hypothesis": "morgen kühle zehn bis fünfzehn grad am oberrhein bis siebzehn grad .",
+  "reference": "am rhein werden es dann wenigstens mal so fünfzehn bis maximal siebzehn grad ."
+ },
+ {
+  "id": "29March_2010_Monday_tagesschau-8388",
+  "hypothesis": "die luft die dann zu uns einströmt ist kühl .",
+  "reference": "die luft die in den kommenden tagen zu uns strömt ist dann kälter ."
+ },
+ {
+  "id": "13November_2009_Friday_tagesschau-8608",
+  "hypothesis": "im westen und nordwesten sonnige momente .",
+  "reference": "im westen und nordwesten frischer wind ."
+ },
+ {
+  "id": "12July_2010_Monday_tagesschau-373",
+  "hypothesis": "im westen beruhigt sich das wetter schon wieder .",
+  "reference": "im westen und nordwesten beruhigt sich das wetter später wieder ."
+ },
+ {
+  "id": "01October_2009_Thursday_tagesschau-420",
+  "hypothesis": "am sonntag fallen stellenweise schauer im norden und über den mittelgebirgen ist es weiter stürmisch .",
+  "reference": "am sonntag im norden und in der mitte schauer dabei ist es im norden stürmisch ."
+ },
+ {
+  "id": "12December_2011_Monday_heute-5804",
+  "hypothesis": "am sonntag erst sonne und wolken später beginnt es im westen zu regnen .",
+  "reference": "im westen allerdings nimmt die bewölkung später zu und es beginnt zu regnen ."
+ },
+ {
+  "id": "09February_2010_Tuesday_tagesschau-4504",
+  "hypothesis": "und am montag schneit es nur vereinzelt etwas .",
+  "reference": "am samstag schneit es nur gebietsweise etwas ."
+ },
+ {
+  "id": "14December_2009_Monday_tagesschau-2088",
+  "hypothesis": "auch in den nächsten tagen wird es noch kälter .",
+  "reference": "die kalte luft bleibt uns erhalten wobei die temperaturen bis freitag noch weiter zurückgehen ."
+ },
+ {
+  "id": "14December_2009_Monday_tagesschau-2092",
+  "hypothesis": "im norden schwacher wind sonst weht er schwach bis mäßig aus nordost bis ost .",
+  "reference": "im norden schwacher wind aus unterschiedlichen richtungen sonst weht er mäßig ."
+ },
+ {
+  "id": "08June_2010_Tuesday_tagesschau-5524",
+  "hypothesis": "in der nordwesthälfte gebietsweise zum teil kräftige schauer am nachmittag sind auch gewitter dabei .",
+  "reference": "in der nordwesthälfte morgen mal sonne mal wolken und immer wieder zum teil kräftige am nachmittag auch gewittrige schauer ."
+ },
+ {
+  "id": "08February_2010_Monday_heute-1501",
+  "hypothesis": "am tag minus vier grad im osten bis sieben grad .",
+  "reference": "dazu im westen allerdings etwas milder mit minus vier bis minus sieben grad ."
+ },
+ {
+  "id": "25June_2010_Friday_tagesschau-3882",
+  "hypothesis": "am nachmittag einzelne kurze gewitter .",
+  "reference": "und im süden besonders vom bayerischen wald bis zu den alpen gibt es am nachmittag einzelne schauer und gewitter ."
+ },
+ {
+  "id": "05March_2011_Saturday_tagesschau-5447",
+  "hypothesis": "morgen reichen die temperaturen von zehn grad im vogtland sechzehn grad am oberrhein .",
+  "reference": "morgen reichen die temperaturen von einem grad im vogtland bis neun grad am oberrhein ."
+ },
+ {
+  "id": "04August_2011_Thursday_tagesschau-712",
+  "hypothesis": "am tag ist es im süden und osten teilweise noch länger freundlich sonst mehr wolken als sonne und nur vereinzelt schauer .",
+  "reference": "der tag beginnt ganz im osten noch freundlich später zeigt sich dann auch im nordwesten häufiger die sonne sonst überwiegen die wolken ."
+ },
+ {
+  "id": "14September_2010_Tuesday_heute-8238",
+  "hypothesis": "ja winterglück ist dieses tiefdruckgebiet sozusagen es hat noch regen im gepäck erst einmal erreicht dann morgen und heute nacht frankreich morgen früh dann deutschland .",
+  "reference": "dreh und angelpunkt ist nämlich dieses tiefdruckgebiet über dem nordatlantik es schickt uns den regen letztendlich erst einmal nach norddeutschland aber dann heute nacht mehr und mehr in die mitte ."
+ },
+ {
+  "id": "19April_2010_Monday_heute-782",
+  "hypothesis": "und jetzt wünsche ich ihnen noch einen schönen abend .",
+  "reference": "jetzt wünsche ich ihnen noch einen schönen abend ."
+ },
+ {
+  "id": "18July_2009_Saturday_tagesschau-1640",
+  "hypothesis": "heute nacht gibt es im süden noch zum teil kräftige schauer oder gewitter .",
+  "reference": "sechs grad heute nacht am alpenrand bis fünfzehn grad an der oder ."
+ },
+ {
+  "id": "14September_2010_Tuesday_tagesschau-5220",
+  "hypothesis": "heute nacht sieben bis neun grad am tag acht grad in nordfriesland und bis zu einundzwanzig grad im süden .",
+  "reference": "heute nacht sieben bis vierzehn grad am tag zweiundzwanzig grad im süden und vierzehn grad in oberfranken ."
+ },
+ {
+  "id": "24January_2011_Monday_heute-6981",
+  "hypothesis": "aber am wochenende wird es wieder nasser und das heißt es regnet aber oberhalb von fünf sechshundert metern wird es auch schneien .",
+  "reference": "und es wird auch wieder schneien oberhalb von dreihundert metern meist so am nachmittag kräftig vom saarland bis nach berlin hoch ."
+ },
+ {
+  "id": "28August_2009_Friday_tagesschau-5882",
+  "hypothesis": "dort morgen bis sechzehn an der ostsee dagegen nur kühle drei grad .",
+  "reference": "an der nordsee nur kühle sechzehn grad ."
+ },
+ {
+  "id": "24September_2009_Thursday_heute-6083",
+  "hypothesis": "in der nacht gehen die temperaturen zurück auf werte zwischen neun und null grad .",
+  "reference": "die temperaturen sinken auf werte zwischen dreizehn und fünf grad ."
+ },
+ {
+  "id": "04June_2010_Friday_tagesschau-1173",
+  "hypothesis": "der wind weht schwach bis mäßig aus unterschiedlichen richtungen .",
+  "reference": "der wind weht meist schwach und kommt aus unterschiedlichen richtungen ."
+ },
+ {
+  "id": "19January_2011_Wednesday_heute-2690",
+  "hypothesis": "ihnen einen schönen abend und machen sie es gut .",
+  "reference": "ich wünsche ihnen einen schönen abend und machen sie es gut ."
+ },
+ {
+  "id": "20October_2010_Wednesday_tagesschau-8210",
+  "hypothesis": "heute nacht gibt es hier und da schauer vereinzelt gewitter .",
+  "reference": "heute nacht gibt es hier und da schauer an der nordsee auch kurze gewitter ."
+ },
+ {
+  "id": "11December_2010_Saturday_tagesschau-8669",
+  "hypothesis": "daran ändert sich auch am mittwoch noch nichts .",
+  "reference": "und daran ändert sich auch am mittwoch nichts bei minus neun bis minus ein grad ."
+ },
+ {
+  "id": "04July_2010_Sunday_tagesschau-7205",
+  "hypothesis": "im westen ist es freundlicher .",
+  "reference": "dazwischen ist es freundlicher ."
+ },
+ {
+  "id": "21May_2010_Friday_tagesschau-5092",
+  "hypothesis": "sonst mal sonne mal wolken stellenweise schauer oder gewitter .",
+  "reference": "in der osthälfte morgen mal sonne mal dichtere wolken später auch örtliche schauer oder gewitter ."
+ },
+ {
+  "id": "23September_2009_Wednesday_tagesschau-7590",
+  "hypothesis": "ansonsten wird es recht freundlich .",
+  "reference": "sonst ist es recht freundlich ."
+ },
+ {
+  "id": "22August_2010_Sunday_tagesschau-1344",
+  "hypothesis": "auch am tag regnet es gebietsweise vor allem im süden sind noch gewitter möglich richtung nordsee ein paar lichtblicke .",
+  "reference": "morgen vielerorts schauer vor allem im süden und osten noch einige gewitter mitunter regnet es kräftig auch unwetter sind weiter möglich ."
+ },
+ {
+  "id": "20November_2009_Friday_tagesschau-6565",
+  "hypothesis": "die gewitter breiten sich heute nacht von südwesten aus .",
+  "reference": "besonders in flusstälern bildet sich nebel ."
+ },
+ {
+  "id": "24November_2009_Tuesday_tagesschau-5684",
+  "hypothesis": "im süden heute nacht örtlich leichter frost im breisgau bis zehn grad .",
+  "reference": "mit stürmischen böen muss heute nacht vor allem im norden am tag im nordwesten gerechnet werden ."
+ },
+ {
+  "id": "10December_2009_Thursday_heute-7944",
+  "hypothesis": "im bergland fällt zunehmend schnee .",
+  "reference": "samstag fällt auch noch schnee ."
+ },
+ {
+  "id": "24November_2011_Thursday_heute-224",
+  "hypothesis": "heute nacht temperaturen zwischen sieben und zwei grad .",
+  "reference": "ganz ähnliche temperaturen wie heute zwischen sechs und elf grad ."
+ },
+ {
+  "id": "31March_2010_Wednesday_tagesschau-1000",
+  "hypothesis": "ein tief das sich mit seinem zentrum über die nordsee ostwärts verlagert sorgt morgen und auch an den folgetagen bei uns für wechselhaftes wetter .",
+  "reference": "das tief bei schottland sorgt zusammen mit kühler luft auch morgen für wechselhaftes wetter ."
+ },
+ {
+  "id": "14August_2011_Sunday_tagesschau-3230",
+  "hypothesis": "dabei gibt es viele wolken die hier und da regen bringen .",
+  "reference": "dabei kommt es zu heftigen schauern und gewittern die teilweise unwetterartig sein können ."
+ },
+ {
+  "id": "26August_2009_Wednesday_tagesschau-3227",
+  "hypothesis": "am sonntag ist es recht freundlich .",
+  "reference": "ab sonntag steigen dann temperaturen und sonnenscheindauer wieder ."
+ },
+ {
+  "id": "10August_2009_Monday_heute-6893",
+  "hypothesis": "im süden und osten gibt es heute nacht schauer anfangs auch noch zum teil unwetterartige gewitter .",
+  "reference": "die gewitterfront heute nacht noch über dem osten und dabei anfangs auch noch einzelne unwetterartige gewitter ."
+ },
+ {
+  "id": "01April_2010_Thursday_tagesschau-4329",
+  "hypothesis": "am montag ändert sich noch wenig am wochenende .",
+  "reference": "am samstag ist es wieder unbeständig ."
+ },
+ {
+  "id": "14October_2010_Thursday_tagesschau-290",
+  "hypothesis": "das tief das sich von den niederlanden nach südschweden verlagert bringt morgen vor allem dem norden deutschlands .",
+  "reference": "morgen früh bildet sich über der nordsee ein neues tief das von norden für kräftigen regen sorgt ."
+ },
+ {
+  "id": "07October_2010_Thursday_tagesschau-4117",
+  "hypothesis": "und nun die wettervorhersage für morgen freitag den siebten oktober .",
+  "reference": "und nun die wettervorhersage für morgen freitag den achten oktober ."
+ },
+ {
+  "id": "17May_2010_Monday_heute-5576",
+  "hypothesis": "aber dann am wochenende ein paar schauer an den küsten ein paar an den alpen aber zwischendrin sieht es auch sehr freundlich aus .",
+  "reference": "auch noch verhältnismäßig kühl aber dann sieht es schon nach ein paar sonnigeren und auch deutlich wärmeren tagen aus ."
+ },
+ {
+  "id": "21November_2009_Saturday_tagesschau-4908",
+  "hypothesis": "auf den bergen teilweise schwere sturmböen vereinzelt orkanartige böen .",
+  "reference": "am abend schwere sturmböen auf den bergen auch orkanartige böen ."
+ },
+ {
+  "id": "06September_2010_Monday_tagesschau-1147",
+  "hypothesis": "mäßiger bis frischer westwind im norden mit stürmischen böen an der see und auf den bergen auch sturmböen .",
+  "reference": "schwacher bis mäßiger im norden auch frischer wind aus ost bis südost an der nordsee und auf den bergen ist er stark mit stürmischen böen ."
+ },
+ {
+  "id": "08April_2010_Thursday_tagesschau-3950",
+  "hypothesis": "die wolken lösen sich auf nur im süden deutschlands sorgt das tief über frankreich noch für regen .",
+  "reference": "das tief sorgt auch noch für wolken aber es fällt nur wenig regen ."
+ },
+ {
+  "id": "24January_2013_Thursday_heute-7259",
+  "hypothesis": "am mittwoch liegen die wolken unterschiedlich dicht beieinander .",
+  "reference": "es kann noch leicht schneien in den nächsten stunden in sachsen oder auch am alpenrand und in bayern ."
+ },
+ {
+  "id": "05January_2011_Wednesday_tagesschau-2255",
+  "hypothesis": "das wetter beruhigt sich vorübergehend allerdings erreichen bereits am sonntag am sonntag .",
+  "reference": "am wochenende setzt sich das starke tauwetter fort begleitet von weiteren regenfällen ."
+ },
+ {
+  "id": "06September_2009_Sunday_tagesschau-5308",
+  "hypothesis": "morgen schwacher bis mäßiger an der nordsee auch frischer wind aus südwest bis süd .",
+  "reference": "morgen wieder schwacher im norden mäßiger wind aus süd bis südwest an der nordsee starke böen ."
+ },
+ {
+  "id": "22April_2010_Thursday_tagesschau-3738",
+  "hypothesis": "die aussichten am donnerstag regnet es in der nordosthälfte gebietsweise richtung westen ist es meist sonnig .",
+  "reference": "die gibt es auch am montag bei insgesamt wieder mehr wolken aber es bleibt weiterhin warm und auch noch längere zeit freundlich ."
+ },
+ {
+  "id": "20June_2011_Monday_tagesschau-1249",
+  "hypothesis": "und nun die wettervorhersage für morgen dienstag den einundzwanzigsten märz .",
+  "reference": "und nun die wettervorhersage für morgen dienstag den einundzwanzigsten juni ."
+ },
+ {
+  "id": "08April_2010_Thursday_tagesschau-3957",
+  "hypothesis": "morgen reichen die temperaturen von neunzehn grad an der nordsee bis achtundzwanzig grad im breisgau .",
+  "reference": "morgen reichen die temperaturen von neun grad an der ostsee bis siebzehn grad im breisgau ."
+ },
+ {
+  "id": "24November_2009_Tuesday_tagesschau-5691",
+  "hypothesis": "an der nordsee etwas sonne .",
+  "reference": "an der nordsee auch gewitter ."
+ },
+ {
+  "id": "01July_2010_Thursday_tagesschau-8797",
+  "hypothesis": "die aussichten auch am donnerstag regnet es gebietsweise vor allem in der südosthälfte zeigt sich auch die sonne .",
+  "reference": "am sonntag vor allem in der südosthälfte gewitterschauer sonst setzt sich wieder meist die sonne durch ."
+ },
+ {
+  "id": "29August_2009_Saturday_tagesschau-5019",
+  "hypothesis": "in der osthälfte ist es heute nacht teils wolkig oder neblig teils klar .",
+  "reference": "in der südhälfte ist es teils wolkig teils klar ."
+ },
+ {
+  "id": "02October_2012_Tuesday_tagesschau-2847",
+  "hypothesis": "das tief über dem östlichen mitteleuropa sorgt bei uns auch morgen verbreitet für freundliches wetter .",
+  "reference": "in der südosthälfte deutschlands bleibt es morgen unter leichtem hochdruckeinfluss noch recht freundlich ."
+ },
+ {
+  "id": "20November_2009_Friday_tagesschau-6575",
+  "hypothesis": "es bleibt aber weiterhin recht mild .",
+  "reference": "aber es bleibt für die jahreszeit immer noch recht mild ."
+ },
+ {
+  "id": "28September_2009_Monday_tagesschau-4682",
+  "hypothesis": "im süden bleibt es noch freundlich .",
+  "reference": "am mittwoch in der nordhälfte regenschauer richtung süden ist es freundlicher ."
+ },
+ {
+  "id": "28January_2013_Monday_heute-7998",
+  "hypothesis": "heute nacht ist es im osten und süden noch zum teil klar .",
+  "reference": "ja der regen im westen zieht weiter in dieser nacht er wird den osten erreichen wie gesagt anfangs mit schnee auch in den mittelgebirgen ."
+ },
+ {
+  "id": "08September_2010_Wednesday_tagesschau-5246",
+  "hypothesis": "am freitag regnet es südlich der donau ab und an noch etwas sonst ist es meist freundlich .",
+  "reference": "am samstag regnet es noch etwas in küstennähe sonst meist freundlich und trocken ."
+ },
+ {
+  "id": "08July_2011_Friday_tagesschau-6727",
+  "hypothesis": "ab mittwoch erreichen uns dann von westen die wolken eines atlantiktiefs .",
+  "reference": "die wolken eines tiefs bei schottland erreichen uns morgen von westen her ."
+ },
+ {
+  "id": "01October_2009_Thursday_tagesschau-421",
+  "hypothesis": "im süden weiter ruhiges teilweise freundliches wetter .",
+  "reference": "im süden freundliches wetter ."
+ },
+ {
+  "id": "03February_2010_Wednesday_tagesschau-2064",
+  "hypothesis": "dort morgen bis dreiundzwanzig im nordosten noch siebenundzwanzig grad .",
+  "reference": "dort morgen sieben grad nordöstlich der elbe teilweise nur minus ein grad ."
+ },
+ {
+  "id": "02June_2010_Wednesday_heute-6789",
+  "hypothesis": "ansonsten viele wolken die gebietsweise regen oder schnee bringen .",
+  "reference": "auch in sachsen wird es zum teil kräftig weiter regnen ."
+ },
+ {
+  "id": "12July_2010_Monday_tagesschau-374",
+  "hypothesis": "morgen im osten und süden mehr wolken als sonne und gebietsweise zum teil kräftige schauer oder gewitter .",
+  "reference": "morgen gibt es im osten und südosten bei einer mischung aus sonne und wolken zum teil kräftige schauer oder gewitter ."
+ },
+ {
+  "id": "24November_2009_Tuesday_tagesschau-5688",
+  "hypothesis": "heute nacht vier grad im norden und minus sechs grad an den alpen .",
+  "reference": "heute nacht elf grad im norden und ein grad an den alpen ."
+ },
+ {
+  "id": "26June_2010_Saturday_tagesschau-725",
+  "hypothesis": "sonst weht der wind meist schwach aus unterschiedlichen richtungen .",
+  "reference": "meist weht der wind schwach aus westlichen richtungen ."
+ },
+ {
+  "id": "11July_2009_Saturday_tagesschau-664",
+  "hypothesis": "in der nacht sinken die temperaturen auf sieben bis ein grad .",
+  "reference": "in der nacht sinken die temperaturen auf vierzehn bis sieben grad ."
+ },
+ {
+  "id": "30January_2013_Wednesday_tagesschau-476",
+  "hypothesis": "am samstag regnet oder schneit es verbreitet im nordwesten wird es später freundlicher .",
+  "reference": "auch am samstag regnet oder schneit es verbreitet später wird es im westen und norden freundlicher ."
+ },
+ {
+  "id": "30November_2009_Monday_tagesschau-5750",
+  "hypothesis": "im westen und nordwesten verläuft die nacht meist trocken örtlich bildet sich nebel .",
+  "reference": "im westen und nordwesten weitgehend trocken hier und da wolkenlücken örtlich bildet sich nebel ."
+ },
+ {
+  "id": "11July_2009_Saturday_tagesschau-655",
+  "hypothesis": "und nun die wettervorhersage für morgen dienstag den zwölften august .",
+  "reference": "und nun die wettervorhersage für morgen sonntag den zwölften juli ."
+ },
+ {
+  "id": "09August_2010_Monday_heute-5892",
+  "hypothesis": "heute nacht zehn grad in nordfriesland bis vier grad ganz im südosten .",
+  "reference": "bei uns wird es richtig frisch heute nacht im südosten da sind es zehn elf grad etwa ."
+ },
+ {
+  "id": "12October_2009_Monday_tagesschau-560",
+  "hypothesis": "im westen ist es freundlicher .",
+  "reference": "im westen ist es freundlich ."
+ },
+ {
+  "id": "24May_2011_Tuesday_heute-6062",
+  "hypothesis": "damit wünsche ich ihnen jetzt noch einen schönen abend .",
+  "reference": "und damit schönen guten abend meine damen und herren ."
+ },
+ {
+  "id": "17February_2010_Wednesday_heute-1482",
+  "hypothesis": "an den alpen ist es noch mild .",
+  "reference": "da ist der boden noch gefroren am rhein wie gesagt da entspannt sich die lage bei plusgraden ."
+ },
+ {
+  "id": "17April_2010_Saturday_tagesschau-406",
+  "hypothesis": "am dienstag ist es teilweise dichter bewölkt hier und da fallen regenschauer mitunter sind gewitter dabei .",
+  "reference": "am dienstag ist es teils freundlich teils stärker bewölkt einige regenschauer sind dabei mitunter auch gewitter ."
+ },
+ {
+  "id": "31January_2013_Thursday_tagesschau-2713",
+  "hypothesis": "am tag fünf grad im vogtland und zwölf grad im breisgau .",
+  "reference": "am tag vier grad im sauerland und zwölf grad im breisgau ."
+ },
+ {
+  "id": "01June_2011_Wednesday_tagesschau-6952",
+  "hypothesis": "am tag viel sonne und meist nur lockere wolken .",
+  "reference": "in den übrigen gebieten viel sonne und nur ein paar lockere wolken ."
+ },
+ {
+  "id": "03February_2010_Wednesday_tagesschau-2054",
+  "hypothesis": "nebel sonne und auch ein paar wolken das erwartet uns in den nächsten tagen unter hochdruckeinfluss .",
+  "reference": "deutschland bleibt unter tiefdruckeinfluss und in den nächsten tagen erwartet uns meist trübes wetter mit ein wenig regen oder schnee ."
+ },
+ {
+  "id": "25October_2010_Monday_tagesschau-24",
+  "hypothesis": "am freitag mehr wolken als sonne besonders in der nordhälfte etwas regen .",
+  "reference": "am donnerstag regen in der nordhälfte in der südhälfte mal sonne mal wolken ähnliches wetter dann auch am freitag ."
+ },
+ {
+  "id": "27May_2010_Thursday_tagesschau-8382",
+  "hypothesis": "am montag unbeständiges wetter .",
+  "reference": "am sonntag überall unbeständiges wetter teilweise kräftige regenfälle teilweise auch gewitter ."
+ },
+ {
+  "id": "23August_2010_Monday_heute-5329",
+  "hypothesis": "aber die sonne zeigt sich nicht überall ganz im norden und ganz im süden haben wir chancen .",
+  "reference": "aber am donnerstag kommt die hitze in den süden zurück dafür haben wir kühles schauerwetter im norden ."
+ },
+ {
+  "id": "22September_2010_Wednesday_tagesschau-3258",
+  "hypothesis": "im norden ist es heute nacht meist klar in der mitte und im süden zum teil noch wolkig nur vereinzelt fallen ein paar tropfen oder flocken .",
+  "reference": "in der nacht ist es meist klar oder nur leicht bewölkt besonders in den flussniederungen in der mitte und des südens wabern wieder ein paar nebelfelder ."
+ },
+ {
+  "id": "05June_2010_Saturday_tagesschau-3926",
+  "hypothesis": "in der südosthälfte ist es heute nacht meist noch klar .",
+  "reference": "in der kommenden nacht ist es meist klar ."
+ },
+ {
+  "id": "21May_2010_Friday_tagesschau-5097",
+  "hypothesis": "am montag ändert sich noch wenig an diesem wetter .",
+  "reference": "am sonntag ändert sich noch wenig an diesem wetter ."
+ },
+ {
+  "id": "01December_2011_Thursday_tagesschau-3473",
+  "hypothesis": "der wind weht mäßig oft frisch mit stürmischen böen an den küsten und im bergland teilweise schwere sturmböen .",
+  "reference": "der wind weht mäßig bis frisch mit starken bis stürmischen böen im bergland teilweise schwere sturmböen im südosten mitunter nur schwacher wind ."
+ },
+ {
+  "id": "06October_2012_Saturday_tagesschau-8743",
+  "hypothesis": "im süden kaum regen und zeitweise freundlich .",
+  "reference": "im süden und südwesten gebietsweise regen sonst recht freundlich ."
+ },
+ {
+  "id": "20September_2010_Monday_heute-2930",
+  "hypothesis": "morgen jedenfalls noch nicht heute nacht haben wir dabei noch den kräftigen regen bis zu den alpen .",
+  "reference": "heute nacht noch nicht so ganz da haben wir noch ein bisschen mit regen zu kämpfen an den küsten ."
+ },
+ {
+  "id": "09June_2010_Wednesday_tagesschau-5961",
+  "hypothesis": "der deutsche wetterdienst hat entsprechende warnungen herausgegeben .",
+  "reference": "der deutsche wetterdienst hat entsprechende unwetterwarnungen herausgegeben ."
+ },
+ {
+  "id": "04January_2010_Monday_tagesschau-8551",
+  "hypothesis": "im süden freundlicher .",
+  "reference": "im süden schwacher wind ."
+ },
+ {
+  "id": "24September_2009_Thursday_heute-6082",
+  "hypothesis": "sonst verläuft die nacht klar teilweise aber auch nebel oder hochnebelfelder .",
+  "reference": "sonst aber funkeln oft die sterne oder es bildet sich nebel ."
+ },
+ {
+  "id": "05July_2010_Monday_heute-8689",
+  "hypothesis": "und angenehm warm in mitteleuropa wird es auch temperaturen so um die fünfundzwanzig grad .",
+  "reference": "östlich also über osteuropa noch hochsommerlich warm mit um die fünfundzwanzig grad ."
+ },
+ {
+  "id": "15March_2011_Tuesday_tagesschau-3322",
+  "hypothesis": "dann dehnt sich das hoch über dem atlantik weiter nach osten aus .",
+  "reference": "das hoch über skandinavien verlagert sich ein wenig nach osten ."
+ },
+ {
+  "id": "07April_2010_Wednesday_tagesschau-6024",
+  "hypothesis": "und nun die wettervorhersage für morgen freitag den achten april .",
+  "reference": "und nun die wettervorhersage für morgen donnerstag den achten april ."
+ },
+ {
+  "id": "15May_2010_Saturday_tagesschau-5659",
+  "hypothesis": "heute nacht sieben bis null grad wo es länger aufklart ist leichter frost möglich .",
+  "reference": "heute nacht acht bis zwei grad wo es für längere zeit aufklart ist bodenfrost möglich ."
+ },
+ {
+  "id": "17September_2010_Friday_tagesschau-3413",
+  "hypothesis": "zweigeteiltes wetter das hoch das sich richtung süddeutschland verlagert sorgt dort morgen für freundliches wetter .",
+  "reference": "es sorgt morgen dort für ruhiges freundliches wetter ."
+ },
+ {
+  "id": "24November_2009_Tuesday_tagesschau-5678",
+  "hypothesis": "zwischen dem hoch bei schottland und dem tief über polen strömt wieder kältere luft zu uns .",
+  "reference": "zwischen dem tief bei schottland und dem hoch über südeuropa strömt morgen milde luft zu uns nach deutschland ."
+ },
+ {
+  "id": "03July_2011_Sunday_tagesschau-1665",
+  "hypothesis": "am freundlichsten wird es von westen bis in die mitte .",
+  "reference": "in den übrigen landesteilen wird es meist freundlich dank einer hochdruckzone die von der biskaya bis zu den shetlandinseln reicht ."
+ },
+ {
+  "id": "24July_2011_Sunday_tagesschau-6632",
+  "hypothesis": "ähnliches wetter auch am samstag .",
+  "reference": "ähnliches wetter auch am donnerstag ."
+ },
+ {
+  "id": "11February_2010_Thursday_tagesschau-8761",
+  "hypothesis": "es bleibt durchwachsen aber zumindest wird es dann im laufe der woche ein bisschen milder .",
+  "reference": "im laufe des wochenendes wird es dann immer trockener kalt bleibt es aber ."
+ },
+ {
+  "id": "25August_2009_Tuesday_tagesschau-7086",
+  "hypothesis": "der deutsche wetterdienst hat entsprechende unwetterwarnungen herausgegeben .",
+  "reference": "der deutsche wetterdienst hat entsprechende warnungen herausgegeben ."
+ },
+ {
+  "id": "17February_2011_Thursday_heute-387",
+  "hypothesis": "morgen reichen die temperaturen von minus fünf grad im osten bis plus vier grad im südwesten .",
+  "reference": "temperaturen nur so um die null grad am kältesten im norden bis minus fünf grad ."
+ },
+ {
+  "id": "29July_2010_Thursday_tagesschau-7420",
+  "hypothesis": "sonst überwiegend freundlich und trocken .",
+  "reference": "am samstag meist freundlich und überwiegend trocken ."
+ },
+ {
+  "id": "17July_2009_Friday_tagesschau-5104",
+  "hypothesis": "dahinter folgt kühlerer atlantikluft in der sich das wetter recht wechselhaft gestaltet .",
+  "reference": "in der dahinter einfließenden kaltluft gestaltet sich das wetter morgen wechselhaft ."
+ },
+ {
+  "id": "21November_2010_Sunday_tagesschau-5676",
+  "hypothesis": "auch am samstag schneit es kaum .",
+  "reference": "mittwoch und donnerstag wechselhaft hier und da fällt etwas regen oder schnee der zunehmend auch in den niederungen möglich ist ."
+ },
+ {
+  "id": "01October_2010_Friday_tagesschau-2700",
+  "hypothesis": "heute nacht acht grad in der kölner bucht und null grad in vorpommern .",
+  "reference": "heute nacht zwölf grad in der kölner bucht ein grad in brandenburg ."
+ },
+ {
+  "id": "02August_2010_Monday_heute-1243",
+  "hypothesis": "im norden unter wolken bis neun grad .",
+  "reference": "milder bleibt es unter den regenwolken im osten mit fünfzehn sechzehn grad ."
+ },
+ {
+  "id": "24January_2013_Thursday_heute-7266",
+  "hypothesis": "es bleibt winterlich in den nächsten tagen am wochenende vor allem am samstag noch schnee vielleicht auch mal ein wintergewitter und vor allen dingen nachts wird es dann wieder kalt temperaturen bis minus zehn grad .",
+  "reference": "es bleibt noch mal kalt am samstag knackig bis höchsttemperaturen minus zehn grad ."
+ },
+ {
+  "id": "19February_2010_Friday_tagesschau-4093",
+  "hypothesis": "der wind weht schwach bis mäßig im norden auch frisch mit stürmischen böen an der nordsee und auf den bergen sturmböen .",
+  "reference": "da die luftdruckunterschiede nahe des tiefzentrums groß sind wird es im küstenumfeld morgen teilweise stürmisch ."
+ },
+ {
+  "id": "07December_2010_Tuesday_tagesschau-4155",
+  "hypothesis": "am freitag regnet es in der nordhälfte ab und an .",
+  "reference": "am freitag schneit es im westen und süden ab und an in tiefen lagen im westen auch regen ."
+ },
+ {
+  "id": "25August_2010_Wednesday_heute-6005",
+  "hypothesis": "im süden bleibt es noch sonnig .",
+  "reference": "denn im süden haben wir die schwül warme gewitterluft dabei ist es aber noch im süden sonnig ."
+ },
+ {
+  "id": "06October_2012_Saturday_tagesschau-8742",
+  "hypothesis": "dort wird es auch morgen noch einzelne schauer geben .",
+  "reference": "dort wird es am dienstag windig dazu gibt es einzelne schauer ."
+ },
+ {
+  "id": "05June_2010_Saturday_tagesschau-3932",
+  "hypothesis": "am dienstag richtung osten längere freundliche abschnitte daneben schauer und gewitter .",
+  "reference": "am dienstag vor allem richtung osten längere freundliche abschnitte daneben aber auch schauer und gewitter ."
+ },
+ {
+  "id": "08December_2009_Tuesday_heute-4198",
+  "hypothesis": "liebe zuschauer guten abend .",
+  "reference": "guten abend liebe zuschauer ."
+ },
+ {
+  "id": "25June_2010_Friday_tagesschau-3880",
+  "hypothesis": "richtung osten und süden ist es klar oder nur leicht bewölkt stellenweise bildet sich nebel .",
+  "reference": "ansonsten ist es meist nur locker bewölkt oder klar stellenweise bildet sich nebel ."
+ },
+ {
+  "id": "22February_2010_Monday_tagesschau-3246",
+  "hypothesis": "in der nordhälfte regnet es heute nacht zeitweise in der südhälfte ist es zeitweise klar .",
+  "reference": "im südosten ist es heute nacht trocken sonst regnet es zeitweise in der nordhälfte teilweise kräftig ."
+ },
+ {
+  "id": "28September_2009_Monday_tagesschau-4681",
+  "hypothesis": "die aussichten das winterwetter geht ja schon los .",
+  "reference": "die aussichten ."
+ },
+ {
+  "id": "24August_2009_Monday_heute-6643",
+  "hypothesis": "es gibt ein paar schauer und gewitter .",
+  "reference": "es kommen dann ein paar wolkenfelder ."
+ },
+ {
+  "id": "17February_2010_Wednesday_heute-1478",
+  "hypothesis": "und das wochenende wird auch noch etwas mildere luft .",
+  "reference": "dazu gehört ein tiefdruckgebiet mit milder luft im gepäck ."
+ },
+ {
+  "id": "13September_2010_Monday_tagesschau-4592",
+  "hypothesis": "und nun die wettervorhersage für morgen dienstag den dreizehnten dezember .",
+  "reference": "und nun die wettervorhersage für morgen dienstag den vierzehnten september ."
+ },
+ {
+  "id": "25October_2010_Monday_tagesschau-17",
+  "hypothesis": "in der nacht regnet es im süden und südosten hier und da richtung norden ist es teilweise klar .",
+  "reference": "regen und schnee lassen an den alpen in der nacht nach im norden und nordosten fallen hier und da schauer sonst ist das klar ."
+ },
+ {
+  "id": "16December_2009_Wednesday_tagesschau-5912",
+  "hypothesis": "am tag im süden sonne wolken und nebel sonst viele wolken .",
+  "reference": "auch am tag viele wolken und einzelne flocken ."
+ },
+ {
+  "id": "25August_2010_Wednesday_tagesschau-8508",
+  "hypothesis": "im süden bleibt es unter hochdruckeinfluss noch trocken und teilweise recht freundlich .",
+  "reference": "im süden bleibt es morgen unter hochdruckeinfluss zunächst noch recht freundlich und warm ."
+ },
+ {
+  "id": "11November_2010_Thursday_tagesschau-3564",
+  "hypothesis": "ein tief über mitteleuropa bringt uns heute nacht und morgen schnee und teilweise gefrierenden regen .",
+  "reference": "teilweise kräftiger regen zieht heute nacht über uns ostwärts ."
+ },
+ {
+  "id": "24April_2010_Saturday_tagesschau-3971",
+  "hypothesis": "von südwesten wird es dann etwas freundlicher .",
+  "reference": "dort sowie in ungünstigen muldenlagen ist bodenfrost möglich ."
+ },
+ {
+  "id": "12January_2010_Tuesday_heute-2544",
+  "hypothesis": "im südwesten beginnt es gegen morgen stellenweise zu regnen .",
+  "reference": "und im laufe der nacht oder gegen morgen wahrscheinlich erst wird es dann im südwesten anfangen zu schneien ."
+ },
+ {
+  "id": "13August_2009_Thursday_tagesschau-8492",
+  "hypothesis": "am montag wechselhaft und wieder kühler .",
+  "reference": "die neue woche beginnt noch wechselhaft und etwas kühler ."
+ },
+ {
+  "id": "30March_2010_Tuesday_tagesschau-5699",
+  "hypothesis": "nach mitternacht geht der regen im westen in schauer über .",
+  "reference": "in der westhälfte geht der regen in schauer über in den bergen schneeschauer ."
+ },
+ {
+  "id": "05May_2010_Wednesday_tagesschau-3352",
+  "hypothesis": "morgen bleibt es im nordosten noch trocken sonst scheint meist die sonne .",
+  "reference": "im norden bleibt es morgen erst noch trocken sonst fällt verbreitet teilweise ergiebiger regen ."
+ },
+ {
+  "id": "21January_2011_Friday_tagesschau-4889",
+  "hypothesis": "heute nacht ist es hier und da wolkig meist aber klar und trocken .",
+  "reference": "heute nacht funkeln hier und da die sterne aber meist hält sich hochnebelartige bewölkung ."
+ },
+ {
+  "id": "03February_2010_Wednesday_heute-2361",
+  "hypothesis": "im laufe des nachmittags wird es im südwesten freundlicher .",
+  "reference": "und etwas kälter wird es dann im laufe des sonntags von osten ."
+ },
+ {
+  "id": "08July_2010_Thursday_tagesschau-5388",
+  "hypothesis": "richtung südosten ist es meist sonnig .",
+  "reference": "richtung osten ist es meist sonnig ."
+ },
+ {
+  "id": "09November_2010_Tuesday_heute-5840",
+  "hypothesis": "und jetzt wünsche ich ihnen noch einen schönen abend .",
+  "reference": "jetzt wünsche ich ihnen noch einen schönen abend ."
+ },
+ {
+  "id": "17May_2010_Monday_heute-5577",
+  "hypothesis": "und jetzt wünsche ich ihnen noch einen schönen abend .",
+  "reference": "jetzt wünsche ich ihnen noch einen schönen abend ."
+ },
+ {
+  "id": "04May_2011_Wednesday_heute-3995",
+  "hypothesis": "es sorgt auch morgen für viel sonnenschein .",
+  "reference": "denn auch morgen gibt es also keine schauer mehr stattdessen viel sonnenschein da freuen sich die meisten natürlich drüber ."
+ },
+ {
+  "id": "07February_2011_Monday_heute-4658",
+  "hypothesis": "liebe zuschauer guten abend .",
+  "reference": "guten abend liebe zuschauer ."
+ },
+ {
+  "id": "03June_2010_Thursday_tagesschau-2636",
+  "hypothesis": "am tag fünf grad an der ostsee und bis zu zehn grad am oberrhein .",
+  "reference": "am tag sechzehn grad an der ostsee und bis zu siebenundzwanzig grad am oberrhein ."
+ },
+ {
+  "id": "21November_2011_Monday_heute-5428",
+  "hypothesis": "und bislang der november ist aber noch nicht zu ende waren es nur null komma vier also fast gar nichts .",
+  "reference": "sonst war es vielleicht nur mal sprühregen der aber gar nicht zu buche geschlagen ist ."
+ },
+ {
+  "id": "25August_2010_Wednesday_tagesschau-8516",
+  "hypothesis": "dort morgen bis dreiundzwanzig im nordosten frische sechzehn grad .",
+  "reference": "dort morgen sommerlich heiße dreißig grad im emsland kühle sechzehn grad ."
+ },
+ {
+  "id": "18April_2010_Sunday_tagesschau-6663",
+  "hypothesis": "im übrigen land ist es teilweise freundlich .",
+  "reference": "am donnerstag ist es in der mitte am freundlichsten im norden regen oder graupelschauer im süden regnet es zeitweise ."
+ },
+ {
+  "id": "24March_2011_Thursday_tagesschau-3938",
+  "hypothesis": "am tag viel sonne und meist nur lockere wolken .",
+  "reference": "sonst meist nur lockere wolken ."
+ },
+ {
+  "id": "24November_2009_Tuesday_tagesschau-5686",
+  "hypothesis": "an der nordsee stürmische auf den bergen der südhälfte sind orkanartige böen möglich .",
+  "reference": "auf den bergen sind orkanartige böen möglich ."
+ },
+ {
+  "id": "31March_2010_Wednesday_tagesschau-1008",
+  "hypothesis": "am sonntag mal sonne mal wolken und nur stellenweise schauer .",
+  "reference": "am freitag mal sonne mal wolken und nur einzelne schauer stellenweise zeigt sich die sonne auch für längere zeit ."
+ },
+ {
+  "id": "03February_2010_Wednesday_heute-2360",
+  "hypothesis": "am samstag kühlt es immerhin etwas ab .",
+  "reference": "samstag beruhigt es sich etwas ."
+ },
+ {
+  "id": "20November_2009_Friday_tagesschau-6561",
+  "hypothesis": "im westen ist es wolkiger mit schauern und gewittern .",
+  "reference": "ein schwacher tiefausläufer bringt dem nordwesten deutschlands heute nacht hier und da etwas regen ."
+ },
+ {
+  "id": "01June_2010_Tuesday_tagesschau-5008",
+  "hypothesis": "am sonntag ist es im norden und westen freundlich richtung südosten noch schauer .",
+  "reference": "richtung norden und westen ist es recht freundlich ."
+ },
+ {
+  "id": "18April_2011_Monday_tagesschau-1314",
+  "hypothesis": "und nun die wettervorhersage für morgen dienstag den dreizehnten april .",
+  "reference": "und nun die wettervorhersage für morgen dienstag den neunzehnten april ."
+ },
+ {
+  "id": "29August_2009_Saturday_tagesschau-5020",
+  "hypothesis": "wo es geregnet hat kann sich vereinzelt nebel bilden .",
+  "reference": "in den frühstunden kann sich vereinzelt nebel bilden ."
+ },
+ {
+  "id": "12January_2011_Wednesday_tagesschau-1727",
+  "hypothesis": "es gelten entsprechende unwetterwarnungen des deutschen wetterdienstes .",
+  "reference": "die hochwassergefahr steigt wieder es gelten entsprechende unwetterwarnungen des deutschen wetterdienstes ."
+ },
+ {
+  "id": "28August_2009_Friday_tagesschau-5886",
+  "hypothesis": "am donnerstag ziehen von westen wieder schauer und gewitter mit unwetterpotenzial heran .",
+  "reference": "am dienstag ziehen dann gegen abend von westen wieder zum teil kräftige schauer und gewitter heran ."
+ },
+ {
+  "id": "25June_2010_Friday_tagesschau-3881",
+  "hypothesis": "ansonsten scheint verbreitet die sonne hier und da tauchen auch mal ein paar harmlose wolken auf .",
+  "reference": "morgen scheint verbreitet die sonne hier und da tauchen auch mal ein paar dichtere wolken auf ."
+ },
+ {
+  "id": "28August_2009_Friday_tagesschau-5881",
+  "hypothesis": "dort morgen bis zweiundzwanzig grad im norden frische zwölf bis fünfzehn grad .",
+  "reference": "dort morgen bis zweiundzwanzig grad ."
+ },
+ {
+  "id": "25August_2010_Wednesday_heute-6006",
+  "hypothesis": "besonders in den niederungen bildet sich hier und da nebel .",
+  "reference": "dort kommen erst abends die gewitter an ."
+ },
+ {
+  "id": "30October_2009_Friday_tagesschau-2267",
+  "hypothesis": "und nun die wettervorhersage für morgen samstag den einunddreißigsten juli .",
+  "reference": "und nun die wettervorhersage für morgen samstag den einunddreißigsten oktober ."
+ },
+ {
+  "id": "01September_2010_Wednesday_tagesschau-5039",
+  "hypothesis": "am donnerstag ist es im süden teilweise freundlich nur vereinzelt fallen schauer .",
+  "reference": "morgen überwiegen in der nordosthälfte die wolken und es fallen einzelne schauer ."
+ },
+ {
+  "id": "01November_2010_Monday_tagesschau-137",
+  "hypothesis": "und morgen schwächen sich die regenwolken ab .",
+  "reference": "die halten sich morgen recht zäh ."
+ },
+ {
+  "id": "28October_2009_Wednesday_tagesschau-4543",
+  "hypothesis": "morgen im osten noch werte nahe dem gefrierpunkt .",
+  "reference": "im süden werte nahe dem gefrierpunkt ."
+ },
+ {
+  "id": "28July_2010_Wednesday_tagesschau-864",
+  "hypothesis": "morgen entwickeln sich noch einige schauer im süden und osten zum teil noch kräftige gewitter .",
+  "reference": "morgen muss verbreitet mit teilweise kräftigen schauern und gewittern gerechnet werden ."
+ },
+ {
+  "id": "16May_2010_Sunday_tagesschau-5226",
+  "hypothesis": "das hoch über norwegen bestimmt in den kommenden beiden tagen unser wetter .",
+  "reference": "in den kommenden tagen bestimmt das tief über osteuropa unser wetter die kühle luft bleibt uns zunächst erhalten ."
+ },
+ {
+  "id": "23January_2011_Sunday_tagesschau-7823",
+  "hypothesis": "und nun die wettervorhersage für morgen montag den achtundzwanzigsten januar .",
+  "reference": "und nun die wettervorhersage für morgen montag den vierundzwanzigsten januar zweitausendelf ."
+ },
+ {
+  "id": "24April_2010_Saturday_tagesschau-3967",
+  "hypothesis": "am tag scheint verbreitet die sonne hier und da ein paar quellwolken .",
+  "reference": "am tag scheint verbreitet die sonne im süden und westen bilden sich später gebietsweise quellwolken ."
+ },
+ {
+  "id": "24September_2009_Thursday_heute-6084",
+  "hypothesis": "an der nordfriesischen küste morgen zehn in der lausitz bis siebzehn grad .",
+  "reference": "morgen erwarten uns dann an der küste werte von siebzehn grad ."
+ },
+ {
+  "id": "01April_2010_Thursday_heute-6704",
+  "hypothesis": "die luft die zu uns strömt ist mild .",
+  "reference": "aber erfreuliche nachricht ."
+ },
+ {
+  "id": "06January_2010_Wednesday_tagesschau-7737",
+  "hypothesis": "dabei ist es sehr windig .",
+  "reference": "es bleibt windig ."
+ },
+ {
+  "id": "17July_2009_Friday_tagesschau-5106",
+  "hypothesis": "der deutsche wetterdienst hat entsprechende warnungen herausgegeben .",
+  "reference": "der deutsche wetterdienst hat entsprechende unwetterwarnungen herausgegeben ."
+ },
+ {
+  "id": "11November_2009_Wednesday_tagesschau-8041",
+  "hypothesis": "auch etwas regen ist dort dabei .",
+  "reference": "später ziehen dort auch wolken mit etwas regen auf ."
+ },
+ {
+  "id": "13July_2009_Monday_tagesschau-7509",
+  "hypothesis": "vor allem in der mitte bildet sich teilweise nebel .",
+  "reference": "an der luftmassengrenze kommt es zu teilweise starken und gewittrigen regenfällen ."
+ },
+ {
+  "id": "22September_2010_Wednesday_heute-2625",
+  "hypothesis": "ab samstag kommt dazu neuer schnee und regen .",
+  "reference": "und ab samstag sonntag kühles herbstwetter das gehört jetzt einfach dazu ."
+ },
+ {
+  "id": "04December_2011_Sunday_tagesschau-7791",
+  "hypothesis": "am dienstag weiterhin wechselhaftes wetter mit sonne wolken und regen .",
+  "reference": "sehr windiges wetter am dienstag regen schnee und graupelschauer ."
+ },
+ {
+  "id": "18May_2010_Tuesday_heute-3366",
+  "hypothesis": "morgen breiten sich dann die schauer weiter richtung norden und osten aus auch richtung süden .",
+  "reference": "morgen breiten sich diese regenwolken dann weiter über die mitte richtung westen aber vor allen dingen auch nach baden württemberg und bayern aus ."
+ },
+ {
+  "id": "01October_2010_Friday_tagesschau-2701",
+  "hypothesis": "am tag fünf grad im vogtland und dreizehn grad am oberrhein .",
+  "reference": "am tag elf grad im vogtland und einundzwanzig grad am oberrhein ."
+ },
+ {
+  "id": "22September_2010_Wednesday_heute-2624",
+  "hypothesis": "am freitag wird es im norden und nordwesten deutlich kühler .",
+  "reference": "am freitag geht es aber langsam abwärts im osten gewitterschauer ."
+ },
+ {
+  "id": "28July_2010_Wednesday_tagesschau-872",
+  "hypothesis": "am freitag ziehen von westen wieder heftige schauer und gewitter heran .",
+  "reference": "am sonntag ziehen von nordwesten wieder schauer und gewitter heran ."
+ },
+ {
+  "id": "24November_2009_Tuesday_tagesschau-5679",
+  "hypothesis": "auch in der neuen woche scheint verbreitet die sonne .",
+  "reference": "mancherorts werden damit die höchsten temperaturen der woche erwartet ."
+ },
+ {
+  "id": "23September_2009_Wednesday_tagesschau-7589",
+  "hypothesis": "am freitag in der nordhälfte dichte regenwolken weiter im süden ist es teilweise freundlich .",
+  "reference": "am freitag ist es in der nähe der küsten und ganz im süden teilweise stark bewölkt ."
+ },
+ {
+  "id": "11December_2009_Friday_tagesschau-3504",
+  "hypothesis": "und nun die wettervorhersage für morgen samstag den zehnten dezember .",
+  "reference": "und nun die wettervorhersage für morgen samstag den zwölften dezember ."
+ },
+ {
+  "id": "06February_2010_Saturday_tagesschau-7365",
+  "hypothesis": "der wind weht schwach aus nord bis nordost .",
+  "reference": "der wind weht meist schwach aus ost bis nordost ."
+ },
+ {
+  "id": "24February_2011_Thursday_heute-6666",
+  "hypothesis": "im westen und nordwesten lockert es zunehmend auf .",
+  "reference": "dagegen gab es im westen fünf zentimeter neuschnee und schon stand der verkehr auf den autobahnen ."
+ },
+ {
+  "id": "24July_2011_Sunday_tagesschau-6630",
+  "hypothesis": "am sonntag zeigt sich die sonne häufiger .",
+  "reference": "richtung osten zeigt sich die sonne häufiger ."
+ },
+ {
+  "id": "11September_2009_Friday_tagesschau-8772",
+  "hypothesis": "feuchte kalte luft strömt zu uns nach deutschland .",
+  "reference": "relativ kühle luft strömt zu uns nach deutschland ."
+ },
+ {
+  "id": "03September_2010_Friday_tagesschau-8428",
+  "hypothesis": "am samstag im südosten und nordwesten hier und da schauer sonst ist es freundlich .",
+  "reference": "am tag ist es im westen freundlich sonst sonne und dichtere wolken im wechsel hier und da fallen einzelne schauer ."
+ },
+ {
+  "id": "24August_2009_Monday_heute-6648",
+  "hypothesis": "am mittwoch wird es zumindest im osten etwas freundlicher .",
+  "reference": "und am mittwoch dann noch reste dieser schauer und gewitter über dem osten und über dem süden ."
+ },
+ {
+  "id": "07October_2012_Sunday_tagesschau-3033",
+  "hypothesis": "morgen schwacher bis mäßiger im norden frischer wind aus west bis südwest an der see stürmische böen .",
+  "reference": "morgen schwacher bis mäßiger an der see frischer wind aus südwest bis west ."
+ },
+ {
+  "id": "24September_2009_Thursday_heute-6091",
+  "hypothesis": "und das war es für heute schönen abend noch .",
+  "reference": "das war es für heute schönen abend noch ."
+ },
+ {
+  "id": "13August_2009_Thursday_tagesschau-8491",
+  "hypothesis": "am montag kühler und wechselhaft mit schauern und gewittern die örtlich kräftig sein können .",
+  "reference": "am sonntag wird es wieder unbeständiger mit einzelnen schauern und gewittern die örtlich heftig sein können ."
+ },
+ {
+  "id": "01October_2012_Monday_tagesschau-5370",
+  "hypothesis": "im nordwesten unter wolken heute nacht bis zehn im südosten örtlich nur zwei grad .",
+  "reference": "in den mittelgebirgen heute nacht örtlich vier im nordwesten unter wolken bis zwölf grad ."
+ },
+ {
+  "id": "07April_2011_Thursday_tagesschau-8101",
+  "hypothesis": "am montag mehr sonne als wolken und nur vereinzelt ein paar schauer .",
+  "reference": "mehr wolken als sonne gibt es im norden und osten tropfen fallen nur vereinzelt ."
+ },
+ {
+  "id": "11August_2009_Tuesday_tagesschau-4355",
+  "hypothesis": "am mittwoch vor allem im norden und in der mitte viele wolken und etwas regen sonst viel sonne .",
+  "reference": "ansonsten viele wolken die erst im norden später auch in der mitte mancherorts regenschauer und vereinzelte gewitter bringen ."
+ },
+ {
+  "id": "06November_2010_Saturday_tagesschau-1162",
+  "hypothesis": "schwacher bis mäßiger wind der in der südhälfte aus nordost bis ost sonst aus unterschiedlichen richtungen kommt .",
+  "reference": "schwacher bis mäßiger auf den bergen in böen auch starker wind in der nordhälfte aus ost bis nordost sonst aus unterschiedlichen richtungen ."
+ },
+ {
+  "id": "24January_2010_Sunday_tagesschau-8703",
+  "hypothesis": "und nun die wettervorhersage für morgen freitag den fünfundzwanzigsten januar .",
+  "reference": "und nun die wettervorhersage für morgen montag den fünfundzwanzigsten januar ."
+ },
+ {
+  "id": "26July_2010_Monday_tagesschau-6268",
+  "hypothesis": "morgen sind die temperaturen wieder ganz angenehm .",
+  "reference": "sommerliche temperaturen sind dabei eher die ausnahme ."
+ },
+ {
+  "id": "18December_2010_Saturday_tagesschau-6125",
+  "hypothesis": "stellenweise auch regen der weiterhin gefrieren kann .",
+  "reference": "im süden fällt auch stellenweise regen der gefrieren kann ."
+ },
+ {
+  "id": "05May_2010_Wednesday_tagesschau-3348",
+  "hypothesis": "in der nacht kommt von westen regen auf .",
+  "reference": "das kräftige mittelmeertief dehnt seinen einfluss weiter nach norden aus und sorgt morgen in fast ganz deutschland für einen wolkenverhangenen himmel ."
+ },
+ {
+  "id": "03February_2010_Wednesday_tagesschau-2061",
+  "hypothesis": "im nordosten auch am tag viele wolken und einzelne schauer .",
+  "reference": "örtlich ist gefrierender regen dabei richtung nordosten auch schnee ."
+ },
+ {
+  "id": "16June_2010_Wednesday_tagesschau-8149",
+  "hypothesis": "der regen in der nordhälfte zieht im laufe der nacht weiter richtung osten sonst gibt es nur selten schauer .",
+  "reference": "der regen zieht im laufe der nacht richtung main ."
+ },
+ {
+  "id": "08October_2009_Thursday_tagesschau-5357",
+  "hypothesis": "ein tief über dem nordmeer lenkt etwas kühlere luft nach deutschland .",
+  "reference": "am samstag überquert uns ein regengebiet von west nach ost ."
+ },
+ {
+  "id": "05January_2010_Tuesday_tagesschau-2668",
+  "hypothesis": "in der nacht kann es vor allem in den westlichen mittelgebirgen sowie ganz im norden noch etwas schneien .",
+  "reference": "vor allem in richtung küste sowie im südwesten kann es in der nacht etwas schneien ."
+ },
+ {
+  "id": "10August_2009_Monday_heute-6903",
+  "hypothesis": "am tag neunzehn grad im sauerland bis siebenundzwanzig grad in der lausitz .",
+  "reference": "im süden oder in der mitte auch bis siebenundzwanzig grad ."
+ },
+ {
+  "id": "10December_2009_Thursday_heute-7945",
+  "hypothesis": "im nordwesten windig .",
+  "reference": "teilweise im nordwesten ein bisschen schneeregen ."
+ },
+ {
+  "id": "14July_2009_Tuesday_tagesschau-2433",
+  "hypothesis": "im bergland schnee .",
+  "reference": "besonders im südlichen bergland einzelne wärmegewitter ."
+ },
+ {
+  "id": "20October_2010_Wednesday_tagesschau-8214",
+  "hypothesis": "am freitag im süden und osten viele wolken die gebietsweise regen im bergland auch schnee bringen .",
+  "reference": "in der südwesthälfte morgen teils wolken teils längere zeit sonnenschein ."
+ },
+ {
+  "id": "29March_2011_Tuesday_tagesschau-8108",
+  "hypothesis": "und nun die wettervorhersage für morgen mittwoch den dreißigsten juni .",
+  "reference": "und nun die wettervorhersage für morgen mittwoch den dreißigsten märz ."
+ },
+ {
+  "id": "20June_2011_Monday_heute-6516",
+  "hypothesis": "das wird sie auch in den nächsten tagen tun dabei ist es dann natürlich kälter .",
+  "reference": "mal ist es etwas wärmer mal etwas kälter und an dieser wetterverteilung wird sich auch in den nächsten tagen wenig ändern ."
+ },
+ {
+  "id": "26October_2009_Monday_tagesschau-1394",
+  "hypothesis": "vor allem in der südhälfte ist es heute nacht meist klar richtung alpen regnet es vereinzelt .",
+  "reference": "heute nacht ist es meist stark bewölkt örtlich regnet oder nieselt es etwas ."
+ },
+ {
+  "id": "24November_2009_Tuesday_tagesschau-5685",
+  "hypothesis": "an der nordsee etwas sonne .",
+  "reference": "an der nordsee schwere sturmböen ."
+ },
+ {
+  "id": "24November_2009_Tuesday_tagesschau-5680",
+  "hypothesis": "dabei ist es recht mild .",
+  "reference": "danach wird es nur etwas kühler ."
+ },
+ {
+  "id": "13July_2009_Monday_tagesschau-7510",
+  "hypothesis": "zwischen dem tief über dem baltikum .",
+  "reference": "und die breiten sich heute nacht von rheinland pfalz und baden württemberg bis nach thüringen aus ."
+ },
+ {
+  "id": "11September_2009_Friday_tagesschau-8771",
+  "hypothesis": "und nun die wettervorhersage für morgen sonntag den zwölften september .",
+  "reference": "und nun die wettervorhersage für morgen samstag den zwölften september ."
+ },
+ {
+  "id": "14March_2011_Monday_tagesschau-7600",
+  "hypothesis": "ansonsten wird es morgen dank hochdruckeinfluss überwiegend freundlich .",
+  "reference": "ansonsten wird es überwiegend freundlich ."
+ },
+ {
+  "id": "08November_2010_Monday_heute-6875",
+  "hypothesis": "kalte luft bestimmt das wetter in deutschland .",
+  "reference": "das wetter in europa hat viel zu bieten ."
+ },
+ {
+  "id": "21October_2011_Friday_tagesschau-4104",
+  "hypothesis": "es schneit teilweise in den zentralen mittelgebirgen später auch auf den bergen im süden .",
+  "reference": "in den niederungen ist es teilweise länger neblig wenige kilometer daneben sonne auf den bergen ist es durchweg sonnig ."
+ },
+ {
+  "id": "03February_2010_Wednesday_heute-2362",
+  "hypothesis": "ihnen einen schönen abend und machen sie es gut .",
+  "reference": "ich wünsche ihnen einen schönen abend und machen sie es gut ."
+ },
+ {
+  "id": "24March_2011_Thursday_tagesschau-3937",
+  "hypothesis": "in der nacht regnet es im norden hier und da auch in der mitte werden die wolken dichter es regnet aber nur ganz vereinzelt .",
+  "reference": "in der nacht werden die wolken im norden und nordosten dichter erste tropfen können an der ostsee fallen ."
+ },
+ {
+  "id": "04May_2010_Tuesday_heute-460",
+  "hypothesis": "in norddeutschland wird es klar und dann auch richtig kalt da sinken die temperaturen in der lüneburger heide bis minus vier grad .",
+  "reference": "der donnerstag wird dann richtig krass da erwarten wir unwetter in deutschland und große temperaturunterschiede sechs bis zwanzig grad ."
+ },
+ {
+  "id": "11April_2010_Sunday_tagesschau-8632",
+  "hypothesis": "und nun die wettervorhersage für morgen montag den elften april .",
+  "reference": "und nun die wettervorhersage für morgen montag den zwölften april ."
+ },
+ {
+  "id": "31March_2010_Wednesday_tagesschau-999",
+  "hypothesis": "und nun die wettervorhersage für morgen donnerstag den vierzehnten april .",
+  "reference": "und nun die wettervorhersage für morgen donnerstag den ersten april ."
+ },
+ {
+  "id": "24September_2009_Thursday_heute-6081",
+  "hypothesis": "etwas regen fällt nur noch im norden .",
+  "reference": "in dieser nacht fällt noch etwas regen im bayerischen wald ."
+ },
+ {
+  "id": "08December_2009_Tuesday_tagesschau-1938",
+  "hypothesis": "am freitag im südosten und nordwesten noch zeitweise regen und am samstag rieselt im bergland auch etwas schnee .",
+  "reference": "zunächst regnet es richtung südosten noch etwas im bergland auch schnee am nachmittag regnet es im westen und nordwesten ."
+ },
+ {
+  "id": "28March_2011_Monday_tagesschau-2286",
+  "hypothesis": "vor allem im osten bildet sich hier und da nebel .",
+  "reference": "vor allem im nordwesten sowie in bayern bildet sich nebel ."
+ },
+ {
+  "id": "05May_2010_Wednesday_tagesschau-3360",
+  "hypothesis": "am wochenende erwartet uns dann viel sonnenschein und weitgehend trocken .",
+  "reference": "am wochenende wird es dann etwas wärmer das ganze bei wechselhaftem wetter mit schauern gewittern und gelegentlichem sonnenschein ."
+ },
+ {
+  "id": "14July_2009_Tuesday_tagesschau-2430",
+  "hypothesis": "heute nacht sieben bis ein grad am niederrhein bis dreizehn grad .",
+  "reference": "heute nacht schwül warme dreizehn bis achtzehn grad ."
+ },
+ {
+  "id": "24May_2010_Monday_tagesschau-3139",
+  "hypothesis": "und nun die wettervorhersage für morgen dienstag den vierundzwanzigsten mai .",
+  "reference": "und nun die wettervorhersage für morgen dienstag den fünfundzwanzigsten mai ."
+ },
+ {
+  "id": "13November_2009_Friday_tagesschau-8607",
+  "hypothesis": "später lockert es im süden und südosten teilweise auf örtlich bildet sich nebel .",
+  "reference": "im weiteren verlauf breitet sich der regen richtung osten aus dann wird es im westen freundlicher ."
+ },
+ {
+  "id": "22July_2009_Wednesday_tagesschau-2873",
+  "hypothesis": "vor allem in der südosthälfte muss dann mit schauern und gewittern gerechnet werden die mitunter kräftig ausfallen können .",
+  "reference": "in der nacht muss vor allem in der nordwesthälfte mit schauern und gewittern gerechnet werden die heftig ausfallen können ."
+ },
+ {
+  "id": "17July_2009_Friday_tagesschau-5105",
+  "hypothesis": "deshalb gibt es heute nacht in der osthälfte und im süden teilweise länger anhaltenden regen .",
+  "reference": "in der osthälfte und im süden gibt es heute nacht kräftige regenfälle und zum teil heftige gewitter ."
+ },
+ {
+  "id": "21August_2010_Saturday_tagesschau-8822",
+  "hypothesis": "heute nacht zwölf grad im südosten und sechs grad im sauerland .",
+  "reference": "heute nacht neunzehn bis fünfzehn grad im südosten bis zwölf grad ."
+ },
+ {
+  "id": "28October_2009_Wednesday_tagesschau-4537",
+  "hypothesis": "im norden gibt es heute nacht noch viele wolken die gebietsweise regen bringen .",
+  "reference": "heute nacht gibt es im norden und nordosten viele wolken örtlich regnet oder nieselt es etwas ."
+ },
+ {
+  "id": "12December_2011_Monday_heute-5800",
+  "hypothesis": "morgen fällt dann vor allem in der osthälfte zum teil noch kräftiger .",
+  "reference": "der sternenklare himmel im westen der täuscht denn morgen wird es wieder regnen ."
+ },
+ {
+  "id": "16December_2009_Wednesday_tagesschau-5914",
+  "hypothesis": "im nordwesten viel sonne aber auch im nordwesten .",
+  "reference": "in der mitte lockert es auch mal auf ."
+ },
+ {
+  "id": "30October_2009_Friday_tagesschau-2274",
+  "hypothesis": "auch sonst gibt es viele wolken aber es bleibt weitgehend trocken .",
+  "reference": "richtung westen gibt es im tagesverlauf vermehrt wolken es bleibt aber weitgehend trocken ."
+ },
+ {
+  "id": "08July_2011_Friday_tagesschau-6729",
+  "hypothesis": "in der mitte regnet es heute nacht gebietsweise im süden bildet sich hier und da nebel .",
+  "reference": "für teile südbayerns gelten warnungen des deutschen wetterdienstes da in der nacht dort wie auch im süden sich hier und da gewitter entladen ."
+ },
+ {
+  "id": "28August_2009_Friday_tagesschau-5883",
+  "hypothesis": "am dienstag vor allem im süden und osten noch einzelne schauer .",
+  "reference": "am sonntag im norden noch wolkig und vor allem in küstennähe einzelne schauer ."
+ },
+ {
+  "id": "06May_2011_Friday_tagesschau-6434",
+  "hypothesis": "der wind weht schwach bis mäßig an der nordsee auch frisch .",
+  "reference": "der wind weht schwach bis mäßig am meer auch frisch ."
+ },
+ {
+  "id": "04April_2010_Sunday_tagesschau-4574",
+  "hypothesis": "am dienstag ist es im süden teilweise freundlich sonst mehr wolken als sonne .",
+  "reference": "am dienstag ist es meist freundlich im nordosten halten sich dichtere wolken mit etwas regen ."
+ },
+ {
+  "id": "04May_2011_Wednesday_heute-3991",
+  "hypothesis": "bis zu dreiundzwanzig grad am oberrhein .",
+  "reference": "allerdings sie sehen die regenwolken die erreichen mitteleuropa nicht ."
+ },
+ {
+  "id": "17January_2011_Monday_tagesschau-7005",
+  "hypothesis": "im norden fällt heute nacht verbreitet regen im süden gibt es nur wenige wolken sodass sich mond und sterne auch längere zeit blicken lassen .",
+  "reference": "auch im süden gibt es eine menge wolken oder nebel aber regen fällt dort nur selten ."
+ },
+ {
+  "id": "04October_2010_Monday_tagesschau-4722",
+  "hypothesis": "am oberrhein heute nacht bis vierzehn im nordosten örtlich nur sieben grad .",
+  "reference": "am niederrhein heute nacht vierzehn im osten örtlich nur sechs grad ."
+ },
+ {
+  "id": "13October_2009_Tuesday_tagesschau-1659",
+  "hypothesis": "sonst regnet es hier und da etwas .",
+  "reference": "sonst regnet es zeitweise ."
+ },
+ {
+  "id": "07April_2010_Wednesday_heute-1626",
+  "hypothesis": "heute nacht wird es allerdings noch regnen und zwar in der mitte und im norden deutschlands .",
+  "reference": "und morgen wird es dann in der südosthälfte nochmal ähnlich werden wie heute allerdings im nordwesten bereits dichtere wolken ."
+ },
+ {
+  "id": "07October_2010_Thursday_tagesschau-4122",
+  "hypothesis": "im osten und süden fällt heute nacht regen im bergland auch schnee .",
+  "reference": "besonders in der südhälfte gibt es nebel oder hochnebel der sich morgen wieder teilweise zäh halten kann ."
+ },
+ {
+  "id": "03February_2010_Wednesday_tagesschau-2056",
+  "hypothesis": "im südosten gibt es heute nacht noch einzelne schauer .",
+  "reference": "heute nacht gibt es an der oder noch einzelne schneeschauer ."
+ },
+ {
+  "id": "03June_2010_Thursday_tagesschau-2628",
+  "hypothesis": "morgen bestimmt das tief über der nordsee unser wetter .",
+  "reference": "das hoch über der nordsee bestimmt morgen im ganzen land das wetter ."
+ },
+ {
+  "id": "20June_2011_Monday_heute-6511",
+  "hypothesis": "und damit schönen guten abend meine damen und herren .",
+  "reference": "und damit schönen guten abend ."
+ },
+ {
+  "id": "24November_2009_Tuesday_tagesschau-5690",
+  "hypothesis": "am tag vor allem in der osthälfte hier und da schauer .",
+  "reference": "am donnerstag vor allem in der nordwesthälfte hier und da sturmböen ."
+ },
+ {
+  "id": "06October_2011_Thursday_tagesschau-825",
+  "hypothesis": "im süden schwacher im norden mäßiger bis frischer wind mit starken bis stürmischen böen an der see und auf den bergen sind sturmböen möglich .",
+  "reference": "frischer wind mit starken bis stürmischen böen bei schauern an der nordsee und auf den bergen teilweise sturmböen ."
+ },
+ {
+  "id": "06August_2010_Friday_tagesschau-2178",
+  "hypothesis": "am nachmittag können im westen und nordwesten ein paar wolken auftauchen .",
+  "reference": "sonst viel sonne ein paar lockere wolken im nordwesten fallen am nachmittag einzelne schauer ."
+ },
+ {
+  "id": "05May_2011_Thursday_heute-3747",
+  "hypothesis": "dazu weht ein schwacher bis mäßiger südwind .",
+  "reference": "dazu weht nur ein leichter südwind ."
+ },
+ {
+  "id": "30April_2010_Friday_tagesschau-2025",
+  "hypothesis": "am tag zwanzig grad an der nordsee und siebenundzwanzig grad in niederbayern .",
+  "reference": "am tag zehn grad an der nordfriesischen küste zwanzig grad in niederbayern ."
+ },
+ {
+  "id": "03February_2010_Wednesday_heute-2354",
+  "hypothesis": "im südwesten zum teil freundlich .",
+  "reference": "darunter zum teil schneeregen ."
+ },
+ {
+  "id": "27August_2009_Thursday_tagesschau-3269",
+  "hypothesis": "morgen im nordosten neben sonne auch wolken .",
+  "reference": "seine kaltfront erreicht morgen auch deutschland inklusive wolken ."
+ },
+ {
+  "id": "14October_2010_Thursday_tagesschau-287",
+  "hypothesis": "und nun die wettervorhersage für morgen freitag den sechzehnten oktober .",
+  "reference": "und nun die wettervorhersage für morgen freitag den fünfzehnten oktober ."
+ },
+ {
+  "id": "24October_2010_Sunday_tagesschau-2908",
+  "hypothesis": "am dienstag im nordwesten etwas schnee sonst teils sonne teils wolken oder nebel dabei ist es trocken .",
+  "reference": "im osten und süden am dienstag einzelne schauer dabei bis in mittlere lagen schnee sonst teils nebel teils wolken oder sonne ."
+ },
+ {
+  "id": "24October_2009_Saturday_tagesschau-4286",
+  "hypothesis": "der wind weht schwach bis mäßig aus unterschiedlichen richtungen .",
+  "reference": "der wind aus süd bis west weht schwach bis mäßig ."
+ },
+ {
+  "id": "04January_2010_Monday_tagesschau-8550",
+  "hypothesis": "im süden weht der wind schwach richtung norden mäßig an den küsten weht er frisch .",
+  "reference": "im norden mäßiger wind an den küsten weht er teilweise frisch ."
+ },
+ {
+  "id": "29November_2009_Sunday_tagesschau-7045",
+  "hypothesis": "sonst ist es meist trocken und vor allem im nordosten sonnig .",
+  "reference": "im äußersten südosten sowie zwischen nordsee und mosel ist es meist trocken ."
+ },
+ {
+  "id": "24July_2010_Saturday_tagesschau-6343",
+  "hypothesis": "im südosten bleibt es auch trocken .",
+  "reference": "am dienstag in der südhälfte weitere schauer vereinzelt auch gewitter in der nordhälfte freundliche abschnitte ."
+ },
+ {
+  "id": "07October_2010_Thursday_heute-8568",
+  "hypothesis": "im norden und westen sind die temperaturen noch ein bisschen verhalten da sind es siebzehn bis dreiundzwanzig grad .",
+  "reference": "also die temperaturen im westen wieder zwischen etwa achtzehn und dreiundzwanzig grad im osten sind es aber nur noch zwölf bis siebzehn grad ."
+ },
+ {
+  "id": "28January_2013_Monday_tagesschau-3624",
+  "hypothesis": "in der nacht im süden sturmböen auf den bergen orkanböen .",
+  "reference": "der wind lebt bereits in der nacht auf im norden sturmböen sonst einzelne stürmische böen auf den bergen können orkanböen auftreten ."
+ },
+ {
+  "id": "01April_2011_Friday_tagesschau-3387",
+  "hypothesis": "am sonntag wechselhaft und deutlich kühler .",
+  "reference": "am montag überall wechselhaft und deutlich kühler ."
+ },
+ {
+  "id": "12December_2011_Monday_heute-5805",
+  "hypothesis": "auf den bergen fällt weiterhin schnee .",
+  "reference": "in den bergen anfangs ist auch schnee dabei ."
+ },
+ {
+  "id": "07April_2010_Wednesday_heute-1630",
+  "hypothesis": "in den nächsten tagen wird es wenigstens ein bisschen milder und die sonne scheint vor allen dingen im süden und in der mitte .",
+  "reference": "in den nächsten tagen wird das dann nicht mehr der fall sein dann wird es insgesamt ein bisschen kühler vor allen dingen zum wochenende hin ."
+ },
+ {
+  "id": "21May_2010_Friday_tagesschau-5096",
+  "hypothesis": "morgen temperaturen von einundzwanzig grad an der nordsee bis dreißig am oberrhein .",
+  "reference": "morgen temperaturen von fünfzehn grad an der nordsee bis vierundzwanzig am rhein ."
+ },
+ {
+  "id": "14August_2009_Friday_tagesschau-62",
+  "hypothesis": "deutschland liegt in der neuen woche unter hochdruckeinfluss .",
+  "reference": "deutschland liegt morgen unter hochdruckeinfluss der die wolken weitgehend vertreibt ."
+ },
+ {
+  "id": "05May_2010_Wednesday_tagesschau-3359",
+  "hypothesis": "am freitag regenschauer vor allem im norden sturm .",
+  "reference": "am tag vor allem im norden regen ."
+ },
+ {
+  "id": "13April_2010_Tuesday_tagesschau-2314",
+  "hypothesis": "am tag acht grad an der ostsee und siebzehn grad am rhein .",
+  "reference": "am tag sieben grad an der ostsee und fünfzehn grad am rhein ."
+ },
+ {
+  "id": "23October_2010_Saturday_tagesschau-896",
+  "hypothesis": "im nordwesten unter wolken heute nacht bis zehn im südosten örtlich nur zwei grad .",
+  "reference": "unter wolken heute nacht frostfreie zwei bis acht grad ."
+ },
+ {
+  "id": "10December_2009_Thursday_heute-7943",
+  "hypothesis": "die sonne kann sich vor allem im osten und süden gebietsweise zeigen .",
+  "reference": "und vor allem im nordwesten kann die sonne rauskommen bei einem frischen nord bis nordostwind ."
+ },
+ {
+  "id": "13July_2011_Wednesday_tagesschau-7978",
+  "hypothesis": "im osten deutschlands sorgt tiefer luftdruck noch für wolken und regen .",
+  "reference": "tiefer luftdruck sorgt für regenfälle die teilweise lang anhaltend und ergiebig sind ."
+ },
+ {
+  "id": "13July_2009_Monday_tagesschau-7507",
+  "hypothesis": "deutschland liegt weiterhin zwischen einem mittelmeerhoch und einem tief über england .",
+  "reference": "deutschland liegt zwischen einem tief bei irland und einem mittelmeerhoch ."
+ },
+ {
+  "id": "09June_2010_Wednesday_tagesschau-5960",
+  "hypothesis": "feucht warme mittelmeerluft die dann von der sonne noch aufgeheizt wird sorgt für zum teil heftige schauer und gewitter .",
+  "reference": "zusammen mit der schwül heißen luft sorgt es für zum teil heftige gewitter ."
+ },
+ {
+  "id": "20February_2010_Saturday_tagesschau-7899",
+  "hypothesis": "heute nacht achtzehn grad an der see und sieben grad im südwesten .",
+  "reference": "nordöstlich der elbe morgen örtlich minus ein am oberrhein bis plus acht grad ."
+ },
+ {
+  "id": "31January_2011_Monday_tagesschau-668",
+  "hypothesis": "und nun die wettervorhersage für morgen dienstag den achten februar .",
+  "reference": "und nun die wettervorhersage für morgen dienstag den ersten februar ."
+ },
+ {
+  "id": "20November_2009_Friday_tagesschau-6574",
+  "hypothesis": "dabei ist es recht mild .",
+  "reference": "dabei wird es teilweise sehr windig und auch etwas kühler ."
+ },
+ {
+  "id": "23October_2010_Saturday_tagesschau-895",
+  "hypothesis": "im süden weht der wind schwach bis mäßig .",
+  "reference": "an der nordsee sowie auf den bergen schwere sturmböen ."
+ },
+ {
+  "id": "09June_2010_Wednesday_heute-8259",
+  "hypothesis": "und dann kommt auch der regen auf .",
+  "reference": "die nächte werden auch im moment jetzt sehr warm sein ."
+ },
+ {
+  "id": "15December_2010_Wednesday_tagesschau-37",
+  "hypothesis": "ein sturmtief über dänemark bringt dem norden deutschlands heute nacht heftige turbulenzen und zum teil auch kräftigen regen .",
+  "reference": "vom nordmeer zieht ein kräftiges tief heran und bringt uns ab den morgenstunden heftige schneefälle zum teil auch gefrierenden regen ."
+ },
+ {
+  "id": "15March_2011_Tuesday_tagesschau-3326",
+  "hypothesis": "aber die gewitter lassen dann im laufe der nacht nach .",
+  "reference": "aber im laufe der nacht wird es zunehmend wolkiger ."
+ },
+ {
+  "id": "10March_2011_Thursday_heute-58",
+  "hypothesis": "die temperaturen ändern sich nicht siebzehn bis einundzwanzig grad sind es hier im westen siebzehn bis neunzehn im süden .",
+  "reference": "sonnig geht es auch ins wochenende samstag ein herrlicher tag mit temperaturen bis siebzehn grad hier im westen ."
+ },
+ {
+  "id": "22September_2010_Wednesday_heute-2626",
+  "hypothesis": "jetzt wünsche ich ihnen noch einen schönen abend .",
+  "reference": "ich wünsche noch einen schönen abend und tschüss ."
+ },
+ {
+  "id": "24September_2009_Thursday_heute-6079",
+  "hypothesis": "und dazu kommt jetzt auf diesem etwas ungewöhnlichen weg auch deutlich mildere luft .",
+  "reference": "und wir nehmen auch kontakt auf zu diesem hoch ."
+ },
+ {
+  "id": "25February_2010_Thursday_tagesschau-1761",
+  "hypothesis": "am tag nur drei grad auf rügen und bis siebzehn grad im breisgau .",
+  "reference": "am tag drei grad auf usedom bis zwölf grad im emsland ."
+ },
+ {
+  "id": "07September_2010_Tuesday_tagesschau-1954",
+  "hypothesis": "schwacher im norden mäßiger an den küsten frischer wind mit starken bis stürmischen böen .",
+  "reference": "schwacher bis mäßiger im norden zum teil frischer südost bis ostwind der im südwesten später auf südwest dreht an den küsten bläst er stark mit stürmischen böen ."
+ },
+ {
+  "id": "04December_2009_Friday_tagesschau-844",
+  "hypothesis": "allerdings wird es dabei ab sonntag wieder milder .",
+  "reference": "ab sonntag wird es wieder milder dabei gibt es viele wolken zeitweise fällt regen im nordwesten windig ."
+ },
+ {
+  "id": "08February_2010_Monday_heute-1497",
+  "hypothesis": "am samstag dann wetterberuhigung es bleibt meist trüb .",
+  "reference": "es bleibt meist trüb wie auf diesem bild hier ."
+ },
+ {
+  "id": "09August_2010_Monday_heute-5890",
+  "hypothesis": "am samstag erreicht die hitze mit werten um sechsunddreißig grad ihren höhepunkt .",
+  "reference": "ganz anders die trockene hitze über russland mit fünfunddreißig bis vierzig grad ."
+ },
+ {
+  "id": "26September_2009_Saturday_tagesschau-2340",
+  "hypothesis": "an den küsten und ganz im süden ist es auch mal wolkig .",
+  "reference": "ganz im süden kann es einzelne schauer geben an den küsten ziehen gelegentlich wolken durch ."
+ },
+ {
+  "id": "08January_2010_Friday_tagesschau-3981",
+  "hypothesis": "im süden schwacher im norden mäßiger bis frischer wind mit starken bis stürmischen böen an der see und auf den bergen sind sturmböen möglich .",
+  "reference": "im süden mäßiger wind nach norden weht er frisch bis stark mit einzelnen sturmböen an der ostsee und auf den bergen sind orkanartige böen möglich ."
+ },
+ {
+  "id": "18February_2010_Thursday_tagesschau-4531",
+  "hypothesis": "ab und zu zeigt sich auch mal die sonne .",
+  "reference": "ab und zu kann sich die sonne zeigen ."
+ },
+ {
+  "id": "12August_2010_Thursday_tagesschau-4403",
+  "hypothesis": "quer über deutschland liegt morgen eine luftmassengrenze .",
+  "reference": "quer über deutschland liegt eine luftmassengrenze die kühlere meeresluft von heißer luft aus dem südosten trennt ."
+ },
+ {
+  "id": "30December_2010_Thursday_tagesschau-2232",
+  "hypothesis": "am tag regnet oder nieselt es in der südosthälfte etwas .",
+  "reference": "am tag in der nordhälfte etwas regen schnee oder gefrierender regen ."
+ },
+ {
+  "id": "28September_2010_Tuesday_heute-8343",
+  "hypothesis": "guten abend liebe zuschauer .",
+  "reference": "hallo und guten abend ."
+ },
+ {
+  "id": "13December_2010_Monday_tagesschau-6944",
+  "hypothesis": "am montag beruhigt sich das wetter dann wieder .",
+  "reference": "am freitag beruhigt sich das wetter wieder ."
+ },
+ {
+  "id": "04October_2010_Monday_heute-5953",
+  "hypothesis": "im norden und westen sind die temperaturen noch ein bisschen verhalten da sind es siebzehn bis dreiundzwanzig grad .",
+  "reference": "die temperaturen sind außer jetzt im regen wo es ein bisschen kühler bleibt doch ganz erfreulich ."
+ },
+ {
+  "id": "19March_2011_Saturday_tagesschau-4686",
+  "hypothesis": "das hoch über dem östlichen mitteleuropa sorgt auch in den kommenden tagen für reichlich viel sonnenschein .",
+  "reference": "über deutschland etabliert sich ein kräftiges hoch das uns in den nächsten tagen reichlich sonnenschein beschert ."
+ },
+ {
+  "id": "28October_2009_Wednesday_tagesschau-4539",
+  "hypothesis": "montag und dienstag gibt es teils wolken teils sonne vor allem im süden auch nebel und hochnebelfelder .",
+  "reference": "morgen gibt es zum teil dichte wolken oder nebel aber auch sonne vor allem im süden ."
+ },
+ {
+  "id": "15July_2010_Thursday_tagesschau-4056",
+  "hypothesis": "im osten und süden heute nacht noch regen im bergland auch schnee .",
+  "reference": "im osten und südosten sind zu beginn der nacht einzelne gewittrige schauer möglich ."
+ },
+ {
+  "id": "25November_2011_Friday_tagesschau-4399",
+  "hypothesis": "die aussichten am sonntag im süden viele wolken und gebietsweise regen sonst kommt häufig die sonne zum vorschein .",
+  "reference": "am sonntag im süden nach nebelauflösung häufig sonnig sonst viele wolken und stellenweise etwas regen ."
+ },
+ {
+  "id": "11September_2009_Friday_tagesschau-8781",
+  "hypothesis": "der wind weht schwach bis mäßig aus west bis nordwest .",
+  "reference": "der wind weht schwach bis mäßig an der nordsee und im bergland auch frischer wind ."
+ },
+ {
+  "id": "04January_2010_Monday_heute-7395",
+  "hypothesis": "liebe zuschauer guten abend .",
+  "reference": "guten abend liebe zuschauer ."
+ },
+ {
+  "id": "14April_2010_Wednesday_tagesschau-3809",
+  "hypothesis": "im norden fällt gebietsweise regen der besonders an der ostsee ist er stark bewölkt .",
+  "reference": "wechselhaft dagegen bleibt es auch weiter in richtung südosten schuld daran ist das tief über ungarn ."
+ },
+ {
+  "id": "18December_2010_Saturday_tagesschau-6126",
+  "hypothesis": "es weht meist ein schwacher wind aus unterschiedlichen richtungen .",
+  "reference": "zunächst schwacher bis mäßiger wind der im norden aus östlicher sonst aus südlicher richtung kommt ."
+ },
+ {
+  "id": "13August_2011_Saturday_tagesschau-1412",
+  "hypothesis": "morgen siebzehn bis dreiundzwanzig am main bis fünfundzwanzig grad .",
+  "reference": "im norden und westen morgen zwanzig bis dreiundzwanzig sonst sommerliche fünfundzwanzig bis neunundzwanzig grad ."
+ },
+ {
+  "id": "25February_2011_Friday_tagesschau-568",
+  "hypothesis": "am tag im norden viel sonne in der mitte und im süden regnet es mitunter ergiebig im süden sind kräftige gewitter dabei .",
+  "reference": "am tag im osten viel sonne in der westhälfte regnet es zwischen niederrhein und ostfriesland ."
+ },
+ {
+  "id": "31May_2011_Tuesday_heute-1904",
+  "hypothesis": "im südwesten aber schon wieder trocken sein .",
+  "reference": "an der elbe einzelne schauer im nordwesten aber schon wieder deutlich freundlicher ."
+ },
+ {
+  "id": "05February_2010_Friday_tagesschau-2924",
+  "hypothesis": "in den kommenden tagen ist es überwiegend stark bewölkt oder neblig trüb .",
+  "reference": "dabei ist es teils stark bewölkt oder neblig trüb teils freundlich mit sonnenschein ."
+ },
+ {
+  "id": "18February_2011_Friday_tagesschau-6825",
+  "hypothesis": "am nachmittag sind auch im westen und nordwesten schauer oder gewitter dabei .",
+  "reference": "besonders im osten deutschlands kann es ein wenig regnen oder schneien ."
+ },
+ {
+  "id": "24August_2010_Tuesday_heute-3010",
+  "hypothesis": "vom atlantik erreicht uns morgen ein tiefausläufer der erst im nordwesten am donnerstag dann in der ganzen nordhälfte deutschlands für zum teil länger anhaltendem regen sorgt .",
+  "reference": "der nächste größere regen für uns ist dann erst am donnerstag wahrscheinlich in sicht ."
+ },
+ {
+  "id": "05July_2010_Monday_tagesschau-1202",
+  "hypothesis": "in der mitte und im süden bleibt es meist trocken .",
+  "reference": "vom südwesten bis in die mitte bleibt es meist trocken ."
+ },
+ {
+  "id": "17June_2010_Thursday_tagesschau-3903",
+  "hypothesis": "es gelten unwetterwarnungen des deutschen wetterdienstes .",
+  "reference": "es gelten entsprechende unwetterwarnungen des deutschen wetterdienstes ."
+ },
+ {
+  "id": "03October_2010_Sunday_tagesschau-5770",
+  "hypothesis": "auch am mittwoch eine mischung aus sonne und wolken hier und da fallen schauer .",
+  "reference": "am mittwoch eine mischung aus sonne wolken und nebelfeldern im nordwesten hier und da schauer sonst ist es trocken ."
+ },
+ {
+  "id": "24November_2009_Tuesday_tagesschau-5689",
+  "hypothesis": "am tag fünf bis zehn grad im süden bis zwölf grad .",
+  "reference": "am tag zehn grad in der mitte in höheren lagen sechzehn grad im süden ."
+ },
+ {
+  "id": "14September_2010_Tuesday_tagesschau-5223",
+  "hypothesis": "am montag in der nordhälfte einzelne schauer im süden ist es recht freundlich .",
+  "reference": "am samstag ist es in der südhälfte freundlich in der nordhälfte einzelne schauer ."
+ },
+ {
+  "id": "23August_2010_Monday_heute-5328",
+  "hypothesis": "und so bleibt es dann auch in den nächsten tagen erstmal .",
+  "reference": "ja und so bleibt es dann auch erstmal am mittwoch ."
+ },
+ {
+  "id": "10February_2010_Wednesday_tagesschau-2514",
+  "hypothesis": "und das wird uns bis donnerstag beschäftigen .",
+  "reference": "das heißt weitere schneefälle und leichten bis mäßigen dauerfrost ."
+ },
+ {
+  "id": "25October_2010_Monday_heute-2049",
+  "hypothesis": "im nordwesten macht sich allerdings der ausläufer eines atlantiktiefs bemerkbar .",
+  "reference": "und dann drängen die neuen wolken heran hier im nordwesten die können am nachmittag erste spritzer regen an der nordsee bringen und der wind frischt dazu auf aus süd südwest ."
+ },
+ {
+  "id": "06April_2010_Tuesday_tagesschau-306",
+  "hypothesis": "morgen regnet es dann im norden und westen hier und da etwas sonst ist es meist sonnig .",
+  "reference": "morgen scheint dann wieder überall die sonne ."
+ },
+ {
+  "id": "24October_2009_Saturday_tagesschau-4289",
+  "hypothesis": "an der nordfriesischen küste morgen zehn in der lausitz bis siebzehn grad .",
+  "reference": "morgen in der osthälfte zehn bis dreizehn grad im westen bis zu siebzehn grad ."
+ },
+ {
+  "id": "08June_2010_Tuesday_tagesschau-5521",
+  "hypothesis": "in der nordosthälfte deutschlands bleibt es unter tiefdruckeinfluss noch wechselhaft .",
+  "reference": "in der südosthälfte deutschlands bleibt es unter leichtem hochdruckeinfluss noch am längsten freundlich aber auch dort kann es später kräftig krachen ."
+ },
+ {
+  "id": "02July_2009_Thursday_tagesschau-2860",
+  "hypothesis": "in der südosthälfte deutschlands scheint morgen dank hochdruckeinfluss noch verbreitet die sonne .",
+  "reference": "der nordosten deutschlands liegt morgen dank hochdruckeinfluss meist auf der sonnenseite ."
+ },
+ {
+  "id": "20June_2011_Monday_heute-6510",
+  "hypothesis": "das meine damen und herren war es für heute schönen abend noch .",
+  "reference": "das kann ja manchmal ganz schön schnell gehen also ob es schön ist entscheiden natürlich sie meine damen und herren ."
+ },
+ {
+  "id": "12July_2011_Tuesday_heute-1283",
+  "hypothesis": "am donnerstag regen und wind im norden im süden ist es recht freundlich .",
+  "reference": "und in dieser kühleren eigentlich angenehmeren luft gibt es am donnerstag zumindest im norden noch kräftigen regen stürmischen wind ."
+ },
+ {
+  "id": "02December_2009_Wednesday_tagesschau-4045",
+  "hypothesis": "am sonntag eine mischung aus sonne und wolken .",
+  "reference": "im osten und südosten neben teilweise zähen nebelfeldern eine trockene mischung aus sonne und wolken ."
+ },
+ {
+  "id": "05March_2011_Saturday_tagesschau-5443",
+  "hypothesis": "von südwesten wird es dann etwas freundlicher .",
+  "reference": "in den östlichen berglagen sowie am alpenrand ist ein wenig schnee möglich ."
+ },
+ {
+  "id": "11May_2010_Tuesday_heute-5990",
+  "hypothesis": "morgen temperaturen von achtzehn grad an der ostsee bis dreiunddreißig grad am alpenrand .",
+  "reference": "morgen vormittag bleibt von dem ganzen starken regen noch hier im osten einige gewitter hängen in brandenburg starker regen in vorpommern und an der ostsee ."
+ },
+ {
+  "id": "03February_2010_Wednesday_heute-2356",
+  "hypothesis": "am wochenende fällt vor allem im bergland schnee oder schneeregen .",
+  "reference": "da haben wir am morgen schnee und schneeregen ."
+ },
+ {
+  "id": "07April_2010_Wednesday_heute-1619",
+  "hypothesis": "guten abend liebe zuschauer .",
+  "reference": "hallo und guten abend liebe zuschauer ."
+ },
+ {
+  "id": "18January_2011_Tuesday_tagesschau-6989",
+  "hypothesis": "die sonne lässt sich nur selten blicken .",
+  "reference": "die sonne kann sich gegen die wolken nur selten durchsetzen ."
+ },
+ {
+  "id": "03July_2009_Friday_tagesschau-2014",
+  "hypothesis": "am dienstag vor allem im süden und osten noch einzelne schauer .",
+  "reference": "am sonntag vor allem im osten und süden noch schauer oder gewitter sonst überwiegend freundlich ."
+ },
+ {
+  "id": "20July_2010_Tuesday_heute-5254",
+  "hypothesis": "und dann kommt auch der regen auf .",
+  "reference": "und selbst auch im küstenbereich geht es auch nahe an die dreißig grad heran ."
+ },
+ {
+  "id": "26June_2010_Saturday_tagesschau-724",
+  "hypothesis": "am freitag dann örtlich über fünfunddreißig grad und vor allem in der nordwesthälfte muss mit hitzegewittern gerechnet werden .",
+  "reference": "vor allem über dem bergland können sich im tagesverlauf stellenweise quellwolken bilden und im südwesten muss mit vereinzelten hitzegewittern gerechnet werden ."
+ },
+ {
+  "id": "25November_2011_Friday_tagesschau-4398",
+  "hypothesis": "morgen drei grad am alpenrand bis elf am niederrhein .",
+  "reference": "dort sowie am niederrhein morgen zehn bis elf sonst zwei bis neun grad ."
+ },
+ {
+  "id": "22November_2010_Monday_heute-283",
+  "hypothesis": "und so steigt und sind auch die schneefallgrenze in den nächsten tagen .",
+  "reference": "und bis zum abend kann die schneefallgrenze auch bis in die niederungen sinken ."
+ },
+ {
+  "id": "22April_2010_Thursday_tagesschau-3736",
+  "hypothesis": "und es wird ja noch ein bisschen wärmer am wochenende .",
+  "reference": "am wochenende scheint meist die sonne und es wird noch wärmer ."
+ },
+ {
+  "id": "24November_2011_Thursday_tagesschau-8342",
+  "hypothesis": "am mittwoch meist eine mischung aus sonne und wolken .",
+  "reference": "am montag meist trocken bei einer mischung aus sonne und wolken ."
+ },
+ {
+  "id": "29November_2009_Sunday_tagesschau-7044",
+  "hypothesis": "im nordosten schneit es teilweise bis ins flachland .",
+  "reference": "richtung bodensee kann es bis ins flachland schneien ."
+ },
+ {
+  "id": "14October_2010_Thursday_tagesschau-294",
+  "hypothesis": "am abend kommt im nordwesten regen auf .",
+  "reference": "im verlauf kommt im norden und nordwesten teilweise kräftiger regen auf einzelne gewitter sind dabei ."
+ },
+ {
+  "id": "15February_2011_Tuesday_heute-7911",
+  "hypothesis": "und morgen scheint dann auch in der osthälfte noch mal die sonne .",
+  "reference": "am ehesten scheint sie noch hier in der osthälfte und auch am alpenrand und dann später auch im südwesten ."
+ },
+ {
+  "id": "27November_2011_Sunday_tagesschau-5149",
+  "hypothesis": "morgen drei grad am alpenrand bis elf am niederrhein .",
+  "reference": "morgen bei dauernebel im süden nur zwei am niederrhein bis elf grad ."
+ },
+ {
+  "id": "05March_2011_Saturday_tagesschau-5442",
+  "hypothesis": "im süden und in der mitte gibt es morgen fast ungetrübten sonnenschein .",
+  "reference": "auch morgen in der mitte und im süden gebietsweise stärkere bewölkung ."
+ },
+ {
+  "id": "18December_2010_Saturday_tagesschau-6118",
+  "hypothesis": "und nun die wettervorhersage für morgen sonntag den neunzehnten september .",
+  "reference": "und nun die wettervorhersage für morgen sonntag den neunzehnten dezember ."
+ },
+ {
+  "id": "28September_2010_Tuesday_heute-8344",
+  "hypothesis": "morgen dann immer noch regen im osten und auch vielleicht einzelne gewitter .",
+  "reference": "regenreiche tage bei uns in deutschland und dadurch auch die lage an einigen flüssen im osten immer noch angespannt ."
+ },
+ {
+  "id": "18February_2010_Thursday_tagesschau-4532",
+  "hypothesis": "am samstag ist es im norden regnerisch und sehr windig nach süden ist es freundlicher .",
+  "reference": "am samstag im norden sehr windig ."
+ },
+ {
+  "id": "01April_2010_Thursday_heute-6705",
+  "hypothesis": "abseits davon scheint häufig die sonne .",
+  "reference": "es scheint häufig die sonne ."
+ },
+ {
+  "id": "19November_2009_Thursday_tagesschau-3781",
+  "hypothesis": "und nun die wettervorhersage für morgen sonntag den dreiundzwanzigsten november .",
+  "reference": "und nun die wettervorhersage für morgen freitag den zwanzigsten november ."
+ },
+ {
+  "id": "26January_2010_Tuesday_heute-106",
+  "hypothesis": "und in den nächsten tagen wird es dann auch noch ein bisschen kälter .",
+  "reference": "und zum wochenende wird es dann sogar wieder ein bisschen kälter ."
+ },
+ {
+  "id": "25August_2010_Wednesday_tagesschau-8509",
+  "hypothesis": "gegen abend breitet sich von westen neuer teilweise kräftiger regen aus .",
+  "reference": "heute nacht breitet sich von westen regen aus der teilweise ergiebig sein kann ."
+ },
+ {
+  "id": "15March_2011_Tuesday_tagesschau-3325",
+  "hypothesis": "heute nacht ist es teils locker bewölkt teils klar .",
+  "reference": "in einem streifen vom emsland bis zur lausitz sind dichte wolken unterwegs sonst ist es teils klar teils locker bewölkt ."
+ },
+ {
+  "id": "08June_2010_Tuesday_tagesschau-5529",
+  "hypothesis": "am wochenende bleibt es wechselhaft .",
+  "reference": "donnerstag und freitag ändert sich wenig an diesem wetter ."
+ },
+ {
+  "id": "07October_2010_Thursday_tagesschau-4127",
+  "hypothesis": "am alpenrand heute nacht sieben im emsland bis dreizehn grad .",
+  "reference": "vier grad heute nacht im allgäu sowie an der oder dreizehn grad an der nordsee ."
+ },
+ {
+  "id": "02December_2010_Thursday_tagesschau-3631",
+  "hypothesis": "ein tief bringt dem süden deutschlands in der nacht und auch noch morgen schnee .",
+  "reference": "ein tief über der ostsee bringt dem norden deutschlands noch schnee ."
+ },
+ {
+  "id": "07October_2012_Sunday_tagesschau-3032",
+  "hypothesis": "an der nordsee heute nacht starke böen .",
+  "reference": "an der ostsee heute nacht örtlich stürmische böen ."
+ },
+ {
+  "id": "08October_2009_Thursday_tagesschau-5358",
+  "hypothesis": "im osten bleibt es vorerst noch freundlich .",
+  "reference": "im osten aber erst noch freundliche abschnitte ."
+ },
+ {
+  "id": "30November_2009_Monday_tagesschau-5753",
+  "hypothesis": "schwacher bis mäßiger im nordwesten auch frischer wind aus west bis nordwest .",
+  "reference": "schwacher bis mäßiger wind aus nord bis west ."
+ },
+ {
+  "id": "29March_2010_Monday_tagesschau-8389",
+  "hypothesis": "es bleibt windig .",
+  "reference": "wechselhaft bleibt es ."
+ },
+ {
+  "id": "19October_2010_Tuesday_tagesschau-8289",
+  "hypothesis": "am tag dichte wolken etwas sonne einige schauer teilweise mit graupel oder gewittern .",
+  "reference": "am tag dichte wolken aber auch lücken dazu einige schauer an den nordwestseiten der gebirge kann es auch längere zeit regnen oder schneien ."
+ },
+ {
+  "id": "18November_2011_Friday_tagesschau-2142",
+  "hypothesis": "daran ändert sich auch am montag nur wenig .",
+  "reference": "auch zu beginn der kommenden woche ändert sich nur wenig ."
+ },
+ {
+  "id": "19October_2010_Tuesday_tagesschau-8291",
+  "hypothesis": "auch gewitter sind dabei .",
+  "reference": "auch vereinzelte graupelschauer oder kurze gewitter sind dabei ."
+ },
+ {
+  "id": "13October_2009_Tuesday_tagesschau-1658",
+  "hypothesis": "am freundlichsten ist es im südwesten .",
+  "reference": "am freitag ist es im südwesten zunächst freundlich ."
+ },
+ {
+  "id": "26January_2010_Tuesday_heute-105",
+  "hypothesis": "es kann sehr windig vor allem im süden vor allem am alpenrand gebietsweise kräftige schauer und gewitter .",
+  "reference": "in den nächsten tagen geht es auf jeden fall winterlich weiter immer wieder mal mit etwas schnee ."
+ },
+ {
+  "id": "01April_2010_Thursday_tagesschau-4332",
+  "hypothesis": "am donnerstag wechselhaftes wetter im südosten regnet es teilweise ergiebig .",
+  "reference": "im südosten regnet es teilweise länger ."
+ },
+ {
+  "id": "06October_2011_Thursday_tagesschau-823",
+  "hypothesis": "im südosten fallen einzelne schauer .",
+  "reference": "im westen und nordwesten fallen einzelne schauer ."
+ },
+ {
+  "id": "04March_2011_Friday_tagesschau-2838",
+  "hypothesis": "ist der nebel weg zeigt sich morgen vielerorts die sonne .",
+  "reference": "wenn der verschwunden ist zeigt sich morgen im süden die sonne während sich die wolken weiter richtung donau ausbreiten und dabei immer größere lücken bekommen ."
+ },
+ {
+  "id": "14August_2011_Sunday_tagesschau-3232",
+  "hypothesis": "im süden heute nacht örtlich leichter frost im breisgau bis zehn grad .",
+  "reference": "im osten und süden muss zu beginn der nacht örtlich mit starkregen und hagel gerechnet werden ."
+ },
+ {
+  "id": "25August_2010_Wednesday_tagesschau-8507",
+  "hypothesis": "im süden regnet es heute nacht zum teil kräftig im breisgau .",
+  "reference": "von westen erreicht uns ein neues atlantiktief mit zum teil kräftigen regenfällen und heftigen gewittern ."
+ },
+ {
+  "id": "17September_2010_Friday_tagesschau-3412",
+  "hypothesis": "dann dehnt sich das hoch über dem atlantik weiter nach osten aus .",
+  "reference": "das hoch über den azoren weitet sich bis nach süddeutschland aus ."
+ },
+ {
+  "id": "28December_2011_Wednesday_tagesschau-1912",
+  "hypothesis": "sonst mal sonne mal wolken an der nordsee später kräftige schauer und einzelne gewitter .",
+  "reference": "sonst einzelne schauer an der nordsee auch gewitter ."
+ },
+ {
+  "id": "24November_2009_Tuesday_tagesschau-5692",
+  "hypothesis": "an der see heute nacht stellenweise minus drei in der kölner bucht bis plus sechs grad .",
+  "reference": "im süden und osten freundliche abschnitte ."
+ },
+ {
+  "id": "14February_2010_Sunday_tagesschau-3834",
+  "hypothesis": "kalte luft bestimmt das wetter in deutschland .",
+  "reference": "kalte teilweise feuchte luft bestimmt das wetter in deutschland ."
+ },
+ {
+  "id": "08June_2010_Tuesday_tagesschau-5530",
+  "hypothesis": "am montag muss mit teilweise gewittrigen regenschauern gerechnet werden .",
+  "reference": "die schwüle hitze in dem noch etwas zu und die gewitter können lokal unwetterartig sein ."
+ },
+ {
+  "id": "24January_2013_Thursday_tagesschau-6322",
+  "hypothesis": "ein tief über dem nordmeer lenkt etwas kühlere luft zu uns .",
+  "reference": "am sonntag überquert und dann ein atlantischer tiefausläufer dabei wird es milder ."
+ },
+ {
+  "id": "14July_2009_Tuesday_tagesschau-2425",
+  "hypothesis": "sonst ist es teilweise klar .",
+  "reference": "teilweise ist es auch klar ."
+ },
+ {
+  "id": "29June_2011_Wednesday_tagesschau-4490",
+  "hypothesis": "im nordosten bleibt es trocken .",
+  "reference": "im nordosten bleibt es meist trocken ."
+ },
+ {
+  "id": "01May_2010_Saturday_tagesschau-7195",
+  "hypothesis": "auch am montag unbeständiges wetter teilweise regnet es kräftig auch gewitter sind mit dabei .",
+  "reference": "auch am montag mehr wolken als sonne teilweise regnet es länger und kräftig auch gewitter sind dabei ."
+ },
+ {
+  "id": "25November_2009_Wednesday_tagesschau-7678",
+  "hypothesis": "örtlich sind kurze gewitter möglich .",
+  "reference": "im nordwesten sind kurze gewitter möglich ."
+ },
+ {
+  "id": "03September_2010_Friday_tagesschau-8429",
+  "hypothesis": "im südosten sind noch schauer und gewitter möglich .",
+  "reference": "im osten und südosten sind gewitter möglich ."
+ },
+ {
+  "id": "26July_2010_Monday_tagesschau-6267",
+  "hypothesis": "in den folgenden tagen ändert sich an dem meist trüben wetter wenig .",
+  "reference": "auch in den folgenden tagen ändert sich an diesem wechselhaften wetter wenig ."
+ },
+ {
+  "id": "03February_2010_Wednesday_tagesschau-2062",
+  "hypothesis": "morgen weht ein schwacher bis mäßiger wind aus süd bis südwest .",
+  "reference": "dazu weht ein schwacher bis mäßiger wind aus südost bis süd ."
+ },
+ {
+  "id": "23May_2010_Sunday_tagesschau-4337",
+  "hypothesis": "auch in den folgenden tagen unbeständig .",
+  "reference": "in den folgenden tagen sorgt tiefer luftdruck für wechselhaftes wetter und sinkende temperaturen ."
+ },
+ {
+  "id": "09July_2010_Friday_tagesschau-591",
+  "hypothesis": "und das sind letztendlich auch schon die tageshöchsttemperaturen also acht grad im westen aber nur zwei grad im osten und süden .",
+  "reference": "zunächst ist das gewitterrisiko nur im westen erhöht von tag zu tag steigt es aber auch richtung osten ."
+ },
+ {
+  "id": "04December_2009_Friday_tagesschau-834",
+  "hypothesis": "von westen erreicht uns ein atlantischer tiefausläufer mit seiner kaltfront .",
+  "reference": "nach einer kurzen wetterberuhigung erreicht uns morgen von westen ein neuer tiefausläufer ."
+ },
+ {
+  "id": "08October_2009_Thursday_tagesschau-5352",
+  "hypothesis": "an der nordsee heute nacht starke böen .",
+  "reference": "an der ostsee heute nacht stürmische böen aus west ."
+ },
+ {
+  "id": "24July_2011_Sunday_tagesschau-6631",
+  "hypothesis": "am mittwoch teils wolkig teils freundlich vor allem aber am nachmittag wieder schauer und gewitter .",
+  "reference": "am mittwoch vor allem ab dem nachmittag schauer und gewitter ."
+ },
+ {
+  "id": "25November_2009_Wednesday_tagesschau-7666",
+  "hypothesis": "und nun die wettervorhersage für morgen samstag den sechsundzwanzigsten november .",
+  "reference": "und nun die wettervorhersage für morgen donnerstag den sechsundzwanzigsten november ."
+ },
+ {
+  "id": "13April_2010_Tuesday_tagesschau-2308",
+  "hypothesis": "eine ausgedehnte hochdruckzone reicht vom atlantik bis nach osteuropa .",
+  "reference": "sonst sorgt die hochdruckzone die vom atlantik bis nach skandinavien reicht für freundliches wetter ."
+ },
+ {
+  "id": "28March_2011_Monday_tagesschau-2287",
+  "hypothesis": "ansonsten scheint verbreitet die sonne .",
+  "reference": "nach dessen auflösung scheint morgen verbreitet die sonne ."
+ },
+ {
+  "id": "11May_2010_Tuesday_heute-5994",
+  "hypothesis": "und morgen haben wir dann die höchsten temperaturen im westen zu erwarten immerhin wieder fünfzehn bis zwanzig grad im südwesten .",
+  "reference": "und so warm mit zwanzig grad wird es nicht mehr in den nächsten tagen ."
+ },
+ {
+  "id": "01April_2011_Friday_tagesschau-3374",
+  "hypothesis": "und nun die wettervorhersage für morgen samstag den dritten juli .",
+  "reference": "und nun die wettervorhersage für morgen samstag den zweiten april ."
+ },
+ {
+  "id": "12January_2010_Tuesday_heute-2543",
+  "hypothesis": "aber frostig wird es heute nacht nochmal überall .",
+  "reference": "heute nacht wird es aber nochmal ziemlich eisig vor allen dingen in den mittelgebirgen ."
+ },
+ {
+  "id": "28October_2009_Wednesday_tagesschau-4540",
+  "hypothesis": "im süden und südosten fällt meist regen sonst meist nur locker bewölkt .",
+  "reference": "im norden und nordosten bleibt es meist bedeckt mitunter fällt dort etwas regen ."
+ },
+ {
+  "id": "02December_2009_Wednesday_tagesschau-4039",
+  "hypothesis": "und nun die wettervorhersage für morgen donnerstag den ersten dezember .",
+  "reference": "und nun die wettervorhersage für morgen donnerstag den dritten dezember ."
+ },
+ {
+  "id": "11December_2010_Saturday_tagesschau-8661",
+  "hypothesis": "an den alpen ist es längere zeit klar .",
+  "reference": "die schneefallgrenze sinkt auf sechshundert bis dreihundert meter ."
+ },
+ {
+  "id": "30July_2011_Saturday_tagesschau-8595",
+  "hypothesis": "der wind weht schwach bis mäßig im südwesten frisch teilweise auch stark böig .",
+  "reference": "der nordwestwind bläst schwach bis mäßig in der nordosthälfte auch frisch in den hochlagen der östlichen mittelgebirge stark böig ."
+ },
+ {
+  "id": "12December_2011_Monday_heute-5811",
+  "hypothesis": "unser sonnenhoch das zieht weiter nach osten .",
+  "reference": "sonst zieht das regengebiet nach osten ."
+ },
+ {
+  "id": "09August_2010_Monday_heute-5891",
+  "hypothesis": "es geht auch erst einmal so weiter in süddeutschland noch hat das hoch bestand .",
+  "reference": "das bleibt auch noch in dieser woche so so dass die brände weiter schwelen werden ."
+ },
+ {
+  "id": "11September_2009_Friday_tagesschau-8782",
+  "hypothesis": "heute nacht werte zwischen minus zwei und minus acht grad .",
+  "reference": "heute nacht liegen die werte zwischen vierzehn und sieben grad ."
+ },
+ {
+  "id": "14August_2009_Friday_tagesschau-75",
+  "hypothesis": "am montag muss mit teilweise gewittrigen regenschauern gerechnet werden .",
+  "reference": "örtlich schauer oder gewitter die heftig sein können ."
+ },
+ {
+  "id": "04December_2009_Friday_tagesschau-833",
+  "hypothesis": "und nun die wettervorhersage für morgen samstag den zehnten dezember .",
+  "reference": "und nun die wettervorhersage für morgen samstag den fünften dezember ."
+ },
+ {
+  "id": "10January_2011_Monday_tagesschau-6402",
+  "hypothesis": "und das wird sich dann auch in den nächsten tagen noch weiter ausbreitet .",
+  "reference": "es sorgt von westen für regen schnee und glätte ."
+ },
+ {
+  "id": "24June_2010_Thursday_tagesschau-7300",
+  "hypothesis": "und nun die wettervorhersage für morgen samstag den vierundzwanzigsten juli .",
+  "reference": "und nun die wettervorhersage für morgen freitag den fünfundzwanzigsten juni ."
+ },
+ {
+  "id": "24September_2009_Thursday_heute-6090",
+  "hypothesis": "die neue woche beginnt wechselhaft und wieder kühler .",
+  "reference": "die neue woche startet dann durchwachsener ."
+ },
+ {
+  "id": "06October_2011_Thursday_heute-5534",
+  "hypothesis": "im nordwesten gibt es morgen viele wolken die gebietsweise regen bringen .",
+  "reference": "und das mit tief ophelia das die kaltluft mit kräftigen schauern richtung mitteleuropa treibt ."
+ },
+ {
+  "id": "01November_2010_Monday_tagesschau-133",
+  "hypothesis": "auch am samstag erwartet uns eine ruhige mischung aus nebel wolken und gelegentlichem sonnenschein .",
+  "reference": "auch morgen erwartet uns eine ruhige herbstmischung aus hochnebel wolken und sonne ."
+ },
+ {
+  "id": "24May_2011_Tuesday_tagesschau-4477",
+  "hypothesis": "in nordfriesland morgen neunzehn entlang des rheins fünfundzwanzig bis sechsundzwanzig grad .",
+  "reference": "in küstennähe morgen kühle fünfzehn bis sechzehn entlang des rheins dreiundzwanzig bis sechsundzwanzig grad ."
+ },
+ {
+  "id": "25August_2009_Tuesday_tagesschau-7092",
+  "hypothesis": "heute nacht siebzehn grad in der lausitz zehn grad in der eifel .",
+  "reference": "heute nacht temperaturen von zehn grad in der eifel bis achtzehn in der lausitz ."
+ },
+ {
+  "id": "06January_2010_Wednesday_tagesschau-7736",
+  "hypothesis": "im süden bleibt es noch trocken .",
+  "reference": "auch am wochenende schneit es zeitweise ."
+ },
+ {
+  "id": "20September_2010_Monday_heute-2929",
+  "hypothesis": "richtung süden wird es unter hochdruckeinfluss deutlich freundlicher .",
+  "reference": "es wird deutlich freundlicher ."
+ },
+ {
+  "id": "24May_2011_Tuesday_heute-6067",
+  "hypothesis": "und morgen scheint dann auch in der osthälfte noch mal die sonne .",
+  "reference": "etwa südlich von spree und aller scheint dagegen die sonne strahlend und das tut sie morgen auch in süddeutschland ."
+ },
+ {
+  "id": "07October_2010_Thursday_tagesschau-4129",
+  "hypothesis": "die aussichten das winterwetter begleitet uns auch in den nächsten tagen .",
+  "reference": "das ruhige trockene und zum teil recht freundliche hochdruckwetter begleitet uns auch in den nächsten tagen ."
+ },
+ {
+  "id": "11January_2011_Tuesday_tagesschau-8021",
+  "hypothesis": "im bergland geht der regen teilweise in schnee über .",
+  "reference": "in der nacht ist im nordosten in ostbayern und im bergland teilweise schnee oder gefrierender regen möglich ."
+ },
+ {
+  "id": "28August_2009_Friday_tagesschau-5884",
+  "hypothesis": "am sonntag viel sonnenschein .",
+  "reference": "sonst viel sonnenschein ."
+ },
+ {
+  "id": "27August_2009_Thursday_tagesschau-3267",
+  "hypothesis": "und nun die wettervorhersage für morgen freitag den achtundzwanzigsten mai .",
+  "reference": "und nun die wettervorhersage für morgen freitag den achtundzwanzigsten august ."
+ },
+ {
+  "id": "16November_2009_Monday_tagesschau-3105",
+  "hypothesis": "mittwoch und donnerstag bleibt es im norden recht kühl und meist wolkig gebietsweise wird es auch nass und windig .",
+  "reference": "mittwoch und donnerstag bleibt es im norden windig und gebietsweise fällt dort regen ."
+ },
+ {
+  "id": "15October_2009_Thursday_tagesschau-7715",
+  "hypothesis": "am freitag regnet es südlich der donau ab und an noch etwas sonst ist es meist freundlich .",
+  "reference": "im südwesten ist es zunächst noch freundlich sonst regnet es morgen ab und an ."
+ },
+ {
+  "id": "25August_2009_Tuesday_tagesschau-7085",
+  "hypothesis": "in der nacht muss in der westhälfte mit gewittern gerechnet werden die anfangs unwetterartig sein können .",
+  "reference": "aber erst muss noch mit regenfällen und gewittern gerechnet werden die besonders im süden und osten unwetterartig sein können ."
+ },
+ {
+  "id": "16December_2009_Wednesday_tagesschau-5907",
+  "hypothesis": "und nun die wettervorhersage für morgen samstag den siebzehnten dezember .",
+  "reference": "und nun die wettervorhersage für morgen donnerstag den siebzehnten dezember ."
+ },
+ {
+  "id": "27April_2010_Tuesday_heute-1039",
+  "hypothesis": "gegen abend im nordwesten regen oder schneeregen .",
+  "reference": "gegen späten nachmittag oder abend gibt es wahrscheinlich die ersten regenschauer im nordwesten ."
+ },
+ {
+  "id": "06January_2010_Wednesday_tagesschau-7728",
+  "hypothesis": "am freitag regnet es in der nordhälfte ab und an .",
+  "reference": "es sorgt nämlich am und ab freitag dafür dass es bei uns stärker schneit ."
+ },
+ {
+  "id": "14December_2010_Tuesday_heute-650",
+  "hypothesis": "auch sonst gibt es viele wolken aber es bleibt weitgehend trocken .",
+  "reference": "dort auch bei leichten plusgraden aber sonst bleibt es frostig ."
+ },
+ {
+  "id": "20October_2011_Thursday_tagesschau-513",
+  "hypothesis": "am tag fünfundzwanzig grad im norden und sechzehn grad an den alpen .",
+  "reference": "am tag sechs grad an den alpen und dreizehn grad am oberrhein ."
+ },
+ {
+  "id": "04December_2011_Sunday_tagesschau-7792",
+  "hypothesis": "im bereich dieser grenze regnet oder schneit es morgen zeitweise .",
+  "reference": "im süden regnet oder schneit es länger ."
+ },
+ {
+  "id": "04December_2009_Friday_tagesschau-845",
+  "hypothesis": "hier und da zeigt sich auch mal die sonne .",
+  "reference": "montag und dienstag wechselhaft hier und da zeigt sich aber auch die sonne ."
+ },
+ {
+  "id": "28May_2010_Friday_tagesschau-7501",
+  "hypothesis": "heute nacht neun grad auf den ostfriesischen inseln und bis minus zwei grad in den mittelgebirgen .",
+  "reference": "heute nacht elf grad in niederbayern und bis ein grad in den nördlichen mittelgebirgen ."
+ },
+ {
+  "id": "27June_2010_Sunday_tagesschau-7392",
+  "hypothesis": "morgen reichen die temperaturen von achtzehn grad in der lausitz bis neunundzwanzig grad am oberrhein .",
+  "reference": "morgen reichen die temperaturen von zweiundzwanzig grad an der ostsee bis zweiunddreißig grad am oberrhein ."
+ },
+ {
+  "id": "05July_2010_Monday_tagesschau-1205",
+  "hypothesis": "morgen temperaturen von achtzehn grad an der nordsee bis sechsundzwanzig grad im breisgau .",
+  "reference": "morgen temperaturen von achtzehn grad an der küste bis sechsundzwanzig im breisgau ."
+ },
+ {
+  "id": "14October_2009_Wednesday_tagesschau-516",
+  "hypothesis": "und nun die wettervorhersage für morgen donnerstag den ersten oktober .",
+  "reference": "und nun die wettervorhersage für morgen donnerstag den fünfzehnten oktober ."
+ },
+ {
+  "id": "14December_2010_Tuesday_heute-651",
+  "hypothesis": "und die nacht wird sehr mild .",
+  "reference": "und die kälteste ecke wird der gesamte südosten bleiben ."
+ },
+ {
+  "id": "11May_2010_Tuesday_tagesschau-1969",
+  "hypothesis": "am mittwoch hier und da regen im südosten auch gewitter am donnerstag ebenfalls unbeständiges wetter vor allem im süden und im osten regnet es mancherorts .",
+  "reference": "am donnerstag regnet es vor allem im süden und osten mancherorts ."
+ },
+ {
+  "id": "04January_2010_Monday_tagesschau-8552",
+  "hypothesis": "heute nacht acht grad an der nordsee und ein grad im südosten .",
+  "reference": "heute nacht minus zwei grad an der nordsee und bis minus zwanzig grad in einzelnen alpentälern ."
+ },
+ {
+  "id": "20June_2011_Monday_tagesschau-1256",
+  "hypothesis": "heute nacht an der ostsee sechzehn grad im westen teilweise nur sieben grad .",
+  "reference": "an der saar heute nacht milde sechzehn an der elbe teilweise nur acht grad ."
+ },
+ {
+  "id": "10February_2010_Wednesday_tagesschau-2523",
+  "hypothesis": "am samstag schneit es gebietsweise im flachland regnet es teilweise .",
+  "reference": "am samstag schneit es gebietsweise leicht ganz im norden lichtblicke ."
+ },
+ {
+  "id": "21November_2011_Monday_heute-5437",
+  "hypothesis": "ihnen noch einen schönen abend und machen sie es gut .",
+  "reference": "ihnen noch einen schönen abend ."
+ },
+ {
+  "id": "11January_2011_Tuesday_tagesschau-8017",
+  "hypothesis": "und nun die wettervorhersage für morgen mittwoch den fünften januar .",
+  "reference": "und nun die wettervorhersage für morgen mittwoch den zwölften januar ."
+ },
+ {
+  "id": "11September_2009_Friday_tagesschau-8780",
+  "hypothesis": "am donnerstag ein wechsel aus sonne und wolken .",
+  "reference": "sonst ein wechsel aus sonne und wolken ."
+ },
+ {
+  "id": "24February_2011_Thursday_tagesschau-4771",
+  "hypothesis": "am sonntag viele wolken und einige schauer im bergland zum teil schnee oder regen .",
+  "reference": "am sonntag gibt es viele wolken gebietsweise regen oder schneeregen im bergland schnee ."
+ },
+ {
+  "id": "27November_2009_Friday_tagesschau-7342",
+  "hypothesis": "auch am dienstag wechselhaftes wetter .",
+  "reference": "am dienstag wechselhaftes wetter ."
+ },
+ {
+  "id": "24August_2009_Monday_heute-6642",
+  "hypothesis": "und morgen scheint dann auch in der osthälfte noch mal die sonne .",
+  "reference": "und morgen vormittag beziehungsweise bis zum nachmittag wahrscheinlich sogar noch scheint in der osthälfte noch die sonne ."
+ },
+ {
+  "id": "10January_2011_Monday_tagesschau-6403",
+  "hypothesis": "in der neuen woche geht es dann mit atlantischen tiefausläufern recht wechselhaft weiter .",
+  "reference": "im verlauf der woche geht es dann unbeständig und sehr mild weiter ."
+ },
+ {
+  "id": "30November_2009_Monday_tagesschau-5752",
+  "hypothesis": "sonst teils wolkig teils klar und meist trocken .",
+  "reference": "in der nordwesthälfte teils freundlich teils wolkig und meist trocken ."
+ },
+ {
+  "id": "09June_2010_Wednesday_heute-8260",
+  "hypothesis": "heute nacht zwanzig grad an der spree zehn grad in der eifel .",
+  "reference": "die kommende nacht teilweise nicht unter zwanzig grad in einigen städten ."
+ },
+ {
+  "id": "17April_2010_Saturday_tagesschau-399",
+  "hypothesis": "die luft die zu uns strömt ist ziemlich kühl .",
+  "reference": "die luft die in der kommenden woche zu uns strömt ist deutlich kühler ."
+ },
+ {
+  "id": "24August_2010_Tuesday_tagesschau-2196",
+  "hypothesis": "im südosten gibt es heute nacht noch einzelne schauer .",
+  "reference": "heute nacht gibt es an den küsten schauer im süden ebenfalls aber dort lassen sie allmählich nach ."
+ },
+ {
+  "id": "06July_2010_Tuesday_tagesschau-2657",
+  "hypothesis": "sonst weht der wind meist schwach aus unterschiedlichen richtungen .",
+  "reference": "der wind weht meist schwach aus unterschiedlichen richtungen ."
+ },
+ {
+  "id": "28October_2009_Wednesday_tagesschau-4544",
+  "hypothesis": "morgen temperaturen von acht grad an der ostsee bis siebzehn im süden .",
+  "reference": "morgen temperaturen von acht grad im nordosten bis siebzehn im südwesten ."
+ },
+ {
+  "id": "05October_2010_Tuesday_heute-1218",
+  "hypothesis": "schwacher bis mäßiger an der nordsee auch frischer wind aus südwest bis west .",
+  "reference": "dazu weht ein starker wind vor allen dingen wieder über vorpommern aus südost ."
+ },
+ {
+  "id": "11July_2011_Monday_tagesschau-849",
+  "hypothesis": "heute nacht gibt es mal dichtere wolken mal ist es aufgelockert oder klar .",
+  "reference": "heute nacht ist es meist nur locker bewölkt oder klar im nordwesten gibt es auch mal ein paar dichtere wolken ."
+ },
+ {
+  "id": "30March_2011_Wednesday_tagesschau-7125",
+  "hypothesis": "und nun die wettervorhersage für morgen donnerstag den einunddreißigsten januar .",
+  "reference": "und nun die wettervorhersage für morgen donnerstag den einunddreißigsten märz ."
+ },
+ {
+  "id": "25November_2010_Thursday_tagesschau-2528",
+  "hypothesis": "vorsicht wegen glätte .",
+  "reference": "vorsicht wegen straßenglätte ."
+ },
+ {
+  "id": "08October_2009_Thursday_tagesschau-5345",
+  "hypothesis": "und nun die wettervorhersage für morgen freitag den siebten oktober .",
+  "reference": "und nun die wettervorhersage für morgen freitag den neunten oktober ."
+ },
+ {
+  "id": "28March_2011_Monday_tagesschau-2285",
+  "hypothesis": "im norden ist es heute nacht meist klar in der mitte und im süden zum teil noch wolkig nur vereinzelt fallen ein paar tropfen oder flocken .",
+  "reference": "im süden gibt es zu beginn der nacht noch wolken die hier und da auch noch ein paar tropfen fallen lassen sonst ist es meist klar oder nur locker bewölkt ."
+ },
+ {
+  "id": "10May_2010_Monday_tagesschau-6854",
+  "hypothesis": "heute nacht gibt es im süden anfangs noch einzelne gewitter sonst lockert es verbreitet auf hier und da bildet sich nebel .",
+  "reference": "heute nacht sind im süden anfangs noch einzelne gewitter möglich sonst fällt nur hier und da regen stellenweise bildet sich nebel ."
+ },
+ {
+  "id": "18July_2009_Saturday_tagesschau-1634",
+  "hypothesis": "am wochenende erwartet uns dann wechselhaftes und recht kühles wetter .",
+  "reference": "unter tiefdruckeinfluss erwartet uns am sonntag recht kühles schauerwetter ."
+ },
+ {
+  "id": "12August_2009_Wednesday_tagesschau-1806",
+  "hypothesis": "am freitag gibt es mal sonne mal wolken und vor allem im süden noch kräftige schauer .",
+  "reference": "am freitag teils sonne teils wolken im äußersten süden anfangs noch regnerisch ."
+ },
+ {
+  "id": "29July_2010_Thursday_tagesschau-7421",
+  "hypothesis": "im norden gibt es später wolkenlücken und nur noch einzelne schauer .",
+  "reference": "dichte wolken und gebietsweise schauer gibt es nur im nordwesten ."
+ },
+ {
+  "id": "07October_2010_Thursday_tagesschau-4121",
+  "hypothesis": "etwas regen fällt nur noch im norden .",
+  "reference": "vor allem im norden zeigen sich heute nacht noch dichte wolken vereinzelt fällt etwas regen ."
+ },
+ {
+  "id": "01April_2010_Thursday_tagesschau-4330",
+  "hypothesis": "am freundlichsten wird es im nordosten sowie in küstennähe .",
+  "reference": "am freundlichsten ist es noch im nordosten sowie in teilen bayerns ."
+ },
+ {
+  "id": "11July_2009_Saturday_tagesschau-665",
+  "hypothesis": "morgen temperaturen zwischen achtzehn und dreiundzwanzig am oberrhein bis fünfundzwanzig grad .",
+  "reference": "morgen höchstwerte zwischen siebzehn grad im emsland und fünfundzwanzig grad am oberrhein ."
+ },
+ {
+  "id": "03June_2010_Thursday_tagesschau-2629",
+  "hypothesis": "es sorgt auch morgen für viel sonnenschein .",
+  "reference": "auch am wochenende sorgt es für viel sonnenschein bei weiter steigenden temperaturen ."
+ },
+ {
+  "id": "21November_2010_Sunday_tagesschau-5672",
+  "hypothesis": "heute nacht sieben bis null grad wo es länger aufklart ist leichter frost möglich .",
+  "reference": "wo es heute nacht aufklart ist leichter frost möglich sonst null bis vier grad ."
+ },
+ {
+  "id": "05January_2010_Tuesday_tagesschau-2667",
+  "hypothesis": "gleich zwei tiefs sorgen dafür dass es in der nacht und morgen in teilen deutschlands kräftig schneit das tief über der adria und das tief bei frankreich .",
+  "reference": "ein weiteres tief das morgen über spanien liegt sorgt dann am freitag bei uns dafür dass es kräftig schneit ."
+ },
+ {
+  "id": "26September_2009_Saturday_tagesschau-2341",
+  "hypothesis": "der wind weht schwach bis mäßig im norden auch frisch aus ost bis südost .",
+  "reference": "im norden weht der wind schwach bis mäßig aus west bis südwest sonst schwacher wind aus unterschiedlichen richtungen ."
+ },
+ {
+  "id": "08July_2010_Thursday_tagesschau-5389",
+  "hypothesis": "am montag viel sonne am nachmittag einzelne zum teil kräftige schauer und gewitter .",
+  "reference": "auch am montag neben sonne zum teil schwere gewitter ."
+ },
+ {
+  "id": "08November_2010_Monday_heute-6874",
+  "hypothesis": "liebe zuschauer guten abend .",
+  "reference": "guten abend liebe zuschauer ."
+ },
+ {
+  "id": "11July_2009_Saturday_tagesschau-667",
+  "hypothesis": "am mittwoch vor allem in der südosthälfte wieder kräftige vereinzelt unwetterartige schauer und gewitter sonst mal sonne mal wolken .",
+  "reference": "auch am dienstag und mittwoch mal sonne mal wolken dazu schauer in der südosthälfte teils schwere gewitter ."
+ },
+ {
+  "id": "08October_2009_Thursday_tagesschau-5359",
+  "hypothesis": "und dann kommt auch der regen auf .",
+  "reference": "auch im westen gibt es später wolkenlücken ."
+ },
+ {
+  "id": "18January_2010_Monday_tagesschau-4023",
+  "hypothesis": "morgen erwarten uns höchstwerte zwischen minus ein und plus sechs grad .",
+  "reference": "dort morgen sechs grad sonst temperaturen zwischen minus ein und plus fünf grad ."
+ }
+]

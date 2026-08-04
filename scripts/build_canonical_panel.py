@@ -124,26 +124,21 @@ def main():
         gb = BLEU.corpus_score(gt_hyps, [refs]).score
         pb = BLEU.corpus_score(pure_hyps, [refs]).score
 
-        # Per-item hypotheses
-        gt_items = [{"id": tid, "hypothesis": hyp, "reference": ref}
-                     for tid, hyp, ref in zip(test_ids, gt_hyps, refs)]
-        pure_items = [{"id": tid, "hypothesis": hyp, "reference": ref}
-                       for tid, hyp, ref in zip(test_ids, pure_hyps, refs)]
-        gt_items_sha = hashlib.sha256(
-            json.dumps(gt_items, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
-        pure_items_sha = hashlib.sha256(
-            json.dumps(pure_items, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
-
         results[name] = {
             "gt_bleu": gb, "pure_bleu": pb, "gap": pb - gb,
             "checkpoint_sha256": ckpt_hash,
             "donor_registry_sha256": donor_registry_sha256,
-            "gt_items_sha256": gt_items_sha,
-            "pure_items_sha256": pure_items_sha,
-            "gt_items": gt_items,
-            "pure_items": pure_items,
             "time_s": elapsed,
         }
+        # Save per-item hypotheses to separate files (avoids OOM in main JSON)
+        ITEMS_DIR = ROOT / "results/gap_43_canonical_beam3_items"
+        ITEMS_DIR.mkdir(parents=True, exist_ok=True)
+        json.dump([{"id": tid, "hypothesis": hyp, "reference": ref}
+                    for tid, hyp, ref in zip(test_ids, gt_hyps, refs)],
+                  open(ITEMS_DIR / f"{name}_gt.json", "w"), indent=1, ensure_ascii=False)
+        json.dump([{"id": tid, "hypothesis": hyp, "reference": ref}
+                    for tid, hyp, ref in zip(test_ids, pure_hyps, refs)],
+                  open(ITEMS_DIR / f"{name}_pure.json", "w"), indent=1, ensure_ascii=False)
         print(f"  {name}: GT={gb:.2f} PURE={pb:.2f} gap={pb - gb:+.2f} "
               f"({elapsed:.1f}s)", flush=True)
         del model
