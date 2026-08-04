@@ -1,0 +1,14 @@
+{
+ "alpha_0.5_seed_303": {
+  "gt_bleu": 8.946014991545086,
+  "pure_bleu": 7.866037894326938,
+  "gap": -1.0799770972181477,
+  "ckpt_dir": "checkpoints/distillation/alpha_0.5_seed_303"
+ },
+ "alpha_0.75_seed_303": {
+  "gt_bleu": 8.573002619112357,
+  "pure_bleu": 7.5932605738751455,
+  "gap": -0.9797420452372112,
+  "ckpt_dir": "checkpoints/distillation/alpha_0.75_seed_303"
+ }
+}

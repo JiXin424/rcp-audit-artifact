@@ -1,0 +1,411 @@
+{
+ "n_items": 200,
+ "tests": [
+  {
+   "label": "original",
+   "n": 200,
+   "bleu": 74.47449850990606,
+   "em": 0.655,
+   "time_s": 2.0610620975494385,
+   "sample": [
+    {
+     "id": "06October_2009_Tuesday_tagesschau-8160",
+     "hyp": "am sonntag ist es im nordwesten meist trocken sonst einige schauer im norden und an der ostsee mäßig",
+     "ref": "dort weht der wind schwach bis mäßig weiter nördlich auch frisch aus südwest auf den bergen sowie in"
+    },
+    {
+     "id": "23July_2010_Friday_tagesschau-580",
+     "hyp": "in der südhälfte regnet es heute nacht gebietsweise kräftig im süden sind gewitter dabei in schauer ",
+     "ref": "wegen des regens muss heute nacht im süden und osten stellenweise mit überschwemmungen gerechnet wer"
+    },
+    {
+     "id": "01June_2011_Wednesday_tagesschau-6953",
+     "hyp": "der wind weht schwach bis mäßig im südwesten frisch teilweise auch stark böig .",
+     "ref": "der wind weht schwach bis mäßig im südwesten frisch teilweise auch stark böig ."
+    },
+    {
+     "id": "06May_2010_Thursday_heute-1053",
+     "hyp": "und im norden und westen haben wir noch regen auch am vormittag leichter regen der nachmittags von s",
+     "ref": "und im norden und westen haben wir noch regen auch am vormittag leichter regen der nachmittags von s"
+    },
+    {
+     "id": "06October_2012_Saturday_tagesschau-8740",
+     "hyp": "morgen temperaturen von elf grad in oberfranken bis sechzehn grad am oberrhein .",
+     "ref": "morgen temperaturen von elf grad in oberfranken bis sechzehn grad am oberrhein ."
+    }
+   ]
+  },
+  {
+   "label": "shuffled_poses",
+   "n": 200,
+   "bleu": 0.9846777174187946,
+   "em": 0.0,
+   "time_s": 1.80550217628479,
+   "sample": [
+    {
+     "id": "06October_2009_Tuesday_tagesschau-8160",
+     "hyp": "und es gibt auch noch zum teil gewitter .",
+     "ref": "dort weht der wind schwach bis mäßig weiter nördlich auch frisch aus südwest auf den bergen sowie in"
+    },
+    {
+     "id": "23July_2010_Friday_tagesschau-580",
+     "hyp": "guten abend liebe zuschauer .",
+     "ref": "wegen des regens muss heute nacht im süden und osten stellenweise mit überschwemmungen gerechnet wer"
+    },
+    {
+     "id": "01June_2011_Wednesday_tagesschau-6953",
+     "hyp": "und am mittwoch vor allen dingen im norden dazu schauer im süden .",
+     "ref": "der wind weht schwach bis mäßig im südwesten frisch teilweise auch stark böig ."
+    },
+    {
+     "id": "06May_2010_Thursday_heute-1053",
+     "hyp": "morgen fällt von rheinland pfalz über baden württemberg bis zu den alpen meist regen hier und da sch",
+     "ref": "und im norden und westen haben wir noch regen auch am vormittag leichter regen der nachmittags von s"
+    },
+    {
+     "id": "06October_2012_Saturday_tagesschau-8740",
+     "hyp": "und nun die wettervorhersage für morgen mittwoch den neunten juni .",
+     "ref": "morgen temperaturen von elf grad in oberfranken bis sechzehn grad am oberrhein ."
+    }
+   ],
+   "perm": [
+    95,
+    15,
+    30,
+    158,
+    128,
+    115,
+    69,
+    170,
+    174,
+    45,
+    66,
+    182,
+    165,
+    78,
+    186,
+    177,
+    56,
+    152,
+    82,
+    68,
+    124,
+    16,
+    148,
+    93,
+    65,
+    60,
+    84,
+    67,
+    125,
+    132,
+    9,
+    18,
+    55,
+    75,
+    150,
+    104,
+    135,
+    137,
+    164,
+    76,
+    79,
+    197,
+    38,
+    24,
+    122,
+    195,
+    29,
+    19,
+    143,
+    86,
+    114,
+    173,
+    5,
+    126,
+    117,
+    73,
+    140,
+    98,
+    172,
+    96,
+    169,
+    97,
+    31,
+    12,
+    35,
+    119,
+    42,
+    189,
+    90,
+    136,
+    51,
+    127,
+    162,
+    41,
+    118,
+    113,
+    26,
+    139,
+    100,
+    111,
+    2,
+    77,
+    46,
+    187,
+    191,
+    85,
+    161,
+    36,
+    190,
+    61,
+    22,
+    141,
+    101,
+    33,
+    11,
+    194,
+    159,
+    6,
+    27,
+    120,
+    4,
+    32,
+    142,
+    145,
+    109,
+    144,
+    10,
+    62,
+    112,
+    146,
+    166,
+    0,
+    198,
+    153,
+    70,
+    123,
+    64,
+    44,
+    163,
+    28,
+    40,
+    108,
+    155,
+    156,
+    25,
+    23,
+    184,
+    147,
+    81,
+    39,
+    168,
+    47,
+    94,
+    154,
+    43,
+    138,
+    3,
+    105,
+    53,
+    133,
+    180,
+    178,
+    185,
+    49,
+    80,
+    34,
+    7,
+    110,
+    91,
+    83,
+    176,
+    181,
+    89,
+    8,
+    13,
+    59,
+    171,
+    131,
+    17,
+    72,
+    175,
+    134,
+    167,
+    183,
+    63,
+    54,
+    107,
+    50,
+    196,
+    58,
+    48,
+    88,
+    21,
+    57,
+    160,
+    192,
+    129,
+    37,
+    157,
+    193,
+    1,
+    52,
+    149,
+    130,
+    151,
+    103,
+    99,
+    116,
+    87,
+    74,
+    121,
+    199,
+    20,
+    188,
+    71,
+    106,
+    14,
+    92,
+    179,
+    102
+   ]
+  },
+  {
+   "label": "zero_poses",
+   "n": 200,
+   "bleu": 0.31463374827387075,
+   "em": 0.0,
+   "time_s": 1.102874517440796,
+   "sample": [
+    {
+     "id": "06October_2009_Tuesday_tagesschau-8160",
+     "hyp": "ein tief über dem norden deutschlands bringt dem norden deutschlands teilweise kräftige regenfälle u",
+     "ref": "dort weht der wind schwach bis mäßig weiter nördlich auch frisch aus südwest auf den bergen sowie in"
+    },
+    {
+     "id": "23July_2010_Friday_tagesschau-580",
+     "hyp": "ein tief über dem norden deutschlands bringt dem norden deutschlands teilweise kräftige regenfälle u",
+     "ref": "wegen des regens muss heute nacht im süden und osten stellenweise mit überschwemmungen gerechnet wer"
+    },
+    {
+     "id": "01June_2011_Wednesday_tagesschau-6953",
+     "hyp": "ein tief über dem norden deutschlands bringt dem norden deutschlands teilweise kräftige regenfälle u",
+     "ref": "der wind weht schwach bis mäßig im südwesten frisch teilweise auch stark böig ."
+    },
+    {
+     "id": "06May_2010_Thursday_heute-1053",
+     "hyp": "ein tief über dem norden deutschlands bringt dem norden deutschlands teilweise kräftige regenfälle u",
+     "ref": "und im norden und westen haben wir noch regen auch am vormittag leichter regen der nachmittags von s"
+    },
+    {
+     "id": "06October_2012_Saturday_tagesschau-8740",
+     "hyp": "ein tief über dem norden deutschlands bringt dem norden deutschlands teilweise kräftige regenfälle u",
+     "ref": "morgen temperaturen von elf grad in oberfranken bis sechzehn grad am oberrhein ."
+    }
+   ]
+  },
+  {
+   "label": "noise_poses",
+   "n": 200,
+   "bleu": 0.4507836022415932,
+   "em": 0.0,
+   "time_s": 1.9998252391815186,
+   "sample": [
+    {
+     "id": "06October_2009_Tuesday_tagesschau-8160",
+     "hyp": "aber in den nächsten tagen wird es noch ein bisschen wärmer bei uns alle die sonne und auch durchaus",
+     "ref": "dort weht der wind schwach bis mäßig weiter nördlich auch frisch aus südwest auf den bergen sowie in"
+    },
+    {
+     "id": "23July_2010_Friday_tagesschau-580",
+     "hyp": "auch am tag gibt es im norden und osten hier und da schauer und gewitter die besonders in der osthäl",
+     "ref": "wegen des regens muss heute nacht im süden und osten stellenweise mit überschwemmungen gerechnet wer"
+    },
+    {
+     "id": "01June_2011_Wednesday_tagesschau-6953",
+     "hyp": "am tag überwiegen in der osthälfte die wolken hier und da regnet es ein wenig ganz im süden ist es s",
+     "ref": "der wind weht schwach bis mäßig im südwesten frisch teilweise auch stark böig ."
+    },
+    {
+     "id": "06May_2010_Thursday_heute-1053",
+     "hyp": "aber in den nächsten tagen wird es noch ein bisschen kühler und das heißt heute nacht von der ostsee",
+     "ref": "und im norden und westen haben wir noch regen auch am vormittag leichter regen der nachmittags von s"
+    },
+    {
+     "id": "06October_2012_Saturday_tagesschau-8740",
+     "hyp": "in der zweiten nachthälfte von nordwesten neue schauer und gewitter werden die auch mal dichter sein",
+     "ref": "morgen temperaturen von elf grad in oberfranken bis sechzehn grad am oberrhein ."
+    }
+   ]
+  },
+  {
+   "label": "same_pose",
+   "n": 200,
+   "bleu": 0.8485647201946694,
+   "em": 0.0,
+   "time_s": 1.3000342845916748,
+   "sample": [
+    {
+     "id": "06October_2009_Tuesday_tagesschau-8160",
+     "hyp": "am sonntag ist es im nordwesten meist trocken sonst einige schauer im norden und an der ostsee mäßig",
+     "ref": "dort weht der wind schwach bis mäßig weiter nördlich auch frisch aus südwest auf den bergen sowie in"
+    },
+    {
+     "id": "23July_2010_Friday_tagesschau-580",
+     "hyp": "am sonntag ist es im nordwesten meist trocken sonst einige schauer im norden und an der ostsee mäßig",
+     "ref": "wegen des regens muss heute nacht im süden und osten stellenweise mit überschwemmungen gerechnet wer"
+    },
+    {
+     "id": "01June_2011_Wednesday_tagesschau-6953",
+     "hyp": "am sonntag ist es im nordwesten meist trocken sonst einige schauer im norden und an der ostsee mäßig",
+     "ref": "der wind weht schwach bis mäßig im südwesten frisch teilweise auch stark böig ."
+    },
+    {
+     "id": "06May_2010_Thursday_heute-1053",
+     "hyp": "am sonntag ist es im nordwesten meist trocken sonst einige schauer im norden und an der ostsee mäßig",
+     "ref": "und im norden und westen haben wir noch regen auch am vormittag leichter regen der nachmittags von s"
+    },
+    {
+     "id": "06October_2012_Saturday_tagesschau-8740",
+     "hyp": "am sonntag ist es im nordwesten meist trocken sonst einige schauer im norden und an der ostsee mäßig",
+     "ref": "morgen temperaturen von elf grad in oberfranken bis sechzehn grad am oberrhein ."
+    }
+   ]
+  },
+  {
+   "label": "reversed_order",
+   "n": 200,
+   "bleu": 74.47449850990606,
+   "em": 0.655,
+   "time_s": 1.8492217063903809,
+   "sample": [
+    {
+     "id": "11January_2011_Tuesday_heute-8177",
+     "hyp": "dauerregen dazu nur sechs bis acht grad .",
+     "ref": "anfangs ist allerdings auch schnee dabei zumindest in den mittelgebirgen und der wind legt dann auch"
+    },
+    {
+     "id": "23July_2011_Saturday_tagesschau-5506",
+     "hyp": "am mittwoch teils wolkig teils freundlich vor allem aber am nachmittag wieder schauer und gewitter .",
+     "ref": "am mittwoch teils wolkig teils freundlich vor allem aber am nachmittag wieder schauer und gewitter ."
+    },
+    {
+     "id": "19January_2011_Wednesday_heute-2686",
+     "hyp": "sonst ist es meist stark bewölkt aber an den küsten herrlicher sonnenschein in dieser trockenen luft",
+     "ref": "sonst ist es meist stark bewölkt aber an den küsten herrlicher sonnenschein in dieser trockenen luft"
+    },
+    {
+     "id": "28November_2010_Sunday_tagesschau-2443",
+     "hyp": "wo es heute nacht länger aufklart starker frost bis minus zwölf grad .",
+     "ref": "wo es heute nacht länger aufklart starker frost bis minus zwölf grad ."
+    },
+    {
+     "id": "06October_2012_Saturday_tagesschau-8736",
+     "hyp": "am freundlichsten wird es von westen bis in die mitte .",
+     "ref": "am freundlichsten wird es von westen bis in die mitte ."
+    }
+   ]
+  }
+ ]
+}

@@ -1,9 +1,9 @@
 # Review Artifact — `artifact/` README
 
 This artifact accompanies the manuscript:
-**"A Training-Pool Replay Audit of the Released SLRTP2025 Back-Translation Evaluator: Reference-Set Sensitivity and Non-Replication Across Independently Trained Checkpoints"**
+**"A Training-Pool Replay Audit of the Released SLRTP2025 Back-Translation Evaluator: Non-Replication Across Independently Trained Checkpoints and a Readout-With-Generalization Signature"**
 
-Repository: https://github.com/JiXin424/RCP
+Repository: [anonymized for double-blind review — the public repository URL will be restored in the camera-ready version]
 
 ## 1. Layout
 
@@ -29,7 +29,8 @@ artifact/
 │   ├── evaluator_extension/       # extension seeds 707–1405 (8 cells × 4 systems)
 │   ├── round5/                    # supplementary diagnostics
 │   ├── human_eval/                # DGS human evaluation analysis (30 raters × 100 videos)
-│   ├── checkpoint_registry.json   # machine-readable registry of 55 core entries
+│   ├── checkpoint_registry.json           # machine-readable registry of 55 core entries
+│   ├── canonical_checkpoint_registry.json # canonical v3 registry (beam-3 primary; 70 trained, 68 beam-3 eval, 2 OOM)
 │   └── unified_checkpoint_registry.json  # full registry incl. distillation (71 entries)
 ├── scripts/                       # 44 reproducible analysis scripts
 │   └── decode_new_systems.py, e1_analyze.py, e12c_rank_stability.py, ...
@@ -79,9 +80,9 @@ All trained checkpoints are in the repository root at `checkpoints/`. The canoni
 | BT-retrained (holdout) | 1 | 1 | 0 | 0 | — |
 | Cross-fit A/B (holdout) | 2 | 2 | 0 | 0 | — |
 | Distillation students | 15 | 13 | 13 | 13 | — |
-| **Total** | **70** | **68** | **41** | **65** | **52** |
+| **Total** | **70** | **70** | **41** | **65** | **52** |
 
-The non-distillation families (52 gate-eligible + 3 holdout-only = 55 core entries) are in `results/checkpoint_registry.json`; distillation is in the unified registry. The 2 distillation OOMs (α=0.5 s303, α=0.75 s303) failed under beam-3 but completed under greedy in the sibling reproduction repository.
+The non-distillation families (52 gate-eligible + 3 holdout-only = 55 core entries) are in `results/checkpoint_registry.json`; distillation is in the unified registry. All 70 planned checkpoints completed training; 68 of 70 were evaluated under beam-3 (the 2 distillation OOMs: α=0.5 s303 and α=0.75 s303 failed under beam-3 but completed under greedy in the sibling reproduction repository).
 
 ## 6. DGS human evaluation data
 
@@ -92,3 +93,7 @@ The per-rater response matrices (semantic adequacy, intelligibility, naturalness
 - `paper_table.json`: rank-profile table for Appendix
 
 The original 100 video files and the UUID-to-system manifest were lost after the evaluation. The response CSVs/JSONs above remain intact.
+
+## 7. Known discrepancies
+
+- **Canonical GT WER (raw vs official-normalized):** The canonical GT cell (`data/cells/cp0_GT-v1.json`) stores a raw whitespace-split WER of 79.26 for the released evaluator on GT-v1, while the paper reports the official-normalized WER of 85.77 (jiwer 3.1.0 with official SLRTP2025 normalization; see Section "Metric implementations"). The raw value is the unnormalized whitespace-tokenized WER; the paper uses the official-normalized value throughout. Both values correspond to the same 641 decoded sequences; the difference is purely the normalization pipeline. The BLEU-4 value (12.78) is invariant to this choice.

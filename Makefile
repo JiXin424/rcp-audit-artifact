@@ -1,6 +1,15 @@
 .PHONY: core-audit regression reproduction-dag
 PYTHON ?= python3
 
+# NOTE: Only `core-audit` and `regression` are operational in the anonymous artifact.
+# The `reproduction-dag` target references scripts from sibling revision directories
+# (../revision_20260728_round3, ../revision_20260728_round4) that are not included
+# because they depend on intermediate data files generated during the audit that
+# exceed the artifact size limit. The saved hypotheses in data/cells/ and the
+# sufficient statistics in results/ allow full recomputation of all reported
+# numbers via `core-audit`. The DAG scripts will be published with the camera-ready
+# version at the public repository.
+
 core-audit: regression
 	$(PYTHON) scripts/reviewer_round2_diagnostics.py --cells data/cells --output results/bleu_diagnostics
 

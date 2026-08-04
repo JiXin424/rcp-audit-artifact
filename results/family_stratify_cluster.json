@@ -1,0 +1,125 @@
+{
+ "family_stratification": {
+  "distillation": {
+   "n": 15,
+   "gap_range": [
+    -1.2764754247018928,
+    0.0
+   ],
+   "gap_mean": -0.5934794454084886,
+   "gap_sd": 0.4718316314763463,
+   "dev_nll_range": [
+    2.9070645030030993,
+    10.014989255321622
+   ]
+  },
+  "reconstructions_extension": {
+   "n": 8,
+   "gap_range": [
+    -1.442616900062701,
+    -0.032466566709901556
+   ],
+   "gap_mean": -0.6510932759448643,
+   "gap_sd": 0.5181250336375888,
+   "dev_nll_range": [
+    2.4042509341032607,
+    2.501899859791847
+   ]
+  },
+  "reconstructions_primary": {
+   "n": 6,
+   "gap_range": [
+    -1.123356870086976,
+    -0.1256125138514399
+   ],
+   "gap_mean": -0.6549219182195077,
+   "gap_sd": 0.3940952010885156,
+   "dev_nll_range": [
+    2.404557900249094,
+    2.49134280981607
+   ]
+  },
+  "released": {
+   "n": 1,
+   "gap_range": [
+    9.879274940956389,
+    9.879274940956389
+   ],
+   "gap_mean": 9.879274940956389,
+   "gap_sd": null,
+   "dev_nll_range": [
+    3.0595668324495393,
+    3.0595668324495393
+   ]
+  },
+  "_reconstruction_PI_14seed": {
+   "n": 14,
+   "mean": -0.6527341226339972,
+   "sd": 0.4519853851192924,
+   "t_975": 2.1603686564610127,
+   "PI_lo": -1.663461132523111,
+   "PI_hi": 0.3579928872551167,
+   "note": "Same-recipe 14-seed Student-t prediction interval. Valid for inference about the reconstruction recipe, NOT for the released evaluator."
+  },
+  "_heterogeneous_summary": {
+   "n": 15,
+   "families": [
+    "distillation"
+   ],
+   "gap_range": [
+    -1.2764754247018928,
+    0.0
+   ],
+   "gap_mean": -0.5934794454084886,
+   "note": "Heterogeneous checkpoints from different generation mechanisms. Shown for range exploration only; NOT IID replicates."
+  }
+ },
+ "cluster_bootstrap": {
+  "query_level": {
+   "n_items": 641,
+   "gap_mean": 9.893807744068269,
+   "ci_lo": 8.447337932220423,
+   "ci_hi": 11.397785266339545
+  },
+  "signer": {
+   "cluster_type": "signer",
+   "n_clusters": 9,
+   "max_cluster_size": 196,
+   "mean_cluster_size": 71.22222222222223,
+   "n_items": 641,
+   "gap_mean": 9.932067623775835,
+   "ci_lo": 9.078416694480252,
+   "ci_hi": 10.844921934841835
+  },
+  "show": {
+   "cluster_type": "show",
+   "n_clusters": 2,
+   "max_cluster_size": 508,
+   "mean_cluster_size": 320.5,
+   "n_items": 641,
+   "gap_mean": 9.264644672107163,
+   "ci_lo": 6.564249252167921,
+   "ci_hi": 10.727768307344656
+  },
+  "broadcast_date": {
+   "cluster_type": "broadcast_date",
+   "n_clusters": 297,
+   "max_cluster_size": 11,
+   "mean_cluster_size": 2.1582491582491583,
+   "n_items": 641,
+   "gap_mean": 9.89681574483971,
+   "ci_lo": 8.378234011310425,
+   "ci_hi": 11.449061823247048
+  },
+  "signer_x_show": {
+   "cluster_type": "signer_x_show",
+   "n_clusters": 17,
+   "max_cluster_size": 162,
+   "mean_cluster_size": 37.705882352941174,
+   "n_items": 641,
+   "gap_mean": 9.808107237387453,
+   "ci_lo": 7.946947104436028,
+   "ci_hi": 11.395064091671884
+  }
+ }
+}
