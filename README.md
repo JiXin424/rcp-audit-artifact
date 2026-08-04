@@ -13,7 +13,7 @@ artifact/
 ├── Makefile                       # `make core-audit` (operational); `reproduction-dag` needs sibling scripts
 ├── LICENSE                        # MIT license (source code + derived statistics)
 ├── requirements.lock.txt          # Python dependency pins
-├── artifact_ledger.json           # SHA-256 ledger (note: covers original 221-file release; new files in results/ added post-ledger)
+├── artifact_ledger.json           # SHA-256 ledger (304 files; auto-generated from current artifact state)
 ├── manifests/
 │   └── exclusions.jsonl           # IDs absent from released SLRTP2025 pose materialization
 ├── data/cells/                    # decoded BT hypotheses (60 cells: 15 beam-3 evaluators × 4 systems)
@@ -21,6 +21,7 @@ artifact/
 │   ├── cp0_TN-PURE-v1.json        # Released evaluator × TN-PURE-v1
 │   └── ...
 ├── results/
+│   ├── cells_greedy/                     # 30-evaluator greedy-decode cells (cp0-cp29, GT-v1 + TN-PURE-v1)
 │   ├── unified_checkpoint_registry.json   # SINGLE SOURCE OF TRUTH (71 entries: 70 trained + 1 released)
 │   ├── canonical_checkpoint_registry.json # beam-3 primary registry (matches unified)
 │   ├── all_distill_beam3_canonical.json   # 15/15 distillation beam-3 gaps (canonical donor registry)
@@ -97,5 +98,4 @@ Per-rater response matrices for the 30-rater × 100-video feasibility study are 
 ## 6. Known discrepancies
 
 - **Canonical GT WER (raw vs official-normalized):** The canonical GT cell stores raw WER 79.26; the paper reports official-normalized WER 85.77 (jiwer 3.1.0 with SLRTP2025 normalization). Both correspond to the same 641 decoded sequences; the difference is the normalization pipeline. BLEU-4 (12.78) is invariant.
-- **Artifact ledger coverage:** `artifact_ledger.json` covers the original 221-file release. New round-2 files (7 result JSONs, 7 scripts) are present in the artifact but not yet in the ledger. The ledger will be regenerated for the camera-ready version.
 - **Donor registry:** The distillation students' beam-3 evaluation uses a rebuilt canonical donor registry (NFKC + Levenshtein + SHA-256). 625/641 items (97.5%) select the same donor as the original registry used for non-distillation checkpoints. See manuscript §Donor-registry consistency note.

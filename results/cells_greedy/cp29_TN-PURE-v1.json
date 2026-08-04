@@ -1,0 +1,5150 @@
+{
+  "schema": "canonical-evaluation-cell-v2",
+  "evaluator": "distill_1.0_303",
+  "system": "TN-PURE-v1",
+  "n_items": 641,
+  "decoded_bleu": 7.551982001362107e-05,
+  "metrics": {
+    "count": 641,
+    "decoded_bleu": 0.007551982001362107,
+    "bleu_1": 3.8221528861154446,
+    "chrf": 0.5375742294278443,
+    "wer": null,
+    "teacher_forced_nll_per_token": 9.134615366027194,
+    "edits": null,
+    "reference_words": 8444,
+    "calibration": null,
+    "sacrebleu_signature": "BLEU|nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1"
+  },
+  "runtime_seconds": 0.9175138473510742,
+  "items": [
+    {
+      "id": "27April_2010_Tuesday_heute-1028",
+      "hypothesis": "</s>",
+      "reference": "da haben wir morgen schon die dreißig grad morgen im süden von frankreich auch und für uns wahrscheinlich schon im südwesten die fünfundzwanzig grad .",
+      "nll_sum": 260.37286376953125,
+      "token_count": 26,
+      "nll_per_token": 10.01434091421274
+    },
+    {
+      "id": "28January_2010_Thursday_heute-2882",
+      "hypothesis": "</s>",
+      "reference": "guten abend liebe zuschauer .",
+      "nll_sum": 24.978696823120117,
+      "token_count": 6,
+      "nll_per_token": 4.1631161371866865
+    },
+    {
+      "id": "26July_2010_Monday_tagesschau-6266",
+      "hypothesis": "</s>",
+      "reference": "am mittwoch breiten sich von nordwesten neue wolken mit regen oder schauern aus örtlich sind auch gewitter dabei .",
+      "nll_sum": 188.6289520263672,
+      "token_count": 20,
+      "nll_per_token": 9.431447601318359
+    },
+    {
+      "id": "04July_2010_Sunday_tagesschau-7206",
+      "hypothesis": "</s>",
+      "reference": "abseits der gewittern weht der wind schwach bis mäßig an der küste frisch .",
+      "nll_sum": 120.035888671875,
+      "token_count": 15,
+      "nll_per_token": 8.002392578125
+    },
+    {
+      "id": "06May_2011_Friday_tagesschau-6436",
+      "hypothesis": "</s>",
+      "reference": "am tag werte zwischen zwanzig und achtundzwanzig grad an der ostsee werte darunter .",
+      "nll_sum": 133.47813415527344,
+      "token_count": 15,
+      "nll_per_token": 8.89854227701823
+    },
+    {
+      "id": "25June_2010_Friday_tagesschau-3877",
+      "hypothesis": "</s>",
+      "reference": "das hoch gewinnt wieder an kraft und beschert uns am wochenende viel sonnenschein bei meist sommerlichen temperaturen .",
+      "nll_sum": 181.56427001953125,
+      "token_count": 19,
+      "nll_per_token": 9.556014211554276
+    },
+    {
+      "id": "29August_2011_Monday_tagesschau-5710",
+      "hypothesis": "</s>",
+      "reference": "heute nacht gibt es im norden dichte wolken besonders nördlich einer linie emsland uckermark schauert es .",
+      "nll_sum": 202.51980590820312,
+      "token_count": 18,
+      "nll_per_token": 11.251100328233507
+    },
+    {
+      "id": "21October_2011_Friday_tagesschau-4103",
+      "hypothesis": "</s>",
+      "reference": "das hoch das sich richtung osteuropa verlagert bestimmt auch in den kommenden tagen unser wetter .",
+      "nll_sum": 145.13023376464844,
+      "token_count": 17,
+      "nll_per_token": 8.537072574391084
+    },
+    {
+      "id": "08September_2010_Wednesday_tagesschau-5240",
+      "hypothesis": "</s>",
+      "reference": "am tag von schleswig holstein bis nach vorpommern und zunächst auch in brandenburg gebietsweise länger andauernder regen .",
+      "nll_sum": 201.695068359375,
+      "token_count": 19,
+      "nll_per_token": 10.615529913651315
+    },
+    {
+      "id": "27November_2011_Sunday_tagesschau-5138",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen montag den achtundzwanzigsten november .",
+      "nll_sum": 98.45048522949219,
+      "token_count": 12,
+      "nll_per_token": 8.204207102457682
+    },
+    {
+      "id": "06October_2011_Thursday_heute-5535",
+      "hypothesis": "</s>",
+      "reference": "in den alpen wird es dann sogar schneien .",
+      "nll_sum": 73.10841369628906,
+      "token_count": 10,
+      "nll_per_token": 7.310841369628906
+    },
+    {
+      "id": "01April_2010_Thursday_tagesschau-4331",
+      "hypothesis": "</s>",
+      "reference": "am sonntag ab und an regenschauer teilweise auch gewitter .",
+      "nll_sum": 90.01522064208984,
+      "token_count": 11,
+      "nll_per_token": 8.183201876553623
+    },
+    {
+      "id": "05February_2010_Friday_tagesschau-2916",
+      "hypothesis": "</s>",
+      "reference": "westlich des rheins und im nordosten bleibt es meist trocken .",
+      "nll_sum": 106.78255462646484,
+      "token_count": 12,
+      "nll_per_token": 8.89854621887207
+    },
+    {
+      "id": "26January_2010_Tuesday_tagesschau-2784",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen mittwoch den siebenundzwanzigsten januar .",
+      "nll_sum": 104.17777252197266,
+      "token_count": 12,
+      "nll_per_token": 8.68148104349772
+    },
+    {
+      "id": "26April_2010_Monday_tagesschau-7272",
+      "hypothesis": "</s>",
+      "reference": "die schauer und gewitter im norden klingen in der nacht ab an den alpen fallen noch ein paar regentropfen stellenweise bildet sich nebel .",
+      "nll_sum": 281.5697021484375,
+      "token_count": 25,
+      "nll_per_token": 11.2627880859375
+    },
+    {
+      "id": "07December_2010_Tuesday_heute-5633",
+      "hypothesis": "</s>",
+      "reference": "mit föhnunterstützung klettern die temperaturen am alpenrand bis zehn grad .",
+      "nll_sum": 93.98680114746094,
+      "token_count": 12,
+      "nll_per_token": 7.832233428955078
+    },
+    {
+      "id": "11August_2009_Tuesday_tagesschau-4354",
+      "hypothesis": "</s>",
+      "reference": "südlich des mains morgen verbreitet freundlich .",
+      "nll_sum": 71.14209747314453,
+      "token_count": 8,
+      "nll_per_token": 8.892762184143066
+    },
+    {
+      "id": "01April_2011_Friday_tagesschau-3388",
+      "hypothesis": "</s>",
+      "reference": "aber ab dienstag wird es langsam wieder freundlicher und wärmer .",
+      "nll_sum": 91.80653381347656,
+      "token_count": 12,
+      "nll_per_token": 7.65054448445638
+    },
+    {
+      "id": "02March_2011_Wednesday_tagesschau-4702",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen donnerstag den dritten märz .",
+      "nll_sum": 103.09271240234375,
+      "token_count": 12,
+      "nll_per_token": 8.591059366861979
+    },
+    {
+      "id": "07September_2010_Tuesday_tagesschau-1945",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen mittwoch den achten september .",
+      "nll_sum": 100.65946960449219,
+      "token_count": 12,
+      "nll_per_token": 8.388289133707682
+    },
+    {
+      "id": "25November_2010_Thursday_tagesschau-2527",
+      "hypothesis": "</s>",
+      "reference": "heute nacht vor allem in einem streifen von baden württemberg bis nach sachsen stellenweise schneeschauer .",
+      "nll_sum": 184.75379943847656,
+      "token_count": 17,
+      "nll_per_token": 10.867870555204505
+    },
+    {
+      "id": "12October_2009_Monday_tagesschau-548",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen dienstag den dreizehnten oktober .",
+      "nll_sum": 108.24346923828125,
+      "token_count": 12,
+      "nll_per_token": 9.020289103190104
+    },
+    {
+      "id": "26September_2009_Saturday_tagesschau-2336",
+      "hypothesis": "</s>",
+      "reference": "ganz im süden sind einzelne schauer möglich .",
+      "nll_sum": 75.72116088867188,
+      "token_count": 9,
+      "nll_per_token": 8.413462320963541
+    },
+    {
+      "id": "28October_2009_Wednesday_tagesschau-4535",
+      "hypothesis": "</s>",
+      "reference": "im norden und nordosten deutschlands bleibt es morgen meist noch wolkenverhangen mit etwas regen .",
+      "nll_sum": 143.11280822753906,
+      "token_count": 16,
+      "nll_per_token": 8.944550514221191
+    },
+    {
+      "id": "20November_2009_Friday_tagesschau-6567",
+      "hypothesis": "</s>",
+      "reference": "am nachmittag wird es dann freundlicher .",
+      "nll_sum": 59.09808349609375,
+      "token_count": 8,
+      "nll_per_token": 7.387260437011719
+    },
+    {
+      "id": "04December_2009_Friday_tagesschau-835",
+      "hypothesis": "</s>",
+      "reference": "der sorgt wieder für wolken die regen im bergland auch schnee bringen .",
+      "nll_sum": 119.18675231933594,
+      "token_count": 14,
+      "nll_per_token": 8.513339451381139
+    },
+    {
+      "id": "29September_2012_Saturday_tagesschau-2963",
+      "hypothesis": "</s>",
+      "reference": "in der südhälfte weht der wind schwach sonst schwach bis mäßig richtung küsten frisch und stark böig .",
+      "nll_sum": 161.063232421875,
+      "token_count": 19,
+      "nll_per_token": 8.477012232730264
+    },
+    {
+      "id": "14December_2009_Monday_tagesschau-2093",
+      "hypothesis": "</s>",
+      "reference": "in den höhenlagen süddeutschlands frischer wind .",
+      "nll_sum": 64.37574005126953,
+      "token_count": 8,
+      "nll_per_token": 8.046967506408691
+    },
+    {
+      "id": "04January_2010_Monday_tagesschau-8544",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen dienstag den fünften januar .",
+      "nll_sum": 98.09625244140625,
+      "token_count": 12,
+      "nll_per_token": 8.174687703450521
+    },
+    {
+      "id": "13October_2009_Tuesday_tagesschau-1657",
+      "hypothesis": "</s>",
+      "reference": "ähnliches wetter auch am donnerstag .",
+      "nll_sum": 51.589927673339844,
+      "token_count": 7,
+      "nll_per_token": 7.369989667619977
+    },
+    {
+      "id": "27August_2010_Friday_tagesschau-5164",
+      "hypothesis": "</s>",
+      "reference": "sonntag und montag ändert sich an diesem ungemütlichen und recht kühlen wetter noch wenig .",
+      "nll_sum": 161.63058471679688,
+      "token_count": 16,
+      "nll_per_token": 10.101911544799805
+    },
+    {
+      "id": "12December_2011_Monday_tagesschau-8269",
+      "hypothesis": "</s>",
+      "reference": "atlantische tiefausläufer bringen uns die ganze woche über regenfälle und zum teil stürmische winde .",
+      "nll_sum": 169.88430786132812,
+      "token_count": 16,
+      "nll_per_token": 10.617769241333008
+    },
+    {
+      "id": "04December_2010_Saturday_tagesschau-4834",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen sonntag den fünften dezember .",
+      "nll_sum": 98.13929748535156,
+      "token_count": 12,
+      "nll_per_token": 8.178274790445963
+    },
+    {
+      "id": "22February_2010_Monday_tagesschau-3247",
+      "hypothesis": "</s>",
+      "reference": "ganz im norden fällt hier und da schnee .",
+      "nll_sum": 76.17597198486328,
+      "token_count": 10,
+      "nll_per_token": 7.617597198486328
+    },
+    {
+      "id": "07February_2010_Sunday_tagesschau-499",
+      "hypothesis": "</s>",
+      "reference": "im südwesten morgen werte um den gefrierpunkt im osten bis minus sieben grad .",
+      "nll_sum": 117.91828918457031,
+      "token_count": 15,
+      "nll_per_token": 7.861219278971354
+    },
+    {
+      "id": "08April_2010_Thursday_tagesschau-3961",
+      "hypothesis": "</s>",
+      "reference": "auch die neue woche beginnt durchwachsen und recht kühl .",
+      "nll_sum": 114.3770980834961,
+      "token_count": 11,
+      "nll_per_token": 10.397918007590555
+    },
+    {
+      "id": "06October_2010_Wednesday_tagesschau-638",
+      "hypothesis": "</s>",
+      "reference": "morgen vormittag an der ostsee noch starke böen sonst weht der wind schwach bis mäßig aus ost bis südost .",
+      "nll_sum": 208.1815948486328,
+      "token_count": 21,
+      "nll_per_token": 9.913409278506325
+    },
+    {
+      "id": "08October_2009_Thursday_tagesschau-5353",
+      "hypothesis": "</s>",
+      "reference": "morgen schwacher bis mäßiger ostwind .",
+      "nll_sum": 55.624847412109375,
+      "token_count": 7,
+      "nll_per_token": 7.946406773158482
+    },
+    {
+      "id": "24August_2010_Tuesday_heute-3007",
+      "hypothesis": "</s>",
+      "reference": "ein <unk> wetterwechsel seit gestern sogar mit tornados .",
+      "nll_sum": 116.38868713378906,
+      "token_count": 10,
+      "nll_per_token": 11.638868713378907
+    },
+    {
+      "id": "07August_2009_Friday_tagesschau-6165",
+      "hypothesis": "</s>",
+      "reference": "es gelten entsprechende warnungen des deutschen wetterdienstes .",
+      "nll_sum": 86.18900299072266,
+      "token_count": 9,
+      "nll_per_token": 9.576555887858072
+    },
+    {
+      "id": "27November_2009_Friday_tagesschau-7340",
+      "hypothesis": "</s>",
+      "reference": "am montag ist es meist stark bewölkt hier und da regnet es .",
+      "nll_sum": 113.27625274658203,
+      "token_count": 14,
+      "nll_per_token": 8.091160910470146
+    },
+    {
+      "id": "15February_2011_Tuesday_tagesschau-7474",
+      "hypothesis": "</s>",
+      "reference": "am tag ist es meist stark bewölkt oder neblig trüb .",
+      "nll_sum": 105.34227752685547,
+      "token_count": 12,
+      "nll_per_token": 8.778523127237955
+    },
+    {
+      "id": "11September_2009_Friday_tagesschau-8773",
+      "hypothesis": "</s>",
+      "reference": "tiefausläufer erreichen uns zunächst nur in <unk> form .",
+      "nll_sum": 101.94281768798828,
+      "token_count": 10,
+      "nll_per_token": 10.194281768798827
+    },
+    {
+      "id": "04June_2010_Friday_tagesschau-1176",
+      "hypothesis": "</s>",
+      "reference": "am montag ist es wechselhaft mal sonne mal wolken vor allem in der osthälfte einige kräftige schauer und gewitter .",
+      "nll_sum": 182.65057373046875,
+      "token_count": 21,
+      "nll_per_token": 8.69764636811756
+    },
+    {
+      "id": "26May_2010_Wednesday_heute-7863",
+      "hypothesis": "</s>",
+      "reference": "liebe zuschauer guten abend .",
+      "nll_sum": 27.866783142089844,
+      "token_count": 6,
+      "nll_per_token": 4.644463857014974
+    },
+    {
+      "id": "12May_2010_Wednesday_tagesschau-323",
+      "hypothesis": "</s>",
+      "reference": "am samstag regnet es im südosten und an der ostsee dort ist es teilweise windig sonst regnet es nur vereinzelt teilweise zeigt sich die sonne .",
+      "nll_sum": 295.9017639160156,
+      "token_count": 27,
+      "nll_per_token": 10.95932458948206
+    },
+    {
+      "id": "27May_2011_Friday_tagesschau-8129",
+      "hypothesis": "</s>",
+      "reference": "an der nordsee morgen fünfzehn am hochrhein immerhin bis dreiundzwanzig grad .",
+      "nll_sum": 105.59782409667969,
+      "token_count": 13,
+      "nll_per_token": 8.122909545898438
+    },
+    {
+      "id": "15December_2009_Tuesday_tagesschau-6963",
+      "hypothesis": "</s>",
+      "reference": "am tag halten sich über dem südosten dichte wolken aus denen ein paar schneeflocken fallen .",
+      "nll_sum": 167.69039916992188,
+      "token_count": 17,
+      "nll_per_token": 9.864141127642464
+    },
+    {
+      "id": "29April_2010_Thursday_heute-8626",
+      "hypothesis": "</s>",
+      "reference": "und das wetter bringt dort auch noch sonnenschein am vormittag zumindest .",
+      "nll_sum": 119.60227966308594,
+      "token_count": 13,
+      "nll_per_token": 9.200175358698917
+    },
+    {
+      "id": "25June_2010_Friday_tagesschau-3879",
+      "hypothesis": "</s>",
+      "reference": "das gilt auch für den abend aber im laufe der nacht werden schauer und gewitter in der südosthälfte immer seltener .",
+      "nll_sum": 194.24945068359375,
+      "token_count": 22,
+      "nll_per_token": 8.829520485617898
+    },
+    {
+      "id": "20June_2011_Monday_tagesschau-1257",
+      "hypothesis": "</s>",
+      "reference": "am hochrhein morgen schwül warme dreißig an der nordsee frische achtzehn grad .",
+      "nll_sum": 122.93510437011719,
+      "token_count": 14,
+      "nll_per_token": 8.781078883579799
+    },
+    {
+      "id": "29April_2010_Thursday_heute-8627",
+      "hypothesis": "</s>",
+      "reference": "nachmittags bilden sich hier in bayern kräftige gewitter .",
+      "nll_sum": 82.05785369873047,
+      "token_count": 10,
+      "nll_per_token": 8.205785369873047
+    },
+    {
+      "id": "03July_2011_Sunday_tagesschau-1672",
+      "hypothesis": "</s>",
+      "reference": "am dienstag ist es in der westhälfte meist freundlich ansonsten stellenweise schauer oder gewitter .",
+      "nll_sum": 164.10379028320312,
+      "token_count": 16,
+      "nll_per_token": 10.256486892700195
+    },
+    {
+      "id": "16June_2010_Wednesday_tagesschau-8148",
+      "hypothesis": "</s>",
+      "reference": "im norden und in der mitte verläuft die nacht meist klar im süden regnet es gebietsweise .",
+      "nll_sum": 172.39810180664062,
+      "token_count": 18,
+      "nll_per_token": 9.577672322591146
+    },
+    {
+      "id": "26September_2009_Saturday_tagesschau-2339",
+      "hypothesis": "</s>",
+      "reference": "sobald sich der nebel am tag lichtet scheint die sonne .",
+      "nll_sum": 107.6797103881836,
+      "token_count": 12,
+      "nll_per_token": 8.973309199015299
+    },
+    {
+      "id": "21April_2010_Wednesday_heute-3108",
+      "hypothesis": "</s>",
+      "reference": "guten abend liebe zuschauer .",
+      "nll_sum": 24.97869873046875,
+      "token_count": 6,
+      "nll_per_token": 4.163116455078125
+    },
+    {
+      "id": "29October_2009_Thursday_tagesschau-1024",
+      "hypothesis": "</s>",
+      "reference": "die neue woche beginnt wechselhaft und kühler .",
+      "nll_sum": 98.64875793457031,
+      "token_count": 9,
+      "nll_per_token": 10.960973103841146
+    },
+    {
+      "id": "06July_2010_Tuesday_tagesschau-2658",
+      "hypothesis": "</s>",
+      "reference": "an der see lebt er auch mal ein wenig auf und kommt aus west .",
+      "nll_sum": 130.67855834960938,
+      "token_count": 16,
+      "nll_per_token": 8.167409896850586
+    },
+    {
+      "id": "24September_2009_Thursday_heute-6080",
+      "hypothesis": "</s>",
+      "reference": "allerdings erst am wochenende .",
+      "nll_sum": 50.342769622802734,
+      "token_count": 6,
+      "nll_per_token": 8.390461603800455
+    },
+    {
+      "id": "25November_2009_Wednesday_tagesschau-7677",
+      "hypothesis": "</s>",
+      "reference": "am freitag wechselhaftes schauerwetter .",
+      "nll_sum": 47.98340606689453,
+      "token_count": 6,
+      "nll_per_token": 7.997234344482422
+    },
+    {
+      "id": "14September_2010_Tuesday_heute-8237",
+      "hypothesis": "</s>",
+      "reference": "die norddeutschen <unk> es ja heute schon aber es wird jetzt auch die <unk> treffen .",
+      "nll_sum": 162.05221557617188,
+      "token_count": 17,
+      "nll_per_token": 9.532483269186582
+    },
+    {
+      "id": "12October_2009_Monday_tagesschau-561",
+      "hypothesis": "</s>",
+      "reference": "ähnliches wetter dann auch am donnerstag .",
+      "nll_sum": 60.08329772949219,
+      "token_count": 8,
+      "nll_per_token": 7.510412216186523
+    },
+    {
+      "id": "14October_2010_Thursday_tagesschau-291",
+      "hypothesis": "</s>",
+      "reference": "heute nacht ist es im süden teils klar teilweise aber auch nebel .",
+      "nll_sum": 121.83743286132812,
+      "token_count": 14,
+      "nll_per_token": 8.702673775809151
+    },
+    {
+      "id": "06July_2011_Wednesday_tagesschau-6865",
+      "hypothesis": "</s>",
+      "reference": "später ist es meist trocken .",
+      "nll_sum": 44.33753967285156,
+      "token_count": 7,
+      "nll_per_token": 6.333934238978794
+    },
+    {
+      "id": "24October_2010_Sunday_tagesschau-2910",
+      "hypothesis": "</s>",
+      "reference": "richtung südosten noch eine mischung aus nebel wolken und sonne .",
+      "nll_sum": 102.2895278930664,
+      "token_count": 12,
+      "nll_per_token": 8.524127324422201
+    },
+    {
+      "id": "21November_2009_Saturday_tagesschau-4907",
+      "hypothesis": "</s>",
+      "reference": "im norden und im westen sowie in schauernähe stürmische böen .",
+      "nll_sum": 94.96263885498047,
+      "token_count": 12,
+      "nll_per_token": 7.913553237915039
+    },
+    {
+      "id": "17April_2011_Sunday_tagesschau-2152",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen montag den achtzehnten april .",
+      "nll_sum": 109.73108673095703,
+      "token_count": 12,
+      "nll_per_token": 9.144257227579752
+    },
+    {
+      "id": "24May_2011_Tuesday_tagesschau-4468",
+      "hypothesis": "</s>",
+      "reference": "über deutschland liegt morgen ein hochdruckgebiet das uns verbreitet sonniges und trockenes wetter beschert .",
+      "nll_sum": 163.54165649414062,
+      "token_count": 16,
+      "nll_per_token": 10.221353530883789
+    },
+    {
+      "id": "04October_2010_Monday_tagesschau-4723",
+      "hypothesis": "</s>",
+      "reference": "im erzgebirge morgen dreizehn sonst fünfzehn bis zweiundzwanzig grad .",
+      "nll_sum": 83.4203872680664,
+      "token_count": 11,
+      "nll_per_token": 7.583671569824219
+    },
+    {
+      "id": "27April_2010_Tuesday_heute-1038",
+      "hypothesis": "</s>",
+      "reference": "ja der donnerstag wird fast noch schöner noch ein bisschen wärmer .",
+      "nll_sum": 91.65054321289062,
+      "token_count": 13,
+      "nll_per_token": 7.050041785606971
+    },
+    {
+      "id": "06September_2009_Sunday_tagesschau-5309",
+      "hypothesis": "</s>",
+      "reference": "heute nacht werte zwischen vierzehn grad an der see und vier grad an den alpen .",
+      "nll_sum": 153.1284637451172,
+      "token_count": 17,
+      "nll_per_token": 9.007556690889245
+    },
+    {
+      "id": "31January_2013_Thursday_tagesschau-2708",
+      "hypothesis": "</s>",
+      "reference": "in der nacht regnet es vor allem von schleswig holstein bis zur oder sowie im süden .",
+      "nll_sum": 196.85189819335938,
+      "token_count": 18,
+      "nll_per_token": 10.936216566297743
+    },
+    {
+      "id": "28July_2010_Wednesday_tagesschau-871",
+      "hypothesis": "</s>",
+      "reference": "am samstag überwiegend freundlich meist trocken und wärmer .",
+      "nll_sum": 101.05699920654297,
+      "token_count": 10,
+      "nll_per_token": 10.105699920654297
+    },
+    {
+      "id": "06February_2010_Saturday_tagesschau-7362",
+      "hypothesis": "</s>",
+      "reference": "besonders in der südwesthälfte bildet sich nebel richtung nordosten auch wolkenlücken .",
+      "nll_sum": 123.84811401367188,
+      "token_count": 13,
+      "nll_per_token": 9.526778001051683
+    },
+    {
+      "id": "23July_2009_Thursday_tagesschau-6750",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen freitag den vierundzwanzigsten juli .",
+      "nll_sum": 100.1177978515625,
+      "token_count": 12,
+      "nll_per_token": 8.343149820963541
+    },
+    {
+      "id": "30November_2009_Monday_tagesschau-5751",
+      "hypothesis": "</s>",
+      "reference": "morgen in der südosthälfte weitere zum teil kräftige niederschläge bis in mittlere lagen schnee .",
+      "nll_sum": 169.47378540039062,
+      "token_count": 16,
+      "nll_per_token": 10.592111587524414
+    },
+    {
+      "id": "18January_2011_Tuesday_tagesschau-6987",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen mittwoch den neunzehnten januar .",
+      "nll_sum": 105.0201416015625,
+      "token_count": 12,
+      "nll_per_token": 8.751678466796875
+    },
+    {
+      "id": "20November_2009_Friday_tagesschau-6566",
+      "hypothesis": "</s>",
+      "reference": "der hält sich morgen in manchen regionen zäh auch dichtere wolken sind zunächst noch dabei aber es bleibt weitgehend trocken .",
+      "nll_sum": 235.96798706054688,
+      "token_count": 22,
+      "nll_per_token": 10.72581759366122
+    },
+    {
+      "id": "16December_2009_Wednesday_tagesschau-5913",
+      "hypothesis": "</s>",
+      "reference": "im norden sowie ganz im westen schneit es auch mal stärker und es kann glatt werden .",
+      "nll_sum": 177.49603271484375,
+      "token_count": 18,
+      "nll_per_token": 9.860890706380209
+    },
+    {
+      "id": "28August_2009_Friday_tagesschau-5879",
+      "hypothesis": "</s>",
+      "reference": "im norden sind auch stürmische böen möglich .",
+      "nll_sum": 59.13786697387695,
+      "token_count": 9,
+      "nll_per_token": 6.5708741082085504
+    },
+    {
+      "id": "25March_2011_Friday_tagesschau-5828",
+      "hypothesis": "</s>",
+      "reference": "am montag scheint verbreitet die sonne richtung küsten und alpen ist es wolkiger aber es regnet nur vereinzelt .",
+      "nll_sum": 206.9917755126953,
+      "token_count": 20,
+      "nll_per_token": 10.349588775634766
+    },
+    {
+      "id": "28January_2010_Thursday_heute-2883",
+      "hypothesis": "</s>",
+      "reference": "in den nächsten stunden können noch bis zu fünf zentimeter schnee fallen .",
+      "nll_sum": 115.39219665527344,
+      "token_count": 14,
+      "nll_per_token": 8.24229976109096
+    },
+    {
+      "id": "25November_2009_Wednesday_tagesschau-7668",
+      "hypothesis": "</s>",
+      "reference": "vom atlantik strömt etwas weniger milde luft zu uns .",
+      "nll_sum": 107.54685974121094,
+      "token_count": 11,
+      "nll_per_token": 9.776987249200994
+    },
+    {
+      "id": "19September_2010_Sunday_tagesschau-3802",
+      "hypothesis": "</s>",
+      "reference": "dort im süden weht der wind meist nur schwach richtung norden mäßiger zeitweise auch frischer wind an den küsten starke bis stürmische böen .",
+      "nll_sum": 250.17562866210938,
+      "token_count": 25,
+      "nll_per_token": 10.007025146484375
+    },
+    {
+      "id": "08February_2010_Monday_tagesschau-2797",
+      "hypothesis": "</s>",
+      "reference": "morgen erwartet uns <unk> recht ruhiges und vielerorts trockenes winterwetter .",
+      "nll_sum": 114.07661437988281,
+      "token_count": 12,
+      "nll_per_token": 9.5063845316569
+    },
+    {
+      "id": "21April_2010_Wednesday_tagesschau-6235",
+      "hypothesis": "</s>",
+      "reference": "an der küste morgen kühle neun grad im breisgau bis achtzehn grad .",
+      "nll_sum": 114.00374603271484,
+      "token_count": 14,
+      "nll_per_token": 8.14312471662249
+    },
+    {
+      "id": "08December_2009_Tuesday_heute-4199",
+      "hypothesis": "</s>",
+      "reference": "es wird morgen ein ziemlich trüber tag bei uns in deutschland .",
+      "nll_sum": 104.28164672851562,
+      "token_count": 13,
+      "nll_per_token": 8.02166513296274
+    },
+    {
+      "id": "11January_2011_Tuesday_tagesschau-8032",
+      "hypothesis": "</s>",
+      "reference": "im süden verläuft der tag teilweise freundlich .",
+      "nll_sum": 68.03333282470703,
+      "token_count": 9,
+      "nll_per_token": 7.559259202745226
+    },
+    {
+      "id": "18February_2010_Thursday_tagesschau-4533",
+      "hypothesis": "</s>",
+      "reference": "auch in der neuen woche ändert sich erstmal wenig .",
+      "nll_sum": 93.97921752929688,
+      "token_count": 11,
+      "nll_per_token": 8.54356522993608
+    },
+    {
+      "id": "24October_2010_Sunday_tagesschau-2909",
+      "hypothesis": "</s>",
+      "reference": "am mittwoch zieht von der nordsee regen heran der sich am donnerstag ausbreitet .",
+      "nll_sum": 144.11241149902344,
+      "token_count": 15,
+      "nll_per_token": 9.607494099934895
+    },
+    {
+      "id": "01April_2011_Friday_tagesschau-3377",
+      "hypothesis": "</s>",
+      "reference": "nordöstlich der elbe halten sich heute nacht noch viele wolken die anfangs auch noch ein paar tropfen bringen .",
+      "nll_sum": 183.26544189453125,
+      "token_count": 20,
+      "nll_per_token": 9.163272094726562
+    },
+    {
+      "id": "05April_2011_Tuesday_heute-5120",
+      "hypothesis": "</s>",
+      "reference": "milde luft kommt aus dem südwesten .",
+      "nll_sum": 55.95057678222656,
+      "token_count": 8,
+      "nll_per_token": 6.99382209777832
+    },
+    {
+      "id": "31January_2011_Monday_heute-3053",
+      "hypothesis": "</s>",
+      "reference": "ich wünsche ihnen noch einen schönen abend .",
+      "nll_sum": 43.62489318847656,
+      "token_count": 9,
+      "nll_per_token": 4.847210354275173
+    },
+    {
+      "id": "14July_2009_Tuesday_tagesschau-2427",
+      "hypothesis": "</s>",
+      "reference": "im süden entladen sich später hier und da heftige gewitter .",
+      "nll_sum": 92.24626922607422,
+      "token_count": 12,
+      "nll_per_token": 7.687189102172852
+    },
+    {
+      "id": "05September_2009_Saturday_tagesschau-4085",
+      "hypothesis": "</s>",
+      "reference": "in der nacht an der see noch stürmische böen .",
+      "nll_sum": 85.64779663085938,
+      "token_count": 11,
+      "nll_per_token": 7.786163330078125
+    },
+    {
+      "id": "12October_2009_Monday_tagesschau-562",
+      "hypothesis": "</s>",
+      "reference": "am freitag insgesamt viele wolken die regen bringen .",
+      "nll_sum": 85.91654205322266,
+      "token_count": 10,
+      "nll_per_token": 8.591654205322266
+    },
+    {
+      "id": "26October_2009_Monday_tagesschau-1402",
+      "hypothesis": "</s>",
+      "reference": "richtung nordosten gibt es mehr wolken hier und da etwas regen .",
+      "nll_sum": 106.21711730957031,
+      "token_count": 13,
+      "nll_per_token": 8.170547485351562
+    },
+    {
+      "id": "01June_2010_Tuesday_heute-6603",
+      "hypothesis": "</s>",
+      "reference": "liebe zuschauer guten abend .",
+      "nll_sum": 27.86678695678711,
+      "token_count": 6,
+      "nll_per_token": 4.644464492797852
+    },
+    {
+      "id": "06May_2011_Friday_tagesschau-6435",
+      "hypothesis": "</s>",
+      "reference": "heute nacht zwölf grad in der kölner bucht und ein grad im bayerischen wald .",
+      "nll_sum": 146.2743682861328,
+      "token_count": 16,
+      "nll_per_token": 9.1421480178833
+    },
+    {
+      "id": "04August_2011_Thursday_tagesschau-713",
+      "hypothesis": "</s>",
+      "reference": "vielerorts gibt es schauer und gewitter die heftig ausfallen können .",
+      "nll_sum": 103.58122253417969,
+      "token_count": 12,
+      "nll_per_token": 8.631768544514975
+    },
+    {
+      "id": "05May_2010_Wednesday_tagesschau-3353",
+      "hypothesis": "</s>",
+      "reference": "in teilen bayerns und sachsens gibt es neben schauern und gewittern auch wolkenlücken .",
+      "nll_sum": 139.69053649902344,
+      "token_count": 15,
+      "nll_per_token": 9.31270243326823
+    },
+    {
+      "id": "01May_2010_Saturday_tagesschau-7194",
+      "hypothesis": "</s>",
+      "reference": "am tag zwölf grad an der ostsee und bis zwanzig grad in niederbayern .",
+      "nll_sum": 121.24597930908203,
+      "token_count": 15,
+      "nll_per_token": 8.083065287272136
+    },
+    {
+      "id": "20November_2009_Friday_tagesschau-6562",
+      "hypothesis": "</s>",
+      "reference": "ansonsten bleibt es unter hochdruckeinfluss meist trocken und tagsüber auch teilweise freundlich .",
+      "nll_sum": 127.06520080566406,
+      "token_count": 14,
+      "nll_per_token": 9.076085771833148
+    },
+    {
+      "id": "22November_2011_Tuesday_heute-4646",
+      "hypothesis": "</s>",
+      "reference": "und das wird auch am wochenende nicht passieren .",
+      "nll_sum": 82.7064208984375,
+      "token_count": 10,
+      "nll_per_token": 8.27064208984375
+    },
+    {
+      "id": "06January_2011_Thursday_tagesschau-5641",
+      "hypothesis": "</s>",
+      "reference": "die <unk> die da zusammenkommen können überschwemmungen <unk> .",
+      "nll_sum": 89.30223083496094,
+      "token_count": 10,
+      "nll_per_token": 8.930223083496093
+    },
+    {
+      "id": "12October_2009_Monday_tagesschau-563",
+      "hypothesis": "</s>",
+      "reference": "im osten und südosten auch schnee oder schneeregen .",
+      "nll_sum": 85.53575897216797,
+      "token_count": 10,
+      "nll_per_token": 8.553575897216797
+    },
+    {
+      "id": "17February_2011_Thursday_tagesschau-6310",
+      "hypothesis": "</s>",
+      "reference": "am tag ist es überwiegend stark bewölkt oder neblig trüb .",
+      "nll_sum": 106.30026245117188,
+      "token_count": 12,
+      "nll_per_token": 8.858355204264322
+    },
+    {
+      "id": "03February_2010_Wednesday_heute-2355",
+      "hypothesis": "</s>",
+      "reference": "im norden wird es dagegen noch trocken sein .",
+      "nll_sum": 76.72113800048828,
+      "token_count": 10,
+      "nll_per_token": 7.6721138000488285
+    },
+    {
+      "id": "21August_2011_Sunday_tagesschau-263",
+      "hypothesis": "</s>",
+      "reference": "in der nordhälfte gibt es zu beginn der nacht noch einzelne heftige schauer und gewitter dann klar dass dort teilweise auf .",
+      "nll_sum": 240.8708953857422,
+      "token_count": 23,
+      "nll_per_token": 10.47264762546705
+    },
+    {
+      "id": "11August_2009_Tuesday_tagesschau-4356",
+      "hypothesis": "</s>",
+      "reference": "schwacher im norden auch mäßiger an der küste frischer und zeitweise stark böiger westwind .",
+      "nll_sum": 145.049072265625,
+      "token_count": 16,
+      "nll_per_token": 9.065567016601562
+    },
+    {
+      "id": "07December_2009_Monday_tagesschau-7103",
+      "hypothesis": "</s>",
+      "reference": "richtung südwesten und nordosten lässt sich die sonne auch mal blicken .",
+      "nll_sum": 121.83247375488281,
+      "token_count": 13,
+      "nll_per_token": 9.3717287503756
+    },
+    {
+      "id": "25January_2011_Tuesday_tagesschau-2993",
+      "hypothesis": "</s>",
+      "reference": "am freitag ruhiges trockenes wetter vor allem im norden ist es recht freundlich ähnliches wetter am samstag nur im norden vereinzelt etwas schnee oder gefrierender sprühregen .",
+      "nll_sum": 327.84521484375,
+      "token_count": 28,
+      "nll_per_token": 11.708757672991071
+    },
+    {
+      "id": "28August_2009_Friday_tagesschau-5878",
+      "hypothesis": "</s>",
+      "reference": "es bläst ein mäßiger im norden mitunter frischer an der küste auch starker wind aus südwest bis west .",
+      "nll_sum": 187.0008087158203,
+      "token_count": 20,
+      "nll_per_token": 9.350040435791016
+    },
+    {
+      "id": "21April_2010_Wednesday_heute-3109",
+      "hypothesis": "</s>",
+      "reference": "eine frostig kalte nacht liegt vor uns .",
+      "nll_sum": 79.55181884765625,
+      "token_count": 9,
+      "nll_per_token": 8.839090983072916
+    },
+    {
+      "id": "05June_2010_Saturday_tagesschau-3925",
+      "hypothesis": "</s>",
+      "reference": "sie ziehen in der nacht zum montag über uns hinweg .",
+      "nll_sum": 114.05986022949219,
+      "token_count": 12,
+      "nll_per_token": 9.504988352457682
+    },
+    {
+      "id": "28February_2011_Monday_tagesschau-4988",
+      "hypothesis": "</s>",
+      "reference": "an den temperaturen ändert sich wenig .",
+      "nll_sum": 61.1435546875,
+      "token_count": 8,
+      "nll_per_token": 7.6429443359375
+    },
+    {
+      "id": "03July_2009_Friday_tagesschau-2015",
+      "hypothesis": "</s>",
+      "reference": "in der neuen woche kühlt es dann bei wechselhaftem wetter deutlich ab .",
+      "nll_sum": 128.974609375,
+      "token_count": 14,
+      "nll_per_token": 9.212472098214286
+    },
+    {
+      "id": "02October_2010_Saturday_tagesschau-1300",
+      "hypothesis": "</s>",
+      "reference": "sehr milde luft strömt zu uns .",
+      "nll_sum": 58.521156311035156,
+      "token_count": 8,
+      "nll_per_token": 7.3151445388793945
+    },
+    {
+      "id": "24November_2011_Thursday_tagesschau-8341",
+      "hypothesis": "</s>",
+      "reference": "am sonntag legt der wind noch zu dazu von nordwesten wolken und etwas regen .",
+      "nll_sum": 125.17156982421875,
+      "token_count": 16,
+      "nll_per_token": 7.823223114013672
+    },
+    {
+      "id": "24October_2009_Saturday_tagesschau-4287",
+      "hypothesis": "</s>",
+      "reference": "dort kann es auch stürmische böen geben .",
+      "nll_sum": 66.21607971191406,
+      "token_count": 9,
+      "nll_per_token": 7.357342190212673
+    },
+    {
+      "id": "05November_2010_Friday_tagesschau-1872",
+      "hypothesis": "</s>",
+      "reference": "der teilweise kräftige regen breitet sich im tagesverlauf über die mitte weiter nach süden aus .",
+      "nll_sum": 153.83615112304688,
+      "token_count": 17,
+      "nll_per_token": 9.049185360179228
+    },
+    {
+      "id": "13April_2010_Tuesday_tagesschau-2318",
+      "hypothesis": "</s>",
+      "reference": "am samstag viel sonnenschein vor allem an alpen und küsten ist es auch mal wolkig .",
+      "nll_sum": 170.40338134765625,
+      "token_count": 17,
+      "nll_per_token": 10.023728314568014
+    },
+    {
+      "id": "27August_2009_Thursday_tagesschau-3268",
+      "hypothesis": "</s>",
+      "reference": "von schottland zieht ein tief nach norwegen .",
+      "nll_sum": 85.00968170166016,
+      "token_count": 9,
+      "nll_per_token": 9.445520189073351
+    },
+    {
+      "id": "29August_2009_Saturday_tagesschau-5018",
+      "hypothesis": "</s>",
+      "reference": "die werden heute aber erstmal seltener und ziehen sich richtung küste zurück .",
+      "nll_sum": 117.27462005615234,
+      "token_count": 14,
+      "nll_per_token": 8.376758575439453
+    },
+    {
+      "id": "10February_2010_Wednesday_tagesschau-2515",
+      "hypothesis": "</s>",
+      "reference": "am wochenende beruhigt sich dann das wetter langsam .",
+      "nll_sum": 85.60749816894531,
+      "token_count": 10,
+      "nll_per_token": 8.560749816894532
+    },
+    {
+      "id": "29October_2009_Thursday_tagesschau-1013",
+      "hypothesis": "</s>",
+      "reference": "und so erwartet uns eine mischung aus teilweise zähen nebelfeldern wolken und sonnenschein .",
+      "nll_sum": 121.66741180419922,
+      "token_count": 15,
+      "nll_per_token": 8.111160786946614
+    },
+    {
+      "id": "17July_2009_Friday_tagesschau-5101",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen samstag den achtzehnten juli .",
+      "nll_sum": 109.85868835449219,
+      "token_count": 12,
+      "nll_per_token": 9.154890696207682
+    },
+    {
+      "id": "26August_2009_Wednesday_tagesschau-3226",
+      "hypothesis": "</s>",
+      "reference": "am samstag wird es deutlich kühler und im norden sehr windig .",
+      "nll_sum": 117.33212280273438,
+      "token_count": 13,
+      "nll_per_token": 9.025547907902645
+    },
+    {
+      "id": "01November_2010_Monday_tagesschau-136",
+      "hypothesis": "</s>",
+      "reference": "später breiten sich aber nebel oder hochnebelfelder aus .",
+      "nll_sum": 88.53124237060547,
+      "token_count": 10,
+      "nll_per_token": 8.853124237060547
+    },
+    {
+      "id": "12December_2009_Saturday_tagesschau-4728",
+      "hypothesis": "</s>",
+      "reference": "in der nacht schneit es ab und zu leicht an den küsten sowie anfangs auch in tiefen lagen ist regen mit dabei .",
+      "nll_sum": 248.08984375,
+      "token_count": 24,
+      "nll_per_token": 10.337076822916666
+    },
+    {
+      "id": "27November_2009_Friday_tagesschau-7341",
+      "hypothesis": "</s>",
+      "reference": "im bergland zum teil schnee an den alpen auch für längere zeit regen oder schnee .",
+      "nll_sum": 140.19032287597656,
+      "token_count": 17,
+      "nll_per_token": 8.246489580939798
+    },
+    {
+      "id": "29September_2011_Thursday_tagesschau-7236",
+      "hypothesis": "</s>",
+      "reference": "samstag und sonntag ändert sich an diesem wetter noch wenig .",
+      "nll_sum": 112.05563354492188,
+      "token_count": 12,
+      "nll_per_token": 9.337969462076822
+    },
+    {
+      "id": "23July_2009_Thursday_tagesschau-6751",
+      "hypothesis": "</s>",
+      "reference": "die schwül warme luft wird von kühlerer meeresluft verdrängt .",
+      "nll_sum": 113.17724609375,
+      "token_count": 11,
+      "nll_per_token": 10.288840553977273
+    },
+    {
+      "id": "08November_2010_Monday_tagesschau-6922",
+      "hypothesis": "</s>",
+      "reference": "das wetter in teilen europas wird in den kommenden beiden tagen bestimmt von einem umfangreichen tiefdruckgebiet .",
+      "nll_sum": 169.5900421142578,
+      "token_count": 18,
+      "nll_per_token": 9.421669006347656
+    },
+    {
+      "id": "23July_2009_Thursday_tagesschau-6752",
+      "hypothesis": "</s>",
+      "reference": "dies geht einher mit teilweise unwetterartigen gewittern .",
+      "nll_sum": 65.70191955566406,
+      "token_count": 9,
+      "nll_per_token": 7.300213283962673
+    },
+    {
+      "id": "06September_2010_Monday_tagesschau-1153",
+      "hypothesis": "</s>",
+      "reference": "am donnerstag noch unbeständig aber ab freitag wird es von westen langsam freundlicher .",
+      "nll_sum": 148.30332946777344,
+      "token_count": 15,
+      "nll_per_token": 9.886888631184895
+    },
+    {
+      "id": "06February_2010_Saturday_tagesschau-7363",
+      "hypothesis": "</s>",
+      "reference": "am alpenrand gibt es auch morgen noch leichten schneefall .",
+      "nll_sum": 97.16582489013672,
+      "token_count": 11,
+      "nll_per_token": 8.833256808194248
+    },
+    {
+      "id": "11November_2009_Wednesday_tagesschau-8042",
+      "hypothesis": "</s>",
+      "reference": "der wind weht schwach bis mäßig aus süd bis südwest .",
+      "nll_sum": 72.54273986816406,
+      "token_count": 12,
+      "nll_per_token": 6.045228322347005
+    },
+    {
+      "id": "14September_2010_Tuesday_heute-8239",
+      "hypothesis": "</s>",
+      "reference": "und es kommt ein neues tief das uns morgen abend dann erreichen wird an der nordsee zum teil mit schweren sturmböen .",
+      "nll_sum": 208.3199462890625,
+      "token_count": 23,
+      "nll_per_token": 9.057388969089674
+    },
+    {
+      "id": "23September_2010_Thursday_tagesschau-3448",
+      "hypothesis": "</s>",
+      "reference": "am samstag überall mehr wolken als sonne in der südosthälfte zum teil kräftiger regen richtung nordwesten nur einzelne schauer .",
+      "nll_sum": 207.606689453125,
+      "token_count": 21,
+      "nll_per_token": 9.88603283110119
+    },
+    {
+      "id": "12April_2010_Monday_tagesschau-365",
+      "hypothesis": "</s>",
+      "reference": "am donnerstag ist es in der südosthälfte weiterhin wechselhaft nach nordwesten hin ist es freundlich .",
+      "nll_sum": 156.6824951171875,
+      "token_count": 17,
+      "nll_per_token": 9.216617359834558
+    },
+    {
+      "id": "20November_2009_Friday_tagesschau-6560",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen samstag den einundzwanzigsten november .",
+      "nll_sum": 101.54733276367188,
+      "token_count": 12,
+      "nll_per_token": 8.46227773030599
+    },
+    {
+      "id": "21May_2010_Friday_tagesschau-5094",
+      "hypothesis": "</s>",
+      "reference": "abgesehen von schauer und gewitterböen weht der wind schwach bis mäßig aus nordwest bis nord .",
+      "nll_sum": 134.96604919433594,
+      "token_count": 17,
+      "nll_per_token": 7.939179364372702
+    },
+    {
+      "id": "10August_2009_Monday_heute-6897",
+      "hypothesis": "</s>",
+      "reference": "entweder über den <unk> oder auch über das internet .",
+      "nll_sum": 93.76250457763672,
+      "token_count": 11,
+      "nll_per_token": 8.52386405251243
+    },
+    {
+      "id": "26August_2009_Wednesday_tagesschau-3213",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen donnerstag den siebenundzwanzigsten august .",
+      "nll_sum": 92.3232421875,
+      "token_count": 12,
+      "nll_per_token": 7.693603515625
+    },
+    {
+      "id": "16November_2009_Monday_tagesschau-3106",
+      "hypothesis": "</s>",
+      "reference": "von süden wird es tag für tag freundlicher .",
+      "nll_sum": 65.55359649658203,
+      "token_count": 10,
+      "nll_per_token": 6.555359649658203
+    },
+    {
+      "id": "01June_2010_Tuesday_tagesschau-5009",
+      "hypothesis": "</s>",
+      "reference": "der wind weht meist mäßig im osten und an der see frischer wind mit starken böen in den hochlagen der osthälfte sturmböen .",
+      "nll_sum": 190.17019653320312,
+      "token_count": 24,
+      "nll_per_token": 7.923758188883464
+    },
+    {
+      "id": "11November_2010_Thursday_tagesschau-3565",
+      "hypothesis": "</s>",
+      "reference": "dahinter lockert es im norden und der mitte teilweise auf an der nordsee vereinzelt kurze gewitter .",
+      "nll_sum": 162.27285766601562,
+      "token_count": 18,
+      "nll_per_token": 9.015158759223091
+    },
+    {
+      "id": "25September_2010_Saturday_tagesschau-3489",
+      "hypothesis": "</s>",
+      "reference": "am montag regnet es vor allem im norden und osten weiter und besonders im osten wird es windig etwas sonne am ehesten im süden .",
+      "nll_sum": 293.51092529296875,
+      "token_count": 26,
+      "nll_per_token": 11.28888174203726
+    },
+    {
+      "id": "20October_2011_Thursday_tagesschau-506",
+      "hypothesis": "</s>",
+      "reference": "in der südhälfte muss dazu mit <unk> gerechnet werden .",
+      "nll_sum": 85.50784301757812,
+      "token_count": 11,
+      "nll_per_token": 7.773440274325284
+    },
+    {
+      "id": "15May_2010_Saturday_tagesschau-5656",
+      "hypothesis": "</s>",
+      "reference": "am tag ist es im südosten meist stark bewölkt vor allem an den alpen muss mit regen gerechnet werden .",
+      "nll_sum": 171.5966339111328,
+      "token_count": 21,
+      "nll_per_token": 8.171268281482515
+    },
+    {
+      "id": "15February_2011_Tuesday_tagesschau-7473",
+      "hypothesis": "</s>",
+      "reference": "auch ein paar schneeflocken sind dabei .",
+      "nll_sum": 65.611572265625,
+      "token_count": 8,
+      "nll_per_token": 8.201446533203125
+    },
+    {
+      "id": "16July_2009_Thursday_tagesschau-5052",
+      "hypothesis": "</s>",
+      "reference": "heute nacht gibt es im süden anfangs noch vereinzelte schauer oder gewitter sonst ist es meist klar oder nur locker bewölkt .",
+      "nll_sum": 231.69442749023438,
+      "token_count": 23,
+      "nll_per_token": 10.073670760444973
+    },
+    {
+      "id": "27May_2010_Thursday_heute-1236",
+      "hypothesis": "</s>",
+      "reference": "ab sonntag geht es dann wieder abwärts es wird wechselhafter .",
+      "nll_sum": 95.92193603515625,
+      "token_count": 12,
+      "nll_per_token": 7.9934946695963545
+    },
+    {
+      "id": "16September_2010_Thursday_tagesschau-6278",
+      "hypothesis": "</s>",
+      "reference": "am sonntag im norden und an den alpen mal sonne mal wolken und ab und an schauer sonst ist es recht freundlich .",
+      "nll_sum": 239.32415771484375,
+      "token_count": 24,
+      "nll_per_token": 9.971839904785156
+    },
+    {
+      "id": "09March_2011_Wednesday_heute-1741",
+      "hypothesis": "</s>",
+      "reference": "und das wetter im südöstlichen mittelmeer das beruhigt sich nur langsam .",
+      "nll_sum": 137.5473175048828,
+      "token_count": 13,
+      "nll_per_token": 10.580562884990986
+    },
+    {
+      "id": "03June_2011_Friday_tagesschau-7644",
+      "hypothesis": "</s>",
+      "reference": "vor allem im süden können die gewitter unwetterartig ausfallen .",
+      "nll_sum": 99.62471771240234,
+      "token_count": 11,
+      "nll_per_token": 9.056792519309305
+    },
+    {
+      "id": "12April_2010_Monday_heute-7690",
+      "hypothesis": "</s>",
+      "reference": "morgen bleibt durch diese wetterlage der norden begünstigt mit relativ viel sonne hauptsächlich an der nordsee .",
+      "nll_sum": 224.56277465820312,
+      "token_count": 18,
+      "nll_per_token": 12.475709703233507
+    },
+    {
+      "id": "03October_2012_Wednesday_tagesschau-7654",
+      "hypothesis": "</s>",
+      "reference": "dabei breiten sich heute nacht von nordwesten regenfälle bis in die mitte aus .",
+      "nll_sum": 143.6394805908203,
+      "token_count": 15,
+      "nll_per_token": 9.575965372721354
+    },
+    {
+      "id": "08February_2010_Monday_heute-1498",
+      "hypothesis": "</s>",
+      "reference": "und im westen haben wir kaum noch schnee aber es gibt eben auch ausnahmen die mittelgebirge .",
+      "nll_sum": 163.78860473632812,
+      "token_count": 18,
+      "nll_per_token": 9.099366929796007
+    },
+    {
+      "id": "30October_2009_Friday_tagesschau-2273",
+      "hypothesis": "</s>",
+      "reference": "in der osthälfte scheint abseits der nebelgebiete häufig die sonne .",
+      "nll_sum": 113.99663543701172,
+      "token_count": 12,
+      "nll_per_token": 9.499719619750977
+    },
+    {
+      "id": "20April_2011_Wednesday_tagesschau-3086",
+      "hypothesis": "</s>",
+      "reference": "auch am tag wieder viel sonnenschein später bilden sich hier und da ein paar quellwolken .",
+      "nll_sum": 163.51950073242188,
+      "token_count": 17,
+      "nll_per_token": 9.6187941607307
+    },
+    {
+      "id": "25January_2013_Friday_tagesschau-7811",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen samstag den sechsundzwanzigsten januar .",
+      "nll_sum": 96.43336486816406,
+      "token_count": 12,
+      "nll_per_token": 8.036113739013672
+    },
+    {
+      "id": "14August_2009_Friday_tagesschau-73",
+      "hypothesis": "</s>",
+      "reference": "am sonntag im nordwesten eine mischung aus sonne und wolken mit einigen zum teil gewittrigen schauern .",
+      "nll_sum": 184.27951049804688,
+      "token_count": 18,
+      "nll_per_token": 10.237750583224827
+    },
+    {
+      "id": "09August_2009_Sunday_tagesschau-1186",
+      "hypothesis": "</s>",
+      "reference": "abseits der gewitter schwacher bis mäßiger wind .",
+      "nll_sum": 77.44835662841797,
+      "token_count": 9,
+      "nll_per_token": 8.605372958713108
+    },
+    {
+      "id": "19October_2010_Tuesday_tagesschau-8290",
+      "hypothesis": "</s>",
+      "reference": "am abend zum teil bis in tiefere lagen .",
+      "nll_sum": 88.184814453125,
+      "token_count": 10,
+      "nll_per_token": 8.8184814453125
+    },
+    {
+      "id": "13July_2009_Monday_tagesschau-7508",
+      "hypothesis": "</s>",
+      "reference": "das hoch lenkt schwül heiße luft in den südosten das tief nur mäßig warme meeresluft in den nordwesten .",
+      "nll_sum": 203.49095153808594,
+      "token_count": 20,
+      "nll_per_token": 10.174547576904297
+    },
+    {
+      "id": "08May_2010_Saturday_tagesschau-175",
+      "hypothesis": "</s>",
+      "reference": "in deutschland gibt es nur schwache luftdruckunterschiede .",
+      "nll_sum": 95.69002532958984,
+      "token_count": 9,
+      "nll_per_token": 10.632225036621094
+    },
+    {
+      "id": "14October_2009_Wednesday_tagesschau-526",
+      "hypothesis": "</s>",
+      "reference": "heute nacht plus vier grad an der ostsee bis minus vier grad in den mittelgebirgen .",
+      "nll_sum": 150.91342163085938,
+      "token_count": 17,
+      "nll_per_token": 8.877260095932904
+    },
+    {
+      "id": "10August_2009_Monday_heute-6902",
+      "hypothesis": "</s>",
+      "reference": "mit der leicht kühleren luft dann bis vierundzwanzig grad in der nordhälfte .",
+      "nll_sum": 113.38977813720703,
+      "token_count": 14,
+      "nll_per_token": 8.09926986694336
+    },
+    {
+      "id": "03August_2010_Tuesday_tagesschau-2780",
+      "hypothesis": "</s>",
+      "reference": "am tag neunzehn grad an der nordsee und sechsundzwanzig grad in teilen thüringens und sachsens .",
+      "nll_sum": 153.45138549804688,
+      "token_count": 17,
+      "nll_per_token": 9.026552088120404
+    },
+    {
+      "id": "08May_2010_Saturday_tagesschau-176",
+      "hypothesis": "</s>",
+      "reference": "vom mittelmeer fließt feuchte luft heran in der sich zum teil kräftige gewitter entwickeln können .",
+      "nll_sum": 132.69110107421875,
+      "token_count": 17,
+      "nll_per_token": 7.80535888671875
+    },
+    {
+      "id": "05July_2010_Monday_heute-8688",
+      "hypothesis": "</s>",
+      "reference": "also wir haben morgen höchsttemperaturen in mitteleuropa von achtzehn bis sechsundzwanzig grad .",
+      "nll_sum": 129.0761260986328,
+      "token_count": 14,
+      "nll_per_token": 9.219723292759486
+    },
+    {
+      "id": "24August_2010_Tuesday_heute-3006",
+      "hypothesis": "</s>",
+      "reference": "liebe zuschauer guten abend .",
+      "nll_sum": 27.866788864135742,
+      "token_count": 6,
+      "nll_per_token": 4.64446481068929
+    },
+    {
+      "id": "18November_2009_Wednesday_tagesschau-5578",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen donnerstag den neunzehnten november .",
+      "nll_sum": 107.8912353515625,
+      "token_count": 12,
+      "nll_per_token": 8.990936279296875
+    },
+    {
+      "id": "06June_2010_Sunday_tagesschau-6363",
+      "hypothesis": "</s>",
+      "reference": "gewitterschauer örtlich mit hagel starkregen und sturmböen ziehen in der nacht ostwärts im norden regnet es länger .",
+      "nll_sum": 217.91552734375,
+      "token_count": 19,
+      "nll_per_token": 11.46923828125
+    },
+    {
+      "id": "29March_2010_Monday_tagesschau-8387",
+      "hypothesis": "</s>",
+      "reference": "sie bringen kräftige schauer und gewitter .",
+      "nll_sum": 59.551055908203125,
+      "token_count": 8,
+      "nll_per_token": 7.443881988525391
+    },
+    {
+      "id": "26October_2009_Monday_tagesschau-1403",
+      "hypothesis": "</s>",
+      "reference": "am freitag scheint abseits der nebelgebiete häufig die sonne .",
+      "nll_sum": 116.94725036621094,
+      "token_count": 11,
+      "nll_per_token": 10.631568215110086
+    },
+    {
+      "id": "28September_2010_Tuesday_heute-8355",
+      "hypothesis": "</s>",
+      "reference": "am rhein werden es dann wenigstens mal so fünfzehn bis maximal siebzehn grad .",
+      "nll_sum": 113.5439682006836,
+      "token_count": 15,
+      "nll_per_token": 7.569597880045573
+    },
+    {
+      "id": "29March_2010_Monday_tagesschau-8388",
+      "hypothesis": "</s>",
+      "reference": "die luft die in den kommenden tagen zu uns strömt ist dann kälter .",
+      "nll_sum": 126.58719635009766,
+      "token_count": 15,
+      "nll_per_token": 8.439146423339844
+    },
+    {
+      "id": "13November_2009_Friday_tagesschau-8608",
+      "hypothesis": "</s>",
+      "reference": "im westen und nordwesten frischer wind .",
+      "nll_sum": 61.63166046142578,
+      "token_count": 8,
+      "nll_per_token": 7.703957557678223
+    },
+    {
+      "id": "12July_2010_Monday_tagesschau-373",
+      "hypothesis": "</s>",
+      "reference": "im westen und nordwesten beruhigt sich das wetter später wieder .",
+      "nll_sum": 112.71039581298828,
+      "token_count": 12,
+      "nll_per_token": 9.39253298441569
+    },
+    {
+      "id": "01October_2009_Thursday_tagesschau-420",
+      "hypothesis": "</s>",
+      "reference": "am sonntag im norden und in der mitte schauer dabei ist es im norden stürmisch .",
+      "nll_sum": 153.02490234375,
+      "token_count": 17,
+      "nll_per_token": 9.00146484375
+    },
+    {
+      "id": "12December_2011_Monday_heute-5804",
+      "hypothesis": "</s>",
+      "reference": "im westen allerdings nimmt die bewölkung später zu und es beginnt zu regnen .",
+      "nll_sum": 143.7761993408203,
+      "token_count": 15,
+      "nll_per_token": 9.585079956054688
+    },
+    {
+      "id": "09February_2010_Tuesday_tagesschau-4504",
+      "hypothesis": "</s>",
+      "reference": "am samstag schneit es nur gebietsweise etwas .",
+      "nll_sum": 74.61351013183594,
+      "token_count": 9,
+      "nll_per_token": 8.290390014648438
+    },
+    {
+      "id": "14December_2009_Monday_tagesschau-2088",
+      "hypothesis": "</s>",
+      "reference": "die kalte luft bleibt uns erhalten wobei die temperaturen bis freitag noch weiter <unk> .",
+      "nll_sum": 160.09872436523438,
+      "token_count": 16,
+      "nll_per_token": 10.006170272827148
+    },
+    {
+      "id": "14December_2009_Monday_tagesschau-2092",
+      "hypothesis": "</s>",
+      "reference": "im norden schwacher wind aus unterschiedlichen richtungen sonst weht er mäßig .",
+      "nll_sum": 95.60223388671875,
+      "token_count": 13,
+      "nll_per_token": 7.3540179912860575
+    },
+    {
+      "id": "08June_2010_Tuesday_tagesschau-5524",
+      "hypothesis": "</s>",
+      "reference": "in der nordwesthälfte morgen mal sonne mal wolken und immer wieder zum teil kräftige am nachmittag auch gewittrige schauer .",
+      "nll_sum": 210.13999938964844,
+      "token_count": 21,
+      "nll_per_token": 10.006666637602306
+    },
+    {
+      "id": "08February_2010_Monday_heute-1501",
+      "hypothesis": "</s>",
+      "reference": "dazu im westen allerdings etwas milder mit minus vier bis minus sieben grad .",
+      "nll_sum": 128.2591094970703,
+      "token_count": 15,
+      "nll_per_token": 8.550607299804687
+    },
+    {
+      "id": "25June_2010_Friday_tagesschau-3882",
+      "hypothesis": "</s>",
+      "reference": "und im süden besonders vom bayerischen wald bis zu den alpen gibt es am nachmittag einzelne schauer und gewitter .",
+      "nll_sum": 206.10472106933594,
+      "token_count": 21,
+      "nll_per_token": 9.814510527111235
+    },
+    {
+      "id": "05March_2011_Saturday_tagesschau-5447",
+      "hypothesis": "</s>",
+      "reference": "morgen reichen die temperaturen von einem grad im vogtland bis neun grad am oberrhein .",
+      "nll_sum": 138.24795532226562,
+      "token_count": 16,
+      "nll_per_token": 8.640497207641602
+    },
+    {
+      "id": "04August_2011_Thursday_tagesschau-712",
+      "hypothesis": "</s>",
+      "reference": "der tag beginnt ganz im osten noch freundlich später zeigt sich dann auch im nordwesten häufiger die sonne sonst überwiegen die wolken .",
+      "nll_sum": 250.80255126953125,
+      "token_count": 24,
+      "nll_per_token": 10.450106302897135
+    },
+    {
+      "id": "14September_2010_Tuesday_heute-8238",
+      "hypothesis": "</s>",
+      "reference": "<unk> und <unk> ist nämlich dieses tiefdruckgebiet über dem nordatlantik es schickt uns den regen letztendlich erst einmal nach norddeutschland aber dann heute nacht mehr und mehr in die mitte .",
+      "nll_sum": 372.9801940917969,
+      "token_count": 32,
+      "nll_per_token": 11.655631065368652
+    },
+    {
+      "id": "19April_2010_Monday_heute-782",
+      "hypothesis": "</s>",
+      "reference": "jetzt wünsche ich ihnen noch einen schönen abend .",
+      "nll_sum": 48.27204895019531,
+      "token_count": 10,
+      "nll_per_token": 4.827204895019531
+    },
+    {
+      "id": "18July_2009_Saturday_tagesschau-1640",
+      "hypothesis": "</s>",
+      "reference": "sechs grad heute nacht am alpenrand bis fünfzehn grad an der oder .",
+      "nll_sum": 109.60900115966797,
+      "token_count": 14,
+      "nll_per_token": 7.829214368547712
+    },
+    {
+      "id": "14September_2010_Tuesday_tagesschau-5220",
+      "hypothesis": "</s>",
+      "reference": "heute nacht sieben bis vierzehn grad am tag zweiundzwanzig grad im süden und vierzehn grad in oberfranken .",
+      "nll_sum": 161.4972381591797,
+      "token_count": 19,
+      "nll_per_token": 8.499854639956826
+    },
+    {
+      "id": "24January_2011_Monday_heute-6981",
+      "hypothesis": "</s>",
+      "reference": "und es wird auch wieder schneien oberhalb von dreihundert metern meist so am nachmittag kräftig vom saarland bis nach berlin hoch .",
+      "nll_sum": 227.3208770751953,
+      "token_count": 23,
+      "nll_per_token": 9.883516394573709
+    },
+    {
+      "id": "28August_2009_Friday_tagesschau-5882",
+      "hypothesis": "</s>",
+      "reference": "an der nordsee nur kühle sechzehn grad .",
+      "nll_sum": 69.81068420410156,
+      "token_count": 9,
+      "nll_per_token": 7.756742689344618
+    },
+    {
+      "id": "24September_2009_Thursday_heute-6083",
+      "hypothesis": "</s>",
+      "reference": "die temperaturen sinken auf werte zwischen dreizehn und fünf grad .",
+      "nll_sum": 99.16542053222656,
+      "token_count": 12,
+      "nll_per_token": 8.263785044352213
+    },
+    {
+      "id": "04June_2010_Friday_tagesschau-1173",
+      "hypothesis": "</s>",
+      "reference": "der wind weht meist schwach und kommt aus unterschiedlichen richtungen .",
+      "nll_sum": 70.8826904296875,
+      "token_count": 12,
+      "nll_per_token": 5.906890869140625
+    },
+    {
+      "id": "19January_2011_Wednesday_heute-2690",
+      "hypothesis": "</s>",
+      "reference": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+      "nll_sum": 61.87839889526367,
+      "token_count": 13,
+      "nll_per_token": 4.759876838097205
+    },
+    {
+      "id": "20October_2010_Wednesday_tagesschau-8210",
+      "hypothesis": "</s>",
+      "reference": "heute nacht gibt es hier und da schauer an der nordsee auch kurze gewitter .",
+      "nll_sum": 149.10174560546875,
+      "token_count": 16,
+      "nll_per_token": 9.318859100341797
+    },
+    {
+      "id": "11December_2010_Saturday_tagesschau-8669",
+      "hypothesis": "</s>",
+      "reference": "und daran ändert sich auch am mittwoch nichts bei minus neun bis minus ein grad .",
+      "nll_sum": 162.3173828125,
+      "token_count": 17,
+      "nll_per_token": 9.548081341911764
+    },
+    {
+      "id": "04July_2010_Sunday_tagesschau-7205",
+      "hypothesis": "</s>",
+      "reference": "dazwischen ist es freundlicher .",
+      "nll_sum": 40.6863899230957,
+      "token_count": 6,
+      "nll_per_token": 6.781064987182617
+    },
+    {
+      "id": "21May_2010_Friday_tagesschau-5092",
+      "hypothesis": "</s>",
+      "reference": "in der osthälfte morgen mal sonne mal dichtere wolken später auch örtliche schauer oder gewitter .",
+      "nll_sum": 164.3357391357422,
+      "token_count": 17,
+      "nll_per_token": 9.666808184455423
+    },
+    {
+      "id": "23September_2009_Wednesday_tagesschau-7590",
+      "hypothesis": "</s>",
+      "reference": "sonst ist es recht freundlich .",
+      "nll_sum": 37.980533599853516,
+      "token_count": 7,
+      "nll_per_token": 5.425790514264788
+    },
+    {
+      "id": "22August_2010_Sunday_tagesschau-1344",
+      "hypothesis": "</s>",
+      "reference": "morgen vielerorts schauer vor allem im süden und osten noch einige gewitter mitunter regnet es kräftig auch unwetter sind weiter möglich .",
+      "nll_sum": 291.3505859375,
+      "token_count": 23,
+      "nll_per_token": 12.667416779891305
+    },
+    {
+      "id": "20November_2009_Friday_tagesschau-6565",
+      "hypothesis": "</s>",
+      "reference": "besonders in flusstälern bildet sich nebel .",
+      "nll_sum": 68.51136016845703,
+      "token_count": 8,
+      "nll_per_token": 8.563920021057129
+    },
+    {
+      "id": "24November_2009_Tuesday_tagesschau-5684",
+      "hypothesis": "</s>",
+      "reference": "mit stürmischen böen muss heute nacht vor allem im norden am tag im nordwesten gerechnet werden .",
+      "nll_sum": 163.6382598876953,
+      "token_count": 18,
+      "nll_per_token": 9.091014438205296
+    },
+    {
+      "id": "10December_2009_Thursday_heute-7944",
+      "hypothesis": "</s>",
+      "reference": "samstag fällt auch noch schnee .",
+      "nll_sum": 56.03369903564453,
+      "token_count": 7,
+      "nll_per_token": 8.004814147949219
+    },
+    {
+      "id": "24November_2011_Thursday_heute-224",
+      "hypothesis": "</s>",
+      "reference": "ganz ähnliche temperaturen wie heute zwischen sechs und elf grad .",
+      "nll_sum": 104.58432006835938,
+      "token_count": 12,
+      "nll_per_token": 8.715360005696615
+    },
+    {
+      "id": "31March_2010_Wednesday_tagesschau-1000",
+      "hypothesis": "</s>",
+      "reference": "das tief bei schottland sorgt zusammen mit kühler luft auch morgen für wechselhaftes wetter .",
+      "nll_sum": 133.09298706054688,
+      "token_count": 16,
+      "nll_per_token": 8.31831169128418
+    },
+    {
+      "id": "14August_2011_Sunday_tagesschau-3230",
+      "hypothesis": "</s>",
+      "reference": "dabei kommt es zu heftigen schauern und gewittern die teilweise unwetterartig sein können .",
+      "nll_sum": 123.01185607910156,
+      "token_count": 15,
+      "nll_per_token": 8.200790405273438
+    },
+    {
+      "id": "26August_2009_Wednesday_tagesschau-3227",
+      "hypothesis": "</s>",
+      "reference": "ab sonntag steigen dann temperaturen und <unk> wieder .",
+      "nll_sum": 102.70030975341797,
+      "token_count": 10,
+      "nll_per_token": 10.270030975341797
+    },
+    {
+      "id": "10August_2009_Monday_heute-6893",
+      "hypothesis": "</s>",
+      "reference": "die gewitterfront heute nacht noch über dem osten und dabei anfangs auch noch einzelne unwetterartige gewitter .",
+      "nll_sum": 197.83865356445312,
+      "token_count": 18,
+      "nll_per_token": 10.991036309136284
+    },
+    {
+      "id": "01April_2010_Thursday_tagesschau-4329",
+      "hypothesis": "</s>",
+      "reference": "am samstag ist es wieder unbeständig .",
+      "nll_sum": 59.164058685302734,
+      "token_count": 8,
+      "nll_per_token": 7.395507335662842
+    },
+    {
+      "id": "14October_2010_Thursday_tagesschau-290",
+      "hypothesis": "</s>",
+      "reference": "morgen früh bildet sich über der nordsee ein neues tief das von norden für kräftigen regen sorgt .",
+      "nll_sum": 169.957275390625,
+      "token_count": 19,
+      "nll_per_token": 8.945119757401315
+    },
+    {
+      "id": "07October_2010_Thursday_tagesschau-4117",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen freitag den achten oktober .",
+      "nll_sum": 100.47271728515625,
+      "token_count": 12,
+      "nll_per_token": 8.372726440429688
+    },
+    {
+      "id": "17May_2010_Monday_heute-5576",
+      "hypothesis": "</s>",
+      "reference": "auch noch verhältnismäßig kühl aber dann sieht es schon nach ein paar <unk> und auch deutlich wärmeren tagen aus .",
+      "nll_sum": 206.0281219482422,
+      "token_count": 21,
+      "nll_per_token": 9.810862949916295
+    },
+    {
+      "id": "21November_2009_Saturday_tagesschau-4908",
+      "hypothesis": "</s>",
+      "reference": "am abend schwere sturmböen auf den bergen auch orkanartige böen .",
+      "nll_sum": 104.95569610595703,
+      "token_count": 12,
+      "nll_per_token": 8.746308008829752
+    },
+    {
+      "id": "06September_2010_Monday_tagesschau-1147",
+      "hypothesis": "</s>",
+      "reference": "schwacher bis mäßiger im norden auch frischer wind aus ost bis südost an der nordsee und auf den bergen ist er stark mit stürmischen böen .",
+      "nll_sum": 245.21475219726562,
+      "token_count": 27,
+      "nll_per_token": 9.082027859157986
+    },
+    {
+      "id": "08April_2010_Thursday_tagesschau-3950",
+      "hypothesis": "</s>",
+      "reference": "das tief sorgt auch noch für wolken aber es fällt nur wenig regen .",
+      "nll_sum": 119.24767303466797,
+      "token_count": 15,
+      "nll_per_token": 7.9498448689778645
+    },
+    {
+      "id": "24January_2013_Thursday_heute-7259",
+      "hypothesis": "</s>",
+      "reference": "es kann noch leicht schneien in den nächsten stunden in sachsen oder auch am alpenrand und in bayern .",
+      "nll_sum": 172.70628356933594,
+      "token_count": 20,
+      "nll_per_token": 8.635314178466796
+    },
+    {
+      "id": "05January_2011_Wednesday_tagesschau-2255",
+      "hypothesis": "</s>",
+      "reference": "am wochenende setzt sich das starke tauwetter fort begleitet von weiteren regenfällen .",
+      "nll_sum": 134.33438110351562,
+      "token_count": 14,
+      "nll_per_token": 9.595312935965401
+    },
+    {
+      "id": "06September_2009_Sunday_tagesschau-5308",
+      "hypothesis": "</s>",
+      "reference": "morgen wieder schwacher im norden mäßiger wind aus süd bis südwest an der nordsee starke böen .",
+      "nll_sum": 155.07769775390625,
+      "token_count": 18,
+      "nll_per_token": 8.615427652994791
+    },
+    {
+      "id": "22April_2010_Thursday_tagesschau-3738",
+      "hypothesis": "</s>",
+      "reference": "die gibt es auch am montag bei insgesamt wieder mehr wolken aber es bleibt weiterhin warm und auch noch längere zeit freundlich .",
+      "nll_sum": 251.02920532226562,
+      "token_count": 24,
+      "nll_per_token": 10.459550221761068
+    },
+    {
+      "id": "20June_2011_Monday_tagesschau-1249",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen dienstag den einundzwanzigsten juni .",
+      "nll_sum": 90.40080261230469,
+      "token_count": 12,
+      "nll_per_token": 7.533400217692058
+    },
+    {
+      "id": "08April_2010_Thursday_tagesschau-3957",
+      "hypothesis": "</s>",
+      "reference": "morgen reichen die temperaturen von neun grad an der ostsee bis siebzehn grad im breisgau .",
+      "nll_sum": 136.23985290527344,
+      "token_count": 17,
+      "nll_per_token": 8.014108994427849
+    },
+    {
+      "id": "24November_2009_Tuesday_tagesschau-5691",
+      "hypothesis": "</s>",
+      "reference": "an der nordsee auch gewitter .",
+      "nll_sum": 48.35381317138672,
+      "token_count": 7,
+      "nll_per_token": 6.907687595912388
+    },
+    {
+      "id": "01July_2010_Thursday_tagesschau-8797",
+      "hypothesis": "</s>",
+      "reference": "am sonntag vor allem in der südosthälfte gewitterschauer sonst setzt sich wieder meist die sonne durch .",
+      "nll_sum": 180.86666870117188,
+      "token_count": 18,
+      "nll_per_token": 10.048148261176216
+    },
+    {
+      "id": "29August_2009_Saturday_tagesschau-5019",
+      "hypothesis": "</s>",
+      "reference": "in der südhälfte ist es teils wolkig teils klar .",
+      "nll_sum": 94.68653106689453,
+      "token_count": 11,
+      "nll_per_token": 8.607866460626775
+    },
+    {
+      "id": "02October_2012_Tuesday_tagesschau-2847",
+      "hypothesis": "</s>",
+      "reference": "in der südosthälfte deutschlands bleibt es morgen unter leichtem hochdruckeinfluss noch recht freundlich .",
+      "nll_sum": 141.17892456054688,
+      "token_count": 15,
+      "nll_per_token": 9.411928304036458
+    },
+    {
+      "id": "20November_2009_Friday_tagesschau-6575",
+      "hypothesis": "</s>",
+      "reference": "aber es bleibt für die jahreszeit immer noch recht mild .",
+      "nll_sum": 92.79881286621094,
+      "token_count": 12,
+      "nll_per_token": 7.733234405517578
+    },
+    {
+      "id": "28September_2009_Monday_tagesschau-4682",
+      "hypothesis": "</s>",
+      "reference": "am mittwoch in der nordhälfte regenschauer richtung süden ist es freundlicher .",
+      "nll_sum": 112.63191223144531,
+      "token_count": 13,
+      "nll_per_token": 8.663993248572716
+    },
+    {
+      "id": "28January_2013_Monday_heute-7998",
+      "hypothesis": "</s>",
+      "reference": "ja der regen im westen zieht weiter in dieser nacht er wird den osten erreichen wie gesagt anfangs mit schnee auch in den mittelgebirgen .",
+      "nll_sum": 276.1410217285156,
+      "token_count": 26,
+      "nll_per_token": 10.620808528019833
+    },
+    {
+      "id": "08September_2010_Wednesday_tagesschau-5246",
+      "hypothesis": "</s>",
+      "reference": "am samstag regnet es noch etwas in küstennähe sonst meist freundlich und trocken .",
+      "nll_sum": 121.55118560791016,
+      "token_count": 15,
+      "nll_per_token": 8.103412373860676
+    },
+    {
+      "id": "08July_2011_Friday_tagesschau-6727",
+      "hypothesis": "</s>",
+      "reference": "die wolken eines tiefs bei schottland erreichen uns morgen von westen her .",
+      "nll_sum": 127.4915771484375,
+      "token_count": 14,
+      "nll_per_token": 9.106541224888392
+    },
+    {
+      "id": "01October_2009_Thursday_tagesschau-421",
+      "hypothesis": "</s>",
+      "reference": "im süden freundliches wetter .",
+      "nll_sum": 45.322391510009766,
+      "token_count": 6,
+      "nll_per_token": 7.553731918334961
+    },
+    {
+      "id": "03February_2010_Wednesday_tagesschau-2064",
+      "hypothesis": "</s>",
+      "reference": "dort morgen sieben grad nordöstlich der elbe teilweise nur minus ein grad .",
+      "nll_sum": 148.51132202148438,
+      "token_count": 14,
+      "nll_per_token": 10.60795157296317
+    },
+    {
+      "id": "02June_2010_Wednesday_heute-6789",
+      "hypothesis": "</s>",
+      "reference": "auch in sachsen wird es zum teil kräftig weiter regnen .",
+      "nll_sum": 104.39574432373047,
+      "token_count": 12,
+      "nll_per_token": 8.699645360310873
+    },
+    {
+      "id": "12July_2010_Monday_tagesschau-374",
+      "hypothesis": "</s>",
+      "reference": "morgen gibt es im osten und südosten bei einer mischung aus sonne und wolken zum teil kräftige schauer oder gewitter .",
+      "nll_sum": 229.2487030029297,
+      "token_count": 22,
+      "nll_per_token": 10.420395591042258
+    },
+    {
+      "id": "24November_2009_Tuesday_tagesschau-5688",
+      "hypothesis": "</s>",
+      "reference": "heute nacht elf grad im norden und ein grad an den alpen .",
+      "nll_sum": 108.09545135498047,
+      "token_count": 14,
+      "nll_per_token": 7.721103668212891
+    },
+    {
+      "id": "26June_2010_Saturday_tagesschau-725",
+      "hypothesis": "</s>",
+      "reference": "meist weht der wind schwach aus westlichen richtungen .",
+      "nll_sum": 68.41741180419922,
+      "token_count": 10,
+      "nll_per_token": 6.8417411804199215
+    },
+    {
+      "id": "11July_2009_Saturday_tagesschau-664",
+      "hypothesis": "</s>",
+      "reference": "in der nacht sinken die temperaturen auf vierzehn bis sieben grad .",
+      "nll_sum": 109.21942138671875,
+      "token_count": 13,
+      "nll_per_token": 8.40149395282452
+    },
+    {
+      "id": "30January_2013_Wednesday_tagesschau-476",
+      "hypothesis": "</s>",
+      "reference": "auch am samstag regnet oder schneit es verbreitet später wird es im westen und norden freundlicher .",
+      "nll_sum": 165.57913208007812,
+      "token_count": 18,
+      "nll_per_token": 9.198840671115452
+    },
+    {
+      "id": "30November_2009_Monday_tagesschau-5750",
+      "hypothesis": "</s>",
+      "reference": "im westen und nordwesten weitgehend trocken hier und da wolkenlücken örtlich bildet sich nebel .",
+      "nll_sum": 181.68331909179688,
+      "token_count": 16,
+      "nll_per_token": 11.355207443237305
+    },
+    {
+      "id": "11July_2009_Saturday_tagesschau-655",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen sonntag den zwölften juli .",
+      "nll_sum": 97.136962890625,
+      "token_count": 12,
+      "nll_per_token": 8.094746907552084
+    },
+    {
+      "id": "09August_2010_Monday_heute-5892",
+      "hypothesis": "</s>",
+      "reference": "bei uns wird es richtig frisch heute nacht im südosten da sind es zehn elf grad etwa .",
+      "nll_sum": 175.47689819335938,
+      "token_count": 19,
+      "nll_per_token": 9.235626220703125
+    },
+    {
+      "id": "12October_2009_Monday_tagesschau-560",
+      "hypothesis": "</s>",
+      "reference": "im westen ist es freundlich .",
+      "nll_sum": 41.88428497314453,
+      "token_count": 7,
+      "nll_per_token": 5.98346928187779
+    },
+    {
+      "id": "24May_2011_Tuesday_heute-6062",
+      "hypothesis": "</s>",
+      "reference": "und damit schönen guten abend meine damen und herren .",
+      "nll_sum": 65.80376434326172,
+      "token_count": 11,
+      "nll_per_token": 5.982160394841975
+    },
+    {
+      "id": "17February_2010_Wednesday_heute-1482",
+      "hypothesis": "</s>",
+      "reference": "da ist der boden noch gefroren am rhein wie gesagt da <unk> sich die lage bei <unk> .",
+      "nll_sum": 207.5294189453125,
+      "token_count": 19,
+      "nll_per_token": 10.92260099712171
+    },
+    {
+      "id": "17April_2010_Saturday_tagesschau-406",
+      "hypothesis": "</s>",
+      "reference": "am dienstag ist es teils freundlich teils stärker bewölkt einige regenschauer sind dabei mitunter auch gewitter .",
+      "nll_sum": 175.53611755371094,
+      "token_count": 18,
+      "nll_per_token": 9.752006530761719
+    },
+    {
+      "id": "31January_2013_Thursday_tagesschau-2713",
+      "hypothesis": "</s>",
+      "reference": "am tag vier grad im sauerland und zwölf grad im breisgau .",
+      "nll_sum": 88.69857025146484,
+      "token_count": 13,
+      "nll_per_token": 6.822966942420373
+    },
+    {
+      "id": "01June_2011_Wednesday_tagesschau-6952",
+      "hypothesis": "</s>",
+      "reference": "in den übrigen gebieten viel sonne und nur ein paar lockere wolken .",
+      "nll_sum": 121.28594207763672,
+      "token_count": 14,
+      "nll_per_token": 8.663281576974052
+    },
+    {
+      "id": "03February_2010_Wednesday_tagesschau-2054",
+      "hypothesis": "</s>",
+      "reference": "deutschland bleibt unter tiefdruckeinfluss und in den nächsten tagen erwartet uns meist trübes wetter mit ein wenig regen oder schnee .",
+      "nll_sum": 234.62384033203125,
+      "token_count": 22,
+      "nll_per_token": 10.66472001509233
+    },
+    {
+      "id": "25October_2010_Monday_tagesschau-24",
+      "hypothesis": "</s>",
+      "reference": "am donnerstag regen in der nordhälfte in der südhälfte mal sonne mal wolken ähnliches wetter dann auch am freitag .",
+      "nll_sum": 213.88250732421875,
+      "token_count": 21,
+      "nll_per_token": 10.184881301153274
+    },
+    {
+      "id": "27May_2010_Thursday_tagesschau-8382",
+      "hypothesis": "</s>",
+      "reference": "am sonntag überall unbeständiges wetter teilweise kräftige regenfälle teilweise auch gewitter .",
+      "nll_sum": 137.433349609375,
+      "token_count": 13,
+      "nll_per_token": 10.571796123798077
+    },
+    {
+      "id": "23August_2010_Monday_heute-5329",
+      "hypothesis": "</s>",
+      "reference": "aber am donnerstag kommt die hitze in den süden zurück dafür haben wir kühles schauerwetter im norden .",
+      "nll_sum": 174.2290802001953,
+      "token_count": 19,
+      "nll_per_token": 9.169951589483963
+    },
+    {
+      "id": "22September_2010_Wednesday_tagesschau-3258",
+      "hypothesis": "</s>",
+      "reference": "in der nacht ist es meist klar oder nur leicht bewölkt besonders in den <unk> in der mitte und des südens <unk> wieder ein paar nebelfelder .",
+      "nll_sum": 332.84307861328125,
+      "token_count": 28,
+      "nll_per_token": 11.887252807617188
+    },
+    {
+      "id": "05June_2010_Saturday_tagesschau-3926",
+      "hypothesis": "</s>",
+      "reference": "in der kommenden nacht ist es meist klar .",
+      "nll_sum": 81.635009765625,
+      "token_count": 10,
+      "nll_per_token": 8.1635009765625
+    },
+    {
+      "id": "21May_2010_Friday_tagesschau-5097",
+      "hypothesis": "</s>",
+      "reference": "am sonntag ändert sich noch wenig an diesem wetter .",
+      "nll_sum": 100.42794036865234,
+      "token_count": 11,
+      "nll_per_token": 9.129812760786576
+    },
+    {
+      "id": "01December_2011_Thursday_tagesschau-3473",
+      "hypothesis": "</s>",
+      "reference": "der wind weht mäßig bis frisch mit starken bis stürmischen böen im bergland teilweise schwere sturmböen im südosten mitunter nur schwacher wind .",
+      "nll_sum": 218.88912963867188,
+      "token_count": 24,
+      "nll_per_token": 9.120380401611328
+    },
+    {
+      "id": "06October_2012_Saturday_tagesschau-8743",
+      "hypothesis": "</s>",
+      "reference": "im süden und südwesten gebietsweise regen sonst recht freundlich .",
+      "nll_sum": 86.46597290039062,
+      "token_count": 11,
+      "nll_per_token": 7.8605429909446025
+    },
+    {
+      "id": "20September_2010_Monday_heute-2930",
+      "hypothesis": "</s>",
+      "reference": "heute nacht noch nicht so ganz da haben wir noch ein bisschen mit regen zu kämpfen an den küsten .",
+      "nll_sum": 224.34519958496094,
+      "token_count": 21,
+      "nll_per_token": 10.683104742140998
+    },
+    {
+      "id": "09June_2010_Wednesday_tagesschau-5961",
+      "hypothesis": "</s>",
+      "reference": "der deutsche wetterdienst hat entsprechende unwetterwarnungen herausgegeben .",
+      "nll_sum": 75.44657897949219,
+      "token_count": 9,
+      "nll_per_token": 8.382953219943577
+    },
+    {
+      "id": "04January_2010_Monday_tagesschau-8551",
+      "hypothesis": "</s>",
+      "reference": "im süden schwacher wind .",
+      "nll_sum": 37.6727409362793,
+      "token_count": 6,
+      "nll_per_token": 6.27879015604655
+    },
+    {
+      "id": "24September_2009_Thursday_heute-6082",
+      "hypothesis": "</s>",
+      "reference": "sonst aber funkeln oft die sterne oder es bildet sich nebel .",
+      "nll_sum": 105.70557403564453,
+      "token_count": 13,
+      "nll_per_token": 8.131198002741886
+    },
+    {
+      "id": "05July_2010_Monday_heute-8689",
+      "hypothesis": "</s>",
+      "reference": "östlich also über osteuropa noch hochsommerlich warm mit um die fünfundzwanzig grad .",
+      "nll_sum": 130.20046997070312,
+      "token_count": 14,
+      "nll_per_token": 9.300033569335938
+    },
+    {
+      "id": "15March_2011_Tuesday_tagesschau-3322",
+      "hypothesis": "</s>",
+      "reference": "das hoch über skandinavien verlagert sich ein wenig nach osten .",
+      "nll_sum": 101.297119140625,
+      "token_count": 12,
+      "nll_per_token": 8.441426595052084
+    },
+    {
+      "id": "07April_2010_Wednesday_tagesschau-6024",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen donnerstag den achten april .",
+      "nll_sum": 105.53758239746094,
+      "token_count": 12,
+      "nll_per_token": 8.794798533121744
+    },
+    {
+      "id": "15May_2010_Saturday_tagesschau-5659",
+      "hypothesis": "</s>",
+      "reference": "heute nacht acht bis zwei grad wo es für längere zeit aufklart ist bodenfrost möglich .",
+      "nll_sum": 156.5908203125,
+      "token_count": 17,
+      "nll_per_token": 9.211224724264707
+    },
+    {
+      "id": "17September_2010_Friday_tagesschau-3413",
+      "hypothesis": "</s>",
+      "reference": "es sorgt morgen dort für ruhiges freundliches wetter .",
+      "nll_sum": 88.490966796875,
+      "token_count": 10,
+      "nll_per_token": 8.8490966796875
+    },
+    {
+      "id": "24November_2009_Tuesday_tagesschau-5678",
+      "hypothesis": "</s>",
+      "reference": "zwischen dem tief bei schottland und dem hoch über südeuropa strömt morgen milde luft zu uns nach deutschland .",
+      "nll_sum": 214.55535888671875,
+      "token_count": 20,
+      "nll_per_token": 10.727767944335938
+    },
+    {
+      "id": "03July_2011_Sunday_tagesschau-1665",
+      "hypothesis": "</s>",
+      "reference": "in den übrigen landesteilen wird es meist freundlich dank einer hochdruckzone die von der biskaya bis zu den <unk> reicht .",
+      "nll_sum": 234.3564453125,
+      "token_count": 22,
+      "nll_per_token": 10.652565696022727
+    },
+    {
+      "id": "24July_2011_Sunday_tagesschau-6632",
+      "hypothesis": "</s>",
+      "reference": "ähnliches wetter auch am donnerstag .",
+      "nll_sum": 51.58992385864258,
+      "token_count": 7,
+      "nll_per_token": 7.369989122663226
+    },
+    {
+      "id": "11February_2010_Thursday_tagesschau-8761",
+      "hypothesis": "</s>",
+      "reference": "im laufe des <unk> wird es dann immer trockener kalt bleibt es aber .",
+      "nll_sum": 137.0543670654297,
+      "token_count": 15,
+      "nll_per_token": 9.136957804361979
+    },
+    {
+      "id": "25August_2009_Tuesday_tagesschau-7086",
+      "hypothesis": "</s>",
+      "reference": "der deutsche wetterdienst hat entsprechende warnungen herausgegeben .",
+      "nll_sum": 78.89046478271484,
+      "token_count": 9,
+      "nll_per_token": 8.765607198079428
+    },
+    {
+      "id": "17February_2011_Thursday_heute-387",
+      "hypothesis": "</s>",
+      "reference": "temperaturen nur so um die null grad am kältesten im norden bis minus fünf grad .",
+      "nll_sum": 136.63677978515625,
+      "token_count": 17,
+      "nll_per_token": 8.037457634420957
+    },
+    {
+      "id": "29July_2010_Thursday_tagesschau-7420",
+      "hypothesis": "</s>",
+      "reference": "am samstag meist freundlich und überwiegend trocken .",
+      "nll_sum": 85.46082305908203,
+      "token_count": 9,
+      "nll_per_token": 9.49564700656467
+    },
+    {
+      "id": "17July_2009_Friday_tagesschau-5104",
+      "hypothesis": "</s>",
+      "reference": "in der dahinter <unk> kaltluft gestaltet sich das wetter morgen wechselhaft .",
+      "nll_sum": 120.34467315673828,
+      "token_count": 13,
+      "nll_per_token": 9.25728255051833
+    },
+    {
+      "id": "21November_2010_Sunday_tagesschau-5676",
+      "hypothesis": "</s>",
+      "reference": "mittwoch und donnerstag wechselhaft hier und da fällt etwas regen oder schnee der zunehmend auch in den niederungen möglich ist .",
+      "nll_sum": 231.25091552734375,
+      "token_count": 22,
+      "nll_per_token": 10.511405251242898
+    },
+    {
+      "id": "01October_2010_Friday_tagesschau-2700",
+      "hypothesis": "</s>",
+      "reference": "heute nacht zwölf grad in der kölner bucht ein grad in brandenburg .",
+      "nll_sum": 128.23495483398438,
+      "token_count": 14,
+      "nll_per_token": 9.159639630998884
+    },
+    {
+      "id": "02August_2010_Monday_heute-1243",
+      "hypothesis": "</s>",
+      "reference": "milder bleibt es unter den regenwolken im osten mit fünfzehn sechzehn grad .",
+      "nll_sum": 122.41512298583984,
+      "token_count": 14,
+      "nll_per_token": 8.743937356131417
+    },
+    {
+      "id": "24January_2013_Thursday_heute-7266",
+      "hypothesis": "</s>",
+      "reference": "es bleibt noch mal kalt am samstag <unk> bis höchsttemperaturen minus zehn grad .",
+      "nll_sum": 129.36180114746094,
+      "token_count": 15,
+      "nll_per_token": 8.624120076497396
+    },
+    {
+      "id": "19February_2010_Friday_tagesschau-4093",
+      "hypothesis": "</s>",
+      "reference": "da die luftdruckunterschiede nahe des <unk> groß sind wird es im küstenumfeld morgen teilweise stürmisch .",
+      "nll_sum": 171.81455993652344,
+      "token_count": 17,
+      "nll_per_token": 10.106738819795495
+    },
+    {
+      "id": "07December_2010_Tuesday_tagesschau-4155",
+      "hypothesis": "</s>",
+      "reference": "am freitag schneit es im westen und süden ab und an in tiefen lagen im westen auch regen .",
+      "nll_sum": 222.210205078125,
+      "token_count": 20,
+      "nll_per_token": 11.11051025390625
+    },
+    {
+      "id": "25August_2010_Wednesday_heute-6005",
+      "hypothesis": "</s>",
+      "reference": "denn im süden haben wir die schwül warme gewitterluft dabei ist es aber noch im süden sonnig .",
+      "nll_sum": 199.42901611328125,
+      "token_count": 19,
+      "nll_per_token": 10.496264005962171
+    },
+    {
+      "id": "06October_2012_Saturday_tagesschau-8742",
+      "hypothesis": "</s>",
+      "reference": "dort wird es am dienstag windig dazu gibt es einzelne schauer .",
+      "nll_sum": 104.03814697265625,
+      "token_count": 13,
+      "nll_per_token": 8.00293438251202
+    },
+    {
+      "id": "05June_2010_Saturday_tagesschau-3932",
+      "hypothesis": "</s>",
+      "reference": "am dienstag vor allem richtung osten längere freundliche abschnitte daneben aber auch schauer und gewitter .",
+      "nll_sum": 186.63421630859375,
+      "token_count": 17,
+      "nll_per_token": 10.978483312270221
+    },
+    {
+      "id": "08December_2009_Tuesday_heute-4198",
+      "hypothesis": "</s>",
+      "reference": "guten abend liebe zuschauer .",
+      "nll_sum": 24.97869873046875,
+      "token_count": 6,
+      "nll_per_token": 4.163116455078125
+    },
+    {
+      "id": "25June_2010_Friday_tagesschau-3880",
+      "hypothesis": "</s>",
+      "reference": "ansonsten ist es meist nur locker bewölkt oder klar stellenweise bildet sich nebel .",
+      "nll_sum": 132.90501403808594,
+      "token_count": 15,
+      "nll_per_token": 8.86033426920573
+    },
+    {
+      "id": "22February_2010_Monday_tagesschau-3246",
+      "hypothesis": "</s>",
+      "reference": "im südosten ist es heute nacht trocken sonst regnet es zeitweise in der nordhälfte teilweise kräftig .",
+      "nll_sum": 158.77621459960938,
+      "token_count": 18,
+      "nll_per_token": 8.820900811089409
+    },
+    {
+      "id": "28September_2009_Monday_tagesschau-4681",
+      "hypothesis": "</s>",
+      "reference": "die aussichten .",
+      "nll_sum": 24.220043182373047,
+      "token_count": 4,
+      "nll_per_token": 6.055010795593262
+    },
+    {
+      "id": "24August_2009_Monday_heute-6643",
+      "hypothesis": "</s>",
+      "reference": "es kommen dann ein paar wolkenfelder .",
+      "nll_sum": 63.62376403808594,
+      "token_count": 8,
+      "nll_per_token": 7.952970504760742
+    },
+    {
+      "id": "17February_2010_Wednesday_heute-1478",
+      "hypothesis": "</s>",
+      "reference": "dazu gehört ein tiefdruckgebiet mit milder luft im gepäck .",
+      "nll_sum": 108.46790313720703,
+      "token_count": 11,
+      "nll_per_token": 9.86071846701882
+    },
+    {
+      "id": "13September_2010_Monday_tagesschau-4592",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen dienstag den vierzehnten september .",
+      "nll_sum": 96.87464141845703,
+      "token_count": 12,
+      "nll_per_token": 8.07288678487142
+    },
+    {
+      "id": "25October_2010_Monday_tagesschau-17",
+      "hypothesis": "</s>",
+      "reference": "regen und schnee lassen an den alpen in der nacht nach im norden und nordosten fallen hier und da schauer sonst ist das klar .",
+      "nll_sum": 269.98236083984375,
+      "token_count": 26,
+      "nll_per_token": 10.383936955378605
+    },
+    {
+      "id": "16December_2009_Wednesday_tagesschau-5912",
+      "hypothesis": "</s>",
+      "reference": "auch am tag viele wolken und einzelne flocken .",
+      "nll_sum": 87.56437683105469,
+      "token_count": 10,
+      "nll_per_token": 8.756437683105469
+    },
+    {
+      "id": "25August_2010_Wednesday_tagesschau-8508",
+      "hypothesis": "</s>",
+      "reference": "im süden bleibt es morgen unter hochdruckeinfluss zunächst noch recht freundlich und warm .",
+      "nll_sum": 130.63119506835938,
+      "token_count": 15,
+      "nll_per_token": 8.708746337890625
+    },
+    {
+      "id": "11November_2010_Thursday_tagesschau-3564",
+      "hypothesis": "</s>",
+      "reference": "teilweise kräftiger regen zieht heute nacht über uns ostwärts .",
+      "nll_sum": 96.21417236328125,
+      "token_count": 11,
+      "nll_per_token": 8.746742942116477
+    },
+    {
+      "id": "24April_2010_Saturday_tagesschau-3971",
+      "hypothesis": "</s>",
+      "reference": "dort sowie in <unk> muldenlagen ist bodenfrost möglich .",
+      "nll_sum": 90.16868591308594,
+      "token_count": 10,
+      "nll_per_token": 9.016868591308594
+    },
+    {
+      "id": "12January_2010_Tuesday_heute-2544",
+      "hypothesis": "</s>",
+      "reference": "und im laufe der nacht oder gegen morgen wahrscheinlich erst wird es dann im südwesten anfangen zu schneien .",
+      "nll_sum": 217.65672302246094,
+      "token_count": 20,
+      "nll_per_token": 10.882836151123048
+    },
+    {
+      "id": "13August_2009_Thursday_tagesschau-8492",
+      "hypothesis": "</s>",
+      "reference": "die neue woche beginnt noch wechselhaft und etwas kühler .",
+      "nll_sum": 127.32743835449219,
+      "token_count": 11,
+      "nll_per_token": 11.5752216685902
+    },
+    {
+      "id": "30March_2010_Tuesday_tagesschau-5699",
+      "hypothesis": "</s>",
+      "reference": "in der westhälfte geht der regen in schauer über in den bergen schneeschauer .",
+      "nll_sum": 130.6285858154297,
+      "token_count": 15,
+      "nll_per_token": 8.708572387695312
+    },
+    {
+      "id": "05May_2010_Wednesday_tagesschau-3352",
+      "hypothesis": "</s>",
+      "reference": "im norden bleibt es morgen erst noch trocken sonst fällt verbreitet teilweise ergiebiger regen .",
+      "nll_sum": 156.918701171875,
+      "token_count": 16,
+      "nll_per_token": 9.807418823242188
+    },
+    {
+      "id": "21January_2011_Friday_tagesschau-4889",
+      "hypothesis": "</s>",
+      "reference": "heute nacht funkeln hier und da die sterne aber meist hält sich hochnebelartige bewölkung .",
+      "nll_sum": 141.9395751953125,
+      "token_count": 16,
+      "nll_per_token": 8.871223449707031
+    },
+    {
+      "id": "03February_2010_Wednesday_heute-2361",
+      "hypothesis": "</s>",
+      "reference": "und etwas kälter wird es dann im laufe des sonntags von osten .",
+      "nll_sum": 123.94537353515625,
+      "token_count": 14,
+      "nll_per_token": 8.853240966796875
+    },
+    {
+      "id": "08July_2010_Thursday_tagesschau-5388",
+      "hypothesis": "</s>",
+      "reference": "richtung osten ist es meist sonnig .",
+      "nll_sum": 55.92668914794922,
+      "token_count": 8,
+      "nll_per_token": 6.990836143493652
+    },
+    {
+      "id": "09November_2010_Tuesday_heute-5840",
+      "hypothesis": "</s>",
+      "reference": "jetzt wünsche ich ihnen noch einen schönen abend .",
+      "nll_sum": 48.27204895019531,
+      "token_count": 10,
+      "nll_per_token": 4.827204895019531
+    },
+    {
+      "id": "17May_2010_Monday_heute-5577",
+      "hypothesis": "</s>",
+      "reference": "jetzt wünsche ich ihnen noch einen schönen abend .",
+      "nll_sum": 48.27204895019531,
+      "token_count": 10,
+      "nll_per_token": 4.827204895019531
+    },
+    {
+      "id": "04May_2011_Wednesday_heute-3995",
+      "hypothesis": "</s>",
+      "reference": "denn auch morgen gibt es also keine schauer mehr <unk> viel sonnenschein da freuen sich die meisten natürlich drüber .",
+      "nll_sum": 263.548828125,
+      "token_count": 21,
+      "nll_per_token": 12.549944196428571
+    },
+    {
+      "id": "07February_2011_Monday_heute-4658",
+      "hypothesis": "</s>",
+      "reference": "guten abend liebe zuschauer .",
+      "nll_sum": 24.97869873046875,
+      "token_count": 6,
+      "nll_per_token": 4.163116455078125
+    },
+    {
+      "id": "03June_2010_Thursday_tagesschau-2636",
+      "hypothesis": "</s>",
+      "reference": "am tag sechzehn grad an der ostsee und bis zu siebenundzwanzig grad am oberrhein .",
+      "nll_sum": 139.38687133789062,
+      "token_count": 16,
+      "nll_per_token": 8.711679458618164
+    },
+    {
+      "id": "21November_2011_Monday_heute-5428",
+      "hypothesis": "</s>",
+      "reference": "sonst war es vielleicht nur mal sprühregen der aber gar nicht zu <unk> <unk> ist .",
+      "nll_sum": 181.22154235839844,
+      "token_count": 17,
+      "nll_per_token": 10.660090726964613
+    },
+    {
+      "id": "25August_2010_Wednesday_tagesschau-8516",
+      "hypothesis": "</s>",
+      "reference": "dort morgen sommerlich heiße dreißig grad im emsland kühle sechzehn grad .",
+      "nll_sum": 155.43252563476562,
+      "token_count": 13,
+      "nll_per_token": 11.956348125751202
+    },
+    {
+      "id": "18April_2010_Sunday_tagesschau-6663",
+      "hypothesis": "</s>",
+      "reference": "am donnerstag ist es in der mitte am freundlichsten im norden regen oder graupelschauer im süden regnet es zeitweise .",
+      "nll_sum": 221.54844665527344,
+      "token_count": 21,
+      "nll_per_token": 10.549926031203498
+    },
+    {
+      "id": "24March_2011_Thursday_tagesschau-3938",
+      "hypothesis": "</s>",
+      "reference": "sonst meist nur lockere wolken .",
+      "nll_sum": 50.243167877197266,
+      "token_count": 7,
+      "nll_per_token": 7.1775954110281805
+    },
+    {
+      "id": "24November_2009_Tuesday_tagesschau-5686",
+      "hypothesis": "</s>",
+      "reference": "auf den bergen sind orkanartige böen möglich .",
+      "nll_sum": 58.28778076171875,
+      "token_count": 9,
+      "nll_per_token": 6.476420084635417
+    },
+    {
+      "id": "31March_2010_Wednesday_tagesschau-1008",
+      "hypothesis": "</s>",
+      "reference": "am freitag mal sonne mal wolken und nur einzelne schauer stellenweise zeigt sich die sonne auch für längere zeit .",
+      "nll_sum": 237.3464813232422,
+      "token_count": 21,
+      "nll_per_token": 11.302213396344866
+    },
+    {
+      "id": "03February_2010_Wednesday_heute-2360",
+      "hypothesis": "</s>",
+      "reference": "samstag beruhigt es sich etwas .",
+      "nll_sum": 57.576629638671875,
+      "token_count": 7,
+      "nll_per_token": 8.225232805524554
+    },
+    {
+      "id": "20November_2009_Friday_tagesschau-6561",
+      "hypothesis": "</s>",
+      "reference": "ein schwacher tiefausläufer bringt dem nordwesten deutschlands heute nacht hier und da etwas regen .",
+      "nll_sum": 165.03549194335938,
+      "token_count": 16,
+      "nll_per_token": 10.314718246459961
+    },
+    {
+      "id": "01June_2010_Tuesday_tagesschau-5008",
+      "hypothesis": "</s>",
+      "reference": "richtung norden und westen ist es recht freundlich .",
+      "nll_sum": 91.13472747802734,
+      "token_count": 10,
+      "nll_per_token": 9.113472747802735
+    },
+    {
+      "id": "18April_2011_Monday_tagesschau-1314",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen dienstag den neunzehnten april .",
+      "nll_sum": 102.71551513671875,
+      "token_count": 12,
+      "nll_per_token": 8.559626261393229
+    },
+    {
+      "id": "29August_2009_Saturday_tagesschau-5020",
+      "hypothesis": "</s>",
+      "reference": "in den frühstunden kann sich vereinzelt nebel bilden .",
+      "nll_sum": 76.8779525756836,
+      "token_count": 10,
+      "nll_per_token": 7.687795257568359
+    },
+    {
+      "id": "12January_2011_Wednesday_tagesschau-1727",
+      "hypothesis": "</s>",
+      "reference": "die hochwassergefahr steigt wieder es gelten entsprechende unwetterwarnungen des deutschen wetterdienstes .",
+      "nll_sum": 139.64401245117188,
+      "token_count": 13,
+      "nll_per_token": 10.741847111628605
+    },
+    {
+      "id": "28August_2009_Friday_tagesschau-5886",
+      "hypothesis": "</s>",
+      "reference": "am dienstag ziehen dann gegen abend von westen wieder zum teil kräftige schauer und gewitter heran .",
+      "nll_sum": 196.51904296875,
+      "token_count": 18,
+      "nll_per_token": 10.917724609375
+    },
+    {
+      "id": "25June_2010_Friday_tagesschau-3881",
+      "hypothesis": "</s>",
+      "reference": "morgen scheint verbreitet die sonne hier und da tauchen auch mal ein paar dichtere wolken auf .",
+      "nll_sum": 175.10740661621094,
+      "token_count": 18,
+      "nll_per_token": 9.728189256456163
+    },
+    {
+      "id": "28August_2009_Friday_tagesschau-5881",
+      "hypothesis": "</s>",
+      "reference": "dort morgen bis zweiundzwanzig grad .",
+      "nll_sum": 49.038421630859375,
+      "token_count": 7,
+      "nll_per_token": 7.005488804408482
+    },
+    {
+      "id": "25August_2010_Wednesday_heute-6006",
+      "hypothesis": "</s>",
+      "reference": "dort kommen erst abends die gewitter an .",
+      "nll_sum": 74.79646301269531,
+      "token_count": 9,
+      "nll_per_token": 8.310718112521702
+    },
+    {
+      "id": "30October_2009_Friday_tagesschau-2267",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen samstag den einunddreißigsten oktober .",
+      "nll_sum": 99.30472564697266,
+      "token_count": 12,
+      "nll_per_token": 8.275393803914389
+    },
+    {
+      "id": "01September_2010_Wednesday_tagesschau-5039",
+      "hypothesis": "</s>",
+      "reference": "morgen überwiegen in der nordosthälfte die wolken und es fallen einzelne schauer .",
+      "nll_sum": 134.5687713623047,
+      "token_count": 14,
+      "nll_per_token": 9.612055097307477
+    },
+    {
+      "id": "01November_2010_Monday_tagesschau-137",
+      "hypothesis": "</s>",
+      "reference": "die halten sich morgen recht zäh .",
+      "nll_sum": 65.01205444335938,
+      "token_count": 8,
+      "nll_per_token": 8.126506805419922
+    },
+    {
+      "id": "28October_2009_Wednesday_tagesschau-4543",
+      "hypothesis": "</s>",
+      "reference": "im süden werte nahe dem gefrierpunkt .",
+      "nll_sum": 75.21295166015625,
+      "token_count": 8,
+      "nll_per_token": 9.401618957519531
+    },
+    {
+      "id": "28July_2010_Wednesday_tagesschau-864",
+      "hypothesis": "</s>",
+      "reference": "morgen muss verbreitet mit teilweise kräftigen schauern und gewittern gerechnet werden .",
+      "nll_sum": 122.3393783569336,
+      "token_count": 13,
+      "nll_per_token": 9.410721412071815
+    },
+    {
+      "id": "16May_2010_Sunday_tagesschau-5226",
+      "hypothesis": "</s>",
+      "reference": "in den kommenden tagen bestimmt das tief über osteuropa unser wetter die kühle luft bleibt uns zunächst erhalten .",
+      "nll_sum": 182.6736602783203,
+      "token_count": 20,
+      "nll_per_token": 9.133683013916016
+    },
+    {
+      "id": "23January_2011_Sunday_tagesschau-7823",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen montag den vierundzwanzigsten januar <unk> .",
+      "nll_sum": 100.82148742675781,
+      "token_count": 13,
+      "nll_per_token": 7.755499032827524
+    },
+    {
+      "id": "24April_2010_Saturday_tagesschau-3967",
+      "hypothesis": "</s>",
+      "reference": "am tag scheint verbreitet die sonne im süden und westen bilden sich später gebietsweise quellwolken .",
+      "nll_sum": 157.50537109375,
+      "token_count": 17,
+      "nll_per_token": 9.265021829044118
+    },
+    {
+      "id": "24September_2009_Thursday_heute-6084",
+      "hypothesis": "</s>",
+      "reference": "morgen erwarten uns dann an der küste werte von siebzehn grad .",
+      "nll_sum": 117.1363525390625,
+      "token_count": 13,
+      "nll_per_token": 9.010488656850962
+    },
+    {
+      "id": "01April_2010_Thursday_heute-6704",
+      "hypothesis": "</s>",
+      "reference": "aber <unk> nachricht .",
+      "nll_sum": 38.39406204223633,
+      "token_count": 5,
+      "nll_per_token": 7.678812408447266
+    },
+    {
+      "id": "06January_2010_Wednesday_tagesschau-7737",
+      "hypothesis": "</s>",
+      "reference": "es bleibt windig .",
+      "nll_sum": 28.559967041015625,
+      "token_count": 5,
+      "nll_per_token": 5.711993408203125
+    },
+    {
+      "id": "17July_2009_Friday_tagesschau-5106",
+      "hypothesis": "</s>",
+      "reference": "der deutsche wetterdienst hat entsprechende unwetterwarnungen herausgegeben .",
+      "nll_sum": 75.44657897949219,
+      "token_count": 9,
+      "nll_per_token": 8.382953219943577
+    },
+    {
+      "id": "11November_2009_Wednesday_tagesschau-8041",
+      "hypothesis": "</s>",
+      "reference": "später ziehen dort auch wolken mit etwas regen auf .",
+      "nll_sum": 100.29478454589844,
+      "token_count": 11,
+      "nll_per_token": 9.117707685990768
+    },
+    {
+      "id": "13July_2009_Monday_tagesschau-7509",
+      "hypothesis": "</s>",
+      "reference": "an der luftmassengrenze kommt es zu teilweise starken und gewittrigen regenfällen .",
+      "nll_sum": 110.6098861694336,
+      "token_count": 13,
+      "nll_per_token": 8.508452782264122
+    },
+    {
+      "id": "22September_2010_Wednesday_heute-2625",
+      "hypothesis": "</s>",
+      "reference": "und ab samstag sonntag kühles herbstwetter das gehört jetzt einfach dazu .",
+      "nll_sum": 163.84092712402344,
+      "token_count": 13,
+      "nll_per_token": 12.603148240309496
+    },
+    {
+      "id": "04December_2011_Sunday_tagesschau-7791",
+      "hypothesis": "</s>",
+      "reference": "sehr windiges wetter am dienstag regen schnee und graupelschauer .",
+      "nll_sum": 98.5071029663086,
+      "token_count": 11,
+      "nll_per_token": 8.955191178755326
+    },
+    {
+      "id": "18May_2010_Tuesday_heute-3366",
+      "hypothesis": "</s>",
+      "reference": "morgen breiten sich diese regenwolken dann weiter über die mitte richtung westen aber vor allen dingen auch nach baden württemberg und bayern aus .",
+      "nll_sum": 274.812255859375,
+      "token_count": 25,
+      "nll_per_token": 10.992490234375
+    },
+    {
+      "id": "01October_2010_Friday_tagesschau-2701",
+      "hypothesis": "</s>",
+      "reference": "am tag elf grad im vogtland und einundzwanzig grad am oberrhein .",
+      "nll_sum": 86.04330444335938,
+      "token_count": 13,
+      "nll_per_token": 6.61871572641226
+    },
+    {
+      "id": "22September_2010_Wednesday_heute-2624",
+      "hypothesis": "</s>",
+      "reference": "am freitag geht es aber langsam abwärts im osten gewitterschauer .",
+      "nll_sum": 106.59711456298828,
+      "token_count": 12,
+      "nll_per_token": 8.883092880249023
+    },
+    {
+      "id": "28July_2010_Wednesday_tagesschau-872",
+      "hypothesis": "</s>",
+      "reference": "am sonntag ziehen von nordwesten wieder schauer und gewitter heran .",
+      "nll_sum": 107.74612426757812,
+      "token_count": 12,
+      "nll_per_token": 8.978843688964844
+    },
+    {
+      "id": "24November_2009_Tuesday_tagesschau-5679",
+      "hypothesis": "</s>",
+      "reference": "mancherorts werden damit die höchsten temperaturen der woche erwartet .",
+      "nll_sum": 104.46939086914062,
+      "token_count": 11,
+      "nll_per_token": 9.497217351740057
+    },
+    {
+      "id": "23September_2009_Wednesday_tagesschau-7589",
+      "hypothesis": "</s>",
+      "reference": "am freitag ist es in der nähe der küsten und ganz im süden teilweise stark bewölkt .",
+      "nll_sum": 166.34310913085938,
+      "token_count": 18,
+      "nll_per_token": 9.241283840603298
+    },
+    {
+      "id": "11December_2009_Friday_tagesschau-3504",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen samstag den zwölften dezember .",
+      "nll_sum": 103.24652862548828,
+      "token_count": 12,
+      "nll_per_token": 8.603877385457357
+    },
+    {
+      "id": "06February_2010_Saturday_tagesschau-7365",
+      "hypothesis": "</s>",
+      "reference": "der wind weht meist schwach aus ost bis nordost .",
+      "nll_sum": 71.56846618652344,
+      "token_count": 11,
+      "nll_per_token": 6.506224198774858
+    },
+    {
+      "id": "24February_2011_Thursday_heute-6666",
+      "hypothesis": "</s>",
+      "reference": "dagegen gab es im westen fünf zentimeter neuschnee und schon <unk> der <unk> auf den <unk> .",
+      "nll_sum": 212.35897827148438,
+      "token_count": 18,
+      "nll_per_token": 11.797721015082466
+    },
+    {
+      "id": "24July_2011_Sunday_tagesschau-6630",
+      "hypothesis": "</s>",
+      "reference": "richtung osten zeigt sich die sonne häufiger .",
+      "nll_sum": 77.45561218261719,
+      "token_count": 9,
+      "nll_per_token": 8.606179131401909
+    },
+    {
+      "id": "11September_2009_Friday_tagesschau-8772",
+      "hypothesis": "</s>",
+      "reference": "relativ kühle luft strömt zu uns nach deutschland .",
+      "nll_sum": 89.9740219116211,
+      "token_count": 10,
+      "nll_per_token": 8.99740219116211
+    },
+    {
+      "id": "03September_2010_Friday_tagesschau-8428",
+      "hypothesis": "</s>",
+      "reference": "am tag ist es im westen freundlich sonst sonne und dichtere wolken im wechsel hier und da fallen einzelne schauer .",
+      "nll_sum": 188.2307891845703,
+      "token_count": 22,
+      "nll_per_token": 8.555944962935014
+    },
+    {
+      "id": "24August_2009_Monday_heute-6648",
+      "hypothesis": "</s>",
+      "reference": "und am mittwoch dann noch reste dieser schauer und gewitter über dem osten und über dem süden .",
+      "nll_sum": 212.02915954589844,
+      "token_count": 19,
+      "nll_per_token": 11.159429449784128
+    },
+    {
+      "id": "07October_2012_Sunday_tagesschau-3033",
+      "hypothesis": "</s>",
+      "reference": "morgen schwacher bis mäßiger an der see frischer wind aus südwest bis west .",
+      "nll_sum": 113.3336410522461,
+      "token_count": 15,
+      "nll_per_token": 7.55557607014974
+    },
+    {
+      "id": "24September_2009_Thursday_heute-6091",
+      "hypothesis": "</s>",
+      "reference": "das war es für heute schönen abend noch .",
+      "nll_sum": 63.93369674682617,
+      "token_count": 10,
+      "nll_per_token": 6.393369674682617
+    },
+    {
+      "id": "13August_2009_Thursday_tagesschau-8491",
+      "hypothesis": "</s>",
+      "reference": "am sonntag wird es wieder unbeständiger mit einzelnen schauern und gewittern die örtlich heftig sein können .",
+      "nll_sum": 175.59619140625,
+      "token_count": 18,
+      "nll_per_token": 9.75534396701389
+    },
+    {
+      "id": "01October_2012_Monday_tagesschau-5370",
+      "hypothesis": "</s>",
+      "reference": "in den mittelgebirgen heute nacht örtlich vier im nordwesten unter wolken bis zwölf grad .",
+      "nll_sum": 133.21914672851562,
+      "token_count": 16,
+      "nll_per_token": 8.326196670532227
+    },
+    {
+      "id": "07April_2011_Thursday_tagesschau-8101",
+      "hypothesis": "</s>",
+      "reference": "mehr wolken als sonne gibt es im norden und osten tropfen fallen nur vereinzelt .",
+      "nll_sum": 161.69406127929688,
+      "token_count": 16,
+      "nll_per_token": 10.105878829956055
+    },
+    {
+      "id": "11August_2009_Tuesday_tagesschau-4355",
+      "hypothesis": "</s>",
+      "reference": "ansonsten viele wolken die erst im norden später auch in der mitte mancherorts regenschauer und vereinzelte gewitter bringen .",
+      "nll_sum": 206.09573364257812,
+      "token_count": 20,
+      "nll_per_token": 10.304786682128906
+    },
+    {
+      "id": "06November_2010_Saturday_tagesschau-1162",
+      "hypothesis": "</s>",
+      "reference": "schwacher bis mäßiger auf den bergen in böen auch starker wind in der nordhälfte aus ost bis nordost sonst aus unterschiedlichen richtungen .",
+      "nll_sum": 185.02520751953125,
+      "token_count": 24,
+      "nll_per_token": 7.709383646647136
+    },
+    {
+      "id": "24January_2010_Sunday_tagesschau-8703",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen montag den fünfundzwanzigsten januar .",
+      "nll_sum": 103.29695129394531,
+      "token_count": 12,
+      "nll_per_token": 8.608079274495443
+    },
+    {
+      "id": "26July_2010_Monday_tagesschau-6268",
+      "hypothesis": "</s>",
+      "reference": "sommerliche temperaturen sind dabei eher die ausnahme .",
+      "nll_sum": 71.21066284179688,
+      "token_count": 9,
+      "nll_per_token": 7.912295871310764
+    },
+    {
+      "id": "18December_2010_Saturday_tagesschau-6125",
+      "hypothesis": "</s>",
+      "reference": "im süden fällt auch stellenweise regen der gefrieren kann .",
+      "nll_sum": 85.74492645263672,
+      "token_count": 11,
+      "nll_per_token": 7.794993313876065
+    },
+    {
+      "id": "05May_2010_Wednesday_tagesschau-3348",
+      "hypothesis": "</s>",
+      "reference": "das kräftige mittelmeertief dehnt seinen einfluss weiter nach norden aus und sorgt morgen in fast ganz deutschland für einen <unk> himmel .",
+      "nll_sum": 229.88040161132812,
+      "token_count": 23,
+      "nll_per_token": 9.994800070057744
+    },
+    {
+      "id": "03February_2010_Wednesday_tagesschau-2061",
+      "hypothesis": "</s>",
+      "reference": "örtlich ist gefrierender regen dabei richtung nordosten auch schnee .",
+      "nll_sum": 88.11570739746094,
+      "token_count": 11,
+      "nll_per_token": 8.01051885431463
+    },
+    {
+      "id": "16June_2010_Wednesday_tagesschau-8149",
+      "hypothesis": "</s>",
+      "reference": "der regen zieht im laufe der nacht richtung main .",
+      "nll_sum": 100.27548217773438,
+      "token_count": 11,
+      "nll_per_token": 9.11595292524858
+    },
+    {
+      "id": "08October_2009_Thursday_tagesschau-5357",
+      "hypothesis": "</s>",
+      "reference": "am samstag überquert uns ein regengebiet von west nach ost .",
+      "nll_sum": 106.15199279785156,
+      "token_count": 12,
+      "nll_per_token": 8.845999399820963
+    },
+    {
+      "id": "05January_2010_Tuesday_tagesschau-2668",
+      "hypothesis": "</s>",
+      "reference": "vor allem in richtung küste sowie im südwesten kann es in der nacht etwas schneien .",
+      "nll_sum": 170.8916015625,
+      "token_count": 17,
+      "nll_per_token": 10.052447150735293
+    },
+    {
+      "id": "10August_2009_Monday_heute-6903",
+      "hypothesis": "</s>",
+      "reference": "im süden oder in der mitte auch bis siebenundzwanzig grad .",
+      "nll_sum": 109.14246368408203,
+      "token_count": 12,
+      "nll_per_token": 9.095205307006836
+    },
+    {
+      "id": "10December_2009_Thursday_heute-7945",
+      "hypothesis": "</s>",
+      "reference": "teilweise im nordwesten ein bisschen schneeregen .",
+      "nll_sum": 66.9644775390625,
+      "token_count": 8,
+      "nll_per_token": 8.370559692382812
+    },
+    {
+      "id": "14July_2009_Tuesday_tagesschau-2433",
+      "hypothesis": "</s>",
+      "reference": "besonders im südlichen bergland einzelne wärmegewitter .",
+      "nll_sum": 70.61203002929688,
+      "token_count": 8,
+      "nll_per_token": 8.82650375366211
+    },
+    {
+      "id": "20October_2010_Wednesday_tagesschau-8214",
+      "hypothesis": "</s>",
+      "reference": "in der südwesthälfte morgen teils wolken teils längere zeit sonnenschein .",
+      "nll_sum": 112.89405059814453,
+      "token_count": 12,
+      "nll_per_token": 9.407837549845377
+    },
+    {
+      "id": "29March_2011_Tuesday_tagesschau-8108",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen mittwoch den dreißigsten märz .",
+      "nll_sum": 89.48575592041016,
+      "token_count": 12,
+      "nll_per_token": 7.457146326700847
+    },
+    {
+      "id": "20June_2011_Monday_heute-6516",
+      "hypothesis": "</s>",
+      "reference": "mal ist es etwas wärmer mal etwas kälter und an dieser wetterverteilung wird sich auch in den nächsten tagen wenig ändern .",
+      "nll_sum": 225.07980346679688,
+      "token_count": 23,
+      "nll_per_token": 9.786078411599863
+    },
+    {
+      "id": "26October_2009_Monday_tagesschau-1394",
+      "hypothesis": "</s>",
+      "reference": "heute nacht ist es meist stark bewölkt örtlich regnet oder nieselt es etwas .",
+      "nll_sum": 142.32362365722656,
+      "token_count": 15,
+      "nll_per_token": 9.488241577148438
+    },
+    {
+      "id": "24November_2009_Tuesday_tagesschau-5685",
+      "hypothesis": "</s>",
+      "reference": "an der nordsee schwere sturmböen .",
+      "nll_sum": 44.96875,
+      "token_count": 7,
+      "nll_per_token": 6.424107142857143
+    },
+    {
+      "id": "24November_2009_Tuesday_tagesschau-5680",
+      "hypothesis": "</s>",
+      "reference": "danach wird es nur etwas kühler .",
+      "nll_sum": 61.36604309082031,
+      "token_count": 8,
+      "nll_per_token": 7.670755386352539
+    },
+    {
+      "id": "13July_2009_Monday_tagesschau-7510",
+      "hypothesis": "</s>",
+      "reference": "und die breiten sich heute nacht von rheinland pfalz und baden württemberg bis nach thüringen aus .",
+      "nll_sum": 151.95907592773438,
+      "token_count": 18,
+      "nll_per_token": 8.442170884874132
+    },
+    {
+      "id": "11September_2009_Friday_tagesschau-8771",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen samstag den zwölften september .",
+      "nll_sum": 95.31548309326172,
+      "token_count": 12,
+      "nll_per_token": 7.942956924438477
+    },
+    {
+      "id": "14March_2011_Monday_tagesschau-7600",
+      "hypothesis": "</s>",
+      "reference": "ansonsten wird es überwiegend freundlich .",
+      "nll_sum": 53.69190979003906,
+      "token_count": 7,
+      "nll_per_token": 7.6702728271484375
+    },
+    {
+      "id": "08November_2010_Monday_heute-6875",
+      "hypothesis": "</s>",
+      "reference": "das wetter in europa hat viel zu bieten .",
+      "nll_sum": 88.92640686035156,
+      "token_count": 10,
+      "nll_per_token": 8.892640686035156
+    },
+    {
+      "id": "21October_2011_Friday_tagesschau-4104",
+      "hypothesis": "</s>",
+      "reference": "in den niederungen ist es teilweise länger neblig wenige kilometer daneben sonne auf den bergen ist es durchweg sonnig .",
+      "nll_sum": 199.7806396484375,
+      "token_count": 21,
+      "nll_per_token": 9.513363792782737
+    },
+    {
+      "id": "03February_2010_Wednesday_heute-2362",
+      "hypothesis": "</s>",
+      "reference": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+      "nll_sum": 61.878395080566406,
+      "token_count": 13,
+      "nll_per_token": 4.759876544658955
+    },
+    {
+      "id": "24March_2011_Thursday_tagesschau-3937",
+      "hypothesis": "</s>",
+      "reference": "in der nacht werden die wolken im norden und nordosten dichter erste tropfen können an der ostsee fallen .",
+      "nll_sum": 201.75677490234375,
+      "token_count": 20,
+      "nll_per_token": 10.087838745117187
+    },
+    {
+      "id": "04May_2010_Tuesday_heute-460",
+      "hypothesis": "</s>",
+      "reference": "der donnerstag wird dann richtig <unk> da erwarten wir unwetter in deutschland und große temperaturunterschiede sechs bis zwanzig grad .",
+      "nll_sum": 212.98898315429688,
+      "token_count": 21,
+      "nll_per_token": 10.142332531156994
+    },
+    {
+      "id": "11April_2010_Sunday_tagesschau-8632",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen montag den zwölften april .",
+      "nll_sum": 103.06211853027344,
+      "token_count": 12,
+      "nll_per_token": 8.588509877522787
+    },
+    {
+      "id": "31March_2010_Wednesday_tagesschau-999",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen donnerstag den ersten april .",
+      "nll_sum": 91.04901885986328,
+      "token_count": 12,
+      "nll_per_token": 7.58741823832194
+    },
+    {
+      "id": "24September_2009_Thursday_heute-6081",
+      "hypothesis": "</s>",
+      "reference": "in dieser nacht fällt noch etwas regen im bayerischen wald .",
+      "nll_sum": 100.5076904296875,
+      "token_count": 12,
+      "nll_per_token": 8.375640869140625
+    },
+    {
+      "id": "08December_2009_Tuesday_tagesschau-1938",
+      "hypothesis": "</s>",
+      "reference": "zunächst regnet es richtung südosten noch etwas im bergland auch schnee am nachmittag regnet es im westen und nordwesten .",
+      "nll_sum": 203.4222869873047,
+      "token_count": 21,
+      "nll_per_token": 9.686775570824032
+    },
+    {
+      "id": "28March_2011_Monday_tagesschau-2286",
+      "hypothesis": "</s>",
+      "reference": "vor allem im nordwesten sowie in bayern bildet sich nebel .",
+      "nll_sum": 119.29849243164062,
+      "token_count": 12,
+      "nll_per_token": 9.941541035970053
+    },
+    {
+      "id": "05May_2010_Wednesday_tagesschau-3360",
+      "hypothesis": "</s>",
+      "reference": "am wochenende wird es dann etwas wärmer das ganze bei wechselhaftem wetter mit schauern gewittern und gelegentlichem sonnenschein .",
+      "nll_sum": 214.19284057617188,
+      "token_count": 20,
+      "nll_per_token": 10.709642028808593
+    },
+    {
+      "id": "14July_2009_Tuesday_tagesschau-2430",
+      "hypothesis": "</s>",
+      "reference": "heute nacht schwül warme dreizehn bis achtzehn grad .",
+      "nll_sum": 80.23798370361328,
+      "token_count": 10,
+      "nll_per_token": 8.023798370361328
+    },
+    {
+      "id": "24May_2010_Monday_tagesschau-3139",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen dienstag den fünfundzwanzigsten mai .",
+      "nll_sum": 92.8775405883789,
+      "token_count": 12,
+      "nll_per_token": 7.739795049031575
+    },
+    {
+      "id": "13November_2009_Friday_tagesschau-8607",
+      "hypothesis": "</s>",
+      "reference": "im weiteren verlauf breitet sich der regen richtung osten aus dann wird es im westen freundlicher .",
+      "nll_sum": 148.62051391601562,
+      "token_count": 18,
+      "nll_per_token": 8.256695217556423
+    },
+    {
+      "id": "22July_2009_Wednesday_tagesschau-2873",
+      "hypothesis": "</s>",
+      "reference": "in der nacht muss vor allem in der nordwesthälfte mit schauern und gewittern gerechnet werden die heftig ausfallen können .",
+      "nll_sum": 208.27508544921875,
+      "token_count": 21,
+      "nll_per_token": 9.91786121186756
+    },
+    {
+      "id": "17July_2009_Friday_tagesschau-5105",
+      "hypothesis": "</s>",
+      "reference": "in der osthälfte und im süden gibt es heute nacht kräftige regenfälle und zum teil heftige gewitter .",
+      "nll_sum": 181.6284942626953,
+      "token_count": 19,
+      "nll_per_token": 9.559394434878701
+    },
+    {
+      "id": "21August_2010_Saturday_tagesschau-8822",
+      "hypothesis": "</s>",
+      "reference": "heute nacht neunzehn bis fünfzehn grad im südosten bis zwölf grad .",
+      "nll_sum": 95.45509338378906,
+      "token_count": 13,
+      "nll_per_token": 7.3426994910606975
+    },
+    {
+      "id": "28October_2009_Wednesday_tagesschau-4537",
+      "hypothesis": "</s>",
+      "reference": "heute nacht gibt es im norden und nordosten viele wolken örtlich regnet oder nieselt es etwas .",
+      "nll_sum": 186.22760009765625,
+      "token_count": 18,
+      "nll_per_token": 10.345977783203125
+    },
+    {
+      "id": "12December_2011_Monday_heute-5800",
+      "hypothesis": "</s>",
+      "reference": "der sternenklare himmel im westen der <unk> denn morgen wird es wieder regnen .",
+      "nll_sum": 139.77053833007812,
+      "token_count": 15,
+      "nll_per_token": 9.318035888671876
+    },
+    {
+      "id": "16December_2009_Wednesday_tagesschau-5914",
+      "hypothesis": "</s>",
+      "reference": "in der mitte lockert es auch mal auf .",
+      "nll_sum": 85.82494354248047,
+      "token_count": 10,
+      "nll_per_token": 8.582494354248047
+    },
+    {
+      "id": "30October_2009_Friday_tagesschau-2274",
+      "hypothesis": "</s>",
+      "reference": "richtung westen gibt es im tagesverlauf vermehrt wolken es bleibt aber weitgehend trocken .",
+      "nll_sum": 147.5457763671875,
+      "token_count": 15,
+      "nll_per_token": 9.836385091145834
+    },
+    {
+      "id": "08July_2011_Friday_tagesschau-6729",
+      "hypothesis": "</s>",
+      "reference": "für teile <unk> gelten warnungen des deutschen wetterdienstes da in der nacht dort wie auch im süden sich hier und da gewitter entladen .",
+      "nll_sum": 253.79627990722656,
+      "token_count": 25,
+      "nll_per_token": 10.151851196289062
+    },
+    {
+      "id": "28August_2009_Friday_tagesschau-5883",
+      "hypothesis": "</s>",
+      "reference": "am sonntag im norden noch wolkig und vor allem in küstennähe einzelne schauer .",
+      "nll_sum": 147.68936157226562,
+      "token_count": 15,
+      "nll_per_token": 9.845957438151041
+    },
+    {
+      "id": "06May_2011_Friday_tagesschau-6434",
+      "hypothesis": "</s>",
+      "reference": "der wind weht schwach bis mäßig am meer auch frisch .",
+      "nll_sum": 102.05728912353516,
+      "token_count": 12,
+      "nll_per_token": 8.50477409362793
+    },
+    {
+      "id": "04April_2010_Sunday_tagesschau-4574",
+      "hypothesis": "</s>",
+      "reference": "am dienstag ist es meist freundlich im nordosten halten sich dichtere wolken mit etwas regen .",
+      "nll_sum": 136.4644775390625,
+      "token_count": 17,
+      "nll_per_token": 8.027322208180147
+    },
+    {
+      "id": "04May_2011_Wednesday_heute-3991",
+      "hypothesis": "</s>",
+      "reference": "allerdings sie sehen die regenwolken die erreichen mitteleuropa nicht .",
+      "nll_sum": 90.02294158935547,
+      "token_count": 11,
+      "nll_per_token": 8.183903780850498
+    },
+    {
+      "id": "17January_2011_Monday_tagesschau-7005",
+      "hypothesis": "</s>",
+      "reference": "auch im süden gibt es eine menge wolken oder nebel aber regen fällt dort nur selten .",
+      "nll_sum": 171.2283935546875,
+      "token_count": 18,
+      "nll_per_token": 9.512688530815971
+    },
+    {
+      "id": "04October_2010_Monday_tagesschau-4722",
+      "hypothesis": "</s>",
+      "reference": "am niederrhein heute nacht vierzehn im osten örtlich nur sechs grad .",
+      "nll_sum": 117.42582702636719,
+      "token_count": 13,
+      "nll_per_token": 9.032755925105167
+    },
+    {
+      "id": "13October_2009_Tuesday_tagesschau-1659",
+      "hypothesis": "</s>",
+      "reference": "sonst regnet es zeitweise .",
+      "nll_sum": 39.52749252319336,
+      "token_count": 6,
+      "nll_per_token": 6.587915420532227
+    },
+    {
+      "id": "07April_2010_Wednesday_heute-1626",
+      "hypothesis": "</s>",
+      "reference": "und morgen wird es dann in der südosthälfte nochmal ähnlich werden wie heute allerdings im nordwesten bereits dichtere wolken .",
+      "nll_sum": 197.4091033935547,
+      "token_count": 21,
+      "nll_per_token": 9.400433494931175
+    },
+    {
+      "id": "07October_2010_Thursday_tagesschau-4122",
+      "hypothesis": "</s>",
+      "reference": "besonders in der südhälfte gibt es nebel oder hochnebel der sich morgen wieder teilweise zäh halten kann .",
+      "nll_sum": 171.95504760742188,
+      "token_count": 19,
+      "nll_per_token": 9.05026566354852
+    },
+    {
+      "id": "03February_2010_Wednesday_tagesschau-2056",
+      "hypothesis": "</s>",
+      "reference": "heute nacht gibt es an der oder noch einzelne schneeschauer .",
+      "nll_sum": 110.03599548339844,
+      "token_count": 12,
+      "nll_per_token": 9.169666290283203
+    },
+    {
+      "id": "03June_2010_Thursday_tagesschau-2628",
+      "hypothesis": "</s>",
+      "reference": "das hoch über der nordsee bestimmt morgen im ganzen land das wetter .",
+      "nll_sum": 109.07715606689453,
+      "token_count": 14,
+      "nll_per_token": 7.791225433349609
+    },
+    {
+      "id": "20June_2011_Monday_heute-6511",
+      "hypothesis": "</s>",
+      "reference": "und damit schönen guten abend .",
+      "nll_sum": 34.54279708862305,
+      "token_count": 7,
+      "nll_per_token": 4.934685298374721
+    },
+    {
+      "id": "24November_2009_Tuesday_tagesschau-5690",
+      "hypothesis": "</s>",
+      "reference": "am donnerstag vor allem in der nordwesthälfte hier und da sturmböen .",
+      "nll_sum": 118.38676452636719,
+      "token_count": 13,
+      "nll_per_token": 9.106674194335938
+    },
+    {
+      "id": "06October_2011_Thursday_tagesschau-825",
+      "hypothesis": "</s>",
+      "reference": "frischer wind mit starken bis stürmischen böen bei schauern an der nordsee und auf den bergen teilweise sturmböen .",
+      "nll_sum": 157.58724975585938,
+      "token_count": 20,
+      "nll_per_token": 7.879362487792969
+    },
+    {
+      "id": "06August_2010_Friday_tagesschau-2178",
+      "hypothesis": "</s>",
+      "reference": "sonst viel sonne ein paar lockere wolken im nordwesten fallen am nachmittag einzelne schauer .",
+      "nll_sum": 137.02835083007812,
+      "token_count": 16,
+      "nll_per_token": 8.564271926879883
+    },
+    {
+      "id": "05May_2011_Thursday_heute-3747",
+      "hypothesis": "</s>",
+      "reference": "dazu weht nur ein leichter südwind .",
+      "nll_sum": 65.35333251953125,
+      "token_count": 8,
+      "nll_per_token": 8.169166564941406
+    },
+    {
+      "id": "30April_2010_Friday_tagesschau-2025",
+      "hypothesis": "</s>",
+      "reference": "am tag zehn grad an der nordfriesischen küste zwanzig grad in niederbayern .",
+      "nll_sum": 114.74517822265625,
+      "token_count": 14,
+      "nll_per_token": 8.196084158761161
+    },
+    {
+      "id": "03February_2010_Wednesday_heute-2354",
+      "hypothesis": "</s>",
+      "reference": "darunter zum teil schneeregen .",
+      "nll_sum": 44.904335021972656,
+      "token_count": 6,
+      "nll_per_token": 7.484055836995442
+    },
+    {
+      "id": "27August_2009_Thursday_tagesschau-3269",
+      "hypothesis": "</s>",
+      "reference": "seine kaltfront erreicht morgen auch deutschland inklusive wolken .",
+      "nll_sum": 99.95528411865234,
+      "token_count": 10,
+      "nll_per_token": 9.995528411865234
+    },
+    {
+      "id": "14October_2010_Thursday_tagesschau-287",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen freitag den fünfzehnten oktober .",
+      "nll_sum": 101.0107650756836,
+      "token_count": 12,
+      "nll_per_token": 8.417563756306967
+    },
+    {
+      "id": "24October_2010_Sunday_tagesschau-2908",
+      "hypothesis": "</s>",
+      "reference": "im osten und süden am dienstag einzelne schauer dabei bis in mittlere lagen schnee sonst teils nebel teils wolken oder sonne .",
+      "nll_sum": 243.07884216308594,
+      "token_count": 23,
+      "nll_per_token": 10.56864531143852
+    },
+    {
+      "id": "24October_2009_Saturday_tagesschau-4286",
+      "hypothesis": "</s>",
+      "reference": "der wind aus süd bis west weht schwach bis mäßig .",
+      "nll_sum": 72.05533599853516,
+      "token_count": 12,
+      "nll_per_token": 6.004611333211263
+    },
+    {
+      "id": "04January_2010_Monday_tagesschau-8550",
+      "hypothesis": "</s>",
+      "reference": "im norden mäßiger wind an den küsten weht er teilweise frisch .",
+      "nll_sum": 100.96742248535156,
+      "token_count": 13,
+      "nll_per_token": 7.766724806565505
+    },
+    {
+      "id": "29November_2009_Sunday_tagesschau-7045",
+      "hypothesis": "</s>",
+      "reference": "im äußersten südosten sowie zwischen nordsee und mosel ist es meist trocken .",
+      "nll_sum": 117.33912658691406,
+      "token_count": 14,
+      "nll_per_token": 8.381366184779576
+    },
+    {
+      "id": "24July_2010_Saturday_tagesschau-6343",
+      "hypothesis": "</s>",
+      "reference": "am dienstag in der südhälfte weitere schauer vereinzelt auch gewitter in der nordhälfte freundliche abschnitte .",
+      "nll_sum": 174.5160675048828,
+      "token_count": 17,
+      "nll_per_token": 10.265651029698988
+    },
+    {
+      "id": "07October_2010_Thursday_heute-8568",
+      "hypothesis": "</s>",
+      "reference": "also die temperaturen im westen wieder zwischen etwa achtzehn und dreiundzwanzig grad im osten sind es aber nur noch zwölf bis siebzehn grad .",
+      "nll_sum": 278.01593017578125,
+      "token_count": 25,
+      "nll_per_token": 11.12063720703125
+    },
+    {
+      "id": "28January_2013_Monday_tagesschau-3624",
+      "hypothesis": "</s>",
+      "reference": "der wind lebt bereits in der nacht auf im norden sturmböen sonst einzelne stürmische böen auf den bergen können orkanböen auftreten .",
+      "nll_sum": 209.1314697265625,
+      "token_count": 23,
+      "nll_per_token": 9.092672596807065
+    },
+    {
+      "id": "01April_2011_Friday_tagesschau-3387",
+      "hypothesis": "</s>",
+      "reference": "am montag überall wechselhaft und deutlich kühler .",
+      "nll_sum": 82.83151245117188,
+      "token_count": 9,
+      "nll_per_token": 9.203501383463541
+    },
+    {
+      "id": "12December_2011_Monday_heute-5805",
+      "hypothesis": "</s>",
+      "reference": "in den bergen anfangs ist auch schnee dabei .",
+      "nll_sum": 63.528221130371094,
+      "token_count": 10,
+      "nll_per_token": 6.352822113037109
+    },
+    {
+      "id": "07April_2010_Wednesday_heute-1630",
+      "hypothesis": "</s>",
+      "reference": "in den nächsten tagen wird das dann nicht mehr der fall sein dann wird es insgesamt ein bisschen kühler vor allen dingen zum wochenende hin .",
+      "nll_sum": 290.970703125,
+      "token_count": 27,
+      "nll_per_token": 10.776692708333334
+    },
+    {
+      "id": "21May_2010_Friday_tagesschau-5096",
+      "hypothesis": "</s>",
+      "reference": "morgen temperaturen von fünfzehn grad an der nordsee bis vierundzwanzig am rhein .",
+      "nll_sum": 112.15800476074219,
+      "token_count": 14,
+      "nll_per_token": 8.011286054338727
+    },
+    {
+      "id": "14August_2009_Friday_tagesschau-62",
+      "hypothesis": "</s>",
+      "reference": "deutschland liegt morgen unter hochdruckeinfluss der die wolken weitgehend <unk> .",
+      "nll_sum": 127.74395751953125,
+      "token_count": 12,
+      "nll_per_token": 10.645329793294271
+    },
+    {
+      "id": "05May_2010_Wednesday_tagesschau-3359",
+      "hypothesis": "</s>",
+      "reference": "am tag vor allem im norden regen .",
+      "nll_sum": 78.39496612548828,
+      "token_count": 9,
+      "nll_per_token": 8.71055179172092
+    },
+    {
+      "id": "13April_2010_Tuesday_tagesschau-2314",
+      "hypothesis": "</s>",
+      "reference": "am tag sieben grad an der ostsee und fünfzehn grad am rhein .",
+      "nll_sum": 110.95914459228516,
+      "token_count": 14,
+      "nll_per_token": 7.925653185163226
+    },
+    {
+      "id": "23October_2010_Saturday_tagesschau-896",
+      "hypothesis": "</s>",
+      "reference": "unter wolken heute nacht <unk> zwei bis acht grad .",
+      "nll_sum": 95.37317657470703,
+      "token_count": 11,
+      "nll_per_token": 8.67028877951882
+    },
+    {
+      "id": "10December_2009_Thursday_heute-7943",
+      "hypothesis": "</s>",
+      "reference": "und vor allem im nordwesten kann die sonne rauskommen bei einem frischen nord bis nordostwind .",
+      "nll_sum": 189.3594207763672,
+      "token_count": 17,
+      "nll_per_token": 11.138789457433363
+    },
+    {
+      "id": "13July_2011_Wednesday_tagesschau-7978",
+      "hypothesis": "</s>",
+      "reference": "tiefer luftdruck sorgt für regenfälle die teilweise lang anhaltend und ergiebig sind .",
+      "nll_sum": 157.1138916015625,
+      "token_count": 14,
+      "nll_per_token": 11.222420828683036
+    },
+    {
+      "id": "13July_2009_Monday_tagesschau-7507",
+      "hypothesis": "</s>",
+      "reference": "deutschland liegt zwischen einem tief bei irland und einem mittelmeerhoch .",
+      "nll_sum": 120.99044799804688,
+      "token_count": 12,
+      "nll_per_token": 10.082537333170572
+    },
+    {
+      "id": "09June_2010_Wednesday_tagesschau-5960",
+      "hypothesis": "</s>",
+      "reference": "zusammen mit der schwül heißen luft sorgt es für zum teil heftige gewitter .",
+      "nll_sum": 128.20538330078125,
+      "token_count": 15,
+      "nll_per_token": 8.547025553385417
+    },
+    {
+      "id": "20February_2010_Saturday_tagesschau-7899",
+      "hypothesis": "</s>",
+      "reference": "nordöstlich der elbe morgen örtlich minus ein am oberrhein bis plus acht grad .",
+      "nll_sum": 131.98428344726562,
+      "token_count": 15,
+      "nll_per_token": 8.798952229817708
+    },
+    {
+      "id": "31January_2011_Monday_tagesschau-668",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen dienstag den ersten februar .",
+      "nll_sum": 85.88545989990234,
+      "token_count": 12,
+      "nll_per_token": 7.157121658325195
+    },
+    {
+      "id": "20November_2009_Friday_tagesschau-6574",
+      "hypothesis": "</s>",
+      "reference": "dabei wird es teilweise sehr windig und auch etwas kühler .",
+      "nll_sum": 93.33662414550781,
+      "token_count": 12,
+      "nll_per_token": 7.778052012125651
+    },
+    {
+      "id": "23October_2010_Saturday_tagesschau-895",
+      "hypothesis": "</s>",
+      "reference": "an der nordsee sowie auf den bergen schwere sturmböen .",
+      "nll_sum": 90.50183868408203,
+      "token_count": 11,
+      "nll_per_token": 8.227439880371094
+    },
+    {
+      "id": "09June_2010_Wednesday_heute-8259",
+      "hypothesis": "</s>",
+      "reference": "die nächte werden auch im moment jetzt sehr warm sein .",
+      "nll_sum": 126.1002426147461,
+      "token_count": 12,
+      "nll_per_token": 10.508353551228842
+    },
+    {
+      "id": "15December_2010_Wednesday_tagesschau-37",
+      "hypothesis": "</s>",
+      "reference": "vom nordmeer zieht ein kräftiges tief heran und bringt uns ab den morgenstunden heftige schneefälle zum teil auch gefrierenden regen .",
+      "nll_sum": 245.70953369140625,
+      "token_count": 22,
+      "nll_per_token": 11.168615167791193
+    },
+    {
+      "id": "15March_2011_Tuesday_tagesschau-3326",
+      "hypothesis": "</s>",
+      "reference": "aber im laufe der nacht wird es zunehmend wolkiger .",
+      "nll_sum": 96.03172302246094,
+      "token_count": 11,
+      "nll_per_token": 8.73015663840554
+    },
+    {
+      "id": "10March_2011_Thursday_heute-58",
+      "hypothesis": "</s>",
+      "reference": "sonnig geht es auch ins wochenende samstag ein herrlicher tag mit temperaturen bis siebzehn grad hier im westen .",
+      "nll_sum": 169.86190795898438,
+      "token_count": 20,
+      "nll_per_token": 8.493095397949219
+    },
+    {
+      "id": "22September_2010_Wednesday_heute-2626",
+      "hypothesis": "</s>",
+      "reference": "ich wünsche noch einen schönen abend und tschüss .",
+      "nll_sum": 46.12150955200195,
+      "token_count": 10,
+      "nll_per_token": 4.612150955200195
+    },
+    {
+      "id": "24September_2009_Thursday_heute-6079",
+      "hypothesis": "</s>",
+      "reference": "und wir nehmen auch <unk> auf zu diesem hoch .",
+      "nll_sum": 99.56770324707031,
+      "token_count": 11,
+      "nll_per_token": 9.0516093860973
+    },
+    {
+      "id": "25February_2010_Thursday_tagesschau-1761",
+      "hypothesis": "</s>",
+      "reference": "am tag drei grad auf <unk> bis zwölf grad im emsland .",
+      "nll_sum": 86.7383804321289,
+      "token_count": 13,
+      "nll_per_token": 6.672183110163762
+    },
+    {
+      "id": "07September_2010_Tuesday_tagesschau-1954",
+      "hypothesis": "</s>",
+      "reference": "schwacher bis mäßiger im norden zum teil frischer südost bis ostwind der im südwesten später auf südwest dreht an den küsten bläst er stark mit stürmischen böen .",
+      "nll_sum": 318.84027099609375,
+      "token_count": 29,
+      "nll_per_token": 10.994492103313577
+    },
+    {
+      "id": "04December_2009_Friday_tagesschau-844",
+      "hypothesis": "</s>",
+      "reference": "ab sonntag wird es wieder milder dabei gibt es viele wolken zeitweise fällt regen im nordwesten windig .",
+      "nll_sum": 176.6407470703125,
+      "token_count": 19,
+      "nll_per_token": 9.29688142475329
+    },
+    {
+      "id": "08February_2010_Monday_heute-1497",
+      "hypothesis": "</s>",
+      "reference": "es bleibt meist trüb wie auf diesem bild hier .",
+      "nll_sum": 97.25048828125,
+      "token_count": 11,
+      "nll_per_token": 8.840953480113637
+    },
+    {
+      "id": "09August_2010_Monday_heute-5890",
+      "hypothesis": "</s>",
+      "reference": "ganz anders die trockene hitze über russland mit fünfunddreißig bis vierzig grad .",
+      "nll_sum": 126.14813232421875,
+      "token_count": 14,
+      "nll_per_token": 9.010580880301339
+    },
+    {
+      "id": "26September_2009_Saturday_tagesschau-2340",
+      "hypothesis": "</s>",
+      "reference": "ganz im süden kann es einzelne schauer geben an den küsten ziehen gelegentlich wolken durch .",
+      "nll_sum": 145.70852661132812,
+      "token_count": 17,
+      "nll_per_token": 8.57108980066636
+    },
+    {
+      "id": "08January_2010_Friday_tagesschau-3981",
+      "hypothesis": "</s>",
+      "reference": "im süden mäßiger wind nach norden weht er frisch bis stark mit einzelnen sturmböen an der ostsee und auf den bergen sind orkanartige böen möglich .",
+      "nll_sum": 233.98812866210938,
+      "token_count": 27,
+      "nll_per_token": 8.666226987485532
+    },
+    {
+      "id": "18February_2010_Thursday_tagesschau-4531",
+      "hypothesis": "</s>",
+      "reference": "ab und zu kann sich die sonne zeigen .",
+      "nll_sum": 77.39006805419922,
+      "token_count": 10,
+      "nll_per_token": 7.739006805419922
+    },
+    {
+      "id": "12August_2010_Thursday_tagesschau-4403",
+      "hypothesis": "</s>",
+      "reference": "quer über deutschland liegt eine luftmassengrenze die kühlere meeresluft von heißer luft aus dem südosten trennt .",
+      "nll_sum": 194.21969604492188,
+      "token_count": 18,
+      "nll_per_token": 10.789983113606771
+    },
+    {
+      "id": "30December_2010_Thursday_tagesschau-2232",
+      "hypothesis": "</s>",
+      "reference": "am tag in der nordhälfte etwas regen schnee oder gefrierender regen .",
+      "nll_sum": 114.2511978149414,
+      "token_count": 13,
+      "nll_per_token": 8.788553678072416
+    },
+    {
+      "id": "28September_2010_Tuesday_heute-8343",
+      "hypothesis": "</s>",
+      "reference": "hallo und guten abend .",
+      "nll_sum": 30.41305923461914,
+      "token_count": 6,
+      "nll_per_token": 5.0688432057698565
+    },
+    {
+      "id": "13December_2010_Monday_tagesschau-6944",
+      "hypothesis": "</s>",
+      "reference": "am freitag beruhigt sich das wetter wieder .",
+      "nll_sum": 69.55270385742188,
+      "token_count": 9,
+      "nll_per_token": 7.728078206380208
+    },
+    {
+      "id": "04October_2010_Monday_heute-5953",
+      "hypothesis": "</s>",
+      "reference": "die temperaturen sind außer jetzt im regen wo es ein bisschen kühler bleibt doch ganz erfreulich .",
+      "nll_sum": 184.77145385742188,
+      "token_count": 18,
+      "nll_per_token": 10.265080769856771
+    },
+    {
+      "id": "19March_2011_Saturday_tagesschau-4686",
+      "hypothesis": "</s>",
+      "reference": "über deutschland <unk> sich ein kräftiges hoch das uns in den nächsten tagen reichlich sonnenschein beschert .",
+      "nll_sum": 163.41253662109375,
+      "token_count": 18,
+      "nll_per_token": 9.07847425672743
+    },
+    {
+      "id": "28October_2009_Wednesday_tagesschau-4539",
+      "hypothesis": "</s>",
+      "reference": "morgen gibt es zum teil dichte wolken oder nebel aber auch sonne vor allem im süden .",
+      "nll_sum": 187.10128784179688,
+      "token_count": 18,
+      "nll_per_token": 10.394515991210938
+    },
+    {
+      "id": "15July_2010_Thursday_tagesschau-4056",
+      "hypothesis": "</s>",
+      "reference": "im osten und südosten sind zu beginn der nacht einzelne gewittrige schauer möglich .",
+      "nll_sum": 127.42184448242188,
+      "token_count": 15,
+      "nll_per_token": 8.494789632161458
+    },
+    {
+      "id": "25November_2011_Friday_tagesschau-4399",
+      "hypothesis": "</s>",
+      "reference": "am sonntag im süden nach nebelauflösung häufig sonnig sonst viele wolken und stellenweise etwas regen .",
+      "nll_sum": 159.38299560546875,
+      "token_count": 17,
+      "nll_per_token": 9.375470329733457
+    },
+    {
+      "id": "11September_2009_Friday_tagesschau-8781",
+      "hypothesis": "</s>",
+      "reference": "der wind weht schwach bis mäßig an der nordsee und im bergland auch frischer wind .",
+      "nll_sum": 123.59909057617188,
+      "token_count": 17,
+      "nll_per_token": 7.270534739774816
+    },
+    {
+      "id": "04January_2010_Monday_heute-7395",
+      "hypothesis": "</s>",
+      "reference": "guten abend liebe zuschauer .",
+      "nll_sum": 24.978700637817383,
+      "token_count": 6,
+      "nll_per_token": 4.1631167729695635
+    },
+    {
+      "id": "14April_2010_Wednesday_tagesschau-3809",
+      "hypothesis": "</s>",
+      "reference": "wechselhaft dagegen bleibt es auch weiter in richtung südosten schuld daran ist das tief über ungarn .",
+      "nll_sum": 179.6575469970703,
+      "token_count": 18,
+      "nll_per_token": 9.980974833170572
+    },
+    {
+      "id": "18December_2010_Saturday_tagesschau-6126",
+      "hypothesis": "</s>",
+      "reference": "zunächst schwacher bis mäßiger wind der im norden aus <unk> sonst aus <unk> richtung kommt .",
+      "nll_sum": 142.77023315429688,
+      "token_count": 17,
+      "nll_per_token": 8.398249009076286
+    },
+    {
+      "id": "13August_2011_Saturday_tagesschau-1412",
+      "hypothesis": "</s>",
+      "reference": "im norden und westen morgen zwanzig bis dreiundzwanzig sonst sommerliche fünfundzwanzig bis neunundzwanzig grad .",
+      "nll_sum": 139.5330047607422,
+      "token_count": 16,
+      "nll_per_token": 8.720812797546387
+    },
+    {
+      "id": "25February_2011_Friday_tagesschau-568",
+      "hypothesis": "</s>",
+      "reference": "am tag im osten viel sonne in der westhälfte regnet es zwischen niederrhein und ostfriesland .",
+      "nll_sum": 161.26217651367188,
+      "token_count": 17,
+      "nll_per_token": 9.486010383157168
+    },
+    {
+      "id": "31May_2011_Tuesday_heute-1904",
+      "hypothesis": "</s>",
+      "reference": "an der elbe einzelne schauer im nordwesten aber schon wieder deutlich freundlicher .",
+      "nll_sum": 123.20465087890625,
+      "token_count": 14,
+      "nll_per_token": 8.800332205636161
+    },
+    {
+      "id": "05February_2010_Friday_tagesschau-2924",
+      "hypothesis": "</s>",
+      "reference": "dabei ist es teils stark bewölkt oder neblig trüb teils freundlich mit sonnenschein .",
+      "nll_sum": 145.1083984375,
+      "token_count": 15,
+      "nll_per_token": 9.673893229166667
+    },
+    {
+      "id": "18February_2011_Friday_tagesschau-6825",
+      "hypothesis": "</s>",
+      "reference": "besonders im osten deutschlands kann es ein wenig regnen oder schneien .",
+      "nll_sum": 116.73251342773438,
+      "token_count": 13,
+      "nll_per_token": 8.979424109825722
+    },
+    {
+      "id": "24August_2010_Tuesday_heute-3010",
+      "hypothesis": "</s>",
+      "reference": "der nächste größere regen für uns ist dann erst am donnerstag wahrscheinlich in sicht .",
+      "nll_sum": 138.53082275390625,
+      "token_count": 16,
+      "nll_per_token": 8.65817642211914
+    },
+    {
+      "id": "05July_2010_Monday_tagesschau-1202",
+      "hypothesis": "</s>",
+      "reference": "vom südwesten bis in die mitte bleibt es meist trocken .",
+      "nll_sum": 100.64852905273438,
+      "token_count": 12,
+      "nll_per_token": 8.387377421061197
+    },
+    {
+      "id": "17June_2010_Thursday_tagesschau-3903",
+      "hypothesis": "</s>",
+      "reference": "es gelten entsprechende unwetterwarnungen des deutschen wetterdienstes .",
+      "nll_sum": 82.18599700927734,
+      "token_count": 9,
+      "nll_per_token": 9.13177744547526
+    },
+    {
+      "id": "03October_2010_Sunday_tagesschau-5770",
+      "hypothesis": "</s>",
+      "reference": "am mittwoch eine mischung aus sonne wolken und nebelfeldern im nordwesten hier und da schauer sonst ist es trocken .",
+      "nll_sum": 221.808837890625,
+      "token_count": 21,
+      "nll_per_token": 10.562325613839286
+    },
+    {
+      "id": "24November_2009_Tuesday_tagesschau-5689",
+      "hypothesis": "</s>",
+      "reference": "am tag zehn grad in der mitte in höheren lagen sechzehn grad im süden .",
+      "nll_sum": 133.28720092773438,
+      "token_count": 16,
+      "nll_per_token": 8.330450057983398
+    },
+    {
+      "id": "14September_2010_Tuesday_tagesschau-5223",
+      "hypothesis": "</s>",
+      "reference": "am samstag ist es in der südhälfte freundlich in der nordhälfte einzelne schauer .",
+      "nll_sum": 122.34284973144531,
+      "token_count": 15,
+      "nll_per_token": 8.156189982096354
+    },
+    {
+      "id": "23August_2010_Monday_heute-5328",
+      "hypothesis": "</s>",
+      "reference": "ja und so bleibt es dann auch erstmal am mittwoch .",
+      "nll_sum": 78.19996643066406,
+      "token_count": 12,
+      "nll_per_token": 6.516663869222005
+    },
+    {
+      "id": "10February_2010_Wednesday_tagesschau-2514",
+      "hypothesis": "</s>",
+      "reference": "das heißt weitere schneefälle und leichten bis <unk> dauerfrost .",
+      "nll_sum": 132.7213592529297,
+      "token_count": 11,
+      "nll_per_token": 12.0655781139027
+    },
+    {
+      "id": "25October_2010_Monday_heute-2049",
+      "hypothesis": "</s>",
+      "reference": "und dann drängen die neuen wolken heran hier im nordwesten die können am nachmittag erste spritzer regen an der nordsee bringen und der wind frischt dazu auf aus süd südwest .",
+      "nll_sum": 354.216796875,
+      "token_count": 32,
+      "nll_per_token": 11.06927490234375
+    },
+    {
+      "id": "06April_2010_Tuesday_tagesschau-306",
+      "hypothesis": "</s>",
+      "reference": "morgen scheint dann wieder überall die sonne .",
+      "nll_sum": 77.86152648925781,
+      "token_count": 9,
+      "nll_per_token": 8.651280721028646
+    },
+    {
+      "id": "24October_2009_Saturday_tagesschau-4289",
+      "hypothesis": "</s>",
+      "reference": "morgen in der osthälfte zehn bis dreizehn grad im westen bis zu siebzehn grad .",
+      "nll_sum": 149.72784423828125,
+      "token_count": 16,
+      "nll_per_token": 9.357990264892578
+    },
+    {
+      "id": "08June_2010_Tuesday_tagesschau-5521",
+      "hypothesis": "</s>",
+      "reference": "in der südosthälfte deutschlands bleibt es unter leichtem hochdruckeinfluss noch am längsten freundlich aber auch dort kann es später kräftig krachen .",
+      "nll_sum": 237.4741668701172,
+      "token_count": 23,
+      "nll_per_token": 10.324963776961617
+    },
+    {
+      "id": "02July_2009_Thursday_tagesschau-2860",
+      "hypothesis": "</s>",
+      "reference": "der nordosten deutschlands liegt morgen dank hochdruckeinfluss meist auf der sonnenseite .",
+      "nll_sum": 116.5844955444336,
+      "token_count": 13,
+      "nll_per_token": 8.968038118802584
+    },
+    {
+      "id": "20June_2011_Monday_heute-6510",
+      "hypothesis": "</s>",
+      "reference": "das kann ja manchmal ganz schön schnell gehen also <unk> es schön ist <unk> natürlich sie meine damen und herren .",
+      "nll_sum": 251.73219299316406,
+      "token_count": 22,
+      "nll_per_token": 11.442372408780185
+    },
+    {
+      "id": "12July_2011_Tuesday_heute-1283",
+      "hypothesis": "</s>",
+      "reference": "und in dieser kühleren eigentlich <unk> luft gibt es am donnerstag zumindest im norden noch kräftigen regen stürmischen wind .",
+      "nll_sum": 193.17352294921875,
+      "token_count": 21,
+      "nll_per_token": 9.198739188058036
+    },
+    {
+      "id": "02December_2009_Wednesday_tagesschau-4045",
+      "hypothesis": "</s>",
+      "reference": "im osten und südosten neben teilweise zähen nebelfeldern eine trockene mischung aus sonne und wolken .",
+      "nll_sum": 146.9109649658203,
+      "token_count": 17,
+      "nll_per_token": 8.641821468577666
+    },
+    {
+      "id": "05March_2011_Saturday_tagesschau-5443",
+      "hypothesis": "</s>",
+      "reference": "in den östlichen <unk> sowie am alpenrand ist ein wenig schnee möglich .",
+      "nll_sum": 120.913818359375,
+      "token_count": 14,
+      "nll_per_token": 8.636701311383929
+    },
+    {
+      "id": "11May_2010_Tuesday_heute-5990",
+      "hypothesis": "</s>",
+      "reference": "morgen vormittag bleibt von dem ganzen starken regen noch hier im osten einige gewitter hängen in brandenburg starker regen in vorpommern und an der ostsee .",
+      "nll_sum": 304.912353515625,
+      "token_count": 27,
+      "nll_per_token": 11.293050130208334
+    },
+    {
+      "id": "03February_2010_Wednesday_heute-2356",
+      "hypothesis": "</s>",
+      "reference": "da haben wir am morgen schnee und schneeregen .",
+      "nll_sum": 90.25164031982422,
+      "token_count": 10,
+      "nll_per_token": 9.025164031982422
+    },
+    {
+      "id": "07April_2010_Wednesday_heute-1619",
+      "hypothesis": "</s>",
+      "reference": "hallo und guten abend liebe zuschauer .",
+      "nll_sum": 45.05726623535156,
+      "token_count": 8,
+      "nll_per_token": 5.632158279418945
+    },
+    {
+      "id": "18January_2011_Tuesday_tagesschau-6989",
+      "hypothesis": "</s>",
+      "reference": "die sonne kann sich gegen die wolken nur selten durchsetzen .",
+      "nll_sum": 109.40973663330078,
+      "token_count": 12,
+      "nll_per_token": 9.117478052775065
+    },
+    {
+      "id": "03July_2009_Friday_tagesschau-2014",
+      "hypothesis": "</s>",
+      "reference": "am sonntag vor allem im osten und süden noch schauer oder gewitter sonst überwiegend freundlich .",
+      "nll_sum": 169.713134765625,
+      "token_count": 17,
+      "nll_per_token": 9.983125574448529
+    },
+    {
+      "id": "20July_2010_Tuesday_heute-5254",
+      "hypothesis": "</s>",
+      "reference": "und selbst auch im küstenbereich geht es auch nahe an die dreißig grad heran .",
+      "nll_sum": 159.696044921875,
+      "token_count": 16,
+      "nll_per_token": 9.981002807617188
+    },
+    {
+      "id": "26June_2010_Saturday_tagesschau-724",
+      "hypothesis": "</s>",
+      "reference": "vor allem über dem bergland können sich im tagesverlauf stellenweise quellwolken bilden und im südwesten muss mit vereinzelten hitzegewittern gerechnet werden .",
+      "nll_sum": 226.8996124267578,
+      "token_count": 23,
+      "nll_per_token": 9.865200540293818
+    },
+    {
+      "id": "25November_2011_Friday_tagesschau-4398",
+      "hypothesis": "</s>",
+      "reference": "dort sowie am niederrhein morgen zehn bis elf sonst zwei bis neun grad .",
+      "nll_sum": 136.5467071533203,
+      "token_count": 15,
+      "nll_per_token": 9.103113810221354
+    },
+    {
+      "id": "22November_2010_Monday_heute-283",
+      "hypothesis": "</s>",
+      "reference": "und bis zum abend kann die schneefallgrenze auch bis in die niederungen sinken .",
+      "nll_sum": 129.93295288085938,
+      "token_count": 15,
+      "nll_per_token": 8.662196858723958
+    },
+    {
+      "id": "22April_2010_Thursday_tagesschau-3736",
+      "hypothesis": "</s>",
+      "reference": "am wochenende scheint meist die sonne und es wird noch wärmer .",
+      "nll_sum": 101.58152770996094,
+      "token_count": 13,
+      "nll_per_token": 7.813963669996995
+    },
+    {
+      "id": "24November_2011_Thursday_tagesschau-8342",
+      "hypothesis": "</s>",
+      "reference": "am montag meist trocken bei einer mischung aus sonne und wolken .",
+      "nll_sum": 125.53340911865234,
+      "token_count": 13,
+      "nll_per_token": 9.65641608605018
+    },
+    {
+      "id": "29November_2009_Sunday_tagesschau-7044",
+      "hypothesis": "</s>",
+      "reference": "richtung bodensee kann es bis ins flachland schneien .",
+      "nll_sum": 82.64887237548828,
+      "token_count": 10,
+      "nll_per_token": 8.264887237548828
+    },
+    {
+      "id": "14October_2010_Thursday_tagesschau-294",
+      "hypothesis": "</s>",
+      "reference": "im verlauf kommt im norden und nordwesten teilweise kräftiger regen auf einzelne gewitter sind dabei .",
+      "nll_sum": 143.04678344726562,
+      "token_count": 17,
+      "nll_per_token": 8.414516673368567
+    },
+    {
+      "id": "15February_2011_Tuesday_heute-7911",
+      "hypothesis": "</s>",
+      "reference": "am ehesten scheint sie noch hier in der osthälfte und auch am alpenrand und dann später auch im südwesten .",
+      "nll_sum": 217.3715057373047,
+      "token_count": 21,
+      "nll_per_token": 10.351024082728795
+    },
+    {
+      "id": "27November_2011_Sunday_tagesschau-5149",
+      "hypothesis": "</s>",
+      "reference": "morgen bei dauernebel im süden nur zwei am niederrhein bis elf grad .",
+      "nll_sum": 139.46270751953125,
+      "token_count": 14,
+      "nll_per_token": 9.961621965680804
+    },
+    {
+      "id": "05March_2011_Saturday_tagesschau-5442",
+      "hypothesis": "</s>",
+      "reference": "auch morgen in der mitte und im süden gebietsweise <unk> bewölkung .",
+      "nll_sum": 132.84408569335938,
+      "token_count": 13,
+      "nll_per_token": 10.218775822566105
+    },
+    {
+      "id": "18December_2010_Saturday_tagesschau-6118",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen sonntag den neunzehnten dezember .",
+      "nll_sum": 97.20558166503906,
+      "token_count": 12,
+      "nll_per_token": 8.100465138753256
+    },
+    {
+      "id": "28September_2010_Tuesday_heute-8344",
+      "hypothesis": "</s>",
+      "reference": "<unk> tage bei uns in deutschland und dadurch auch die lage an einigen flüssen im osten immer noch angespannt .",
+      "nll_sum": 235.38778686523438,
+      "token_count": 21,
+      "nll_per_token": 11.208942231677828
+    },
+    {
+      "id": "18February_2010_Thursday_tagesschau-4532",
+      "hypothesis": "</s>",
+      "reference": "am samstag im norden sehr windig .",
+      "nll_sum": 71.23046875,
+      "token_count": 8,
+      "nll_per_token": 8.90380859375
+    },
+    {
+      "id": "01April_2010_Thursday_heute-6705",
+      "hypothesis": "</s>",
+      "reference": "es scheint häufig die sonne .",
+      "nll_sum": 52.099796295166016,
+      "token_count": 7,
+      "nll_per_token": 7.442828042166574
+    },
+    {
+      "id": "19November_2009_Thursday_tagesschau-3781",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen freitag den zwanzigsten november .",
+      "nll_sum": 97.39331817626953,
+      "token_count": 12,
+      "nll_per_token": 8.116109848022461
+    },
+    {
+      "id": "26January_2010_Tuesday_heute-106",
+      "hypothesis": "</s>",
+      "reference": "und zum wochenende wird es dann sogar wieder ein bisschen kälter .",
+      "nll_sum": 113.34580993652344,
+      "token_count": 13,
+      "nll_per_token": 8.71890845665565
+    },
+    {
+      "id": "25August_2010_Wednesday_tagesschau-8509",
+      "hypothesis": "</s>",
+      "reference": "heute nacht breitet sich von westen regen aus der teilweise ergiebig sein kann .",
+      "nll_sum": 117.68023681640625,
+      "token_count": 15,
+      "nll_per_token": 7.84534912109375
+    },
+    {
+      "id": "15March_2011_Tuesday_tagesschau-3325",
+      "hypothesis": "</s>",
+      "reference": "in einem streifen vom emsland bis zur lausitz sind dichte wolken unterwegs sonst ist es teils klar teils locker bewölkt .",
+      "nll_sum": 241.31961059570312,
+      "token_count": 22,
+      "nll_per_token": 10.969073208895596
+    },
+    {
+      "id": "08June_2010_Tuesday_tagesschau-5529",
+      "hypothesis": "</s>",
+      "reference": "donnerstag und freitag ändert sich wenig an diesem wetter .",
+      "nll_sum": 92.43589782714844,
+      "token_count": 11,
+      "nll_per_token": 8.403263438831676
+    },
+    {
+      "id": "07October_2010_Thursday_tagesschau-4127",
+      "hypothesis": "</s>",
+      "reference": "vier grad heute nacht im allgäu sowie an der oder dreizehn grad an der nordsee .",
+      "nll_sum": 153.8374786376953,
+      "token_count": 17,
+      "nll_per_token": 9.049263449276195
+    },
+    {
+      "id": "02December_2010_Thursday_tagesschau-3631",
+      "hypothesis": "</s>",
+      "reference": "ein tief über der ostsee bringt dem norden deutschlands noch schnee .",
+      "nll_sum": 134.03196716308594,
+      "token_count": 13,
+      "nll_per_token": 10.31015132023738
+    },
+    {
+      "id": "07October_2012_Sunday_tagesschau-3032",
+      "hypothesis": "</s>",
+      "reference": "an der ostsee heute nacht örtlich stürmische böen .",
+      "nll_sum": 83.75044250488281,
+      "token_count": 10,
+      "nll_per_token": 8.375044250488282
+    },
+    {
+      "id": "08October_2009_Thursday_tagesschau-5358",
+      "hypothesis": "</s>",
+      "reference": "im osten aber erst noch freundliche abschnitte .",
+      "nll_sum": 79.99595642089844,
+      "token_count": 9,
+      "nll_per_token": 8.888439602322048
+    },
+    {
+      "id": "30November_2009_Monday_tagesschau-5753",
+      "hypothesis": "</s>",
+      "reference": "schwacher bis mäßiger wind aus nord bis west .",
+      "nll_sum": 60.33321762084961,
+      "token_count": 10,
+      "nll_per_token": 6.033321762084961
+    },
+    {
+      "id": "29March_2010_Monday_tagesschau-8389",
+      "hypothesis": "</s>",
+      "reference": "wechselhaft bleibt es .",
+      "nll_sum": 37.28131866455078,
+      "token_count": 5,
+      "nll_per_token": 7.456263732910156
+    },
+    {
+      "id": "19October_2010_Tuesday_tagesschau-8289",
+      "hypothesis": "</s>",
+      "reference": "am tag dichte wolken aber auch lücken dazu einige schauer an den <unk> der <unk> kann es auch längere zeit regnen oder schneien .",
+      "nll_sum": 258.23040771484375,
+      "token_count": 25,
+      "nll_per_token": 10.32921630859375
+    },
+    {
+      "id": "18November_2011_Friday_tagesschau-2142",
+      "hypothesis": "</s>",
+      "reference": "auch zu beginn der kommenden woche ändert sich nur wenig .",
+      "nll_sum": 109.49189758300781,
+      "token_count": 12,
+      "nll_per_token": 9.124324798583984
+    },
+    {
+      "id": "19October_2010_Tuesday_tagesschau-8291",
+      "hypothesis": "</s>",
+      "reference": "auch vereinzelte graupelschauer oder kurze gewitter sind dabei .",
+      "nll_sum": 92.712646484375,
+      "token_count": 10,
+      "nll_per_token": 9.2712646484375
+    },
+    {
+      "id": "13October_2009_Tuesday_tagesschau-1658",
+      "hypothesis": "</s>",
+      "reference": "am freitag ist es im südwesten zunächst freundlich .",
+      "nll_sum": 79.05896759033203,
+      "token_count": 10,
+      "nll_per_token": 7.905896759033203
+    },
+    {
+      "id": "26January_2010_Tuesday_heute-105",
+      "hypothesis": "</s>",
+      "reference": "in den nächsten tagen geht es auf jeden fall winterlich weiter immer wieder mal mit etwas schnee .",
+      "nll_sum": 173.96632385253906,
+      "token_count": 19,
+      "nll_per_token": 9.156122308028372
+    },
+    {
+      "id": "01April_2010_Thursday_tagesschau-4332",
+      "hypothesis": "</s>",
+      "reference": "im südosten regnet es teilweise länger .",
+      "nll_sum": 63.2062873840332,
+      "token_count": 8,
+      "nll_per_token": 7.90078592300415
+    },
+    {
+      "id": "06October_2011_Thursday_tagesschau-823",
+      "hypothesis": "</s>",
+      "reference": "im westen und nordwesten fallen einzelne schauer .",
+      "nll_sum": 65.74189758300781,
+      "token_count": 9,
+      "nll_per_token": 7.304655287000868
+    },
+    {
+      "id": "04March_2011_Friday_tagesschau-2838",
+      "hypothesis": "</s>",
+      "reference": "wenn der verschwunden ist zeigt sich morgen im süden die sonne während sich die wolken weiter richtung donau ausbreiten und dabei immer größere lücken bekommen .",
+      "nll_sum": 301.8271789550781,
+      "token_count": 27,
+      "nll_per_token": 11.178784405743635
+    },
+    {
+      "id": "14August_2011_Sunday_tagesschau-3232",
+      "hypothesis": "</s>",
+      "reference": "im osten und süden muss zu beginn der nacht örtlich mit starkregen und hagel gerechnet werden .",
+      "nll_sum": 155.34107971191406,
+      "token_count": 18,
+      "nll_per_token": 8.630059983995226
+    },
+    {
+      "id": "25August_2010_Wednesday_tagesschau-8507",
+      "hypothesis": "</s>",
+      "reference": "von westen erreicht uns ein neues atlantiktief mit zum teil kräftigen regenfällen und heftigen gewittern .",
+      "nll_sum": 166.4882049560547,
+      "token_count": 17,
+      "nll_per_token": 9.793423820944394
+    },
+    {
+      "id": "17September_2010_Friday_tagesschau-3412",
+      "hypothesis": "</s>",
+      "reference": "das hoch über den azoren weitet sich bis nach süddeutschland aus .",
+      "nll_sum": 93.35413360595703,
+      "token_count": 13,
+      "nll_per_token": 7.181087200458233
+    },
+    {
+      "id": "28December_2011_Wednesday_tagesschau-1912",
+      "hypothesis": "</s>",
+      "reference": "sonst einzelne schauer an der nordsee auch gewitter .",
+      "nll_sum": 72.30361938476562,
+      "token_count": 10,
+      "nll_per_token": 7.2303619384765625
+    },
+    {
+      "id": "24November_2009_Tuesday_tagesschau-5692",
+      "hypothesis": "</s>",
+      "reference": "im süden und osten freundliche abschnitte .",
+      "nll_sum": 69.68865203857422,
+      "token_count": 8,
+      "nll_per_token": 8.711081504821777
+    },
+    {
+      "id": "14February_2010_Sunday_tagesschau-3834",
+      "hypothesis": "</s>",
+      "reference": "kalte teilweise feuchte luft bestimmt das wetter in deutschland .",
+      "nll_sum": 89.42274475097656,
+      "token_count": 11,
+      "nll_per_token": 8.12934043190696
+    },
+    {
+      "id": "08June_2010_Tuesday_tagesschau-5530",
+      "hypothesis": "</s>",
+      "reference": "die schwüle hitze in dem noch etwas zu und die gewitter können lokal unwetterartig sein .",
+      "nll_sum": 161.91676330566406,
+      "token_count": 17,
+      "nll_per_token": 9.524515488568474
+    },
+    {
+      "id": "24January_2013_Thursday_tagesschau-6322",
+      "hypothesis": "</s>",
+      "reference": "am sonntag überquert und dann ein atlantischer tiefausläufer dabei wird es milder .",
+      "nll_sum": 137.18185424804688,
+      "token_count": 14,
+      "nll_per_token": 9.798703874860491
+    },
+    {
+      "id": "14July_2009_Tuesday_tagesschau-2425",
+      "hypothesis": "</s>",
+      "reference": "teilweise ist es auch klar .",
+      "nll_sum": 44.89554977416992,
+      "token_count": 7,
+      "nll_per_token": 6.41364996773856
+    },
+    {
+      "id": "29June_2011_Wednesday_tagesschau-4490",
+      "hypothesis": "</s>",
+      "reference": "im nordosten bleibt es meist trocken .",
+      "nll_sum": 53.06268310546875,
+      "token_count": 8,
+      "nll_per_token": 6.632835388183594
+    },
+    {
+      "id": "01May_2010_Saturday_tagesschau-7195",
+      "hypothesis": "</s>",
+      "reference": "auch am montag mehr wolken als sonne teilweise regnet es länger und kräftig auch gewitter sind dabei .",
+      "nll_sum": 193.8666229248047,
+      "token_count": 19,
+      "nll_per_token": 10.203506469726562
+    },
+    {
+      "id": "25November_2009_Wednesday_tagesschau-7678",
+      "hypothesis": "</s>",
+      "reference": "im nordwesten sind kurze gewitter möglich .",
+      "nll_sum": 56.243309020996094,
+      "token_count": 8,
+      "nll_per_token": 7.030413627624512
+    },
+    {
+      "id": "03September_2010_Friday_tagesschau-8429",
+      "hypothesis": "</s>",
+      "reference": "im osten und südosten sind gewitter möglich .",
+      "nll_sum": 63.762611389160156,
+      "token_count": 9,
+      "nll_per_token": 7.084734598795573
+    },
+    {
+      "id": "26July_2010_Monday_tagesschau-6267",
+      "hypothesis": "</s>",
+      "reference": "auch in den folgenden tagen ändert sich an diesem wechselhaften wetter wenig .",
+      "nll_sum": 122.18509674072266,
+      "token_count": 14,
+      "nll_per_token": 8.727506910051618
+    },
+    {
+      "id": "03February_2010_Wednesday_tagesschau-2062",
+      "hypothesis": "</s>",
+      "reference": "dazu weht ein schwacher bis mäßiger wind aus südost bis süd .",
+      "nll_sum": 92.39020538330078,
+      "token_count": 13,
+      "nll_per_token": 7.106938875638521
+    },
+    {
+      "id": "23May_2010_Sunday_tagesschau-4337",
+      "hypothesis": "</s>",
+      "reference": "in den folgenden tagen sorgt tiefer luftdruck für wechselhaftes wetter und sinkende temperaturen .",
+      "nll_sum": 168.08538818359375,
+      "token_count": 15,
+      "nll_per_token": 11.205692545572917
+    },
+    {
+      "id": "09July_2010_Friday_tagesschau-591",
+      "hypothesis": "</s>",
+      "reference": "zunächst ist das gewitterrisiko nur im westen <unk> von tag zu tag steigt es aber auch richtung osten .",
+      "nll_sum": 201.82537841796875,
+      "token_count": 20,
+      "nll_per_token": 10.091268920898438
+    },
+    {
+      "id": "04December_2009_Friday_tagesschau-834",
+      "hypothesis": "</s>",
+      "reference": "nach einer kurzen wetterberuhigung erreicht uns morgen von westen ein neuer tiefausläufer .",
+      "nll_sum": 150.59228515625,
+      "token_count": 14,
+      "nll_per_token": 10.756591796875
+    },
+    {
+      "id": "08October_2009_Thursday_tagesschau-5352",
+      "hypothesis": "</s>",
+      "reference": "an der ostsee heute nacht stürmische böen aus west .",
+      "nll_sum": 83.95478820800781,
+      "token_count": 11,
+      "nll_per_token": 7.632253473455256
+    },
+    {
+      "id": "24July_2011_Sunday_tagesschau-6631",
+      "hypothesis": "</s>",
+      "reference": "am mittwoch vor allem ab dem nachmittag schauer und gewitter .",
+      "nll_sum": 126.79039001464844,
+      "token_count": 12,
+      "nll_per_token": 10.565865834554037
+    },
+    {
+      "id": "25November_2009_Wednesday_tagesschau-7666",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen donnerstag den sechsundzwanzigsten november .",
+      "nll_sum": 103.86061096191406,
+      "token_count": 12,
+      "nll_per_token": 8.655050913492838
+    },
+    {
+      "id": "13April_2010_Tuesday_tagesschau-2308",
+      "hypothesis": "</s>",
+      "reference": "sonst sorgt die hochdruckzone die vom atlantik bis nach skandinavien reicht für freundliches wetter .",
+      "nll_sum": 152.77523803710938,
+      "token_count": 16,
+      "nll_per_token": 9.548452377319336
+    },
+    {
+      "id": "28March_2011_Monday_tagesschau-2287",
+      "hypothesis": "</s>",
+      "reference": "nach dessen auflösung scheint morgen verbreitet die sonne .",
+      "nll_sum": 114.18231201171875,
+      "token_count": 10,
+      "nll_per_token": 11.418231201171874
+    },
+    {
+      "id": "11May_2010_Tuesday_heute-5994",
+      "hypothesis": "</s>",
+      "reference": "und so warm mit zwanzig grad wird es nicht mehr in den nächsten tagen .",
+      "nll_sum": 124.96556091308594,
+      "token_count": 16,
+      "nll_per_token": 7.810347557067871
+    },
+    {
+      "id": "01April_2011_Friday_tagesschau-3374",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen samstag den zweiten april .",
+      "nll_sum": 100.06942749023438,
+      "token_count": 12,
+      "nll_per_token": 8.339118957519531
+    },
+    {
+      "id": "12January_2010_Tuesday_heute-2543",
+      "hypothesis": "</s>",
+      "reference": "heute nacht wird es aber nochmal ziemlich eisig vor allen dingen in den mittelgebirgen .",
+      "nll_sum": 145.17372131347656,
+      "token_count": 16,
+      "nll_per_token": 9.073357582092285
+    },
+    {
+      "id": "28October_2009_Wednesday_tagesschau-4540",
+      "hypothesis": "</s>",
+      "reference": "im norden und nordosten bleibt es meist bedeckt mitunter fällt dort etwas regen .",
+      "nll_sum": 125.04183959960938,
+      "token_count": 15,
+      "nll_per_token": 8.336122639973958
+    },
+    {
+      "id": "02December_2009_Wednesday_tagesschau-4039",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen donnerstag den dritten dezember .",
+      "nll_sum": 104.22137451171875,
+      "token_count": 12,
+      "nll_per_token": 8.685114542643229
+    },
+    {
+      "id": "11December_2010_Saturday_tagesschau-8661",
+      "hypothesis": "</s>",
+      "reference": "die schneefallgrenze sinkt auf sechshundert bis dreihundert meter .",
+      "nll_sum": 105.45977783203125,
+      "token_count": 10,
+      "nll_per_token": 10.545977783203124
+    },
+    {
+      "id": "30July_2011_Saturday_tagesschau-8595",
+      "hypothesis": "</s>",
+      "reference": "der nordwestwind bläst schwach bis mäßig in der nordosthälfte auch frisch in den hochlagen der östlichen mittelgebirge stark böig .",
+      "nll_sum": 193.04452514648438,
+      "token_count": 21,
+      "nll_per_token": 9.192596435546875
+    },
+    {
+      "id": "12December_2011_Monday_heute-5811",
+      "hypothesis": "</s>",
+      "reference": "sonst zieht das regengebiet nach osten .",
+      "nll_sum": 62.24706268310547,
+      "token_count": 8,
+      "nll_per_token": 7.780882835388184
+    },
+    {
+      "id": "09August_2010_Monday_heute-5891",
+      "hypothesis": "</s>",
+      "reference": "das bleibt auch noch in dieser woche so so dass die brände weiter <unk> werden .",
+      "nll_sum": 165.89227294921875,
+      "token_count": 17,
+      "nll_per_token": 9.758368997012868
+    },
+    {
+      "id": "11September_2009_Friday_tagesschau-8782",
+      "hypothesis": "</s>",
+      "reference": "heute nacht liegen die werte zwischen vierzehn und sieben grad .",
+      "nll_sum": 102.80784606933594,
+      "token_count": 12,
+      "nll_per_token": 8.567320505777994
+    },
+    {
+      "id": "14August_2009_Friday_tagesschau-75",
+      "hypothesis": "</s>",
+      "reference": "örtlich schauer oder gewitter die heftig sein können .",
+      "nll_sum": 79.40980529785156,
+      "token_count": 10,
+      "nll_per_token": 7.940980529785156
+    },
+    {
+      "id": "04December_2009_Friday_tagesschau-833",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen samstag den fünften dezember .",
+      "nll_sum": 102.10163879394531,
+      "token_count": 12,
+      "nll_per_token": 8.508469899495443
+    },
+    {
+      "id": "10January_2011_Monday_tagesschau-6402",
+      "hypothesis": "</s>",
+      "reference": "es sorgt von westen für regen schnee und glätte .",
+      "nll_sum": 75.45085906982422,
+      "token_count": 11,
+      "nll_per_token": 6.859169006347656
+    },
+    {
+      "id": "24June_2010_Thursday_tagesschau-7300",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen freitag den fünfundzwanzigsten juni .",
+      "nll_sum": 92.1764907836914,
+      "token_count": 12,
+      "nll_per_token": 7.681374231974284
+    },
+    {
+      "id": "24September_2009_Thursday_heute-6090",
+      "hypothesis": "</s>",
+      "reference": "die neue woche startet dann durchwachsener .",
+      "nll_sum": 94.31146240234375,
+      "token_count": 8,
+      "nll_per_token": 11.788932800292969
+    },
+    {
+      "id": "06October_2011_Thursday_heute-5534",
+      "hypothesis": "</s>",
+      "reference": "und das mit tief <unk> das die kaltluft mit kräftigen schauern richtung mitteleuropa treibt .",
+      "nll_sum": 174.7740478515625,
+      "token_count": 16,
+      "nll_per_token": 10.923377990722656
+    },
+    {
+      "id": "01November_2010_Monday_tagesschau-133",
+      "hypothesis": "</s>",
+      "reference": "auch morgen erwartet uns eine ruhige <unk> aus hochnebel wolken und sonne .",
+      "nll_sum": 136.10244750976562,
+      "token_count": 14,
+      "nll_per_token": 9.721603393554688
+    },
+    {
+      "id": "24May_2011_Tuesday_tagesschau-4477",
+      "hypothesis": "</s>",
+      "reference": "in küstennähe morgen kühle fünfzehn bis sechzehn entlang des rheins dreiundzwanzig bis sechsundzwanzig grad .",
+      "nll_sum": 167.05612182617188,
+      "token_count": 16,
+      "nll_per_token": 10.441007614135742
+    },
+    {
+      "id": "25August_2009_Tuesday_tagesschau-7092",
+      "hypothesis": "</s>",
+      "reference": "heute nacht temperaturen von zehn grad in der eifel bis achtzehn in der lausitz .",
+      "nll_sum": 129.32400512695312,
+      "token_count": 16,
+      "nll_per_token": 8.08275032043457
+    },
+    {
+      "id": "06January_2010_Wednesday_tagesschau-7736",
+      "hypothesis": "</s>",
+      "reference": "auch am wochenende schneit es zeitweise .",
+      "nll_sum": 67.23226928710938,
+      "token_count": 8,
+      "nll_per_token": 8.404033660888672
+    },
+    {
+      "id": "20September_2010_Monday_heute-2929",
+      "hypothesis": "</s>",
+      "reference": "es wird deutlich freundlicher .",
+      "nll_sum": 39.841529846191406,
+      "token_count": 6,
+      "nll_per_token": 6.640254974365234
+    },
+    {
+      "id": "24May_2011_Tuesday_heute-6067",
+      "hypothesis": "</s>",
+      "reference": "etwa südlich von spree und <unk> scheint dagegen die sonne strahlend und das tut sie morgen auch in süddeutschland .",
+      "nll_sum": 235.19476318359375,
+      "token_count": 21,
+      "nll_per_token": 11.199750627790179
+    },
+    {
+      "id": "07October_2010_Thursday_tagesschau-4129",
+      "hypothesis": "</s>",
+      "reference": "das ruhige trockene und zum teil recht freundliche hochdruckwetter begleitet uns auch in den nächsten tagen .",
+      "nll_sum": 154.4488525390625,
+      "token_count": 18,
+      "nll_per_token": 8.580491807725695
+    },
+    {
+      "id": "11January_2011_Tuesday_tagesschau-8021",
+      "hypothesis": "</s>",
+      "reference": "in der nacht ist im nordosten in ostbayern und im bergland teilweise schnee oder gefrierender regen möglich .",
+      "nll_sum": 175.60061645507812,
+      "token_count": 19,
+      "nll_per_token": 9.242137708162007
+    },
+    {
+      "id": "28August_2009_Friday_tagesschau-5884",
+      "hypothesis": "</s>",
+      "reference": "sonst viel sonnenschein .",
+      "nll_sum": 29.866039276123047,
+      "token_count": 5,
+      "nll_per_token": 5.97320785522461
+    },
+    {
+      "id": "27August_2009_Thursday_tagesschau-3267",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen freitag den achtundzwanzigsten august .",
+      "nll_sum": 97.74153137207031,
+      "token_count": 12,
+      "nll_per_token": 8.145127614339193
+    },
+    {
+      "id": "16November_2009_Monday_tagesschau-3105",
+      "hypothesis": "</s>",
+      "reference": "mittwoch und donnerstag bleibt es im norden windig und gebietsweise fällt dort regen .",
+      "nll_sum": 139.45947265625,
+      "token_count": 15,
+      "nll_per_token": 9.297298177083333
+    },
+    {
+      "id": "15October_2009_Thursday_tagesschau-7715",
+      "hypothesis": "</s>",
+      "reference": "im südwesten ist es zunächst noch freundlich sonst regnet es morgen ab und an .",
+      "nll_sum": 118.79997253417969,
+      "token_count": 16,
+      "nll_per_token": 7.4249982833862305
+    },
+    {
+      "id": "25August_2009_Tuesday_tagesschau-7085",
+      "hypothesis": "</s>",
+      "reference": "aber erst muss noch mit regenfällen und gewittern gerechnet werden die besonders im süden und osten unwetterartig sein können .",
+      "nll_sum": 200.99142456054688,
+      "token_count": 21,
+      "nll_per_token": 9.571020217168899
+    },
+    {
+      "id": "16December_2009_Wednesday_tagesschau-5907",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen donnerstag den siebzehnten dezember .",
+      "nll_sum": 108.18134307861328,
+      "token_count": 12,
+      "nll_per_token": 9.015111923217773
+    },
+    {
+      "id": "27April_2010_Tuesday_heute-1039",
+      "hypothesis": "</s>",
+      "reference": "gegen späten nachmittag oder abend gibt es wahrscheinlich die ersten regenschauer im nordwesten .",
+      "nll_sum": 137.0179443359375,
+      "token_count": 15,
+      "nll_per_token": 9.134529622395833
+    },
+    {
+      "id": "06January_2010_Wednesday_tagesschau-7728",
+      "hypothesis": "</s>",
+      "reference": "es sorgt nämlich am und ab freitag dafür dass es bei uns stärker schneit .",
+      "nll_sum": 173.7690887451172,
+      "token_count": 16,
+      "nll_per_token": 10.860568046569824
+    },
+    {
+      "id": "14December_2010_Tuesday_heute-650",
+      "hypothesis": "</s>",
+      "reference": "dort auch bei leichten <unk> aber sonst bleibt es frostig .",
+      "nll_sum": 115.41349792480469,
+      "token_count": 12,
+      "nll_per_token": 9.617791493733725
+    },
+    {
+      "id": "20October_2011_Thursday_tagesschau-513",
+      "hypothesis": "</s>",
+      "reference": "am tag sechs grad an den alpen und dreizehn grad am oberrhein .",
+      "nll_sum": 103.72491455078125,
+      "token_count": 14,
+      "nll_per_token": 7.408922467912946
+    },
+    {
+      "id": "04December_2011_Sunday_tagesschau-7792",
+      "hypothesis": "</s>",
+      "reference": "im süden regnet oder schneit es länger .",
+      "nll_sum": 64.03413391113281,
+      "token_count": 9,
+      "nll_per_token": 7.1149037679036455
+    },
+    {
+      "id": "04December_2009_Friday_tagesschau-845",
+      "hypothesis": "</s>",
+      "reference": "montag und dienstag wechselhaft hier und da zeigt sich aber auch die sonne .",
+      "nll_sum": 117.51261138916016,
+      "token_count": 15,
+      "nll_per_token": 7.834174092610677
+    },
+    {
+      "id": "28May_2010_Friday_tagesschau-7501",
+      "hypothesis": "</s>",
+      "reference": "heute nacht elf grad in niederbayern und bis ein grad in den nördlichen mittelgebirgen .",
+      "nll_sum": 155.83981323242188,
+      "token_count": 16,
+      "nll_per_token": 9.739988327026367
+    },
+    {
+      "id": "27June_2010_Sunday_tagesschau-7392",
+      "hypothesis": "</s>",
+      "reference": "morgen reichen die temperaturen von zweiundzwanzig grad an der ostsee bis zweiunddreißig grad am oberrhein .",
+      "nll_sum": 165.9510955810547,
+      "token_count": 17,
+      "nll_per_token": 9.761829151826745
+    },
+    {
+      "id": "05July_2010_Monday_tagesschau-1205",
+      "hypothesis": "</s>",
+      "reference": "morgen temperaturen von achtzehn grad an der küste bis sechsundzwanzig im breisgau .",
+      "nll_sum": 122.03306579589844,
+      "token_count": 14,
+      "nll_per_token": 8.716647556849889
+    },
+    {
+      "id": "14October_2009_Wednesday_tagesschau-516",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen donnerstag den fünfzehnten oktober .",
+      "nll_sum": 106.83346557617188,
+      "token_count": 12,
+      "nll_per_token": 8.902788798014322
+    },
+    {
+      "id": "14December_2010_Tuesday_heute-651",
+      "hypothesis": "</s>",
+      "reference": "und die kälteste ecke wird der <unk> südosten bleiben .",
+      "nll_sum": 91.0575942993164,
+      "token_count": 11,
+      "nll_per_token": 8.277963118119674
+    },
+    {
+      "id": "11May_2010_Tuesday_tagesschau-1969",
+      "hypothesis": "</s>",
+      "reference": "am donnerstag regnet es vor allem im süden und osten mancherorts .",
+      "nll_sum": 130.21617126464844,
+      "token_count": 13,
+      "nll_per_token": 10.01662855881911
+    },
+    {
+      "id": "04January_2010_Monday_tagesschau-8552",
+      "hypothesis": "</s>",
+      "reference": "heute nacht minus zwei grad an der nordsee und bis minus zwanzig grad in einzelnen alpentälern .",
+      "nll_sum": 154.63070678710938,
+      "token_count": 18,
+      "nll_per_token": 8.590594821506077
+    },
+    {
+      "id": "20June_2011_Monday_tagesschau-1256",
+      "hypothesis": "</s>",
+      "reference": "an der saar heute nacht milde sechzehn an der elbe teilweise nur acht grad .",
+      "nll_sum": 152.57052612304688,
+      "token_count": 16,
+      "nll_per_token": 9.53565788269043
+    },
+    {
+      "id": "10February_2010_Wednesday_tagesschau-2523",
+      "hypothesis": "</s>",
+      "reference": "am samstag schneit es gebietsweise leicht ganz im norden lichtblicke .",
+      "nll_sum": 112.00006866455078,
+      "token_count": 12,
+      "nll_per_token": 9.333339055379232
+    },
+    {
+      "id": "21November_2011_Monday_heute-5437",
+      "hypothesis": "</s>",
+      "reference": "ihnen noch einen schönen abend .",
+      "nll_sum": 39.39064025878906,
+      "token_count": 7,
+      "nll_per_token": 5.627234322684152
+    },
+    {
+      "id": "11January_2011_Tuesday_tagesschau-8017",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen mittwoch den zwölften januar .",
+      "nll_sum": 104.08700561523438,
+      "token_count": 12,
+      "nll_per_token": 8.673917134602865
+    },
+    {
+      "id": "11September_2009_Friday_tagesschau-8780",
+      "hypothesis": "</s>",
+      "reference": "sonst ein wechsel aus sonne und wolken .",
+      "nll_sum": 54.384552001953125,
+      "token_count": 9,
+      "nll_per_token": 6.042728000217014
+    },
+    {
+      "id": "24February_2011_Thursday_tagesschau-4771",
+      "hypothesis": "</s>",
+      "reference": "am sonntag gibt es viele wolken gebietsweise regen oder schneeregen im bergland schnee .",
+      "nll_sum": 128.23895263671875,
+      "token_count": 15,
+      "nll_per_token": 8.549263509114583
+    },
+    {
+      "id": "27November_2009_Friday_tagesschau-7342",
+      "hypothesis": "</s>",
+      "reference": "am dienstag wechselhaftes wetter .",
+      "nll_sum": 48.25650405883789,
+      "token_count": 6,
+      "nll_per_token": 8.042750676472982
+    },
+    {
+      "id": "24August_2009_Monday_heute-6642",
+      "hypothesis": "</s>",
+      "reference": "und morgen vormittag beziehungsweise bis zum nachmittag wahrscheinlich sogar noch scheint in der osthälfte noch die sonne .",
+      "nll_sum": 189.62164306640625,
+      "token_count": 19,
+      "nll_per_token": 9.980086477179276
+    },
+    {
+      "id": "10January_2011_Monday_tagesschau-6403",
+      "hypothesis": "</s>",
+      "reference": "im verlauf der woche geht es dann unbeständig und sehr mild weiter .",
+      "nll_sum": 127.59010314941406,
+      "token_count": 14,
+      "nll_per_token": 9.113578796386719
+    },
+    {
+      "id": "30November_2009_Monday_tagesschau-5752",
+      "hypothesis": "</s>",
+      "reference": "in der nordwesthälfte teils freundlich teils wolkig und meist trocken .",
+      "nll_sum": 102.99042510986328,
+      "token_count": 12,
+      "nll_per_token": 8.58253542582194
+    },
+    {
+      "id": "09June_2010_Wednesday_heute-8260",
+      "hypothesis": "</s>",
+      "reference": "die kommende nacht teilweise nicht unter zwanzig grad in einigen <unk> .",
+      "nll_sum": 134.5703582763672,
+      "token_count": 13,
+      "nll_per_token": 10.351566021259014
+    },
+    {
+      "id": "17April_2010_Saturday_tagesschau-399",
+      "hypothesis": "</s>",
+      "reference": "die luft die in der kommenden woche zu uns strömt ist deutlich kühler .",
+      "nll_sum": 134.18658447265625,
+      "token_count": 15,
+      "nll_per_token": 8.945772298177083
+    },
+    {
+      "id": "24August_2010_Tuesday_tagesschau-2196",
+      "hypothesis": "</s>",
+      "reference": "heute nacht gibt es an den küsten schauer im süden ebenfalls aber dort lassen sie allmählich nach .",
+      "nll_sum": 203.08248901367188,
+      "token_count": 19,
+      "nll_per_token": 10.68855205335115
+    },
+    {
+      "id": "06July_2010_Tuesday_tagesschau-2657",
+      "hypothesis": "</s>",
+      "reference": "der wind weht meist schwach aus unterschiedlichen richtungen .",
+      "nll_sum": 64.33777618408203,
+      "token_count": 10,
+      "nll_per_token": 6.433777618408203
+    },
+    {
+      "id": "28October_2009_Wednesday_tagesschau-4544",
+      "hypothesis": "</s>",
+      "reference": "morgen temperaturen von acht grad im nordosten bis siebzehn im südwesten .",
+      "nll_sum": 110.38540649414062,
+      "token_count": 13,
+      "nll_per_token": 8.491185114933895
+    },
+    {
+      "id": "05October_2010_Tuesday_heute-1218",
+      "hypothesis": "</s>",
+      "reference": "dazu weht ein starker wind vor allen dingen wieder über vorpommern aus südost .",
+      "nll_sum": 118.97733306884766,
+      "token_count": 15,
+      "nll_per_token": 7.931822204589844
+    },
+    {
+      "id": "11July_2011_Monday_tagesschau-849",
+      "hypothesis": "</s>",
+      "reference": "heute nacht ist es meist nur locker bewölkt oder klar im nordwesten gibt es auch mal ein paar dichtere wolken .",
+      "nll_sum": 222.28221130371094,
+      "token_count": 22,
+      "nll_per_token": 10.103736877441406
+    },
+    {
+      "id": "30March_2011_Wednesday_tagesschau-7125",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen donnerstag den einunddreißigsten märz .",
+      "nll_sum": 103.29856872558594,
+      "token_count": 12,
+      "nll_per_token": 8.608214060465494
+    },
+    {
+      "id": "25November_2010_Thursday_tagesschau-2528",
+      "hypothesis": "</s>",
+      "reference": "vorsicht wegen straßenglätte .",
+      "nll_sum": 44.13446044921875,
+      "token_count": 5,
+      "nll_per_token": 8.82689208984375
+    },
+    {
+      "id": "08October_2009_Thursday_tagesschau-5345",
+      "hypothesis": "</s>",
+      "reference": "und nun die wettervorhersage für morgen freitag den neunten oktober .",
+      "nll_sum": 100.68362426757812,
+      "token_count": 12,
+      "nll_per_token": 8.390302022298178
+    },
+    {
+      "id": "28March_2011_Monday_tagesschau-2285",
+      "hypothesis": "</s>",
+      "reference": "im süden gibt es zu beginn der nacht noch wolken die hier und da auch noch ein paar tropfen fallen lassen sonst ist es meist klar oder nur locker bewölkt .",
+      "nll_sum": 355.49359130859375,
+      "token_count": 32,
+      "nll_per_token": 11.109174728393555
+    },
+    {
+      "id": "10May_2010_Monday_tagesschau-6854",
+      "hypothesis": "</s>",
+      "reference": "heute nacht sind im süden anfangs noch einzelne gewitter möglich sonst fällt nur hier und da regen stellenweise bildet sich nebel .",
+      "nll_sum": 255.7384490966797,
+      "token_count": 23,
+      "nll_per_token": 11.119063004203465
+    },
+    {
+      "id": "18July_2009_Saturday_tagesschau-1634",
+      "hypothesis": "</s>",
+      "reference": "unter tiefdruckeinfluss erwartet uns am sonntag recht kühles schauerwetter .",
+      "nll_sum": 124.80812072753906,
+      "token_count": 11,
+      "nll_per_token": 11.346192793412643
+    },
+    {
+      "id": "12August_2009_Wednesday_tagesschau-1806",
+      "hypothesis": "</s>",
+      "reference": "am freitag teils sonne teils wolken im äußersten süden anfangs noch regnerisch .",
+      "nll_sum": 140.33042907714844,
+      "token_count": 14,
+      "nll_per_token": 10.023602076939174
+    },
+    {
+      "id": "29July_2010_Thursday_tagesschau-7421",
+      "hypothesis": "</s>",
+      "reference": "dichte wolken und gebietsweise schauer gibt es nur im nordwesten .",
+      "nll_sum": 105.50294494628906,
+      "token_count": 12,
+      "nll_per_token": 8.791912078857422
+    },
+    {
+      "id": "07October_2010_Thursday_tagesschau-4121",
+      "hypothesis": "</s>",
+      "reference": "vor allem im norden zeigen sich heute nacht noch dichte wolken vereinzelt fällt etwas regen .",
+      "nll_sum": 163.4528350830078,
+      "token_count": 17,
+      "nll_per_token": 9.614872651941637
+    },
+    {
+      "id": "01April_2010_Thursday_tagesschau-4330",
+      "hypothesis": "</s>",
+      "reference": "am freundlichsten ist es noch im nordosten sowie in teilen bayerns .",
+      "nll_sum": 108.45481872558594,
+      "token_count": 13,
+      "nll_per_token": 8.34267836350661
+    },
+    {
+      "id": "11July_2009_Saturday_tagesschau-665",
+      "hypothesis": "</s>",
+      "reference": "morgen höchstwerte zwischen siebzehn grad im emsland und fünfundzwanzig grad am oberrhein .",
+      "nll_sum": 139.75311279296875,
+      "token_count": 14,
+      "nll_per_token": 9.982365199497767
+    },
+    {
+      "id": "03June_2010_Thursday_tagesschau-2629",
+      "hypothesis": "</s>",
+      "reference": "auch am wochenende sorgt es für viel sonnenschein bei weiter steigenden temperaturen .",
+      "nll_sum": 159.82838439941406,
+      "token_count": 14,
+      "nll_per_token": 11.416313171386719
+    },
+    {
+      "id": "21November_2010_Sunday_tagesschau-5672",
+      "hypothesis": "</s>",
+      "reference": "wo es heute nacht aufklart ist leichter frost möglich sonst null bis vier grad .",
+      "nll_sum": 137.94900512695312,
+      "token_count": 16,
+      "nll_per_token": 8.62181282043457
+    },
+    {
+      "id": "05January_2010_Tuesday_tagesschau-2667",
+      "hypothesis": "</s>",
+      "reference": "ein weiteres tief das morgen über spanien liegt sorgt dann am freitag bei uns dafür dass es kräftig schneit .",
+      "nll_sum": 197.95681762695312,
+      "token_count": 21,
+      "nll_per_token": 9.426515125093006
+    },
+    {
+      "id": "26September_2009_Saturday_tagesschau-2341",
+      "hypothesis": "</s>",
+      "reference": "im norden weht der wind schwach bis mäßig aus west bis südwest sonst schwacher wind aus unterschiedlichen richtungen .",
+      "nll_sum": 154.8723602294922,
+      "token_count": 20,
+      "nll_per_token": 7.743618011474609
+    },
+    {
+      "id": "08July_2010_Thursday_tagesschau-5389",
+      "hypothesis": "</s>",
+      "reference": "auch am montag neben sonne zum teil schwere gewitter .",
+      "nll_sum": 109.5091552734375,
+      "token_count": 11,
+      "nll_per_token": 9.955377752130682
+    },
+    {
+      "id": "08November_2010_Monday_heute-6874",
+      "hypothesis": "</s>",
+      "reference": "guten abend liebe zuschauer .",
+      "nll_sum": 24.978694915771484,
+      "token_count": 6,
+      "nll_per_token": 4.163115819295247
+    },
+    {
+      "id": "11July_2009_Saturday_tagesschau-667",
+      "hypothesis": "</s>",
+      "reference": "auch am dienstag und mittwoch mal sonne mal wolken dazu schauer in der südosthälfte teils schwere gewitter .",
+      "nll_sum": 194.5298309326172,
+      "token_count": 19,
+      "nll_per_token": 10.238412154348273
+    },
+    {
+      "id": "08October_2009_Thursday_tagesschau-5359",
+      "hypothesis": "</s>",
+      "reference": "auch im westen gibt es später wolkenlücken .",
+      "nll_sum": 73.14864349365234,
+      "token_count": 9,
+      "nll_per_token": 8.12762705485026
+    },
+    {
+      "id": "18January_2010_Monday_tagesschau-4023",
+      "hypothesis": "</s>",
+      "reference": "dort morgen sechs grad sonst temperaturen zwischen minus ein und plus fünf grad .",
+      "nll_sum": 156.5001983642578,
+      "token_count": 15,
+      "nll_per_token": 10.433346557617188
+    }
+  ]
+}
