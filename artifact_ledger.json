@@ -1,6 +1,6 @@
 {
  "schema": "artifact-ledger-v4",
- "n_files": 304,
+ "n_files": 306,
  "files": [
   {
    "path": "LICENSE",
@@ -12,11 +12,11 @@
   },
   {
    "path": "README.md",
-   "sha256": "34c946e939719c257f1670312131af14198f5385eb3e0a506991faa50f30adf2"
+   "sha256": "2e312f347794253d8f9c13ae80d0b0985c25d7a197b92cfc0f74f471db888bf6"
   },
   {
    "path": "artifact_ledger.json",
-   "sha256": "a4c0fa7f5dff62a2329ba8bfb7a787e55820b9b8279ff3be392f88974bd63523"
+   "sha256": "14e64d78ae833dc21f56936c74f3794b11ea23c8005095515e4f84a53426d16b"
   },
   {
    "path": "data/cells/cp0_GT-v1.json",
@@ -711,6 +711,10 @@
    "sha256": "cd937ae107594a9706f25796373dc84f55de3287862dbcd2e67fbf4f6fa83476"
   },
   {
+   "path": "results/gap_43_canonical_beam3.json",
+   "sha256": "86de5dd38aaf69f50c29ce3b16746b5682ec2654c410b893009abc82c98610fe"
+  },
+  {
    "path": "results/gap_625_common.json",
    "sha256": "0bff96103cf2b4110a8095c6c76bb02e48eede54869eacf354ee1f3ad164b686"
   },
@@ -1009,6 +1013,10 @@
   {
    "path": "results/unified_checkpoint_registry.json",
    "sha256": "59439f48255f728e96c0da903bf95b516425f7b4eb311ec1ec3ba69562fa5a84"
+  },
+  {
+   "path": "scripts/build_canonical_panel.py",
+   "sha256": "69289dc9b7dee89740fe99dfc1d044d3448daff944de2c848b5f43cd63907602"
   },
   {
    "path": "scripts/build_unified_checkpoint_registry.py",
