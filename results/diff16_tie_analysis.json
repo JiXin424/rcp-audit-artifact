@@ -1,0 +1,1103 @@
+{
+ "unidata_version": "15.0.0",
+ "n_diff": 16,
+ "note": "For each diff item, all Jaccard-tied training candidates are listed with Levenshtein distances. Original donor unknown (registry file not available).",
+ "items": [
+  {
+   "query_id": "03February_2010_Wednesday_heute-2362",
+   "query_text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+   "query_norm": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+   "query_norm_hash": "5d89dd476b2bdc0c",
+   "n_tied_on_max_jaccard": 11,
+   "my_winner": {
+    "donor_id": "04February_2010_Thursday_heute-7976",
+    "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+    "jaccard": 1.0,
+    "levenshtein": 0,
+    "norm_hash": "5d89dd476b2bdc0c"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "04February_2010_Thursday_heute-7976",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "23August_2010_Monday_heute-5331",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "19May_2010_Wednesday_heute-1124",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "23September_2010_Thursday_heute-6485",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "14July_2010_Wednesday_heute-6197",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "10August_2010_Tuesday_heute-1459",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "17February_2010_Wednesday_heute-1494",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "06May_2010_Thursday_heute-1056",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "04December_2009_Friday_tagesschau-833",
+   "query_text": "und nun die wettervorhersage für morgen samstag den fünften dezember .",
+   "query_norm": "und nun die wettervorhersage für morgen samstag den fünften dezember .",
+   "query_norm_hash": "e4defdd9d81189b1",
+   "n_tied_on_max_jaccard": 7,
+   "my_winner": {
+    "donor_id": "04December_2011_Sunday_tagesschau-7780",
+    "text": "und nun die wettervorhersage für morgen montag den fünften dezember .",
+    "jaccard": 0.8333333333333334,
+    "levenshtein": 4,
+    "norm_hash": "babaaf4eb7935367"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "04December_2011_Sunday_tagesschau-7780",
+     "text": "und nun die wettervorhersage für morgen montag den fünften dezember .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": true
+    },
+    {
+     "donor_id": "09December_2011_Friday_tagesschau-8436",
+     "text": "und nun die wettervorhersage für morgen samstag den zehnten dezember .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "02December_2011_Friday_tagesschau-8007",
+     "text": "und nun die wettervorhersage für morgen samstag den dritten dezember .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "04March_2011_Friday_tagesschau-2833",
+     "text": "und nun die wettervorhersage für morgen samstag den fünften märz .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 7,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "16December_2011_Friday_tagesschau-6525",
+     "text": "und nun die wettervorhersage für morgen samstag den siebzehnten dezember .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 8,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "04June_2010_Friday_tagesschau-1167",
+     "text": "und nun die wettervorhersage für morgen samstag den fünften juni .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 8,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "24December_2010_Friday_tagesschau-5126",
+     "text": "und nun die wettervorhersage für morgen samstag den fünfundzwanzigsten dezember .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 11,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "07October_2010_Thursday_tagesschau-4117",
+   "query_text": "und nun die wettervorhersage für morgen freitag den achten oktober .",
+   "query_norm": "und nun die wettervorhersage für morgen freitag den achten oktober .",
+   "query_norm_hash": "2a43950fccd9b3fd",
+   "n_tied_on_max_jaccard": 11,
+   "my_winner": {
+    "donor_id": "01October_2009_Thursday_tagesschau-408",
+    "text": "und nun die wettervorhersage für morgen freitag den zweiten oktober .",
+    "jaccard": 0.8333333333333334,
+    "levenshtein": 4,
+    "norm_hash": "3996f53dfc6c1005"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "01October_2009_Thursday_tagesschau-408",
+     "text": "und nun die wettervorhersage für morgen freitag den zweiten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": true
+    },
+    {
+     "donor_id": "04October_2012_Thursday_tagesschau-4913",
+     "text": "und nun die wettervorhersage für morgen freitag den fünften oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "06October_2011_Thursday_tagesschau-817",
+     "text": "und nun die wettervorhersage für morgen freitag den siebten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "07October_2012_Sunday_tagesschau-3024",
+     "text": "und nun die wettervorhersage für morgen montag den achten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "07January_2010_Thursday_tagesschau-2295",
+     "text": "und nun die wettervorhersage für morgen freitag den achten januar .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 6,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "15October_2009_Thursday_tagesschau-7709",
+     "text": "und nun die wettervorhersage für morgen freitag den sechzehnten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 6,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "07April_2011_Thursday_tagesschau-8096",
+     "text": "und nun die wettervorhersage für morgen freitag den achten april .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 7,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "20October_2011_Thursday_tagesschau-503",
+     "text": "und nun die wettervorhersage für morgen freitag den einundzwanzigsten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 13,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "08October_2009_Thursday_tagesschau-5345",
+   "query_text": "und nun die wettervorhersage für morgen freitag den neunten oktober .",
+   "query_norm": "und nun die wettervorhersage für morgen freitag den neunten oktober .",
+   "query_norm_hash": "97418dcd771ea86a",
+   "n_tied_on_max_jaccard": 10,
+   "my_winner": {
+    "donor_id": "01October_2009_Thursday_tagesschau-408",
+    "text": "und nun die wettervorhersage für morgen freitag den zweiten oktober .",
+    "jaccard": 0.8333333333333334,
+    "levenshtein": 4,
+    "norm_hash": "3996f53dfc6c1005"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "01October_2009_Thursday_tagesschau-408",
+     "text": "und nun die wettervorhersage für morgen freitag den zweiten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": true
+    },
+    {
+     "donor_id": "04October_2012_Thursday_tagesschau-4913",
+     "text": "und nun die wettervorhersage für morgen freitag den fünften oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "06October_2011_Thursday_tagesschau-817",
+     "text": "und nun die wettervorhersage für morgen freitag den siebten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "15October_2009_Thursday_tagesschau-7709",
+     "text": "und nun die wettervorhersage für morgen freitag den sechzehnten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 6,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "08April_2010_Thursday_tagesschau-3948",
+     "text": "und nun die wettervorhersage für morgen freitag den neunten april .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 7,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "08July_2010_Thursday_tagesschau-5376",
+     "text": "und nun die wettervorhersage für morgen freitag den neunten juli .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 7,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "28October_2010_Thursday_tagesschau-5921",
+     "text": "und nun die wettervorhersage für morgen freitag den neunundzwanzigsten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 11,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "22October_2009_Thursday_tagesschau-1125",
+     "text": "und nun die wettervorhersage für morgen freitag den dreiundzwanzigsten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 12,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "11July_2009_Saturday_tagesschau-655",
+   "query_text": "und nun die wettervorhersage für morgen sonntag den zwölften juli .",
+   "query_norm": "und nun die wettervorhersage für morgen sonntag den zwölften juli .",
+   "query_norm_hash": "27e0ec3bcb481595",
+   "n_tied_on_max_jaccard": 8,
+   "my_winner": {
+    "donor_id": "04July_2009_Saturday_tagesschau-3334",
+    "text": "und nun die wettervorhersage für morgen sonntag den fünften juli .",
+    "jaccard": 0.8333333333333334,
+    "levenshtein": 4,
+    "norm_hash": "917a604f80b1cfcf"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "04July_2009_Saturday_tagesschau-3334",
+     "text": "und nun die wettervorhersage für morgen sonntag den fünften juli .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": true
+    },
+    {
+     "donor_id": "11July_2011_Monday_tagesschau-846",
+     "text": "und nun die wettervorhersage für morgen dienstag den zwölften juli .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "16July_2011_Saturday_tagesschau-7520",
+     "text": "und nun die wettervorhersage für morgen sonntag den siebzehnten juli .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 8,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "18July_2009_Saturday_tagesschau-1633",
+     "text": "und nun die wettervorhersage für morgen sonntag den neunzehnten juli .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 8,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "11September_2010_Saturday_tagesschau-4989",
+     "text": "und nun die wettervorhersage für morgen sonntag den zwölften september .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 9,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "23July_2011_Saturday_tagesschau-5494",
+     "text": "und nun die wettervorhersage für morgen sonntag den vierundzwanzigsten juli .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 13,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "24July_2010_Saturday_tagesschau-6333",
+     "text": "und nun die wettervorhersage für morgen sonntag den fünfundzwanzigsten juli .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 13,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "30July_2011_Saturday_tagesschau-8587",
+     "text": "und nun die wettervorhersage für morgen sonntag den einunddreißigsten juli .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 14,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "11September_2009_Friday_tagesschau-8781",
+   "query_text": "der wind weht schwach bis mäßig an der nordsee und im bergland auch frischer wind .",
+   "query_norm": "der wind weht schwach bis mäßig an der nordsee und im bergland auch frischer wind .",
+   "query_norm_hash": "8f92c81a04e2f91f",
+   "n_tied_on_max_jaccard": 2,
+   "my_winner": {
+    "donor_id": "24July_2011_Sunday_tagesschau-6626",
+    "text": "der wind weht schwach bis mäßig an der nordsee auch frisch .",
+    "jaccard": 0.6666666666666666,
+    "levenshtein": 23,
+    "norm_hash": "555a72e1adbc43ff"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "24July_2011_Sunday_tagesschau-6626",
+     "text": "der wind weht schwach bis mäßig an der nordsee auch frisch .",
+     "jaccard": 0.6666666666666666,
+     "levenshtein": 23,
+     "excluded": false,
+     "selected_by_rebuilt": true
+    },
+    {
+     "donor_id": "20July_2010_Tuesday_tagesschau-7882",
+     "text": "der wind weht schwach bis mäßig an der nordsee auch frisch .",
+     "jaccard": 0.6666666666666666,
+     "levenshtein": 23,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "14October_2009_Wednesday_tagesschau-516",
+   "query_text": "und nun die wettervorhersage für morgen donnerstag den fünfzehnten oktober .",
+   "query_norm": "und nun die wettervorhersage für morgen donnerstag den fünfzehnten oktober .",
+   "query_norm_hash": "2f19a8e554ac8f16",
+   "n_tied_on_max_jaccard": 8,
+   "my_winner": {
+    "donor_id": "06October_2010_Wednesday_tagesschau-631",
+    "text": "und nun die wettervorhersage für morgen donnerstag den siebten oktober .",
+    "jaccard": 0.8333333333333334,
+    "levenshtein": 7,
+    "norm_hash": "3337f63f4a0c61f8"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "06October_2010_Wednesday_tagesschau-631",
+     "text": "und nun die wettervorhersage für morgen donnerstag den siebten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 7,
+     "excluded": false,
+     "selected_by_rebuilt": true
+    },
+    {
+     "donor_id": "30September_2009_Wednesday_tagesschau-1765",
+     "text": "und nun die wettervorhersage für morgen donnerstag den ersten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 7,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "14July_2010_Wednesday_tagesschau-1851",
+     "text": "und nun die wettervorhersage für morgen donnerstag den fünfzehnten juli .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 7,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "14April_2010_Wednesday_tagesschau-3807",
+     "text": "und nun die wettervorhersage für morgen donnerstag den fünfzehnten april .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 7,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "20October_2010_Wednesday_tagesschau-8206",
+     "text": "und nun die wettervorhersage für morgen donnerstag den einundzwanzigsten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 11,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "27October_2010_Wednesday_tagesschau-7456",
+     "text": "und nun die wettervorhersage für morgen donnerstag den achtundzwanzigsten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 12,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "28October_2009_Wednesday_tagesschau-4534",
+     "text": "und nun die wettervorhersage für morgen donnerstag den neunundzwanzigsten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 12,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "21October_2009_Wednesday_tagesschau-731",
+     "text": "und nun die wettervorhersage für morgen donnerstag den zweiundzwanzigsten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 12,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "14October_2010_Thursday_tagesschau-287",
+   "query_text": "und nun die wettervorhersage für morgen freitag den fünfzehnten oktober .",
+   "query_norm": "und nun die wettervorhersage für morgen freitag den fünfzehnten oktober .",
+   "query_norm_hash": "1649d2d858e4c688",
+   "n_tied_on_max_jaccard": 8,
+   "my_winner": {
+    "donor_id": "04October_2012_Thursday_tagesschau-4913",
+    "text": "und nun die wettervorhersage für morgen freitag den fünften oktober .",
+    "jaccard": 0.8333333333333334,
+    "levenshtein": 4,
+    "norm_hash": "1a2a7fea3f27ea95"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "04October_2012_Thursday_tagesschau-4913",
+     "text": "und nun die wettervorhersage für morgen freitag den fünften oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": true
+    },
+    {
+     "donor_id": "15October_2009_Thursday_tagesschau-7709",
+     "text": "und nun die wettervorhersage für morgen freitag den sechzehnten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "01October_2009_Thursday_tagesschau-408",
+     "text": "und nun die wettervorhersage für morgen freitag den zweiten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 7,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "06October_2011_Thursday_tagesschau-817",
+     "text": "und nun die wettervorhersage für morgen freitag den siebten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 7,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "20October_2011_Thursday_tagesschau-503",
+     "text": "und nun die wettervorhersage für morgen freitag den einundzwanzigsten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 11,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "22October_2009_Thursday_tagesschau-1125",
+     "text": "und nun die wettervorhersage für morgen freitag den dreiundzwanzigsten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 12,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "21October_2010_Thursday_tagesschau-1809",
+     "text": "und nun die wettervorhersage für morgen freitag den zweiundzwanzigsten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 12,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "28October_2010_Thursday_tagesschau-5921",
+     "text": "und nun die wettervorhersage für morgen freitag den neunundzwanzigsten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 12,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "18April_2011_Monday_tagesschau-1314",
+   "query_text": "und nun die wettervorhersage für morgen dienstag den neunzehnten april .",
+   "query_norm": "und nun die wettervorhersage für morgen dienstag den neunzehnten april .",
+   "query_norm_hash": "0f80debbd963ba39",
+   "n_tied_on_max_jaccard": 6,
+   "my_winner": {
+    "donor_id": "18April_2010_Sunday_tagesschau-6653",
+    "text": "und nun die wettervorhersage für morgen montag den neunzehnten april .",
+    "jaccard": 0.8333333333333334,
+    "levenshtein": 4,
+    "norm_hash": "e042edeb10d32c11"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "18April_2010_Sunday_tagesschau-6653",
+     "text": "und nun die wettervorhersage für morgen montag den neunzehnten april .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": true
+    },
+    {
+     "donor_id": "12April_2010_Monday_tagesschau-353",
+     "text": "und nun die wettervorhersage für morgen dienstag den dreizehnten april .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "18January_2010_Monday_tagesschau-4014",
+     "text": "und nun die wettervorhersage für morgen dienstag den neunzehnten januar .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 5,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "19April_2010_Monday_tagesschau-1378",
+     "text": "und nun die wettervorhersage für morgen dienstag den zwanzigsten april .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 6,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "18October_2010_Monday_tagesschau-6738",
+     "text": "und nun die wettervorhersage für morgen dienstag den neunzehnten oktober .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 7,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "26April_2010_Monday_tagesschau-7269",
+     "text": "und nun die wettervorhersage für morgen dienstag den siebenundzwanzigsten april .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 12,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "19January_2011_Wednesday_heute-2690",
+   "query_text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+   "query_norm": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+   "query_norm_hash": "5d89dd476b2bdc0c",
+   "n_tied_on_max_jaccard": 11,
+   "my_winner": {
+    "donor_id": "04February_2010_Thursday_heute-7976",
+    "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+    "jaccard": 1.0,
+    "levenshtein": 0,
+    "norm_hash": "5d89dd476b2bdc0c"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "04February_2010_Thursday_heute-7976",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "23August_2010_Monday_heute-5331",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "19May_2010_Wednesday_heute-1124",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "23September_2010_Thursday_heute-6485",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "14July_2010_Wednesday_heute-6197",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "10August_2010_Tuesday_heute-1459",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "17February_2010_Wednesday_heute-1494",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "06May_2010_Thursday_heute-1056",
+     "text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "20June_2011_Monday_heute-6511",
+   "query_text": "und damit schönen guten abend .",
+   "query_norm": "und damit schönen guten abend .",
+   "query_norm_hash": "e2484a5cf10315b7",
+   "n_tied_on_max_jaccard": 5,
+   "my_winner": {
+    "donor_id": "05December_2011_Monday_heute-7426",
+    "text": "und damit schönen guten abend .",
+    "jaccard": 1.0,
+    "levenshtein": 0,
+    "norm_hash": "e2484a5cf10315b7"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "05December_2011_Monday_heute-7426",
+     "text": "und damit schönen guten abend .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "04July_2011_Monday_heute-6442",
+     "text": "und damit schönen guten abend .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "24September_2009_Thursday_heute-6075",
+     "text": "und damit schönen guten abend .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "07December_2010_Tuesday_heute-5625",
+     "text": "und damit schönen guten abend .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "13September_2010_Monday_heute-7167",
+     "text": "und damit schönen guten abend .",
+     "jaccard": 1.0,
+     "levenshtein": null,
+     "excluded": true,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "24January_2013_Thursday_heute-7266",
+   "query_text": "es bleibt noch mal kalt am samstag knackig bis höchsttemperaturen minus zehn grad .",
+   "query_norm": "es bleibt noch mal kalt am samstag knackig bis höchsttemperaturen minus zehn grad .",
+   "query_norm_hash": "84384c8d36eaeb00",
+   "n_tied_on_max_jaccard": 1,
+   "my_winner": {
+    "donor_id": "28January_2010_Thursday_heute-2897",
+    "text": "es bleibt winterlich in den nächsten tagen am wochenende vor allem am samstag noch schnee vielleicht auch mal ein wintergewitter und vor allen dingen nachts wird es dann wieder kalt temperaturen bis minus zehn grad .",
+    "jaccard": 0.34285714285714286,
+    "levenshtein": 144,
+    "norm_hash": "81dc0cda0ed8b889"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "28January_2010_Thursday_heute-2897",
+     "text": "es bleibt winterlich in den nächsten tagen am wochenende vor allem am samstag noch schnee vielleicht",
+     "jaccard": 0.34285714285714286,
+     "levenshtein": 144,
+     "excluded": false,
+     "selected_by_rebuilt": true
+    }
+   ]
+  },
+  {
+   "query_id": "24June_2010_Thursday_tagesschau-7300",
+   "query_text": "und nun die wettervorhersage für morgen freitag den fünfundzwanzigsten juni .",
+   "query_norm": "und nun die wettervorhersage für morgen freitag den fünfundzwanzigsten juni .",
+   "query_norm_hash": "ae7f45c9550ede42",
+   "n_tied_on_max_jaccard": 7,
+   "my_winner": {
+    "donor_id": "24March_2011_Thursday_tagesschau-3934",
+    "text": "und nun die wettervorhersage für morgen freitag den fünfundzwanzigsten märz .",
+    "jaccard": 0.8333333333333334,
+    "levenshtein": 4,
+    "norm_hash": "e79b222a1789db07"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "24March_2011_Thursday_tagesschau-3934",
+     "text": "und nun die wettervorhersage für morgen freitag den fünfundzwanzigsten märz .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": true
+    },
+    {
+     "donor_id": "24January_2013_Thursday_tagesschau-6319",
+     "text": "und nun die wettervorhersage für morgen freitag den fünfundzwanzigsten januar .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "24June_2011_Friday_tagesschau-4067",
+     "text": "und nun die wettervorhersage für morgen samstag den fünfundzwanzigsten juni .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "24February_2011_Thursday_tagesschau-4758",
+     "text": "und nun die wettervorhersage für morgen freitag den fünfundzwanzigsten februar .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 6,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "24November_2011_Thursday_tagesschau-8329",
+     "text": "und nun die wettervorhersage für morgen freitag den fünfundzwanzigsten november .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 8,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "17June_2010_Thursday_tagesschau-3899",
+     "text": "und nun die wettervorhersage für morgen freitag den achtzehnten juni .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 13,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "03June_2010_Thursday_tagesschau-2627",
+     "text": "und nun die wettervorhersage für morgen freitag den vierten juni .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 14,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "24November_2011_Thursday_heute-224",
+   "query_text": "ganz ähnliche temperaturen wie heute zwischen sechs und elf grad .",
+   "query_norm": "ganz ähnliche temperaturen wie heute zwischen sechs und elf grad .",
+   "query_norm_hash": "d3a6d6f630c0a0c1",
+   "n_tied_on_max_jaccard": 3,
+   "my_winner": {
+    "donor_id": "03June_2010_Thursday_tagesschau-2635",
+    "text": "heute nacht temperaturen zwischen fünf und zwölf grad .",
+    "jaccard": 0.42857142857142855,
+    "levenshtein": 28,
+    "norm_hash": "cdf954dfa39e4a7d"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "03June_2010_Thursday_tagesschau-2635",
+     "text": "heute nacht temperaturen zwischen fünf und zwölf grad .",
+     "jaccard": 0.42857142857142855,
+     "levenshtein": 28,
+     "excluded": false,
+     "selected_by_rebuilt": true
+    },
+    {
+     "donor_id": "29November_2009_Sunday_tagesschau-7047",
+     "text": "heute nacht temperaturen zwischen sieben und zwei grad .",
+     "jaccard": 0.42857142857142855,
+     "levenshtein": 28,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "05July_2011_Tuesday_tagesschau-6142",
+     "text": "heute nacht temperaturen zwischen neun und sechzehn grad .",
+     "jaccard": 0.42857142857142855,
+     "levenshtein": 31,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "25November_2009_Wednesday_tagesschau-7666",
+   "query_text": "und nun die wettervorhersage für morgen donnerstag den sechsundzwanzigsten november .",
+   "query_norm": "und nun die wettervorhersage für morgen donnerstag den sechsundzwanzigsten november .",
+   "query_norm_hash": "cf9806e494627f90",
+   "n_tied_on_max_jaccard": 6,
+   "my_winner": {
+    "donor_id": "25November_2010_Thursday_tagesschau-2525",
+    "text": "und nun die wettervorhersage für morgen freitag den sechsundzwanzigsten november .",
+    "jaccard": 0.8333333333333334,
+    "levenshtein": 6,
+    "norm_hash": "9273a20d05141c4c"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "25November_2010_Thursday_tagesschau-2525",
+     "text": "und nun die wettervorhersage für morgen freitag den sechsundzwanzigsten november .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 6,
+     "excluded": false,
+     "selected_by_rebuilt": true
+    },
+    {
+     "donor_id": "25November_2011_Friday_tagesschau-4389",
+     "text": "und nun die wettervorhersage für morgen samstag den sechsundzwanzigsten november .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 6,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "25August_2010_Wednesday_tagesschau-8506",
+     "text": "und nun die wettervorhersage für morgen donnerstag den sechsundzwanzigsten august .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 8,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "11November_2009_Wednesday_tagesschau-8033",
+     "text": "und nun die wettervorhersage für morgen donnerstag den zwölften november .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 14,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "03November_2010_Wednesday_tagesschau-6498",
+     "text": "und nun die wettervorhersage für morgen donnerstag den vierten november .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 15,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "10November_2010_Wednesday_tagesschau-6798",
+     "text": "und nun die wettervorhersage für morgen donnerstag den elften november .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 15,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    }
+   ]
+  },
+  {
+   "query_id": "27November_2011_Sunday_tagesschau-5138",
+   "query_text": "und nun die wettervorhersage für morgen montag den achtundzwanzigsten november .",
+   "query_norm": "und nun die wettervorhersage für morgen montag den achtundzwanzigsten november .",
+   "query_norm_hash": "095bb50efe886fbf",
+   "n_tied_on_max_jaccard": 10,
+   "my_winner": {
+    "donor_id": "28November_2010_Sunday_tagesschau-2436",
+    "text": "und nun die wettervorhersage für morgen montag den neunundzwanzigsten november .",
+    "jaccard": 0.8333333333333334,
+    "levenshtein": 4,
+    "norm_hash": "84c5f1b390440076"
+   },
+   "original_winner_unknown": true,
+   "original_winner_note": "Original registry file not available; donor unknown.",
+   "tie_candidates": [
+    {
+     "donor_id": "28November_2010_Sunday_tagesschau-2436",
+     "text": "und nun die wettervorhersage für morgen montag den neunundzwanzigsten november .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": true
+    },
+    {
+     "donor_id": "27September_2009_Sunday_tagesschau-2165",
+     "text": "und nun die wettervorhersage für morgen montag den achtundzwanzigsten september .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "21November_2010_Sunday_tagesschau-5664",
+     "text": "und nun die wettervorhersage für morgen montag den zweiundzwanzigsten november .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "22November_2009_Sunday_tagesschau-5479",
+     "text": "und nun die wettervorhersage für morgen montag den dreiundzwanzigsten november .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "20November_2011_Sunday_tagesschau-533",
+     "text": "und nun die wettervorhersage für morgen montag den einundzwanzigsten november .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 4,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "27January_2013_Sunday_tagesschau-8827",
+     "text": "und nun die wettervorhersage für morgen montag den achtundzwanzigsten januar .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 7,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "27February_2011_Sunday_tagesschau-6106",
+     "text": "und nun die wettervorhersage für morgen montag den achtundzwanzigsten februar .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 7,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    },
+    {
+     "donor_id": "27June_2010_Sunday_tagesschau-7384",
+     "text": "und nun die wettervorhersage für morgen montag den achtundzwanzigsten juni .",
+     "jaccard": 0.8333333333333334,
+     "levenshtein": 8,
+     "excluded": false,
+     "selected_by_rebuilt": false
+    }
+   ]
+  }
+ ]
+}
