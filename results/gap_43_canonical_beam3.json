@@ -244,7 +244,7 @@
   "generated_by": "scripts/build_canonical_panel.py",
   "algorithm": "NFKC normalization + exact-normalized-text exclusion + token-set Jaccard + character-level Levenshtein tie-break + SHA-256 hash final tie-break (paper §2.2)",
   "n_total_checkpoints_with_model_files": 30,
-  "n_decoded": 36,
+  "n_decoded": 43,
   "n_skipped": 0,
   "decoder": "model.run_batch(translation_beam_size=3, translation_beam_alpha=-1, translation_max_output_length=30)",
   "sacrebleu_signature": "BLEU|nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1",
@@ -290,5 +290,40 @@
   "gt_bleu": 9.876997087566306,
   "pure_bleu": 8.290383231880073,
   "gap": -1.5866138556862328
+ },
+ "cf_101": {
+  "gt_bleu": 10.116515620379378,
+  "pure_bleu": 9.513609263562,
+  "gap": -0.6029063568173783
+ },
+ "sf_505": {
+  "gt_bleu": 9.766429452658574,
+  "pure_bleu": 8.17198642637862,
+  "gap": -1.5944430262799543
+ },
+ "sf_606": {
+  "gt_bleu": 8.558574260244667,
+  "pure_bleu": 7.515605764486164,
+  "gap": -1.0429684957585028
+ },
+ "ladder_0125": {
+  "gt_bleu": 0.00041133343393502425,
+  "pure_bleu": 0.0004059553698170808,
+  "gap": -5.3780641179434325e-06
+ },
+ "ladder_025": {
+  "gt_bleu": 0.0004126455189661539,
+  "pure_bleu": 0.0004017768853434963,
+  "gap": -1.086863362265763e-05
+ },
+ "ladder_05": {
+  "gt_bleu": 6.524123356842155,
+  "pure_bleu": 6.3161399311191735,
+  "gap": -0.20798342572298179
+ },
+ "ladder_075": {
+  "gt_bleu": 7.599032512505718,
+  "pure_bleu": 7.195210717101207,
+  "gap": -0.4038217954045109
  }
 }
