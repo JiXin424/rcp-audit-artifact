@@ -1,6 +1,6 @@
 {
  "schema": "artifact-ledger-v4",
- "n_files": 417,
+ "n_files": 392,
  "files": [
   {
    "path": "LICENSE",
@@ -16,7 +16,7 @@
   },
   {
    "path": "artifact_ledger.json",
-   "sha256": "84723729d55ba69b4ca42705d73ec13c6362d94b27865585651198d143589bef"
+   "sha256": "dff4df4f92b888bd365f96cccc40f49437fd11b8c0802abba142a1acb3653e22"
   },
   {
    "path": "data/cells/cp0_GT-v1.json",
@@ -1471,20 +1471,8 @@
    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
-   "path": "src/__pycache__/__init__.cpython-312.pyc",
-   "sha256": "286c50cb3bd6a7b9c4e3875f6715d77b960d163aa678b3c28cedb048d62c1327"
-  },
-  {
    "path": "src/data/__init__.py",
    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  },
-  {
-   "path": "src/data/__pycache__/__init__.cpython-312.pyc",
-   "sha256": "28747d6079579ee347d6e47e1258eb5ab7f376a61b250f2936a5e53de499f817"
-  },
-  {
-   "path": "src/data/__pycache__/slrtp_dataset.cpython-312.pyc",
-   "sha256": "b20468de1500ce83a1a4a257c1897f5b02e21c8f872ed7672684fd6a07e820d7"
   },
   {
    "path": "src/data/slrtp_dataset.py",
@@ -1493,26 +1481,6 @@
   {
    "path": "src/evaluation/__init__.py",
    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  },
-  {
-   "path": "src/evaluation/__pycache__/__init__.cpython-312.pyc",
-   "sha256": "6743cc898a11f3dc5a0211351fa03829324542a254c30ccb62007e6273b82677"
-  },
-  {
-   "path": "src/evaluation/__pycache__/bleu.cpython-312.pyc",
-   "sha256": "7f4f5249c3a21c9c38c8ad823d8989341d90f0ce46d094a495727ebe7c7c2ca2"
-  },
-  {
-   "path": "src/evaluation/__pycache__/composers.cpython-312.pyc",
-   "sha256": "bdfeb01934a98f8065ab739b7968504e7336d6f4873b9bdf482aab25fe72792a"
-  },
-  {
-   "path": "src/evaluation/__pycache__/decode.cpython-312.pyc",
-   "sha256": "a6671ab6a9e0782086574c8b7526566a8333f7d5922997bc1637fe46809927c3"
-  },
-  {
-   "path": "src/evaluation/__pycache__/retrieval.cpython-312.pyc",
-   "sha256": "8515eab71b5d273ef7725961d9bb4d24240bec2f6da09324e9352f3ec242951f"
   },
   {
    "path": "src/evaluation/bleu.py",
@@ -1533,46 +1501,6 @@
   {
    "path": "src/models/__init__.py",
    "sha256": "abf9522bc7c1402bb21e916f6102f4e0e4b4f40169928b2e48a5172ba783430e"
-  },
-  {
-   "path": "src/models/__pycache__/__init__.cpython-312.pyc",
-   "sha256": "20d2bb0a57ab6ad965dbee595b5358298cedf3eed041c1795d0fa5de1793e13d"
-  },
-  {
-   "path": "src/models/__pycache__/back_translate.cpython-312.pyc",
-   "sha256": "6fa641fcefabb96f9baeb5fb58c260c0220211b925eecb2e5f8c3964a6b41898"
-  },
-  {
-   "path": "src/models/__pycache__/bt_attention.cpython-312.pyc",
-   "sha256": "eb974a7caa883a9a64b86df07e35e2282c0bd80a2f8f723ce55ae4623cd47ab1"
-  },
-  {
-   "path": "src/models/__pycache__/bt_decoders.cpython-312.pyc",
-   "sha256": "3d34677e078b32c55d52b6cdc4a4bfb47a5d89aaac17ce4a1c3f2e7001b77f71"
-  },
-  {
-   "path": "src/models/__pycache__/bt_embeddings.cpython-312.pyc",
-   "sha256": "d6f5f71eae4728bd9294630a4da9009016b8547ecfda4ace76ad4a2758c8f849"
-  },
-  {
-   "path": "src/models/__pycache__/bt_encoders.cpython-312.pyc",
-   "sha256": "a0a045f6c57dd02e60afff8392b2868a9bdde1ccef6d8937efedc5fddc440624"
-  },
-  {
-   "path": "src/models/__pycache__/bt_initialization.cpython-312.pyc",
-   "sha256": "779975fc1f14f1e5f496770dba1c8d1c5ae162facb502412a69742efe46a1645"
-  },
-  {
-   "path": "src/models/__pycache__/bt_model.cpython-312.pyc",
-   "sha256": "9b6e1f2cae79e95646916b30ccd4872cb66e20e6bd08f6aadb2c04a413a789b3"
-  },
-  {
-   "path": "src/models/__pycache__/bt_search.cpython-312.pyc",
-   "sha256": "6d3207f8df4e806d68ca3fc0b743f6e6d658a23acf9fb12ee2aa38770178f4c9"
-  },
-  {
-   "path": "src/models/__pycache__/bt_transformer_layers.cpython-312.pyc",
-   "sha256": "e12870a33033057b690f48caeb7f6559eccffceb294e26b35c7cf7f68aa8c02b"
   },
   {
    "path": "src/models/back_translate.py",
@@ -1615,18 +1543,6 @@
    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
-   "path": "src/training/__pycache__/__init__.cpython-312.pyc",
-   "sha256": "ef19003e59c21b178b39b712634ef311d9af74d4e129d60a3ecf4c3a7423a2e3"
-  },
-  {
-   "path": "src/training/__pycache__/train_distillation.cpython-312.pyc",
-   "sha256": "0c74629cbd75c60550f043759b5ffd5b28d3039b06d91937a808fbd13a19ccf5"
-  },
-  {
-   "path": "src/training/__pycache__/train_matched.cpython-312.pyc",
-   "sha256": "a236445979e0ea0d10511608df9216271685faf434b677a9239d050d117ccbd6"
-  },
-  {
    "path": "src/training/train_distillation.py",
    "sha256": "3e2bf4848b06d72efc4eeccb53cf11a37c0cabd74f13b53387d9a03755878c0b"
   },
@@ -1637,22 +1553,6 @@
   {
    "path": "src/utils/__init__.py",
    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  },
-  {
-   "path": "src/utils/__pycache__/__init__.cpython-312.pyc",
-   "sha256": "be92b3d0de93c75481bd66941f098919ced3f030a2824a44ffb42b1aad8722f9"
-  },
-  {
-   "path": "src/utils/__pycache__/config.cpython-312.pyc",
-   "sha256": "a7ef3f3cc5e313c98bd5e231da0772270416bca9314084f315c4a9dc9be25678"
-  },
-  {
-   "path": "src/utils/__pycache__/hashing.cpython-312.pyc",
-   "sha256": "402179637fe4c32897e916a45c3392c933e046637be684011c7bcfa975271dde"
-  },
-  {
-   "path": "src/utils/__pycache__/seed.cpython-312.pyc",
-   "sha256": "caa2046989f6b8601b5a3feb7aa1c71a7f74c290b1e9b099049a6b5ee31549c4"
   },
   {
    "path": "src/utils/config.py",

@@ -244,7 +244,7 @@
   "generated_by": "scripts/build_canonical_panel.py",
   "algorithm": "NFKC normalization + exact-normalized-text exclusion + token-set Jaccard + character-level Levenshtein tie-break + SHA-256 hash final tie-break (paper §2.2)",
   "n_total_checkpoints_with_model_files": 30,
-  "n_decoded": 29,
+  "n_decoded": 30,
   "n_skipped": 0,
   "decoder": "model.run_batch(translation_beam_size=3, translation_beam_alpha=-1, translation_max_output_length=30)",
   "sacrebleu_signature": "BLEU|nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1",
