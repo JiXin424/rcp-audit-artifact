@@ -1,0 +1,312 @@
+[
+ {
+  "query_id": "01June_2010_Tuesday_heute-6603",
+  "original_hypothesis": "liebe zuschauer guten abend .",
+  "sec22_hypothesis": "guten abend liebe zuschauer .",
+  "sec22_donor": "28April_2010_Wednesday_heute-5181",
+  "identified_original_donor": "22November_2010_Monday_heute-275",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "04January_2010_Monday_heute-7395",
+  "original_hypothesis": "guten abend liebe zuschauer .",
+  "sec22_hypothesis": "liebe zuschauer guten abend .",
+  "sec22_donor": "09August_2011_Tuesday_heute-2640",
+  "identified_original_donor": "24February_2011_Thursday_heute-6664",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "06January_2010_Wednesday_tagesschau-7737",
+  "original_hypothesis": "es bleibt windig .",
+  "sec22_hypothesis": "dabei ist es sehr windig .",
+  "sec22_donor": "05December_2011_Monday_tagesschau-4176",
+  "identified_original_donor": "27January_2013_Sunday_tagesschau-8842",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "07August_2009_Friday_tagesschau-6165",
+  "original_hypothesis": "es gelten entsprechende warnungen des deutschen wetterdienstes .",
+  "sec22_hypothesis": "es bestehen entsprechende warnungen des deutschen wetterdienstes .",
+  "sec22_donor": "26August_2010_Thursday_tagesschau-4267",
+  "identified_original_donor": "02June_2010_Wednesday_tagesschau-7157",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "07February_2011_Monday_heute-4658",
+  "original_hypothesis": "guten abend liebe zuschauer .",
+  "sec22_hypothesis": "liebe zuschauer guten abend .",
+  "sec22_donor": "09August_2011_Tuesday_heute-2640",
+  "identified_original_donor": "24February_2011_Thursday_heute-6664",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "08December_2009_Tuesday_heute-4198",
+  "original_hypothesis": "guten abend liebe zuschauer .",
+  "sec22_hypothesis": "liebe zuschauer guten abend .",
+  "sec22_donor": "09August_2011_Tuesday_heute-2640",
+  "identified_original_donor": "24February_2011_Thursday_heute-6664",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "08November_2010_Monday_heute-6874",
+  "original_hypothesis": "guten abend liebe zuschauer .",
+  "sec22_hypothesis": "liebe zuschauer guten abend .",
+  "sec22_donor": "09August_2011_Tuesday_heute-2640",
+  "identified_original_donor": "24February_2011_Thursday_heute-6664",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "09June_2010_Wednesday_tagesschau-5961",
+  "original_hypothesis": "der deutsche wetterdienst hat entsprechende unwetterwarnungen herausgegeben .",
+  "sec22_hypothesis": "der deutsche wetterdienst hat entsprechende warnungen herausgegeben .",
+  "sec22_donor": "22November_2009_Sunday_tagesschau-5482",
+  "identified_original_donor": "02February_2010_Tuesday_tagesschau-7951",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "09November_2010_Tuesday_heute-5840",
+  "original_hypothesis": "jetzt wünsche ich ihnen noch einen schönen abend .",
+  "sec22_hypothesis": "und jetzt wünsche ich ihnen noch einen schönen abend .",
+  "sec22_donor": "28September_2010_Tuesday_heute-8358",
+  "identified_original_donor": "08April_2010_Thursday_heute-4013",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "13October_2009_Tuesday_tagesschau-1657",
+  "original_hypothesis": "ähnliches wetter auch am donnerstag .",
+  "sec22_hypothesis": "ähnliches wetter auch am samstag .",
+  "sec22_donor": "13July_2011_Wednesday_tagesschau-7990",
+  "identified_original_donor": "21August_2011_Sunday_tagesschau-274",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "17July_2009_Friday_tagesschau-5106",
+  "original_hypothesis": "der deutsche wetterdienst hat entsprechende unwetterwarnungen herausgegeben .",
+  "sec22_hypothesis": "der deutsche wetterdienst hat entsprechende warnungen herausgegeben .",
+  "sec22_donor": "22November_2009_Sunday_tagesschau-5482",
+  "identified_original_donor": "02February_2010_Tuesday_tagesschau-7951",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "17June_2010_Thursday_tagesschau-3903",
+  "original_hypothesis": "es gelten entsprechende unwetterwarnungen des deutschen wetterdienstes .",
+  "sec22_hypothesis": "es gelten unwetterwarnungen des deutschen wetterdienstes .",
+  "sec22_donor": "30August_2010_Monday_tagesschau-2822",
+  "identified_original_donor": "08January_2010_Friday_tagesschau-3978",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "17May_2010_Monday_heute-5577",
+  "original_hypothesis": "jetzt wünsche ich ihnen noch einen schönen abend .",
+  "sec22_hypothesis": "und jetzt wünsche ich ihnen noch einen schönen abend .",
+  "sec22_donor": "28September_2010_Tuesday_heute-8358",
+  "identified_original_donor": "08April_2010_Thursday_heute-4013",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "19April_2010_Monday_heute-782",
+  "original_hypothesis": "jetzt wünsche ich ihnen noch einen schönen abend .",
+  "sec22_hypothesis": "und jetzt wünsche ich ihnen noch einen schönen abend .",
+  "sec22_donor": "28September_2010_Tuesday_heute-8358",
+  "identified_original_donor": "08April_2010_Thursday_heute-4013",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "20June_2011_Monday_heute-6511",
+  "original_hypothesis": "damit wünsche ich ihnen jetzt noch einen schönen abend .",
+  "sec22_hypothesis": "und damit schönen guten abend meine damen und herren .",
+  "sec22_donor": "06December_2010_Monday_heute-6200",
+  "identified_original_donor": "13September_2010_Monday_heute-7167",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "21April_2010_Wednesday_heute-3108",
+  "original_hypothesis": "guten abend liebe zuschauer .",
+  "sec22_hypothesis": "liebe zuschauer guten abend .",
+  "sec22_donor": "09August_2011_Tuesday_heute-2640",
+  "identified_original_donor": "24February_2011_Thursday_heute-6664",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "21November_2011_Monday_heute-5437",
+  "original_hypothesis": "ihnen einen schönen abend und machen sie es gut .",
+  "sec22_hypothesis": "ihnen noch einen schönen abend und machen sie es gut .",
+  "sec22_donor": "01June_2011_Wednesday_heute-955",
+  "identified_original_donor": "05October_2011_Wednesday_heute-1082",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "22September_2010_Wednesday_heute-2626",
+  "original_hypothesis": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
+  "sec22_hypothesis": "jetzt wünsche ich ihnen noch einen schönen abend .",
+  "sec22_donor": "19April_2011_Tuesday_heute-5344",
+  "identified_original_donor": "04October_2010_Monday_heute-5957",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "24August_2010_Tuesday_heute-3006",
+  "original_hypothesis": "liebe zuschauer guten abend .",
+  "sec22_hypothesis": "guten abend liebe zuschauer .",
+  "sec22_donor": "28April_2010_Wednesday_heute-5181",
+  "identified_original_donor": "22November_2010_Monday_heute-275",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "24January_2013_Thursday_heute-7266",
+  "original_hypothesis": "es bleibt winterlich in den nächsten tagen am wochenende vor allem am samstag noch schnee vielleicht auch mal ein wintergewitter und vor allen dingen ",
+  "sec22_hypothesis": "es bleibt winterlich in den nächsten tagen am wochenende vor allem am samstag noch schnee vielleicht auch mal ein wintergewitter und vor allen dingen ",
+  "sec22_donor": "28January_2010_Thursday_heute-2897",
+  "identified_original_donor": null,
+  "identified_donor_excluded_by_sec22": null,
+  "identified_donor_jaccard": null,
+  "same_donor": null
+ },
+ {
+  "query_id": "24July_2011_Sunday_tagesschau-6632",
+  "original_hypothesis": "ähnliches wetter auch am donnerstag .",
+  "sec22_hypothesis": "ähnliches wetter auch am samstag .",
+  "sec22_donor": "13July_2011_Wednesday_tagesschau-7990",
+  "identified_original_donor": "21August_2011_Sunday_tagesschau-274",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "24May_2011_Tuesday_heute-6062",
+  "original_hypothesis": "und damit schönen guten abend meine damen und herren .",
+  "sec22_hypothesis": "damit wünsche ich ihnen jetzt noch einen schönen abend .",
+  "sec22_donor": "13September_2010_Monday_heute-7167",
+  "identified_original_donor": "06December_2010_Monday_heute-6200",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "24September_2009_Thursday_heute-6091",
+  "original_hypothesis": "das war es für heute schönen abend noch .",
+  "sec22_hypothesis": "und das war es für heute schönen abend noch .",
+  "sec22_donor": "07December_2010_Tuesday_heute-5638",
+  "identified_original_donor": "24May_2011_Tuesday_heute-6073",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "25August_2009_Tuesday_tagesschau-7086",
+  "original_hypothesis": "der deutsche wetterdienst hat entsprechende warnungen herausgegeben .",
+  "sec22_hypothesis": "der deutsche wetterdienst hat entsprechende unwetterwarnungen herausgegeben .",
+  "sec22_donor": "02February_2010_Tuesday_tagesschau-7951",
+  "identified_original_donor": "22November_2009_Sunday_tagesschau-5482",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "25November_2010_Thursday_tagesschau-2528",
+  "original_hypothesis": "vorsicht wegen straßenglätte .",
+  "sec22_hypothesis": "vorsicht wegen glätte .",
+  "sec22_donor": "23December_2010_Thursday_tagesschau-1434",
+  "identified_original_donor": "12February_2010_Friday_tagesschau-124",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "26May_2010_Wednesday_heute-7863",
+  "original_hypothesis": "liebe zuschauer guten abend .",
+  "sec22_hypothesis": "guten abend liebe zuschauer .",
+  "sec22_donor": "28April_2010_Wednesday_heute-5181",
+  "identified_original_donor": "22November_2010_Monday_heute-275",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "28February_2011_Monday_tagesschau-4988",
+  "original_hypothesis": "im norden bleibt es noch kalt .",
+  "sec22_hypothesis": "in den nächsten tagen kühlt es aber weiter ab .",
+  "sec22_donor": "18October_2010_Monday_heute-627",
+  "identified_original_donor": "07November_2010_Sunday_tagesschau-1984",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "28January_2010_Thursday_heute-2882",
+  "original_hypothesis": "guten abend liebe zuschauer .",
+  "sec22_hypothesis": "liebe zuschauer guten abend .",
+  "sec22_donor": "09August_2011_Tuesday_heute-2640",
+  "identified_original_donor": "24February_2011_Thursday_heute-6664",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "28September_2009_Monday_tagesschau-4681",
+  "original_hypothesis": "die aussichten .",
+  "sec22_hypothesis": "die aussichten das winterwetter geht ja schon los .",
+  "sec22_donor": "02October_2012_Tuesday_heute-3502",
+  "identified_original_donor": "12September_2009_Saturday_tagesschau-6597",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "28September_2010_Tuesday_heute-8343",
+  "original_hypothesis": "hallo und guten abend .",
+  "sec22_hypothesis": "guten abend liebe zuschauer .",
+  "sec22_donor": "31January_2011_Monday_heute-3040",
+  "identified_original_donor": "08April_2010_Thursday_heute-4000",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ },
+ {
+  "query_id": "31January_2011_Monday_heute-3053",
+  "original_hypothesis": "ihnen noch einen schönen abend und machen sie es gut .",
+  "sec22_hypothesis": "ihnen einen schönen abend und machen sie es gut .",
+  "sec22_donor": "30May_2011_Monday_heute-3683",
+  "identified_original_donor": "01June_2011_Wednesday_heute-955",
+  "identified_donor_excluded_by_sec22": true,
+  "identified_donor_jaccard": 1.0,
+  "same_donor": false
+ }
+]
