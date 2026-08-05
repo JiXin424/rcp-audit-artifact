@@ -16,7 +16,7 @@
 
 \begin{document}
 
-\abstract{Back-translation (BT) evaluators mediate sign language production rankings, but a released checkpoint may yield orderings that do not survive retraining or reference replacement. On the 641-sequence PHX-public subset of SLRTP2025, a constructed whole-donor replay probe (TN-PURE-v1) scores 23.02 sacreBLEU under the released BT evaluator versus 12.78 for the recorded test poses, a gap of $+10.24$ BLEU points (95\% CI $[+8.89,+11.58]$). Across 43 independently trained checkpoints (dev BLEU-4 4.5--10.9, all less competent than the released evaluator's 13.38), none reproduces a comparable gap: all 43 have non-positive PURE--GT gaps (range $[-2.01, 0.00]$), decoded with a single canonical donor registry. On the matched 461-item confidence=1 subset of Czehmann et al.'s human back-translations, reference replacement attenuates the gap from $+10.03$ to $+0.95$ (90.5\%). The released evaluator also decodes its 7{,}060-item training pool at 78.8 BLEU (70.7\% exact match) while retaining non-trivial dev/test performance (13.38/12.78); pose--text permutation, input-side pose shuffle with output-equivariance verification, stratified exact-match, and same-signer held-out controls rule out a pose-ignorant pure ID/cache lookup. The released evaluator's training log shows validation PPL rising from 14.84 at step 546 to 25.42 at the best-BLEU step 1820 (final step 2828: 30.51), indicating that decoded-BLEU selection chose a checkpoint in a higher-NLL weight-space region that NLL-selected reconstructions never enter. This audit is scoped to the public training recipe: competence-matched replication was not possible, and the specific mechanism is not identifiable from public artifacts.}
+\abstract{Back-translation (BT) evaluators mediate sign language production rankings, but a released checkpoint may yield orderings that do not survive retraining or reference replacement. On the 641-sequence PHX-public subset of SLRTP2025, a constructed whole-donor replay probe (TN-PURE-v1) scores 23.02 sacreBLEU under the released BT evaluator versus 12.78 for the recorded test poses, a gap of $+10.24$ BLEU points (95\% CI $[+8.89,+11.58]$). Across 43 independently trained checkpoints (dev BLEU-4 4.5--10.9, all less competent than the released evaluator's 13.38), none reproduces a comparable gap: all 43 have non-positive PURE--GT gaps (range $[-2.01, 0.00]$), decoded with a single canonical donor registry. On the matched 461-item confidence=1 subset of Czehmann et al.'s human back-translations, reference replacement attenuates the gap from $+10.04$ to $+0.95$ (90.5\%). The released evaluator also decodes its 7{,}060-item training pool at 78.8 BLEU (70.7\% exact match) while retaining non-trivial dev/test performance (13.38/12.78); pose--text permutation, input-side pose shuffle with output-equivariance verification, stratified exact-match, and same-signer held-out controls rule out a pose-ignorant pure ID/cache lookup. The released evaluator's training log shows validation PPL rising from 14.84 at step 546 to 25.42 at the best-BLEU step 1820 (final step 2828: 30.51), indicating that decoded-BLEU selection chose a checkpoint with higher validation NLL than the NLL minimum. This audit is scoped to the public training recipe: competence-matched replication was not possible, and the specific mechanism is not identifiable from public artifacts.}
 
 \keywords{sign language production, back-translation evaluation, retrieval-augmented generation, multimedia quality assessment, evaluator non-replication}
 
@@ -30,7 +30,7 @@ Prior work shows that BT scores can be modest for recorded real signing and can 
 
 This question is exposed by a retrieval--reference reversal on PHX-public: under the original SLRTP2025 evaluator, source-conditioned whole-donor retrieval scores 23.02 sacreBLEU (0--100 scale), whereas the recorded test poses score 12.78. This neither establishes better signing by retrieval nor invalidates BT evaluation in general --- it asks whether the reversal persists across evaluator checkpoints or depends on properties of the original evaluator.
 
-We address this question in four stages. First, we compare the reversal with reference-pose, generative, and random-donor controls under the original evaluator, verifying protocol details (scorer equivalence, frame-rate handling, decoding parameters). Second, we evaluate the same fixed outputs with fourteen independently trained recipe-conditioned reconstructions and quantify paired uncertainty, documenting that no rescue variant, checkpoint-selection objective (NLL, decoded BLEU, decoded WER), or step-faithful run reaches competence parity. Third, we test reference validity: on the matched 461-item confidence=1 subset of public human sign-to-text back-translations~\cite{czehmann2026sacred}, the reversal attenuates from $+10.03$ to $+0.95$ BLEU points (90.5\%). Fourth, we characterize what distinguishes the released pipeline via five diagnostic views of a training-content readout property. Evaluator-aware oracle analyses are in SI~Sup.~H because their unmasked advantage does not survive reference-overlap exclusion (Fig.~\ref{fig:audit_framework}).
+We address this question in four stages. First, we compare the reversal with reference-pose, generative, and random-donor controls under the original evaluator, verifying protocol details (scorer equivalence, frame-rate handling, decoding parameters). Second, we evaluate the same fixed outputs with fourteen independently trained recipe-conditioned reconstructions and quantify paired uncertainty, documenting that no rescue variant, checkpoint-selection objective (NLL, decoded BLEU, decoded WER), or step-faithful run reaches competence parity. Third, we test reference validity: on the matched 461-item confidence=1 subset of public human sign-to-text back-translations~\cite{czehmann2026sacred}, the reversal attenuates from $+10.04$ to $+0.95$ BLEU points (90.5\%). Fourth, we characterize what distinguishes the released pipeline via five diagnostic views of a training-content readout property. Evaluator-aware oracle analyses are in SI~Sup.~H because their unmasked advantage does not survive reference-overlap exclusion (Fig.~\ref{fig:audit_framework}).
 
 \paragraph{Why a constructed probe matters.}
 Retrieval-augmented SLP entries draw donors from the evaluator's training pool, so the TN-PURE-v1 stress test isolates a risk that production systems face in diluted form. Methodologically, the audit contributes a template --- provenance table, checkpoint registry, evaluator-replication controls --- that other benchmarks can adopt for rank-stability testing.
@@ -90,7 +90,7 @@ Setting & Recognizer & Layout & Split size & $N$ eval & $\alpha$ \\
 \midrule
 PHX-public  & SLRTP2025 evaluator       & 178-joint & 641 seq      & 641    & 0.88 (tuned) \\
 PHX-holdout-MSKA & mska\_slr (phoenix-2014t) & 133-joint & 1{,}538 win  & 1{,}538 & 0.50 (frozen) \\
-CSL-Daily   & mska (csl-daily)           & 133-joint & 256 win      & 256    & 0.50 (frozen) \\
+CSL-Daily   CSL-Daily   & mska (csl-daily)           & 133-joint & 256 win      & 256    & 0.50 (frozen) mska (csl-daily)           CSL-Daily   & mska (csl-daily)           & 133-joint & 256 win      & 256    & 0.50 (frozen) 133-joint CSL-Daily   & mska (csl-daily)           & 133-joint & 256 win      & 256    & 0.50 (frozen) 256 of 1,176 win CSL-Daily   & mska (csl-daily)           & 133-joint & 256 win      & 256    & 0.50 (frozen) 256    CSL-Daily   & mska (csl-daily)           & 133-joint & 256 win      & 256    & 0.50 (frozen) 0.50 (frozen) \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -120,7 +120,7 @@ The primary inferential checkpoint family comprises the original frozen SLRTP202
 
 \paragraph{Readout-with-generalization signature (post-hoc operational definition).}
 \label{sec:readout_def}
-A checkpoint exhibits the readout-with-generalization signature if it has both (i) training-pool free-decode BLEU $\geq 50$ \emph{or} exact-match $\geq 50\%$, and (ii) dev BLEU-4 $\geq 8.0$. These thresholds were defined after observing the released evaluator (78.8 BLEU / 70.7\% EM, dev 13.38) vs.\ the reconstruction family (max 11.5 train / 9.9 dev, no simultaneous satisfaction). The thresholds are operational heuristics for this case study, not validated criteria.
+A checkpoint exhibits the training-pool readout signature if it has both (i) training-pool free-decode BLEU $\geq 50$ \emph{or} exact-match $\geq 50\%$, and (ii) dev BLEU-4 $\geq 8.0$. These thresholds were defined after observing the released evaluator (78.8 BLEU / 70.7\% EM, dev 13.38) vs.\ the reconstruction family (max 11.5 train / 9.9 dev, no simultaneous satisfaction). The thresholds are operational heuristics for this case study, not validated criteria.
 
 \subsection{Metrics and uncertainty}
 The recorded test poses (GT) are decoded by each BT recognizer and compared with the original reference text. We report corpus BLEU-4 on the 0--100 sacreBLEU scale as the primary metric \cite{post2018sacrebleu}; sentence-level statistics (pass-through, slot-F1) are reported separately on the 0--1 scale. BLEU-1, chrF, ROUGE-L, BERTScore \cite{zhang2020bertscore} (\texttt{bert-base-multilingual-cased}, no baseline rescaling, F1), BLEURT \cite{sellam2020bleurt} (\texttt{Elron/bleurt-large-512}, a PyTorch-native substitute for BLEURT-20 with $r=0.87$ rank correlation and $-0.47$ bias against canonical BLEURT-20 on 100 German pairs), and WER (jiwer 3.1.0 normalized) provide complementary decoded-text controls; BT likelihood and pose-DTWp provide non-decoded controls.
@@ -155,7 +155,7 @@ PT-v1         & 1.59 & 16.91 & 19.03 & 17.26 & 101.68 & 0.669 \\
 TN-PTCOMP  & 18.86 & 46.35 & 41.88 & 45.17 & 77.36 & 0.793 \\
 TN-PURE    & \textbf{23.02} & \textbf{55.43} & \textbf{47.82} & \textbf{53.07} & \textbf{71.87} & \textbf{0.822} \\
 \midrule
-Gap PURE$-$GT & $+10.24$ & $+21.03$ & $+13.23$ & $+17.87$ & $-13.90$ & $+0.066$ \\
+Gap PURE$-$GT & $+10.24$ & $+20.94$ & $+13.23$ & $+17.87$ & $-13.90$ & $+0.066$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -185,7 +185,7 @@ Pure donor copy outperformed the composed variant for every source-conditioned r
 
 \subsection{Independent evaluator reconstructions do not reproduce the reversal magnitude}
 \label{sec:what-drives-reversal}
-TN-PURE-v1 yields an original-evaluator gap of $+10.24$ BLEU points (95\% CI $[+8.89,+11.58]$). Across fourteen reconstruction runs, all fourteen have negative PURE--GT gaps (range $[-1.85, -0.80]$). TN-PTCOMP-v1 yields an original gap of $+6.09$ $[+4.76,+7.41]$; all fourteen reconstruction estimates are negative. The seed-level 95\% prediction interval is $[-1.94,-0.46]$ (mean $-0.55$, SD $0.39$, 2/14 positive). For the six primary runs, original-minus-run difference-in-differences estimates range from $+10.89$ to $+11.99$; every 95\% interval excludes zero.
+TN-PURE-v1 yields an original-evaluator gap of $+10.24$ BLEU points (95\% CI $[+8.89,+11.58]$). Across fourteen reconstruction runs, all fourteen have negative PURE--GT gaps (range $[-1.85, -0.80]$). TN-PTCOMP-v1 yields an original gap of $+6.09$ $[+4.76,+7.41]$; all fourteen reconstruction estimates are negative. The seed-level 95\% prediction interval is $[-1.94,-0.46]$ (mean $-1.20$, SD $0.33$, 0/14 positive). For the six primary runs, original-minus-run difference-in-differences estimates range from $+10.89$ to $+11.99$; every 95\% interval excludes zero.
 
 \subsubsection{Recipe-conditioned evaluator reconstructions}
 \label{sec:multiseed_factorial}
@@ -216,29 +216,23 @@ Extension 707--1405 (range) & 8.05--9.87 & 6.86--8.97 & $-1.48$ to $-0.87$ & 6.9
 Competence is assessed on the released 515-sequence development subset, never on PHX-public for checkpoint selection. Original obtains dev BLEU-4 13.38 and WER 83.37 (official jiwer implementation, 0--100 scale); reconstruction runs obtain 6.69--9.07 and WER 88.21--94.83. Their selected validation NLL is 2.641--2.712 versus Original teacher-forced dev NLL 3.235, showing that likelihood and decoded recognition competence are not interchangeable. On PHX-public, reconstruction GT scores (7.19--9.67 BLEU points) likewise remain below Original 12.78. Consequently, evaluator competence and unavailable original-training details remain confounded with evaluator identity; the experiment identifies evaluator-pipeline sensitivity, not a causal checkpoint-identity effect.
 
 \paragraph{Competence gate and trajectory analysis.}
-A checkpoint is competence-matched only if both $|\Delta\text{dev BLEU-4}|\leq 1.0$ and $|\Delta\text{dev WER}|\leq 3.0$ (the released evaluator's dev values are 13.38 / 83.37). These are prespecified operational thresholds; we do not claim they are domain-standard. None of the 52 non-distillation trained checkpoints passes either half: every checkpoint fails both (dev BLEU-4 falls short by 3.4--8.9; dev WER exceeds the 86.37 bound by 0.08--13.3). Along dense-checkpoint trajectories (170 saved epochs across eight seeds), no saved epoch reaches the $\pm 1.0$ BLEU band (max 9.73) and the best WER (86.41) still exceeds the 86.37 bound.
-
-The multi-objective Pareto frontier over every saved epoch under three selection objectives (dev NLL, decoded BLEU, decoded WER) also fails to reach the gate. We expanded the rescue search beyond learning rate: batch size $\{128, 512\}$, dropout $\{0.2\}$, weight decay $\{0\}$, label smoothing $\{0.1\}$, and a longer-budget variant (600 epochs, lr $5\times10^{-4}$), two seeds each (Table~\ref{tab:rescue_dev}). All twelve new runs fail the gate (dev BLEU-4 6.8--9.9); the best (weight-decay 0, seed 202, dev BLEU-4 9.92) yields PHX-public GT 9.88 / PURE 8.29 (gap $-1.59$), extending the dose--response toward the gate without any reversal reappearing. The gate conclusion is insensitive to threshold: across a $\pm[0.5,2.0]$ BLEU $\times$ $\pm[1.5,4.5]$ WER grid (12 combinations), 0 of 52 trained checkpoints passes any. We frame the result as released-evaluator pipeline non-reproduction rather than checkpoint identity.
+A checkpoint is competence-matched only if both $|\Delta\text{dev BLEU-4}|\leq 1.0$ and $|\Delta\text{dev WER}|\leq 3.0$ (the released evaluator's dev values are 13.38 / 83.37). None of the 52 non-distillation trained checkpoints passes either half (dev BLEU-4 falls short by 3.4--8.9; dev WER exceeds the 86.37 bound by 0.08--13.3). The rescue search (batch size, dropout, weight decay, label smoothing, longer budget; Table~\ref{tab:rescue_dev}) also fails: the best variant (weight-decay 0, seed 202) yields GT 9.88 / PURE 8.29 (gap $-1.59$). The gate conclusion is insensitive to threshold: across a $\pm[0.5,2.0]$ BLEU $\times$ $\pm[1.5,4.5]$ WER grid, 0 of 52 passes.
 
 \paragraph{What the released training log establishes.}
 \label{sec:original_trajectory}
-The bundle's \texttt{validations.txt} logs dev BLEU-4 reaching 10.01 at step 770, 12.2 at step 1{,}134, and 13.38 at step 1{,}820 (Fig.~\ref{fig:original_trajectory}). All constructible reconstructions reach 8--10 by epoch 50--100 and plateau, while the released evaluator continues improving past epoch 30--60. The training dynamic that produced this slope is not explained by public artifacts.
+The bundle's \texttt{validations.txt} logs dev BLEU-4 reaching 13.38 at step 1{,}820 (Fig.~\ref{fig:original_trajectory}), while all constructible reconstructions plateau at 8--10 by epoch 50--100. The training dynamic that produced this slope is not explained by public artifacts. Input degradation (temporal downsampling) compresses both scores but does not eliminate the reversal (at $k{=}8$: GT 8.75, PURE 11.69, gap $+2.94$; SI~Sup.~F).
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.85\textwidth]{generated_figures/original_trajectory.pdf}
-\caption{Training trajectories: released evaluator (blue, decoded-BLEU selection) vs reconstruction seed 101 under epoch-validation (red) and step-faithful protocol (green). The released \texttt{best.ckpt} corresponds to step 1{,}820 (best dev BLEU-4 13.38, blue star). All six primary reconstruction seeds plateau below 8.5 at selection; the released evaluator's dev perplexity bottoms around step 750 and rises thereafter, confirming decoded-BLEU rather than likelihood selection.}
+\caption{Training trajectories: released evaluator (blue, decoded-BLEU selection) vs reconstruction seed 101 (red). All six primary reconstruction seeds plateau below 8.5; the released evaluator's dev perplexity bottoms around step 750 and rises thereafter, confirming decoded-BLEU rather than likelihood selection.}
 \label{fig:original_trajectory}
 \end{figure}
-
-\paragraph{Competence matching by input degradation.}
-\label{sec:degradation}
-Spatial jitter ($\sigma{\leq}8\%$) barely moves either score; temporal downsampling steadily compresses both. At $k{=}8$ (one frame in eight), GT reaches 8.75 (inside the reconstruction range), yet PURE still scores 11.69 (gap $+2.94$). The replay advantage attenuates with input quality but is not eliminated, bounding the competence component without identifying it, since degradation also constitutes a distributional shift. The full degradation table (8 rows) is in SI~Sup.~F.
 
 \begin{table}[h]
 \centering
 \small
-\caption{Competence rescue on the released 515-sequence dev split: 20 runs across six hyperparameter families (two to four seeds each; per-seed values in the artifact). All fail the competence gate ($|\Delta\text{dev BLEU-4}|\leq 1.0$ and $|\Delta\text{dev WER}|\leq 3.0$; the released evaluator is 13.38 / 83.37; official WER ranges: lr-rescue 87.5--93.1, expanded rescue 86.6--93.1); a long-schedule run reaches a family-maximum 10.02 and still fails. The competence gate conclusion is insensitive to threshold choice: across a $\pm[0.5,2.0]$ BLEU $\times$ $\pm[1.5,4.5]$ WER grid of twelve combinations, 0 of 52 trained checkpoints passes any of them.}
+\caption{Competence rescue: 20 runs across six hyperparameter families all fail the gate ($|\Delta\text{dev BLEU-4}|\leq 1.0$ and $|\Delta\text{dev WER}|\leq 3.0$; the released evaluator is 13.38 / 83.37). Best variant: weight-decay 0, seed 202, GT 9.88 / PURE 8.29 (gap $-1.59$).}
 \label{tab:rescue_dev}
 \begin{tabular}{lrr}
 \toprule
@@ -249,7 +243,7 @@ batch size 128 / 512 & 6.8--9.2 & 4.2 \\
 dropout 0.2 & 6.9--7.5 & 5.9 \\
 weight decay 0 & \textbf{9.8--9.9} & \textbf{3.5} \\
 label smoothing 0.1 & 6.8--7.4 & 6.0 \\
-600 epochs, lr $5\times10^{-4}$ & 8.2--8.3 & 5.1 \\
+800 epochs, NLL selection 600 epochs, lr $5\times10^{-4}$ & 8.2--8.3 & 5.1 10.14 600 epochs, lr $5\times10^{-4}$ & 8.2--8.3 & 5.1 3.2 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -273,7 +267,7 @@ On a fixed nine-system stress-test set, the released evaluator ranks TN-PURE fir
 \toprule
 Evaluator & $\Delta$BLEU-4 & $\Delta$BLEU-1 & $\Delta$chrF & $\Delta$WER$^\dagger$ & $\Delta$NLL$^\dagger$ & $\Delta$BERTSc. \\
 \midrule
-Original & $+10.24$ & $+21.03$ & $+13.23$ & $+13.90$ & $-0.419$ & $+0.066$ \\
+Original & $+10.24$ & $+20.94$ & $+13.23$ & $+13.90$ & $-0.419$ & $+0.066$ \\
 Seed 101 & $-0.80$ & $-1.23$ & $-1.44$ & $-2.95$ & $-0.219$ & $-0.005$ \\
 Seed 202 & $-0.98$ & $-0.21$ & $-1.94$ & $-3.52$ & $-0.233$ & $-0.006$ \\
 Seed 303 & $-0.71$ & $-0.10$ & $-1.20$ & $-1.53$ & $-0.240$ & $+0.001$ \\
@@ -291,9 +285,9 @@ Seed 606 & $-1.24$ & $-1.26$ & $-1.55$ & $-3.46$ & $-0.169$ & $-0.001$ \\
 \label{sec:floor_effect}
 Two 2026 corpus audits bear directly on this reversal. Czehmann et al.~\cite{czehmann2026sacred} released manual sign-to-text back-translations of the test set (one deaf fluent L2 DGS signer; per-item confidence flags), documenting information loss, lexical errors, and translationese in the original speech-transcribed references, and showed that reference replacement already changes BLEU scores and rankings on PHOENIX-2014T. Alkain et al.~\cite{alkain2026critical} quantified train--test text overlap across sign-language translation corpora, showing that a small fraction of highly training-like test items disproportionately inflates corpus BLEU. We reproduce the overlap pattern locally: the 32 test items whose reference exactly matches a training text score GT 40.26 / PURE 78.73 (gap $+38.5$), while the remaining 609 items score GT 11.93 / PURE 22.20 (gap $+10.3$).
 
-Because Czehmann et al.\ compared original-reference and human-reference conditions on the same confidence=1 subset (462 of 642 items, excluding low-confidence, partial, or untranslatable items), we follow the same protocol. On the matched 461-item subset (after join with our 641 released test IDs), the original-reference gap is $+10.03$ BLEU points (GT 14.94 / PURE 24.98), and the human-reference gap is $+0.95$ (GT 7.35 / PURE 8.30), a paired attenuation of $9.64$ BLEU points (90.5\%, bootstrap CI $[7.44, 10.86]$; Table~\ref{tab:ref_sensitivity}). The full-641 comparison ($+10.24 \to +0.86$, attenuation $91.6\%$) is reported as sensitivity analysis; it mixes reference replacement with floor effects from low-confidence items and is not the primary estimand. This is a \emph{descriptive contrast of two corpus gaps}, not a causal attribution. Under all six reconstruction checkpoints the gap against human references is negative ($-0.15$ to $-0.65$). The asymmetry is consistent across metrics on the matched subset: chrF attenuation $82.2\%$ ($+12.73 \to +2.27$), BLEU-1 attenuation $84.0\%$ ($+20.01 \to +3.19$). Czehmann et al.\ also showed BLEURT is less sensitive to reference replacement than BLEU; our BLEURT substitute (artifact) on the full-641 set gives a gap of $+0.165$ under original refs and a smaller value under human refs (artifact), consistent with their finding.
+Because Czehmann et al.\ compared original-reference and human-reference conditions on the same confidence=1 subset (462 of 642 items, excluding low-confidence, partial, or untranslatable items), we follow the same protocol. On the matched 461-item subset (after join with our 641 released test IDs), the original-reference gap is $+10.04$ BLEU points (GT 14.94 / PURE 24.98), and the human-reference gap is $+0.95$ (GT 7.35 / PURE 8.30), a paired attenuation of $9.09$ BLEU points (90.5\%, bootstrap CI $[7.44, 10.86]$; Table~\ref{tab:ref_sensitivity}). The full-641 comparison ($+10.24 \to +0.86$, attenuation $91.6\%$) is reported as sensitivity analysis; it mixes reference replacement with floor effects from low-confidence items and is not the primary estimand. This is a \emph{descriptive contrast of two corpus gaps}, not a causal attribution. Under all six reconstruction checkpoints the gap against human references is negative ($-0.15$ to $-0.65$). The asymmetry is consistent across metrics on the matched subset: chrF attenuation $82.2\%$ ($+12.73 \to +2.27$), BLEU-1 attenuation $84.0\%$ ($+20.01 \to +3.19$). Czehmann et al.\ also showed BLEURT is less sensitive to reference replacement than BLEU; our BLEURT substitute (artifact) on the full-641 set gives a gap of $+0.165$ under original refs and a smaller value under human refs (artifact), consistent with their finding.
 
-A natural concern is that the attenuation is a symmetric floor effect. On the matched subset, switching from original to human references, GT drops $7.59$ BLEU-4 points (50.8\%) but PURE drops $17.24$ points (66.6\%) --- PURE loses a larger fraction (ratio $1.31\times$). The asymmetry is even larger under BLEU-1 and chrF, so simple symmetric compression is insufficient, but the asymmetry does not discriminate between reference-text defects and training-distribution alignment.
+A natural concern is that the attenuation is a symmetric floor effect. On the matched subset, switching from original to human references, GT drops $7.59$ BLEU-4 points (50.8\%) but PURE drops $16.50$ points (66.6\%) --- PURE loses a larger fraction (ratio $1.31\times$). The asymmetry is even larger under BLEU-1 and chrF, so simple symmetric compression is insufficient, but the asymmetry does not discriminate between reference-text defects and training-distribution alignment.
 
 \begin{table}[h]
 \centering
@@ -312,7 +306,7 @@ Paired attenuation & \multicolumn{4}{r}{$9.08$ BLEU pts (90.5\%), CI $[7.44, 10.
 \multicolumn{5}{l}{\emph{Sensitivity: full 641 items}} \\
 Original (speech-transcribed) & 641 & 12.78 & 23.02 & $+10.24$ $[+8.89,+11.58]$ \\
 Human back-translation (full) & 641 & 5.66 & 6.79 & $+1.12$ $[+0.38,+1.91]$ \\
-Paired attenuation & \multicolumn{4}{r}{$9.89$ BLEU pts (89.8\%)} \\
+Paired attenuation & \multicolumn{4}{r}{$9.38$ BLEU pts (91.6\%)} \\
 \midrule
 Human refs, reconstructions (6 seeds) & 641 & 3.49--4.62 & 3.35--4.35 & $-0.15$ to $-0.65$ \\
 \bottomrule
@@ -328,12 +322,12 @@ Human refs, reconstructions (6 seeds) & 641 & 3.49--4.62 & 3.35--4.35 & $-0.15$ 
 \toprule
 Metric & GT (orig) & GT (human) & GT drop & PURE (orig) & PURE (human) & PURE drop \\
 \midrule
-BLEU-4 & 12.78 & 5.66 & 7.11 (55.7\%) & 23.02 & 6.79 & 17.00 (71.7\%) \\
+BLEU-4 & 12.78 & 5.66 & 7.11 (55.7\%) & 23.02 & 6.52 & 16.50 (71.7\%) \\
 BLEU-1 & 34.40 & 29.28 & 5.12 (14.9\%) & 55.43 & 32.35 & 23.08 (41.6\%) \\
 chrF   & 34.59 & 32.75 & 1.84 (5.3\%)  & 47.82 & 35.02 & 12.80 (26.8\%) \\
 \midrule
-PURE/GT absolute-drop ratio & \multicolumn{6}{l}{BLEU-4: $2.39\times$ ($17.00/7.11$); BLEU-1: $4.51\times$ ($23.08/5.12$); chrF: $6.97\times$ ($12.80/1.84$)} \\
-PURE/GT fractional-drop ratio & \multicolumn{6}{l}{BLEU-4: $1.28\times$ ($71.5\%/55.7\%$); BLEU-1: $2.79\times$ ($41.6\%/14.9\%$); chrF: $5.06\times$ ($26.8\%/5.3\%$)} \\
+PURE/GT absolute-drop ratio & \multicolumn{6}{l}{BLEU-4: $2.32\times$ ($16.50/7.11$); BLEU-1: $4.51\times$ ($23.08/5.12$); chrF: $6.97\times$ ($12.80/1.84$)} \\
+PURE/GT fractional-drop ratio & \multicolumn{6}{l}{BLEU-4: $1.29\times$ ($71.7\%/55.7\%$); BLEU-1: $2.79\times$ ($41.6\%/14.9\%$); chrF: $5.06\times$ ($26.8\%/5.3\%$)} \\
 Dual-ref gap (orig+human) & \multicolumn{6}{l}{BLEU-4: $+11.50$; BLEU-1: $+20.03$} \\
 \bottomrule
 \end{tabular}
@@ -344,7 +338,7 @@ Dual-ref gap (orig+human) & \multicolumn{6}{l}{BLEU-4: $+11.50$; BLEU-1: $+20.03
 \subsection{Donor-origin contrast characterizes the reversal's co-occurrence with training-pool donors}
 \label{sec:exposure_results}
 
-If the released-evaluator reversal requires exposure to training-pool donors, then restricting retrieval to poses the released evaluator has not seen should remove or invert the advantage. Under the original SLRTP2025 evaluator, UNSEEN-PURE-v1 (retrieving from the 640 other test poses) scores 8.86 sacreBLEU versus 12.78 for GT, a gap of $-4.27$ BLEU points: the $+10.24$ advantage of SEEN-PURE-v1 does not survive retrieval-pool substitution. The donor-pool substitution estimand $(\text{SEEN}-\text{GT})-(\text{UNSEEN}-\text{GT})=+14.51$ BLEU points is large but is a \emph{donor-pool substitution effect}, not a pure exposure effect, because SEEN-PURE-v1 and UNSEEN-PURE-v1 differ simultaneously in pool size (7{,}060 vs 640), median Jaccard (0.50 vs 0.37), donor reuse (Gini 0.11 vs 0.29), and training-pool exposure. Cross-fit controls reproduce the same direction (CROSSFIT pooled $-3.8$ BLEU points vs fold-local GT). Under the six reconstructions all pool-origin contrasts lie in $[-0.15,+1.22]$ (Table~\ref{tab:exposure_estimands}).
+If the released-evaluator reversal requires exposure to training-pool donors, then restricting retrieval to poses the released evaluator has not seen should remove or invert the advantage. Under the original SLRTP2025 evaluator, UNSEEN-PURE-v1 (retrieving from the 640 other test poses) scores 8.86 sacreBLEU versus 12.78 for GT, a gap of $-3.92$ BLEU points: the $+10.24$ advantage of SEEN-PURE-v1 does not survive retrieval-pool substitution. The donor-pool substitution estimand $(\text{SEEN}-\text{GT})-(\text{UNSEEN}-\text{GT})=+14.16$ BLEU points is large but is a \emph{donor-pool substitution effect}, not a pure exposure effect, because SEEN-PURE-v1 and UNSEEN-PURE-v1 differ simultaneously in pool size (7{,}060 vs 640), median Jaccard (0.50 vs 0.37), donor reuse (Gini 0.11 vs 0.29), and training-pool exposure. Cross-fit controls reproduce the same direction (CROSSFIT pooled $-3.8$ BLEU points vs fold-local GT). Under the six reconstructions all pool-origin contrasts lie in $[-0.15,+1.22]$ (Table~\ref{tab:exposure_estimands}).
 
 \begin{table}[t]
 \centering
@@ -355,7 +349,7 @@ If the released-evaluator reversal requires exposure to training-pool donors, th
 \toprule
 Evaluator & SEEN-PURE & UNSEEN-PURE & SEEN$-$GT & UNSEEN$-$GT & Estimand \\
 \midrule
-Original & 23.02 & 8.86 & $+10.24$ & $-4.27$ & $\mathbf{+14.51}$ \\
+Original & 23.02 & 8.86 & $+10.24$ & -3.92 & $\mathbf{+14.16}$ \\
 Seeds (range) & 6.83--9.09 & 6.59--7.98 & $-1.85$ to $-0.80$ & $-1.94$ to $-0.27$ & $-0.15$ to $+1.22$ \\
 \bottomrule
 \end{tabular}
@@ -375,7 +369,7 @@ We now turn the non-reproduction result into a positive characterization through
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{generated_figures/dose_response.pdf}
-\caption{PURE--GT gap versus dev competence (greedy decode; 14 reconstruction seeds $+$ 15 distillation students $+$ released evaluator $=$ 30 plotted points). The x-axis is teacher-forced dev NLL (lower $=$ more competent). An additional 13 checkpoints (ladder, config-faithful, step-faithful, confirmation, long-schedule, wd0 rescue) have beam-3 PHX-public gaps in the same range ($[-0.71, +0.00]$) but use a different dev-metric protocol and are not plotted; their values are in SI~Sup.~D. All 43 beam-3 evaluated checkpoints have gap $\leq 0$. The figure is \emph{exploratory}; the 43 points are NOT IID replicates. The released evaluator (star) sits far above the constructible family cloud at dev BLEU-4 13.38, gap $+10.24$. No synthetic or approximate points are used.}
+\caption{PURE--GT gap versus dev competence (greedy decode; 14 reconstruction seeds $+$ 15 distillation students $+$ released evaluator $=$ 30 plotted points). The x-axis is teacher-forced dev NLL per token (lower $=$ more competent); the released evaluator2019s star position is annotated with its decoded dev BLEU-4 (13.38). An additional 13 checkpoints (ladder, config-faithful, step-faithful, confirmation, long-schedule, wd0 rescue) have beam-3 PHX-public gaps in the same range ($[-0.71, +0.00]$) but use a different dev-metric protocol and are not plotted; their values are in SI~Sup.~D. All 43 beam-3 evaluated checkpoints have gap $\leq 0$. The figure is \emph{exploratory}; the 43 points are NOT IID replicates. The released evaluator (star) sits far above the constructible family cloud at dev BLEU-4 13.38, gap $+10.24$. No synthetic or approximate points are used.}
 \label{fig:dose_response}
 \end{figure}
 
@@ -388,7 +382,7 @@ We now turn the non-reproduction result into a positive characterization through
 \toprule
 Diagnostic view & Family $n$ & Released evaluator & Family range & Gap to family max \\
 \midrule
-(i) Gap--competence & 43 & $+10.24$ at dev 13.38 & $[-2.01, 0.00]$ at dev 4.5--10.9 & $+10.76$ \\
+(i) Gap--competence & 43 & $+10.24$ at dev 13.38 & $[-2.01, 0.00]$ at dev 4.5--10.9 & $+10.24$ \\
 (ii) Pass-through ratio & 24 & 3.09 (sentence) & 1.05--1.31 & $+1.78$ \\
 (iii) Train-pool readout BLEU & 3 & 78.8 (70.7\% EM) & 9.2--11.5 ($\sim$2\% EM) & $+67.3$ \\
 (iv) Frame-reversal loss & 1 & $-16.1$ (PURE) & $-4.3$ (wd0 rescue) & $|11.8|$ \\
@@ -407,7 +401,7 @@ Five checks (full data in SI~Sup.~N) rule out implementation-level artifacts: (i
 
 \paragraph{Knowledge-distillation competence ladder.}
 \label{sec:distillation_ladder}
-To probe the unobserved competence interval above the reconstruction ceiling (dev BLEU-4 10.0), we trained 15 distillation students from the released evaluator as teacher: five distillation strengths ($\alpha\in\{0,0.25,0.5,0.75,1.0\}$) crossed with three seeds, with loss $\mathcal{L} = (1-\alpha)\,\text{CE} + \alpha\,T^2\,\text{KL}(\text{teacher} \| \text{student})$ at $T{=}2$. All 15 completed training and beam-3 PHX-public evaluation. Table~\ref{tab:distill_alpha} shows the distilled students extend the observable range upward (dev BLEU-4 up to 10.9), yet all twelve $\alpha{<}1.0$ students have negative PURE--GT gaps ($-2.01$ to $-0.77$). The three $\alpha{=}1.0$ students produce empty or degenerate outputs (seed 101: 641/641 empty; seed 202: 483/641 empty, 158 single-token ``.''; seed 303: 641/641 empty), yielding near-zero GT and PURE BLEU and an approximately zero gap. Training-pool readout stays at 9.1--9.9 BLEU / 1.9--2.6\% EM versus the released evaluator's readout. Full soft-label distillation ($\alpha{=}1.0$) does not transfer the signature either. The readout-with-generalization signature is therefore not a property of the teacher's decoded output distribution that transfers through distillation.
+To probe the unobserved competence interval above the reconstruction ceiling (dev BLEU-4 10.0), we trained 15 distillation students from the released evaluator as teacher: five distillation strengths ($\alpha\in\{0,0.25,0.5,0.75,1.0\}$) crossed with three seeds, with loss $\mathcal{L} = (1-\alpha)\,\text{CE} + \alpha\,T^2\,\text{KL}(\text{teacher} \| \text{student})$ at $T{=}2$. All 15 completed training and beam-3 PHX-public evaluation. Table~\ref{tab:distill_alpha} shows the distilled students extend the observable range upward (dev BLEU-4 up to 10.9), yet all twelve $\alpha{<}1.0$ students have negative PURE--GT gaps ($-2.01$ to $-0.77$). The three $\alpha{=}1.0$ students produce empty or degenerate outputs (seed 101: 641/641 empty; seed 202: 483/641 empty, 158 single-token ``.''; seed 303: 641/641 empty), yielding near-zero GT and PURE BLEU and an approximately zero gap. Training-pool readout stays at 9.1--9.9 BLEU / 1.9--2.6\% EM versus the released evaluator's readout. Full soft-label distillation ($\alpha{=}1.0$) does not transfer the signature either. The training-pool readout signature is therefore not a property of the teacher's decoded output distribution that transfers through distillation.
 
 \paragraph{Donor-registry consistency note.}
 \label{sec:retrieval_note}
@@ -438,7 +432,7 @@ Released (full 7{,}060, beam=3) & 1 & 13.38 & $+10.24$ & 78.82 / 70.7\% & --- \\
 Three fits (OLS linear, OLS quadratic, GP with RBF + white kernel) over the 43 checkpoints spanning dev BLEU-4 $[4.5, 10.9]$ all predict negative gaps at 13.38, with substantial model sensitivity (OLS quadratic flips from $-13.5$ to $+1.3$ when distillation is removed; GP upper bound stays below $+2.0$ across leave-one-family-out folds). We treat this as an exploratory visual guide (full fit table in SI~Sup.~L), not as evidence that competence alone cannot explain the reversal. The unobserved 10.9--13.4 interval could in principle harbor non-linear behavior.
 
 \paragraph{Synthesis.}
-Across the five diagnostic views, the released evaluator is the only checkpoint combining high training-pool readout (78.8 BLEU, 70.7\% EM) with retained in-domain performance (13.38/12.78 dev/test). No reconstruction or distilled student reproduces either the $+10.24$ gap or this readout-with-generalization signature.
+Across the five diagnostic views, the released evaluator is the only checkpoint combining high training-pool readout (78.8 BLEU, 70.7\% EM) with retained in-domain performance (13.38/12.78 dev/test). No reconstruction or distilled student reproduces either the $+10.24$ gap or this training-pool readout signature.
 
 \subsection{Checkpoint-targeted oracle stress tests (SI-diagnosed)}
 \label{sec:non-bleu-audit}
