@@ -284,11 +284,11 @@
   },
   {
    "path": "paper/main_lre.pdf",
-   "sha256": "63b4b65cbe671d3f230431befe3a38a4642d4afb97b129d4c243b09538f35ba4"
+   "sha256": "0c2cbb71dc23d35419fab9785192a0a0a0810a524ba6cf8d9b3af6a005315ade"
   },
   {
    "path": "paper/main_lre.tex",
-   "sha256": "17f4f62c1e8cd13b0a5501f02132e51b837568de811859e8ba34e649ea881596"
+   "sha256": "b26869d75c16365a22a8f16e3352ee323a660e28fc3258010e6b3f3ba720bf37"
   },
   {
    "path": "paper/references.bib",
@@ -1750,6 +1750,5 @@
    "path": "tests/test_checkpoint_gt_alignment.py",
    "sha256": "4fa33254be5119dadd5852ec13d6105272091ab21ca791e7442a4e7f0b874ae3"
   }
- ],
- "self_hash_note": "excluded from list"
+ ]
 }

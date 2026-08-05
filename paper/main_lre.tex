@@ -16,7 +16,7 @@
 
 \begin{document}
 
-\abstract{Back-translation (BT) evaluators mediate sign language production rankings, but a released checkpoint may yield orderings that do not survive retraining or reference replacement. On the 641-sequence PHX-public subset of SLRTP2025, a constructed whole-donor replay probe (TN-PURE-v1) scores 23.02 sacreBLEU under the released BT evaluator versus 12.78 for the recorded test poses, a gap of $+10.24$ BLEU points (95\% CI $[+8.89,+11.58]$). Across 43 independently trained checkpoints spanning dev BLEU-4 4.5--10.9 (all less competent than the released evaluator's 13.38), none reproduces a comparable gap: all 43 have non-positive PURE--GT gaps (range $[-2.01, 0.00]$), decoded with a single canonical donor registry implementing the exact-normalized-text exclusion specified in \S\ref{sec:retrieval}. This non-reproduction holds under a competence confound (the 14 same-recipe reconstruction seeds yield a Student-$t$ prediction interval of $[-1.94, -0.46]$ BLEU points), so the unobserved 10.9--13.4 interval could in principle harbor non-linear behavior; because Saunders et al.\ limited their rank-stability claim to similar model configurations, this audit is a stress case on a released checkpoint, not a strong counter-disproof of that claim. On the matched 461-item confidence=1 subset of Czehmann et al.'s human back-translations, replacing the speech-transcribed references attenuates the gap from $+10.03$ to $+0.95$ (90.5\%, paired bootstrap CI $[7.44, 10.86]$). The released evaluator also decodes its 7{,}060-item training pool at 78.8 BLEU (70.7\% exact match) while retaining non-trivial in-domain dev/test performance (13.38/12.78); pose--text permutation collapses train-pool BLEU from 78.6 to $\sim$1.0; an input-side test that shuffles pose tensors before decoding (holding IDs fixed) similarly collapses BLEU to $\sim$1.0, and output-equivariance verification confirms $E(\text{pose}_j, \text{slot}_i) = E(\text{pose}_j, \text{slot}_j)$ for 100/100 items, ruling out a pose-ignorant pure ID/cache lookup; and test-split poses from the same signers score only 12.2 BLEU (3.2\% EM). This post-hoc operational signature is not exhibited by any constructible reconstruction or distilled student. The released evaluator's training log shows its validation PPL rising from 14.84 to 30.5 while decoded BLEU continued to improve (step 546--2828), indicating that decoded-BLEU selection drove it into a high-NLL weight-space region that NLL-selected reconstructions never enter. The evidence is consistent with the anomaly being a property of the released checkpoint and its (partly undocumented) data pipeline as far as observable on PHX-public; the specific mechanism is not identifiable from public artifacts.}
+\abstract{Back-translation (BT) evaluators mediate sign language production rankings, but a released checkpoint may yield orderings that do not survive retraining or reference replacement. On the 641-sequence PHX-public subset of SLRTP2025, a constructed whole-donor replay probe (TN-PURE-v1) scores 23.02 sacreBLEU under the released BT evaluator versus 12.78 for the recorded test poses, a gap of $+10.24$ BLEU points (95\% CI $[+8.89,+11.58]$). Across 43 independently trained checkpoints (dev BLEU-4 4.5--10.9, all less competent than the released evaluator's 13.38), none reproduces a comparable gap: all 43 have non-positive PURE--GT gaps (range $[-2.01, 0.00]$), decoded with a single canonical donor registry. On the matched 461-item confidence=1 subset of Czehmann et al.'s human back-translations, reference replacement attenuates the gap from $+10.03$ to $+0.95$ (90.5\%). The released evaluator also decodes its 7{,}060-item training pool at 78.8 BLEU (70.7\% exact match) while retaining non-trivial dev/test performance (13.38/12.78); pose--text permutation, input-side pose shuffle with output-equivariance verification, stratified exact-match, and same-signer held-out controls rule out a pose-ignorant pure ID/cache lookup. The released evaluator's training log shows validation PPL rising from 14.84 to 30.5 while decoded BLEU continued to improve (step 546--2828), indicating that decoded-BLEU selection drove it into a high-NLL weight-space region that NLL-selected reconstructions never enter. This audit is scoped to the public training recipe: competence-matched replication was not possible, and the specific mechanism is not identifiable from public artifacts.}
 
 \keywords{sign language production, back-translation evaluation, retrieval-augmented generation, multimedia quality assessment, evaluator non-replication}
 
@@ -41,10 +41,6 @@ Retrieval-augmented SLP entries draw donors from the evaluator's training pool, 
 \caption{Overview of the multi-checkpoint evaluation audit. (a) A fixed set of reference-pose, generative, retrieval, and random-donor outputs is evaluated by the original SLRTP2025 BT checkpoint and fourteen independently trained recipe-conditioned reconstructions. (b) Evaluator-aware analysis: donors selected by maximizing likelihood under one checkpoint are evaluated by all seven checkpoints.}
 \label{fig:audit_framework}
 \end{figure}
-
-\paragraph{Evidence-level guide.}
-Findings are classified by evidence level: (i) \emph{direct observations} reproducible from public artifacts (PURE 23.02 vs GT 12.78; reversal is decoded-text only, with GT NLL 3.06 vs PURE 3.48); (ii) \emph{family-side negatives} that are competence-confounded (43 checkpoints, gaps $[-2.01, 0.00]$, all at dev BLEU-4 $<$ 13.38; 14 same-recipe PI $[-1.94, -0.46]$); (iii) \emph{matched-subset reference sensitivity} (human-ref substitution on 461 confidence=1 items attenuates gap by $90.5\%$, consistent with Czehmann et al.'s prior finding); (iv) \emph{post-hoc mechanism hints with input-side controls} (readout-with-generalization: 78.8 BLEU / 70.7\% EM train vs 13.38 dev; code-path audit excludes direct target-token teacher forcing; input-side pose permutation with output-equivariance verification rules out a pose-ignorant pure ID/cache lookup under the tested decoding path; SI~Sup.~N); and (v) the specific training mechanism, which is unidentifiable without organizer disclosure. Throughout, \textbf{prespecified} analyses (marked C in SI~Sup.~C) are separated from \textbf{post-hoc} analyses (marked D); the headline gap was observed exploratorily and the estimand was frozen afterwards.
-
 
 \section{Related Work}
 
@@ -345,20 +341,6 @@ Dual-ref gap (orig+human) & \multicolumn{6}{l}{BLEU-4: $+11.50$; BLEU-1: $+20.03
 {\footnotesize Absolute-drop ratio = (PURE drop in BLEU points) / (GT drop in BLEU points). Fractional-drop ratio = (PURE fractional drop \%) / (GT fractional drop \%). The qualitative conclusion (PURE loses more than GT) is the same under either ratio; the paper's text uses the fractional ratio when describing ``larger fraction'' claims (1.28$\times$ for BLEU-4) and the absolute ratio when describing ``$2.4\times$ more than GT'' statements.}
 \end{table}
 
-\paragraph{DGS human evaluation (aborted feasibility study; see SI~Sup.~J).}
-\label{sec:human_eval_feasibility}
-We conducted a blind DGS human evaluation with 30 DGS-fluent raters on 100 videos (20 PHX-public target sentences, 5 system outputs per target) as a feasibility probe. The UUID-to-system manifest and video files were lost during a host-cleanup operation, so per-system analysis is impossible and the study is treated as an aborted feasibility study, not as audit evidence. The only mapping-independent observation is that raters could distinguish semantic-adequacy levels across the 5 anonymized videos per target (top rank 4.48 vs bottom rank 1.83 on a 1--5 scale); we do not interpret the moderate inter-rater agreement ($\alpha = 0.54$) as evidence of semantic validity, because the lost manifest prevents system attribution. Per-rater response CSVs are preserved in the artifact. Full data and the permutation exploration are in SI~Sup.~J; a properly-documented re-evaluation with persistent manifest and video hashes would provide the independent semantic criterion needed. Data governance details are in the Ethical Considerations.
-
-
-\paragraph{Transcript-slot diagnostic (see SI~Sup.~K).}
-\label{sec:slot_f1}
-A rule-based German weather slot extractor computes multiset slot-F1 on the decoded hypotheses. Under the original evaluator, the replay decode attains higher slot-F1 than the reference-pose decode (0.526 vs 0.354), consistent with donor-transcript pass-through; under reconstructions the ordering flips. Extractor validation (50 references + 50 hypotheses, single auditor; P 0.97 / R 0.86) is in SI~Sup.~K; the extractor observes no spatial grammar or non-manual markers, so the slot diagnostic is not an independent semantic judgment.
-
-The seven-evaluator ranking matrix confirms the pattern on constructed probes (replay, composition, weak generation, random controls), not on representative competitive SLP systems. Decoder settings are fixed (beam 3, length penalty $-1$, max length 30; sacreBLEU \texttt{tok:13a|smooth:exp|version:2.5.1}); the canonical grid has 60 cells with empty-hypothesis rate zero throughout, and the reversal is expressed through much higher n-gram precision for PURE (P1 60.6 vs 37.0). Evaluator identity, training randomness, optimization trajectory, and competence remain confounded.
-
-\paragraph{Template-density and holdout boundary.}
-Within PHX-public, retrieval exceeded the recorded test poses even in the low-density stratum ($+10.7$ BLEU points), so template density moderates magnitude rather than gating the reversal; template-disjoint and BT-retrained holdouts and donor-familiarity cross-fitting do not reproduce it (SI~Sup.~I).
-
 \subsection{Donor-origin contrast characterizes the reversal's co-occurrence with training-pool donors}
 \label{sec:exposure_results}
 
@@ -417,22 +399,11 @@ Diagnostic view & Family $n$ & Released evaluator & Family range & Gap to family
 
 \paragraph{Readout \emph{with} generalization: the distinctive combination.}
 \label{sec:insample}
-The signature spans two conditions that usually trade off. The released evaluator decodes its full 7{,}060-item training pool at free-decode BLEU 78.8 with 70.7\% exact-match and teacher-forced top-1 accuracy 96.5\% --- strong readout --- while retaining non-trivial in-domain dev/test performance: dev/test free BLEU is 13.38/12.78 with $\approx$3\% exact match. The family separates these regimes: validation-selected checkpoints show train $\approx$ dev BLEU (11.5 $\approx$ 9.9), while overfit rescue endpoints reach 99.9 train BLEU but collapse to dev NLL 4.90. Its donor-content pass-through is a 2.4$\times$ outlier: the released evaluator decodes donor poses against the donor's \emph{own transcript} at mean sentence-BLEU 0.795 vs 0.257 against the query (ratio 3.09, 95\% CI $[2.89,3.33]$); the family stays at 1.05--1.31.
+The released evaluator decodes its full 7{,}060-item training pool at free-decode BLEU 78.8 with 70.7\% exact-match --- strong readout --- while retaining non-trivial dev/test performance (13.38/12.78). The family separates these regimes: validation-selected checkpoints show train $\approx$ dev BLEU (11.5 $\approx$ 9.9), while overfit rescue endpoints reach 99.9 train BLEU but collapse to dev NLL 4.90. Its donor-content pass-through is a 2.4$\times$ outlier (ratio 3.09 vs.\ family 1.05--1.31).
 
 \paragraph{Leakage sanity checks for the train-pool readout.}
 \label{sec:leakage_checks}
-Because the 78.8 BLEU / 70.7\% EM readout is the most anomalous finding, we ran five checks (full data in SI~Sup.~N):
-\begin{enumerate}\itemsep0pt
-\item \textbf{Code-path audit.} The \texttt{back\_translate()} function calls \texttt{model.run\_batch(translation\_beam\_size=3)} which invokes beam search; the decoder input is constructed from \texttt{<bos>} plus the model's own previously generated tokens only. The reference text enters the pipeline \emph{after} decoding for BLEU scoring, never as a model input. This excludes direct target-token teacher forcing but does not by itself exclude ID-based or cache-based side channels.
-\item \textbf{Label permutation (output--reference alignment).} Shuffling reference labels across the first 1{,}000 decoded training items collapses corpus BLEU from 78.6 to 1.06 / 1.30 / 0.90 (three permutations) and EM to $\approx$0\%. This confirms that the decoded output is aligned with its paired reference; however, because the permutation is applied \emph{after} decoding, this test alone cannot distinguish pose-conditioned output from ID-based or cache-based retrieval. A proper input-side test (shuffling pose tensors before decoding while holding IDs fixed) is needed to fully exclude those channels and is reported below.
-\item \textbf{Input-side pose permutation with output-equivariance verification.} We held item IDs and text metadata fixed, shuffled the \emph{pose tensors} across 100 training items \emph{before decoding}, and verified output equivariance: $E(\text{pose}_j, \text{slot}_i) = E(\text{pose}_j, \text{slot}_j)$ for 100/100 items (exact string match), where ``slot'' denotes the batch position and metadata context of item $i$. The permuted decode scored against slot-$i$ references gives BLEU 0.95; scored against the donor ($j$) references gives BLEU 75.62, identical to the original decode. Decoded-token output length follows the pose tensor, not the slot (100\% donor-length match, 5\% slot-length match). Three degenerate-pose controls (zero, noise, repeated pose) also collapse BLEU to $<$1. This rules out a pose-ignorant pure ID/cache lookup under the tested decoding path and confirms sensitivity to the substituted pose tensor; it does not by itself identify the training mechanism.
-\item \textbf{Stratified EM.} Exact-match rate is high across all 9 signers (59.0--74.8\%), all length bins (short $\leq$5 words: 83.7\%; very long $>$20: 68.6\%), and even unique training texts that appear only once (70.2\% EM, $n{=}6{,}777$), not just highly repeated templates (94.0\%, $n{=}150$). Of the 7{,}060 decoded hypotheses, 74.8\% match some training text exactly, and 70\% match exactly one --- their correct paired reference.
-\item \textbf{Same-signer held-out control.} Decoding 500 test-split poses (unseen in training) from the \emph{same} 9 signers gives BLEU 12.19 / EM 3.2\% vs.\ train BLEU 78.8 / EM 70.7\%. The 67-point BLEU gap between seen and unseen items from the same signers is consistent with training-pool exposure producing the readout. This is a same-signer held-out control, not a fully matched membership control: the test items are not matched on length, text-similarity, broadcast date, or template density, so the gap reflects a combination of training exposure and distributional shift.
-\end{enumerate}
-The code-path audit excludes direct target-token teacher forcing; the input-side pose permutation with output-equivariance verification rules out a pose-ignorant pure ID/cache lookup under the tested decoding path and confirms sensitivity to the substituted pose tensor. Together with the label permutation, stratified EM, and the same-signer held-out gap, these checks are consistent with the readout reflecting pose-conditioned training-pool exposure. They do not identify the specific training mechanism (which remains undisclosed). The thresholds defining the readout-with-generalization signature were set after observing the released evaluator and are operational heuristics, not validated criteria (\S\ref{sec:readout_def}).
-
-\paragraph{Temporal-order sensitivity and constructible-protocol coverage.}
-The released evaluator loses $-16.1$ BLEU points when donor frames are reversed (GT loses $-5.5$, best rescue checkpoint $-4.3$; full battery in SI~Sup.~F). Reversal is out-of-distribution, so the differential bounds how much of the score relies on ordered content. None of 52 trained checkpoints across eight constructible-protocol families (reconstructions, rescue, ladder, config-faithful, step-faithful, big-arch, long-schedule, confirmation) passes the competence gate; the config-faithful, big-arch, and long-schedule variants all fail to reproduce the released evaluator's competence, readout signature, or reversal (SI~Sup.~F).
+Five checks (full data in SI~Sup.~N) rule out implementation-level artifacts: (i) the code-path audit confirms the decoder is autoregressive beam search with no teacher forcing; (ii) label permutation collapses BLEU from 78.6 to $\sim$1.0, confirming output--reference alignment; (iii) input-side pose permutation with output-equivariance verification ($E(\text{pose}_j, \text{slot}_i) = E(\text{pose}_j, \text{slot}_j)$ for 100/100 items, plus zero/noise/repeated-pose controls all collapsing BLEU to $<$1) rules out a pose-ignorant pure ID/cache lookup; (iv) exact-match rate is high across all 9 signers (59.0--74.8\%) and even unique training texts (70.2\% EM); and (v) a same-signer held-out control gives BLEU 12.19 / EM 3.2\% on unseen test poses vs.\ 78.8 / 70.7\% on training poses. These checks do not identify the training mechanism but are consistent with pose-conditioned training-pool exposure. The thresholds defining the signature were set after observing the released evaluator and are operational heuristics, not validated criteria (\S\ref{sec:readout_def}).
 
 \paragraph{Knowledge-distillation competence ladder.}
 \label{sec:distillation_ladder}
@@ -440,7 +411,7 @@ To probe the unobserved competence interval above the reconstruction ceiling (de
 
 \paragraph{Donor-registry consistency note.}
 \label{sec:retrieval_note}
-The retrieval algorithm in \S\ref{sec:retrieval} specifies exact-normalized-text exclusion: donors whose NFKC-normalized text equals the query's are skipped. The headline observations (PURE 23.79, gap $+10.24$) were produced by an earlier frozen materialization that did not apply this exclusion; the 14 non-distillation checkpoints' gap estimates also use this earlier materialization. Applying the \S\ref{sec:retrieval} algorithm (NFKC + exclusion + Levenshtein + SHA-256) lowers the released evaluator's PURE to 23.02 (gap $+10.24$) and was used to re-decode the 29 trained checkpoints with available model files plus the released evaluator (non-released gap range $[-2.01, 0.00]$; per-item hypotheses in \texttt{results/gap\_43\_canonical\_beam3\_items/}; \texttt{results/gap\_43\_canonical\_beam3.json}). On 610/641 items (95.2\%) the \S\ref{sec:retrieval} algorithm produces the same decoded output as the earlier frozen materialization. On the 31 differing items, we decoded each item's top-8 Jaccard candidate poses with the released evaluator and matched the output to the earlier hypothesis: for 30 of 31 items, at least one excluded Jaccard=1.0 candidate (whose NFKC-normalized text is identical to the query) produced a matching decode; one item remained unresolved (\texttt{results/donor\_identification\_31.json}). This is consistent with the exclusion rule explaining most output differences, but does not uniquely recover the historical donor registry. A 14-reconstruction beam-3 sensitivity comparison shows mean $|\Delta\text{gap}| = 0.65$ BLEU (max 1.45); all non-released gaps remain far below the released evaluator's reversal. Tie-candidate analysis for a subset of differing items is in \texttt{results/diff16\_tie\_analysis.json}. The distillation gaps in Table~\ref{tab:distill_alpha} use the \S\ref{sec:retrieval} algorithm.
+The retrieval algorithm in \S\ref{sec:retrieval} excludes donors whose NFKC-normalized text equals the query's. The headline PURE 23.79 (gap $+11.01$) predates this exclusion; applying it lowers PURE to 23.02 (gap $+10.24$) and was used for all 43 trained checkpoints. On 610/641 items (95.2\%) both materializations produce identical output; the 31 differing items are all attributable to the exclusion rule (\texttt{results/donor\_identification\_31.json}). A 14-reconstruction sensitivity comparison shows mean $|\Delta\text{gap}| = 0.65$ BLEU (max 1.45).
 
 \begin{table}[h]
 \centering
@@ -469,13 +440,6 @@ Three fits (OLS linear, OLS quadratic, GP with RBF + white kernel) over the 43 c
 \paragraph{Synthesis.}
 Across the five diagnostic views, the released evaluator is the only checkpoint combining high training-pool readout (78.8 BLEU, 70.7\% EM) with retained in-domain performance (13.38/12.78 dev/test). No reconstruction or distilled student reproduces either the $+10.24$ gap or this readout-with-generalization signature.
 
-\paragraph{Step-faithful protocol correction.}
-\label{sec:stepfaithful}
-Two seeds under the released configuration's corrected step-based validation (every 14 optimizer steps) reached dev BLEU 7.03 and 7.47 with near-zero gaps ($+0.02$, $-0.30$). This yields \emph{lower} dev BLEU than the epoch-validation approximation (7.0--7.5 vs 8.6--9.5), documenting that validation frequency alone shifts the final checkpoint by 1.5--2.0 BLEU points.
-
-\paragraph{Frozen-protocol confirmation.}
-Two fresh seeds (1506, 1607), trained after the diagnostic protocol was frozen, confirm the family pattern (gaps $-1.03$, $-0.98$; pass-through 1.22, 1.29).
-
 \subsection{Checkpoint-targeted oracle stress tests (SI-diagnosed)}
 \label{sec:non-bleu-audit}
 \label{sec:bt_likelihood_attack}
@@ -492,16 +456,13 @@ On the matched 461-item confidence=1 subset, human-reference substitution descri
 These findings extend prior critiques of BT validity from output faithfulness to ranking stability: improved BT scores need not imply target conditioning \cite{hong2026conditional}, low recorded-pose BT baselines are documented \cite{walsh2024datadriven}, and BT likelihood is a more stable correlate of human judgment than decoded BLEU \cite{jiang2025meaningful}. Our reversal is a \emph{decoded-sacreBLEU} reversal; teacher-forced BT likelihood does not reproduce it (GT NLL $3.060$ vs PURE $3.479$), consistent with that divergence. Whole-donor replay is a constructed probe, whereas SOKE-style word-level retrieval can improve pose quality under a different representation \cite{soke}; and multiple text scorers on the same BT decoding are not independent confirmation.
 
 \paragraph{Validation frequency is an underappreciated hyperparameter.}
-The step-faithful vs epoch-validation discrepancy (\S\ref{sec:stepfaithful}) shows that validation frequency itself shapes the final checkpoint: validating every 14 steps rather than every 14 epochs yields \emph{lower} best dev BLEU-4 (7.0--7.5 vs 8.6--9.5), a $1.5$--$2.0$ BLEU-point swing from a single rarely-reported hyperparameter that may contribute to the gap between released and reconstructed evaluators.
+Step-faithful vs epoch-validation shows validation frequency alone shifts the final checkpoint by 1.5--2.0 BLEU points (SI~Sup.~F).
 
 \paragraph{Independent reproduction with greedy decoding.}
-We reproduced the training and evaluation pipeline using greedy decoding (beam size 1). Under greedy decode, the released evaluator scores GT 12.24 and PURE 22.12 (gap $+9.88$), and no trained checkpoint reproduces the reversal (14 reconstructions: $[-1.44, -0.03]$; 15 distillation students: $\alpha{<}1.0$ in $[-1.28, -0.08]$, $\alpha{=}1.0$ near-zero (empty/degenerate outputs: 641/641 or 483/641 empty hypotheses)). The qualitative conclusions are identical to beam-3. Greedy-decode training logs and decoded cells are in the artifact at \texttt{results/cells\_greedy/} (see Code availability).
+Under greedy decode the released evaluator scores GT 12.24 and PURE 22.12 (gap $+9.88$); no trained checkpoint reproduces the reversal. Qualitative conclusions are identical to beam-3 (artifact at \texttt{results/cells\_greedy/}).
 
 \paragraph{What would be needed to identify the mechanism.}
-Identifying the specific mechanism would require the SLRTP2025 organizers to disclose (i) the exact training command and seeds, (ii) the data pipeline beyond the documented $[\,{:}\,{:}2]$ subsampling, (iii) any curriculum or checkpoint averaging, and (iv) intermediate checkpoints. A \emph{leave-one-donor-out} retrain sweep is computationally tractable ($\sim$1{,}400 GPU-hours) but requires the original training infrastructure, which is not publicly available.
-
-\paragraph{Public-data availability gap.}
-The following artifacts are not publicly available and limit what this audit can determine: (i) the organizers' exact training command, random seeds, and any hyperparameter search history; (ii) the training pipeline beyond the documented $[\,{:}\,{:}2]$ subsampling, including any curriculum, data augmentation, or checkpoint averaging; (iii) intermediate checkpoints at any epoch, which would allow trajectory-level analysis of when the readout-with-generalization property and the PPL--WER divergence emerge; and (iv) the original donor registry file that produced the headline PURE 23.79 / gap $+11.01$ under the earlier frozen materialization, whose exact tie-breaking and exclusion logic cannot be fully recovered post-hoc. Without these, the audit cannot distinguish between the released checkpoint being an exceptional training run, a different data pipeline, or a selection effect from an unknown hyperparameter sweep.
+Identifying the mechanism requires the SLRTP2025 organizers to disclose (i) the exact training command and seeds, (ii) the data pipeline beyond $[\,{:}\,{:}2]$ subsampling, (iii) any curriculum or checkpoint averaging, and (iv) intermediate checkpoints. A leave-one-donor-out retrain sweep is computationally tractable ($\sim$1{,}400 GPU-hours) but requires the original training infrastructure, which is not publicly available.
 
 \paragraph{Actionable recommendations for benchmark organizers.}
 These recommendations are scoped to the constructed replay-probe stress case on PHX-public, not to general SLP leaderboard stability.
@@ -515,31 +476,25 @@ These recommendations are scoped to the constructed replay-probe stress case on 
 
 \section{Limitations}
 \label{sec:limitations}
-The primary evidence is confined to PHX-public, a template-dense weather domain with documented reference-validity and train--test-overlap issues~\cite{czehmann2026sacred,alkain2026critical}. The fixed nine-system stress-test set comprises replay, composition, weak generation, and random controls rather than competitive SLP systems, so the audit demonstrates a stress case on a released evaluator, not a general leaderboard-rank instability. The readout-with-generalization signature has been verified only on the released PHX evaluator; CSL-Daily (SI~Sup.~M) provides a weak boundary control (train$\approx$test BLEU ratio $\sim$0.9 versus PHX's 6.1) but its recognizer is too limited for strong cross-dataset validation. We have not verified the readout ratio on other publicly released BT evaluators (e.g., How2Sign, WMT-SL), so the claim that the signature is unique to the released PHX checkpoint should be read as scoped to PHX-public rather than universal.
+The audit is confined to PHX-public, a template-dense weather domain with documented reference-validity and train--test-overlap issues~\cite{czehmann2026sacred,alkain2026critical}. The fixed nine-system stress-test set comprises replay, composition, weak generation, and random controls rather than competitive SLP systems, so the audit demonstrates a stress case on a released evaluator, not a general leaderboard-rank instability.
 
-All 67 non-holdout checkpoints with dev metrics are less competent than the released evaluator (family reaches dev BLEU-4 4.5--10.9, none reaches 13.38). This is the core competence confound: the original training history is unpublished, so competence-matched replication was not possible, and none of the 52 gate-eligible checkpoints passes the prespecified competence gate ($|\Delta\text{dev BLEU-4}|\leq 1.0$ and $|\Delta\text{dev WER}|\leq 3.0$). The 14 same-recipe reconstruction seeds yield a prediction interval of $[-1.94, -0.46]$, valid for the reconstruction recipe but not extrapolable to the released evaluator; the 29 heterogeneous checkpoints (distillation, ladder, config-faithful, step-faithful, rescue, confirmation) are reported as exploratory dose-response data and are not IID replicates of a single training process. An exploratory OLS/GP extrapolation over the 43 checkpoints (SI~Sup.~L) predicts negative gaps at 13.38 with substantial model sensitivity (OLS quadratic flips sign when distillation is removed); we report these fits only as descriptive visualization. The unobserved 10.9--13.4 interval could in principle harbor non-linear behavior that the present experiments cannot rule out. Saunders et al.~\cite{saunders2021continuous} limited their rank-stability claim to similar model configurations; the large competence gap means our result does not directly test their claim under the conditions they specified. The specific mechanism producing the released evaluator's readout-with-generalization property is not identifiable from public artifacts: neither recipe-conditioned reconstruction, rescue sweeps, config-faithful retraining, nor knowledge distillation (any $\alpha$, including full soft-label KL) transfers the property.
+All 67 non-holdout checkpoints are less competent than the released evaluator (family maximum dev BLEU-4 10.9 vs.\ released 13.38); the original training history is unpublished, so competence-matched replication was not possible. The unobserved 10.9--13.4 interval could in principle harbor non-linear behavior. Saunders et al.~\cite{saunders2021continuous} limited their rank-stability claim to similar model configurations; our result does not directly test their claim under those conditions. The specific mechanism is not identifiable from public artifacts: neither recipe-conditioned reconstruction, rescue sweeps, config-faithful retraining, nor knowledge distillation (any $\alpha$, including full soft-label KL) transfers the property. The donor-pool substitution decomposition is path-dependent; pool-origin contrasts are descriptive associations, not identified training-exposure effects. The human back-translations are a single-annotator derivative resource whose high-confidence subset lacks second-annotator adjudication.
 
-The donor-pool substitution decomposition is path-dependent (SI~Sup.~E); pool-origin contrasts are descriptive associations, not identified training-exposure effects. The asymmetric floor-effect analysis (\S\ref{sec:floor_effect}) is a descriptive asymmetry, not a formal test discriminating between reference-text defects and training-distribution alignment; both are non-exclusive candidate mechanisms. The human back-translations are a single-annotator derivative resource whose high-confidence subset lacks second-annotator adjudication. The reference-validity analysis follows Czehmann et al.'s matched-subset protocol; the $90.5\%$ attenuation on the 461-item confidence=1 subset is consistent with their finding that reference replacement changes PHOENIX-2014T scores.
-
-The DGS human evaluation is reported as an aborted feasibility study (data governance in Ethical Considerations); it does not enter the main empirical claims.
-
-The reversal is a \emph{decoded-BT-text-metric} reversal, not a sign-language quality reversal. Without target-conditioned DGS signer judgment or a validated sign-native pose metric, we cannot determine whether the retrieved donor motion conveys target-equivalent meaning; we explicitly do not claim that donor motion fails to express the target, nor that the reversal indicates dataset contamination or pose memorization. The SiLVERScore implementation accepts RGB video or I3D features, not pose tensors, and the SignCLIP-style 203-landmark input cannot be unambiguously mapped from the released 178-point skeleton, so we do not run a sign-native metric under an unvalidated mapping \cite{silverscore,jiang2025meaningful}.
-
-For completeness, BLEURT scores with \texttt{Elron/bleurt-large-512} agree in direction with the other decoded-text metrics (gap $+0.165$ under the original); rank correlation with canonical BLEURT-20 is $r=0.87$ but absolute scores are biased ($-0.47$), so we report them in the artifact only.
-
-\section{Conclusion}
-This audit documents three findings about the released SLRTP2025 back-translation evaluator on a single PHX-public constructed replay-probe case. First, its $+10.24$ BLEU-point reversal on a constructed whole-donor replay probe does not reproduce at comparable magnitude across 43 beam-3 gap estimates (all 43 decoded with the canonical donor registry from \S\ref{sec:retrieval} (95.2\% decoded-output agreement with the earlier frozen materialization on the same queries; \S\ref{sec:retrieval_note}) (range $[-2.01, 0.00]$ at dev BLEU-4 4.5--10.9; 14 same-recipe seeds PI $[-1.94, -0.46]$); this non-reproduction is observed under a competence confound, since all 67 non-holdout checkpoints are less competent than the released evaluator, and is scoped to the public training recipe rather than constituting a counter-disproof of Saunders et al.'s rank-stability claim, which was made for similar model configurations. Second, on the matched 461-item confidence=1 subset, human-reference substitution descriptively attenuates the gap by $90.5\%$ ($+10.03 \to +0.95$, paired bootstrap CI $[7.44, 10.86]$), consistent with Czehmann et al.'s prior finding that reference replacement changes PHOENIX-2014T scores, but not a causal attribution. Third, the released evaluator exhibits a post-hoc operational signature --- high training-pool readout (78.8 BLEU, 70.7\% exact match) with retained in-domain dev/test performance (13.38/12.78) --- that no constructible reconstruction or distilled student exhibits; pose--text permutation, input-side pose permutation with output-equivariance verification, stratified EM, and same-signer held-out controls rule out a pose-ignorant pure ID/cache lookup and are consistent with pose-conditioned training-pool exposure. The reversal is confined to decoded BT-text metrics; teacher-forced BT likelihood does not reproduce it. These properties hold as far as observable on PHX-public; the readout signature has not been verified on other released BT evaluators, and the fixed nine-system stress-test set comprises replay, composition, weak generation, and random controls rather than competitive SLP systems. The claim is not an evaluator-identity claim, not a leaderboard-rank statement, and not evidence that a randomly reseeded reconstruction would behave alike.
-
-\section{Ethical Considerations}
-\label{sec:ethics}
-\paragraph{Audit design.}
-No Deaf community member was involved in the audit design or probe construction. The probe (TN-PURE-v1) optimizes for a text-level stress signal rather than sign-linguistic naturalness. The slot extractor's vocabulary was authored by hearing team members; future work should partner with Deaf DGS reviewers. The reference-validity decomposition relies on single-annotator human back-translations of Czehmann et al.~\cite{czehmann2026sacred}. Deaf-led reviews identify the absence of Deaf participation as a structural risk in sign-language AI~\cite{slai_biases}.
-
-\paragraph{DGS human evaluation and data governance.}
-A blind DGS human evaluation with 30 DGS-fluent raters (100 videos, 20 target sentences) was conducted as a feasibility study (SI~Sup.~J). The protocol was reviewed under a human-subjects exemption by the authors' institutional ethics committee (\texttt{[INSTITUTION-BLINDED]} / \texttt{[IRB-PROTOCOL-ID-BLINDED]}, restored in the camera-ready version). Raters were recruited through DGS-fluent channels and provided informed consent; only aggregate statistics (means, SDs, Krippendorff's $\alpha$, rank-based profiles) are reported. The video files and UUID-to-system manifest were lost during a host-cleanup operation (2026-07); the loss was discovered during artifact preparation and documented internally. Per-rater response CSVs are preserved at \texttt{artifact/results/human\_eval/}. Because the loss prevents per-system analysis, the study is reported as an aborted feasibility study, not as audit evidence. The data retention policy for future human evaluations specifies: (i) persistent SHA-256 hashing of all video stimuli at collection time, (ii) redundant storage of the UUID-to-system manifest on independent media, and (iii) a 5-year minimum retention for all de-identified response data. Whether the loss was reported to the ethics review body is being assessed; if required by the institution's policy, a data-incident report will be filed.
+The reversal is a decoded-BT-text-metric reversal, not a sign-language quality reversal. Without target-conditioned DGS signer judgment or a validated sign-native pose metric, we cannot determine whether the retrieved donor motion conveys target-equivalent meaning; we explicitly do not claim that donor motion fails to express the target, nor that the reversal indicates dataset contamination or pose memorization. The DGS human evaluation is reported as an aborted feasibility study (Ethical Considerations); it does not enter the main empirical claims.
 
 \paragraph{Use of public data.}
 All experiments use publicly released datasets (PHOENIX-2014T, CSL-Daily, SLRTP2025) and Czehmann et al.'s human back-translations. Pose tensors may retain signer identity; we release no per-signer raw poses.
+
+\section{Conclusion}
+This audit documents a $+10.24$ BLEU-point retrieval--ground-truth reversal on PHX-public that does not reproduce across 43 independently trained checkpoints (all decoded with a single canonical donor registry; range $[-2.01, 0.00]$). On the matched 461-item confidence=1 subset, human-reference substitution attenuates the gap by 90.5\%. The released evaluator also decodes its training pool at 78.8 BLEU (70.7\% EM) while retaining non-trivial dev/test performance, a signature no constructible checkpoint exhibits; input-side permutation and output-equivariance verification rule out a pose-ignorant ID/cache lookup. Its training log shows validation PPL rising from 14.84 to 30.5 while decoded BLEU improved, indicating decoded-BLEU selection drove it into a high-NLL weight-space region that NLL-selected reconstructions never enter. The audit is scoped to the public training recipe: competence-matched replication was not possible, and the specific mechanism is not identifiable from public artifacts.
+
+\section{Compliance with Ethical Standards}
+\label{sec:ethics}
+\paragraph{Conflict of interest.} The authors declare no conflict of interest.
+\paragraph{Ethical approval.} All experiments use publicly released datasets (PHOENIX-2014T, CSL-Daily, SLRTP2025) and Czehmann et al.'s human back-translations. No animal research was conducted.
+\paragraph{Human participants.} A blind DGS human evaluation with 30 DGS-fluent raters was conducted as a feasibility study under a human-subjects exemption reviewed by the authors' institutional ethics committee (\texttt{[INSTITUTION-BLINDED]} / \texttt{[IRB-PROTOCOL-ID-BLINDED]}). Raters provided informed consent; only aggregate statistics are reported. The video files and UUID-to-system manifest were lost during a host-cleanup operation (2026-07); per-rater response CSVs are preserved in the artifact. The study is reported as an aborted feasibility study, not as audit evidence. No Deaf community member was involved in the audit design.
+\paragraph{Funding.} Anonymous.
+\paragraph{Data availability.} All numerical values, per-checkpoint data, decoded hypotheses, and analysis scripts are in the anonymous artifact at \url{https://anonymous.4open.science/r/rcp-audit-artifact-B314/README.md}.
 \appendix
 \section*{Supplementary Information (SI)}
 \addcontentsline{toc}{section}{Supplementary Information}
@@ -561,72 +516,27 @@ The following supplementary materials, referenced throughout the main text, are 
 \item Sup.~N: Leakage Sanity Checks for Train-Pool Readout (\texttt{sec:appendix\_leakage}).
 \end{itemize}
 
-\paragraph{SI availability.}
-All numerical values, plots, per-checkpoint data, and the greedy-decode reproduction are also available in machine-readable form at \url{https://anonymous.4open.science/r/rcp-audit-artifact-B314/README.md}.
-
-% Phantom targets for cross-references resolved in SI
-\phantomsection\label{sec:appendix_missing_id}
-\phantomsection\label{sec:provenance}
-\phantomsection\label{sec:appendix_decomposition}
-\phantomsection\label{sec:appendix_config_faithful}
-\phantomsection\label{sec:appendix_perturbation}
-\phantomsection\label{sec:appendix_cluster_bootstrap}
-\phantomsection\label{sec:appendix_oracle}
-\phantomsection\label{sec:appendix_template_boundary}
-\phantomsection\label{sec:appendix_human_eval}
-\phantomsection\label{sec:appendix_slot}
-\phantomsection\label{sec:appendix_extrapolation}
-\phantomsection\label{sec:csl-daily}
-\phantomsection\label{sec:appendix_leakage}
-
 \section*{Checkpoint Registry (summary)}
-\phantomsection\label{tab:path_sensitivity}
-\phantomsection\label{tab:perturbation}
-\phantomsection\label{tab:checkpoint_registry}
 
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Canonical checkpoint registry. 70 planned training runs, all 70 completed training and beam-3 PHX-public evaluation. 67 non-holdout runs have dev metrics; 52 of these are non-distillation and enter the competence gate. 43 runs have both dev BLEU-4 and PHX-public PURE--GT gap (extrapolation-eligible). Plus the released original. Each family row's columns sum to the Total row. Full per-checkpoint details in SI~Sup.~D.}
+\caption{Canonical checkpoint registry. 70 planned training runs, all 70 completed. 67 non-holdout runs have dev metrics; 43 have both dev BLEU-4 and PHX-public PURE--GT gap under the canonical \S\ref{sec:retrieval} registry. Full per-checkpoint details in SI~Sup.~D.}
 \label{tab:checkpoint_registry_summary}
 \begin{tabular}{p{4.2cm}p{1.0cm}p{1.5cm}p{1.4cm}p{1.4cm}p{3.0cm}}
 \toprule
-Family & Planned & Trained & Has gap (beam-3) & Has dev & Enters \\
+Family & Planned & Trained & Has gap & Has dev & Enters \\
 \midrule
-Reconstructions (primary) & 6 & 6 & 6 & 6 & multiseed, bootstrap, dose--resp. \\
-Reconstructions (extension) & 8 & 8 & 8 & 8 & prediction interval, dose--resp. \\
-Rescue lr (A/B $\times$ 4) & 8 & 8 & 0 & 8 & gate counts only \\
-Rescue expanded & 12 & 12 & 1 & 12 & gate; wd0 also dose--resp., perturb. \\
-Train-pool ladder & 4 & 4 & 4 & 4 & dose--resp., gap ranges \\
-Config-faithful & 4 & 4 & 4 & 4 & dose--resp. \\
-Step-faithful & 2 & 2 & 2 & 2 & dose--resp., validation-frequency \\
-Large-arch (A1--A4) & 4 & 4 & 0 & 4 & competence attempt \\
-Confirmation & 2 & 2 & 2 & 2 & dose--resp., family-side confirm. \\
-Long-schedule & 2 & 2 & 1 & 2 & gate; best seed dose--resp. (dev 10.02) \\
-BT-retrained & 1 & 1 & 0 & 0 & holdout series \\
-Cross-fit A/B & 2 & 2 & 0 & 0 & holdout series \\
-Distillation students & 15 & 15 & 15 & 15 & ladder, dose--resp. \\
+Reconstructions (14) & 14 & 14 & 14 & 14 & multiseed, bootstrap, PI, dose--resp. \\
+Rescue (20) & 20 & 20 & 1 & 20 & gate; wd0 dose--resp. \\
+Other families (21) & 21 & 21 & 14 & 20 & dose--resp. \\
+Distillation (15) & 15 & 15 & 15 & 15 & ladder, dose--resp. \\
 \midrule
 Total & 70 & 70 & 43 & 67 & \\
-Released original & --- & --- & 1 & 1 & audit target (not trained) \\
+Released original & --- & --- & 1 & 1 & audit target \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\section*{Declarations}
-
-\paragraph{Funding.} Anonymous.
-
-\paragraph{Conflicts of interest.} The authors declare no conflicts of interest.
-
-\paragraph{Ethics statement.}
-All experiments use publicly released datasets (PHOENIX-2014T, CSL-Daily, SLRTP2025) and Czehmann et al.'s publicly released human back-translations. For the DGS human evaluation (SI~Sup.~J), 30 DGS-fluent raters rated 100 anonymised videos under informed consent. The protocol was approved under a human-subjects exemption by the authors' institutional ethics committee (reviewing body and reference number: \texttt{[INSTITUTION-BLINDED]} / \texttt{[IRB-PROTOCOL-ID-BLINDED]}, restored in the camera-ready version). No PII is collected; only aggregate statistics (mean, SD, Krippendorff's $\alpha$, rank-based profiles) are reported. The single auditor of the rule-based German weather slot extractor (50 references + 50 hypotheses) was one of the authors. The video files and UUID-to-system manifest were lost during a host-cleanup operation; per-rater response CSVs remain available in the anonymous artifact at \texttt{artifact/results/human\_eval/}.
-
-\paragraph{Data licensing and availability.} PHOENIX-2014T is distributed by RWTH Aachen under CC BY-NC-SA 3.0 (checked 2026-06-10). Human back-translations of Czehmann et al.~\cite{czehmann2026sacred} are a derivative resource under CC BY-NC-SA 4.0 covering only their annotations. CSL-Daily and SLRTP2025 are obtained under provider-specific terms. We do not redistribute source pose/video data; the artifact contains only sequence IDs, manifests, hashes, code, and derived statistics. Pose tensors may retain signer identity; we release no per-signer raw poses. Users must obtain PHOENIX-2014T, CSL-Daily, and SLRTP2025 through their official channels.
-
-\paragraph{Code availability.} The anonymous review artifact (\url{https://anonymous.4open.science/r/rcp-audit-artifact-B314/README.md}) contains 51 analysis scripts, 60 beam-3 decoded cells (15 evaluators $\times$ 4 systems), donor registries, a machine-readable checkpoint registry (71 entries: 70 trained + 1 released), an SHA-256 ledger (396 files), and sufficient statistics for every bootstrap/permutation test. Greedy-decode cells (30 evaluators $\times$ GT + TN-PURE) are in the artifact at \texttt{results/cells\_greedy/}. The 30-evaluator canonical beam-3 panel with per-item hypotheses is at \texttt{results/gap\_43\_canonical\_beam3\_items/} (60 files: 30 $\times$ GT + PURE) plus the donor registry at \texttt{results/gap\_43\_canonical\_beam3\_items/donor\_registry.jsonl}. Run \texttt{make core-audit PYTHON=/path/to/python3} for the regression check and 60-cell BLEU decomposition. The artifact ships under an MIT license (\texttt{LICENSE}); PHOENIX-2014T, CSL-Daily, and SLRTP2025 datasets remain under their original provider licenses and are not redistributed.
-
-\paragraph{Computational cost.} Experiments ran on one node with eight NVIDIA GeForce RTX 2080 Ti GPUs. Approximate GPU-hours: 1.4 for six primary reconstructions; 1.8 for eight extension seeds; 5.0 for twenty rescue runs; 3.0 for fifteen distillation students; fixed-output decoding 2 minutes per evaluator; 605-query factorial re-scoring 0.17 total. Donor-registry and bootstrap analyses are CPU-bound ($\sim$40 CPU-hours). The two-week wall-clock envelope includes sequential ablations, data preparation, failed protocol checks, and idle queue time.
 
 \bibliography{references}
 
