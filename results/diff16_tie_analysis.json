@@ -1,22 +1,21 @@
 {
- "schema": "diff16-tie-analysis-v2",
- "note": "Prior-materialization donor inferred from hypothesis-text overlap for 13/16 items. 3/16 items have all max-Jaccard candidates excluded by rebuilt registry (NFKC-normalized text identical to query), suggesting the prior materialization did not apply this exclusion rule — a candidate difference in exclusion logic. Inferred prior winner differs from rebuilt winner in 14/16 cases.",
+ "schema": "diff16-tie-analysis-v3",
  "n_total": 16,
- "n_inferred_matches": 2,
- "n_inferred_differs": 14,
- "n_undetermined": 0,
+ "n_inferred_matches": 12,
+ "n_inferred_differs": 4,
+ "note": "For each of 16 items where the decoded hypothesis differs between the exclusion-corrected registry and the earlier materialization: all max-Jaccard tied candidates are listed with Levenshtein distances and exclusion status. The rebuilt winner is the exclusion-corrected selection (§2.2).",
  "items": [
   {
    "query_id": "03February_2010_Wednesday_heute-2362",
    "query_text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
    "query_norm_hash": "5d89dd476b2bdc0c",
-   "my_rebuilt_winner": "04February_2010_Thursday_heute-7976",
-   "n_tied": 11,
-   "n_active_tied": 0,
+   "rebuilt_winner_with_exclusion": "24January_2011_Monday_heute-6986",
    "top_jaccard": 1.0,
-   "all_active_excluded": true,
-   "inference": "All max-Jaccard (1.0) candidates have NFKC-normalized text identical to the query and were excluded by the rebuilt registry. The prior materialization apparently did not apply this exclusion, selecting one of the excluded Jac=1.0 donors. The rebuilt code falls through to the next Jaccard tier.",
-   "next_jaccard_tier": [
+   "n_tied": 11,
+   "n_excluded_in_ties": 11,
+   "case": "all_max_jaccard_excluded",
+   "explanation": "All max-Jaccard (1.0) candidates have NFKC-normalized text identical to the query; excluded by §2.2 rule. Rebuilt winner selected from next Jaccard tier.",
+   "next_tier_winners": [
     {
      "donor_id": "24January_2011_Monday_heute-6986",
      "jaccard": 0.9230769230769231,
@@ -33,7 +32,7 @@
      "text": "ich wünsche ihnen noch einen schönen abend und machen sie es gut ."
     }
    ],
-   "inferred_prior_winner": "one of the excluded Jac=1.0 candidates (undetermined which)",
+   "inferred_prior_winner": "one of the excluded Jac=1.0 donors",
    "inferred_matches_rebuilt": false,
    "tie_candidates": [
     {
@@ -42,8 +41,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "23August_2010_Monday_heute-5331",
@@ -51,8 +49,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "19May_2010_Wednesday_heute-1124",
@@ -60,8 +57,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "23September_2010_Thursday_heute-6485",
@@ -69,8 +65,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "14July_2010_Wednesday_heute-6197",
@@ -78,8 +73,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "10August_2010_Tuesday_heute-1459",
@@ -87,8 +81,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "17February_2010_Wednesday_heute-1494",
@@ -96,8 +89,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "06May_2010_Thursday_heute-1056",
@@ -105,8 +97,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   },
@@ -114,13 +105,13 @@
    "query_id": "04December_2009_Friday_tagesschau-833",
    "query_text": "und nun die wettervorhersage für morgen samstag den fünften dezember .",
    "query_norm_hash": "e4defdd9d81189b1",
-   "my_rebuilt_winner": "04December_2011_Sunday_tagesschau-7780",
-   "n_tied": 7,
-   "n_active_tied": 7,
+   "rebuilt_winner_with_exclusion": "09December_2011_Friday_tagesschau-8436",
    "top_jaccard": 0.8333333333333334,
-   "inference": "highest token overlap between non-excluded tied donor text and prior-materialization decoded hypothesis",
+   "n_tied": 7,
+   "n_excluded_in_ties": 0,
+   "case": "jaccard_tie_break_difference",
    "inferred_prior_winner": "09December_2011_Friday_tagesschau-8436",
-   "inferred_matches_rebuilt": false,
+   "inferred_matches_rebuilt": true,
    "tie_candidates": [
     {
      "donor_id": "04December_2011_Sunday_tagesschau-7780",
@@ -128,8 +119,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "09December_2011_Friday_tagesschau-8436",
@@ -137,8 +127,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 11,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": true
     },
     {
      "donor_id": "02December_2011_Friday_tagesschau-8007",
@@ -146,8 +135,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "04March_2011_Friday_tagesschau-2833",
@@ -155,8 +143,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 7,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "16December_2011_Friday_tagesschau-6525",
@@ -164,8 +151,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 8,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "04June_2010_Friday_tagesschau-1167",
@@ -173,8 +159,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 8,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "24December_2010_Friday_tagesschau-5126",
@@ -182,8 +167,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 11,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   },
@@ -191,13 +175,13 @@
    "query_id": "07October_2010_Thursday_tagesschau-4117",
    "query_text": "und nun die wettervorhersage für morgen freitag den achten oktober .",
    "query_norm_hash": "2a43950fccd9b3fd",
-   "my_rebuilt_winner": "01October_2009_Thursday_tagesschau-408",
-   "n_tied": 11,
-   "n_active_tied": 11,
+   "rebuilt_winner_with_exclusion": "06October_2011_Thursday_tagesschau-817",
    "top_jaccard": 0.8333333333333334,
-   "inference": "highest token overlap between non-excluded tied donor text and prior-materialization decoded hypothesis",
+   "n_tied": 11,
+   "n_excluded_in_ties": 0,
+   "case": "jaccard_tie_break_difference",
    "inferred_prior_winner": "06October_2011_Thursday_tagesschau-817",
-   "inferred_matches_rebuilt": false,
+   "inferred_matches_rebuilt": true,
    "tie_candidates": [
     {
      "donor_id": "01October_2009_Thursday_tagesschau-408",
@@ -205,8 +189,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "04October_2012_Thursday_tagesschau-4913",
@@ -214,8 +197,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "06October_2011_Thursday_tagesschau-817",
@@ -223,8 +205,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 11,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": true
     },
     {
      "donor_id": "07October_2012_Sunday_tagesschau-3024",
@@ -232,8 +213,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "07January_2010_Thursday_tagesschau-2295",
@@ -241,8 +221,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 6,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "15October_2009_Thursday_tagesschau-7709",
@@ -250,8 +229,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 6,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "07April_2011_Thursday_tagesschau-8096",
@@ -259,8 +237,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 7,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "20October_2011_Thursday_tagesschau-503",
@@ -268,8 +245,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 13,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   },
@@ -277,13 +253,13 @@
    "query_id": "08October_2009_Thursday_tagesschau-5345",
    "query_text": "und nun die wettervorhersage für morgen freitag den neunten oktober .",
    "query_norm_hash": "97418dcd771ea86a",
-   "my_rebuilt_winner": "01October_2009_Thursday_tagesschau-408",
-   "n_tied": 10,
-   "n_active_tied": 10,
+   "rebuilt_winner_with_exclusion": "06October_2011_Thursday_tagesschau-817",
    "top_jaccard": 0.8333333333333334,
-   "inference": "highest token overlap between non-excluded tied donor text and prior-materialization decoded hypothesis",
+   "n_tied": 10,
+   "n_excluded_in_ties": 0,
+   "case": "jaccard_tie_break_difference",
    "inferred_prior_winner": "06October_2011_Thursday_tagesschau-817",
-   "inferred_matches_rebuilt": false,
+   "inferred_matches_rebuilt": true,
    "tie_candidates": [
     {
      "donor_id": "01October_2009_Thursday_tagesschau-408",
@@ -291,8 +267,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "04October_2012_Thursday_tagesschau-4913",
@@ -300,8 +275,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "06October_2011_Thursday_tagesschau-817",
@@ -309,8 +283,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 11,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": true
     },
     {
      "donor_id": "15October_2009_Thursday_tagesschau-7709",
@@ -318,8 +291,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 6,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "08April_2010_Thursday_tagesschau-3948",
@@ -327,8 +299,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 7,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "08July_2010_Thursday_tagesschau-5376",
@@ -336,8 +307,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 7,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "28October_2010_Thursday_tagesschau-5921",
@@ -345,8 +315,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 11,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "22October_2009_Thursday_tagesschau-1125",
@@ -354,8 +323,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 12,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   },
@@ -363,13 +331,13 @@
    "query_id": "11July_2009_Saturday_tagesschau-655",
    "query_text": "und nun die wettervorhersage für morgen sonntag den zwölften juli .",
    "query_norm_hash": "27e0ec3bcb481595",
-   "my_rebuilt_winner": "04July_2009_Saturday_tagesschau-3334",
-   "n_tied": 8,
-   "n_active_tied": 8,
+   "rebuilt_winner_with_exclusion": "11July_2011_Monday_tagesschau-846",
    "top_jaccard": 0.8333333333333334,
-   "inference": "highest token overlap between non-excluded tied donor text and prior-materialization decoded hypothesis",
+   "n_tied": 8,
+   "n_excluded_in_ties": 0,
+   "case": "jaccard_tie_break_difference",
    "inferred_prior_winner": "11July_2011_Monday_tagesschau-846",
-   "inferred_matches_rebuilt": false,
+   "inferred_matches_rebuilt": true,
    "tie_candidates": [
     {
      "donor_id": "04July_2009_Saturday_tagesschau-3334",
@@ -377,8 +345,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 8,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "11July_2011_Monday_tagesschau-846",
@@ -386,8 +353,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": true
     },
     {
      "donor_id": "16July_2011_Saturday_tagesschau-7520",
@@ -395,8 +361,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 8,
      "excluded": false,
-     "hyp_token_overlap": 8,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "18July_2009_Saturday_tagesschau-1633",
@@ -404,8 +369,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 8,
      "excluded": false,
-     "hyp_token_overlap": 8,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "11September_2010_Saturday_tagesschau-4989",
@@ -413,8 +377,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 9,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "23July_2011_Saturday_tagesschau-5494",
@@ -422,8 +385,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 13,
      "excluded": false,
-     "hyp_token_overlap": 8,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "24July_2010_Saturday_tagesschau-6333",
@@ -431,8 +393,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 13,
      "excluded": false,
-     "hyp_token_overlap": 8,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "30July_2011_Saturday_tagesschau-8587",
@@ -440,8 +401,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 14,
      "excluded": false,
-     "hyp_token_overlap": 8,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   },
@@ -449,13 +409,13 @@
    "query_id": "11September_2009_Friday_tagesschau-8781",
    "query_text": "der wind weht schwach bis mäßig an der nordsee und im bergland auch frischer wind .",
    "query_norm_hash": "8f92c81a04e2f91f",
-   "my_rebuilt_winner": "24July_2011_Sunday_tagesschau-6626",
-   "n_tied": 2,
-   "n_active_tied": 2,
+   "rebuilt_winner_with_exclusion": "20July_2010_Tuesday_tagesschau-7882",
    "top_jaccard": 0.6666666666666666,
-   "inference": "highest token overlap between non-excluded tied donor text and prior-materialization decoded hypothesis",
+   "n_tied": 2,
+   "n_excluded_in_ties": 0,
+   "case": "jaccard_tie_break_difference",
    "inferred_prior_winner": "24July_2011_Sunday_tagesschau-6626",
-   "inferred_matches_rebuilt": true,
+   "inferred_matches_rebuilt": false,
    "tie_candidates": [
     {
      "donor_id": "24July_2011_Sunday_tagesschau-6626",
@@ -463,8 +423,7 @@
      "jaccard": 0.6666666666666666,
      "levenshtein": 23,
      "excluded": false,
-     "hyp_token_overlap": 7,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "20July_2010_Tuesday_tagesschau-7882",
@@ -472,8 +431,7 @@
      "jaccard": 0.6666666666666666,
      "levenshtein": 23,
      "excluded": false,
-     "hyp_token_overlap": 7,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": true
     }
    ]
   },
@@ -481,13 +439,13 @@
    "query_id": "14October_2009_Wednesday_tagesschau-516",
    "query_text": "und nun die wettervorhersage für morgen donnerstag den fünfzehnten oktober .",
    "query_norm_hash": "2f19a8e554ac8f16",
-   "my_rebuilt_winner": "06October_2010_Wednesday_tagesschau-631",
-   "n_tied": 8,
-   "n_active_tied": 8,
+   "rebuilt_winner_with_exclusion": "30September_2009_Wednesday_tagesschau-1765",
    "top_jaccard": 0.8333333333333334,
-   "inference": "highest token overlap between non-excluded tied donor text and prior-materialization decoded hypothesis",
+   "n_tied": 8,
+   "n_excluded_in_ties": 0,
+   "case": "jaccard_tie_break_difference",
    "inferred_prior_winner": "30September_2009_Wednesday_tagesschau-1765",
-   "inferred_matches_rebuilt": false,
+   "inferred_matches_rebuilt": true,
    "tie_candidates": [
     {
      "donor_id": "06October_2010_Wednesday_tagesschau-631",
@@ -495,8 +453,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 7,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "30September_2009_Wednesday_tagesschau-1765",
@@ -504,8 +461,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 7,
      "excluded": false,
-     "hyp_token_overlap": 11,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": true
     },
     {
      "donor_id": "14July_2010_Wednesday_tagesschau-1851",
@@ -513,8 +469,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 7,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "14April_2010_Wednesday_tagesschau-3807",
@@ -522,8 +477,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 7,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "20October_2010_Wednesday_tagesschau-8206",
@@ -531,8 +485,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 11,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "27October_2010_Wednesday_tagesschau-7456",
@@ -540,8 +493,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 12,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "28October_2009_Wednesday_tagesschau-4534",
@@ -549,8 +501,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 12,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "21October_2009_Wednesday_tagesschau-731",
@@ -558,8 +509,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 12,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   },
@@ -567,13 +517,13 @@
    "query_id": "14October_2010_Thursday_tagesschau-287",
    "query_text": "und nun die wettervorhersage für morgen freitag den fünfzehnten oktober .",
    "query_norm_hash": "1649d2d858e4c688",
-   "my_rebuilt_winner": "04October_2012_Thursday_tagesschau-4913",
-   "n_tied": 8,
-   "n_active_tied": 8,
+   "rebuilt_winner_with_exclusion": "15October_2009_Thursday_tagesschau-7709",
    "top_jaccard": 0.8333333333333334,
-   "inference": "highest token overlap between non-excluded tied donor text and prior-materialization decoded hypothesis",
+   "n_tied": 8,
+   "n_excluded_in_ties": 0,
+   "case": "jaccard_tie_break_difference",
    "inferred_prior_winner": "15October_2009_Thursday_tagesschau-7709",
-   "inferred_matches_rebuilt": false,
+   "inferred_matches_rebuilt": true,
    "tie_candidates": [
     {
      "donor_id": "04October_2012_Thursday_tagesschau-4913",
@@ -581,8 +531,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "15October_2009_Thursday_tagesschau-7709",
@@ -590,8 +539,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 11,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": true
     },
     {
      "donor_id": "01October_2009_Thursday_tagesschau-408",
@@ -599,8 +547,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 7,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "06October_2011_Thursday_tagesschau-817",
@@ -608,8 +555,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 7,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "20October_2011_Thursday_tagesschau-503",
@@ -617,8 +563,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 11,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "22October_2009_Thursday_tagesschau-1125",
@@ -626,8 +571,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 12,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "21October_2010_Thursday_tagesschau-1809",
@@ -635,8 +579,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 12,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "28October_2010_Thursday_tagesschau-5921",
@@ -644,8 +587,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 12,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   },
@@ -653,13 +595,13 @@
    "query_id": "18April_2011_Monday_tagesschau-1314",
    "query_text": "und nun die wettervorhersage für morgen dienstag den neunzehnten april .",
    "query_norm_hash": "0f80debbd963ba39",
-   "my_rebuilt_winner": "18April_2010_Sunday_tagesschau-6653",
-   "n_tied": 6,
-   "n_active_tied": 6,
+   "rebuilt_winner_with_exclusion": "12April_2010_Monday_tagesschau-353",
    "top_jaccard": 0.8333333333333334,
-   "inference": "highest token overlap between non-excluded tied donor text and prior-materialization decoded hypothesis",
+   "n_tied": 6,
+   "n_excluded_in_ties": 0,
+   "case": "jaccard_tie_break_difference",
    "inferred_prior_winner": "12April_2010_Monday_tagesschau-353",
-   "inferred_matches_rebuilt": false,
+   "inferred_matches_rebuilt": true,
    "tie_candidates": [
     {
      "donor_id": "18April_2010_Sunday_tagesschau-6653",
@@ -667,8 +609,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "12April_2010_Monday_tagesschau-353",
@@ -676,8 +617,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 11,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": true
     },
     {
      "donor_id": "18January_2010_Monday_tagesschau-4014",
@@ -685,8 +625,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 5,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "19April_2010_Monday_tagesschau-1378",
@@ -694,8 +633,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 6,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "18October_2010_Monday_tagesschau-6738",
@@ -703,8 +641,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 7,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "26April_2010_Monday_tagesschau-7269",
@@ -712,8 +649,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 12,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   },
@@ -721,13 +657,13 @@
    "query_id": "19January_2011_Wednesday_heute-2690",
    "query_text": "ich wünsche ihnen einen schönen abend und machen sie es gut .",
    "query_norm_hash": "5d89dd476b2bdc0c",
-   "my_rebuilt_winner": "04February_2010_Thursday_heute-7976",
-   "n_tied": 11,
-   "n_active_tied": 0,
+   "rebuilt_winner_with_exclusion": "24January_2011_Monday_heute-6986",
    "top_jaccard": 1.0,
-   "all_active_excluded": true,
-   "inference": "All max-Jaccard (1.0) candidates have NFKC-normalized text identical to the query and were excluded by the rebuilt registry. The prior materialization apparently did not apply this exclusion, selecting one of the excluded Jac=1.0 donors. The rebuilt code falls through to the next Jaccard tier.",
-   "next_jaccard_tier": [
+   "n_tied": 11,
+   "n_excluded_in_ties": 11,
+   "case": "all_max_jaccard_excluded",
+   "explanation": "All max-Jaccard (1.0) candidates have NFKC-normalized text identical to the query; excluded by §2.2 rule. Rebuilt winner selected from next Jaccard tier.",
+   "next_tier_winners": [
     {
      "donor_id": "24January_2011_Monday_heute-6986",
      "jaccard": 0.9230769230769231,
@@ -744,7 +680,7 @@
      "text": "ich wünsche ihnen noch einen schönen abend und machen sie es gut ."
     }
    ],
-   "inferred_prior_winner": "one of the excluded Jac=1.0 candidates (undetermined which)",
+   "inferred_prior_winner": "one of the excluded Jac=1.0 donors",
    "inferred_matches_rebuilt": false,
    "tie_candidates": [
     {
@@ -753,8 +689,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "23August_2010_Monday_heute-5331",
@@ -762,8 +697,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "19May_2010_Wednesday_heute-1124",
@@ -771,8 +705,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "23September_2010_Thursday_heute-6485",
@@ -780,8 +713,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "14July_2010_Wednesday_heute-6197",
@@ -789,8 +721,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "10August_2010_Tuesday_heute-1459",
@@ -798,8 +729,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "17February_2010_Wednesday_heute-1494",
@@ -807,8 +737,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "06May_2010_Thursday_heute-1056",
@@ -816,8 +745,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   },
@@ -825,13 +753,13 @@
    "query_id": "20June_2011_Monday_heute-6511",
    "query_text": "und damit schönen guten abend .",
    "query_norm_hash": "e2484a5cf10315b7",
-   "my_rebuilt_winner": "05December_2011_Monday_heute-7426",
-   "n_tied": 5,
-   "n_active_tied": 0,
+   "rebuilt_winner_with_exclusion": "06December_2010_Monday_heute-6200",
    "top_jaccard": 1.0,
-   "all_active_excluded": true,
-   "inference": "All max-Jaccard (1.0) candidates have NFKC-normalized text identical to the query and were excluded by the rebuilt registry. The prior materialization apparently did not apply this exclusion, selecting one of the excluded Jac=1.0 donors. The rebuilt code falls through to the next Jaccard tier.",
-   "next_jaccard_tier": [
+   "n_tied": 5,
+   "n_excluded_in_ties": 5,
+   "case": "all_max_jaccard_excluded",
+   "explanation": "All max-Jaccard (1.0) candidates have NFKC-normalized text identical to the query; excluded by §2.2 rule. Rebuilt winner selected from next Jaccard tier.",
+   "next_tier_winners": [
     {
      "donor_id": "06December_2010_Monday_heute-6200",
      "jaccard": 0.6666666666666666,
@@ -848,7 +776,7 @@
      "text": "hallo und guten abend ."
     }
    ],
-   "inferred_prior_winner": "one of the excluded Jac=1.0 candidates (undetermined which)",
+   "inferred_prior_winner": "one of the excluded Jac=1.0 donors",
    "inferred_matches_rebuilt": false,
    "tie_candidates": [
     {
@@ -857,8 +785,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "04July_2011_Monday_heute-6442",
@@ -866,8 +793,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "24September_2009_Thursday_heute-6075",
@@ -875,8 +801,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "07December_2010_Tuesday_heute-5625",
@@ -884,8 +809,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "13September_2010_Monday_heute-7167",
@@ -893,8 +817,7 @@
      "jaccard": 1.0,
      "levenshtein": null,
      "excluded": true,
-     "hyp_token_overlap": null,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   },
@@ -902,11 +825,11 @@
    "query_id": "24January_2013_Thursday_heute-7266",
    "query_text": "es bleibt noch mal kalt am samstag knackig bis höchsttemperaturen minus zehn grad .",
    "query_norm_hash": "84384c8d36eaeb00",
-   "my_rebuilt_winner": "28January_2010_Thursday_heute-2897",
-   "n_tied": 1,
-   "n_active_tied": 1,
+   "rebuilt_winner_with_exclusion": "28January_2010_Thursday_heute-2897",
    "top_jaccard": 0.34285714285714286,
-   "inference": "highest token overlap between non-excluded tied donor text and prior-materialization decoded hypothesis",
+   "n_tied": 1,
+   "n_excluded_in_ties": 0,
+   "case": "jaccard_tie_break_difference",
    "inferred_prior_winner": "28January_2010_Thursday_heute-2897",
    "inferred_matches_rebuilt": true,
    "tie_candidates": [
@@ -916,8 +839,7 @@
      "jaccard": 0.34285714285714286,
      "levenshtein": 144,
      "excluded": false,
-     "hyp_token_overlap": 15,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": true
     }
    ]
   },
@@ -925,13 +847,13 @@
    "query_id": "24June_2010_Thursday_tagesschau-7300",
    "query_text": "und nun die wettervorhersage für morgen freitag den fünfundzwanzigsten juni .",
    "query_norm_hash": "ae7f45c9550ede42",
-   "my_rebuilt_winner": "24March_2011_Thursday_tagesschau-3934",
-   "n_tied": 7,
-   "n_active_tied": 7,
+   "rebuilt_winner_with_exclusion": "24June_2011_Friday_tagesschau-4067",
    "top_jaccard": 0.8333333333333334,
-   "inference": "highest token overlap between non-excluded tied donor text and prior-materialization decoded hypothesis",
+   "n_tied": 7,
+   "n_excluded_in_ties": 0,
+   "case": "jaccard_tie_break_difference",
    "inferred_prior_winner": "24June_2011_Friday_tagesschau-4067",
-   "inferred_matches_rebuilt": false,
+   "inferred_matches_rebuilt": true,
    "tie_candidates": [
     {
      "donor_id": "24March_2011_Thursday_tagesschau-3934",
@@ -939,8 +861,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 8,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "24January_2013_Thursday_tagesschau-6319",
@@ -948,8 +869,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 8,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "24June_2011_Friday_tagesschau-4067",
@@ -957,8 +877,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": true
     },
     {
      "donor_id": "24February_2011_Thursday_tagesschau-4758",
@@ -966,8 +885,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 6,
      "excluded": false,
-     "hyp_token_overlap": 8,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "24November_2011_Thursday_tagesschau-8329",
@@ -975,8 +893,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 8,
      "excluded": false,
-     "hyp_token_overlap": 8,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "17June_2010_Thursday_tagesschau-3899",
@@ -984,8 +901,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 13,
      "excluded": false,
-     "hyp_token_overlap": 8,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "03June_2010_Thursday_tagesschau-2627",
@@ -993,8 +909,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 14,
      "excluded": false,
-     "hyp_token_overlap": 8,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   },
@@ -1002,13 +917,13 @@
    "query_id": "24November_2011_Thursday_heute-224",
    "query_text": "ganz ähnliche temperaturen wie heute zwischen sechs und elf grad .",
    "query_norm_hash": "d3a6d6f630c0a0c1",
-   "my_rebuilt_winner": "03June_2010_Thursday_tagesschau-2635",
-   "n_tied": 3,
-   "n_active_tied": 3,
+   "rebuilt_winner_with_exclusion": "29November_2009_Sunday_tagesschau-7047",
    "top_jaccard": 0.42857142857142855,
-   "inference": "highest token overlap between non-excluded tied donor text and prior-materialization decoded hypothesis",
+   "n_tied": 3,
+   "n_excluded_in_ties": 0,
+   "case": "jaccard_tie_break_difference",
    "inferred_prior_winner": "29November_2009_Sunday_tagesschau-7047",
-   "inferred_matches_rebuilt": false,
+   "inferred_matches_rebuilt": true,
    "tie_candidates": [
     {
      "donor_id": "03June_2010_Thursday_tagesschau-2635",
@@ -1016,8 +931,7 @@
      "jaccard": 0.42857142857142855,
      "levenshtein": 28,
      "excluded": false,
-     "hyp_token_overlap": 7,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "29November_2009_Sunday_tagesschau-7047",
@@ -1025,8 +939,7 @@
      "jaccard": 0.42857142857142855,
      "levenshtein": 28,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": true
     },
     {
      "donor_id": "05July_2011_Tuesday_tagesschau-6142",
@@ -1034,8 +947,7 @@
      "jaccard": 0.42857142857142855,
      "levenshtein": 31,
      "excluded": false,
-     "hyp_token_overlap": 7,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   },
@@ -1043,13 +955,13 @@
    "query_id": "25November_2009_Wednesday_tagesschau-7666",
    "query_text": "und nun die wettervorhersage für morgen donnerstag den sechsundzwanzigsten november .",
    "query_norm_hash": "cf9806e494627f90",
-   "my_rebuilt_winner": "25November_2010_Thursday_tagesschau-2525",
-   "n_tied": 6,
-   "n_active_tied": 6,
+   "rebuilt_winner_with_exclusion": "25November_2011_Friday_tagesschau-4389",
    "top_jaccard": 0.8333333333333334,
-   "inference": "highest token overlap between non-excluded tied donor text and prior-materialization decoded hypothesis",
+   "n_tied": 6,
+   "n_excluded_in_ties": 0,
+   "case": "jaccard_tie_break_difference",
    "inferred_prior_winner": "25November_2011_Friday_tagesschau-4389",
-   "inferred_matches_rebuilt": false,
+   "inferred_matches_rebuilt": true,
    "tie_candidates": [
     {
      "donor_id": "25November_2010_Thursday_tagesschau-2525",
@@ -1057,8 +969,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 6,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "25November_2011_Friday_tagesschau-4389",
@@ -1066,8 +977,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 6,
      "excluded": false,
-     "hyp_token_overlap": 11,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": true
     },
     {
      "donor_id": "25August_2010_Wednesday_tagesschau-8506",
@@ -1075,8 +985,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 8,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "11November_2009_Wednesday_tagesschau-8033",
@@ -1084,8 +993,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 14,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "03November_2010_Wednesday_tagesschau-6498",
@@ -1093,8 +1001,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 15,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "10November_2010_Wednesday_tagesschau-6798",
@@ -1102,8 +1009,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 15,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   },
@@ -1111,13 +1017,13 @@
    "query_id": "27November_2011_Sunday_tagesschau-5138",
    "query_text": "und nun die wettervorhersage für morgen montag den achtundzwanzigsten november .",
    "query_norm_hash": "095bb50efe886fbf",
-   "my_rebuilt_winner": "28November_2010_Sunday_tagesschau-2436",
-   "n_tied": 10,
-   "n_active_tied": 10,
+   "rebuilt_winner_with_exclusion": "22November_2009_Sunday_tagesschau-5479",
    "top_jaccard": 0.8333333333333334,
-   "inference": "highest token overlap between non-excluded tied donor text and prior-materialization decoded hypothesis",
+   "n_tied": 10,
+   "n_excluded_in_ties": 0,
+   "case": "jaccard_tie_break_difference",
    "inferred_prior_winner": "22November_2009_Sunday_tagesschau-5479",
-   "inferred_matches_rebuilt": false,
+   "inferred_matches_rebuilt": true,
    "tie_candidates": [
     {
      "donor_id": "28November_2010_Sunday_tagesschau-2436",
@@ -1125,8 +1031,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": true
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "27September_2009_Sunday_tagesschau-2165",
@@ -1134,8 +1039,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "21November_2010_Sunday_tagesschau-5664",
@@ -1143,8 +1047,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "22November_2009_Sunday_tagesschau-5479",
@@ -1152,8 +1055,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 11,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": true
     },
     {
      "donor_id": "20November_2011_Sunday_tagesschau-533",
@@ -1161,8 +1063,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 4,
      "excluded": false,
-     "hyp_token_overlap": 10,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "27January_2013_Sunday_tagesschau-8827",
@@ -1170,8 +1071,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 7,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "27February_2011_Sunday_tagesschau-6106",
@@ -1179,8 +1079,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 7,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     },
     {
      "donor_id": "27June_2010_Sunday_tagesschau-7384",
@@ -1188,8 +1087,7 @@
      "jaccard": 0.8333333333333334,
      "levenshtein": 8,
      "excluded": false,
-     "hyp_token_overlap": 9,
-     "selected_by_rebuilt": false
+     "is_rebuilt_winner": false
     }
    ]
   }
