@@ -107,5 +107,6 @@
    "ci_lo": 7.262216156061499,
    "ci_hi": 10.160329850479929
   }
- }
+ },
+ "_note": "Greedy-decode matched-subset analysis (86.1%). Canonical beam-3 matched-subset (90.5%) is in results/canonical_matched_subset.json."
 }

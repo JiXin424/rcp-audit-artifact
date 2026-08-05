@@ -12,7 +12,7 @@
   },
   {
    "path": "README.md",
-   "sha256": "dae709cc4969c1bcacd7d2b5b4330621e49a3a40a075ec098d44b7f88216af98"
+   "sha256": "9d84e7186237741b53fd73531179256210eb0c7f2b669ca43cd6420c3aa887db"
   },
   {
    "path": "data/cells/cp0_GT-v1.json",
@@ -324,7 +324,7 @@
   },
   {
    "path": "results/canonical_checkpoint_registry.json",
-   "sha256": "cc243988cfea505f397e68a7cf817a18d720792328608c781becc1a9c7f7dd50"
+   "sha256": "895cd74a34a812721b82b222deea464899d3341400f8646245750d487914e929"
   },
   {
    "path": "results/canonical_cross_metric.json",
@@ -600,7 +600,7 @@
   },
   {
    "path": "results/e6b_matched_subset.json",
-   "sha256": "5731263990fb2faf302442b0dae1cd5e827501eac14732cf9182d05f4ad87480"
+   "sha256": "fbafc24c5326a1c5a94a3a4c9db25e6ac3d2e923cc478ca94eaca1ddb9f60419"
   },
   {
    "path": "results/equivariance.json",

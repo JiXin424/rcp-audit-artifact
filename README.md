@@ -56,7 +56,7 @@ artifact/
 make core-audit PYTHON=/path/to/python3
 ```
 
-This regenerates the headline GT 12.78 / PURE 23.79 / gap +11.01 (beam-3) from the artifact cells.
+This regenerates the frozen-materialization headline GT 12.78 / PURE 23.79 / gap +11.01 (beam-3) from the artifact cells. The canonical §2.2 registry panel (PURE 23.02 / gap +10.24) is in `results/gap_43_canonical_beam3.json`.
 
 **Note on `reproduction-dag`:** The full DAG references scripts from sibling revision directories (`../revision_...`) that are not included because they depend on intermediate data exceeding the artifact size limit. The saved hypotheses in `data/cells/` and sufficient statistics in `results/` allow full recomputation of all reported numbers via `core-audit`. The DAG scripts will be published with the camera-ready version.
 
