@@ -13,7 +13,7 @@ artifact/
 ├── Makefile                       # `make core-audit` (operational); `reproduction-dag` needs sibling scripts
 ├── LICENSE                        # MIT license (source code + derived statistics)
 ├── requirements.lock.txt          # Python dependency pins
-├── artifact_ledger.json           # SHA-256 ledger (393 files; auto-generated from current artifact state)
+├── artifact_ledger.json           # SHA-256 ledger (394 files; auto-generated from current artifact state)
 ├── manifests/
 │   └── exclusions.jsonl           # IDs absent from released SLRTP2025 pose materialization
 ├── data/cells/                    # decoded BT hypotheses (60 cells: 15 beam-3 evaluators × 4 systems)

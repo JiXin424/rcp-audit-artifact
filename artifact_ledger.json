@@ -15,10 +15,6 @@
    "sha256": "02fb1df6ff9a907085e331dccf86b8b0aa1403ba8b6c38d9120b59d2d4c83f33"
   },
   {
-   "path": "artifact_ledger.json",
-   "sha256": "d5506d4f7bdcd016c771942f618495087cce3dd5e8d4121c60c20a034d3260af"
-  },
-  {
    "path": "data/cells/cp0_GT-v1.json",
    "sha256": "eb3f8744f6ac76956359487e47e27ebd20a42e6e505d000b4cfe551bd5f3c42d"
   },
@@ -271,6 +267,10 @@
    "sha256": "e3f4cea8ab9017d9221b782f17c181a8f825b33f1f76b86da1a56f4e18aaffff"
   },
   {
+   "path": "main_mmsys.log",
+   "sha256": "160c3ddf4d14c2e3cfc22c04dbf928dbdff252b48f05c77738701ee06f555d68"
+  },
+  {
    "path": "manifests/exclusions.jsonl",
    "sha256": "474a17ee76aca8d83430563b19ec24fb6e8a04a42dd1afadba8879e8269b4354"
   },
@@ -301,10 +301,6 @@
   {
    "path": "results/all_distill_beam3_canonical.json",
    "sha256": "2c3dd08ae7bb0891cdb385eb61759e1f0015d81b6e0383ecd62f6da07b0b5178"
-  },
-  {
-   "path": "results/artifact_ledger.json",
-   "sha256": "bf94412fc31280db2b18d8e61ba1531c245ccb92597e417aac5f70d7e447706d"
   },
   {
    "path": "results/bleu_diagnostics/bleu_decomposition.csv",
@@ -569,6 +565,10 @@
   {
    "path": "results/diff16_tie_analysis.json",
    "sha256": "c0a67ac6b9173f8e9ab879425fcc6ab2c352b32de51ae4780a997cc01b03d97b"
+  },
+  {
+   "path": "results/donor_identification_31.json",
+   "sha256": "d879799d1d4887c3799654f8574af51f3c1b1fe30c0b6be777b953c2dfb20e83"
   },
   {
    "path": "results/e6b_matched_subset.json",
@@ -1578,5 +1578,6 @@
    "path": "tests/test_checkpoint_gt_alignment.py",
    "sha256": "4fa33254be5119dadd5852ec13d6105272091ab21ca791e7442a4e7f0b874ae3"
   }
- ]
+ ],
+ "self_hash_note": "artifact_ledger.json is excluded from files list; its hash changes on each write"
 }
