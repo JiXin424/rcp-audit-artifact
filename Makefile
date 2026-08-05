@@ -43,3 +43,8 @@ reproduction-dag:
 	$(PYTHON) ../revision_20260728_round4/scripts/r4_decoding_sensitivity.py --gpu 0
 	$(PYTHON) ../revision_20260728_round4/scripts/r4_decoding_plot.py
 	@echo "[dag] reproduction-dag COMPLETE"
+
+paper:
+	$(PYTHON) scripts/build_paper_numbers.py
+	@echo "Paper numbers written to results/paper_numbers.json"
+	@echo "Compare with main_lre.tex values for consistency check"

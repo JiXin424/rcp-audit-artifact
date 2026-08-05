@@ -11,6 +11,13 @@
 
 \title[Auditing a Released BT Evaluator for SLP]{Auditing a Released Back-Translation Evaluator for Sign Language Production: Sensitivity to Training-Pool Replay and Checkpoint Reconstruction}
 
+% LRE single-blind review: replace placeholders with author information before submission
+% \author*[1]{\fnm{First} \sur{Author}}
+% \author*[2]{\fnm{Second} \sur{Author}}
+% \author*[3]{\fnm{Corresponding} \sur{Author}}
+% \email{corresponding.author@institution.edu}
+% \affil*[1]{\orgdiv{Department}, \orgname{University}, \orgaddress{\street{Street}, \city{City}, \postcode{Code}, \country{Country}}}
+% \affil*[2]{\orgdiv{Department}, \orgname{University}, \orgaddress{\street{Street}, \city{City}, \postcode{Code}, \country{Country}}}
 \author*[1]{} % Authors retained for blind review
 \affil*[1]{}
 
@@ -486,7 +493,7 @@ This audit documents a $+10.24$ BLEU-point retrieval--ground-truth reversal on P
 \label{sec:ethics}
 \paragraph{Conflict of interest.} The authors declare no conflict of interest.
 \paragraph{Ethical approval.} All experiments use publicly released datasets (PHOENIX-2014T, CSL-Daily, SLRTP2025) and Czehmann et al.'s human back-translations. No animal research was conducted.
-\paragraph{Human participants.} A blind DGS human evaluation with 30 DGS-fluent raters was conducted as a feasibility study under a human-subjects exemption reviewed by the authors' institutional ethics committee (\texttt{[INSTITUTION-BLINDED]} / \texttt{[IRB-PROTOCOL-ID-BLINDED]}). Raters provided informed consent; only aggregate statistics are reported. The video files and UUID-to-system manifest were lost during a host-cleanup operation (2026-07); per-rater response CSVs are preserved in the artifact. The study is reported as an aborted feasibility study, not as audit evidence. No Deaf community member was involved in the audit design.
+\paragraph{Human participants.} A blind DGS human evaluation with 30 DGS-fluent raters was conducted as a feasibility study under a human-subjects exemption reviewed by the authors' institutional ethics committee (\texttt{[INSTITUTION-BLINDED]} / \texttt{[IRB-PROTOCOL-ID-BLINDED]}). Raters provided informed consent covering de-identified aggregate reporting and anonymised data sharing. The video files and UUID-to-system manifest were lost during a host-cleanup operation (2026-07); the loss was discovered during artifact preparation and documented internally. Whether the loss constitutes a reportable incident under the institution's policy is being assessed; if required, a data-incident report will be filed. Per-rater response CSVs are preserved in the artifact; they contain only anonymised rater IDs and no personally identifiable information. The data retention policy for future human evaluations specifies: (i) persistent SHA-256 hashing of all video stimuli at collection time, (ii) redundant storage of the UUID-to-system manifest on independent media, and (iii) a 5-year minimum retention for all de-identified response data. The study is reported as an aborted feasibility study, not as audit evidence. No Deaf community member was involved in the audit design; we acknowledge this as a limitation and recommend Deaf-led review for future work.
 \paragraph{Funding.} Anonymous.
 \paragraph{Data availability.} All numerical values, per-checkpoint data, decoded hypotheses, and analysis scripts are in the anonymous artifact at \url{https://anonymous.4open.science/r/rcp-audit-artifact-B314/README.md}.
 \appendix
