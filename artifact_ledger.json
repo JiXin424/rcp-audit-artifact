@@ -12,7 +12,7 @@
   },
   {
    "path": "README.md",
-   "sha256": "35d7f2c7b185169c56d0600dc55e58d401b37719ce0ba924ed0692e373018236"
+   "sha256": "dae709cc4969c1bcacd7d2b5b4330621e49a3a40a075ec098d44b7f88216af98"
   },
   {
    "path": "data/cells/cp0_GT-v1.json",
@@ -280,11 +280,11 @@
   },
   {
    "path": "paper/main_mmsys.pdf",
-   "sha256": "933f414a3513ab3ffa0c74ec1c7e62a706c5ac6fd90b9d0dae82589f01abeb8c"
+   "sha256": "b2966e6dfb8c109105bb99a07185050c450494173d56f047640b2c36d31c98f4"
   },
   {
    "path": "paper/main_mmsys.tex",
-   "sha256": "0b6f883662060f1be1bd40cc40094039423a68cb518255be831e8ba4610b6d76"
+   "sha256": "be45c6e0369ac5be66a39e0fd420a48d3d0016a68a941d0f1f5b37fae43762ae"
   },
   {
    "path": "paper/references.bib",
@@ -1587,5 +1587,5 @@
    "sha256": "4fa33254be5119dadd5852ec13d6105272091ab21ca791e7442a4e7f0b874ae3"
   }
  ],
- "self_hash_note": "artifact_ledger.json excluded from files list"
+ "self_hash_note": "excluded from list"
 }
