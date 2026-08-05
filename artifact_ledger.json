@@ -284,11 +284,11 @@
   },
   {
    "path": "paper/main_lre.pdf",
-   "sha256": "b2966e6dfb8c109105bb99a07185050c450494173d56f047640b2c36d31c98f4"
+   "sha256": "f9d0051c5bcc6f9abe4d988e556fc6cda1c9a3e5232693ba7cd40e14a9520c3f"
   },
   {
    "path": "paper/main_lre.tex",
-   "sha256": "be45c6e0369ac5be66a39e0fd420a48d3d0016a68a941d0f1f5b37fae43762ae"
+   "sha256": "ea31669c5529b3adf2f047a3f965200c5bd75e752d15a59366e52981ef1601a7"
   },
   {
    "path": "paper/references.bib",
