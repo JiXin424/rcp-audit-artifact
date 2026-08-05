@@ -82,10 +82,18 @@ def main():
     registry = build_text_nearest_registry(queries, donors, tie_break="levenshtein")
     print(f"  {len(registry)} entries in {time.time() - t0:.1f}s", flush=True)
 
-    # Save donor registry for reproducibility
-    donor_registry_json = json.dumps({qid: registry[qid] for qid in test_ids},
-                                     indent=1, ensure_ascii=False, sort_keys=True)
-    donor_registry_sha256 = hashlib.sha256(donor_registry_json.encode()).hexdigest()
+    # ---- Write donor registry JSONL ----
+    ITEMS_DIR = ROOT / "results/gap_43_canonical_beam3_items"
+    ITEMS_DIR.mkdir(parents=True, exist_ok=True)
+    registry_path = ITEMS_DIR / "donor_registry.jsonl"
+    with open(registry_path, "w") as rf:
+        for qid in test_ids:
+            r = registry[qid]
+            rf.write(json.dumps({"query_id": qid, "donor_id": r["donor_id"],
+                                 "jaccard": r["jaccard"], "levenshtein": r["levenshtein"],
+                                 "sha256_tb": r.get("sha256_tb")}) + "\n")
+    donor_registry_sha256 = hashlib.sha256(registry_path.read_bytes()).hexdigest()
+    print(f"  Registry JSONL → {registry_path} (SHA-256 {donor_registry_sha256[:16]}...)", flush=True)
 
     # ---- Build poses ----
     train_by_id = {it["name"]: it for it in train_items}
@@ -127,7 +135,6 @@ def main():
         results[name] = {
             "gt_bleu": gb, "pure_bleu": pb, "gap": pb - gb,
             "checkpoint_sha256": ckpt_hash,
-            "donor_registry_sha256": donor_registry_sha256,
             "time_s": elapsed,
         }
         # Save per-item hypotheses to separate files (avoids OOM in main JSON)
@@ -155,7 +162,7 @@ def main():
                      "token-set Jaccard + character-level Levenshtein tie-break + "
                      "SHA-256 hash final tie-break (paper §2.2)",
         "n_total_checkpoints_with_model_files": len(CHECKPOINTS),
-        "n_decoded": len(results) - 1,  # exclude _meta
+        "n_decoded": len(results),
         "n_skipped": n_skipped,
         "decoder": "model.run_batch(translation_beam_size=3, "
                    "translation_beam_alpha=-1, translation_max_output_length=30)",
@@ -163,7 +170,8 @@ def main():
         "fps": "12.5 (skeleton_subsample=2 applied before decoding)",
         "released_gap": results["released"]["gap"],
         "non_released_gap_range": [min(gaps), max(gaps)] if gaps else None,
-        "donor_registry_sha256": donor_registry_sha256,
+        "donor_registry_path": str(registry_path.relative_to(ROOT)),
+        "donor_registry_file_sha256": donor_registry_sha256,
     }
     # Move _meta last
     results.move_to_end("_meta")

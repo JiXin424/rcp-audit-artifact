@@ -34,7 +34,7 @@ artifact/
 │   ├── missing_distill_beam3.json         # 2 re-decoded distillation seeds
 │   ├── new_distill_dev_bleu4.json         # dev BLEU-4 for 2 re-decoded seeds
 │   ├── gap_43_canonical_beam3_items/   # 30×2 beam-3 per-item hypotheses + donor_registry.jsonl
-│   ├── registry_comparison.jsonl        # 641-row original-vs-§2.2 donor comparison
+│   ├── hypothesis_comparison.jsonl        # 641-row original-vs-§2.2 donor comparison
 │   ├── human_eval/                        # DGS human evaluation (30 raters × 100 videos; manifest lost)
 │   └── ...
 ├── scripts/                       # 51 analysis scripts
@@ -100,4 +100,4 @@ Per-rater response matrices for the 30-rater × 100-video feasibility study are 
 ## 6. Known discrepancies
 
 - **Canonical GT WER (raw vs official-normalized):** The canonical GT cell stores raw WER 79.26; the paper reports official-normalized WER 85.77 (jiwer 3.1.0 with SLRTP2025 normalization). Both correspond to the same 641 decoded sequences; the difference is the normalization pipeline. BLEU-4 (12.78) is invariant.
-- **Donor registry:** The §2.2 algorithm (NFKC + Levenshtein + SHA-256 + exact-normalized-text exclusion) produces identical decoded output to the earlier frozen materialization on 610/641 items (95.2%); the 31 differing items are all attributable to the exclusion rule (the frozen materialization selected donors with NFKC-identical text that §2.2 excludes). Original donor IDs are unavailable (registry file not preserved). See `results/registry_comparison.jsonl` (641-row hypothesis comparison) and `results/donor_identification_31.json` (donor identification by decoding candidate poses). Manuscript §Donor-registry consistency note.
+- **Donor registry:** The §2.2 algorithm (NFKC + Levenshtein + SHA-256 + exact-normalized-text exclusion) produces identical decoded output to the earlier frozen materialization on 610/641 items (95.2%); the 31 differing items are all attributable to the exclusion rule (the frozen materialization selected donors with NFKC-identical text that §2.2 excludes). Original donor IDs are unavailable (registry file not preserved). See `results/hypothesis_comparison.jsonl` (641-row hypothesis comparison) and `results/donor_identification_31.json` (donor identification by decoding candidate poses). Manuscript §Donor-registry consistency note.
