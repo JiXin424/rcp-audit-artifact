@@ -1,6 +1,6 @@
 {
  "schema": "artifact-ledger-v4",
- "n_files": 394,
+ "n_files": 396,
  "files": [
   {
    "path": "LICENSE",
@@ -12,7 +12,7 @@
   },
   {
    "path": "README.md",
-   "sha256": "02fb1df6ff9a907085e331dccf86b8b0aa1403ba8b6c38d9120b59d2d4c83f33"
+   "sha256": "35d7f2c7b185169c56d0600dc55e58d401b37719ce0ba924ed0692e373018236"
   },
   {
    "path": "data/cells/cp0_GT-v1.json",
@@ -280,15 +280,23 @@
   },
   {
    "path": "paper/main_mmsys.pdf",
-   "sha256": "015bbfa1958036cc4b259972c03bb0b006e5c781f2eb085de231785e509d3f59"
+   "sha256": "933f414a3513ab3ffa0c74ec1c7e62a706c5ac6fd90b9d0dae82589f01abeb8c"
   },
   {
    "path": "paper/main_mmsys.tex",
-   "sha256": "92ab4c61fb9e7e52e40ddedebcf213040690e6952ee8c9cb9142a8c0616ef234"
+   "sha256": "0b6f883662060f1be1bd40cc40094039423a68cb518255be831e8ba4610b6d76"
   },
   {
    "path": "paper/references.bib",
    "sha256": "041d307aba06996ed22b20d016c832c651f4f32174b0dd59e17f41b97b3a2f51"
+  },
+  {
+   "path": "paper/supplementary.pdf",
+   "sha256": "145fc3b934503771d81ec18c9eda2506b71d5233ed2105663eb30cd78b27f789"
+  },
+  {
+   "path": "paper/supplementary.tex",
+   "sha256": "6457c19f7d81e49d9a3278c467f52cff52c1dbe284edd5ae606e26afbe984e77"
   },
   {
    "path": "requirements.lock.txt",
@@ -987,6 +995,10 @@
    "sha256": "350b99d5a6410c65b3aa158f6820738d5aa273bc3cc17988e8b339721c4bdc3b"
   },
   {
+   "path": "results/hypothesis_comparison.jsonl",
+   "sha256": "df5d1826bd83a2a402894f29cb71ea8e3c785f940c1f628d97c86ea25d5a52c2"
+  },
+  {
    "path": "results/input_permutation.json",
    "sha256": "a38d64fbd055be1da6ec1c8695e32382f6281bb44321b2ca1f89d34d9517d0f5"
   },
@@ -1097,10 +1109,6 @@
   {
    "path": "results/random_controls/seed_9.json",
    "sha256": "62c3319beb90c410f03e579da513b0c913a18ad1f2ec89ad4d0d1d2ef8e6d6cb"
-  },
-  {
-   "path": "results/registry_comparison.jsonl",
-   "sha256": "df5d1826bd83a2a402894f29cb71ea8e3c785f940c1f628d97c86ea25d5a52c2"
   },
   {
    "path": "results/round5/ROUND5_RESULTS.md",
@@ -1264,7 +1272,7 @@
   },
   {
    "path": "scripts/build_canonical_panel.py",
-   "sha256": "04dccaa722cf28913a8f68e07f8e4a3b8ae5234330b1df49cd0a2ca6811e1b87"
+   "sha256": "4051e0c153fa96a2aa40f719a3c53264a96e04acad7f08edea5ce2ad1a943278"
   },
   {
    "path": "scripts/build_unified_checkpoint_registry.py",
@@ -1579,5 +1587,5 @@
    "sha256": "4fa33254be5119dadd5852ec13d6105272091ab21ca791e7442a4e7f0b874ae3"
   }
  ],
- "self_hash_note": "artifact_ledger.json is excluded from files list; its hash changes on each write"
+ "self_hash_note": "artifact_ledger.json excluded from files list"
 }
