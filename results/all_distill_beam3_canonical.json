@@ -73,5 +73,6 @@
   "gt": 0.0,
   "pure": 0.0,
   "gap": 0.0
- }
+ },
+ "_deprecated": "SUPERSEDED: uses pre-exclusion-fix retrieval. Canonical values are in gap_43_canonical_beam3.json (with exact-normalized-text exclusion)."
 }
