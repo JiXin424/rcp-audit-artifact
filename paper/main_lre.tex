@@ -45,7 +45,7 @@ Retrieval-augmented SLP entries draw donors from the evaluator's training pool, 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{generated_figures/checkpoint_sensitivity_schematic.pdf}
-\caption{Overview of the multi-checkpoint evaluation audit. (a) A fixed set of reference-pose, generative, retrieval, and random-donor outputs is evaluated by the original SLRTP2025 BT checkpoint and fourteen independently trained recipe-conditioned reconstructions. (b) Evaluator-aware analysis: donors selected by maximizing likelihood under one checkpoint are evaluated by all seven checkpoints.}
+\caption{Overview of the multi-checkpoint evaluation audit. (a) A fixed set of reference-pose, generative, retrieval, and random-donor outputs is evaluated by the original SLRTP2025 BT checkpoint and fourteen independently trained recipe-conditioned reconstructions. (b) Evaluator-aware analysis: donors selected by maximizing likelihood under one checkpoint are evaluated by all seven primary checkpoints.}
 \label{fig:audit_framework}
 \end{figure}
 
@@ -97,7 +97,7 @@ Setting & Recognizer & Layout & Split size & $N$ eval & $\alpha$ \\
 \midrule
 PHX-public  & SLRTP2025 evaluator       & 178-joint & 641 seq      & 641    & 0.88 (tuned) \\
 PHX-holdout-MSKA & mska\_slr (phoenix-2014t) & 133-joint & 1{,}538 win  & 1{,}538 & 0.50 (frozen) \\
-CSL-Daily   CSL-Daily   & mska (csl-daily)           & 133-joint & 256 win      & 256    & 0.50 (frozen) mska (csl-daily)           CSL-Daily   & mska (csl-daily)           & 133-joint & 256 win      & 256    & 0.50 (frozen) 133-joint CSL-Daily   & mska (csl-daily)           & 133-joint & 256 win      & 256    & 0.50 (frozen) 256 of 1,176 win CSL-Daily   & mska (csl-daily)           & 133-joint & 256 win      & 256    & 0.50 (frozen) 256    CSL-Daily   & mska (csl-daily)           & 133-joint & 256 win      & 256    & 0.50 (frozen) 0.50 (frozen) \\
+CSL-Daily   & mska (csl-daily)           & 133-joint & 256 of 1,176 win & 256    & 0.50 (frozen) \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -162,7 +162,7 @@ PT-v1         & 1.59 & 16.91 & 19.03 & 17.26 & 101.68 & 0.669 \\
 TN-PTCOMP  & 18.86 & 46.35 & 41.88 & 45.17 & 77.36 & 0.793 \\
 TN-PURE    & \textbf{23.02} & \textbf{55.43} & \textbf{47.82} & \textbf{53.07} & \textbf{71.87} & \textbf{0.822} \\
 \midrule
-Gap PURE$-$GT & $+10.24$ & $+20.94$ & $+13.23$ & $+17.87$ & $-13.90$ & $+0.066$ \\
+Gap PURE$-$GT & $+10.24$ & $+20.94$ & $+12.93$ & $+17.87$ & $-13.90$ & $+0.066$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -274,12 +274,12 @@ On a fixed nine-system stress-test set, the released evaluator ranks TN-PURE fir
 \toprule
 Evaluator & $\Delta$BLEU-4 & $\Delta$BLEU-1 & $\Delta$chrF & $\Delta$WER$^\dagger$ & $\Delta$NLL$^\dagger$ & $\Delta$BERTSc. \\
 \midrule
-Original & $+10.24$ & $+20.94$ & $+13.23$ & $+13.90$ & $-0.419$ & $+0.066$ \\
+Original & $+10.24$ & $+20.94$ & $+12.93$ & $+13.90$ & $-0.419$ & $+0.066$ \\
 Seed 101 & $-0.80$ & $-1.23$ & $-1.44$ & $-2.95$ & $-0.219$ & $-0.005$ \\
-Seed 202 & $-0.98$ & $-0.21$ & $-1.94$ & $-3.52$ & $-0.233$ & $-0.006$ \\
-Seed 303 & $-0.71$ & $-0.10$ & $-1.20$ & $-1.53$ & $-0.240$ & $+0.001$ \\
-Seed 404 & $-0.36$ & $-0.14$ & $-1.20$ & $-1.87$ & $-0.194$ & $-0.001$ \\
-Seed 505 & $-0.89$ & $-0.17$ & $-1.78$ & $-3.41$ & $-0.268$ & $-0.004$ \\
+Seed 202 & $-1.30$ & $-1.33$ & $-1.57$ & $-3.52$ & $-0.233$ & $-0.006$ \\
+Seed 303 & $-1.85$ & $-1.99$ & $-2.26$ & $-1.53$ & $-0.240$ & $+0.001$ \\
+Seed 404 & $-1.81$ & $-1.60$ & $-1.90$ & $-1.87$ & $-0.194$ & $-0.001$ \\
+Seed 505 & $-1.28$ & $-1.53$ & $-1.59$ & $-3.41$ & $-0.268$ & $-0.004$ \\
 Seed 606 & $-1.24$ & $-1.26$ & $-1.55$ & $-3.46$ & $-0.169$ & $-0.001$ \\
 \bottomrule
 \end{tabular}
@@ -312,7 +312,7 @@ Paired attenuation & \multicolumn{4}{r}{$9.08$ BLEU pts (90.5\%), CI $[7.44, 10.
 \midrule
 \multicolumn{5}{l}{\emph{Sensitivity: full 641 items}} \\
 Original (speech-transcribed) & 641 & 12.78 & 23.02 & $+10.24$ $[+8.89,+11.58]$ \\
-Human back-translation (full) & 641 & 5.66 & 6.79 & $+1.12$ $[+0.38,+1.91]$ \\
+Human back-translation (full) & 641 & 5.66 & 6.52 & $+0.86$ $[+0.38,+1.91]$ \\
 Paired attenuation & \multicolumn{4}{r}{$9.38$ BLEU pts (91.6\%)} \\
 \midrule
 Human refs, reconstructions (6 seeds) & 641 & 3.49--4.62 & 3.35--4.35 & $-0.15$ to $-0.65$ \\
@@ -376,7 +376,7 @@ We now turn the non-reproduction result into a positive characterization through
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{generated_figures/dose_response.pdf}
-\caption{PURE--GT gap versus dev competence (greedy decode; 14 reconstruction seeds $+$ 15 distillation students $+$ released evaluator $=$ 30 plotted points). The x-axis is teacher-forced dev NLL per token (lower $=$ more competent); the released evaluator2019s star position is annotated with its decoded dev BLEU-4 (13.38). An additional 13 checkpoints (ladder, config-faithful, step-faithful, confirmation, long-schedule, wd0 rescue) have beam-3 PHX-public gaps in the same range ($[-0.71, +0.00]$) but use a different dev-metric protocol and are not plotted; their values are in SI~Sup.~D. All 43 beam-3 evaluated checkpoints have gap $\leq 0$. The figure is \emph{exploratory}; the 43 points are NOT IID replicates. The released evaluator (star) sits far above the constructible family cloud at dev BLEU-4 13.38, gap $+10.24$. No synthetic or approximate points are used.}
+\caption{PURE--GT gap versus dev competence (greedy decode; 14 reconstruction seeds $+$ 15 distillation students $+$ released evaluator $=$ 30 plotted points). The x-axis is teacher-forced dev NLL per token (lower $=$ more competent); the released evaluator\u2019s star position is annotated with its decoded dev BLEU-4 (13.38). An additional 13 checkpoints (ladder, config-faithful, step-faithful, confirmation, long-schedule, wd0 rescue) have beam-3 PHX-public gaps in the same range ($[-0.71, +0.00]$) but use a different dev-metric protocol and are not plotted; their values are in SI~Sup.~D. All 43 beam-3 evaluated checkpoints have gap $\leq 0$. The figure is \emph{exploratory}; the 43 points are NOT IID replicates. The released evaluator (star) sits far above the constructible family cloud at dev BLEU-4 13.38, gap $+10.24$. No synthetic or approximate points are used.}
 \label{fig:dose_response}
 \end{figure}
 
