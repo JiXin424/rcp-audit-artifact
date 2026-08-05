@@ -254,6 +254,8 @@
    -2.012652363040133,
    0.0
   ],
-  "donor_registry_sha256": "9170a53026ab3263b451a3632a9e02318745acabf12f0b679921477afbefa301"
+  "donor_registry_sha256": "9170a53026ab3263b451a3632a9e02318745acabf12f0b679921477afbefa301",
+  "donor_registry_path": "results/gap_43_canonical_beam3_items/donor_registry.jsonl",
+  "donor_registry_file_sha256": "74d7847a438f4fb86c6fb2db9677309ab64695815d9409325efefe48dff14894"
  }
 }

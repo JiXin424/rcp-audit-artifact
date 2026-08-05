@@ -13,7 +13,7 @@ artifact/
 ├── Makefile                       # `make core-audit` (operational); `reproduction-dag` needs sibling scripts
 ├── LICENSE                        # MIT license (source code + derived statistics)
 ├── requirements.lock.txt          # Python dependency pins
-├── artifact_ledger.json           # SHA-256 ledger (392 files; auto-generated from current artifact state)
+├── artifact_ledger.json           # SHA-256 ledger (393 files; auto-generated from current artifact state)
 ├── manifests/
 │   └── exclusions.jsonl           # IDs absent from released SLRTP2025 pose materialization
 ├── data/cells/                    # decoded BT hypotheses (60 cells: 15 beam-3 evaluators × 4 systems)
@@ -33,6 +33,8 @@ artifact/
 │   ├── family_stratify_cluster.json       # per-family dose-response + cluster bootstrap
 │   ├── missing_distill_beam3.json         # 2 re-decoded distillation seeds
 │   ├── new_distill_dev_bleu4.json         # dev BLEU-4 for 2 re-decoded seeds
+│   ├── gap_43_canonical_beam3_items/   # 30×2 beam-3 per-item hypotheses + donor_registry.jsonl
+│   ├── registry_comparison.jsonl        # 641-row original-vs-§2.2 donor comparison
 │   ├── human_eval/                        # DGS human evaluation (30 raters × 100 videos; manifest lost)
 │   └── ...
 ├── scripts/                       # 51 analysis scripts
