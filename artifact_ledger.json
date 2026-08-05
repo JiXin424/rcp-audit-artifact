@@ -1750,5 +1750,6 @@
    "path": "tests/test_checkpoint_gt_alignment.py",
    "sha256": "4fa33254be5119dadd5852ec13d6105272091ab21ca791e7442a4e7f0b874ae3"
   }
- ]
+ ],
+ "self_hash_note": "excluded from list"
 }
