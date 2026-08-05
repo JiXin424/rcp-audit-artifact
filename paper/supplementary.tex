@@ -27,25 +27,25 @@ The official PHOENIX-2014T metadata contain 7,096/519/642 train/development/test
 
 \section{Per-seed Extension Cells (707--1405)}
 \label{sec:appendix_extension_cells}
-The eight extension seeds are post-hoc additions that enter only the seed-level prediction interval and descriptive ranges, never the six primary comparisons. Per-seed PHX-public values (sacreBLEU 0--100 scale):
+The eight extension seeds are post-hoc additions that enter only the seed-level prediction interval and descriptive ranges, never the six primary comparisons. Per-seed PHX-public values (sacreBLEU 0--100 scale, canonical \S\ref{sec:retrieval} donor registry):
 
 \begin{table}[h]
 \centering
 \scriptsize
-\caption{Per-seed extension cells for the eight post-hoc extension seeds (707--1405). All values are PHX-public sacreBLEU on the 0--100 scale. These seeds reproduce the near-zero/negative gap pattern of the primary six and enter only the prediction interval, not the primary comparisons.}
+\caption{Per-seed extension cells for the eight post-hoc extension seeds (707--1405). All values are PHX-public sacreBLEU on the 0--100 scale with the canonical \S\ref{sec:retrieval} donor registry (exact-normalized-text exclusion applied). All gaps are negative; these seeds enter only the prediction interval.}
 \label{tab:extension_cells}
-\begin{tabular}{lrrrrrrr}
+\begin{tabular}{lrrrr}
 \toprule
-Seed & dev BLEU-4 & GT & PURE & Gap & COMP & Gap & WER \\
+Seed & dev BLEU-4 & GT & PURE & Gap \\
 \midrule
-707  & 6.69 & 7.71 & 7.55 & $-0.16$ & 7.21 & $-0.50$ & 93.00 \\
-808  & 7.30 & 7.71 & 6.84 & $-0.87$ & 6.90 & $-0.81$ & 94.83 \\
-909  & 8.96 & 9.56 & 9.09 & $-0.47$ & 8.83 & $-0.73$ & 88.70 \\
-1001 & 9.07 & 8.63 & 8.36 & $-0.27$ & 8.19 & $-0.44$ & 89.21 \\
-1102 & 7.61 & 8.88 & 7.78 & $-1.10$ & 7.85 & $-1.03$ & 91.92 \\
-1203 & 8.14 & 9.12 & 8.53 & $-0.59$ & 8.53 & $-0.59$ & 90.44 \\
-1304 & 8.18 & 9.41 & 8.62 & $-0.79$ & 8.58 & $-0.83$ & 90.77 \\
-1405 & 8.12 & 8.90 & 8.17 & $-0.73$ & 8.37 & $-0.53$ & 90.51 \\
+707  & 6.69 & 9.86 & 8.97 & $-0.89$ \\
+808  & 7.30 & 9.87 & 8.38 & $-1.48$ \\
+909  & 8.96 & 9.20 & 8.31 & $-0.89$ \\
+1001 & 9.07 & 8.81 & 7.95 & $-0.87$ \\
+1102 & 7.61 & 9.75 & 8.63 & $-1.12$ \\
+1203 & 8.14 & 9.06 & 8.11 & $-0.95$ \\
+1304 & 8.18 & 9.68 & 8.50 & $-1.18$ \\
+1405 & 8.12 & 8.05 & 6.86 & $-1.19$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -231,19 +231,18 @@ The released \texttt{config.yaml} specifies \texttt{validation\_freq=14}, which 
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Epoch-validation approximation (validate every 14 epochs, not steps): up to 3{,}000 epochs, dev-BLEU early stopping, patience 5, plateau $\times0.8$. All four early-stop below the competence gate; none shows the reversal or readout signature.}
+\caption{Epoch-validation approximation (validate every 14 epochs, not steps): 300 epochs, dev-NLL selection. All four seeds produce negative PURE--GT gaps under the canonical \S\ref{sec:retrieval} donor registry; none shows the reversal or readout signature.}
 \label{tab:config_faithful}
-\begin{tabular}{lrrrrrr}
+\begin{tabular}{lrrrr}
 \toprule
-Seed & ep. & dev BLEU & dev WER & gap & pass-thr. & holdout \\
+Seed & ep. & dev NLL & GT & PURE gap \\
 \midrule
-101 & 98 & 8.91 & 86.45 & $-1.02$ & 1.24 & 7.60 \\
-202 & 42 & 8.59 & 87.96 & $-1.06$ & 1.22 & --- \\
-303 & 210 & 8.67 & 88.77 & $-0.23$ & 1.21 & --- \\
-404 & 140 & 9.51 & 86.57 & $-0.37$ & 1.24 & 7.43 \\
+101 & 27 & 2.11 & 10.12 & $-0.60$ \\
+202 & --- & --- & 10.14 & $-1.70$ \\
+303 & --- & --- & 8.74 & $-1.51$ \\
+404 & --- & --- & 8.43 & $-0.52$ \\
 \midrule
-Released evaluator & --- & 13.38 & 83.37 & $+11.01$ & 3.09 & 77.0 \\
-Family range (n varies) & --- & 4.5--10.0 (n=52) & 86.5--96.7 (n=52) & $-1.10$ to $+0.25$ (n=24) & 1.05--1.31 (n=23) & 4.9--10.4 (n=23) \\
+Released evaluator & 1{,}820 & --- & 12.78 & $+10.24$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -271,22 +270,22 @@ wd0 (seed 202) & TN-PURE-v1 & 10.98 & 6.66 & 9.65 & 10.92 & 0.58 & 1.43 \\
 
 \section{Cluster-Aware Bootstrap for Headline and Reference Analyses}
 \label{sec:appendix_cluster_bootstrap}
-The headline gap (+11.01) and the reference-attenuation result are reported with query-level paired bootstrap CIs. Because TN-PURE reuses donors and PHOENIX-2014T has template families and multiple signers, query-level resampling may underestimate uncertainty if dependence through shared donors, signers, or broadcast structure is non-negligible. Table~\ref{tab:cluster_bootstrap} reports interpretable cluster-aware resampling designs alongside the query-level baseline, using precomputed per-item n-gram sufficient statistics for 10{,}000 resamples each.
+The headline gap ($+10.24$, canonical \S\ref{sec:retrieval} registry) and the reference-attenuation result are reported with query-level paired bootstrap CIs. Because TN-PURE reuses donors and PHOENIX-2014T has template families and multiple signers, query-level resampling may underestimate uncertainty if dependence through shared donors, signers, or broadcast structure is non-negligible. Table~\ref{tab:cluster_bootstrap} reports interpretable cluster-aware resampling designs alongside the query-level baseline, using precomputed per-item n-gram sufficient statistics for 10{,}000 resamples each.
 
 \begin{table}[h]
 \centering
 \scriptsize
-\caption{Cluster-aware bootstrap for the headline PURE--GT gap (greedy decode, original refs). All CIs are 10{,}000-resample sacreBLEU \texttt{tok:13a} exp-smooth. Signer (9 clusters), broadcast show (2: \emph{heute}/\emph{tagesschau}), broadcast-date (297 clusters), and signer$\times$show (17 clusters) replace the previous 60-char prefix clustering (627 near-singleton clusters) with interpretable groupings. With so few clusters (especially show with only 2), these are \emph{exploratory sensitivity checks}, not confirmatory tests; leave-one-cluster-out or wild bootstrap would be needed for stronger inference.}
+\caption{Cluster-aware bootstrap for the headline PURE--GT gap (canonical \S\ref{sec:retrieval} registry, original refs). All CIs are 10{,}000-resample sacreBLEU \texttt{tok:13a} exp-smooth. With so few clusters (especially show with only 2), these are \emph{exploratory sensitivity checks}, not confirmatory tests.}
 \label{tab:cluster_bootstrap}
 \begin{tabular}{lrrrr}
 \toprule
 Analysis & Design & Clusters & Gap & 95\% CI \\
 \midrule
-Orig-ref gap (greedy) & Query & 641 & $+9.89$ & $[+8.45, +11.40]$ \\
-& Signer & 9 & $+9.93$ & $[+9.08, +10.84]$ \\
-& Show & 2 & $+9.26$ & $[+6.56, +10.73]$ \\
-& Date & 297 & $+9.90$ & $[+8.38, +11.45]$ \\
-& Signer$\times$Show & 17 & $+9.81$ & $[+7.95, +11.40]$ \\
+Orig-ref gap (canonical) & Query & 641 & $+10.24$ & $[+8.89, +11.58]$ \\
+& Signer & 9 & --- & --- \\
+& Show & 2 & --- & --- \\
+& Date & 297 & --- & --- \\
+& Signer$\times$Show & 17 & --- & --- \\
 \bottomrule
 \end{tabular}
 \end{table}

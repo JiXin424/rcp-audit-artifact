@@ -500,6 +500,9 @@ We reproduced the training and evaluation pipeline using greedy decoding (beam s
 \paragraph{What would be needed to identify the mechanism.}
 Identifying the specific mechanism would require the SLRTP2025 organizers to disclose (i) the exact training command and seeds, (ii) the data pipeline beyond the documented $[\,{:}\,{:}2]$ subsampling, (iii) any curriculum or checkpoint averaging, and (iv) intermediate checkpoints. A \emph{leave-one-donor-out} retrain sweep is computationally tractable ($\sim$1{,}400 GPU-hours) but requires the original training infrastructure, which is not publicly available.
 
+\paragraph{Public-data availability gap.}
+The following artifacts are not publicly available and limit what this audit can determine: (i) the organizers' exact training command, random seeds, and any hyperparameter search history; (ii) the training pipeline beyond the documented $[\,{:}\,{:}2]$ subsampling, including any curriculum, data augmentation, or checkpoint averaging; (iii) intermediate checkpoints at any epoch, which would allow trajectory-level analysis of when the readout-with-generalization property and the PPL--WER divergence emerge; and (iv) the original donor registry file that produced the headline PURE 23.79 / gap $+11.01$ under the earlier frozen materialization, whose exact tie-breaking and exclusion logic cannot be fully recovered post-hoc. Without these, the audit cannot distinguish between the released checkpoint being an exceptional training run, a different data pipeline, or a selection effect from an unknown hyperparameter sweep.
+
 \paragraph{Actionable recommendations for benchmark organizers.}
 These recommendations are scoped to the constructed replay-probe stress case on PHX-public, not to general SLP leaderboard stability.
 \begin{itemize}

@@ -284,11 +284,11 @@
   },
   {
    "path": "paper/main_lre.pdf",
-   "sha256": "f9d0051c5bcc6f9abe4d988e556fc6cda1c9a3e5232693ba7cd40e14a9520c3f"
+   "sha256": "63b4b65cbe671d3f230431befe3a38a4642d4afb97b129d4c243b09538f35ba4"
   },
   {
    "path": "paper/main_lre.tex",
-   "sha256": "ea31669c5529b3adf2f047a3f965200c5bd75e752d15a59366e52981ef1601a7"
+   "sha256": "17f4f62c1e8cd13b0a5501f02132e51b837568de811859e8ba34e649ea881596"
   },
   {
    "path": "paper/references.bib",
@@ -296,11 +296,11 @@
   },
   {
    "path": "paper/supplementary.pdf",
-   "sha256": "145fc3b934503771d81ec18c9eda2506b71d5233ed2105663eb30cd78b27f789"
+   "sha256": "921410f815a0bbcd35ab4227c2a93b9171bca768452bf37a77c4829916f167a4"
   },
   {
    "path": "paper/supplementary.tex",
-   "sha256": "6457c19f7d81e49d9a3278c467f52cff52c1dbe284edd5ae606e26afbe984e77"
+   "sha256": "f55df1ce4ea36b1c53b1572d145e6f1d3eaf5c0d08fe460c80ccc784d49f4b43"
   },
   {
    "path": "requirements.lock.txt",
