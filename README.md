@@ -89,10 +89,11 @@ artifact/
 │   ├── family_stratify_cluster.json         # per-family dose-response + signer/show/date bootstrap
 │   └── ... (see artifact_ledger.json for the full file list)
 ├── figures/
-│   ├── checkpoint_sensitivity_schematic.pdf
-│   ├── dose_response.pdf
-│   ├── original_trajectory.pdf
-│   ├── ref_frame_paired.pdf                  # paired per-item reference-frame figure
+│   ├── fig1_audit_design.pdf                 # Fig. 1 audit design (mermaid)
+│   ├── fig2_headline.pdf                     # Fig. 2 headline reversal + reconstruction forest
+│   ├── fig3_competence.pdf                   # Fig. 3 trajectories / gap vs dev / pool readout
+│   ├── fig4_reference_frame.pdf              # Fig. 4 human-reference attenuation
+│   ├── fig5_donor_origin.pdf                 # Fig. 5 donor-provenance contrasts
 │   ├── released_perturbation.pdf             # A1 weight-noise figure
 │   └── per_item_gap_decomposition.pdf        # C coefficient / scatter figure
 ├── paper/

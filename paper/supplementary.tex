@@ -17,6 +17,8 @@
 \begin{document}
 \maketitle
 
+\renewcommand{\thefigure}{S\arabic{figure}}
+
 \section*{Overview}
 This supplement provides detailed appendices referenced in the main manuscript. Section labels match the labels used in the main text (e.g., \texttt{sec:appendix\_missing\_id} $\to$ Sup.\ Section~\ref{sec:appendix_missing_id}).
 
@@ -301,6 +303,17 @@ Signer$\times$Show           & combined        & 17  & $+10.14$ & $[+7.89, +11.9
 \end{table}
 
 The donor-cluster and donor two-way CIs ($[+8.87,+11.64]$ and $[+8.79,+11.74]$) match the query-level CI ($[+8.88,+11.62]$) to within 0.03 BLEU, so donor reuse (61/565 donors reused, max 6$\times$) does not materially inflate the item-level precision. The signer-cluster CI ($[+9.29,+11.39]$, 9 clusters) is slightly tighter than the query-level CI, consistent with within-signer positive correlation; with only 9 clusters the percentile coverage of this cluster bootstrap is unreliable, so it serves as a sensitivity reference rather than a confirmatory interval (as flagged in the main-text Discussion). The broadcast-show split has only 2 clusters (\emph{heute} 133 items, \emph{tagesschau} 508) and gives a wider CI ($[+5.16,+11.44]$); we report it as an illustrative sensitivity check without confirmatory weight. The broadcast-date (297 clusters) and signer$\times$show (17 clusters) CIs both match the query-level CI closely. All cluster designs are computed on the canonical materialization (the pre-exclusion version is reported as a sensitivity analysis in Sup.~N). The donor-pool decomposition analysis of \S\ref{sec:exposure_results} additionally reports separate one-way cluster bootstraps and a joint multiway replicate for the origin contrast, all matching to within $\pm 0.3$ (Appendix~\ref{sec:appendix_decomposition}).
+
+\section{Per-Item Reference-Frame Sensitivity (matched 461-item subset)}
+\label{sec:appendix_ref_frame_paired}
+The main-text Fig.~\ref{fig:ref_frame} reports corpus-level attenuation under the matched 461-item confidence=1 subset. The per-item paired view of the same subset is reproduced here (Fig.~\ref{fig:s1_ref_frame_paired}): sentence-level sacreBLEU (0--100, same tokenizer/smoothing as corpus BLEU), released-evaluator canonical hypotheses. Panel (a) plots per-item scores under original vs.\ human references for REC (recorded test poses) and PURE (replay probe); PURE points sit high under the original reference and collapse toward the diagonal under the human reference, whereas REC points move less. Panel (b) plots the per-item paired gap (PURE$-$REC) under original (x) vs.\ human (y) references; the star marks the mean (sentence-level mean gap $8.11 \to 0.09$, consistent in direction with the corpus-level attenuation $10.03 \to 0.95$). Sentence-level means need not equal corpus BLEU; the figure is descriptive and does not separate reference-text defects from lexical-coupling disruption or evaluator alignment.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.8\textwidth]{generated_figures/ref_frame_paired.pdf}
+\caption{Per-item reference-frame sensitivity on the matched 461-item confidence=1 subset (released evaluator, canonical hypotheses). See \S\ref{sec:appendix_ref_frame_paired} for details.}
+\label{fig:s1_ref_frame_paired}
+\end{figure}
 
 \section{Supplementary Oracle Diagnostics}
 \label{sec:appendix_oracle}
