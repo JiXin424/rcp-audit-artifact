@@ -36,7 +36,7 @@ The eight extension seeds are post-hoc additions that enter only the seed-level 
 \label{tab:extension_cells}
 \begin{tabular}{lrrrr}
 \toprule
-Seed & dev BLEU-4 & GT & PURE & Gap \\
+Seed & dev BLEU-4$^{\dagger}$ & GT & PURE & Gap \\
 \midrule
 707  & 6.69 & 9.86 & 8.97 & $-0.89$ \\
 808  & 7.30 & 9.87 & 8.38 & $-1.48$ \\
@@ -48,50 +48,58 @@ Seed & dev BLEU-4 & GT & PURE & Gap \\
 1405 & 8.12 & 8.05 & 6.86 & $-1.19$ \\
 \bottomrule
 \end{tabular}
+\par\smallskip
+\footnotesize $^\dagger$dev BLEU-4 is the training-time validation-selected value recorded by the original training protocol (legacy protocol; not comparable to the uniform full-pool free-decode dev BLEU-4 reported in main \S\ref{sec:insample}). GT, PURE, and Gap are canonical \S\ref{sec:retrieval} beam-3 values.
 \end{table}
 
 \section{Analysis Provenance and Multiplicity}
 \label{sec:provenance}
-Table~\ref{tab:provenance} classifies every analysis in this manuscript by when and why it entered the paper, its evidentiary status, and its multiplicity handling. The single primary estimand is the PURE--GT decoded-sacreBLEU gap under the released evaluator (\S\ref{sec:method}); everything else is secondary, and secondary results are either Holm-corrected within a defined family or explicitly descriptive.
+Table~\ref{tab:provenance} classifies every analysis in this manuscript by its role in the paper's argument, its evidentiary status, and its multiplicity handling. The single primary estimand is the PURE--REC decoded-sacreBLEU gap under the released evaluator (\S\ref{sec:method}); every other analysis is secondary and is grouped by the role it plays---confirmatory control, descriptive triangulation, robustness check, or administrative record. C = confirmatory (frozen protocol with error control); D = descriptive (no formal error control).
 
 \begin{table}[ht]
 \centering
 \scriptsize\setlength{\tabcolsep}{2pt}
-\caption{Analysis provenance. ``Prespecified'' = fixed before the headline result was observed; ``Post-hoc'' = added during the audit; ``Correction'' = supersedes an earlier pipeline error. C = confirmatory (frozen protocol, error control), D = descriptive (no formal error control).}
+\caption{Evidence-graded analysis registry. Rows are grouped by the role each analysis plays in the argument, not by when it was added.}
 \label{tab:provenance}
-\begin{tabular}{p{6.2cm}p{2.8cm}p{0.9cm}p{3.0cm}}
+\begin{tabular}{p{2.5cm}p{5.0cm}p{0.9cm}p{3.6cm}}
 \toprule
-Analysis & Provenance & Status & Multiplicity handling \\
+Evidence role & Analysis & Status & Multiplicity handling \\
 \midrule
-PURE--GT gap, original evaluator (primary estimand) & Exploratory-observed; protocol frozen afterwards & D & descriptive MC estimate $p\leq10^{-4}$ \\
-Protocol checks (scorer, FPS, decoding sweep) & Prespecified & C/D & exact-match / descriptive \\
-Conditioning controls (retrievers, gloss, random) & Prespecified & D & descriptive \\
-14 reconstruction gaps + prediction interval & 6 prespecified; 8 post-hoc & C/D & DiD CIs; PI descriptive \\
-Cross-metric gap table & Correction (metric alignment) & D & direction/sign only \\
-Template-density strata; donor-exclusion $\tau$-sweeps & Prespecified & D & descriptive \\
-Template-holdout, BT-retrain, cross-fit & Prespecified & C & paired bootstrap CIs \\
-Donor-pool substitution; canonical B/C/D path & Post-hoc & D & query-index bootstrap CIs \\
-Alternative paths, Shapley, S4 system; balance/caliper/signer & Post-hoc & D & path-sensitivity display \\
-605-query factorial (cells, effects, interaction) & Prespecified design & C & Holm across 3 contrasts \\
-Reference replacement (single/dual); overlap strata & Post-hoc & D & paired bootstrap of gap difference \\
-Transcript-slot diagnostic + extractor audit & Post-hoc & D & descriptive; extractor P/R \\
-Five related diagnostic views (\S\ref{sec:positive_evidence}) & Post-hoc & D & triangulation, not independent \\
-Oracle/white-box transfer matrix & Post-hoc; appendix-only & D & permutation check \\
-Competence gate, trajectories, Pareto, rescue (20); gate threshold sensitivity & Gate prespecified; rescue expanded & D & gate counts; 12-threshold grid \\
-Big-arch variants; long-schedule runs & Post-hoc & D & competence attempts \\
-In-sample readout diagnosis (train/dev/test) & Author-initiated & D & descriptive; no identity claim beyond released train.pt \\
-Rank stability (9 systems $\times$ 7 evaluators) & Post-hoc & D & $\tau_b$/$\rho$/flip means \\
-IPW pool-origin robustness & Post-hoc & D & balance robustness check \\
-Slot hypothesis-side audit & Post-hoc & D & extractor P/R by system \\
-Frozen-protocol confirmation (seeds 1506/1607) & Post-hoc & C (frozen protocol) & confirmation of family-side pattern \\
-Knowledge-distillation competence ladder (15 planned; 15 evaluated) & Post-hoc & D & 15 with gap + dev \\
-Per-$\alpha$ distillation breakdown (Q2) & Post-hoc & D & descriptive; all $\alpha$ firmly negative \\
-Competence extrapolation (OLS/GP) & Post-hoc & D & descriptive; non-IID; LOO CV (5 folds) \\
-Asymmetric floor-effect control (M4) & Post-hoc & D & BLEU-4/BLEU-1/chrF drops \\
-Evaluator$\times$reference factorial (7$\times$3) & Post-hoc & D & descriptive decomposition \\
-CSL-Daily readout-ratio check & Post-hoc & D & second-dataset boundary \\
-Per-seed extension cells (8 seeds) & Post-hoc & D & descriptive; PI only \\
-Ethics/licensing declarations & Updated each revision & --- & --- \\
+\emph{Primary estimand} & PURE--REC gap, original evaluator & D & descriptive MC estimate $p\leq10^{-4}$ \\
+\addlinespace
+\emph{Confirmatory} & 605-query donor-pool factorial (cells, effects, interaction) & C & Holm across 3 contrasts \\
+ & Template-holdout, BT-retrain, cross-fit & C & paired bootstrap CIs \\
+ & Protocol checks (scorer, FPS, decoding sweep) & C/D & exact-match / descriptive \\
+ & Frozen-protocol confirmation (seeds 1506/1607) & C & confirms family-side pattern \\
+\addlinespace
+\emph{Triangulating} & 14 reconstruction gaps + prediction interval & C/D & DiD CIs; PI descriptive \\
+ (Finding 1: & Cross-metric gap table & D & direction/sign only \\
+  non-replication) & Conditioning controls (retrievers, gloss, random) & D & descriptive \\
+ & Competence gate, trajectories, Pareto & D & gate counts; 12-threshold grid \\
+ & Knowledge-distillation ladder + per-$\alpha$ & D & 15 with gap + dev \\
+\addlinespace
+\emph{Triangulating} & Reference replacement (single/dual); overlap strata & D & paired bootstrap of gap difference \\
+ (Finding 2: & Asymmetric floor-effect control & D & BLEU-4/BLEU-1/chrF drops \\
+  reference sensitivity) & Evaluator$\times$reference factorial (7$\times$3) & D & descriptive decomposition \\
+\addlinespace
+\emph{Triangulating} & Five diagnostic views (readout-with-generalization) & D & triangulation, not independent \\
+ (Finding 3: & In-sample readout diagnosis (train/dev/test) & D & no identity claim beyond train.pt \\
+  readout signature) & Leakage sanity checks (permutation, equivariance) & D & exact-match / permutation \\
+\addlinespace
+\emph{Robustness} & Donor-pool substitution; canonical B/C/D path & D & query-index bootstrap CIs \\
+ & Alternative paths, Shapley, S4 system; balance/caliper/signer & D & path-sensitivity display \\
+ & Rescue families (20); big-arch; long-schedule & D & competence attempts \\
+ & Released-checkpoint perturbation sweep & D & lockstep collapse with competence \\
+ & IPW pool-origin robustness & D & balance robustness check \\
+ & Rank stability (9 systems $\times$ 7 evaluators) & D & $\tau_b$/$\rho$/flip means \\
+ & Competence extrapolation (OLS/GP) & D & non-IID; LOO CV (5 folds) \\
+ & Per-seed extension cells (8 seeds) & D & descriptive; PI only \\
+ & Oracle/white-box transfer matrix & D & permutation check \\
+ & Template-density strata; donor-exclusion $\tau$-sweeps & D & descriptive \\
+ & CSL-Daily readout-ratio check & D & second-dataset boundary \\
+ & Transcript-slot diagnostic + extractor audit & D & extractor P/R by system \\
+\addlinespace
+\emph{Administrative} & Ethics/licensing declarations & --- & updated each revision \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -103,7 +111,7 @@ Table~\ref{tab:checkpoint_registry} is the definitive registry of every BT evalu
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Canonical checkpoint registry. 70 planned training runs, all 70 completed training and beam-3 PHX-public evaluation. 67 non-holdout runs have dev metrics; 52 of these are non-distillation and enter the competence gate. 43 runs have both dev BLEU-4 and PHX-public PURE--GT gap (extrapolation-eligible). Plus the released original. Each family row's columns sum to the Total row.}
+\caption{Canonical checkpoint registry. 70 planned training runs, all 70 completed training. ``Beam-3 evaluation'' means a run was beam-3 decoded on at least the development set; of these 70 runs, 43 also have a canonical PHX-public PURE--REC gap under the \S\ref{sec:retrieval} donor registry (the remaining 27 were beam-3 evaluated on dev only and lack a canonical PHX-public PURE--REC gap). 67 non-holdout runs have dev metrics; 52 of these are non-distillation and enter the competence gate. 43 runs have both dev BLEU-4 and PHX-public PURE--GT gap (extrapolation-eligible). Plus the released original. Each family row's columns sum to the Total row.}
 \label{tab:checkpoint_registry}
 \begin{tabular}{p{4.2cm}p{1.0cm}p{1.5cm}p{1.4cm}p{1.4cm}p{3.0cm}}
 \toprule
@@ -254,7 +262,7 @@ Table~\ref{tab:perturbation} reports the full pose-perturbation battery. Reversi
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Pose-perturbation battery (corpus sacreBLEU, BLEU points) under the released evaluator and the best rescue checkpoint (wd0, seed 202).}
+\caption{Pose-perturbation battery (corpus sacreBLEU, BLEU points) under the released evaluator and the best rescue checkpoint (wd0, seed 202). The TN-PURE-v1 identity column here (23.79) reflects the pre-exclusion materialization used at the time this battery was decoded; the canonical materialization gives 23.02 (gap $+10.24$). Because the battery varies the pose and re-decodes, not the donor choice, the perturbation differentials are unaffected by the materialization difference (Sup.~N: mean $|\Delta\text{gap}| = 0.65$, max 1.45).}
 \label{tab:perturbation}
 \begin{tabular}{llrrrrrr}
 \toprule
@@ -275,27 +283,29 @@ The headline gap ($+10.24$, canonical \S\ref{sec:retrieval} registry) and the re
 \begin{table}[h]
 \centering
 \scriptsize
-\caption{Cluster-aware bootstrap for the headline PURE--GT gap (canonical \S\ref{sec:retrieval} registry, original refs). All CIs are 10{,}000-resample sacreBLEU \texttt{tok:13a} exp-smooth. With so few clusters (especially show with only 2), these are \emph{exploratory sensitivity checks}, not confirmatory tests.}
+\caption{Cluster-aware bootstrap for the headline PURE--REC gap (canonical \S\ref{sec:retrieval} registry, original refs, released-evaluator hypotheses from \texttt{results/gap\_43\_canonical\_beam3\_items/released\_\{gt,pure\}.json}). All CIs are 10{,}000-resample sacreBLEU \texttt{tok:13a} exp-smooth over precomputed per-item n-gram sufficient statistics. With so few clusters (especially show with only 2), these are \emph{exploratory sensitivity checks}, not confirmatory tests. Donor reuse: 641 queries select 565 unique donors (61 donors serve more than one query; maximum reuse 6; Gini 0.11).}
 \label{tab:cluster_bootstrap}
 \begin{tabular}{lrrrr}
 \toprule
 Analysis & Design & Clusters & Gap & 95\% CI \\
 \midrule
-Orig-ref gap (canonical) & Query & 641 & $+10.24$ & $[+8.89, +11.58]$ \\
-& Signer & 9 & --- & --- \\
-& Show & 2 & --- & --- \\
-& Date & 297 & --- & --- \\
-& Signer$\times$Show & 17 & --- & --- \\
+Query-level (baseline)       & item            & 641 & $+10.24$ & $[+8.88, +11.62]$ \\
+Donor cluster                & donor           & 565 & $+10.25$ & $[+8.87, +11.64]$ \\
+Donor two-way (query$\times$donor) & nested    & 565 & $+10.25$ & $[+8.79, +11.74]$ \\
+Signer                       & signer          & 9   & $+10.30$ & $[+9.29, +11.39]$ \\
+Broadcast show               & show            & 2   & $+9.27$  & $[+5.16, +11.44]$ \\
+Broadcast date               & date            & 297 & $+10.25$ & $[+8.83, +11.72]$ \\
+Signer$\times$Show           & combined        & 17  & $+10.14$ & $[+7.89, +11.91]$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The signer-cluster CI ($[+9.08, +10.84]$, 9 clusters) is slightly tighter than the query-level CI ($[+8.45, +11.40]$), consistent with the expectation that within-signer items are positively correlated. The broadcast-show cluster (2 clusters: \emph{heute} with 133 items, \emph{tagesschau} with 508) gives a wider CI ($[+6.56, +10.73]$) because resampling only 2 clusters introduces more variance, but the point estimate ($+9.26$) is close to the query-level. The broadcast-date clustering (297 clusters) matches the query-level CI closely ($[+8.38, +11.45]$). The previous 60-char prefix clustering (627 near-singleton clusters) has been replaced by these interpretable groupings because it provided negligible clustering effect. The donor-pool decomposition analysis of \S\ref{sec:exposure_results} additionally reports separate one-way cluster bootstraps and a joint multiway replicate for the origin contrast, all matching to within $\pm 0.3$ (Appendix~\ref{sec:appendix_decomposition}).
+The donor-cluster and donor two-way CIs ($[+8.87,+11.64]$ and $[+8.79,+11.74]$) match the query-level CI ($[+8.88,+11.62]$) to within 0.03 BLEU, so donor reuse (61/565 donors reused, max 6$\times$) does not materially inflate the item-level precision. The signer-cluster CI ($[+9.29,+11.39]$, 9 clusters) is slightly tighter than the query-level CI, consistent with within-signer positive correlation; with only 9 clusters the percentile coverage of this cluster bootstrap is unreliable, so it serves as a sensitivity reference rather than a confirmatory interval (as flagged in the main-text Discussion). The broadcast-show split has only 2 clusters (\emph{heute} 133 items, \emph{tagesschau} 508) and gives a wider CI ($[+5.16,+11.44]$); we report it as an illustrative sensitivity check without confirmatory weight. The broadcast-date (297 clusters) and signer$\times$show (17 clusters) CIs both match the query-level CI closely. All cluster designs are computed on the canonical materialization (the pre-exclusion version is reported as a sensitivity analysis in Sup.~N). The donor-pool decomposition analysis of \S\ref{sec:exposure_results} additionally reports separate one-way cluster bootstraps and a joint multiway replicate for the origin contrast, all matching to within $\pm 0.3$ (Appendix~\ref{sec:appendix_decomposition}).
 
 \section{Supplementary Oracle Diagnostics}
 \label{sec:appendix_oracle}
 \paragraph{Source-conditioned retrieval is legal, oracle-gloss retrieval is leakage.}
-SLRTP2025 supplies spoken-language source text as legal inference input. Under pure whole-donor copy, source-text Jaccard scores 23.8 sacreBLEU (0--100 scale, as throughout this appendix), LaBSE 19.2, and multi-SBERT 16.5; the PT-composed source-text condition scores 18.9 (Table~\ref{tab:isomorphic_conditioning}). Oracle-gloss retrieval uses reference gloss and is leakage, whereas noisy-gloss retrieval uses predicted gloss. Thus the strongest legal source-conditioned result is the 23.8 whole-donor stress test, which uses no generator or scaffold.
+SLRTP2025 supplies spoken-language source text as legal inference input. Under pure whole-donor copy, source-text Jaccard scores 23.02 sacreBLEU (0--100 scale, as throughout this appendix), LaBSE 19.2, and multi-SBERT 16.5; the PT-composed source-text condition scores 18.86 (Table~\ref{tab:isomorphic_conditioning}). Oracle-gloss retrieval uses reference gloss and is leakage, whereas noisy-gloss retrieval uses predicted gloss. Thus the strongest legal source-conditioned result is the 23.02 whole-donor stress test, which uses no generator or scaffold.
 \paragraph{Disclosure of selection/evaluation reuse.}
 The white-box oracle analyses in this appendix reuse the same target reference and evaluator for both donor selection and decoded evaluation. This is an intentional adversarial design: diagonal entries quantify susceptibility to a selector that knows its evaluator, not an independent validation of retrieval quality.
 
@@ -333,6 +343,7 @@ Condition & sacreBLEU & $\Delta$ vs GT & Reversal? \\
 \midrule
 GT baseline                             & 12.8 & ---   & --- \\
 Text-nearest pure (no exclusion)        & 23.8 & $+11.0$ & YES \\
+Text-nearest pure (canonical, w/ exclusion) & 23.02 & $+10.24$ & YES \\
 Exact-text excluded                     & 23.0 & $+10.2$ & YES \\
 $\tau{=}0.7$ (Jaccard $>$ 0.7 excluded) & 21.2 & $+8.4$ & YES \\
 $\tau{=}0.5$ (Jaccard $>$ 0.5 excluded) & 17.8 & $+5.0$ & YES \\
@@ -383,7 +394,7 @@ Truncating to 64/32 frames shrinks the gap from $+11.0$ to $+10.5$/$+5.6$ but th
 \toprule
 Control & Setup & GT & Retrieval & Gap \\
 \midrule
-Same evaluator & test split (template-overlap) & 12.8 & 23.8 & $+11.0$ \\
+Same evaluator & test split (template-overlap) & 12.8 & 23.02 & $+10.24$ \\
 Same evaluator & template-holdout (seen in training) & 77.0 & 20.1 & $-56.9$ \\
 BT-retrained (unseen holdout) & train-core 6{,}535 & 6.2 & 5.4 & $-0.9$ \\
 Retrained BT on PHX-public & unseen to both & 8.7 & 8.3 & $-0.4$ \\
@@ -419,55 +430,6 @@ BM25 / TF-IDF nearest & 1.75 / 2.36 & 10.8 / 8.8 & --- \\
 
 The SLRTP2025 test vocabulary is nearly closed (95.4\% gloss types in train); nearest donors share mean gloss unigram containment 0.557 and bigram-Jaccard 0.302, but Progressive Transformer outputs show no donor-proximity effect ($\rho{=}{-}0.06$, $p{=}0.12$), versus $+0.29$ for retrieval.
 
-\section{DGS Human Evaluation Details}
-\label{sec:appendix_human_eval}
-This appendix gives the full data for the blind DGS human evaluation feasibility study described in \S\ref{sec:human_eval_feasibility}. The 100 video files and the UUID-to-system manifest were lost after the evaluation was completed, so per-system analyses cannot be made directly. We instead report the rank-based profile and a 120-permutation exploration that bounds what could be inferred if the mapping were recovered.
-
-\paragraph{Per-rank profile.}
-For each of the 20 target sentences, the 5 videos were ranked by mean semantic-adequacy across the 30 raters (rank 1 = highest, rank 5 = lowest). Per-rank aggregate (mean across the 20 targets):
-
-\begin{table}[h]
-\centering
-\scriptsize
-\caption{Per-rank profile across 20 target sentences (30 raters per video; 5 videos per target). Ranks are defined by mean semantic-adequacy within each target; the table is descriptive only.}
-\label{tab:appendix_human_eval_rank}
-\begin{tabular}{lrrrrr}
-\toprule
-Rank & $n$ & Semantic mean (SD) & Intell.\ mean & Naturalness mean & Semantic 95\% CI \\
-\midrule
-1 & 20 & 4.48 (0.16) & 3.82 & 3.90 & $[4.41, 4.55]$ \\
-2 & 20 & 3.62 (0.67) & 3.75 & 3.48 & $[3.31, 3.94]$ \\
-3 & 20 & 2.89 (0.88) & 3.38 & 3.34 & $[2.48, 3.30]$ \\
-4 & 20 & 2.28 (0.67) & 3.38 & 3.54 & $[1.97, 2.59]$ \\
-5 & 20 & 1.83 (0.43) & 3.59 & 3.71 & $[1.63, 2.03]$ \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\paragraph{Inter-rater agreement.}
-Krippendorff's $\alpha$ (ordinal) on the complete rater $\times$ video matrix ($30 \times 100$):
-\begin{itemize}
-\item Semantic adequacy: $\alpha = 0.543$
-\item Intelligibility: $\alpha = 0.480$
-\item Naturalness: $\alpha = 0.490$
-\end{itemize}
-These values are in the moderate-agreement range (Krippendorff's conventional threshold for ``substantial'' agreement is $\alpha \geq 0.667$; moderate is $0.44 \leq \alpha < 0.667$). The semantic-adequacy scale, which is the most directly relevant for the BT-reversal question, has the highest agreement of the three.
-
-\paragraph{Permutation exploration (no ground-truth mapping).}
-The 100 videos were rendered from 5 canonical systems (GT, PT-v1, TN-PURE-v1, TN-PTCOMP-v1, random donor) on 20 target sentences, with system labels replaced by UUIDs for blind rating. Without the lost UUID-to-system manifest, no per-system analysis is possible. For transparency, we explored all 120 permutations of the 5 systems against the 5 DGS-rank positions. The Spearman correlation between corpus BT-BLEU (paper-reported: GT 12.78, PT 1.59, PURE 23.79, COMP 18.86, random 0.90) and per-rank mean DGS-semantic-adequacy ranges from $\rho = -0.97$ (most inverted) to $\rho = +0.98$ (most concordant); without the manifest we cannot identify which permutation is correct. We therefore make no per-system claim from the human evaluation.
-
-\paragraph{What is independent of the mapping.}
-The following findings hold for any UUID-to-system permutation, because they are rank-based:
-\begin{enumerate}
-\item DGS raters agree moderately on semantic adequacy ($\alpha = 0.54$), confirming that semantic judgment is possible without the BT-decoded text.
-\item The 5 videos per target span a wide DGS-semantic range (top rank 4.48 vs bottom rank 1.83, $\Delta = 2.65$ on a 1--5 scale).
-\item Because ranks are defined by semantic adequacy, the rank profile is descriptive rather than an independent test. Naturalness and intelligibility show less variation across these semantic rank bins, but the lost manifest prevents any system-level attribution.
-\end{enumerate}
-The mapping-independent result is moderate inter-rater agreement on semantic adequacy ($\alpha = 0.54$). The rank profile (top vs.\ bottom video) is descriptive and cannot support system attribution or a correlation analysis against decoded BT-text metrics: top and bottom ranks differ by construction because they are defined by the semantic-adequacy scores, and after the manifest was lost we cannot test whether the rank order is concordant or inverted with corpus BT-BLEU.
-
-\paragraph{Limitations of this human evaluation.}
-First, the lost manifest prevents per-system claims; a re-rendering of the 100 videos from the canonical pose tensors and a re-rating would restore the per-system analysis. Second, DGS-fluent raters were not asked to judge spatial grammar, indexation, or non-manual markers (mouth shapes, head tilt, eye gaze); the semantic-adequacy scale is a holistic target-meaning match. Third, we did not collect rater demographics (age, L1/L2 status, signing experience) separately; recruitment was through DGS-fluent channels. Fourth, the target-sentence set is 20 German weather sentences from PHX-public; results may not generalize beyond this domain.
-
 \section{Transcript-Slot Diagnostic Details}
 \label{sec:appendix_slot}
 This appendix documents the rule-based German weather slot extractor referenced in \S\ref{sec:slot_f1}. The extractor identifies four slot families (number/temperature, time, place, weather-event) using a frozen lexicon and normalization rules. On a 50-reference audit (seed 20260729), per-family precision was 0.91--1.00 and recall 0.75--1.00 (overall precision 0.97, recall 0.86); errors are dominated by recall misses from inflections, compounds, and lexicon gaps. A stratified audit of 50 decoded hypotheses (25 GT-decode, 25 PURE-decode, seed 20260730) showed precision nearly equal (0.96 vs 0.97) but recall lower on PURE-decode (0.83 vs 0.91), because donor-transcript-style outputs use more inflected verbs and compounds (\emph{regnet}, \emph{unwetterwarnungen}) that the lexicon misses. The measured PURE slot-F1 is thus attenuated more than GT's, so the PURE${>}$GT contrast is, if anything, underestimated. The audit used a single auditor; inter-annotator agreement is unavailable. The full lexicon, normalization rules, and per-family precision/recall are in the artifact.
@@ -480,12 +442,12 @@ This appendix gives the full OLS/GP extrapolation analysis referenced in \S\ref{
 We fit the gap--competence dose--response over all 43 evaluated checkpoints spanning dev BLEU-4 $[4.5, 10.9]$ using three models: OLS linear, OLS quadratic, and a Gaussian Process with RBF + white kernel. Each model predicts the PURE--GT gap at dev BLEU-4 $=13.38$.
 
 \paragraph{Results.}
-Table~\ref{tab:extrapolation} reports the predictions and 95\% PIs at dev BLEU-4 $=13.38$. All predictions are negative, far below the observed $+11.01$. Table~\ref{tab:loo_extrapolation} reports a leave-one-family-out cross-validation; the OLS quadratic prediction is the most sensitive (flips from $-13.5$ to $+1.3$ when the 15 distillation students are removed), while the GP upper bound stays below $+2.0$ across all five folds.
+Table~\ref{tab:extrapolation} reports the predictions and 95\% PIs at dev BLEU-4 $=13.38$. All predictions are negative, far below the observed canonical $+10.24$. Table~\ref{tab:loo_extrapolation} reports a leave-one-family-out cross-validation; the OLS quadratic prediction is the most sensitive (flips from $-13.5$ to $+1.3$ when the 15 distillation students are removed), while the GP upper bound stays below $+2.0$ across all five folds.
 
 \begin{table}[h]
 \centering
 \small
-\caption{Competence extrapolation: gap predictions at dev BLEU-4 $=13.38$ from three fits over 43 checkpoints (dev BLEU-4 4.5--10.9). All predictions are far below the observed $+11.01$. PIs are \emph{descriptive} (non-IID checkpoints); they should not be read as calibrated uncertainty intervals.}
+\caption{Competence extrapolation: gap predictions at dev BLEU-4 $=13.38$ from three fits over 43 checkpoints (dev BLEU-4 4.5--10.9). All predictions are far below the observed canonical $+10.24$. PIs are \emph{descriptive} (non-IID checkpoints); they should not be read as calibrated uncertainty intervals.}
 \label{tab:extrapolation}
 \begin{tabular}{lrrr}
 \toprule
@@ -495,7 +457,7 @@ OLS linear & 0.58 & $-6.4$ & $[-9.5, -3.3]$ \\
 OLS quadratic & 0.78 & $-13.5$ & $[-16.9, -10.1]$ \\
 Gaussian Process (RBF + white) & $-29.5$ & $-2.1$ & $[-6.3, +2.0]$ \\
 \midrule
-Released evaluator (observed) & --- & $+11.01$ & $[+9.6, +12.4]$ \\
+Released evaluator (observed, canonical) & --- & $+10.24$ & $[+8.88, +12.4]$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -653,6 +615,22 @@ Test (unseen) & 500 & 12.19 & 0.032 & 9 (same) \\
 \end{tabular}
 \end{table}
 The same signers appear in both splits. The 67-point BLEU gap between seen and unseen items is consistent with training-pool exposure contributing to the readout, but without full covariate matching (length, text-similarity, template density), we cannot attribute the gap solely to exposure vs.\ distributional shift.
+
+\section{Pre-Exclusion Materialization Sensitivity}
+\label{sec:appendix_materialization}
+The canonical \S\ref{sec:retrieval} donor registry applies exact-normalized-text exclusion. An earlier frozen materialization predating this exclusion gives PURE 23.79 (gap $+11.01$) instead of the canonical 23.02 (gap $+10.24$). We retain it only as a sensitivity analysis.
+
+\paragraph{Per-item provenance.} On 610/641 items (95.2\%) both materializations produce identical donor choices. On the 31 differing items, a post-hoc candidate search found that 30 had at least one excluded Jaccard=1.0 candidate whose released-evaluator decode matched the earlier hypothesis, consistent with the exclusion rule explaining the difference on those items; one item remained unresolved (\texttt{results/donor\_identification\_31.json}).
+
+\paragraph{14-reconstruction sensitivity.} Re-decoding all 14 reconstruction checkpoints under both materializations gives mean $|\Delta\text{gap}| = 0.65$ BLEU (max 1.45). The sign of the gap is unchanged on every checkpoint, and the 14-seed prediction interval remains strictly negative under both materializations, so the non-replication conclusion is unaffected. All headline numbers in the main text and in Sup.~G use the canonical materialization (SHA-256 \texttt{9170a53026ab3263b451a3632a9e02318745acabf12f0b679921477afbefa301}); this appendix is the only place the pre-exclusion values appear.
+
+\section{BLEURT-Substitute Validation}
+\label{sec:appendix_bleurt}
+Canonical BLEURT-20 ships a TensorFlow checkpoint that does not load cleanly in our PyTorch-only environment. As a non-standard substitute we use \texttt{Elron/bleurt-large-512} for one secondary reference-sensitivity check only (the BLEURT row of the reference-frame analysis). It is not used for any primary claim, table, or figure, and is not described as equivalent to BLEURT-20.
+
+\paragraph{Validation.} On 100 German sentence pairs we scored both canonical BLEURT-20 (via the reference TensorFlow runtime in an isolated CPU container) and the substitute. The substitute has Spearman rank correlation $r = 0.87$ against canonical BLEURT-20 and a mean signed bias of $-0.47$ (substitute scores lower on average). The bias is roughly uniform across score levels and does not change the qualitative reference-sensitivity conclusion (BLEURT is less sensitive to reference replacement than BLEU, consistent with Czehmann et al.~\cite{czehmann2026sacred}). Full per-pair scores, the container hash, and the substitute model revision are in the artifact.
+
+\paragraph{Scope limit.} Because the substitute is not BLEURT-20, the BLEURT row is demoted from the main metric panel to this appendix. Readers should treat the absolute BLEURT-substitute values as approximate; only the directional reference-sensitivity finding is reported.
 
 
 \bibliography{references}

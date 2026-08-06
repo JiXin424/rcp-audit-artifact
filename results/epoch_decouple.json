@@ -1,0 +1,71 @@
+{
+ "schema": "epoch-decouple-D-v1",
+ "records": [
+  {
+   "label": "rescue_wd0_best",
+   "ckpt": "checkpoints/rescue/seed_202_wd0/best.ckpt",
+   "gt_bleu": 9.876997087566306,
+   "pure_bleu": 8.290383231880073,
+   "dev_bleu": 8.94020691456465,
+   "train_bleu": 8.919655143594191,
+   "train_em": 0.019830028328611898,
+   "elapsed_s": 84.03771924972534,
+   "gap": -1.5866138556862328
+  },
+  {
+   "label": "rescue_wd0_ep25",
+   "ckpt": "checkpoints/rescue/seed_202_wd0/epoch_0025.ckpt",
+   "gt_bleu": 5.8537688911405015,
+   "pure_bleu": 4.772828962622024,
+   "dev_bleu": 5.6698868515763685,
+   "train_bleu": 5.664699055521207,
+   "train_em": 0.015722379603399433,
+   "elapsed_s": 68.3750069141388,
+   "gap": -1.080939928518477
+  },
+  {
+   "label": "rescue_wd0_ep50",
+   "ckpt": "checkpoints/rescue/seed_202_wd0/epoch_0050.ckpt",
+   "gt_bleu": 8.532869849114311,
+   "pure_bleu": 7.538229838196778,
+   "dev_bleu": 8.152375414846427,
+   "train_bleu": 7.7894557600939125,
+   "train_em": 0.019263456090651557,
+   "elapsed_s": 74.73599624633789,
+   "gap": -0.9946400109175331
+  },
+  {
+   "label": "longsched_s202_best",
+   "ckpt": "checkpoints/long_schedule/seed_202/best.ckpt",
+   "gt_bleu": 10.135759351997688,
+   "pure_bleu": 8.43405215059487,
+   "dev_bleu": 8.774732881793268,
+   "train_bleu": 8.855191500708273,
+   "train_em": 0.019546742209631728,
+   "elapsed_s": 76.32510924339294,
+   "gap": -1.7017072014028187
+  },
+  {
+   "label": "longsched_s202_ep25",
+   "ckpt": "checkpoints/long_schedule/seed_202/epoch_0025.ckpt",
+   "gt_bleu": 5.777153165487558,
+   "pure_bleu": 4.38579519446938,
+   "dev_bleu": 5.166215025368301,
+   "train_bleu": 5.475856000204943,
+   "train_em": 0.015580736543909348,
+   "elapsed_s": 65.94921970367432,
+   "gap": -1.391357971018178
+  },
+  {
+   "label": "longsched_s202_ep50",
+   "ckpt": "checkpoints/long_schedule/seed_202/epoch_0050.ckpt",
+   "gt_bleu": 8.668510130152955,
+   "pure_bleu": 7.731825730472571,
+   "dev_bleu": 8.094036012746553,
+   "train_bleu": 7.803314541566731,
+   "train_em": 0.018980169971671387,
+   "elapsed_s": 69.44592905044556,
+   "gap": -0.9366843996803835
+  }
+ ]
+}

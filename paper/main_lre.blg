@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main_lre.aux
+The style file: sn-chicago.bst
+Database file #1: references.bib
+sn-chicago.bst [2024/07/19 v1.1 Chicago bibliography style]
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--no number and no volume in backtranslation2
+Warning--page numbers missing in backtranslation2
+Warning--no number and no volume in hong2026conditional
+Warning--page numbers missing in hong2026conditional
+Warning--no number and no volume in darslp
+Warning--page numbers missing in darslp
+You've used 23 entries,
+            3209 wiz_defined-function locations,
+            815 strings with 11650 characters,
+and the built_in function-call counts, 21809 in all, are:
+= -- 1625
+> -- 2173
+< -- 7
++ -- 696
+- -- 710
+* -- 2123
+:= -- 3955
+add.period$ -- 84
+call.type$ -- 23
+change.case$ -- 225
+chr.to.int$ -- 23
+cite$ -- 29
+duplicate$ -- 576
+empty$ -- 1117
+format.name$ -- 786
+if$ -- 4168
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 23
+newline$ -- 127
+num.names$ -- 230
+pop$ -- 268
+preamble$ -- 1
+purify$ -- 363
+quote$ -- 0
+skip$ -- 519
+stack$ -- 0
+substring$ -- 782
+swap$ -- 188
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 460
+warning$ -- 6
+while$ -- 182
+width$ -- 0
+write$ -- 331
+(There were 6 warnings)

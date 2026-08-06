@@ -1,0 +1,17 @@
+\begin{thebibliography}{}
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\bibcommenthead
+
+\bibitem[\protect\citeauthoryear{Czehmann, Yazdani, Hamidullah, Nunnari, and
+  Avramidis}{Czehmann et~al.}{2025}]{czehmann2026sacred}
+Czehmann, V., S.~Yazdani, Y.~Hamidullah, F.~Nunnari, and E.~Avramidis 2025.
+\newblock {``A Sacred Bird Called the Phoenix''}: Auditing the most-used
+  parallel corpus for {German} sign language recognition and translation.
+\newblock In {\em Proceedings of the LREC2026 12th Workshop on the
+  Representation and Processing of Sign Languages: Language in Motion}, Palma,
+  Mallorca, Spain, pp.\  80--92. ELRA Language Resources Association.
+\newblock ISBN 978-2-493814-82-1. Back-translated test set and annotations:
+  \url{https://github.com/DFKI-SignLanguage/sacre-bird-phoenix} (CC BY-NC-SA
+  4.0).
+
+\end{thebibliography}

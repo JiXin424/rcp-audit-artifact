@@ -31,6 +31,9 @@ def corpus_bleu(hyps, refs):
 def load_items(name):
     gt = json.load(open(ITEMS / f"{name}_gt.json"))
     pure = json.load(open(ITEMS / f"{name}_pure.json"))
+    # sort by id so bootstrap positional indices match donor_cluster_bootstrap.py
+    gt.sort(key=lambda x: x["id"])
+    pure.sort(key=lambda x: x["id"])
     ids = [it["id"] for it in gt]
     refs = [it["reference"] for it in gt]
     gt_h = [it["hypothesis"] for it in gt]
@@ -48,18 +51,27 @@ def main():
     gap = pure_b - gt_b
     results["headline"] = {"gt": gt_b, "pure": pure_b, "gap": gap}
 
-    # 2. Bootstrap CI
-    rng = np.random.RandomState(42)
+    # 2. Bootstrap CI (precomputed per-item n-gram statistics for speed)
+    import numpy as _np
+    def _item_stats(hyps, refs_):
+        stats = []
+        for h, r in zip(hyps, refs_):
+            rk = BLEU._extract_reference_info([r])
+            stats.append(BLEU._compute_segment_statistics(h, rk))
+        return _np.asarray(stats, dtype=_np.int64)
+    def _bleu_idx(stats_arr, idx):
+        agg = stats_arr[idx].sum(axis=0).tolist()
+        return BLEU._compute_score_from_stats(agg).score
+    gt_stats = item_stats_gt = _item_stats(gt_h, refs)
+    pure_stats = _item_stats(pure_h, refs)
+    rng = _np.random.RandomState(42)
     N = len(ids)
-    gaps = []
-    for _ in range(10000):
+    gaps = _np.empty(10000)
+    for b in range(10000):
         idx = rng.randint(0, N, N)
-        g = corpus_bleu([gt_h[j] for j in idx], [refs[j] for j in idx])
-        p = corpus_bleu([pure_h[j] for j in idx], [refs[j] for j in idx])
-        gaps.append(p - g)
-    gaps = np.array(gaps)
+        gaps[b] = _bleu_idx(pure_stats, idx) - _bleu_idx(gt_stats, idx)
     results["headline"]["bootstrap_ci"] = [
-        float(np.percentile(gaps, 2.5)), float(np.percentile(gaps, 97.5))]
+        float(_np.percentile(gaps, 2.5)), float(_np.percentile(gaps, 97.5))]
 
     # 3. 14-seed reconstruction PI
     reco_gaps = []

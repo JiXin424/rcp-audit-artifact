@@ -1,0 +1,120 @@
+{
+ "schema": "donor-cluster-bootstrap-v1",
+ "materialization": "canonical (released_{gt,pure}.json, exclusion-fixed donor registry)",
+ "n_resample": 10000,
+ "seed": 42,
+ "canonical_gap": 10.24331582979233,
+ "donor_reuse": {
+  "n_queries": 641,
+  "n_unique_donors": 565,
+  "max_reuse": 6,
+  "reuse_histogram": {
+   "1": 504,
+   "2": 51,
+   "3": 7,
+   "4": 2,
+   "6": 1
+  },
+  "gini": 0.1079839299766681,
+  "n_donors_reused_gt1": 61,
+  "top10_donors": [
+   [
+    "09August_2011_Tuesday_heute-2640",
+    6
+   ],
+   [
+    "28April_2010_Wednesday_heute-5181",
+    4
+   ],
+   [
+    "18May_2010_Tuesday_tagesschau-3577",
+    4
+   ],
+   [
+    "21November_2011_Monday_tagesschau-2261",
+    3
+   ],
+   [
+    "28October_2009_Wednesday_tagesschau-4546",
+    3
+   ],
+   [
+    "04September_2010_Saturday_tagesschau-7315",
+    3
+   ],
+   [
+    "28September_2010_Tuesday_heute-8358",
+    3
+   ],
+   [
+    "11February_2010_Thursday_tagesschau-8764",
+    3
+   ],
+   [
+    "27July_2010_Tuesday_heute-5266",
+    3
+   ],
+   [
+    "28August_2010_Saturday_tagesschau-8192",
+    3
+   ]
+  ]
+ },
+ "bootstraps": {
+  "query_level": {
+   "n_items": 641,
+   "gap_mean": 10.242085712663878,
+   "ci_lo": 8.881252286163638,
+   "ci_hi": 11.618353319955986
+  },
+  "donor": {
+   "n_clusters": 565,
+   "max_cluster_size": 6,
+   "mean_cluster_size": 1.1345132743362831,
+   "gap_mean": 10.249618418384333,
+   "ci_lo": 8.869338846406192,
+   "ci_hi": 11.635723974410578
+  },
+  "signer": {
+   "n_clusters": 9,
+   "max_cluster_size": 196,
+   "mean_cluster_size": 71.22222222222223,
+   "gap_mean": 10.295140357157106,
+   "ci_lo": 9.29497243765267,
+   "ci_hi": 11.38978263576005
+  },
+  "show": {
+   "n_clusters": 2,
+   "max_cluster_size": 508,
+   "mean_cluster_size": 320.5,
+   "gap_mean": 9.268413235194496,
+   "ci_lo": 5.161670632956647,
+   "ci_hi": 11.439707346436409
+  },
+  "broadcast_date": {
+   "n_clusters": 297,
+   "max_cluster_size": 11,
+   "mean_cluster_size": 2.1582491582491583,
+   "gap_mean": 10.250952424376207,
+   "ci_lo": 8.826910485370247,
+   "ci_hi": 11.724074229962358
+  },
+  "signer_x_show": {
+   "n_clusters": 17,
+   "max_cluster_size": 162,
+   "mean_cluster_size": 37.705882352941174,
+   "gap_mean": 10.13520421463815,
+   "ci_lo": 7.890588370458284,
+   "ci_hi": 11.911286255312657
+  },
+  "donor_two_way": {
+   "n_clusters": 565,
+   "max_cluster_size": 6,
+   "mean_cluster_size": 1.1345132743362831,
+   "gap_mean": 10.247101488081103,
+   "ci_lo": 8.789601022161461,
+   "ci_hi": 11.74377876476422
+  }
+ },
+ "elapsed_s": 114.02588510513306
+}

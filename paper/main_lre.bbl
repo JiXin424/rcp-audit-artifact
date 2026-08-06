@@ -1,0 +1,188 @@
+\begin{thebibliography}{}
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\bibcommenthead
+
+\bibitem[\protect\citeauthoryear{Alkain, N{\'u}{\~n}ez-Marcos, Escolano,
+  Doc{\'i}o-Fern{\'a}ndez, Perez-de Vi{\~n}aspre, and Labaka}{Alkain
+  et~al.}{2026}]{alkain2026critical}
+Alkain, B., A.~N{\'u}{\~n}ez-Marcos, C.~Escolano, L.~Doc{\'i}o-Fern{\'a}ndez,
+  O.~Perez-de Vi{\~n}aspre, and G.~Labaka. 2026.
+\newblock Critical analysis of datasets for sign language translation.
+\newblock {\em Frontiers in Artificial Intelligence\/}~9: 1743223.
+\newblock \doi{10.3389/frai.2026.1743223} .
+
+\bibitem[\protect\citeauthoryear{Artiaga, Kamila, Afli, Lynch, and
+  Hasanuzzaman}{Artiaga et~al.}{2025}]{artiaga2025signer}
+Artiaga, K., S.~Kamila, H.~Afli, C.~Lynch, and M.~Hasanuzzaman 2025.
+\newblock Rethinking sign language translation: The impact of signer dependence
+  on model evaluation.
+\newblock In {\em Findings of the Association for Computational Linguistics:
+  EMNLP 2025}, Suzhou, China, pp.\  18379--18391. Association for Computational
+  Linguistics.
+
+\bibitem[\protect\citeauthoryear{Camgoz, Hadfield, Koller, Ney, and
+  Bowden}{Camgoz et~al.}{2018}]{camgoz2018neural}
+Camgoz, N.C., S.~Hadfield, O.~Koller, H.~Ney, and R.~Bowden 2018.
+\newblock Neural sign language translation.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pp.\  7784--7793.
+
+\bibitem[\protect\citeauthoryear{Carlini, Tramer, Wallace, Jagielski,
+  Herbert-Voss, Lee, Roberts, Brown, Song, Erlingsson, Oprea, and
+  Raffel}{Carlini et~al.}{2021}]{carlini2021extracting}
+Carlini, N., F.~Tramer, E.~Wallace, M.~Jagielski, A.~Herbert-Voss, K.~Lee,
+  A.~Roberts, T.~Brown, D.~Song, U.~Erlingsson, A.~Oprea, and C.~Raffel 2021.
+\newblock Extracting training data from large language models.
+\newblock In {\em 30th USENIX Security Symposium (USENIX Security 21)}, pp.\
+  2633--2650.
+
+\bibitem[\protect\citeauthoryear{Cory, Ivashechkin, Sahin, Ranum, Low, Fish,
+  Pelykh, et~al.}{Cory et~al.}{2025}]{backtranslation2}
+Cory, O., M.~Ivashechkin, K.~Sahin, O.~Ranum, J.~Low, E.~Fish, A.~Pelykh,
+  et~al. 2025.
+\newblock {BackTranslation2.0}: A linguistically motivated metric to assess
+  sign language production.
+\newblock {\em arXiv preprint arXiv:2606.28673\/}.
+\newblock {\href{https://arxiv.org/abs/2606.28673}{{arXiv:2606.28673}}} .
+
+\bibitem[\protect\citeauthoryear{Czehmann, Yazdani, Hamidullah, Nunnari, and
+  Avramidis}{Czehmann et~al.}{2025}]{czehmann2026sacred}
+Czehmann, V., S.~Yazdani, Y.~Hamidullah, F.~Nunnari, and E.~Avramidis 2025.
+\newblock {``A Sacred Bird Called the Phoenix''}: Auditing the most-used
+  parallel corpus for {German} sign language recognition and translation.
+\newblock In {\em Proceedings of the LREC2026 12th Workshop on the
+  Representation and Processing of Sign Languages: Language in Motion}, Palma,
+  Mallorca, Spain, pp.\  80--92. ELRA Language Resources Association.
+\newblock ISBN 978-2-493814-82-1. Back-translated test set and annotations:
+  \url{https://github.com/DFKI-SignLanguage/sacre-bird-phoenix} (CC BY-NC-SA
+  4.0).
+
+\bibitem[\protect\citeauthoryear{He, Rahul, Hupkes, and Cotterell}{He
+  et~al.}{2024}]{he2023blind}
+He, T., K.~Rahul, D.~Hupkes, and R.~Cotterell 2024.
+\newblock On the blind spots of model-based evaluation metrics for text
+  generation.
+\newblock In {\em Proceedings of the 18th Conference of the European Chapter of
+  the Association for Computational Linguistics}.
+
+\bibitem[\protect\citeauthoryear{Hong and {Ko{\v{s}}eck{\'{a}}, Jana}}{Hong and
+  {Ko{\v{s}}eck{\'{a}}, Jana}}{2025}]{hong2026conditional}
+Hong, R. and {Ko{\v{s}}eck{\'{a}}, Jana}. 2025.
+\newblock Conditional collapse in sign language production: A diagnostic and a
+  scaling argument.
+\newblock {\em arXiv preprint arXiv:2606.01643\/}.
+\newblock {\href{https://arxiv.org/abs/2606.01643}{{arXiv:2606.01643}}}
+  {[cs.CV]}.
+
+\bibitem[\protect\citeauthoryear{Imai}{Imai}{2025}]{silverscore}
+Imai, S. 2025.
+\newblock {SiLVERScore}: Why aren't semantically-aware embeddings used for sign
+  language generation evaluation?
+\newblock In {\em Proceedings of the International Conference on Recent
+  Advances in Natural Language Processing (RANLP 2025)}, pp.\  519--528.
+
+\bibitem[\protect\citeauthoryear{Jiang et~al.}{Jiang
+  et~al.}{2025}]{jiang2025meaningful}
+Jiang, Z. et~al. 2025.
+\newblock Meaningful pose-based sign language evaluation.
+\newblock In {\em Proceedings of the 10th Workshop on Machine Translation
+  (WMT)}.
+
+\bibitem[\protect\citeauthoryear{Kandpal, Wallace, and Raffel}{Kandpal
+  et~al.}{2022}]{kandpal2022memorization}
+Kandpal, N., E.~Wallace, and C.~Raffel 2022.
+\newblock Looking inside my memory: Quantifying memorization in language
+  models.
+\newblock In {\em Findings of EMNLP}.
+
+\bibitem[\protect\citeauthoryear{Khandelwal, Fan, Jurafsky, Zettlemoyer, and
+  Lewis}{Khandelwal et~al.}{2020}]{khandelwal2020knnlm}
+Khandelwal, U., A.~Fan, D.~Jurafsky, L.~Zettlemoyer, and M.~Lewis 2020.
+\newblock Generalization through memorization: Nearest neighbor language
+  models.
+\newblock In {\em International Conference on Learning Representations (ICLR)}.
+
+\bibitem[\protect\citeauthoryear{Kim, Huerta-Enochian, Ko, and Lee}{Kim
+  et~al.}{2024}]{signbleu}
+Kim, J.H., M.~Huerta-Enochian, C.~Ko, and D.H. Lee 2024, May.
+\newblock {SignBLEU}: Automatic evaluation of multi-channel sign language
+  translation.
+\newblock In {\em Proceedings of the 2024 Joint International Conference on
+  Computational Linguistics, Language Resources and Evaluation (LREC-COLING
+  2024)}, Torino, Italia, pp.\  14796--14811. ELRA and ICCL.
+
+\bibitem[\protect\citeauthoryear{Post}{Post}{2018}]{post2018sacrebleu}
+Post, M. 2018.
+\newblock A call for clarity in reporting {BLEU} scores.
+\newblock In {\em Proceedings of the Third Conference on Machine Translation:
+  Research Papers}, pp.\  186--191.
+
+\bibitem[\protect\citeauthoryear{Saunders, Camgoz, and Bowden}{Saunders
+  et~al.}{2020}]{saunders2020progressive}
+Saunders, B., N.C. Camgoz, and R.~Bowden 2020.
+\newblock Progressive transformers for end-to-end sign language production.
+\newblock In {\em European Conference on Computer Vision}.
+
+\bibitem[\protect\citeauthoryear{Saunders, Camg{\"o}z, and Bowden}{Saunders
+  et~al.}{2021}]{saunders2021continuous}
+Saunders, B., N.C. Camg{\"o}z, and R.~Bowden. 2021.
+\newblock Continuous {3D} multi-channel sign language production via
+  progressive transformers and mixture density networks.
+\newblock {\em International Journal of Computer Vision\/}~129: 2113--2135.
+\newblock \doi{10.1007/s11263-021-01457-9} .
+
+\bibitem[\protect\citeauthoryear{Tasyurek, Kiziltepe, and Keles}{Tasyurek
+  et~al.}{2025}]{darslp}
+Tasyurek, S.M., T.~Kiziltepe, and H.Y. Keles. 2025.
+\newblock Disentangle and regularize: Sign language production with
+  articulator-based disentanglement and channel-aware regularization.
+\newblock {\em arXiv preprint arXiv:2504.06610\/}.
+\newblock {\href{https://arxiv.org/abs/2504.06610}{{arXiv:2504.06610}}} .
+
+\bibitem[\protect\citeauthoryear{Walsh, Fish, Mercanoglu~Sincan, Lakhal,
+  Bowden, Fox, Woll, Wu, Li, Zhao, Wang, Zhou, Li, Tang, He, Wang, Zhang, Wang,
+  Cheng, Tasyurek, Kiziltepe, and Keles}{Walsh et~al.}{2025}]{slrtp2025}
+Walsh, H., E.~Fish, O.~Mercanoglu~Sincan, M.I. Lakhal, R.~Bowden, N.~Fox,
+  B.~Woll, K.~Wu, Z.~Li, W.~Zhao, H.~Wang, W.~Zhou, H.~Li, S.~Tang, J.~He,
+  X.~Wang, R.~Zhang, Y.~Wang, L.~Cheng, M.~Tasyurek, T.~Kiziltepe, and H.Y.
+  Keles 2025.
+\newblock {SLRTP2025} sign language production challenge: Methodology, results,
+  and future work.
+\newblock In {\em Proceedings of the Third Sign Language Recognition,
+  Translation and Production Workshop at CVPR 2025}.
+\newblock arXiv:2508.06951.
+
+\bibitem[\protect\citeauthoryear{Walsh, Ravanshad, Rahmani, and Bowden}{Walsh
+  et~al.}{2024}]{walsh2024datadriven}
+Walsh, H., A.~Ravanshad, M.~Rahmani, and R.~Bowden 2024.
+\newblock A data-driven representation for sign language production.
+\newblock In {\em British Machine Vision Conference}.
+
+\bibitem[\protect\citeauthoryear{Walsh, Saunders, and Bowden}{Walsh
+  et~al.}{2024}]{signstitching}
+Walsh, H., B.~Saunders, and R.~Bowden 2024.
+\newblock Sign stitching: A novel approach to sign language production.
+\newblock In {\em British Machine Vision Conference}.
+
+\bibitem[\protect\citeauthoryear{Yazdani et~al.}{Yazdani
+  et~al.}{2025}]{yazdani2025critical}
+Yazdani, M. et~al. 2025.
+\newblock A critical study of automatic evaluation in sign language
+  translation.
+\newblock In {\em Proceedings of LREC-COLING 2026}.
+
+\bibitem[\protect\citeauthoryear{Zhang, Kishore, Wu, Weinberger, and
+  Artzi}{Zhang et~al.}{2020}]{zhang2020bertscore}
+Zhang, T., V.~Kishore, F.~Wu, K.Q. Weinberger, and Y.~Artzi 2020.
+\newblock {BERTScore}: Evaluating text generation with {BERT}.
+\newblock In {\em International Conference on Learning Representations (ICLR)}.
+
+\bibitem[\protect\citeauthoryear{Zuo, Potamias, Ververas, Deng, and
+  Zafeiriou}{Zuo et~al.}{2025}]{soke}
+Zuo, R., R.A. Potamias, E.~Ververas, J.~Deng, and S.~Zafeiriou 2025.
+\newblock Signs as tokens: A retrieval-enhanced multilingual sign language
+  generator.
+\newblock In {\em Proceedings of the IEEE/CVF International Conference on
+  Computer Vision}.
+
+\end{thebibliography}

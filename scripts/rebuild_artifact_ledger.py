@@ -5,13 +5,13 @@ import hashlib, json, sys
 from pathlib import Path
 from datetime import datetime, timezone
 
-ARTI = Path('/ssd/xkb4/RCP/artifact')
-ROOT = Path('/ssd/xkb4/RCP')
+ARTI = Path('/ssd/xkb4/rcp-audit-artifact')
+ROOT = Path('/ssd/xkb4/rcp-audit-artifact')
 
-# Include the artifact directory + generated_figures (paper assets)
+# Include the artifact directory + figures (paper assets)
 LEDGER_DIRS = [
     ARTI,
-    ROOT / 'generated_figures',
+    ARTI / 'figures',
 ]
 SKIP_DIRS = {'__pycache__', '.git', 'tests/__pycache__'}
 SKIP_FILES = {'.DS_Store', '__pycache__'}

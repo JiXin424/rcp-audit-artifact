@@ -1,0 +1,643 @@
+name|back translation|translation confidence|technical quality problems|comment
+01April_2010_Thursday_heute-6704|aber|1.0|1|
+01April_2010_Thursday_heute-6705|fröhlich, morgen|1.0|1|
+01April_2010_Thursday_tagesschau-4329|samstag wechselhaft|0.5|0|
+01April_2010_Thursday_tagesschau-4330|zuerst freundlich (?) bisschen (?)|0.5|1|
+01April_2010_Thursday_tagesschau-4331|am sonntag regen, teilweise (?)|0.5|0|
+01April_2010_Thursday_tagesschau-4332|im südosten nur dauerregen|1.0|0|
+01April_2011_Friday_tagesschau-3374|jetzt die wettervorhersage für morgen, samstag, den zweiten mai.|1.0|0|
+01April_2011_Friday_tagesschau-3377|im südosten in der nacht noch bewölkt, es kann etwas regnen.|1.0|0|
+01April_2011_Friday_tagesschau-3387|am montag ist es überall wechselhaft, aber kühl.|1.0|0|
+01April_2011_Friday_tagesschau-3388|am dienstag leicht (?), und freundlich warm.|0.5|0|
+01December_2011_Thursday_tagesschau-3473|(windig und mäßig frisch) (?). es ist sehr stürmisch, in den bergen sehr stürmisch, im südosten schwacher wind.|0.5|1|video seems to start mid-sentence?
+01July_2010_Thursday_tagesschau-8797|sonntag besonders im südosten gewitter, im norden freundlich.|1.0|0|
+01June_2010_Tuesday_heute-6603|liebe zuschauer, einen schönen abend.|1.0|0|
+01June_2010_Tuesday_tagesschau-5008|im norden ist es freundlich.|1.0|0|
+01June_2010_Tuesday_tagesschau-5009|im westen kann es wind, regen und sturm geben, im osten kann es sehr stürmisch werden.|1.0|1|video ends abruptly, seems like a new sentence started
+01June_2011_Wednesday_tagesschau-6952|im norden viel sonne, wenig bewölkt.|1.0|0|
+01May_2010_Saturday_tagesschau-7194|tagsüber (?) zwölf grad, (?) bis zwanzig grad.|0.5|0|lexical issues, possibly unclear location signs
+01May_2010_Saturday_tagesschau-7195|am montag auch mehr wolken als sonne, es kann regnen und auch gewittern.|1.0|0|
+01November_2010_Monday_tagesschau-133|(?) wolken (?)|0.0|1|video seems to end mid-sentence, lip movement hard to see
+01November_2010_Monday_tagesschau-136|im späteren verlauf (?) hoch (?)|0.5|0|lexical issues
+01November_2010_Monday_tagesschau-137|morgen (?)|0.0|0|lexical issues
+01October_2009_Thursday_tagesschau-420|sonntag im norden und in der mitte regen, im norden sturm.|1.0|0|
+01October_2009_Thursday_tagesschau-421|im süden ist es besser.|1.0|0|
+01October_2010_Friday_tagesschau-2700|heute nacht zwölf (?) eins (?).|0.5|1|lexical issues, video quality very bad, mouthings not decipherable
+01October_2010_Friday_tagesschau-2701|elf grad (?) einundzwanzig grad (?).|0.5|0|lexical issues
+01October_2012_Monday_tagesschau-5370|im mittelgebirge werden es vier grad, im nordwesten zwölf grad und bewölkt.|1.0|0|
+01September_2010_Wednesday_tagesschau-5039|morgen gibt es im nordosten wolken und starke schauer.|1.0|0|
+02August_2010_Monday_heute-1243|aber der regen im osten (?) bei fünfzehn, sechzehn grad.|0.5|0|lexical issues
+02December_2009_Wednesday_tagesschau-4039|jetzt die wettervorhersage für morgen, sonntag, den dreizehnten dezember.|1.0|0|
+02December_2009_Wednesday_tagesschau-4045|im osten und im südosten starker (nebel?), sonst sonne und wolken.|0.5|1|some words appear cut off in the beginning and end of video
+02December_2010_Thursday_tagesschau-3631|im osten (?), im nordosten (?).|0.0|0|
+02July_2009_Thursday_tagesschau-2860|im nordosten am (?)morgen (?) und viel sonne.|0.5|0|
+02June_2010_Wednesday_heute-6789|auch in (?) kann es regnen.|0.5|0|lexical issues, location (some country?)
+02March_2011_Wednesday_tagesschau-4702|die wettervorhersage für morgen, sonntag, den dritten märz.|1.0|0|
+02October_2010_Saturday_tagesschau-1300|milde luft bei uns.|1.0|0|
+02October_2012_Tuesday_tagesschau-2847|in norddeutschland und im südosten sorgt hochdruck für freundliches wetter.|1.0|0|
+03August_2010_Tuesday_tagesschau-2780|(?)|0.0|0|lexical issues
+03February_2010_Wednesday_heute-2354|es kann auch schneien.|1.0|0|
+03February_2010_Wednesday_heute-2355|im osten (?)|0.5|0|
+03February_2010_Wednesday_heute-2356|morgen gibt es viel schnee.|0.5|0|(/hagel?)
+03February_2010_Wednesday_heute-2360|am samstag ist es ein bisschen besser.|1.0|0|
+03February_2010_Wednesday_heute-2361|(?), im osten sehr windig und kalt.|0.5|0|
+03February_2010_Wednesday_heute-2362|für sie einen schönen abend.|1.0|0|
+03February_2010_Wednesday_tagesschau-2054|in norddeutschland sorgt tiefdruck in den nächsten tagen für nebel, etwas regen und schnee.|1.0|0|
+03February_2010_Wednesday_tagesschau-2056|heute (?) schnee.|0.5|0|possibly lexical issues
+03February_2010_Wednesday_tagesschau-2061|im nordosten gibt es schnee.|1.0|0|
+03February_2010_Wednesday_tagesschau-2062|der wind ist schwach (?).|0.5|0|seems like describing the direction the wind is coming from?
+03February_2010_Wednesday_tagesschau-2064|morgen sieben grad (?) elbe (?) minus ein grad.|0.5|0|
+03July_2009_Friday_tagesschau-2014|am sonntag kann es im osten und im süden schauer und gewitter geben, im norden ist es freundlich.|1.0|0|
+03July_2009_Friday_tagesschau-2015|in der nächsten woche wird es kühl und wechselhaft.|1.0|0|
+03July_2011_Sunday_tagesschau-1665|in ganz deutschland ist es wegen hochdrucks freundlicher, bis (?)|0.5|0|signer seems to describe border of high pressure area with location sign?
+03July_2011_Sunday_tagesschau-1672|am dienstag ist es im westen freundlich, (?) schauer und gewitter.|0.5|0|location sign? index
+03June_2010_Thursday_tagesschau-2628|(?)|0.0|0|
+03June_2010_Thursday_tagesschau-2629|auch am samstag und am sonntag gibt es viel sonne, die temperaturen steigen.|1.0|0|
+03June_2010_Thursday_tagesschau-2636|tagsüber im nordosten sechzehn bis siebzehn grad temperatur (?).|0.5|0|
+03June_2011_Friday_tagesschau-7644|im süden kann das gewitter zu einem unwetter werden.|1.0|0|
+03October_2010_Sunday_tagesschau-5770|am mittwoch eine mischung aus sonne und wolken, im norden kann es zu schauern kommen, im süden ist es schön.|1.0|0|
+03October_2012_Wednesday_tagesschau-7654|(?)|0.0|0|
+03September_2010_Friday_tagesschau-8428|tagsüber im westen freundlich mit sonne und wolken im wechsel, manchmal schauer.|1.0|1|video cut off abruptly in the end, possibly mid sentence
+03September_2010_Friday_tagesschau-8429|im osten und im südosten sind gewitter möglich.|1.0|0|
+04April_2010_Sunday_tagesschau-4574|am dienstag starker sonnenschein, im nordosten ist es bewölkt und es kann regnen.|1.0|0|
+04August_2011_Thursday_tagesschau-712|im osten ist es freundlich, im nordwesten ist es auch sonnig, über dem rest deutschlands ist es bewölkt.|1.0|0|
+04August_2011_Thursday_tagesschau-713|es gibt schauer und starke gewitter und es ist kühl.|1.0|0|
+04December_2009_Friday_tagesschau-833|die wettervorhersage für morgen, samstag, den fünften dezember.|1.0|0|
+04December_2009_Friday_tagesschau-834|frisch (?), aber morgen zieht über den westen ein tiefdruckgebiet.|0.5|0|
+04December_2009_Friday_tagesschau-835|es ist wolkig und regnet, am meer gibt es auch schnee.|1.0|0|
+04December_2009_Friday_tagesschau-844|am sonntag ist es milder, aber bewölkt und regnerisch, im nordwesten windig.|1.0|0|
+04December_2009_Friday_tagesschau-845|morgen am dienstag (?) ist es wechselhaft, manchmal gibt es auch sonne.|0.5|0|
+04December_2010_Saturday_tagesschau-4834|jetzt die wettervorhersage für morgen, sonntag, den fünften dezember.|1.0|0|
+04December_2011_Sunday_tagesschau-7791|es ist windig, am dienstag regenschauer und hagel.|1.0|1|video cut off in the end, I included what I assume to be the last word in the translation
+04December_2011_Sunday_tagesschau-7792|im süden kann es lange regnen.|1.0|0|
+04January_2010_Monday_heute-7395|schönen abend liebe zuschauer.|1.0|0|
+04January_2010_Monday_tagesschau-8544|die wettervorhersage für morgen, dienstag, den fünften januar.|1.0|0|
+04January_2010_Monday_tagesschau-8550|im norden mäßiger wind, (?) kalt und frische luft.|0.5|0|
+04January_2010_Monday_tagesschau-8551|im süden ist es windig. |1.0|0|
+04January_2010_Monday_tagesschau-8552|an der ostsee minus zwei grad und minus zwei grad an den alpen.|1.0|0|
+04July_2010_Sunday_tagesschau-7205|dazwischen ist es freundlich.|1.0|0|
+04July_2010_Sunday_tagesschau-7206|(?)|0.0|0|
+04June_2010_Friday_tagesschau-1173|der wind ist schwach und weht aus verschiedenen richtungen.|1.0|0|
+04June_2010_Friday_tagesschau-1176|am montag ist es wechselhaft, mal sonne, mal wolken, aber im osten gibt es schauer und gewitter.|1.0|0|
+04March_2011_Friday_tagesschau-2838|(?), im süden ist es morgen sonnig, die wolken (?), an der donau aber neblig.|0.5|0|
+04May_2010_Tuesday_heute-460|am donnerstag wird es heiß, (?) -deutschland schwanken die temperaturen sehr stark, sechs bis zwanzig grad.|0.5|0|
+04May_2011_Wednesday_heute-3991|(?) regen (?) |0.0|0|
+04May_2011_Wednesday_heute-3995|morgen schauer, (?).|0.5|0|
+04October_2010_Monday_heute-5953|die temperaturen bleiben eher kühl bis (?).|0.5|0|
+04October_2010_Monday_tagesschau-4722|(heute nacht?) (?), im osten nur sechs grad.|0.5|0|
+04October_2010_Monday_tagesschau-4723|morgen dreizehn (?), (?) fünfzehn bis zweiundzwanzig grad.|0.5|0|
+05April_2011_Tuesday_heute-5120|(?) im süden (windig?).|0.0|0|
+05February_2010_Friday_tagesschau-2916|im (?) westen und nordosten wird es schön.|0.5|0|
+05February_2010_Friday_tagesschau-2924|aber es ist stark bewölkt und es kann neblig werden, (?) und auch sonnig.|0.5|0|
+05January_2010_Tuesday_tagesschau-2667|morgen (?), dann am freitag starker regen.|0.5|0|lexical issues
+05January_2010_Tuesday_tagesschau-2668|(?) und im südwesten kann es heute schneien.|0.5|0|
+05January_2011_Wednesday_tagesschau-2255|am wochenende taut es, und es gibt auch regen.|1.0|0|
+05July_2010_Monday_heute-8688|morgen in west- und mitteleuropa europa achtzehn bis sechsundzwanzig grad.|1.0|0|
+05July_2010_Monday_heute-8689|in osteuropa wird es heiß mit bis zu fünfundzwanzig grad.|1.0|0|
+05July_2010_Monday_tagesschau-1202|im südwesten bis zum mittelmehr wird es schöner.|1.0|0|
+05July_2010_Monday_tagesschau-1205|morgen achtzehn grad im norden bis zu sechsundzwanzig grad im süden.|1.0|0|
+05June_2010_Saturday_tagesschau-3925|am montagabend wird es neblig.|1.0|0|
+05June_2010_Saturday_tagesschau-3926|(?)|0.0|1|video seems cut off, can't make out the meaning of the sentence from what's there
+05June_2010_Saturday_tagesschau-3932|am dienstag ist es im osten freundlicher, es kann aber auch zu schauern kommen.|1.0|1|video cut off
+05March_2011_Saturday_tagesschau-5442|morgen (?) im süden stark bewölkt.|0.5|0|
+05March_2011_Saturday_tagesschau-5443|im osten und an den alpen ist etwas schnee möglich.|1.0|0|
+05March_2011_Saturday_tagesschau-5447|morgen sind die temperaturen im vogtland etwa ein, im (?) bis neun grad.|0.5|0|unclear location sign
+05May_2010_Wednesday_tagesschau-3348|am mittelmeer zieht ein tiefdruckgebiet ein bis in den norden, im westen ist es morgen bewölkt.|1.0|0|
+05May_2010_Wednesday_tagesschau-3352|im norden ist es morgen schön, im süden kann es dann regnen.|1.0|0|lexical issues
+05May_2010_Wednesday_tagesschau-3353|in bayern und (?) schauer und gewitter, man kann auch mehr sterne am himmel sehen.|0.5|0|
+05May_2010_Wednesday_tagesschau-3359|im norden regnet es.|1.0|0|
+05May_2010_Wednesday_tagesschau-3360|es wird wärmer, das wetter ist wechselhaft, schauer, gewitter, und auch sonnenschein sind möglich.|1.0|0|
+05May_2011_Thursday_heute-3747|(?) dazu im westen leichter wind.|0.5|0|
+05November_2010_Friday_tagesschau-1872|auch ein bisschen (?), morgen kann es regnen, (?).|0.5|0|
+05October_2010_Tuesday_heute-1218|im (westen? osten?) sehr stürmisch.|0.5|0|Signer01 seems to indicate west/east differently than other signers?
+05September_2009_Saturday_tagesschau-4085|in der nacht ist es stürmisch.|1.0|0|
+06April_2010_Tuesday_tagesschau-306|morgen wird es sehr sonnig.|1.0|0|
+06August_2010_Friday_tagesschau-2178|es wird sonnig und nur wenig bewölkt, im nordwesten gibt es nachmittags ein paar schauer.|1.0|0|
+06February_2010_Saturday_tagesschau-7362|im südwesten bleibt es so, im nordosten |1.0|1|video cut off mid-sentence
+06February_2010_Saturday_tagesschau-7363|schnee|1.0|1|video cut off, there's a bit of another sign as well 
+06February_2010_Saturday_tagesschau-7365|der wind weht schwach.|1.0|0|
+06January_2010_Wednesday_tagesschau-7728|ab freitag gibt es mehr schnee.|1.0|0|
+06January_2010_Wednesday_tagesschau-7736|auch am wochenende kann es schneien.|1.0|0|
+06January_2010_Wednesday_tagesschau-7737|(?)|0.0|0|
+06January_2011_Thursday_tagesschau-5641|da das wasser sehr ansteigt, kann es zu überschwemmungen kommen.|1.0|0|
+06July_2010_Tuesday_tagesschau-2657|es weht schwacher wind (?).|0.5|0|
+06July_2010_Tuesday_tagesschau-2658|auch am meer ist es frisch bei wind aus dem westen.|1.0|0|
+06July_2011_Wednesday_tagesschau-6865|(?) ist es im (?) trocken.|0.0|0|
+06June_2010_Sunday_tagesschau-6363|morgen gibt es gewitter, hagel und sturm (?) osten (?), im norden dauerregen.|0.5|0|
+06May_2011_Friday_tagesschau-6434|(?) schwer, (?) frisch.|0.0|0|
+06May_2011_Friday_tagesschau-6435|heute nacht zwölf grad im (ost..?), ein grad im bayerischen wald.|0.5|0|
+06May_2011_Friday_tagesschau-6436|(?)zwanzig bis achtundzwanzig grad, im osten weniger.|0.5|1|impossible to understand first sign, it's twentysomething but very unclear
+06November_2010_Saturday_tagesschau-1162|es weht ein schwacher wind, am meer ist es sehr windig (nord- und südwind vermischen sich? wind kommt aus verschiedenen richtungen?)|0.5|0|
+06October_2010_Wednesday_tagesschau-638|morgen vormittag weht im nordosten starker wind, in mitteldeutschland eher schwach.|1.0|0|
+06October_2011_Thursday_heute-5534| (?) O P H E L I A kann es (?).|0.5|1|video cut off
+06October_2011_Thursday_heute-5535|an den alpen schneit es.|1.0|0|
+06October_2011_Thursday_tagesschau-823|im westen und nordwesten gibt es schauer.|1.0|1|last word possibly part of new sentence?
+06October_2011_Thursday_tagesschau-825|(?) ist es frisch und es gibt schauer.|0.5|0|
+06October_2012_Saturday_tagesschau-8742|am dienstag ist es windig, dazu regnet es.|1.0|0|
+06October_2012_Saturday_tagesschau-8743|im südwesten regnet es vereinzelt, im osten ist es freundlich.|1.0|0|
+06September_2009_Sunday_tagesschau-5308|morgen weht der wind im süden schwach, im norden starker wind.|1.0|0|
+06September_2009_Sunday_tagesschau-5309|heute nacht vierzehn grad an den küsten, an den alpen vier grad.|1.0|0|
+06September_2010_Monday_tagesschau-1147|(?) |0.0|1|video cut off in beginning and end
+06September_2010_Monday_tagesschau-1153|am donnerstag ist es wechselhaft, aber am freitag wird es freundlich.|1.0|0|
+07April_2010_Wednesday_heute-1619|hallo und guten abend, liebe zuschauer.|1.0|0|
+07April_2010_Wednesday_heute-1626|morgen ist das wetter im südosten so wie heute, aber im nordwesten wird es bedeckter.|1.0|0|
+07April_2010_Wednesday_heute-1630|(?) zuerst am samstag und am sonntag.|0.5|1|video seems cut off in the beginning
+07April_2010_Wednesday_tagesschau-6024|jetzt die wettervorhersage für morgen, donnerstag, den achten april.|1.0|0|
+07April_2011_Thursday_tagesschau-8101|im nordosten ist es sehr wolkig und nieselt ein wenig.|1.0|0|
+07August_2009_Friday_tagesschau-6165|es gab schon eine unwetterwarnung, in deutschland kann es stürmisch werden.|1.0|0|
+07December_2009_Monday_tagesschau-7103|vereinzelt kann die sonne scheinen.|1.0|0|
+07December_2010_Tuesday_heute-5633|es ist etwas windig, die temperaturen können am alpenrand bis zehn grad betragen.|1.0|0|
+07December_2010_Tuesday_tagesschau-4155|am freitag bleibt im südwesten der schnee liegen, im westen ist das auch möglich.|1.0|1|video possibly cut off in the end?
+07February_2010_Sunday_tagesschau-499|im südwesten sind es noch null grad, im osten sind bis zu sieben grad möglich.|1.0|0|
+07February_2011_Monday_heute-4658|guten abend liebe zuschauer.|1.0|0|
+07October_2010_Thursday_heute-8568|im westen zwischen achtzehn und bis zu dreiundzwanzig grad, im osten zwölf bis siebzehn grad.|1.0|0|
+07October_2010_Thursday_tagesschau-4117|jetzt die wettervorhersage für morgen, freitag, den 8. oktober.|1.0|0|
+07October_2010_Thursday_tagesschau-4121|im nordosten ist es heute nacht stark bewölkt, etwas windig und regnerisch.|1.0|0|
+07October_2010_Thursday_tagesschau-4122|im süden viel nebel, hochnebel, morgen kann es sehr stark neblig werden.|1.0|0|
+07October_2010_Thursday_tagesschau-4127|heute nacht (?) vier grad, an der oder ebenso, an der nordsee dreizehn grad.|0.5|0|missing word unclear location sign
+07October_2010_Thursday_tagesschau-4129|in den nächsten tagen bleibt es ruhig, trocken und freundlich.|1.0|0|
+07October_2012_Sunday_tagesschau-3032|im osten stürmt es heute nacht.|1.0|0|
+07October_2012_Sunday_tagesschau-3033|morgen (?) und mäßig wind, (?).|0.0|0|
+07September_2010_Tuesday_tagesschau-1945|jetzt die wettervorhersage für morgen, mittwoch, den achten september.|1.0|0|
+07September_2010_Tuesday_tagesschau-1954|(?) frisch, im südosten (wind?), im südwesten später (wind?), im nordosten weht starker wind.|0.5|0|unclear if location or direction of wind
+08April_2010_Thursday_tagesschau-3950|es ist durchaus wolkig, aber es regnet nur ein bisschen.|1.0|1|video cut off in beginning
+08April_2010_Thursday_tagesschau-3957|morgen neun grad im nordosten bis siebzehn grad im südwesten.|1.0|0|
+08April_2010_Thursday_tagesschau-3961|am montag sind die temperaturen weiter wechselhaft (?).|0.5|0|either lexical issues or video quality just too bad to recognise last word
+08December_2009_Tuesday_heute-4198|guten abend liebe zuschauer.|1.0|0|
+08December_2009_Tuesday_heute-4199|morgen ist es tagsüber trüb.|1.0|0|
+08December_2009_Tuesday_tagesschau-1938|im südosten regnet es noch, in den bergen schneit es, im westen und nordwesten mehr regen.|1.0|0|
+08February_2010_Monday_heute-1497|trüb (?).|0.0|0|
+08February_2010_Monday_heute-1498|im westen schneit es kaum, aber|1.0|1|video cut off in end
+08February_2010_Monday_heute-1501|im westen bleibt es mild, minus vier bis minus sieben grad. |1.0|0|
+08February_2010_Monday_tagesschau-2797|morgen ist nochmal ruhiges wetter zu erwarten, es ist sonnig und etwas windiger.|1.0|0|
+08January_2010_Friday_tagesschau-3981|im süden bleibt der wind mäßig, im norden ist der wind stärker mit ein paar böen, an der ostsee und in den bergen sind orkanartige böen möglich.|1.0|0|
+08July_2010_Thursday_tagesschau-5388|im osten ist es meist sonnig.|1.0|1|video cut off in end
+08July_2010_Thursday_tagesschau-5389|morgen ist es auch sonnig, aber es gibt starke gewitter.|1.0|0|
+08July_2011_Friday_tagesschau-6727|(?) morgen im westen, süd-(?)|0.0|1|video cut off in end and pixelated throughout
+08July_2011_Friday_tagesschau-6729|für südbayern gibt es eine warnung des deutschen wetterdienstes, in der nacht wird es dort stürmisch und es gewittert.|1.0|0|
+08June_2010_Tuesday_tagesschau-5521|im südosten deutschlands bleibt das wetter in den kommenden tagen gleich gut, danach kann es gewitter geben.|1.0|0|
+08June_2010_Tuesday_tagesschau-5524|im nordwesten gibt es morgen im wechsel sonne und wolken, dazu starker regen.|1.0|0|probably location sign in the end
+08June_2010_Tuesday_tagesschau-5529|am donnerstag und freitag bleibt das wetter gleich.|1.0|0|
+08June_2010_Tuesday_tagesschau-5530|es ist feucht, warm und sehr heiß, gewitter, auch starke gewitter, sind möglich.|1.0|0|
+08May_2010_Saturday_tagesschau-175|im westen (?) schwache druckunterschiede|0.5|0|can't decipher mouthings
+08May_2010_Saturday_tagesschau-176|im süden ist es feucht, dort gewittert es auch.|1.0|0|
+08November_2010_Monday_heute-6874|guten abend liebe zuschauer.|1.0|0|
+08November_2010_Monday_heute-6875|in (west-?)europa (?)|0.0|1|video cut off(?)
+08November_2010_Monday_tagesschau-6922|in europa wird in den nächsten zwei tagen das wetter viel schlechter.|1.0|0|
+08October_2009_Thursday_tagesschau-5345|die wettervorhersage für morgen, freitag, den neunten oktober.|1.0|0|
+08October_2009_Thursday_tagesschau-5352|im osten (?).|0.5|1|wind, sturm (?) but lip movement not clear
+08October_2009_Thursday_tagesschau-5353|morgen weht schwacher und mäßiger wind.|1.0|0|
+08October_2009_Thursday_tagesschau-5357|am samstag kann von westen regen aufziehen.|1.0|0|
+08October_2009_Thursday_tagesschau-5358|im osten (?).|0.0|1|video cut off
+08October_2009_Thursday_tagesschau-5359|im westen lichtet sich das wetter etwas, vereinzelt kann die sonne scheinen.|1.0|1|first word seems like part of previous sentence
+08September_2010_Wednesday_tagesschau-5240|in schleswig-holsten, vorpommern und mecklenburg regnet es morgen durchgehend.|1.0|0|
+08September_2010_Wednesday_tagesschau-5246|am samstag gibt es im norden noch ein bisschen regen, sonst ist es freundlich und schön.|1.0|0|
+09August_2009_Sunday_tagesschau-1186|der wind ist schwach, (?).|0.5|0|
+09August_2010_Monday_heute-5890|(?) die sonne scheint sehr heiß, es werden fünfunddreißig bis vierzig grad.|0.5|1|video seems cut off in beginning
+09August_2010_Monday_heute-5891|in der kommenden woche bleibt das wetter weiterhin unbeständig.|1.0|0|
+09August_2010_Monday_heute-5892|heute nacht im südosten zwischen sechs und elf grad.|1.0|0|
+09February_2010_Tuesday_tagesschau-4504|am samstag regnet es nur wenig, in der (?) region manchmal jedoch schon.|0.5|0|location sign, maybe rhein? 
+09July_2010_Friday_tagesschau-591|zuerst gewittert es nur im westen (?), später sind auch im osten gewitter möglich.|0.5|1|"video cut off in the end. last word, ""westen"" is part of a new sentence"
+09June_2010_Wednesday_heute-8259|in der nacht bleibt es warm.|1.0|0|
+09June_2010_Wednesday_heute-8260|in der nacht sinken die temperaturen kaum unter zwanzig grad.|1.0|0|
+09June_2010_Wednesday_tagesschau-5960|die luft ist warm und feucht, es kann gewittern.|1.0|1|cut off in beginning
+09June_2010_Wednesday_tagesschau-5961|(?)|0.0|0|
+09March_2011_Wednesday_heute-1741|im südosten (?) langsam (?).|0.0|0|
+09November_2010_Tuesday_heute-5840|ich wünsche ihnen nun einen schönen abend, tschüs.|1.0|0|
+10August_2009_Monday_heute-6893|heute nacht gewittert und regnet es im osten, es kann stürmen.|1.0|0|
+10August_2009_Monday_heute-6897|es ist möglich, den teletext oder untertitel zuzuschalten.|1.0|0|
+10August_2009_Monday_heute-6902|im osten morgen bis vierundzwanzig grad.|1.0|0|
+10August_2009_Monday_heute-6903|im südwesten bis siebenundzwanzig grad.|1.0|0|
+10December_2009_Thursday_heute-7943|im westen und nordwesten kann die sonne manchmal hervorkommen.|1.0|1|video cut off in end (probably part of 7945)
+10December_2009_Thursday_heute-7944|am sonntag regnet es noch.|1.0|1|video cut off in end
+10December_2009_Thursday_heute-7945|im nordwesten kann die sonne manchmal hervorkommen, am samstag schneit es noch, im nordwesten gibt es schnee und regen.|1.0|0|
+10February_2010_Wednesday_tagesschau-2514|möglicherweise schneit es, und auch (?)|0.5|0|lexical issues
+10February_2010_Wednesday_tagesschau-2515|am wochenende wird das wetter besser und es beruhigt sich.|1.0|0|
+10February_2010_Wednesday_tagesschau-2523|am samstag ist zum teil schnee möglich, im nordosten ist es mehr verhangen.|1.0|0|
+10January_2011_Monday_tagesschau-6402|im westen schneit es stark.|1.0|1|video cut off in end
+10January_2011_Monday_tagesschau-6403|im verlauf dann wechselhaft, aber mild.|1.0|0|
+10March_2011_Thursday_heute-58|am wochenende wird es sonnig und am samstag sehr gutes wetter bei temperaturen von bis zu siebzehn grad im westen.|1.0|0|
+10May_2010_Monday_tagesschau-6854|(?) vereinzelt regen, möglicherweise auch regen.|0.5|0|
+11April_2010_Sunday_tagesschau-8632|jetzt das wetter für morgen, montag, den zwölften april.|1.0|0|
+11August_2009_Tuesday_tagesschau-4354|an den bergen und im süden ist es freundlicher.|1.0|1|last sign half cut off
+11August_2009_Tuesday_tagesschau-4355|(sonst?) viele wolken, im norden kann ein sturm aufziehen.|0.5|0|
+11August_2009_Tuesday_tagesschau-4356|im süden weht heute ein schwacher, mäßiger wind.|1.0|0|
+11December_2009_Friday_tagesschau-3504|die wettervorhersage für samstag, den zwölften dezember.|1.0|0|
+11December_2010_Saturday_tagesschau-8661|es liegt schnee auf sechshundert bis dreihundert metern.|1.0|0|
+11December_2010_Saturday_tagesschau-8669|am mittwoch bleibt das wetter leider gleich bei minus neun bis minus 1 grad.|1.0|0|
+11February_2010_Thursday_tagesschau-8761|am wochenende wird es trockener, aber es bleibt kalt.|1.0|0|
+11January_2011_Tuesday_tagesschau-8017|jetzt die wettervorhersage für morgen, mittwoch, den zwölften|1.0|1|video cut off in end - ignored that it's obviously supposed to be January
+11January_2011_Tuesday_tagesschau-8021|im nordosten und im osten bayerns gibt es schnee oder regen mit frost.|1.0|0|
+11January_2011_Tuesday_tagesschau-8032|im süden ist es teils freundlich.|1.0|0|
+11July_2009_Saturday_tagesschau-655|die wettervorhersage für morgen, sonntag, den zwölften juli.|1.0|0|
+11July_2009_Saturday_tagesschau-664|im osten (?) vierzehn bis sieben grad.|0.5|0|
+11July_2009_Saturday_tagesschau-665|morgen sind siebzehn grad im (?) und fünfundzwanzig grad am oberrhein möglich.|0.5|0|missing sign location
+11July_2009_Saturday_tagesschau-667|am dienstag und am mittwoch wird es wechselhaft mit sonne, wolken und schauern, im südosten sind regen und gewitter möglich.|1.0|0|
+11July_2011_Monday_tagesschau-849|(?) temperaturen (?) oder klar, man kann die sterne sehen, im nordwesten ist es bewölkt.|1.0|0|
+11May_2010_Tuesday_heute-5990|morgen vormittag regnet es, auch in mecklenburg und vorpommern regnet es.|1.0|1|last sign cut off
+11May_2010_Tuesday_heute-5994|es bleiben zwanzig grad.|1.0|0|
+11May_2010_Tuesday_tagesschau-1969|im osten und besonders in süddeutschland regnet es.|0.5|0|
+11November_2009_Wednesday_tagesschau-8041|im verlauf wird es auch wolkig und regnet.|1.0|0|
+11November_2009_Wednesday_tagesschau-8042|der wind weht schwach und mäßig.|1.0|0|
+11November_2010_Thursday_tagesschau-3564|(?) sturm (?)|0.0|0|video seems cut off in end
+11November_2010_Thursday_tagesschau-3565|(?), im nordosten sind gewitter möglich.|0.5|0|
+11September_2009_Friday_tagesschau-8771|jetzt das wetter für morgen, samstag, den zwölften september.|1.0|0|
+11September_2009_Friday_tagesschau-8772|in deutschland wird es windiger.|1.0|0|
+11September_2009_Friday_tagesschau-8773|ein tief (?)|0.0|1|video cut off in end
+11September_2009_Friday_tagesschau-8780|es ist noch wechselhaft, mit sonne und wolken.|1.0|0|
+11September_2009_Friday_tagesschau-8781|der wind ist schwach und mäßig, im nordosten und an den bergen auch frisch.|1.0|0|
+11September_2009_Friday_tagesschau-8782|heute nacht zwischen vierzehn und sieben grad.|1.0|0|
+12April_2010_Monday_heute-7690|morgen scheint im norden sehr schön die sonne, (?).|0.5|0|
+12April_2010_Monday_tagesschau-365|im südosten ist es weiterhin wechselhaft, im nordwesten freundlicher.|1.0|1|cut off in beginning
+12August_2009_Wednesday_tagesschau-1806|am freitag ist es teils sonnig, teils bewölkt, im süden fängt es an zu regnen.|1.0|0|
+12August_2010_Thursday_tagesschau-4403|(?)|0.0|0|kühl- und heißluftzonen treffen aufeinander?
+12December_2009_Saturday_tagesschau-4728|in der nacht leichter schnee, an den küsten und im norden kann es auch regnen.|1.0|0|
+12December_2011_Monday_heute-5800|im westen kann man die sterne sehen, aber morgen regnet es.|1.0|0|
+12December_2011_Monday_heute-5804|(?)|0.0|0|
+12December_2011_Monday_heute-5805|in den bergen beginnt es auch zu schneien.|1.0|0|
+12December_2011_Monday_heute-5811|der regen im nordwesten zieht zum nachmittag in den osten.|1.0|0|
+12December_2011_Monday_tagesschau-8269|(tief, regen, sturm?)|0.0|0|
+12January_2010_Tuesday_heute-2543|heute nacht ist es noch kalt, besonders in den mittelalpen.|1.0|0|
+12January_2010_Tuesday_heute-2544|morgen früh ist es wechselhaft, im süden kann es schneien.|1.0|0|
+12January_2011_Wednesday_tagesschau-1727|es besteht hochwassergefahr und der wetterdienst hat eine windwarnung ausgesprochen.|1.0|0|
+12July_2010_Monday_tagesschau-373|im westen und im nordwesten ist es schön.|1.0|0|
+12July_2010_Monday_tagesschau-374|morgen gibt es im osten und südosten eine mischung aus sonne und wolken, teilweise auch schnee und gewitter.|1.0|0|
+12July_2011_Tuesday_heute-1283|(?) ist es angenehm, dann kann es am donnerstag im norden zu schneestürmen kommen.|0.5|0|
+12May_2010_Wednesday_tagesschau-323|am samstag regnet es im südosten, an der nordsee dann starke gewitter, sonst scheint teilweise vereinzelt auch die sonne.|1.0|0|
+12October_2009_Monday_tagesschau-548|jetzt die wettervorhersage für morgen, den dreizehnten oktober.|1.0|0|
+12October_2009_Monday_tagesschau-560|im norden freundlicher.|1.0|1|video cut off in beginning
+12October_2009_Monday_tagesschau-561|auch|1.0|1|only 1 word, rest not recognisable (cut off)
+12October_2009_Monday_tagesschau-562|am freitag ist es sehr bewölkt.|1.0|1|cut off in end.
+12October_2009_Monday_tagesschau-563|im osten und südosten kann es schneien.|1.0|1|cut off in beginning
+13April_2010_Tuesday_tagesschau-2308|(sonne, nebel, freundlich?)|0.0|0|
+13April_2010_Tuesday_tagesschau-2314|an der ostsee sieben grad bis fünfzehn grad.|1.0|0|
+13April_2010_Tuesday_tagesschau-2318|am samstag wird es sehr sonnig, besonders in den alpen sind auch wolken möglich.|1.0|0|
+13August_2009_Thursday_tagesschau-8491|am sonntag wieder wechselhaft mit schauern und gewittern, vereinzelt auch stark.|1.0|1|video cut off in beginning/extra movement that's not part of the sentence
+13August_2009_Thursday_tagesschau-8492|am montag wird es wechselhaft und etwas kühl.|1.0|0|
+13August_2011_Saturday_tagesschau-1412|im nordwesten morgen zwanzig bis dreiundzwanzig grad, im südosten fünfundzwanzig bis neunundzwanzig grad.|1.0|0|
+13December_2010_Monday_tagesschau-6940|im nordosten heute nacht minus zwei, an den alpen bis zu minus fünfzehn grad.|1.0|0|
+13December_2010_Monday_tagesschau-6944|am freitag wird es ruhiger.|1.0|0|
+13July_2009_Monday_tagesschau-7507|in norddeutschland (?) ein tief.|0.5|1|video cut off in end
+13July_2009_Monday_tagesschau-7508|(im süden mehr hochdruck?) es wird schwül und heiß im osten, im nordwesten mäßig warm.|0.5|0|first signs probably referring to the aforementioned tief or hoch situation?
+13July_2009_Monday_tagesschau-7509|(?) gibt es starke gewitter.|0.5|0|first sign location sign?
+13July_2009_Monday_tagesschau-7510|heute nacht (?)|0.0|0|
+13July_2011_Wednesday_tagesschau-7978|der luftdruck ist sehr tief, deshalb kann es stark regnen(?).|0.5|0|
+13November_2009_Friday_tagesschau-8607|im weiteren verlauf zieht der regen nach osten, dann wird es im westen freundlicher.|1.0|1|first sign cut off
+13November_2009_Friday_tagesschau-8608|im westen und nordwesten weht viel wind.|1.0|0|
+13October_2009_Tuesday_tagesschau-1657|(?) gewitter (?)|0.5|1|beginning and end of video cut off
+13October_2009_Tuesday_tagesschau-1658|am freitag ist es nur im südwesten bewölkt.|1.0|0|video seems cut off in end
+13October_2009_Tuesday_tagesschau-1659|vom südosten zieht regen herauf.|1.0|0|
+13September_2010_Monday_tagesschau-4592|das wetter für morgen, dienstag, den vierzehnten september.|1.0|0|
+14April_2010_Wednesday_tagesschau-3809|(? wetter ist wechselhaft, besonders im süden, begründet durch?)|0.0|0|sentence is very long and unclear grammar-wise
+14August_2009_Friday_tagesschau-62|in deutschland herrscht morgen hochdruck, das wetter ist (? freundlich? nur leicht bewölkt? feucht?)|0.5|0|mouthings unclear in the end
+14August_2009_Friday_tagesschau-73|am sonntag gibt es im nordwesten sonne und wolken, auch gewitter sind möglich.|1.0|0|
+14August_2009_Friday_tagesschau-75|auch möglich sind schauer und starke gewitter.|1.0|0|
+14August_2011_Sunday_tagesschau-3230|starker regen, gewitter und unwetter sind möglich.|1.0|0|
+14August_2011_Sunday_tagesschau-3232|im osten und südosten gibt es zum anfang noch starken regen, auch hagel.|1.0|0|
+14December_2009_Monday_tagesschau-2088|die kaltluft bleibt, bis freitag bleiben die temperaturen im minusbereich.|1.0|0|
+14December_2009_Monday_tagesschau-2092|im norden weht ein schwacher wind (?)|0.5|1|second half of video/sentence unclear and cut off
+14December_2009_Monday_tagesschau-2093|in den bergen im süden wird es frisch.|1.0|0|
+14December_2010_Tuesday_heute-650|obwohl die temperaturen positiv sind, gibt es trotzdem wolken.|1.0|0|
+14December_2010_Tuesday_heute-651|zuerst wird es im südosten sehr kalt.|1.0|0|
+14February_2010_Sunday_tagesschau-3834|die luft ist kalt und feucht, deshalb (?)|0.5|0|
+14July_2009_Tuesday_tagesschau-2425|zum teil auch|1.0|1|sentence/video incomplete and cut off
+14July_2009_Tuesday_tagesschau-2427|im süden sind starke gewitter möglich.|1.0|0|
+14July_2009_Tuesday_tagesschau-2430|heute nacht wird es schwül, bei temperaturen von dreizehn bis achtzehn grad.|1.0|0|
+14July_2009_Tuesday_tagesschau-2433|(?) im süden an den bergen (?)|0.5|1|video/sentence incomplete and cut off
+14March_2011_Monday_tagesschau-7600|(?)|0.0|1|this seems to just be a video fragment of a sentence? I can't make out the meaning
+14October_2009_Wednesday_tagesschau-516|jetzt die wettervorhersage für morgen, den fünfzehnten oktober.|1.0|0|"ohne wochentag, anders als ""übliche ansage"""
+14October_2009_Wednesday_tagesschau-526|(?) plus vier, im nordosten minus vier grad (?).|0.5|0|
+14October_2010_Thursday_tagesschau-287|jetzt die wettervorhersage für morgen, freitag, den fünfzehnten oktober.|1.0|0|
+14October_2010_Thursday_tagesschau-290|an der nordsee wird es bewölkter, im norden regnet es stark.|1.0|0|
+14October_2010_Thursday_tagesschau-291|heute abend wird es durchweg klarer am himmel mit etwas nebel.|1.0|0|
+14October_2010_Thursday_tagesschau-294|im nordwesten regnet es stark, kleine gewitter sind möglich.|1.0|0|
+14September_2010_Tuesday_heute-8237|im norden und nordosten (?), auch im süden.|0.5|0|lexical issues
+14September_2010_Tuesday_heute-8238|(?)|0.0|0|
+14September_2010_Tuesday_heute-8239|(tief?), im norden teils ein schwacher sturm.|0.5|1|video is cut off in the beginning and end
+14September_2010_Tuesday_tagesschau-5220|heute nacht sieben bis vierzehn grad, in südfranken zweiundzwanzig grad, in oberfranken zweiundzwanzig grad.|1.0|0|
+14September_2010_Tuesday_tagesschau-5223|am samstag ist es im süden freundlich, im norden gibt es vereinzelte schauer.|1.0|0|
+15December_2009_Tuesday_tagesschau-6963|im südosten ist es morgen stark bewölkt, es gibt viel schnee.|1.0|0|
+15December_2010_Wednesday_tagesschau-37|morgen herrscht im norden tiefdruck, aber morgen früh schneit und regnet es stark.|1.0|0|
+15February_2011_Tuesday_heute-7911|im osten und an den alpen kann es sonnig werden, später auch im südwesten.|1.0|0|
+15February_2011_Tuesday_tagesschau-7473|es kann nieseln.|1.0|0|
+15February_2011_Tuesday_tagesschau-7474|(?) wolken oder nebel.|0.5|0|
+15July_2010_Thursday_tagesschau-4056|im südosten kann es heute nacht gewittern.|1.0|0|
+15March_2011_Tuesday_tagesschau-3322|(?) ist hoch und mehr im osten.|0.5|0|
+15March_2011_Tuesday_tagesschau-3325|(?außen, klar, locker?)|0.0|0|
+15March_2011_Tuesday_tagesschau-3326|aber nachts können immer mehr wolken aufkommen.|1.0|0|
+15May_2010_Saturday_tagesschau-5656|morgen wird es im südosten wolkig, an den alpen ist regen möglich.|1.0|0|
+15May_2010_Saturday_tagesschau-5659|morgen nacht werden es acht bis zwei grad, wenn der himmel klar bleibt ist bodenfrost möglich.|1.0|0|
+15October_2009_Thursday_tagesschau-7715|(?) gut, im südosten kann es regnen.|0.5|0|
+16December_2009_Wednesday_tagesschau-5907|jetzt das wetter für morgen, donnerstag, den siebzehnten dezember.|1.0|0|
+16December_2009_Wednesday_tagesschau-5912|am tag kann es auch regnen.|1.0|0|
+16December_2009_Wednesday_tagesschau-5913|im norden und westen schneit es noch, möglicherweise herrscht auch glätte.|1.0|1|video cut off in the end (glätte (GLATT), last sign, cut off)
+16December_2009_Wednesday_tagesschau-5914|in mitteldeutschland wird es auch wieder klar.|1.0|0|
+16July_2009_Thursday_tagesschau-5052|heute nacht gibt es im süden noch regen und gewitter, im rest deutschlands wird es klarer, nur etwas bewölkt.|1.0|0|
+16June_2010_Wednesday_tagesschau-8148|im norden und (?location) ist es klar und man kann die sterne sehen, im süden regnet es.|0.5|0|
+16June_2010_Wednesday_tagesschau-8149|(?)|0.0|1|"it's just one sign, completely out of context. could be ""druck""?"
+16May_2010_Sunday_tagesschau-5226|(?), auch sehr (?), und die kühle luft bleibt.|0.5|0|
+16November_2009_Monday_tagesschau-3105|am mittwoch (?) bleibt, (?).|0.0|1|end of sentence seems cut off
+16November_2009_Monday_tagesschau-3106|es wird freundlicher.|1.0|0|"literally just ""mehr freundlich"""
+16September_2010_Thursday_tagesschau-6278|am sonntag gibt es  im norden und an den alpen im wechsel sonne und wolken, auch schauer, sonst freundlich.|1.0|0|
+17April_2010_Saturday_tagesschau-399|durch (?) und die heranwehende luft wird es kühler.|0.5|0|causality not clear + first sign missing
+17April_2010_Saturday_tagesschau-406|am dienstag wird es sehr sonnig, aber es gibt auch wolken und wird wechselhaft, möglich sind auch regen oder gewitter.|1.0|0|
+17April_2011_Sunday_tagesschau-2152|die wettervorhersage für morgen, montag, den achtzehnten april.|1.0|0|
+17February_2010_Wednesday_heute-1478|aufgrund eines heranziehendes tiefdruckgebiets wird das wetter mild.|1.0|0|
+17February_2010_Wednesday_heute-1482|(?), die temperaturen bleiben im positiven bereich.|0.5|0|first half of sentence unclear
+17February_2011_Thursday_heute-387|es wird kalt bei bis zu null grad, im norden bis zu fünf grad.|1.0|0|
+17February_2011_Thursday_tagesschau-6310|der himmel ist stark bewölkt und es ist neblig, es gibt kaum sonne.|1.0|0|
+17January_2011_Monday_tagesschau-7005|im süden ist es stark bewölkt und auch neblig, aber es regnet im süden kaum.|1.0|0|
+17July_2009_Friday_tagesschau-5101|die wettervorhersage für morgen, samstag, den achtzehnten juli.|1.0|0|samstag signed different than usual (just index finger instead of whole hand)
+17July_2009_Friday_tagesschau-5104|aus dem westen zieht kalte luft heran, deshalb wird das wetter wechselhaft.|1.0|0|no mouth movement with westen, thus unclear if it's westen or as in some cases osten on this side
+17July_2009_Friday_tagesschau-5105|im osten und im süden gibt es heute nacht starke schauer und gewitter.|1.0|0|
+17July_2009_Friday_tagesschau-5106|der deutsche wetterdienst hat auch eine warnung ausgesprochen.|1.0|0|
+17June_2010_Thursday_tagesschau-3903|der deutsche wetterdienst hat schon gewarnt, dass es unwetter geben kann.|1.0|0|first sign unclear? not sure if it's part of the sentence
+17May_2010_Monday_heute-5576|es wird auch kühl, aber dann wird es besser und die sonne kommt heraus, dann wird es warm.|1.0|0|
+17May_2010_Monday_heute-5577|jetzt einen schönen abend für sie.|1.0|0|
+17September_2010_Friday_tagesschau-3412|in (?location) bis süddeutschland herrscht schönes wetter.|0.5|0|last sign (wetter) cut off
+17September_2010_Friday_tagesschau-3413|(?)|0.0|0|out of context combination of signs, not clear?
+18April_2010_Sunday_tagesschau-6663|am donnerstag wird es etwas freundlicher, im norden regnet es, im süden kann es hageln.|1.0|0|
+18April_2011_Monday_tagesschau-1314|die wettervorhersage für morgen, dienstag, den neunzehnten april.|1.0|0|
+18December_2010_Saturday_tagesschau-6118|jetzt die wettervorhersage für morgen, sonntag, den neunzehnten dezember.|1.0|0|
+18December_2010_Saturday_tagesschau-6125|im süden gibt es teils auch regen.|1.0|0|"video cut off in the end, possibly ""möglich"" which would change the sentence to im süden ist teils auch regen möglich."
+18December_2010_Saturday_tagesschau-6126|zuerst weht ein schwacher wind, im norden von osten, im süden aus süden.|1.0|0|"lip movement/facial expression of first sign ""zuerst"" pixelated"
+18February_2010_Thursday_tagesschau-4531|möglicherweise scheint auch mal die sonne.|1.0|0|
+18February_2010_Thursday_tagesschau-4532|am samstag wird es im norden windig.|1.0|0|
+18February_2010_Thursday_tagesschau-4533|in der kommenden woche bleibt es weiter so.|1.0|0|
+18February_2011_Friday_tagesschau-6825|im osten deutschlands gibt es zunächst mehr regen oder schnee.|1.0|0|
+18January_2010_Monday_tagesschau-4023|in mitteldeutschland sechs grad, im norden minus ein bis fünf grad.|1.0|0|
+18January_2011_Tuesday_tagesschau-6987|jetzt die wettervoraussage für morgen, mittwoch, den neunzehnten januar.|1.0|0|
+18January_2011_Tuesday_tagesschau-6989|es gibt kaum sonne, vor allem wird es wolkig.|1.0|0|
+18July_2009_Saturday_tagesschau-1634|es zieht ein tiefdruckgebiet herein, deshalb wird es in deutschland kühl und regnet.|1.0|0|
+18July_2009_Saturday_tagesschau-1640|am alpenrand sind es heute nacht sechs bis fünfzehn grad.|1.0|0|sentence seems interrupted/cut off in the end? seems like a second location could be mentioned in the end
+18May_2010_Tuesday_heute-3366|morgen zieht der regen nach westen, (?) bayern.|0.5|0|lexical issues
+18November_2009_Wednesday_tagesschau-5578|jetzt die wettervorhersage für morgen, donnerstag, den neunzehnten november.|1.0|0|
+18November_2011_Friday_tagesschau-2142|auch am anfang der nächsten woche bleibt das wetter so.|1.0|0|
+19April_2010_Monday_heute-782|jetzt wünsche ich ihnen einen schönen abend.|1.0|0|
+19February_2010_Friday_tagesschau-4093|bis jetzt war der luftdruck tief, jetzt kommt es zu einem anstieg, deshalb wird es (?) stürmisch.|0.5|0|one sign missing, lexical issues
+19January_2011_Wednesday_heute-2690|einen schönen abend für sie, machen sie es gut.|1.0|0|
+19March_2011_Saturday_tagesschau-4686|in deutschland kommt ein starkes hoch, das bedeutet viel sonne.|1.0|0|
+19November_2009_Thursday_tagesschau-3781|jetzt die wettervorhersage für morgen, freitag, den zwanzigsten november.|1.0|0|
+19October_2010_Tuesday_tagesschau-8289|am tag wird es wolkig und es kann regnen, im nordwesten in den bergen gibt es auch starkregen und schnee.|1.0|0|
+19October_2010_Tuesday_tagesschau-8290|abends ist auch (?) möglich, und es regnet.|0.5|0|lexical issues
+19October_2010_Tuesday_tagesschau-8291|es gibt graupel und gewitter.|1.0|0|graupel = hagel
+19September_2010_Sunday_tagesschau-3802|im süden weht nur schwacher wind, auch im norden leichter wind, an den küsten starker sturm.|1.0|0|
+20April_2011_Wednesday_tagesschau-3086|tagsüber gibt es viel sonne, später vereinzelt wolken.|1.0|0|specific kind of clouds? nebelwolken?
+20February_2010_Saturday_tagesschau-7899|östlich der elbe bis zu ein grad, (?) bis zu acht grad.|0.5|0|"missing sign is location, perhaps ""oberhalb""?"
+20July_2010_Tuesday_heute-5254|im norden werden es dreißig grad.|1.0|0|
+20June_2011_Monday_heute-6510|(?) schnell (?), aber schon selbst (?).|0.0|0|
+20June_2011_Monday_heute-6511|in jedem fall einen schönen guten abend für sie.|1.0|0|
+20June_2011_Monday_heute-6516|warm, kalt, warm, kalt, das wetter bleibt wechselhaft bis zum ende der woche.|1.0|0|
+20June_2011_Monday_tagesschau-1249|jetzt die wettervorhersage für morgen, dienstag, den einundzwanzigsten juni.|1.0|0|
+20June_2011_Monday_tagesschau-1256|im (saarland?) wird es mild, sechzehn grad, an der elbe um acht grad.|0.5|0|
+20June_2011_Monday_tagesschau-1257|durch ein hoch wird es (location) warm mit dreißig grad, im norden frischer bei achtzehn grad.|0.5|0|
+20November_2009_Friday_tagesschau-6560|jetzt die wettervorhersage für morgen, samstag, den einundzwanzigsten november.|1.0|0|
+20November_2009_Friday_tagesschau-6561|ein tief zieht auf im norden, es gibt heute ein bisschen regen in deutschland.|1.0|0|
+20November_2009_Friday_tagesschau-6562|sonst wird es bei hochdruck morgen teils freundlich.|1.0|0|
+20November_2009_Friday_tagesschau-6565|im flusstal gibt es nebel.|1.0|0|
+20November_2009_Friday_tagesschau-6566|morgen gibt es lang andauernden nebel und wolken, aber auch schönes wetter.|1.0|0|
+20November_2009_Friday_tagesschau-6567|am nachmittag wird es freundlicher.|1.0|0|
+20November_2009_Friday_tagesschau-6574|teils wird es windiger und auch etwas kühl.|1.0|0|
+20November_2009_Friday_tagesschau-6575|(?)|0.0|0|
+20October_2010_Wednesday_tagesschau-8210|heute nacht kann es schauer geben, im norden auch gewitter.|1.0|0|
+20October_2010_Wednesday_tagesschau-8214|im süden wird es morgen bewölkt, teils auch sonnig.|1.0|0|
+20October_2011_Thursday_tagesschau-506|im süden kann es nachts wolkig und bedeckt werden.|1.0|0|
+20October_2011_Thursday_tagesschau-513|(?) klar, an den alpen werden es sechs grad, und dreizehn grad (location).|0.5|0|sentence doesn't seem cohesive?
+20September_2010_Monday_heute-2929|es wird freundlicher im westen.|1.0|0|
+20September_2010_Monday_heute-2930|(regen, ..?)|0.0|1|video seems cut off, seems to contain parts of other sentences
+21April_2010_Wednesday_heute-3108|einen schönen abend für sie.|1.0|0|
+21April_2010_Wednesday_heute-3109|nachts kommt frost.|1.0|0|
+21April_2010_Wednesday_tagesschau-6235|morgen werden es im norden neun grad, im süden achtzehn grad.|1.0|0|
+21August_2010_Saturday_tagesschau-8822|heute nacht in der oberen hälfte neunzehn, in der unteren hälfte vierzehn und im südosten bis zu zwölf grad.|1.0|0|
+21August_2011_Sunday_tagesschau-263|im norden, nordosten gibt es zum nachtanfang heftige schauer und auch gewitter, dann lockern sich die wolken.|1.0|0|
+21January_2011_Friday_tagesschau-4889|heute nacht sind die sterne sichtbar, aber es ist auch etwas nebel möglich.|1.0|1|video in part pixelated
+21May_2010_Friday_tagesschau-5092|morgen im osten abwechselnd sonne und wolken, auch schauer und gewitter sind möglich.|1.0|0|
+21May_2010_Friday_tagesschau-5094|(?)|0.0|0|
+21May_2010_Friday_tagesschau-5096|morgen sind im norden fünfzehn grad, im süden sechzehn grad möglich.|1.0|0|
+21May_2010_Friday_tagesschau-5097|am sonntag bleibt es gut.|1.0|1|video cut off in the end
+21November_2009_Saturday_tagesschau-4907|im nordwesten gibt es schauer und es stürmt.|1.0|0|
+21November_2009_Saturday_tagesschau-4908|abends stürmt es, in den bergen ist ein orkan möglich.|1.0|0|
+21November_2010_Sunday_tagesschau-5672|im osten deutschlands ist etwas frost möglich, bei null bis vier grad.|1.0|0|
+21November_2010_Sunday_tagesschau-5676|(schnee, ..?)|0.0|0|
+21November_2011_Monday_heute-5428|es ist möglich, dass es ein kleines bisschen schneit, aber der schnee bleibt kaum liegen.|1.0|0|
+21November_2011_Monday_heute-5437|einen schönen abend für sie.|1.0|0|
+21October_2011_Friday_tagesschau-4103|(?etwas passiert aufgrund eines hochdruckgebiets)|0.0|0|
+21October_2011_Friday_tagesschau-4104|(?)|0.0|0|really tough to understand
+22April_2010_Thursday_tagesschau-3736|es ist freundlich und die sonne scheint kräftig, es wird und bleibt wärmer.|1.0|0|
+22April_2010_Thursday_tagesschau-3738|auch am montag sind regen und gewitter möglich, es wird wolkiger, aber es bleibt warm und auch sonnig und schön.|1.0|0|
+22August_2010_Sunday_tagesschau-1344|morgen gibt es vereinzelt schauer und im südosten gewitter und starkregen, auch unwetter sind möglich.|1.0|0|
+22February_2010_Monday_tagesschau-3246|(?)|0.0|1|signer signs nordosten but lip movement is südosten?
+22February_2010_Monday_tagesschau-3247|im norden ist regen möglich.|1.0|0|
+22July_2009_Wednesday_tagesschau-2873|heute nacht gibt es im nordwesten schauer und gewitter, kräftiger regen ist möglich.|1.0|0|
+22November_2010_Monday_heute-283|(?)|0.0|0|
+22November_2011_Tuesday_heute-4646|es kann weiterhin sehr regnerisch bleiben, normalerweise in der mittelregion (?).|0.5|0|
+22September_2010_Wednesday_heute-2624|am freitag sinken die temperaturen langsam, im osten gibt es gewitter.|1.0|0|signer signed east first then west, lip movement is east both times.
+22September_2010_Wednesday_heute-2625|(?)|0.0|0|
+22September_2010_Wednesday_heute-2626|schönen abend, tschüs.|1.0|0|
+22September_2010_Wednesday_tagesschau-3258|im norden kann man eher den sternenhimmel sehen, es ist nur leicht bewölkt, in der mitte und im süden zieht nebel auf.|1.0|0|
+23August_2010_Monday_heute-5328|am mittwoch bleibt es auch so.|1.0|0|
+23August_2010_Monday_heute-5329|aber am donnerstag in richtung süden regnet es.|1.0|0|
+23January_2011_Sunday_tagesschau-7823|jetzt die wettervorhersage für morgen, montag, den vierundzwanzigsten januar zweitausendelf.|1.0|0|
+23July_2009_Thursday_tagesschau-6750|die wettervorhersage für morgen, freitag, den vierundzwanzigsten juli.|1.0|0|
+23July_2009_Thursday_tagesschau-6751|heute wird es kühl und etwas windiger, (?)|0.0|1|video cut off in the end, possibly in the beginning
+23July_2009_Thursday_tagesschau-6752|es gibt sturm und gewitter.|1.0|0|
+23May_2010_Sunday_tagesschau-4337|in den kommenden tagen gibt es ein tief, das heißt das wetter wird wechselhaft, die temperaturen sinken.|1.0|0|
+23October_2010_Saturday_tagesschau-895|im norden und am meer gibt es einen schwachen sturm.|1.0|0|
+23October_2010_Saturday_tagesschau-896|es ist bewölkt, deshalb wird es heute nacht bei nur zwei bis acht grad kühl.|1.0|0|
+23September_2009_Wednesday_tagesschau-7589|am freitag gibt es nah an der küste und im süden starke wolken.|1.0|0|
+23September_2009_Wednesday_tagesschau-7590|sonst wird es freundlich.|1.0|0|
+23September_2010_Thursday_tagesschau-3448|am samstag wird es wolkig und nur wenig sonnig, im südosten ist regen möglich, im südwesten ein paar schauer.|1.0|1|video is quite pixelated throughout
+24April_2010_Saturday_tagesschau-3967|am tag wird es sonnig, im süden und westen etwas wolkig.|1.0|0|
+24April_2010_Saturday_tagesschau-3971|im süden wird es schlecht, morgen sind wolken möglich.|1.0|0|
+24August_2009_Monday_heute-6642|morgen scheint bis zum nachmittag im osten die sonne.|1.0|0|
+24August_2009_Monday_heute-6643|dazu gibt es auch wolken.|1.0|0|
+24August_2009_Monday_heute-6648|am mittwoch gibt es noch regen, schauer und gewitter im osten und im süden.|1.0|0|
+24August_2010_Tuesday_heute-3006|liebe zuschauer, guten abend.|1.0|1|video cut off in the end
+24August_2010_Tuesday_heute-3007|das wetter wechselt stark, gestern gab es einen heftigen orkan.|1.0|0|
+24August_2010_Tuesday_heute-3010|den nächsten regen gibt es wahrscheinlich am donnerstag.|1.0|0|
+24August_2010_Tuesday_tagesschau-2196|heute nacht gibt es an den küsten regen, im süden auch, aber dort leicht (?).|0.5|1|video cut off in the end
+24February_2011_Thursday_heute-6666|(?)|0.0|0|
+24February_2011_Thursday_tagesschau-4771|am sonntag wird das wetter bewölkt, auch regen und schnee sind möglich, in den bergen kann es schneien.|1.0|0|
+24January_2010_Sunday_tagesschau-8703|jetzt die wettervorhersage für morgen, montag, den fünfundzwanzigsten januar.|1.0|0|
+24January_2011_Monday_heute-6981|heute wieder schnee auf über dreihundert metern, am nachmittag zieht der schnee über deutschland bis berlin.|1.0|0|
+24January_2013_Thursday_heute-7259|etwas niederschlag ist möglich in sachsen oder am alpenrand, in bayern kann es schneien.|1.0|0|
+24January_2013_Thursday_heute-7266|am samstag wird es kalt bei temperaturen von minus zehn grad.|1.0|0|
+24January_2013_Thursday_tagesschau-6322|am sonntag (?), etwas milder.|0.5|0|
+24July_2010_Saturday_tagesschau-6343|am dienstag gibt es im süden schauer und auch gewitter, im norden wird es freundlich.|1.0|0|
+24July_2011_Sunday_tagesschau-6630|im osten wird es immer sonniger.|1.0|0|
+24July_2011_Sunday_tagesschau-6631|am mittwoch kann es am nachmittag zu plötzlichen schauern kommen.|1.0|0|
+24July_2011_Sunday_tagesschau-6632|gleiches wetter gibt es auch am donnerstag.|1.0|1|video cut off in the end
+24June_2010_Thursday_tagesschau-7300|jetzt die wettervorhersage für morgen, freitag, den fünfundzwanzigsten juni.|1.0|0|
+24March_2011_Thursday_tagesschau-3937|heute nacht wird es im norden und nordosten bewölkt, an der ostsee ist regen möglich.|1.0|0|
+24March_2011_Thursday_tagesschau-3938|sonst nur lockere wolken.|1.0|0|
+24May_2010_Monday_tagesschau-3139|jetzt die wettervorhersage für morgen, dienstag, den fünfundzwanzigsten mai.|1.0|0|
+24May_2011_Tuesday_heute-6062|einen guten abend für sie.|1.0|0|
+24May_2011_Tuesday_heute-6067|(location, a river?) scheint sehr schön die sonne, auch im süden.|0.5|0|
+24May_2011_Tuesday_tagesschau-4468|in deutschland herrscht morgen hochdruck, die sonne scheint und es bleibt trocken.|1.0|0|
+24May_2011_Tuesday_tagesschau-4477|an den küsten wird es kühl bei fünfzehn, sechzehn grad, im süden werden es dreiundzwanzig bis sechsundzwanzig grad.|1.0|0|
+24November_2009_Tuesday_tagesschau-5678|(?), die luft ist mild.|0.5|0|
+24November_2009_Tuesday_tagesschau-5679|es kann dort sehr warme luft geben.|1.0|0|
+24November_2009_Tuesday_tagesschau-5680|es wird ein bisschen kühler.|1.0|0|
+24November_2009_Tuesday_tagesschau-5684|im norden und nordwesten kann es stürmen(?).|0.5|0|sentence not cohesive it seems?
+24November_2009_Tuesday_tagesschau-5685|im norden kann es zu schweren stürmen kommen.|1.0|0|
+24November_2009_Tuesday_tagesschau-5686|in den bergen ist ein orkan möglich.|1.0|0|
+24November_2009_Tuesday_tagesschau-5688|in (location?) kann es bis zu elf grad werden, an den alpen bis zu ein grad.|0.5|0|
+24November_2009_Tuesday_tagesschau-5689|(location?) bis zehn grad, im süden sechzehn grad.|0.5|0|
+24November_2009_Tuesday_tagesschau-5690|(?) im nordwesten kann es regnen und stürmen.|0.5|0|
+24November_2009_Tuesday_tagesschau-5691|im norden gibt es auch gewitter.|1.0|0|
+24November_2009_Tuesday_tagesschau-5692|im südosten ist auch sonne dabei.|1.0|0|
+24November_2011_Thursday_heute-224|ähnlich wie heute werden es sechs bis elf grad.|1.0|0|
+24November_2011_Thursday_tagesschau-8341|am sonntag gibt es mehr gewitter, im nordwesten wird es wolkig und es gibt etwas schnee.|1.0|0|
+24November_2011_Thursday_tagesschau-8342|montag wird es meist schön, sonne und wolken gemischt.|1.0|0|
+24October_2009_Saturday_tagesschau-4286|dort gibt es gewitter, schwach ...|0.5|1|video cut off in the end, doesn't seem like a cohesive sentence
+24October_2009_Saturday_tagesschau-4287|im nordwesten kann es stürmen.|1.0|0|
+24October_2009_Saturday_tagesschau-4289|morgen wird es im osten zehn bis dreizehn, im westen bis siebzehn grad warm.|1.0|0|
+24October_2010_Sunday_tagesschau-2908|im osten und südosten gibt es wenige schauer, bis (?), teils nebel, wolken und sonne.|0.5|0|
+24October_2010_Sunday_tagesschau-2909|am mittwoch zieht regen von westen über den großteil deutschlands, im südosten ...|1.0|1|video is cut off, the end seems to be the start of a new sentence
+24October_2010_Sunday_tagesschau-2910|(?), nebelwolken.|0.5|0|not a sentence
+24September_2009_Thursday_heute-6079|(?)|0.0|0|
+24September_2009_Thursday_heute-6080|aber samstag|1.0|0|not a sentence
+24September_2009_Thursday_heute-6081|heute nacht nieselt es in bayern etwas.|1.0|0|fragment of previous sentence in the beginning?
+24September_2009_Thursday_heute-6082|sonst kann man die sterne sehen, aber es wird auch etwas neblig.|1.0|0|
+24September_2009_Thursday_heute-6083|die temperaturen reichen von dreizehn bis fünf grad.|1.0|0|
+24September_2009_Thursday_heute-6084|im norden werden es morgen siebzehn grad.|1.0|0|
+24September_2009_Thursday_heute-6090|in der neuen woche wird es wechselhaft.|1.0|0|
+24September_2009_Thursday_heute-6091|einen guten abend für sie.|1.0|0|
+25August_2009_Tuesday_tagesschau-7085|(?) gibt es regen und gewitter, im südosten sind auch starke stürme möglich.|0.5|0|
+25August_2009_Tuesday_tagesschau-7086|der deutsche wetterdienst hat schon einige warnungen ausgesprochen.|1.0|0|
+25August_2009_Tuesday_tagesschau-7092|heute nacht wird es im westen zehn, im osten bis achtzehn grad warm.|1.0|0|
+25August_2010_Wednesday_heute-6005|der grund hierfür ist ein tiefdruckgebiet, im süden an den bergen ist die luft schwül und warm, im südosten scheint auch die sonne.|1.0|0|
+25August_2010_Wednesday_heute-6006|abends sind gewitter möglich.|1.0|0|
+25August_2010_Wednesday_tagesschau-8507|im westen zieht ein tief auf, deshalb kommt es zu regen und gewittern.|1.0|0|
+25August_2010_Wednesday_tagesschau-8508|im südosten herrscht morgen hochdruck, es wird normalerweise schön und warm.|1.0|0|
+25August_2010_Wednesday_tagesschau-8509|heute nacht zieht im westen regen auf.|1.0|1|video cut off in the end
+25August_2010_Wednesday_tagesschau-8516|morgen sind dort dreißig grad, und im westen kann (?).|0.5|0|
+25February_2010_Thursday_tagesschau-1761|auf usedom morgen drei, bei (location?) bis drei grad.|0.5|0|
+25February_2011_Friday_tagesschau-568|dann im osten viel sonne, im westen regen, gewitter und (?)|0.5|0|
+25January_2011_Tuesday_tagesschau-2993|am freitag ruhiges wetter, im norden gleichbleibend freundlich, am samstag auch, nur im norden ist etwas schnee oder nieselregen mit frost möglich.|1.0|0|
+25January_2013_Friday_tagesschau-7811|jetzt die wettervorhersage für morgen, samstag, den sechsundzwanzigsten januar.|1.0|0|
+25June_2010_Friday_tagesschau-3877|(?), am wochenende gibt es viel sonne und die temperaturen steigen.|0.5|1|first part of video not decipherable, seems like end of previous sentence
+25June_2010_Friday_tagesschau-3879|(?)|0.0|0|
+25June_2010_Friday_tagesschau-3880|es wird klar, nur vereinzelt gibt es nebel.|1.0|0|
+25June_2010_Friday_tagesschau-3881|morgen wird es in ganz deutschland sonnig, nur vereinzelt gibt es wolken.|1.0|0|
+25June_2010_Friday_tagesschau-3882|im süden vom bayerischen wald bis zu den alpen kann es ab mittags regnen.|1.0|0|
+25March_2011_Friday_tagesschau-5828|am montag wird das wetter sonnig, nur an den küsten und an den alpen gibt es vereinzelt wolken.|1.0|0|
+25November_2009_Wednesday_tagesschau-7666|jetzt die wettervorhersage für morgen, donnerstag, den sechsundzwanzigsten november.|1.0|0|
+25November_2009_Wednesday_tagesschau-7668|aus dem süden zieht milde luft herauf.|1.0|0|
+25November_2009_Wednesday_tagesschau-7677|am freitag regnet es und das wetter wird wechselhaft.|1.0|0|
+25November_2009_Wednesday_tagesschau-7678|im nordwesten kann es zu gewittern kommen.|1.0|0|
+25November_2010_Thursday_tagesschau-2527|heute nacht kann es von baden württemberg bis sachsen schneeschauer geben.|1.0|0|
+25November_2010_Thursday_tagesschau-2528|vorsicht, die straßen sind glatt.|1.0|0|
+25November_2011_Friday_tagesschau-4398|(?zehn, zwei, neun)|0.0|0|
+25November_2011_Friday_tagesschau-4399|im süden gibt es am sonntag oft schauer, auch sonst viele wolken und vereinzelt regen.|1.0|0|
+25October_2010_Monday_heute-2049|dann ziehen wolken auf, am nachmittag kann es regnen und es wird windig.|1.0|0|
+25October_2010_Monday_tagesschau-17|regen und schnee ziehen über die alpen, in norddeutschland kann es regnen und im westen kann man die sterne sehen.|1.0|0|
+25October_2010_Monday_tagesschau-24|am donnerstag regnet es im norden und nordwesten, im süden sonne und wolken im wechsel, dann am freitag gibt es ähnliches wetter.|1.0|0|
+25September_2010_Saturday_tagesschau-3489|am montag regnet es stark, im nordosten gibt es dauerregen, im osten kommt wind dazu, im süden ein bisschen sonne.|1.0|0|
+26April_2010_Monday_tagesschau-7272|der regen im norden wird in der nacht leichter, an den alpen regnet es und vereinzelt ist nebel möglich.|1.0|0|
+26August_2009_Wednesday_tagesschau-3213|die wettervorhersage für morgen, donnerstag, den siebenundzwanzigsten august.|1.0|0|
+26August_2009_Wednesday_tagesschau-3226|am samstag (?), im norden starker wind.|0.5|0|
+26August_2009_Wednesday_tagesschau-3227|(?)|0.0|0|
+26January_2010_Tuesday_heute-105|im weiteren verlauf bleibt das wetter so.|1.0|1|fragment of next sentence in the end of the video
+26January_2010_Tuesday_heute-106|am wochenende wird es kälter.|1.0|0|
+26January_2010_Tuesday_tagesschau-2784|jetzt das wetter für morgen, mittwoch, den siebenundzwanzigsten januar.|1.0|1|text over signer's head for first part of video
+26July_2010_Monday_tagesschau-6266|mittwoch kommen von nordwesten regen, schauer, teils auch gewitter.|1.0|0|
+26July_2010_Monday_tagesschau-6267|auch am tag darauf bleibt es so wechselhaft.|1.0|0|
+26July_2010_Monday_tagesschau-6268|(?) temperatur (?).|0.0|0|
+26June_2010_Saturday_tagesschau-724|in den bergen und im westen deutschlands können sich quellwolken bilden, im südwesten sind dann gewitter möglich.|1.0|0|
+26June_2010_Saturday_tagesschau-725|der wind ist schwach.|1.0|0|
+26May_2010_Wednesday_heute-7863|liebe zuschauer, guten abend.|1.0|0|
+26October_2009_Monday_tagesschau-1394|heute nacht ist es stark bedeckt, vereinzelt gibt es regen und nieselregen.|1.0|0|
+26October_2009_Monday_tagesschau-1402|im nordosten gibt es mehr wolken und mäßig regen.|1.0|0|
+26October_2009_Monday_tagesschau-1403|am freitag, wenn der nebel sich lichtet, scheint die sonne.|1.0|0|
+26September_2009_Saturday_tagesschau-2336|im süden sind kleine schauer möglich.|1.0|0|
+26September_2009_Saturday_tagesschau-2339|wenn der nebel sich am tag lichtet, scheint die sonne.|1.0|1|video is cut off in the end. the last sign that's a little bit visible is sonne
+26September_2009_Saturday_tagesschau-2340|im süden regnet es, im norden kann es etwas bewölkt werden.|1.0|0|
+26September_2009_Saturday_tagesschau-2341|im norden weht schwacher wind aus nordosten und südosten, im süden aus verschiedenen richtungen.|1.0|0|
+27April_2010_Tuesday_heute-1028|morgen werden es noch dreißig grad, im süden wird es auch warm und in (?) und im südwesten fünfundzwanzig grad.|0.5|0|
+27April_2010_Tuesday_heute-1038|(?)|0.0|1|video cut off and out of context?
+27April_2010_Tuesday_heute-1039|am nachmittag und am abend regnet es im nordwesten. |1.0|0|
+27August_2009_Thursday_tagesschau-3267|die wettervorhersage für morgen, freitag, den achtundzwanzigsten august.|1.0|0|
+27August_2009_Thursday_tagesschau-3268|am sonntag zieht ein tiefdruckgebiet auf.|1.0|0|video cut off in the end?
+27August_2009_Thursday_tagesschau-3269|ein tief aus dem westen bringt kühle luft nach deutschland.|1.0|0|
+27August_2010_Friday_tagesschau-5164|am sonntag und montag bleibt das wetter so kühl.|1.0|0|sonntag signed differently than Signer01
+27June_2010_Sunday_tagesschau-7392|morgen liegen die temperaturen bei zweiundzwanzig grad an der ostsee und zweiunddreißig grad am oberrhein.|1.0|0|
+27May_2010_Thursday_heute-1236|nächsten sonntag wieder kühler und wechselhaft.|1.0|0|sonntag signed differently than Signer01, Signer03
+27May_2010_Thursday_tagesschau-8382|am sonntag wird es wechselhaft, teils gibt es starkregen und auch gewitter.|1.0|0|again different sign for sonntag (here Signer05: f hand, both hands downward in front of chest. other videos by this signer: f hand ONE hand in front of chest, Signer01 b hand flat down chest, Signer03 a hand (fist) like nod in front of chest)
+27May_2011_Friday_tagesschau-8129|morgen werden es im osten fünfzehn grad, an der ruhr dreiundzwanzig grad.|1.0|0|
+27November_2009_Friday_tagesschau-7340|montag wird es bewölkt, in berlin regnet es.|1.0|0|video pixelated
+27November_2009_Friday_tagesschau-7341|in den bergen schneit es und in den alpen gibt es regen und schnee.|1.0|1|video pixelated and cut off in the end
+27November_2009_Friday_tagesschau-7342|am dienstag wird das wetter wechselhaft.|1.0|0|
+27November_2011_Sunday_tagesschau-5138|jetzt die wettervorhersage für morgen, montag, den achtundzwanzigsten november.|1.0|0|
+27November_2011_Sunday_tagesschau-5149|morgen im süden bei dauernebel nur zwei grad, am neckar bis elf grad.|1.0|0|
+28August_2009_Friday_tagesschau-5878|(?)|0.0|0|lots of incohesive indexing?
+28August_2009_Friday_tagesschau-5879|im norden wird es auch windig.|1.0|0|
+28August_2009_Friday_tagesschau-5881|es werden siebzehn, sechzehn, morgen zweiundzwanzig grad.|1.0|0|
+28August_2009_Friday_tagesschau-5882|an der ostsee nur sechzehn grad.|1.0|0|
+28August_2009_Friday_tagesschau-5883|am sonntag ist es im norden bewölkt, dort gibt es auch schauer.|1.0|0|
+28August_2009_Friday_tagesschau-5884|im osten scheint viel sonne.|1.0|0|
+28August_2009_Friday_tagesschau-5886|dienstag abend ziehen schauer und gewitter über deutschland.|1.0|0|
+28December_2011_Wednesday_tagesschau-1912|dort kommt am abend regen, über vierhundert, achthundert metern höhe schneit es.|1.0|0|
+28February_2011_Monday_tagesschau-4988|die temperaturen bleiben gleich.|1.0|0|
+28January_2010_Thursday_heute-2882|guten abend, liebe zuschauer.|1.0|0|
+28January_2010_Thursday_heute-2883|in ein paar stunden können fünf zentimeter schnee fallen.|1.0|0|
+28January_2013_Monday_heute-7998|im westen regnet es, der regen zieht bis in den osten, wo anfangs schnee fällt, im mittelgebirge auch.|1.0|0|
+28January_2013_Monday_tagesschau-3624|heute nacht wird es windig, im norden stürmt es, auch sonst vereinzelt stürme möglich und in den bergen kommt es zu orkanartigen böen.|1.0|0|
+28July_2010_Wednesday_tagesschau-864|morgen regnet es und gewitter sind möglich.|1.0|0|
+28July_2010_Wednesday_tagesschau-871|samstag bleibt es freundlich, trocken und wärmer.|1.0|0|
+28July_2010_Wednesday_tagesschau-872|am sonntag kommen aus dem westen regenwolken und gewitter.|1.0|0|
+28March_2011_Monday_tagesschau-2285|im süden wird es sehr wolkig, es kann vereinzelt regnen, sonst wird es überwiegend klar mit lockeren wolken.|1.0|0|
+28March_2011_Monday_tagesschau-2286|im nordwesten und bayern wird es neblig.|1.0|1|this is just a fragment of the next video which is the complete sentence (but missing the nord of nordwesten)
+28March_2011_Monday_tagesschau-2287|im westen und bayern lichtet sich der nebel und morgen wird es sonnig.|1.0|1|cut off in the beginning, signer signs nordwesten but in this video only westen is visible
+28May_2010_Friday_tagesschau-7501|heute nacht werden es elf grad in bayern, etwa ein grad im norden.|1.0|0|
+28October_2009_Wednesday_tagesschau-4535|im norden und nordosten wird es bewölkt sein, morgen gibt es ein paar schauer.|1.0|0|
+28October_2009_Wednesday_tagesschau-4537|heute nacht gibt es im norden und nordosten viele wolken, dort regnet es auch.|1.0|0|
+28October_2009_Wednesday_tagesschau-4539|morgen wird es stark bewölkt und neblig, aber im süden scheint die sonne.|1.0|0|
+28October_2009_Wednesday_tagesschau-4540|im nordosten wird es bewölkt, vereinzelt regnet es.|1.0|0|
+28October_2009_Wednesday_tagesschau-4543|im süden gibt es starke (?)|0.0|0|"gewitter? glätte? gefahr? not sure, but ""im süden gibt es starke"""
+28October_2009_Wednesday_tagesschau-4544|morgen werden es im norden acht, im südwesten bis zu siebzehn grad.|1.0|0|
+28September_2009_Monday_tagesschau-4681|wie sieht es aus?|1.0|1|"just a fragment of sign language idiom ""wetter wie sieht aus"" - wettervorhersage"
+28September_2009_Monday_tagesschau-4682|am mittwoch regnet es im norden, im süden wird es freundlicher.|1.0|0|
+28September_2010_Tuesday_heute-8343|hallo, guten abend.|1.0|0|abend cut off in the end
+28September_2010_Tuesday_heute-8344|(regen?)|0.0|0|
+28September_2010_Tuesday_heute-8355|(location?) fünfzehn bis siebzehn grad.|0.5|0|
+29April_2010_Thursday_heute-8626|vormittags scheint noch die sonne.|1.0|0|
+29April_2010_Thursday_heute-8627|im weiteren verlauf gibt es am nachmittag in bayern gewitter.|1.0|0|
+29August_2009_Saturday_tagesschau-5018|heute nacht (?).|0.0|0|
+29August_2009_Saturday_tagesschau-5019|im süden wird es ziemlich bewölkt.|1.0|0|
+29August_2009_Saturday_tagesschau-5020|morgen früh ist nebel möglich.|1.0|0|
+29August_2011_Monday_tagesschau-5710|heute nacht ist es sehr neblig (location), es gibt schauer.|0.5|0|
+29July_2010_Thursday_tagesschau-7420|am samstag wird es meist freundlich und trocken.|1.0|0|
+29July_2010_Thursday_tagesschau-7421|dichte wolken und schauer gibt es nur im nordwesten.|1.0|0|
+29June_2011_Wednesday_tagesschau-4490|im osten bleibt es trocken.|1.0|0|
+29March_2010_Monday_tagesschau-8387|dort gibt es schauer und gewitter, (?).|0.5|0|lexical issues
+29March_2010_Monday_tagesschau-8388|im verlauf wird es zunächst (?).|0.5|0|not clear without context?
+29March_2010_Monday_tagesschau-8389|es wird wechselhaft.|1.0|0|
+29March_2011_Tuesday_tagesschau-8108|die wettervorhersage für morgen, mittwoch, den dreißigsten märz.|1.0|0|
+29November_2009_Sunday_tagesschau-7044|auch am bodensee ist es möglich, (flach?)|0.5|0|
+29November_2009_Sunday_tagesschau-7045|im osten und im norden ist es noch trocken.|1.0|0|
+29October_2009_Thursday_tagesschau-1013|es gibt eine mischung aus nebel, wolken und sonne.|1.0|1|video cut off in the end
+29October_2009_Thursday_tagesschau-1024|am montag wird es wieder wechselhaft und kühler.|1.0|0|
+29September_2011_Thursday_tagesschau-7236|am samstag und am sonntag bleibt es gleich.|1.0|1|fragment of next sentence in the end, video cut off
+29September_2012_Saturday_tagesschau-2963|im süden ist der wind schwach und mäßig, im norden gibt es starke windböen.|1.0|0|
+30April_2010_Friday_tagesschau-2025|morgen an den küsten zehn grad, in bayern zwei grad.|1.0|0|
+30December_2010_Thursday_tagesschau-2232|im norden gibt es etwas regen und schnee.|1.0|0|
+30January_2013_Wednesday_tagesschau-476|auch am samstag gibt es regen und schnee, später ist es im westen und im norden freundlicher.|1.0|0|
+30July_2011_Saturday_tagesschau-8595|der wind weht schwach und mäßig, es sind aber auch starke windböen möglich.|1.0|0|
+30March_2010_Tuesday_tagesschau-5699|im westen regnet es, in den bergen sind auch schneeschauer möglich.|1.0|0|
+30March_2011_Wednesday_tagesschau-7125|jetzt die wettervorhersage für morgen, donnerstag, den einunddreißigsten märz.|1.0|0|Signer05 signs donnerstag differently than Signer01
+30November_2009_Monday_tagesschau-5750|im westen und nordwesten bleibt es trocken, aber bewölkt, die sonne scheint, teils regnet es auch.|1.0|0|
+30November_2009_Monday_tagesschau-5751|morgen regnet es im südosten viel, auch schnee ist möglich.|1.0|0|Signer03 signs schnee differently than e.g. Signer05
+30November_2009_Monday_tagesschau-5752|im norden ist das wetter besser, manchmal bewölkt und trocken.|1.0|0|
+30November_2009_Monday_tagesschau-5753|es weht ein starker wind (location?).|0.5|0|
+30October_2009_Friday_tagesschau-2267|und jetzt das wetter für morgen, samstag, den einunddreißigsten oktober.|1.0|0|
+30October_2009_Friday_tagesschau-2273|sobald sich der nebel lichtet, scheint die sonne.|1.0|0|
+30October_2009_Friday_tagesschau-2274|im westen ist es im verlauf morgen sehr bewölkt, aber es bleibt trocken und regnet nicht.|1.0|0|
+31January_2011_Monday_heute-3053|einen schönen abend für sie.|1.0|0|
+31January_2011_Monday_tagesschau-668|jetzt die wettervorhersage für morgen, dienstag, den ersten februar.|1.0|0|
+31January_2013_Thursday_tagesschau-2708|heute nacht (?)|0.0|0|
+31January_2013_Thursday_tagesschau-2713|am tag werden es im sauerland vier, in (location?) fünf grad.|0.5|0|
+31March_2010_Wednesday_tagesschau-1000|(?) ein tief über deutschland und auch kühle luft, morgen wird es wechselhaft und regnet.|0.5|0|
+31March_2010_Wednesday_tagesschau-1008|die wettervorhersage für morgen, den ersten april, donnerstag.|1.0|0|different sign for donnerstag (vgl. Signer05)
+31March_2010_Wednesday_tagesschau-999|am freitag wird es wechselhaft mit sonne und wolken, schauer sind möglich, vereinzelt scheint lange die sonne.|1.0|0|
+31May_2011_Tuesday_heute-1904|(location?) schauer, im nordwesten (?).|0.0|0|

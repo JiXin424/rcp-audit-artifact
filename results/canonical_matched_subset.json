@@ -11,5 +11,14 @@
  "bootstrap_ci": [
   7.441964978343732,
   10.861768974247527
+ ],
+ "human_gap_bootstrap_ci": [
+  -0.12979855084247147,
+  1.9943738049054276
+ ],
+ "human_gap_bootstrap_mean": 0.9333241706925046,
+ "attenuation_bootstrap_ci_recomputed": [
+  7.441964978343732,
+  10.861768974247527
  ]
 }

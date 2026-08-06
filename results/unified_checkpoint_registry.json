@@ -1,4 +1,14 @@
 {
+  "_deprecated": {
+    "status": "DEPRECATED (2026-08-06)",
+    "reason": "Values predate the canonical donor registry (SHA-256 9170a530...) and the canonical beam-3 protocol. Released entry here reports pre-exclusion PURE 23.79 / gap +11.01; canonical values are PURE 23.02 / gap +10.24 (results/gap_43_canonical_beam3.json). Distill dev_bleu4_max values (10.51-10.81) are legacy training-time values not reproducible from current checkpoints. Counts in summary (beam3_evaluated=70, has_gap=43) remain valid.",
+    "canonical_sources": [
+      "results/gap_43_canonical_beam3.json",
+      "results/canonical_checkpoint_registry.json",
+      "results/gap_43_canonical_beam3_items/"
+    ],
+    "superseded_by": "results/canonical_checkpoint_registry.json + results/gap_43_canonical_beam3.json"
+  },
   "schema": "unified-checkpoint-registry-v2",
   "generated_by": "build_unified_checkpoint_registry.py",
   "summary": {

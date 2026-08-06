@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: supplementary.aux
+The style file: sn-chicago.bst
+Database file #1: references.bib
+sn-chicago.bst [2024/07/19 v1.1 Chicago bibliography style]
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 1 entry,
+            3209 wiz_defined-function locations,
+            692 strings with 6119 characters,
+and the built_in function-call counts, 1061 in all, are:
+= -- 85
+> -- 95
+< -- 1
++ -- 30
+- -- 30
+* -- 100
+:= -- 188
+add.period$ -- 5
+call.type$ -- 1
+change.case$ -- 10
+chr.to.int$ -- 1
+cite$ -- 1
+duplicate$ -- 30
+empty$ -- 55
+format.name$ -- 34
+if$ -- 208
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 1
+newline$ -- 11
+num.names$ -- 10
+pop$ -- 10
+preamble$ -- 1
+purify$ -- 16
+quote$ -- 0
+skip$ -- 28
+stack$ -- 0
+substring$ -- 44
+swap$ -- 12
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 20
+warning$ -- 0
+while$ -- 9
+width$ -- 0
+write$ -- 22

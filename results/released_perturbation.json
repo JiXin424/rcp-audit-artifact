@@ -1,0 +1,101 @@
+{
+ "schema": "released-perturbation-A1-v1",
+ "sigmas": [
+  0.0,
+  0.001,
+  0.003,
+  0.01,
+  0.03,
+  0.1
+ ],
+ "seeds": [
+  101,
+  202
+ ],
+ "records": [
+  {
+   "gt_bleu": 12.777148564612425,
+   "pure_bleu": 23.020464394404755,
+   "dev_bleu": 13.378651856913775,
+   "gap": 10.24331582979233,
+   "sigma": 0.0,
+   "seed": 0,
+   "elapsed_s": 16.387104272842407,
+   "train_bleu": 78.81879546693305,
+   "train_em": 0.7069405099150141
+  },
+  {
+   "gt_bleu": 12.632087533491134,
+   "pure_bleu": 22.924400010744648,
+   "dev_bleu": 13.35303698846725,
+   "gap": 10.292312477253514,
+   "sigma": 0.001,
+   "seed": 101,
+   "elapsed_s": 12.973944902420044
+  },
+  {
+   "gt_bleu": 12.823004266472834,
+   "pure_bleu": 23.16821636214388,
+   "dev_bleu": 13.031856140816167,
+   "gap": 10.345212095671046,
+   "sigma": 0.001,
+   "seed": 202,
+   "elapsed_s": 12.821762561798096
+  },
+  {
+   "gt_bleu": 12.337889846721463,
+   "pure_bleu": 22.296030056727616,
+   "dev_bleu": 13.014712111783096,
+   "gap": 9.958140210006153,
+   "sigma": 0.003,
+   "seed": 101,
+   "elapsed_s": 12.850328922271729
+  },
+  {
+   "gt_bleu": 12.857419700623561,
+   "pure_bleu": 22.359959197404436,
+   "dev_bleu": 12.49741482851556,
+   "gap": 9.502539496780875,
+   "sigma": 0.003,
+   "seed": 202,
+   "elapsed_s": 12.845196723937988
+  },
+  {
+   "gt_bleu": 10.367839986598275,
+   "pure_bleu": 13.603791118064972,
+   "dev_bleu": 10.219590283686486,
+   "gap": 3.235951131466697,
+   "sigma": 0.01,
+   "seed": 101,
+   "elapsed_s": 12.128785133361816
+  },
+  {
+   "gt_bleu": 7.71884847575306,
+   "pure_bleu": 11.867127262498046,
+   "dev_bleu": 7.27508376170307,
+   "gap": 4.148278786744986,
+   "sigma": 0.01,
+   "seed": 202,
+   "elapsed_s": 13.02916169166565
+  },
+  {
+   "gt_bleu": 0.17226462725334174,
+   "pure_bleu": 0.1278649402265945,
+   "dev_bleu": 0.17776986135570272,
+   "gap": -0.04439968702674724,
+   "sigma": 0.03,
+   "seed": 101,
+   "elapsed_s": 13.469945907592773
+  },
+  {
+   "gt_bleu": 0.02046194930700886,
+   "pure_bleu": 0.021279201049825756,
+   "dev_bleu": 0.021385857160042383,
+   "gap": 0.0008172517428168963,
+   "sigma": 0.03,
+   "seed": 202,
+   "elapsed_s": 600.7960367202759
+  }
+ ],
+ "note_1e-1_omitted": "sigma=1e-1 (both seeds) produced an all-empty-decoding model whose beam search runs to max_length on every item (pathological decode cost ~10 min/record); dev BLEU and gap are both effectively 0, consistent with the sigma=3e-2 total-collapse regime. Omitted to keep the sweep tractable."
+}
