@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Analyze human evaluation data from /ssd/xkb4/RCP/评分/.
+"""Analyze human evaluation data from 评分/.
 30 raters x 100 videos (20 target sentences x 5 systems).
 Reverse-identify video -> system by semantic-score ranking."""
 from __future__ import annotations
@@ -7,8 +7,8 @@ import csv, json, os, statistics
 from collections import defaultdict, Counter
 from pathlib import Path
 
-EVAL_DIR = Path('/ssd/xkb4/RCP/评分')
-OUT = Path('/ssd/xkb4/RCP/artifact/results/human_eval')
+EVAL_DIR = Path(__file__).resolve().parents[1] / "评分"
+OUT = Path(__file__).resolve().parents[1] / "results/human_eval"
 OUT.mkdir(parents=True, exist_ok=True)
 
 # Stage 1: video-level (intelligibility, naturalness)

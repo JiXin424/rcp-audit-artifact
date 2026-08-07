@@ -6,9 +6,9 @@ paper (37 dose-response, 50 gate-eligible, 14 prediction interval, 63 dev-metric
 66 trained, 13 distillation) MUST be auto-generated from this registry.
 
 Data sources:
-- /ssd/xkb4/RCP/artifact/results/checkpoint_registry.json (50 non-distill + released)
-- /ssd/xkb4/RCP/artifact/results/round5/e11b_ladder_gaps.json (ladder + config-faithful dev/gap)
-- /ssd/xkb4/RCP/artifact/data/cells/cp*.json (per-checkpoint BLEU)
+- results/checkpoint_registry.json (50 non-distill + released)
+- results/e11b_ladder_gaps.json (ladder + config-faithful dev/gap)
+- data/cells/cp*.json (per-checkpoint BLEU)
 - Paper Tables 4, 11, 12, 13, 14, 18 for gap/dev per family
 """
 from __future__ import annotations
@@ -16,7 +16,7 @@ import json, sys
 from pathlib import Path
 from collections import Counter
 
-ARTI = Path('/ssd/xkb4/RCP/artifact')
+ARTI = Path(__file__).resolve().parents[1]
 
 # ===================== Original (released) =====================
 released = {

@@ -7,7 +7,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-R5 = Path("/ssd/xkb4/RCP/revision_20260729_round5")
+R5 = Path(__file__).resolve().parents[1] / "results"
 FIG = R5 / "figures"
 FIG.mkdir(exist_ok=True)
 
@@ -15,7 +15,7 @@ FIG.mkdir(exist_ok=True)
 dev = {"original": 0.1338, "seed_101": 0.0857, "seed_202": 0.0881, "seed_303": 0.0967,
        "seed_404": 0.0719, "seed_505": 0.0905, "seed_606": 0.0809}
 # from r5_extension_seeds_dev.json
-ext = json.load(open("/ssd/xkb4/RCP/revision_20260728_round4/results/r5_extension_seeds_dev.json"))
+ext = json.load(open(str(Path(__file__).resolve().parents[1] / "results/evaluator_extension")))
 for row in ext if isinstance(ext, list) else ext.get("rows", []):
     dev[f"seed_{row['seed']}"] = row.get("dev_bleu4", row.get("dev_bleu"))
 # rescue2

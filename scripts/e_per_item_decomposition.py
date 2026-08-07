@@ -38,7 +38,7 @@ import numpy as np
 import sacrebleu
 import torch
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 ITEMS = ROOT / "results/gap_43_canonical_beam3_items"
 REG = ROOT / "results/gap_43_canonical_beam3_items/donor_registry.jsonl"
 CSV_HC = ROOT / "data/sacrebird/test_subset_backtranslations_sacrebirdphoenix.csv"

@@ -8,19 +8,19 @@ for all three paths, replacing the legacy custom-protocol WER (0.7926/0.8026) in
 import json, sys
 from pathlib import Path
 
-MAJOR = Path("/ssd/xkb4/RCP/revision_20260728_major")
-FULL = Path("/ssd/xkb4/RCP/revision_20260728_full_revision")
+MAJOR = Path(__file__).resolve().parents[1] / "results"
+FULL = Path(__file__).resolve().parents[1] / "results"
 sys.path.insert(0, str(MAJOR)); sys.path.insert(0, str(FULL))
 import torch  # noqa: E402
 from src import evaluate_checkpoints as ev  # noqa: E402
 import src.evaluate_checkpoints as evf  # noqa: E402
 
-sys.path.insert(0, "/ssd/xkb4/SignDiff/SLRTP2025_eval")
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from metrics import wer as official_wer  # noqa: E402
 
-R5 = Path("/ssd/xkb4/RCP/revision_20260729_round5")
+R5 = Path(__file__).resolve().parents[1] / "results"
 OUT = R5 / "results/e10d_three_path_official_wer.json"
-CELLS = Path("/ssd/xkb4/RCP/revision_20260728_canonical_rebuild/outputs/evaluations/cells")
+CELLS = Path(__file__).resolve().parents[1] / "data/cells"
 
 
 def main():

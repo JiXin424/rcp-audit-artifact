@@ -1,4 +1,4 @@
-# Provenance: copied from /ssd/xkb4/SignDiff/SLRTP2025_eval/back_translation/bt_attention.py on 2026-08-03.
+# Provenance: Architecture from the publicly released SLRTP2025 evaluation codebase.
 # Original package: SignDiff/SLRTP2025_eval/back_translation (JoeyNMT-style transformer).
 # This file is verbatim from the source except for this header line.
 

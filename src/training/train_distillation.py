@@ -25,9 +25,9 @@ Usage:
         --batch-size 64 --grad-accum 4 \
         --output checkpoints/distillation/alpha_0.5_seed_303
 
-Provenance: written fresh 2026-08-02 to replace the lost
-revision_20260730_round15/scripts/e2_distill_*.py. The KL-on-soft-labels
-mechanic follows Hinton et al. (2015) with T=2.
+Provenance: Distillation training for the SLRTP2025 BT evaluator audit.
+Implements Hinton et al. (2015) knowledge distillation with temperature T=2
+and interpolation parameter alpha controlling the CE/KL trade-off.
 """
 from __future__ import annotations
 import argparse

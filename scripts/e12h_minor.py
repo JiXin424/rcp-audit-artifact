@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 import sacrebleu
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 CELLS = ROOT / "revision_20260728_canonical_rebuild/outputs/evaluations/cells"
 REG = ROOT / "revision_20260728_canonical_rebuild/registry/query_donor_registry.jsonl"
 R5 = ROOT / "revision_20260729_round5"

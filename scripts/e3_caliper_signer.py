@@ -5,14 +5,14 @@ from pathlib import Path
 from collections import Counter
 import numpy as np
 
-MAJOR = Path("/ssd/xkb4/RCP/revision_20260728_major")
-FULL = Path("/ssd/xkb4/RCP/revision_20260728_full_revision")
+MAJOR = Path(__file__).resolve().parents[1] / "results"
+FULL = Path(__file__).resolve().parents[1] / "results"
 sys.path.insert(0, str(MAJOR)); sys.path.insert(0, str(FULL))
 import torch  # noqa: E402
 from src import evaluate_checkpoints as ev  # noqa: E402
 import src.evaluate_checkpoints as evf  # noqa: E402
 
-R5 = Path("/ssd/xkb4/RCP/revision_20260729_round5")
+R5 = Path(__file__).resolve().parents[1] / "results"
 OUT = R5 / "results/e3_caliper_signer_d.json"
 UNSEEN_ITEMS = R5 / "results/decoded/UNSEEN-PURE-v1__original.json"
 
@@ -62,7 +62,7 @@ def main():
         _, txt, model = ev._vocab_and_model("cuda:0")
         state = evf.load_original_checkpoint(str(ev.MODEL_ROOT / "best.ckpt"), ev.PINNED[str(ev.MODEL_ROOT / "best.ckpt")])
         model.load_state_dict(state["state_dict"]); model.to("cuda:0").eval()
-        raw = torch.load("/ssd/xkb4/RCP/revision_20260728_round3/outputs/poses/UNSEEN-PURE-v1.pt",
+        raw = torch.load(str(Path(__file__).resolve().parents[1] / "data/cells") + "/UNSEEN-PURE-v1.pt",
                          map_location="cpu", weights_only=True)
         ids = sorted(raw)
         # NOTE: this pose file is already materialized at 12.5 fps (verified: 30,027 total
@@ -80,7 +80,7 @@ def main():
     variants = {"SEEN-MATCHED-T005": None, "SEEN-MATCHED-T020": None, "SEEN-MATCHED-SIGNER": None,
                 "SEEN-PURE-MATCHED-v1 (canonical, 622)": None}
     # canonical matched items from r5 common support
-    common = json.loads(Path("/ssd/xkb4/RCP/revision_20260728_round4/results/r5_common_support_eval.json").read_text())
+    common = json.loads(Path(__file__).resolve().parents[1] / "results/r5_common_support_eval.json").read_text())
     by_es = {(r["evaluator"], r["system"]): r["items"] for r in common["rows"]}
 
     out = {}

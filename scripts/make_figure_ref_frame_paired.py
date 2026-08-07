@@ -18,7 +18,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import sacrebleu
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 ITEMS = ROOT / "results/gap_43_canonical_beam3_items"
 CSV_HC = ROOT / "data/sacrebird/test_subset_backtranslations_sacrebirdphoenix.csv"
 OUT_FIG = ROOT / "generated_figures/ref_frame_paired.pdf"

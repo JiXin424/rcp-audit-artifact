@@ -15,7 +15,7 @@ from collections import Counter, defaultdict
 import numpy as np
 import sacrebleu
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 CELLS = ROOT / "results/cells"
 OUT = ROOT / "results/family_stratify_cluster.json"
 BLEU = sacrebleu.metrics.BLEU(tokenize="13a", smooth_method="exp",

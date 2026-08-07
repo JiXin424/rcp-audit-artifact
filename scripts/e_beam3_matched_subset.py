@@ -12,7 +12,7 @@ import numpy as np
 import torch
 import sacrebleu
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from src.data.slrtp_dataset import load_pickle
 from src.models import make_back_translation_model, back_translate

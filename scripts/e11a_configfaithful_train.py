@@ -21,13 +21,13 @@ from __future__ import annotations
 import argparse, hashlib, json, math, sys, time
 from pathlib import Path
 
-ROUND3 = Path("/ssd/xkb4/RCP/revision_20260728_round3")
+ROUND3 = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROUND3 / "src"))
 import train_matched as tm
 import torch
 import yaml
 
-MAJOR = Path("/ssd/xkb4/RCP/revision_20260728_major")
+MAJOR = Path(__file__).resolve().parents[1] / "results"
 sys.path.insert(0, str(MAJOR))
 from src import evaluate_checkpoints as ev  # noqa: E402
 
@@ -93,8 +93,8 @@ def main():
     train_data = tm.load_pose(tm.TRAIN_PT, "3519be65c554a3145457157d5a0b64a6b7c1a4ad6b7d5c9c3185bbb5a4dcf74a")
     dev_data = tm.load_pose(tm.DEV_PT, "73acbfbcb63b05eae02071da58dec95177551d90bb3a711a36b78f2eeb73e85c")
     import json as _json
-    train_ids = [x["id"] for x in map(_json.loads, open("/ssd/xkb4/RCP/revision_20260728_major/manifests/available_train.jsonl"))]
-    dev_ids = [x["id"] for x in map(_json.loads, open("/ssd/xkb4/RCP/revision_20260728_major/manifests/available_dev.jsonl"))]
+    train_ids = [x["id"] for x in map(_json.loads, open(str(Path(__file__).resolve().parents[1] / "manifests/available_train.jsonl")))]
+    dev_ids = [x["id"] for x in map(_json.loads, open(str(Path(__file__).resolve().parents[1] / "manifests/available_dev.jsonl")))]
     from torch.utils.data import DataLoader
     from functools import partial
     td = tm.SignDataset(train_data, train_ids, txt, 2, 400)

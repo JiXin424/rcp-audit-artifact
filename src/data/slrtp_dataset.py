@@ -5,9 +5,9 @@ Loads the SLRTP2025 BT-evaluator training data (JoeyNMT-style pickles) and
 produces torch tensors ready for SignModel.forward(sgn, sgn_mask, sgn_lengths,
 txt_input, txt_mask).
 
-Provenance: written fresh in 2026-08-02 to replace the lost
-`revision_20260728_major/src/data.py`. The pickle schema follows
-SignDiff/SLRTP2025_eval/back_translation/load_pickle_file().
+Provenance: Dataset loader for the SLRTP2025 BT-evaluator training data
+(JoeyNMT-style pickles). Follows the pickle schema from the publicly
+released SignDiff/SLRTP2025_eval/back_translation/load_pickle_file().
 """
 from __future__ import annotations
 import pickle

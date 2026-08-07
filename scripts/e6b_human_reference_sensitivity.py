@@ -14,7 +14,7 @@ Reported on all mappable items and on the high-confidence (confidence=1.0) subse
 import json, sys
 from pathlib import Path
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 CELLS = ROOT / "revision_20260728_canonical_rebuild/outputs/evaluations/cells"
 CSV_FULL = ROOT / "revision_20260729_round5/data_sacrebird/test_full_annotations_sacrebirdphoenix.csv"
 CSV_HC = ROOT / "revision_20260729_round5/data_sacrebird/test_subset_backtranslations_sacrebirdphoenix.csv"
@@ -22,7 +22,7 @@ REG = ROOT / "revision_20260728_canonical_rebuild/registry/query_donor_registry.
 OUT = ROOT / "revision_20260729_round5/results/e6b_human_reference_sensitivity.json"
 
 import sacrebleu  # noqa: E402
-sys.path.insert(0, "/ssd/xkb4/SignDiff/SLRTP2025_eval")
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from metrics import chrf as official_chrf  # noqa: E402
 
 BLEU = sacrebleu.metrics.BLEU(tokenize="13a", smooth_method="exp", effective_order=False, force=True)

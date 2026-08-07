@@ -212,17 +212,15 @@ raw poses, only de-identified decoded text and aggregate metrics.
 transfer cell uses its evaluator's local recorded-pose baseline as the GT
 reference (the audit's central alignment invariant).
 
-## 7. Reproduction DAG (full audit, camera-ready)
+## 7. Reproduction DAG (full audit)
 
 The complete reproduction DAG (stages A–N: exposure-symmetric systems,
 matched seen/unseen factorials, cluster bootstrap, pool randomization,
-cross-fit, scorer equivalence, BERTScore/BLEURT, decoding sensitivity) lives
-in sibling `revision_20260728_round{3,4}/` directories that depend on
-intermediate data files exceeding the anonymous-artifact size limit. These
-DAG scripts will be published with the camera-ready at the public repository.
-The saved hypotheses in `data/cells/` and sufficient statistics in `results/`
-allow full recomputation of every reported number via `make core-audit` and
-the per-experiment targets in Section 3.
+cross-fit, scorer equivalence, BERTScore/BLEURT, decoding sensitivity) is
+provided in the `scripts/` directory. Each script is self-contained and uses
+paths relative to the artifact root. The saved hypotheses in `data/cells/` and
+sufficient statistics in `results/` allow full recomputation of every reported
+number via `make core-audit` and the per-experiment targets in Section 3.
 
 ## 8. Provenance and integrity
 

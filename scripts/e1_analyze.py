@@ -13,9 +13,9 @@ import json, math
 from pathlib import Path
 import numpy as np
 
-ROOT = Path("/ssd/xkb4/RCP/revision_20260729_round5")
+ROOT = Path(__file__).resolve().parents[1] / "results"
 CELL_DIR = ROOT / "results/e1_factorial_cells_12p5fps"
-TASK7 = Path("/ssd/xkb4/RCP/revision_20260728_major/results/task7_canonical_v2")
+TASK7 = Path(__file__).resolve().parents[1] / "results/task7_canonical_v2")
 OUT = ROOT / "results/e1_factorial_full_report.json"
 CELLS = ["seen_high", "seen_low", "unseen_high", "unseen_low"]
 B = 10_000

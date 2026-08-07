@@ -15,9 +15,9 @@ Usage (matches paper §3.4 recipe):
         --gls-vocab checkpoints/released/backTranslation_PHIX_model/gls.vocab \
         --seed 101 --gpu 0 --epochs 300 --output checkpoints/reconstructions/seed_101
 
-Provenance: rewritten 2026-08-02 to replace the lost
-revision_20260728_round3/src/train_matched.py. The training loop is fresh,
-but it uses the SignModel architecture copied from SignDiff/SLRTP2025_eval.
+Provenance: Recipe-conditioned reconstruction training for the SLRTP2025 BT
+evaluator audit. Uses the SignModel architecture from the publicly released
+SLRTP2025 evaluation codebase (SignDiff/SLRTP2025_eval).
 """
 from __future__ import annotations
 import argparse

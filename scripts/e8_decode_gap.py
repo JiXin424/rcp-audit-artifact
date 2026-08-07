@@ -4,12 +4,12 @@ import argparse, hashlib, json, sys
 from pathlib import Path
 import torch
 
-FULL = Path("/ssd/xkb4/RCP/revision_20260728_full_revision")
+FULL = Path(__file__).resolve().parents[1] / "results"
 sys.path.insert(0, str(FULL)); sys.path.insert(0, str(FULL / "src"))
 import evaluate_checkpoints as ec  # noqa: E402
 
-R5 = Path("/ssd/xkb4/RCP/revision_20260729_round5")
-CANON_POSE = Path("/ssd/xkb4/RCP/revision_20260728_canonical_rebuild/outputs/poses")
+R5 = Path(__file__).resolve().parents[1] / "results"
+CANON_POSE = Path(__file__).resolve().parents[1] / "data/cells"
 
 
 def sha256_file(p):

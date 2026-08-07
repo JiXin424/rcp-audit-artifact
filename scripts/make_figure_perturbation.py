@@ -8,7 +8,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 IN = ROOT / "results/released_perturbation.json"
 OUT_FIG = ROOT / "generated_figures/released_perturbation.pdf"
 OUT_JSON = ROOT / "results/released_perturbation_summary.json"

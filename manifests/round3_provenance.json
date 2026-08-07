@@ -1,9 +1,9 @@
 {
   "collected_at_utc": "2026-07-29T00:34:07Z",
   "configs": {
-    "/ssd/xkb4/RCP/revision_20260728_round3/config/experiment.yaml": "008ed04ab7d61426a1dd77d2b349cf2d92c4a031419e12c35fe3a1c7f559c169",
-    "/ssd/xkb4/RCP/revision_20260728_round3/src/contracts.py": "c1466206a37b386c33d24c3805e46211095fd100cdbaacba5cec2538151d1d88",
-    "/ssd/xkb4/RCP/revision_20260728_round3/src/train_matched.py": "c0e848a05c6b3416936f63f6e02d25fd4eab90b0f9a0fba39d03685131224545"
+    "configs/reconstruction.yaml": "008ed04ab7d61426a1dd77d2b349cf2d92c4a031419e12c35fe3a1c7f559c169",
+    "src/utils/config.py": "c1466206a37b386c33d24c3805e46211095fd100cdbaacba5cec2538151d1d88",
+    "src/training/train_matched.py": "c0e848a05c6b3416936f63f6e02d25fd4eab90b0f9a0fba39d03685131224545"
   },
   "environment": {
     "captured_at_utc": "2026-07-29T00:34:08Z",
@@ -254,7 +254,7 @@
     "python_version": "3.10.19"
   },
   "evaluator_source": {
-    "eval_root": "/ssd/xkb4/SignDiff/SLRTP2025_eval",
+    "eval_root": "src/evaluation",
     "file_count": 19,
     "file_sha256": {
       "back_translation/__init__.py": "a3ce75c4e9bf91d05f9666956497b5fd837b87820c55d463ccd2d9d045f147f0",
@@ -304,22 +304,22 @@
   "official_counts": {
     "available_dev": {
       "count": 515,
-      "path": "/ssd/xkb4/RCP/revision_20260728_round3/manifests/available_dev.jsonl",
+      "path": "manifests/available_dev.jsonl",
       "sha256": "d282da24d2d5e4ebdfec0fd11bbde6909676910c083ab8bc59dd18516cfdc26c"
     },
     "available_train": {
       "count": 7060,
-      "path": "/ssd/xkb4/RCP/revision_20260728_round3/manifests/available_train.jsonl",
+      "path": "manifests/available_train.jsonl",
       "sha256": "570a7d996439d5cab1cc8d767c5b03b344ddc8ded620d16f1fff4036e455590c"
     },
     "exclusions": {
       "count": 41,
-      "path": "/ssd/xkb4/RCP/revision_20260728_round3/manifests/exclusions.jsonl",
+      "path": "manifests/exclusions.jsonl",
       "sha256": "474a17ee76aca8d83430563b19ec24fb6e8a04a42dd1afadba8879e8269b4354"
     },
     "official_dev": {
       "count": 519,
-      "path": "/ssd/xkb4/RCP/revision_20260728_round3/manifests/dev.jsonl",
+      "path": "manifests/dev.jsonl",
       "sha256": "08c9d054c63a6c73dec57b3835d5fe39fb9b4ea6420ebb84310d37f3550d7c38"
     },
     "official_target": {
@@ -329,12 +329,12 @@
     },
     "official_test": {
       "count": 642,
-      "path": "/ssd/xkb4/RCP/revision_20260728_round3/manifests/test.jsonl",
+      "path": "manifests/test.jsonl",
       "sha256": "be1af463ee127b64b490edba55a35b635a69b6476700b81c39d461d65b9d640f"
     },
     "official_train": {
       "count": 7096,
-      "path": "/ssd/xkb4/RCP/revision_20260728_round3/manifests/train.jsonl",
+      "path": "manifests/train.jsonl",
       "sha256": "9f000e514a8b82c480ac835cf61b94336dd2063978d045e7f682af7379403c23"
     },
     "released_target": {
@@ -345,31 +345,31 @@
   },
   "releases": {
     "dev_pt": {
-      "path": "/ssd/xkb4/SignDiff/SLRTP2025_data/SLRTP-Sign-Production-Evaluation-Data/data/dev.pt",
+      "path": "data/SLRTP2025/SLRTP-Sign-Production-Evaluation-Data/data/dev.pt",
       "sha256": "73acbfbcb63b05eae02071da58dec95177551d90bb3a711a36b78f2eeb73e85c"
     },
     "gls_vocab": {
-      "path": "/ssd/xkb4/SignDiff/SLRTP2025_data/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/gls.vocab",
+      "path": "checkpoints/released/backTranslation_PHIX_model/gls.vocab",
       "sha256": "149ed86e65aec4af83949235375929bf56351d5c80ac2e460aaaad48f374a641"
     },
     "legacy_config": {
-      "path": "/ssd/xkb4/SignDiff/SLRTP2025_data/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/config.yaml",
+      "path": "checkpoints/released/backTranslation_PHIX_model/config.yaml",
       "sha256": "8afa31c1fb30141619b5dcd4f9b8241a94dbf8b0f2f9a17db958a5841f05e35f"
     },
     "original_checkpoint": {
-      "path": "/ssd/xkb4/SignDiff/SLRTP2025_data/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/best.ckpt",
+      "path": "checkpoints/released/backTranslation_PHIX_model/best.ckpt",
       "sha256": "f081cfd2cca93a3610ed3a13d34bf9b3cb36db5390fda83181db84abab1aa428"
     },
     "test_pt": {
-      "path": "/ssd/xkb4/SignDiff/SLRTP2025_data/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
+      "path": "data/SLRTP2025/SLRTP-Sign-Production-Evaluation-Data/data/test.pt",
       "sha256": "edc66897d5ee72c286f9a55c3a2cb3194eebee7a0443caaa9b52ec9067abe46f"
     },
     "train_pt": {
-      "path": "/ssd/xkb4/SignDiff/SLRTP2025_data/SLRTP-Sign-Production-Evaluation-Data/data/train.pt",
+      "path": "data/SLRTP2025/SLRTP-Sign-Production-Evaluation-Data/data/train.pt",
       "sha256": "3519be65c554a3145457157d5a0b64a6b7c1a4ad6b7d5c9c3185bbb5a4dcf74a"
     },
     "txt_vocab": {
-      "path": "/ssd/xkb4/SignDiff/SLRTP2025_data/SLRTP-Sign-Production-Evaluation-Data/backTranslation_PHIX_model/txt.vocab",
+      "path": "checkpoints/released/backTranslation_PHIX_model/txt.vocab",
       "sha256": "f45eb2df34ab02acaccdbf298558024c1001f481edd3d0514ae961a69a835e3b"
     }
   },

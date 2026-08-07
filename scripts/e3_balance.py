@@ -14,12 +14,12 @@ import json, sys
 from pathlib import Path
 import numpy as np
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 R4 = ROOT / "revision_20260728_round4/results/r4_seen_matched_registry.jsonl"
 E21 = ROOT / "revision_20260728_round3/results/e2_1_exposure_registry.jsonl"
 OUT = ROOT / "revision_20260729_round5/results/e3_balance.json"
 LABSE = Path("/ssd/model/models/hub/models--sentence-transformers--LaBSE/snapshots/836121a0533e5664b21c7aacc5d22951f2b8b25b")
-DATA = Path("/ssd/xkb4/SignDiff/SLRTP2025_data/SLRTP-Sign-Production-Evaluation-Data/data")
+DATA = Path(__file__).resolve().parents[1] / "data/SLRTP2025/SLRTP-Sign-Production-Evaluation-Data/data"
 
 sys.path.insert(0, str(ROOT / "revision_20260728_major"))
 from src import evaluate_checkpoints as ev  # noqa: E402

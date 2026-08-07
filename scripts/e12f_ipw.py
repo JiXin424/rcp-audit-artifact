@@ -15,7 +15,7 @@ from pathlib import Path
 from collections import Counter
 import numpy as np
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 R5 = ROOT / "revision_20260729_round5"
 EVAL_JSON = ROOT / "revision_20260728_round4/results/r5_common_support_eval.json"
 BAL = R5 / "results/e3_balance.json"

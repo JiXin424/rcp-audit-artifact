@@ -2,13 +2,13 @@
 """E10d step 1: decode path C (double subsample) under the original evaluator, save hyps."""
 import json, sys
 from pathlib import Path
-MAJOR = Path("/ssd/xkb4/RCP/revision_20260728_major")
-FULL = Path("/ssd/xkb4/RCP/revision_20260728_full_revision")
+MAJOR = Path(__file__).resolve().parents[1] / "results"
+FULL = Path(__file__).resolve().parents[1] / "results"
 sys.path.insert(0, str(MAJOR)); sys.path.insert(0, str(FULL))
 import torch
 from src import evaluate_checkpoints as ev
 import src.evaluate_checkpoints as evf
-R5 = Path("/ssd/xkb4/RCP/revision_20260729_round5")
+R5 = Path(__file__).resolve().parents[1] / "results"
 
 def main():
     test = ev.safe_torch_load(ev.TEST_PT, ev.PINNED[str(ev.TEST_PT)], "test")
