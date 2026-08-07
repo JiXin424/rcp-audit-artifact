@@ -1,0 +1,100 @@
+# Reconstruction config: same as released.yaml but training-only.
+# Provenance: derived from configs/released.yaml (which is a verbatim copy of
+# backTranslation_PHIX_model/config.yaml).
+#
+# This config is what each of the 14 reconstruction seeds (101..1405) used.
+# The seed itself varies initialization and data order; everything else is frozen.
+
+name: rcp_reconstruction_seed_placeholder
+wandb: false  # disable wandb for reconstructions
+
+data:
+    data_path: data/SLRTP2025/SLRTP-Sign-Production-Evaluation-Data/data
+    version: phoenix_2014_trans
+    sgn: sign
+    txt: text
+    gls: gloss
+    train: train.pt
+    dev: dev.pt
+    test: test.pt
+    feature_size: 534
+    skeleton_subsample: 2
+    level: word
+    txt_lowercase: true
+    max_sent_length: 400
+    pose_normalization:
+        low_pass_filter: false
+        zero_neck: false
+        norm_rotation: false
+
+testing:
+    recognition_beam_sizes: [1, 3, 5]
+    translation_beam_sizes: [1, 3, 5]
+    translation_beam_alphas: [-1, 0, 1]
+
+training:
+    random_seed: placeholder  # overridden via CLI --seed
+    model_dir: checkpoints/reconstructions/seed_placeholder
+    recognition_loss_weight: 1.0
+    translation_loss_weight: 1.0
+    eval_metric: bleu
+    optimizer: adam
+    learning_rate: 0.001
+    batch_size: 256
+    num_valid_log: 5
+    epochs: 300
+    early_stopping_metric: eval_metric
+    batch_type: sentence
+    translation_normalization: batch
+    eval_recognition_beam_size: 3
+    eval_translation_beam_size: 3
+    eval_translation_beam_alpha: -1
+    overwrite: true
+    shuffle: true
+    use_cuda: true
+    translation_max_output_length: 30
+    keep_last_ckpts: 1
+    batch_multiplier: 1
+    logging_freq: 100
+    validation_freq: 5  # every 5 epochs
+    betas: [0.9, 0.998]
+    scheduling: plateau
+    learning_rate_min: 1.0e-08
+    weight_decay: 0.001
+    patience: 15
+    decrease_factor: 0.8
+    label_smoothing: 0.0
+
+model:
+    initializer: xavier
+    bias_initializer: zeros
+    init_gain: 1.0
+    embed_initializer: xavier
+    embed_init_gain: 1.0
+    tied_softmax: false
+    encoder:
+        dropout: 0.1
+        embeddings:
+            activation_type: softsign
+            dropout: 0.1
+            embedding_dim: 256
+            norm_type: batch
+            scale: false
+        ff_size: 512
+        hidden_size: 256
+        num_heads: 8
+        num_layers: 3
+        type: transformer
+    decoder:
+        dropout: 0.1
+        embeddings:
+            activation_type: softsign
+            dropout: 0.1
+            embedding_dim: 256
+            norm_type: batch
+            scale: false
+        ff_size: 512
+        hidden_size: 256
+        num_heads: 8
+        num_layers: 3
+        type: transformer

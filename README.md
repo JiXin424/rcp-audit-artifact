@@ -22,30 +22,29 @@ targets in `Makefile`. An earlier pre-exclusion materialization (PURE 23.79 /
 gap $+11.01$) survives only as a sensitivity analysis in SI~Sup.~N and is NOT
 reproduced by any target here.
 
-**Evaluation tiers (what ``70'', ``43'', ``38'', ``24'', ``3'' mean).** These
-counts describe different registry tiers and are not interchangeable:
+**Evaluation tiers (canonical counts, auto-generated from registry).** All counts
+derive from `results/canonical_checkpoint_registry.json` (schema v4), which uses
+**checkpoint SHA-256 as the primary key**. Every unique binary has exactly one
+entry; training runs that produce the same binary (e.g., `cf_202` and `ls_202`
+share SHA-256 `911de1fe…`) are listed under `training_runs` and counted once.
 
-- **70 trained** — training runs that completed across 13 families (list and
-  per-family counts: `results/canonical_checkpoint_registry.json`,
-  `summary.beam3_evaluated=70`).
-- **43 decoded on PHX-public** — checkpoints with a PURE--REC gap computed under
-  the canonical donor registry (`results/gap_43_canonical_beam3.json`; 43
-  non-released checkpoints plus the released evaluator itself, whose entry
-  `released` is the audit target, not a family member).
-- **38 non-degenerate** — the 43 minus 5 degenerate decodes (three α=1.0
-  distillation students with empty or near-empty hypotheses; two smallest
-  ladder fractions with BLEU = 0). The paper's non-replication count and the
-  headline gap range $[-2.01,-0.21]$ are over these 38.
-- **24 dev-only / 3 holdout-only** — checkpoints with training-time dev
-  metrics but no canonical PHX-public gap (e.g. the rescue-lr family), or
-  reserved from evaluation.
+| Tier | Count | Definition |
+|---|---|---|
+| Training runs | 48 | Completed `.ckpt` files on disk |
+| Unique binaries | 47 | Distinct SHA-256 hashes (1 collision: `cf_202` = `ls_202`) |
+| With gap (PHX-public) | 43 | Checkpoints with a PURE--REC gap under the canonical donor registry |
+| Non-degenerate | 38 | 43 − 5 (3 × α=1.0 distillation + 2 × ladder fractions with BLEU ≈ 0) |
+| Released (audit target) | 1 | Public SLRTP2025 BT evaluator |
+| Non-released, non-degenerate | 37 | The set over which the headline gap range $[-2.01,-0.21]$ is reported |
 
-`results/gap_43_canonical_beam3_items/` holds per-item beam-3 hypotheses for the
-30 checkpoints with model files present in this environment (released + 14
-reconstruction seeds + 15 distillation students); the 14 additional family
-entries in `gap_43_canonical_beam3.json` (config-faithful, confirmation,
-long-schedule, rescue, step-faithful, ladder fractions) carry their recomputed
-decoding evidence in `results/verify_14_entries_recompute.json`.
+The 5 degenerate entries are: `distill_a1.0_101`, `distill_a1.0_202`,
+`distill_a1.0_303` (gap ≈ 0; α=1.0 removes all ground-truth signal), and
+`ladder_0125`, `ladder_025` (BLEU ≈ 0; insufficient training data).
+
+`results/gap_43_canonical_beam3_items/` holds per-item beam-3 hypotheses for all
+43 checkpoints. The `results/gap_43_canonical_beam3.json` panel now includes
+checkpoint SHA-256 for every entry. The single SHA collision (`config_faithful/
+seed_202` = `long_schedule/seed_202`) is documented in the registry.
 
 **Legacy files.** `results/unified_checkpoint_registry.json` (schema v2) and
 `scripts/build_unified_checkpoint_registry.py` predate the canonical donor
@@ -75,7 +74,7 @@ artifact/
 │   ├── paper_numbers.json          # MACHINE-READABLE table of every headline number
 │   ├── gap_43_canonical_beam3.json # 43-checkpoint PURE-REC gap panel (canonical registry)
 │   ├── gap_43_canonical_beam3_items/  # 30×2 beam-3 per-item hypotheses + donor_registry.jsonl
-│   ├── canonical_checkpoint_registry.json   # 71-entry registry (70 trained + 1 released)
+│   ├── canonical_checkpoint_registry.json   # 47 unique binaries, 48 training runs (SHA-256 primary key)
 │   ├── canonical_matched_subset.json        # 461-item confidence=1 reference-frame analysis
 │   ├── canonical_floor_effect.json          # asymmetric floor-effect numbers
 │   ├── full_readout/ + full_readout_summary.json  # uniform full-7060 readout (30 ckpts)
@@ -212,17 +211,15 @@ raw poses, only de-identified decoded text and aggregate metrics.
 transfer cell uses its evaluator's local recorded-pose baseline as the GT
 reference (the audit's central alignment invariant).
 
-## 7. Reproduction DAG (full audit, camera-ready)
+## 7. Reproduction DAG (full audit)
 
 The complete reproduction DAG (stages A–N: exposure-symmetric systems,
 matched seen/unseen factorials, cluster bootstrap, pool randomization,
-cross-fit, scorer equivalence, BERTScore/BLEURT, decoding sensitivity) lives
-in sibling `revision_20260728_round{3,4}/` directories that depend on
-intermediate data files exceeding the anonymous-artifact size limit. These
-DAG scripts will be published with the camera-ready at the public repository.
-The saved hypotheses in `data/cells/` and sufficient statistics in `results/`
-allow full recomputation of every reported number via `make core-audit` and
-the per-experiment targets in Section 3.
+cross-fit, scorer equivalence, BERTScore/BLEURT, decoding sensitivity) is
+provided in the `scripts/` directory. Each script is self-contained and uses
+paths relative to the artifact root. The saved hypotheses in `data/cells/` and
+sufficient statistics in `results/` allow full recomputation of every reported
+number via `make core-audit` and the per-experiment targets in Section 3.
 
 ## 8. Provenance and integrity
 

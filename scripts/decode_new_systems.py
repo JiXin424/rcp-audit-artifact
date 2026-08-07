@@ -7,15 +7,15 @@ from __future__ import annotations
 import argparse, hashlib, json, sys, time
 from pathlib import Path
 
-MAJOR = Path("/ssd/xkb4/RCP/revision_20260728_major")
-FULL = Path("/ssd/xkb4/RCP/revision_20260728_full_revision")
+MAJOR = Path(__file__).resolve().parents[1] / "results"
+FULL = Path(__file__).resolve().parents[1] / "results"
 sys.path.insert(0, str(MAJOR))
 sys.path.insert(0, str(FULL))
 import torch  # noqa: E402
 from src import evaluate_checkpoints as ev  # noqa: E402
 import src.evaluate_checkpoints as evf  # noqa: E402
 
-R5 = Path("/ssd/xkb4/RCP/revision_20260729_round5")
+R5 = Path(__file__).resolve().parents[1] / "results"
 OUT_DIR = R5 / "results/decoded"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 

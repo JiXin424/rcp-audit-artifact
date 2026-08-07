@@ -3,8 +3,8 @@
 import hashlib, json, csv
 from pathlib import Path
 
-EVAL_DIR = Path('/ssd/xkb4/RCP/评分')
-ARTI = Path('/ssd/xkb4/RCP/artifact')
+EVAL_DIR = Path(__file__).resolve().parents[1] / "评分"
+ARTI = Path(__file__).resolve().parents[1]
 
 # Load target -> item_id mapping
 gt = json.load(open(ARTI / 'data/cells/cp0_GT-v1.json'))

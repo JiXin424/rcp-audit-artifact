@@ -12,14 +12,14 @@ from pathlib import Path
 import numpy as np
 import torch
 
-MAJOR = Path("/ssd/xkb4/RCP/revision_20260728_major")
-FULL = Path("/ssd/xkb4/RCP/revision_20260728_full_revision")
+MAJOR = Path(__file__).resolve().parents[1] / "results"
+FULL = Path(__file__).resolve().parents[1] / "results"
 sys.path.insert(0, str(MAJOR)); sys.path.insert(0, str(FULL))
 from src import evaluate_checkpoints as ev  # noqa: E402
 import src.evaluate_checkpoints as evf  # noqa: E402
 
-R5 = Path("/ssd/xkb4/RCP/revision_20260729_round5")
-CELLS = Path("/ssd/xkb4/RCP/revision_20260728_canonical_rebuild/outputs/evaluations/cells")
+R5 = Path(__file__).resolve().parents[1] / "results"
+CELLS = Path(__file__).resolve().parents[1] / "data/cells"
 OUT = R5 / "results/e12c_rank_stability.json"
 DEC_DIR = R5 / "results/e12c_cells"
 DEC_DIR.mkdir(exist_ok=True)
@@ -27,10 +27,10 @@ DEC_DIR.mkdir(exist_ok=True)
 SEEDS = [101, 202, 303, 404, 505, 606]
 SEED_CKPTS = {s: MAJOR / f"checkpoints/v2_seed_{s}/best.ckpt" for s in SEEDS}
 SYS_POSES = {
-    "LaBSE": ("/ssd/xkb4/RCP/revision_20260721_reviewer/results/labse_public_seq/slrtp_labse_donor_copy_test.pt", True),
-    "SBERT": ("/ssd/xkb4/RCP/revision_20260721_reviewer/results/msbert_public_seq/slrtp_msbert_donor_copy_test.pt", True),
-    "ORACLE-COMP": ("/ssd/xkb4/SignDiff/reports/slrtp_rcp4_upper_facehands_upperdyn_a0p88_test.pt", False),
-    "UNSEEN-PURE": ("/ssd/xkb4/RCP/revision_20260728_round3/outputs/poses/UNSEEN-PURE-v1.pt", False),
+    "LaBSE": (str(Path(__file__).resolve().parents[1] / "results/labse_public_seq/slrtp_labse_donor_copy_test.pt"), True),
+    "SBERT": (str(Path(__file__).resolve().parents[1] / "results/msbert_public_seq/slrtp_msbert_donor_copy_test.pt"), True),
+    "ORACLE-COMP": (str(Path(__file__).resolve().parents[1] / "results/slrtp_rcp4_upper_facehands_upperdyn_a0p88_test.pt"), False),
+    "UNSEEN-PURE": (str(Path(__file__).resolve().parents[1] / "data/cells") + "/UNSEEN-PURE-v1.pt", False),
 }
 
 

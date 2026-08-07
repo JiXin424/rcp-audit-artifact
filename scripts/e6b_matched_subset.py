@@ -11,7 +11,7 @@ from collections import defaultdict
 import numpy as np
 import sacrebleu
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 CELLS = ROOT / "results/cells"
 CSV_FULL = ROOT / "data/sacrebird/test_full_annotations_sacrebirdphoenix.csv"
 CSV_HC = ROOT / "data/sacrebird/test_subset_backtranslations_sacrebirdphoenix.csv"

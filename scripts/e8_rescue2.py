@@ -13,7 +13,7 @@ from __future__ import annotations
 import argparse, copy, json, sys
 from pathlib import Path
 
-ROUND3 = Path("/ssd/xkb4/RCP/revision_20260728_round3")
+ROUND3 = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROUND3 / "src"))
 import train_matched
 import yaml

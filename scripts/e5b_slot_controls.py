@@ -2,11 +2,11 @@
 """E5b: slot-F1 for GT/PURE under all 7 primary evaluators + donor-transcript pass-through control."""
 import json, sys
 from pathlib import Path
-sys.path.insert(0, "/ssd/xkb4/RCP/revision_20260729_round5/scripts")
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from e5_slot_f1 import extract, f1, score_cell  # noqa: E402
 from collections import Counter  # noqa: E402
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 CELLS = ROOT / "revision_20260728_canonical_rebuild/outputs/evaluations/cells"
 REG = ROOT / "revision_20260728_canonical_rebuild/registry/query_donor_registry.jsonl"
 OUT = ROOT / "revision_20260729_round5/results/e5_slot_f1_all.json"

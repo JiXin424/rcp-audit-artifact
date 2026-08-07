@@ -2,6 +2,15 @@
 \providecommand{\doi}[1]{\url{https://doi.org/#1}}
 \bibcommenthead
 
+\bibitem[\protect\citeauthoryear{Alkain, N{\'u}{\~n}ez-Marcos, Escolano,
+  Doc{\'i}o-Fern{\'a}ndez, Perez-de Vi{\~n}aspre, and Labaka}{Alkain
+  et~al.}{2026}]{alkain2026critical}
+Alkain, B., A.~N{\'u}{\~n}ez-Marcos, C.~Escolano, L.~Doc{\'i}o-Fern{\'a}ndez,
+  O.~Perez-de Vi{\~n}aspre, and G.~Labaka. 2026.
+\newblock Critical analysis of datasets for sign language translation.
+\newblock {\em Frontiers in Artificial Intelligence\/}~9: 1743223.
+\newblock \doi{10.3389/frai.2026.1743223} .
+
 \bibitem[\protect\citeauthoryear{Czehmann, Yazdani, Hamidullah, Nunnari, and
   Avramidis}{Czehmann et~al.}{2025}]{czehmann2026sacred}
 Czehmann, V., S.~Yazdani, Y.~Hamidullah, F.~Nunnari, and E.~Avramidis 2025.
@@ -13,5 +22,18 @@ Czehmann, V., S.~Yazdani, Y.~Hamidullah, F.~Nunnari, and E.~Avramidis 2025.
 \newblock ISBN 978-2-493814-82-1. Back-translated test set and annotations:
   \url{https://github.com/DFKI-SignLanguage/sacre-bird-phoenix} (CC BY-NC-SA
   4.0).
+
+\bibitem[\protect\citeauthoryear{Walsh, Fish, Mercanoglu~Sincan, Lakhal,
+  Bowden, Fox, Woll, Wu, Li, Zhao, Wang, Zhou, Li, Tang, He, Wang, Zhang, Wang,
+  Cheng, Tasyurek, Kiziltepe, and Keles}{Walsh et~al.}{2025}]{slrtp2025}
+Walsh, H., E.~Fish, O.~Mercanoglu~Sincan, M.I. Lakhal, R.~Bowden, N.~Fox,
+  B.~Woll, K.~Wu, Z.~Li, W.~Zhao, H.~Wang, W.~Zhou, H.~Li, S.~Tang, J.~He,
+  X.~Wang, R.~Zhang, Y.~Wang, L.~Cheng, M.~Tasyurek, T.~Kiziltepe, and H.Y.
+  Keles 2025.
+\newblock {SLRTP2025} sign language production challenge: Methodology, results,
+  and future work.
+\newblock In {\em Proceedings of the Third Sign Language Recognition,
+  Translation and Production Workshop at CVPR 2025}.
+\newblock arXiv:2508.06951.
 
 \end{thebibliography}

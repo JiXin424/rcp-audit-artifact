@@ -21,8 +21,8 @@ import csv, json, statistics, os
 from collections import defaultdict
 from pathlib import Path
 
-EVAL_DIR = Path('/ssd/xkb4/RCP/评分')
-OUT = Path('/ssd/xkb4/RCP/artifact/results/human_eval')
+EVAL_DIR = Path(__file__).resolve().parents[1] / "评分"
+OUT = Path(__file__).resolve().parents[1] / "results/human_eval"
 
 # Load all ratings
 s1_data = defaultdict(lambda: {'intell': [], 'natural': []})

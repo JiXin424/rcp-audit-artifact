@@ -28,7 +28,7 @@ import numpy as np
 import sacrebleu
 import torch
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 ITEMS = ROOT / "results/gap_43_canonical_beam3_items"
 OUT = ROOT / "results/donor_cluster_bootstrap.json"
 BLEU = sacrebleu.metrics.BLEU(tokenize="13a", smooth_method="exp",

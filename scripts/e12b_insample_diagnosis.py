@@ -14,13 +14,13 @@ from pathlib import Path
 import numpy as np
 import torch
 
-MAJOR = Path("/ssd/xkb4/RCP/revision_20260728_major")
-FULL = Path("/ssd/xkb4/RCP/revision_20260728_full_revision")
+MAJOR = Path(__file__).resolve().parents[1] / "results"
+FULL = Path(__file__).resolve().parents[1] / "results"
 sys.path.insert(0, str(MAJOR)); sys.path.insert(0, str(FULL))
 from src import evaluate_checkpoints as ev  # noqa: E402
 import src.evaluate_checkpoints as evf  # noqa: E402
 
-R5 = Path("/ssd/xkb4/RCP/revision_20260729_round5")
+R5 = Path(__file__).resolve().parents[1] / "results"
 OUT = R5 / "results/e12b_insample_diagnosis.json"
 
 

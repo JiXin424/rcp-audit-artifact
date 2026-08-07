@@ -15,19 +15,19 @@ from __future__ import annotations
 import argparse, json, sys, time
 from pathlib import Path
 
-MAJOR = Path("/ssd/xkb4/RCP/revision_20260728_major")
+MAJOR = Path(__file__).resolve().parents[1] / "results"
 sys.path.insert(0, str(MAJOR))
 sys.path.insert(0, str(MAJOR.parent / "revision_20260728_round3"))
 
 import torch  # noqa: E402
 from src import evaluate_checkpoints as ev  # noqa: E402
 
-FULL_REVISION = Path("/ssd/xkb4/RCP/revision_20260728_full_revision")
+FULL_REVISION = Path(__file__).resolve().parents[1] / "results"
 sys.path.insert(0, str(FULL_REVISION))
 import src.evaluate_checkpoints as ev_full  # noqa: E402
 
 MANIFEST = MAJOR / "results/task7_canonical_v2/selection_manifest.json"
-OUT_DIR = Path("/ssd/xkb4/RCP/revision_20260729_round5/results/e1_factorial_cells_12p5fps")
+OUT_DIR = Path(__file__).resolve().parents[1] / "results/e1_factorial_cells_12p5fps")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 DATA = ev.DATA_ROOT / "data"
 CONDITIONS = ["seen_high", "seen_low", "unseen_high", "unseen_low", "control_own_gt", "control_seen_matched"]

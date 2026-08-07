@@ -9,16 +9,16 @@ from pathlib import Path
 import torch
 import yaml
 
-MAJOR = Path("/ssd/xkb4/RCP/revision_20260728_major")
-ROUND3 = Path("/ssd/xkb4/RCP/revision_20260728_round3")
-FULL = Path("/ssd/xkb4/RCP/revision_20260728_full_revision")
+MAJOR = Path(__file__).resolve().parents[1] / "results"
+ROUND3 = Path(__file__).resolve().parents[1]
+FULL = Path(__file__).resolve().parents[1] / "results"
 sys.path.insert(0, str(ROUND3 / "src"))
 sys.path.insert(0, str(FULL))
 sys.path.insert(0, str(FULL / "src"))
 import train_matched as tm  # noqa: E402
 import evaluate_checkpoints as ec  # noqa: E402
 
-R5 = Path("/ssd/xkb4/RCP/revision_20260729_round5")
+R5 = Path(__file__).resolve().parents[1] / "results"
 OUT = R5 / "results/e12a_bigarch_eval.json"
 
 
@@ -44,7 +44,7 @@ def main():
     test = torch.load(ec.TEST_PT, map_location="cpu", weights_only=True)
     test_ids = sorted(test)
     test_texts = {x: test[x]["text"] for x in test_ids}
-    CANON = Path("/ssd/xkb4/RCP/revision_20260728_canonical_rebuild")
+    CANON = Path(__file__).resolve().parents[1]
     gt = torch.load(CANON / "outputs/poses/GT-v1.pt", map_location="cpu", weights_only=True)
     gt = {k: (v if isinstance(v, torch.Tensor) else v["poses_3d"]) for k, v in gt.items()}
     pure = torch.load(CANON / "outputs/poses/TN-PURE-v1.pt", map_location="cpu", weights_only=True)

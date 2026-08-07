@@ -14,8 +14,8 @@ import hashlib, json, re, sys, unicodedata
 from pathlib import Path
 import torch
 
-ROOT = Path("/ssd/xkb4/RCP")
-DATA_ROOT = Path("/ssd/xkb4/SignDiff/SLRTP2025_data/SLRTP-Sign-Production-Evaluation-Data")
+ROOT = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(__file__).resolve().parents[1] / "data/SLRTP2025/SLRTP-Sign-Production-Evaluation-Data"
 TEST_PT, TRAIN_PT = DATA_ROOT / "data/test.pt", DATA_ROOT / "data/train.pt"
 R3_REGISTRY = ROOT / "revision_20260728_round3/results/e2_1_exposure_registry.jsonl"
 OUT_DIR = ROOT / "revision_20260729_round5/results"

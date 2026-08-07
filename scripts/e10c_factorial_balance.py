@@ -14,7 +14,7 @@ from pathlib import Path
 from collections import Counter
 import numpy as np
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 MAN = ROOT / "revision_20260728_major/results/task7_canonical_v2/selection_manifest.json"
 DIAG = ROOT / "revision_20260728_major/results/task7_canonical_v2/selection_diagnostics.json"
 OUT = ROOT / "revision_20260729_round5/results/e10c_factorial_design_balance.json"

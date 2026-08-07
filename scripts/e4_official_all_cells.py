@@ -5,10 +5,10 @@ cross_metric_gap tables can be updated to official-protocol values."""
 import json, sys
 from pathlib import Path
 
-ROOT = Path("/ssd/xkb4/RCP")
+ROOT = Path(__file__).resolve().parents[1]
 CELLS = ROOT / "revision_20260728_canonical_rebuild/outputs/evaluations/cells"
 OUT = ROOT / "revision_20260729_round5/results/e4_official_protocol_all_cells.json"
-EVAL_ROOT = Path("/ssd/xkb4/SignDiff/SLRTP2025_eval")
+EVAL_ROOT = Path(__file__).resolve().parents[1] / "src/models"
 sys.path.insert(0, str(EVAL_ROOT))
 from metrics import wer as official_wer, chrf as official_chrf, rouge as official_rouge  # noqa: E402
 

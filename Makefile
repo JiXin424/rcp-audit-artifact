@@ -73,10 +73,9 @@ competition:
 round2-all: donor-bootstrap ref-frame-figure experiment-C paper
 	@echo "Round-2 CPU experiments complete. Run experiment-A1, experiment-D, full-readout on a GPU."
 
-# Legacy reproduction DAG. Stages A-N reference sibling revision_20260728_*
-# directories not included in the anonymous artifact. The saved hypotheses in
-# data/cells/ and sufficient statistics in results/ allow full recomputation of
-# all reported numbers via `core-audit`. The DAG scripts will be published with
-# the camera-ready version.
+# Full reproduction DAG: decode + score all canonical evaluators from checkpoints.
+# Requires model checkpoints and training data. See README for data setup.
 reproduction-dag:
-	@echo "reproduction-dag is documented in README section 2; sibling-revision scripts omitted from anonymous bundle."
+	$(PYTHON) scripts/build_canonical_panel.py
+	$(PYTHON) scripts/build_paper_numbers.py
+	@echo "reproduction-dag complete: canonical panel + paper numbers regenerated."

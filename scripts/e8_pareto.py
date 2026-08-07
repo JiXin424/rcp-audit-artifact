@@ -9,8 +9,8 @@ best achievable dev BLEU under any selection objective; distance to competence g
 import json
 from pathlib import Path
 
-TRAJ = Path("/ssd/xkb4/RCP/revision_20260728_round4/results/p0_dev_bleu_along_trajectory.json")
-OUT = Path("/ssd/xkb4/RCP/revision_20260729_round5/results/e8_pareto_selection.json")
+TRAJ = Path(__file__).resolve().parents[1] / "results/p0_dev_bleu_along_trajectory.json")
+OUT = Path(__file__).resolve().parents[1] / "results/e8_pareto_selection.json")
 ORIG = {"dev_bleu4": 0.1338, "dev_wer": 0.7749}
 GATE = {"bleu": 0.01, "wer": 0.03}
 

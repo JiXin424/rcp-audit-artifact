@@ -5,8 +5,8 @@ import hashlib, json, sys
 from pathlib import Path
 from datetime import datetime, timezone
 
-ARTI = Path('/ssd/xkb4/rcp-audit-artifact')
-ROOT = Path('/ssd/xkb4/rcp-audit-artifact')
+ARTI = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[1]
 
 # Include the artifact directory + figures (paper assets)
 LEDGER_DIRS = [

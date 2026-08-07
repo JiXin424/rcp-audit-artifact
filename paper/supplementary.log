@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.6.2)  6 AUG 2026 01:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.6.2)  6 AUG 2026 21:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -608,36 +608,36 @@ LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 19
 LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 19
 .
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 \OT1/cmr/m/n/10 The offi-cial PHOENIX-2014T meta-data con-tain 7,096/519/642
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 \OT1/cmr/m/n/10 train/development/test IDs. The released SLRTP2025 pose records
  avail-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 \OT1/cmr/m/n/10 able to this study con-tain 7,060/515/641 sequences: 36/4/1 off
 i-cial
  []
 
 
-Underfull \hbox (badness 7540) in paragraph at lines 28--29
+Underfull \hbox (badness 7540) in paragraph at lines 29--30
 \OT1/cmr/m/n/10 IDs are absent from the released pose mate-ri-al-iza-tion. Thei
 r IDs and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 \OT1/cmr/m/n/10 the rea-son \OT1/cmtt/m/n/10.03749 absent[]from[]slrtp2025[]rel
 eased[]pose[]records \OT1/cmr/m/n/10 are enu-mer-
  []
 
 
-Underfull \hbox (badness 8113) in paragraph at lines 28--29
+Underfull \hbox (badness 8113) in paragraph at lines 29--30
 \OT1/cmr/m/n/10 ated in \OT1/cmtt/m/n/10.03749 artifact/manifests/exclusions.js
 onl\OT1/cmr/m/n/10 . The miss-ing test ID is
  []
@@ -649,192 +649,192 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 {/home/xkb4/.texlive2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Reference `sec:retrieval' on page 2 undefined on input line 32.
+LaTeX Warning: Reference `sec:retrieval' on page 2 undefined on input line 33.
 
 
-LaTeX Warning: Reference `sec:retrieval' on page 2 undefined on input line 52.
+LaTeX Warning: Reference `sec:retrieval' on page 2 undefined on input line 53.
 
 
-LaTeX Warning: Reference `sec:retrieval' on page 2 undefined on input line 52.
+LaTeX Warning: Reference `sec:retrieval' on page 2 undefined on input line 53.
 
 
-LaTeX Warning: Reference `sec:insample' on page 2 undefined on input line 54.
+LaTeX Warning: Reference `sec:insample' on page 2 undefined on input line 55.
 
 
-LaTeX Warning: Reference `sec:retrieval' on page 2 undefined on input line 54.
+LaTeX Warning: Reference `sec:retrieval' on page 2 undefined on input line 55.
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 54--55
+Underfull \hbox (badness 1226) in paragraph at lines 55--56
 []$[]$\OT1/cmr/m/n/7 dev BLEU-4 is the training-time validation-selected
  []
 
 
-LaTeX Warning: Reference `sec:method' on page 2 undefined on input line 59.
+LaTeX Warning: Reference `sec:method' on page 2 undefined on input line 60.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--70
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
 []|\OT1/cmr/m/it/9 Primary esti-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--72
+Underfull \hbox (badness 10000) in paragraph at lines 73--73
 []|\OT1/cmr/m/n/9 605-query donor-pool fac-to-rial
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--73
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
 []|\OT1/cmr/m/n/9 Template-holdout, BT-retrain,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--74
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
 []|\OT1/cmr/m/n/9 Protocol checks (scorer, FPS,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--75
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
 []|\OT1/cmr/m/n/9 Frozen-protocol con-fir-ma-tion
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 79--79
+Underfull \hbox (badness 1874) in paragraph at lines 80--80
 []|\OT1/cmr/m/n/9 Conditioning con-trols (retriev-ers,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
 []|\OT1/cmr/m/n/9 Competence gate, tra-jec-to-ries,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--81
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
 []|\OT1/cmr/m/n/9 Knowledge-distillation lad-der +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
 []|\OT1/cmr/m/n/9 Reference replace-ment (sin-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 []|\OT1/cmr/m/n/9 BLEU-4/BLEU-1/chrF
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 []|\OT1/cmr/m/n/9 Evaluator$\OMS/cmsy/m/n/9 ^^B$\OT1/cmr/m/n/9 reference fac-to
 -rial
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 []|\OT1/cmr/m/n/9 descriptive decom-po-si-
  []
 
 
-Underfull \hbox (badness 3815) in paragraph at lines 87--87
+Underfull \hbox (badness 3815) in paragraph at lines 88--88
 []|\OT1/cmr/m/n/9 Five diag-nos-tic views (readout-
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 87--88
+Underfull \hbox (badness 1648) in paragraph at lines 88--89
 []|\OT1/cmr/m/n/9 triangulation, not inde-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
 []|\OT1/cmr/m/n/9 In-sample read-out diag-no-sis
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
 []|\OT1/cmr/m/n/9 readout sig-na-
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 89--89
+Underfull \hbox (badness 1147) in paragraph at lines 90--90
 []|\OT1/cmr/m/n/9 Leakage san-ity checks (per-mu-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 []|\OT1/cmr/m/n/9 query-index boot-strap
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--94
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 []|\OT1/cmr/m/n/9 Released-checkpoint per-tur-ba-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 []|\OT1/cmr/m/n/9 lockstep col-lapse with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--97
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
 []|\OT1/cmr/m/n/9 Competence extrap-o-la-tion
  []
 
 
-Underfull \hbox (badness 4634) in paragraph at lines 97--98
+Underfull \hbox (badness 4634) in paragraph at lines 98--99
 []|\OT1/cmr/m/n/9 non-IID; LOO CV (5
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
 []|\OT1/cmr/m/n/9 Template-density strata; donor-
  []
 
 
-LaTeX Warning: Float too large for page by 19.11661pt on input line 107.
+LaTeX Warning: Float too large for page by 19.11661pt on input line 108.
 
 
-Overfull \hbox (4.56715pt too wide) in paragraph at lines 120--120
+Overfull \hbox (4.56715pt too wide) in paragraph at lines 121--121
 []|\OT1/cmr/m/n/9 Planned| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 []|\OT1/cmr/m/n/9 Has gap
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
 []|\OT1/cmr/m/n/9 prediction inter-val,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 []|\OT1/cmr/m/n/9 dose--resp., gap
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
 []|\OT1/cmr/m/n/9 dose--resp.,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 []|\OT1/cmr/m/n/9 dose--resp., family-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 []|\OT1/cmr/m/n/9 audit tar-get (not
  []
 
 
-LaTeX Warning: Reference `sec:retrieval' on page 2 undefined on input line 139.
+LaTeX Warning: Reference `sec:retrieval' on page 2 undefined on input line 140.
 
 
 
-LaTeX Warning: Reference `sec:retrieval' on page 2 undefined on input line 139.
+LaTeX Warning: Reference `sec:retrieval' on page 2 undefined on input line 140.
 
 
 
-Overfull \hbox (19.65897pt too wide) in paragraph at lines 113--142
+Overfull \hbox (19.65897pt too wide) in paragraph at lines 114--143
  [] 
  []
 
@@ -847,14 +847,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: Reference `sec:exposure_results' on page 3 undefined on input li
-ne 146.
+ne 147.
 
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 148.
+(hyperref)                than one, level fixed on input line 149.
 
 
-Overfull \hbox (59.95659pt too wide) in paragraph at lines 151--167
+Overfull \hbox (59.95659pt too wide) in paragraph at lines 152--168
  [] 
  []
 
@@ -863,13 +863,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 169.
+(hyperref)                than one, level fixed on input line 170.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (36.08711pt too wide) in paragraph at lines 194--211
+Overfull \hbox (36.08711pt too wide) in paragraph at lines 195--212
  [] 
  []
 
@@ -877,7 +877,7 @@ Overfull \hbox (36.08711pt too wide) in paragraph at lines 194--211
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (29.56056pt too wide) in paragraph at lines 216--233
+Overfull \hbox (29.56056pt too wide) in paragraph at lines 217--234
  [] 
  []
 
@@ -886,73 +886,91 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 238.
+(hyperref)                than one, level fixed on input line 239.
 
 
 LaTeX Warning: Reference `sec:stepfaithful' on page 3 undefined on input line 2
-39.
+40.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
 
-LaTeX Warning: Reference `sec:retrieval' on page 4 undefined on input line 257.
+LaTeX Warning: Reference `sec:retrieval' on page 4 undefined on input line 258.
 
 
 
-LaTeX Warning: Reference `sec:retrieval' on page 4 undefined on input line 257.
+LaTeX Warning: Reference `sec:retrieval' on page 4 undefined on input line 258.
 
+
+
+Underfull \hbox (badness 1264) in paragraph at lines 258--258
+\OT1/cmr/m/n/10 i-date every 14 epochs, not steps): 300 epochs,
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 260.
+(hyperref)                than one, level fixed on input line 261.
 
+<generated_figures/released_perturbation.pdf, id=275, 722.7pt x 303.534pt>
+File: generated_figures/released_perturbation.pdf Graphic file (type pdf)
+<use generated_figures/released_perturbation.pdf>
+Package pdftex.def Info: generated_figures/released_perturbation.pdf  used on i
+nput line 272.
+(pdftex.def)             Requested size: 372.0pt x 156.24069pt.
 
-Overfull \hbox (32.8504pt too wide) in paragraph at lines 264--279
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Overfull \hbox (32.8504pt too wide) in paragraph at lines 283--298
  [] 
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./generated_figures/released_perturbation.pdf>]
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `sec:retrieval' on page 4 undefined on input line 283.
+LaTeX Warning: Reference `sec:retrieval' on page 6 undefined on input line 302.
 
 
 
-LaTeX Warning: Reference `sec:retrieval' on page 4 undefined on input line 302.
+LaTeX Warning: Reference `sec:retrieval' on page 6 undefined on input line 321.
 
 
 LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-302.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 302.
+321.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 321.
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 302.
+(Font)              for symbol `textbraceleft' on input line 321.
 
 
-LaTeX Warning: Reference `sec:retrieval' on page 4 undefined on input line 302.
+LaTeX Warning: Reference `sec:retrieval' on page 6 undefined on input line 321.
 
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 302--302
-[]\OT1/cmr/bx/n/10.03749 Table 10\OT1/cmr/m/n/10 : |Cluster-aware boot-strap fo
-r the head-line PURE--REC gap
+Underfull \hbox (badness 1701) in paragraph at lines 321--321
+[]\OT1/cmr/bx/n/10.03749 Table S10\OT1/cmr/m/n/10 : |Cluster-aware boot-strap f
+or the head-line PURE--REC gap
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 302--302
+Underfull \hbox (badness 1694) in paragraph at lines 321--321
 \OT1/cmr/m/n/10 (canon-i-cal \TS1/cmr/m/n/10.03749 §[] \OT1/cmr/m/n/10 reg-istr
 y, orig-i-nal refs, released-evaluator hypothe-ses from
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--302
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 \OT1/cmtt/m/n/10.03749 results/gap[]43[]canonical[]beam3[]items/released[]\OMS/
 cmtt/m/n/10.03749 f\OT1/cmtt/m/n/10.03749 gt,pure\OMS/cmtt/m/n/10.03749 g\OT1/c
 mtt/m/n/10.03749 .json\OT1/cmr/m/n/10 ). All
@@ -962,120 +980,65 @@ mtt/m/n/10.03749 .json\OT1/cmr/m/n/10 ). All
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `sec:exposure_results' on page 4 undefined on input li
-ne 305.
+LaTeX Warning: Reference `sec:exposure_results' on page 6 undefined on input li
+ne 324.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
-
-LaTeX Warning: Reference `fig:ref_frame' on page 5 undefined on input line 309.
+LaTeX Warning: Reference `fig:ref_frame' on page 6 undefined on input line 328.
 
 
-<generated_figures/ref_frame_paired.pdf, id=245, 722.7pt x 332.44202pt>
+<generated_figures/ref_frame_paired.pdf, id=346, 722.7pt x 332.44202pt>
 File: generated_figures/ref_frame_paired.pdf Graphic file (type pdf)
 <use generated_figures/ref_frame_paired.pdf>
 Package pdftex.def Info: generated_figures/ref_frame_paired.pdf  used on input 
-line 313.
+line 332.
 (pdftex.def)             Requested size: 297.60114pt x 136.8956pt.
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 320.
+(hyperref)                than one, level fixed on input line 339.
 
 
-LaTeX Warning: Reference `tab:isomorphic_conditioning' on page 5 undefined on i
-nput line 321.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5 <./generated_figures/ref_frame_paired.pdf>]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 322.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 344.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\tau' on input line 344.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 344.
+LaTeX Warning: Reference `tab:isomorphic_conditioning' on page 6 undefined on i
+nput line 340.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
 
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 379.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 398.
-
-
-Overfull \hbox (35.86293pt too wide) in paragraph at lines 401--417
- [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (42.16005pt too wide) in paragraph at lines 422--442
- [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `sec:slot_f1' on page 7 undefined on input line 448.
+(hyperref)                than one, level fixed on input line 341.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
+ [7 <./generated_figures/ref_frame_paired.pdf>]
 
-LaTeX Warning: Reference `sec:extrapolation' on page 8 undefined on input line 
-452.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 363.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\tau' on input line 363.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 363.
 
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 454.
+(hyperref)                than one, level fixed on input line 398.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 457.
+(hyperref)                than one, level fixed on input line 417.
 
 
-Overfull \hbox (42.52318pt too wide) in paragraph at lines 460--476
+Overfull \hbox (35.86293pt too wide) in paragraph at lines 420--436
  [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (76.32466pt too wide) in paragraph at lines 478--495
- [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 3039) in paragraph at lines 520--520
-[]\OT1/cmr/bx/n/10.03749 Table 17\OT1/cmr/m/n/10 : |CSL-Daily Mode B donor-
  []
 
 
@@ -1086,19 +1049,83 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `sec:leakage_checks' on page 9 undefined on input line
- 525.
+Overfull \hbox (42.16005pt too wide) in paragraph at lines 441--461
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `sec:slot_f1' on page 9 undefined on input line 467.
+
+
+LaTeX Warning: Reference `sec:extrapolation' on page 9 undefined on input line 
+471.
 
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 527.
+(hyperref)                than one, level fixed on input line 473.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 530.
+(hyperref)                than one, level fixed on input line 476.
 
 
-Underfull \hbox (badness 6236) in paragraph at lines 546--546
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+Overfull \hbox (42.52318pt too wide) in paragraph at lines 479--495
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (76.32466pt too wide) in paragraph at lines 497--514
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<generated_figures/per_item_gap_decomposition.pdf, id=431, 794.97pt x 332.44202
+pt>
+File: generated_figures/per_item_gap_decomposition.pdf Graphic file (type pdf)
+<use generated_figures/per_item_gap_decomposition.pdf>
+Package pdftex.def Info: generated_figures/per_item_gap_decomposition.pdf  used
+ on input line 526.
+(pdftex.def)             Requested size: 372.0pt x 155.56802pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+Underfull \hbox (badness 1337) in paragraph at lines 551--551
+[]\OT1/cmr/bx/n/10.03749 Table S17\OT1/cmr/m/n/10 : |CSL-Daily Mode B donor-
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `sec:leakage_checks' on page 11 undefined on input lin
+e 556.
+
+
+Package hyperref Warning: Difference (3) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 558.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./generated_figures/per_item_gap_decomposition.pdf>]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 561.
+
+
+Underfull \hbox (badness 6236) in paragraph at lines 577--577
 \OT1/cmr/m/n/10 con-firm-ing output--reference align-ment.
  []
 
@@ -1107,11 +1134,17 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 549.
+(hyperref)                removing `math shift' on input line 580.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 549.
+(hyperref)                removing `math shift' on input line 580.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1119,71 +1152,158 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
+ [12]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `sec:retrieval' on page 10 undefined on input line 634
+LaTeX Warning: Reference `sec:retrieval' on page 13 undefined on input line 665
 .
 
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 636.
+(hyperref)                than one, level fixed on input line 667.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 638.
+(hyperref)                than one, level fixed on input line 669.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 638--639
+Underfull \hbox (badness 10000) in paragraph at lines 669--670
 \OT1/cmtt/m/n/10.03749 9170a53026ab3263b451a3632a9e02318745acabf12f0b679921477a
 fbefa301\OT1/cmr/m/n/10 ); this
  []
 
 
-Underfull \hbox (badness 3679) in paragraph at lines 642--643
+Underfull \hbox (badness 3679) in paragraph at lines 673--674
 \OT1/cmr/m/n/10 Canonical BLEURT-20 ships a Ten-sor-Flow check-point that does 
 not load
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
-
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 644.
+(hyperref)                than one, level fixed on input line 675.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 646.
+(hyperref)                than one, level fixed on input line 677.
 
-(./supplementary.bbl)
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
+
+Package hyperref Warning: Difference (3) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 681.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 684.
+
+<generated_figures/fig1_audit_design.pdf, id=526, 614.295pt x 794.97pt>
+File: generated_figures/fig1_audit_design.pdf Graphic file (type pdf)
+<use generated_figures/fig1_audit_design.pdf>
+Package pdftex.def Info: generated_figures/fig1_audit_design.pdf  used on input
+ line 695.
+(pdftex.def)             Requested size: 230.63818pt x 298.47693pt.
+<generated_figures/fig4_reference_frame.pdf, id=527, 557.72777pt x 218.06133pt>
+
+File: generated_figures/fig4_reference_frame.pdf Graphic file (type pdf)
+<use generated_figures/fig4_reference_frame.pdf>
+Package pdftex.def Info: generated_figures/fig4_reference_frame.pdf  used on in
+put line 702.
+(pdftex.def)             Requested size: 372.0pt x 145.44482pt.
+<generated_figures/fig5_donor_origin.pdf, id=532, 569.27611pt x 413.22685pt>
+File: generated_figures/fig5_donor_origin.pdf Graphic file (type pdf)
+<use generated_figures/fig5_donor_origin.pdf>
+Package pdftex.def Info: generated_figures/fig5_donor_origin.pdf  used on input
+ line 709.
+(pdftex.def)             Requested size: 372.0pt x 270.03818pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (148.49353pt too wide) in paragraph at lines 737--753
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (4.9967pt too wide) in paragraph at lines 777--795
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (101.68378pt too wide) in paragraph at lines 797--815
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (4.56715pt too wide) in paragraph at lines 824--824
+[]|\OT1/cmr/m/n/9 Planned| 
+ []
+
+
+Overfull \hbox (19.65897pt too wide) in paragraph at lines 817--835
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (65.52548pt too wide) in paragraph at lines 837--851
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (10.78728pt too wide) in paragraph at lines 853--870
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (29.43272pt too wide) in paragraph at lines 872--885
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (21.84366pt too wide) in paragraph at lines 887--909
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(./supplementary.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
+ [15 <./generated_figures/fig1_audit_design.pdf>])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
+ [16 <./generated_figures/fig4_reference_frame.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
+ [17 <./generated_figures/fig5_donor_origin.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
@@ -1193,6 +1313,33 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
 (./supplementary.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1201,13 +1348,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `supplementary.out' has not changed.
-(rerunfilecheck)             Checksum: 4931AE6FAC2672ADAB6E88C0C86435A7;10258.
+(rerunfilecheck)             Checksum: 6488B41E73928EFBA1BE32937568E8EA;13116.
  ) 
 Here is how much of TeX's memory you used:
- 12919 strings out of 480247
- 206787 string characters out of 5896152
- 581805 words of memory out of 5000000
- 30550 multiletter control sequences out of 15000+600000
+ 13036 strings out of 480247
+ 209775 string characters out of 5896152
+ 654895 words of memory out of 5000000
+ 30616 multiletter control sequences out of 15000+600000
  491637 words of font info for 112 fonts, out of 8000000 for 9000
  24 hyphenation exceptions out of 8191
  85i,14n,90p,1456b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1232,10 +1379,10 @@ fonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
 10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/t
 exmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on supplementary.pdf (20 pages, 373707 bytes).
+Output written on supplementary.pdf (29 pages, 541375 bytes).
 PDF statistics:
- 532 PDF objects out of 1000 (max. 8388607)
- 416 compressed objects within 5 object streams
- 112 named destinations out of 1000 (max. 500000)
- 366 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 840 PDF objects out of 1000 (max. 8388607)
+ 584 compressed objects within 6 object streams
+ 158 named destinations out of 1000 (max. 500000)
+ 471 words of extra memory for PDF output out of 10000 (max. 10000000)
 
