@@ -1,2 +1,6 @@
 *.pyc
 __pycache__/
+*.aux *.bbl *.blg *.log *.out *.toc *.synctex.gz *.fdb_latexmk *.fls
+
+# All checkpoints are hosted externally (see scripts/download_checkpoints.sh)
+checkpoints/

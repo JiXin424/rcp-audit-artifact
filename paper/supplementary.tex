@@ -18,6 +18,7 @@
 \maketitle
 
 \renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
 
 \section*{Overview}
 This supplement provides detailed appendices referenced in the main manuscript. Section labels match the labels used in the main text (e.g., \texttt{sec:appendix\_missing\_id} $\to$ Sup.\ Section~\ref{sec:appendix_missing_id}).
@@ -261,6 +262,24 @@ Released evaluator & 1{,}820 & --- & 12.78 & $+10.24$ \\
 \label{sec:appendix_perturbation}
 Table~\ref{tab:perturbation} reports the full pose-perturbation battery. Reversing all frames collapses PURE from 23.79 to 7.72 (differential $16.1$ $[14.7,17.5]$; GT $5.5$ $[4.6,6.5]$); window-shuffling within one-second windows costs PURE $5.4$ $[4.4,6.6]$; 5\% spatial jitter is free ($-0.1$); masking hand or face joints collapses both systems. The best rescue checkpoint (wd0, seed 202) loses only $-4.3$ under reversal, confirming it is far less sensitive to donor temporal order.
 
+\paragraph{Released-checkpoint weight-noise perturbation (experiment A1).}
+The reviewer's competence confound (released dev BLEU-4 13.38 vs.\ reconstructions $\leq 10.9$) cannot be broken by retraining. Starting from the released weights, we add i.i.d.\ Gaussian noise to every parameter (excluding BatchNorm running statistics, which must remain positive) at scale $\sigma\in\{0, 10^{-3}, 3\!\times\!10^{-3}, 10^{-2}, 3\!\times\!10^{-2}\}$ with two seeds each, and re-decode PHX-public REC/PURE and the dev set under the canonical donor registry (Fig.~\ref{fig:s2_released_perturbation}). Small $\sigma$ perturbs checkpoint identity while preserving competence, so this design operates where the 14-seed reconstruction family cannot --- at and below the released competence from the released checkpoint itself.
+
+The reversal is preserved under competence-preserving perturbation and collapses in lockstep with competence. At $\sigma\leq 3\!\times\!10^{-3}$ the dev BLEU-4 stays at $12.76$--$13.35$ (above every reconstruction's maximum of $10.9$) and the PURE--REC gap stays at $+9.50$ to $+10.35$ (within $\pm 0.7$ of the baseline $+10.24$). The collapse happens only at $\sigma\geq 10^{-2}$, where dev BLEU-4 simultaneously degrades to $7.3$--$10.2$ (gap $+3.2$ to $+4.2$), and at $\sigma=3\!\times\!10^{-2}$ both dev BLEU-4 ($\approx 0.1$) and the gap ($\approx 0$) are extinguished together. Two conclusions follow: the reversal is not a fragile identity-level artifact under small-weight perturbations (at competence parity it is locally robust), and it tracks competence rather than checkpoint identity. However, Gaussian noise probes only the isotropic weight-norm ball around the released checkpoint; it does not show that an independently trained, competence-matched model would exhibit the reversal, nor does it narrow the unobserved competence interval above the family ceiling of 10.9.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{generated_figures/released_perturbation.pdf}
+\caption{Released-checkpoint weight perturbation (experiment A1). (a) PURE--REC gap vs.\ Gaussian weight-noise scale $\sigma$ (two seeds per $\sigma>0$; baseline at $\sigma=0$). The reversal is preserved within $\pm 0.7$ of $+10.24$ for $\sigma\leq 3\!\times\!10^{-3}$, where dev BLEU-4 stays above $12.7$. (b) Dev BLEU-4, REC BLEU-4, PURE BLEU-4, and (at baseline) train-pool readout BLEU-4. The reversal and competence collapse together at $\sigma\geq 10^{-2}$; $\sigma=10^{-1}$ produces an all-empty-decoding model and is omitted.}
+\label{fig:s2_released_perturbation}
+\end{figure}
+
+\paragraph{Released-checkpoint fine-tuning (experiment A2).}
+Gaussian weight noise probes only the isotropic neighbourhood; to test local robustness along genuine gradient directions, we fine-tune the released checkpoint with small fixed learning rates (5e-6, 1e-5, 3e-5) for 60 epochs, 3 seeds each (9 runs total), using the identical training data and architecture as the released evaluator. Models are selected by best dev NLL and decoded under the canonical donor registry (beam-3). All fine-tuned variants preserve the reversal (gaps +9.6 to +10.9, dev BLEU-4 12.8--13.3) and retain the training-pool readout signature (train BLEU 76--82, EM 68--74\%). Results are in \texttt{results/released\_finetune.json}. In contrast to isotropic noise, fine-tuning moves weights along data-driven gradient directions near the released optimum; the persistence of both the reversal and the readout signature under fine-tuning confirms they are not fragile singular-point properties. The same scope limit applies: like the Gaussian noise experiment, fine-tuning probes only the vicinity of the released weights and does not narrow the unobserved interval above the family ceiling (10.9).
+
+\paragraph{Epoch-checkpoint decoupling search (experiment D).}
+We searched the four available intermediate epoch checkpoints (\texttt{rescue/seed\_202\_wd0} and \texttt{long\_schedule/seed\_202} at epochs 25 and 50, plus their best checkpoints) for a decoupling point that would break the within-family readout--gap coupling --- e.g., elevated train-pool readout but PURE--REC gap still $\leq 0$. No such point exists: all six checkpoints stay in the (low readout, negative gap) quadrant, with train-pool BLEU $5.5$--$8.9$ ($1.6$--$2.0\%$ EM) and PURE--REC gap $-0.94$ to $-1.70$ (per-checkpoint values in \texttt{results/epoch\_decouple.json}). The within-family relationship between low readout and negative gap is therefore monotone across the entire observable trajectory.
+
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
@@ -497,6 +516,18 @@ Rescue (2) & 39 & $-6.8$ & $-13.7$ & $-2.1$ & $+1.7$ & 0.65 \\
 \paragraph{Caveats.}
 First, the GP upper bound ($+2.0$) partly reflects RBF kernel prior shrinkage toward the mean in the extrapolation region (sparse data beyond dev BLEU-4 10.9), not purely data evidence. Second, the OLS quadratic fit is sensitive to the distillation family. Third, the 43 checkpoints are not IID. We therefore report these fits only as descriptive visualizations and explicitly avoid claiming that ``competence alone is unlikely to explain the reversal'' on the basis of these fits. The unobserved 10.9--13.4 interval could in principle harbor non-linear behavior that the present experiments cannot rule out.
 
+\paragraph{Per-item gap decomposition (experiment C).}
+To characterize the \emph{mechanism} rather than the identity question, we regress the per-item sentence-level PURE--REC gap $y_i$ (sacreBLEU sentence BLEU-4 under the released evaluator, canonical donor registry; mean $8.4$, SD $18.7$, $n=641$) on interpretable item-level features: donor--reference token-set Jaccard, normalized character Levenshtein between donor and reference, an exact-match-train-text flag, the number of training texts sharing the reference's 60-character prefix (template density), the number of training texts with Jaccard $\geq 0.5$ to the reference (high-overlap-train), reference text length, donor reuse count, a confidence=1 flag, and a 9-level signer one-hot block (Fig.~\ref{fig:s3_per_item_decomp}). The full model explains $R^2=0.33$ of the per-item variance. The strongest single-feature contributions, measured by leave-one-out $R^2$ drop, are high-overlap-train ($0.093$), template density ($0.051$), and donor--reference Levenshtein ($0.039$); the donor--reference Jaccard contributes $0.007$, the exact-match flag $0.001$, and the entire signer block $0.008$ --- signer identity is essentially irrelevant.
+
+The signs of the standardized coefficients are informative. Items where the donor is lexically close to the reference (high Levenshtein similarity, $\beta^*=+6.1$; high donor--reference Jaccard, $\beta^*=+2.9$) show \emph{larger} gaps, whereas items with many high-overlap training neighbors ($\beta^*=-7.6$) or high template density ($\beta^*=-7.3$) show \emph{smaller} gaps. The reversal is therefore largest on items where the retrieval criterion (source-text Jaccard) happens to deliver a donor that matches the reference register closely, but where the recorded poses do not independently let the recognizer recover that text --- precisely the lexical-coupling mechanism predicted by the construction (the original reference is a speech transcription of the same source sentence the donor was selected by). Signer identity and text length contribute negligibly; the unexplained $67\%$ of variance is consistent with per-item pose variability and BT-decoder stochasticity that these surface features do not capture. This decomposition does not identify a hidden-pipeline detail; it localizes the reversal to a lexical-coupling property that is constructible on PHX-public's template-dense, high train--test overlap register, consistent with the corpus-level audit of Alkain et al.~\cite{alkain2026critical}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{generated_figures/per_item_gap_decomposition.pdf}
+\caption{Per-item gap decomposition (experiment C). (a) Per-feature $R^2$ drop when the feature is removed from the full OLS model ($R^2=0.33$, $n=641$). High-overlap-train count and template density are the strongest single contributors; the full signer block contributes $\leq 1\%$. (b) Per-item gap vs donor--reference token-set Jaccard; red marks the 32 items whose reference text exactly matches a training text, green the remaining 609; the black line is the bin mean. The gap grows with donor--reference lexical overlap, consistent with the lexical-coupling mechanism. Outcome is sentence-level BLEU-4 (sacreBLEU 2.5.1, 13a, exp smooth); sentence-level mean need not equal corpus BLEU.}
+\label{fig:s3_per_item_decomp}
+\end{figure}
+
 \section{Supplementary CSL-Daily Boundary Control}
 \label{sec:csl-daily}
 CSL-Daily (Chinese Sign Language) serves as a non-template-domain control, but its recognizer is too weak for robust claims. Under Mode B (1{,}176 sequences), text-nearest donor copy reaches only 1.6 sacreBLEU vs GT 26.7 (Table~\ref{tab:csl_donor_exclusion}). A readout-ratio check (64 train + 64 test windows) gives train$\approx$test BLEU-1 (0.0019 vs 0.0021, ratio $\sim$0.9), far below PHX's 6.1: the readout signature does not generalize beyond the released PHX evaluator.
@@ -645,6 +676,237 @@ Canonical BLEURT-20 ships a TensorFlow checkpoint that does not load cleanly in 
 
 \paragraph{Scope limit.} Because the substitute is not BLEURT-20, the BLEURT row is demoted from the main metric panel to this appendix. Readers should treat the absolute BLEURT-substitute values as approximate; only the directional reference-sensitivity finding is reported.
 
+\section{Additional Protocol Details Moved from the Main Text (Sup.~Q)}
+\label{sec:appendix_moved_protocol}
+\paragraph{Text-nearest tie-breaking.}
+Jaccard ties are resolved by minimum character-level Levenshtein distance and then by minimum SHA-256 hash of the training key. The retrieval algorithm also excludes donors whose NFKC-normalized text equals the query's (exact-normalized-text exclusion).
+
+\paragraph{Scorer equivalence.}
+The vendored official scorer (SacreBLEU 1.4.2) and the paper scorer (SacreBLEU 2.5.1, \texttt{tok:13a}, \texttt{smooth:exp}) give identical corpus BLEU on all 28 evaluation cells (maximum $|\Delta|=0.0000$; byte-identical hypotheses, all n-gram orders non-zero). The main text reports the 2.5.1/13a signature as primary.
+
+\paragraph{Metric implementations.}
+All secondary metrics use the official SLRTP2025 implementations: they reproduce the official repository values (BLEU-4 12.777, chrF 34.585, WER 85.775, ROUGE 35.196 \cite{slrtp2025}) exactly. Implementation choices matter for chrF (corpus-level sacrebleu \texttt{CHRF} defaults; a sentence-level variant yields 48.05 instead of 34.59) and WER (jiwer 3.1.0 with official normalization; raw whitespace-split yields 79.26 instead of 85.78). BLEU-4 is invariant; the official implementations are fixed throughout.
+
+\paragraph{Audit design overview (moved from the main text).}
+The main-text audit design figure (SI~Fig.~S4) fixes a set of pose outputs and scores them under two interventions: the evaluator checkpoint (released, fourteen recipe reconstructions, heterogeneous diagnostic checkpoints) and the reference frame (speech-transcribed vs.\ human sign-to-text).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.62\textwidth]{generated_figures/fig1_audit_design.pdf}
+\caption{Audit design: a fixed set of pose outputs is scored under two interventions. (a) Data and provenance: the official PHOENIX-2014T split (7{,}096/519/642) was materialized by the SLRTP2025 release as 7{,}060/515/641 poses, matching the released evaluator's training manifest (36/4/1 official records absent). (b) Fixed output conditions for one German source sentence: recorded test poses (REC), Progressive-Transformer output (PT), whole-donor copy TN-PURE (source-text token-set Jaccard, exact-normalized-text exclusion), and PT-scaffold composition TN-PTCOMP. (c) Two intervention axes: the evaluator (released, fourteen recipe reconstructions, heterogeneous diagnostic checkpoints) and the reference frame (speech-transcribed vs.\ human sign-to-text), with pose outputs and the donor registry fixed; the primary estimand is $\Delta_c=\mathrm{BLEU}_c(\mathrm{PURE})-\mathrm{BLEU}_c(\mathrm{REC})$.}
+\label{fig:s4_audit_design}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{generated_figures/fig4_reference_frame.pdf}
+\caption{Human sign-to-text references remove most of the replay advantage on the matched high-confidence subset ($n=461$; released evaluator, canonical hypotheses). (a) Corpus BLEU-4 under original vs.\ human references: REC 14.94 $\to$ 7.35, PURE 24.98 $\to$ 8.30; the gap attenuates $+10.03 \to +0.95$ (90.5\%). (b) Bootstrap distribution of the attenuation contrast (10{,}000 paired resamples; mean 9.08, 95\% CI $[7.44, 10.86]$). (c) PURE$-$REC gap under original vs.\ human references across BLEU-4, BLEU-1, and chrF. References are back-translations by a single deaf fluent L2 DGS signer~\cite{czehmann2026sacred}; replacement cannot distinguish reference-text defects, paraphrase shift, BLEU floor effects, or disruption of the lexical coupling.}
+\label{fig:s5_ref_frame}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{generated_figures/fig5_donor_origin.pdf}
+\caption{The replay advantage co-occurs with training-pool donor provenance, but provenance and similarity remain confounded. (a) Pool construction: SEEN retrieves from the 7{,}060 released training poses (median donor--reference Jaccard 0.50), UNSEEN from 640 other test poses (median 0.37), with pool-size control, Jaccard caliper, duration and word-count matching, and signer constraints; residual differences (pool size, similarity, donor reuse, training-pool exposure) remain, so the contrasts are descriptive, not causal. (b) Gaps relative to local REC: SEEN-PURE $+10.24$; UNSEEN-PURE $-4.27$ (CI $[-5.39,-3.20]$); the pool-substitution estimand $(\mathrm{SEEN}-\mathrm{REC})-(\mathrm{UNSEEN}-\mathrm{REC})=+14.51$; CROSSFIT pooled $-3.8$ (text, no CI). (c) Balanced 605-query factorial: released evaluator (star) vs.\ six-reconstruction means (circles) for the pool-provenance and similarity main effects and their interaction.}
+\label{fig:s6_donor_origin}
+\end{figure}
+
+\section{Main-Text Tables (Moved from the Main Text; Sup.~P)}
+\label{sec:appendix_moved_tables}
+The tables in this section were moved from the main text to satisfy the journal page limit; the main text references them as SI~Table~S22--S31.
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Decoded-text metric sensitivity under the original SLRTP2025 evaluator (641 sequences). The reversal direction is consistent across decoded-text metrics; teacher-forced NLL and pose-DTWp do not reproduce it (full protocol details in Sup.~F).}
+\label{tab:s1_metric_sensitivity}
+\begin{tabular}{lrrrrrr}
+\toprule
+System & BLEU-4 & BLEU-1 & chrF & ROUGE-L & WER & BERTSc. \\
+\midrule
+REC-v1 (recorded test poses) & 12.78 & 34.40 & 34.59 & 35.20 & 85.77 & 0.757 \\
+PT-v1         & 1.59 & 16.91 & 19.03 & 17.26 & 101.68 & 0.669 \\
+TN-PTCOMP  & 18.86 & 46.35 & 41.88 & 45.17 & 77.36 & 0.793 \\
+TN-PURE    & \textbf{23.02} & \textbf{55.43} & \textbf{47.82} & \textbf{53.07} & \textbf{71.87} & \textbf{0.822} \\
+\midrule
+Gap PURE$-$REC & $+10.24$ & $+20.94$ & $+12.93$ & $+17.87$ & $-13.90$ & $+0.066$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\caption{Asymmetric floor-effect control (full-641 sensitivity analysis). PURE loses a larger fraction of its score than REC across all metrics when references are replaced, so simple symmetric compression is insufficient; the asymmetry does not discriminate between reference-text defects and training-distribution alignment.}
+\label{tab:s2_floor_effect}
+\begin{tabular}{lrrrrrr}
+\toprule
+Metric & REC (orig) & REC (human) & REC drop & PURE (orig) & PURE (human) & PURE drop \\
+\midrule
+BLEU-4 & 12.78 & 5.66 & 7.11 (55.7\%) & 23.02 & 6.52 & 16.50 (71.7\%) \\
+BLEU-1 & 34.40 & 29.28 & 5.12 (14.9\%) & 55.43 & 32.35 & 23.08 (41.6\%) \\
+chrF   & 34.59 & 32.75 & 1.84 (5.3\%)  & 47.82 & 35.02 & 12.80 (26.8\%) \\
+\midrule
+Dual-ref gap (orig+human) & \multicolumn{6}{l}{BLEU-4: $+11.50$; BLEU-1: $+20.03$} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{PURE--REC gap across metrics and evaluators on PHX-public (641 sequences; canonical decoding) for the original evaluator and the \emph{six primary} reconstructions (of fourteen; the eight extension seeds show the same near-zero/negative pattern in the main-text multiseed factorial table). chrF, WER and ROUGE-L use the official SLRTP2025 implementations. WER and NLL are sign-flipped so positive always means PURE is better than REC. BERTScore-F1 uses \texttt{bert-base-multilingual-cased} (bert-score 0.3.13 package, whose module \texttt{\_\_version\_\_} string reads 0.3.12; \texttt{lang=de}, \texttt{idf=False}, no baseline rescaling; model revision logged in the artifact); per-checkpoint BERTScore cells are in the artifact. The large reversal is consistent in direction across decoded-text metrics under the original evaluator and disappears under all six primary reconstructions; residual reconstruction signs are mixed and near zero for n-gram metrics.}
+\label{tab:s3_cross_metric_gap}
+\begin{tabular}{lrrrrrr}
+\toprule
+Evaluator & $\Delta$BLEU-4 & $\Delta$BLEU-1 & $\Delta$chrF & $\Delta$WER$^\dagger$ & $\Delta$NLL$^\dagger$ & $\Delta$BERTSc. \\
+\midrule
+Original & $+10.24$ & $+20.94$ & $+12.93$ & $+13.90$ & $-0.419$ & $+0.066$ \\
+Seed 101 & $-0.80$ & $-1.23$ & $-1.44$ & $-2.95$ & $-0.219$ & $-0.005$ \\
+Seed 202 & $-1.30$ & $-1.33$ & $-1.57$ & $-3.52$ & $-0.233$ & $-0.006$ \\
+Seed 303 & $-1.85$ & $-1.99$ & $-2.26$ & $-1.53$ & $-0.240$ & $+0.001$ \\
+Seed 404 & $-1.81$ & $-1.60$ & $-1.90$ & $-1.87$ & $-0.194$ & $-0.001$ \\
+Seed 505 & $-1.28$ & $-1.53$ & $-1.59$ & $-3.41$ & $-0.268$ & $-0.004$ \\
+Seed 606 & $-1.24$ & $-1.26$ & $-1.55$ & $-3.46$ & $-0.169$ & $-0.001$ \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\footnotesize $^\dagger$WER and NLL are sign-flipped: positive means PURE is better than REC (lower WER, lower NLL).
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Public SLRTP2025 challenge leaderboard on ph14t-test (Walsh et al.~\cite{slrtp2025}, Table~1), computed under the same released BT evaluator the main text audits; the ``Ground Truth'' row matches the canonical REC exactly. USTC-MoE is roughly even with REC on lexical BT metrics (BLEU-4 $-0.72$, BLEU-1 $+0.45$, chrF $+2.24$, WER $+7.72$) despite a much larger DTW-MJE ($0.0448$) and duration ratio ($1.438$). This single-evaluator co-occurrence is descriptive and does not establish evaluator retrieval-favoring bias.}
+\label{tab:s4_slrtp_leaderboard}
+\begin{tabular}{lrrrrrr}
+\toprule
+System & BLEU-1 & BLEU-4 & chrF & ROUGE & WER$\downarrow$ & DTW-MJE$\downarrow$ \\
+\midrule
+Recorded test poses (REC) & 34.40 & 12.78 & 34.59 & 35.20 & 85.77 & 0.0000 \\
+Team 1 -- USTC-MoE (retrieval) & \textbf{34.85} & \textbf{12.06} & \textbf{36.83} & \textbf{36.59} & 93.49 & 0.0448 \\
+Team 3 -- Hacettepe          & 30.44 & 9.59 & 29.70 & 30.64 & 88.88 & 0.0423 \\
+Progressive Transformer      & 22.17 & 5.43 & 24.13 & 21.98 & 101.45 & 0.0418 \\
+Team 2 -- hfut-lmc           & 16.96 & 2.05 & 25.88 & 19.77 & 147.85 & 0.0403 \\
+\midrule
+TN-PURE-v1 (replay probe)    & 55.43 & 23.02 & 47.82 & 53.07 & 71.87 & 0.00678 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Per-$\alpha$ distillation ladder summary. 15/15 students evaluated with the canonical donor registry; ``dev BLEU-4 (max)'' is the training-time dev BLEU-4 recorded by the original training protocol (legacy validation-selected protocol; not comparable to the uniform full-pool free-decode dev BLEU-4 reported in main \S4.5; checkpoints were selected by training-time dev NLL, Sup.~E). $\alpha{=}0$ = hard-label only; $\alpha{=}1$ = full soft-label KL. All $\alpha{<}1.0$ yield negative gaps; $\alpha{=}1.0$ produces empty/degenerate outputs (641/641 or 483/641 empty hypotheses). Train-pool readout uses the identical full-7{,}060, beam-3, $[::2]$-subsample protocol for every student and for the released evaluator (no 1{,}000-item-prefix mixing); the three $\alpha{=}1.0$ students decode to empty or near-empty strings on both dev and test (uniform full-pool: 515/515 or 390/515 dev hypotheses empty, 641/641 or 483/641 test hypotheses empty) and score 0.00/0.0\%; their dev BLEU-4 is degenerate and not reported.}
+\label{tab:s5_distill_alpha}
+\begin{tabular}{lrrrrr}
+\toprule
+$\alpha$ & $n$ & dev BLEU-4 (max) & gap (range) & train readout (BLEU / EM\%) & reaches 10.5? \\
+\midrule
+0.0 (hard-label) & 3 & 10.51 & $[-1.71, -0.80]$ & 8.45--8.87 / 1.9\% & 1/3 \\
+0.25 & 3 & 10.75 & $[-2.01, -0.77]$ & 7.81--8.63 / 1.5--1.9\% & 2/3 \\
+0.5 & 3 & 10.41 & $[-1.38, -0.77]$ & 7.73--8.20 / 1.7--1.9\% & 0/3 \\
+0.75 & 3 & 10.93 & $[-1.21, -0.81]$ & 6.59--7.01 / 1.3--1.4\% & 2/3 \\
+1.0 (full KL) & 3 & \emph{degenerate} & $[0.00, 0.00]$ & 0.00 / 0.0\% (empty) & --- \\
+\midrule
+Released (full 7{,}060, beam=3) & 1 & 13.38 & $+10.24$ & 78.82 / 70.7\% & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Canonical checkpoint registry (summary). 70 training runs across 13 families; 38 non-degenerate checkpoints enter the non-replication count, 43 have a canonical PHX-public PURE--REC gap, and the released evaluator is the audit target. Full per-checkpoint details in Sup.~D.}
+\label{tab:s6_checkpoint_registry_summary}
+\begin{tabular}{p{4.2cm}p{1.0cm}p{1.5cm}p{1.4cm}p{1.4cm}p{3.0cm}}
+\toprule
+Family & Planned & Trained & Has gap & Has dev & Enters \\
+\midrule
+Reconstructions (14) & 14 & 14 & 14 & 14 & multiseed, bootstrap, PI, dose--resp. \\
+Rescue (20) & 20 & 20 & 1 & 20 & gate; wd0 dose--resp. \\
+Other families (21) & 21 & 21 & 14 & 20 & dose--resp. \\
+Distillation (15) & 15 & 15 & 15 & 15 & ladder, dose--resp. \\
+\midrule
+Total & 70 & 70 & 43 & 67 & \\
+Released original & --- & --- & 1 & 1 & audit target \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\caption{Experimental protocol summary (moved from the main text).}
+\label{tab:s7_protocol_summary}
+\begin{tabular}{llllrr}
+\toprule
+Setting & Recognizer & Layout & Split size & $N$ eval & $\alpha$ \\
+\midrule
+PHX-public  & SLRTP2025 evaluator       & 178-joint & 641 seq      & 641    & 0.88 (tuned) \\
+PHX-holdout-MSKA & mska\_slr (phoenix-2014t) & 133-joint & 1{,}538 win  & 1{,}538 & 0.50 (frozen) \\
+CSL-Daily   & mska (csl-daily)           & 133-joint & 256 of 1,176 win & 256    & 0.50 (frozen) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\small
+\caption{Competence rescue sweep: 20 runs across six hyperparameter families all fail the competence gate. Best variant: weight-decay 0, seed 202 (gate threshold defined in the main text).}
+\label{tab:s8_rescue_dev}
+\begin{tabular}{lrr}
+\toprule
+Variant family & dev BLEU-4 range & min $|\Delta\text{BLEU-4}|$ vs Original \\
+\midrule
+lr $5\times10^{-4}$ / $2\times10^{-3}$ (8 runs) & 7.9--9.7 & 3.7 \\
+batch size 128 / 512 & 6.8--9.2 & 4.2 \\
+dropout 0.2 & 6.9--7.5 & 5.9 \\
+weight decay 0 & \textbf{9.8--9.9} & \textbf{3.5} \\
+label smoothing 0.1 & 6.8--7.4 & 6.0 \\
+long schedule (600 epochs, lr $5\times10^{-4}$) & 8.2--8.3 & 5.1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Donor-origin contrast estimands (sacreBLEU, BLEU points; gaps vs local REC). SEEN = 7,060 training poses; UNSEEN = 640 other test poses. Per-seed cells in the artifact.}
+\label{tab:s9_exposure_estimands}
+\begin{tabular}{lrrrrr}
+\toprule
+Evaluator & SEEN-PURE & UNSEEN-PURE & SEEN$-$REC & UNSEEN$-$REC & Estimand \\
+\midrule
+Original & 23.02 & 8.51 & $+10.24$ & -4.27 & $\mathbf{+14.51}$ \\
+Seeds (range) & 6.83--9.09 & 6.59--7.98 & $-1.85$ to $-0.80$ & $-1.94$ to $-0.27$ & $-0.15$ to $+1.22$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\caption{Matched-subset reference sensitivity (corpus sacreBLEU, BLEU points) under the released evaluator. Primary analysis: confidence=1 subset (461 items) with original and human references computed on the \emph{same} items. Sensitivity analysis: full 641 items. Human references: Czehmann et al.~\cite{czehmann2026sacred} back-translations (CC BY-NC-SA 4.0). Confidence breakdown: 461 confidence=1.0, 121 confidence=0.5, 59 confidence=0.0.}
+\label{tab:s10_ref_sensitivity}
+\begin{tabular}{lrrrr}
+\toprule
+Reference condition & $N$ & REC & PURE & Gap \\
+\midrule
+\multicolumn{5}{l}{\emph{Primary: matched confidence=1 subset}} \\
+Original (speech-transcribed) & 461 & 14.94 & 24.98 & $+10.03$ \\
+Human back-translation (conf=1) & 461 & 7.35 & 8.30 & $+0.95$ \\
+Paired attenuation & \multicolumn{4}{r}{$9.08$ BLEU pts (90.5\%), CI $[7.44, 10.86]$} \\
+\midrule
+\multicolumn{5}{l}{\emph{Sensitivity: full 641 items}} \\
+Original (speech-transcribed) & 641 & 12.78 & 23.02 & $+10.24$ $[+8.88,+11.62]$ \\
+Human back-translation (full) & 641 & 5.66 & 6.52 & $+0.86$ $[+0.38,+1.91]$ \\
+Paired attenuation & \multicolumn{4}{r}{$9.38$ BLEU pts (91.6\%)} \\
+\midrule
+Human refs, reconstructions (6 seeds) & 641 & 3.49--4.62 & 3.35--4.35 & $-0.15$ to $-0.65$ \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \bibliography{references}
 
