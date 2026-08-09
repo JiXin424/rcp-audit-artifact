@@ -2,7 +2,7 @@
 
 This artifact accompanies the manuscript:
 
-**"Auditing a Released Back-Translation Evaluator for Sign Language Production: A Public-Recipe Sufficiency and Replay-Probe Reproducibility Audit"**
+**"A Reproducibility Audit of the Released SLRTP2025 Back-Translation Evaluator"**
 
 submitted to *Language Resources and Evaluation* (Springer 10579). LRE is
 **single-blind**; author information appears in the paper itself. The artifact
@@ -159,7 +159,7 @@ competence-confound critique (R2-1) and the mechanism question:
 | `make donor-bootstrap` | `scripts/e_donor_cluster_bootstrap.py` | `results/donor_cluster_bootstrap.json` | Donor reuse stats + donor-cluster / two-way / signer / show / date bootstrap CIs on canonical cells (reviewer R2-4). |
 | `make full-readout` | `scripts/e_full_readout.py` (8-way launcher in README §4) | `results/full_readout/*.json`, `results/full_readout_summary.json` | Uniform full-7060 train/dev/test readout for 14 reco + 15 distill + 1 rescue (reviewer R2-5). |
 | `make ref-frame-figure` | `scripts/make_figure_ref_frame_paired.py` | `figures/ref_frame_paired.pdf` | Paired per-item sentence-BLEU scatter under original vs human references (reviewer R2-6). |
-| `make competition` | `scripts/competition_ranking.py` | `results/competition_ranking.json` | Real competition-system ranking; pending per-team pose outputs in `data/competition_systems/` (reviewer R2-3 option a). |
+| `make competition` | `scripts/competition_ranking.py` | `results/competition_ranking.json` | Competition-system ranking from public leaderboard data; per-team pose outputs are not publicly archived, so the analysis uses leaderboard scores and two fixed-output cross-evaluator re-decoding studies (noisy-gloss retrieval and USTC-MoE rebuild; see paper §4.4). |
 
 `make round2-all` runs the CPU-only subset (donor-bootstrap, ref-frame-figure,
 experiment-C, paper). The GPU experiments (`experiment-A1`, `experiment-D`,
@@ -214,7 +214,7 @@ Released-checkpoint local perturbation:
 - `e_epoch_decouple.py` — D epoch decoupling search (this revision).
 - `make_figure_perturbation.py` — A1 figure.
 
-Competition ranking (pending data):
+Competition ranking (completed; per-team outputs not archived):
 - `competition_ranking.py` — consumes fixed system outputs once placed in `data/competition_systems/`.
 
 ## 5. Data licensing

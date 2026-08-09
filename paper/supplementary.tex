@@ -60,7 +60,7 @@ The 14-seed prediction interval splits into the six pre-registered primary seeds
 
 \section{Analysis Provenance and Multiplicity}
 \label{sec:provenance}
-Table~\ref{tab:provenance} classifies every analysis in this manuscript by its role in the paper's argument, its evidentiary status, and its multiplicity handling. The single primary estimand is the PURE--REC decoded-sacreBLEU gap under the released evaluator (\S\ref{sec:method}); every other analysis is secondary and is grouped by the role it plays---confirmatory control, descriptive triangulation, robustness check, or administrative record. C = confirmatory (frozen protocol with error control); D = descriptive (no formal error control).
+Table~\ref{tab:provenance} classifies every analysis in this manuscript by its role in the paper's argument, its evidentiary status, and its multiplicity handling. The PURE--REC decoded-sacreBLEU gap under the released evaluator is the \emph{selected probe gap} (post-selection descriptive; see main \S\ref{sec:probe_multiplicity}); every other analysis is secondary and is grouped by the role it plays---confirmatory control, descriptive triangulation, robustness check, or administrative record. C = confirmatory (frozen protocol with error control); D = descriptive (no formal error control).
 
 \begin{table}[ht]
 \centering
@@ -71,7 +71,7 @@ Table~\ref{tab:provenance} classifies every analysis in this manuscript by its r
 \toprule
 Evidence role & Analysis & Status & Multiplicity handling \\
 \midrule
-\emph{Primary estimand} & PURE--REC gap, original evaluator & D & descriptive MC estimate $p\leq10^{-4}$ \\
+\emph{Selected probe (descriptive)} & PURE--REC gap, original evaluator (post-selection) & D & descriptive MC estimate $p\leq10^{-4}$; post-selection---see probe multiplicity table in main \S\ref{sec:probe_multiplicity} \\
 \addlinespace
 \emph{Confirmatory} & 605-query donor-pool factorial (cells, effects, interaction) & C & Holm across 3 contrasts \\
  & Template-holdout, BT-retrain, cross-fit & C & paired bootstrap CIs \\
@@ -111,7 +111,7 @@ Evidence role & Analysis & Status & Multiplicity handling \\
 \end{table}
 
 \paragraph{Discovery timeline.}
-The $+10.24$ canonical reversal was first observed on 2026-07-24 in the materialization with exact-normalized-text exclusion (SHA-256 \texttt{9170a530}). An earlier pre-exclusion materialization (gap $+11.01$, PURE 23.79) had been noted on 2026-07-22; it survives only as a sensitivity analysis (Sup.~N). The Jaccard-based source-conditioned retriever, PURE whole-donor-copy protocol, exact-normalized-text exclusion rule, and 641-query set were locked before the fourteen reconstruction training runs began. Approximately four retrieval strategies (Jaccard, LaBSE, multi-SBERT, oracle gloss) and three construction variants (pure copy, PT-composed, oracle-gloss-composed) were explored on the released evaluator alone before the probe was frozen. No external pre-registration exists for the specific $+10.24$ probe as a confirmatory hypothesis. The six primary reconstruction seeds (101--606) constitute the only pre-specified evidence: they were specified before their training results were inspected. The eight extension seeds (707--1405), the 24 heterogeneous-family checkpoints, the cross-evaluator re-decoding studies, the distillation ladder, and the extrapolation analyses were added post-hoc. Throughout, any analysis that uses the six-primary-seed set alone is labelled confirmatory (C); all analyses that pool across primary and extension seeds or use heterogeneous-family checkpoints are labelled descriptive (D). The evidence-grading column in Table~\ref{tab:provenance} reflects this distinction.
+The $+10.24$ canonical reversal was first observed on 2026-07-24 in the materialization with exact-normalized-text exclusion (SHA-256 \texttt{9170a530}). An earlier pre-exclusion materialization (gap $+11.01$, PURE 23.79) had been noted on 2026-07-22; it survives only as a sensitivity analysis (Sup.~N). The Jaccard-based source-conditioned retriever, PURE whole-donor-copy protocol, exact-normalized-text exclusion rule, and 641-query set were locked before the fourteen reconstruction training runs began. Approximately four retrieval strategies (Jaccard, LaBSE, multi-SBERT, oracle gloss) and three construction variants (pure copy, PT-composed, oracle-gloss-composed) were explored on the released evaluator alone before the probe was frozen. No external pre-registration exists for the specific $+10.24$ probe as a confirmatory hypothesis. Because the Jaccard pure-copy probe was selected after exploring multiple retrievers and construction variants on the same test set (see the probe multiplicity table in main \S\ref{sec:probe_multiplicity}), its CI is conditional on the selection and should be read as descriptive, not confirmatory. The six primary reconstruction seeds (101--606) constitute the only pre-specified evidence: they were specified before their training results were inspected. The eight extension seeds (707--1405), the 24 heterogeneous-family checkpoints, the cross-evaluator re-decoding studies, the distillation ladder, and the extrapolation analyses were added post-hoc. Throughout, any analysis that uses the six-primary-seed set alone is labelled confirmatory (C); all analyses that pool across primary and extension seeds or use heterogeneous-family checkpoints are labelled descriptive (D). The evidence-grading column in Table~\ref{tab:provenance} reflects this distinction.
 
 \section{Checkpoint Registry}
 \label{sec:checkpoint_registry}
@@ -355,7 +355,7 @@ The donor-cluster and donor two-way CIs ($[+8.87,+11.64]$ and $[+8.79,+11.74]$) 
 
 \section{Per-Item Reference-Frame Sensitivity (matched 461-item subset)}
 \label{sec:appendix_ref_frame_paired}
-The main-text Fig.~\ref{fig:ref_frame} reports corpus-level attenuation under the matched 461-item confidence=1 subset. The per-item paired view of the same subset is reproduced here (Fig.~\ref{fig:s1_ref_frame_paired}): sentence-level sacreBLEU (0--100, same tokenizer/smoothing as corpus BLEU), released-evaluator canonical hypotheses. Panel (a) plots per-item scores under original vs.\ human references for REC (recorded test poses) and PURE (replay probe); PURE points sit high under the original reference and collapse toward the diagonal under the human reference, whereas REC points move less. Panel (b) plots the per-item paired gap (PURE$-$REC) under original (x) vs.\ human (y) references; the star marks the mean (sentence-level mean gap $8.11 \to 0.09$, consistent in direction with the corpus-level attenuation $10.03 \to 0.95$). Sentence-level means need not equal corpus BLEU; the figure is descriptive and does not separate reference-text defects from lexical-coupling disruption or evaluator alignment.
+The main-text reference-frame analysis (\S\ref{sec:human_refs}) and SI~Fig.~\ref{fig:s5_ref_frame} report corpus-level attenuation under the matched 461-item confidence=1 subset. The per-item paired view of the same subset is reproduced here (Fig.~\ref{fig:s1_ref_frame_paired}): sentence-level sacreBLEU (0--100, same tokenizer/smoothing as corpus BLEU), released-evaluator canonical hypotheses. Panel (a) plots per-item scores under original vs.\ human references for REC (recorded test poses) and PURE (replay probe); PURE points sit high under the original reference and collapse toward the diagonal under the human reference, whereas REC points move less. Panel (b) plots the per-item paired gap (PURE$-$REC) under original (x) vs.\ human (y) references; the star marks the mean (sentence-level mean gap $8.11 \to 0.09$, consistent in direction with the corpus-level attenuation $10.03 \to 0.95$). Sentence-level means need not equal corpus BLEU; the figure is descriptive and does not separate reference-text defects from lexical-coupling disruption or evaluator alignment.
 
 \begin{figure}[t]
 \centering
@@ -978,15 +978,16 @@ Ladder (non-degenerate fractions) & 2 & $[-5.47, -4.28]$ & $-4.88$ \\
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Three-layer reproduction of the headline results from the artifact (\S\ref{sec:method}). Layer 1 regenerates every paper number from the committed per-item decodes; layer 2 re-executes the analyses from committed per-checkpoint data; layer 3 retrains from the public recipe (requires the training compute).}
+\caption{Four-layer reproduction of the headline results from the artifact (\S\ref{sec:method}). Layer 1 regenerates every paper number from committed per-item decodes; Layer 2 re-executes analyses from per-checkpoint data; Layer 3 re-decodes fixed outputs from checkpoint weights; Layer 4 retrains from scratch. \texttt{make core-audit} executes L1 only and is not an end-to-end reproduction from training data.}
 \label{tab:reproduction_layers}
-\begin{tabular}{p{2.6cm}p{4.6cm}p{6.8cm}}
+\begin{tabular}{p{2.6cm}p{4.0cm}p{4.5cm}p{4.0cm}}
 \toprule
-Layer & Command & Scope \\
+Layer & Command & Scope & Does NOT do \\
 \midrule
-L1: one-command & \texttt{make core-audit} & Regenerates the canonical donor registry and all headline numbers from committed per-item decodes (asserts REC 12.78 / PURE 23.02 / gap $+10.24$ / CI $[8.88, 11.62]$) \\
-L2: scripted re-execution & \texttt{make round2-all}; individual \texttt{make} targets (donor-bootstrap, ref-frame-figure, experiment-C/A1/D, full-readout) & Re-runs every analysis from committed per-checkpoint data and hypotheses \\
-L3: full retraining & \texttt{scripts/train\_reconstruction.py}, \texttt{launch\_reconstructions.sh}; rescue/distillation/config-faithful launchers & Retrains and re-evaluates from the public recipe; requires the training bundle (checkpoints + SLRTP2025 pose records) \\
+L1: number recomputation & \texttt{make core-audit} & Regenerates canonical donor registry and all headline numbers from committed per-item decodes (asserts REC 12.78 / PURE 23.02 / gap $+10.24$ / CI $[8.88, 11.62]$) & Does not re-decode or retrain \\
+L2: analysis re-execution & \texttt{make round2-all}; individual \texttt{make} targets (donor-bootstrap, ref-frame-figure, experiment-C/A1/D, full-readout) & Re-runs every analysis from committed per-checkpoint data and hypotheses & Does not re-decode \\
+L3: model re-evaluation & \texttt{scripts/decode\_cells.py}; \texttt{scripts/e\_full\_readout.py} & Re-decodes fixed outputs from checkpoint weights & Does not retrain; requires checkpoint weights + data bundle \\
+L4: from-scratch retraining & \texttt{scripts/train\_reconstruction.py}, \texttt{launch\_reconstructions.sh}; rescue/distillation/config-faithful launchers & Retrains and re-evaluates from the public recipe & Requires PHOENIX-2014T licence, exact env, $\sim$200 GPU-hours \\
 \bottomrule
 \end{tabular}
 \end{table}

@@ -1,0 +1,76 @@
+{
+  "description": "All retrieval x construction probes explored on the released evaluator before freezing the headline probe.",
+  "rec_reference": 12.78,
+  "n_probes_explored": 8,
+  "max_gap": 10.24,
+  "selected_probe": "Source-text Jaccard / Pure donor copy",
+  "selected_gap": 10.24,
+  "note": "The headline probe was selected as the maximal-gap probe after exploring 8 probe configurations on the same 641-item test set and the same released evaluator.  Its 95% CI [+8.88, +11.62] is conditional on this selection and should be read as post-selection descriptive, not confirmatory.",
+  "bonferroni_note": "A Bonferroni correction over 8 probes at alpha=0.05 gives alpha=0.00625 (z~3.30 approx); the corrected CI still excludes zero but is wider.  The more honest characterization remains descriptive.",
+  "probes": [
+    {
+      "retriever": "Source-text Jaccard",
+      "construction": "Pure donor copy",
+      "score": 23.02,
+      "selected": true,
+      "source": "Table 1; canonical gap panel",
+      "gap": 10.24
+    },
+    {
+      "retriever": "Source-text Jaccard",
+      "construction": "PT-composed",
+      "score": 18.86,
+      "selected": false,
+      "source": "Table 1",
+      "gap": 6.08
+    },
+    {
+      "retriever": "LaBSE",
+      "construction": "Pure donor copy",
+      "score": 19.2,
+      "selected": false,
+      "source": "Sec 3.1 conditioning controls",
+      "gap": 6.42
+    },
+    {
+      "retriever": "multi-SBERT",
+      "construction": "Pure donor copy",
+      "score": 16.5,
+      "selected": false,
+      "source": "Sec 3.1 conditioning controls",
+      "gap": 3.72
+    },
+    {
+      "retriever": "Oracle gloss (input leakage)",
+      "construction": "Pure donor copy",
+      "score": 11.4,
+      "selected": false,
+      "source": "Table 1",
+      "gap": -1.38
+    },
+    {
+      "retriever": "Oracle gloss (input leakage)",
+      "construction": "PT-composed",
+      "score": 11.8,
+      "selected": false,
+      "source": "Table 1",
+      "gap": -0.98
+    },
+    {
+      "retriever": "Random donor (20 seeds, SD 0.24)",
+      "construction": "Pure donor copy",
+      "score": 0.9,
+      "selected": false,
+      "source": "Table 1",
+      "gap": -11.88
+    },
+    {
+      "retriever": "Random donor (20 seeds, SD 0.19)",
+      "construction": "PT-composed",
+      "score": 0.77,
+      "selected": false,
+      "source": "Table 1",
+      "gap": -12.01
+    }
+  ]
+}

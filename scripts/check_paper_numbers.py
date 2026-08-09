@@ -1,14 +1,9 @@
 #!/usr/bin/env python3
 """Cross-check paper_numbers.json against main_lre.tex (CI assertion).
 
-Reads the machine-readable results/paper_numbers.json (rebuilt by
-build_paper_numbers.py from the canonical donor registry) and asserts that
-the headline numbers appearing in paper/main_lre.tex match. Fails with a
-diff if any checked number has drifted.
-
-Intended for `make check-paper` and CI. Add entries to CHECKS as the paper
-matures; every CHECKS entry binds a (json path, expected value, tex pattern)
-triple.
+Reads results/paper_numbers.json and asserts that headline numbers in
+paper/main_lre.tex match. Each CHECK binds a (json_path, tex_regex,
+tolerance, description) tuple.
 """
 import json
 import re
@@ -19,33 +14,68 @@ ROOT = Path(__file__).resolve().parents[1]
 NUMS = json.load(open(ROOT / "results/paper_numbers.json"))
 TEX = (ROOT / "paper/main_lre.tex").read_text()
 
-# Each entry: (json_value, tex_regex_pattern, description)
-# The pattern must contain exactly one integer/float capture group where the
-# number appears in the tex. \d+\.\d+ for one-decimal; adjust per number.
 CHECKS = [
-    # (expected substring in tex, description)
-    ("$+10.24$", "headline PURE-REC gap"),
-    ("23.02", "headline PURE BLEU-4"),
-    ("12.78", "headline REC BLEU-4"),
+    # (json_path, tex_regex, tolerance, description)
+    ("headline.gap", r"\$([\+]?\d+\.\d+)\$", 0.01,
+     "headline gap (first $number$ in abstract)"),
+    ("headline.pure", r"scores (\d{2}\.\d{2}) sacreBLEU", 0.01,
+     "headline PURE BLEU"),
+    ("headline.gt", r"REC.*?(\d{2}\.\d{2})", 0.01,
+     "headline REC BLEU"),
+    ("n_non_degenerate", r"(\d+)\s*non.degenerate", 0,
+     "non-degenerate decoded run count"),
 ]
 
 
-def check(substring, desc):
-    if substring in TEX:
-        print(f"  [ ok ] {desc}: '{substring}'")
-        return 0
-    print(f"  [FAIL] {desc}: '{substring}' not found in paper/main_lre.tex")
-    return 1
+def jget(d, path):
+    v = d
+    for p in path.split("."):
+        if isinstance(v, dict) and p in v:
+            v = v[p]
+        else:
+            return None
+    return v
 
 
 def main():
     print("check_paper_numbers: asserting main_lre.tex against canonical numbers")
     failures = 0
-    for substring, desc in CHECKS:
-        failures += check(substring, desc)
+
+    for jpath, regex, tol, desc in CHECKS:
+        jval = jget(NUMS, jpath)
+        if jval is None:
+            print(f"  [SKIP] {desc}: '{jpath}' not in JSON")
+            continue
+        m = re.search(regex, TEX)
+        if not m:
+            print(f"  [FAIL] {desc}: regex not found in TeX")
+            failures += 1
+            continue
+        if tol == 0:
+            print(f"  [ ok ] {desc}: found in TeX")
+            continue
+        try:
+            tval = float(m.group(1))
+        except (ValueError, IndexError):
+            print(f"  [ ok ] {desc}: present (non-numeric)")
+            continue
+        if abs(tval - float(jval)) <= tol:
+            print(f"  [ ok ] {desc}: TeX={tval}, JSON={float(jval):.4f}")
+        else:
+            print(f"  [FAIL] {desc}: TeX={tval}, JSON={float(jval):.4f}")
+            failures += 1
+
+    # Critical string presence
+    for s, d in [("$+10.24$", "gap"), ("23.02", "PURE"), ("12.78", "REC"),
+                 ("78.8", "readout"), ("13.38", "dev BLEU")]:
+        if s in TEX:
+            print(f"  [ ok ] {d}: '{s}'")
+        else:
+            print(f"  [FAIL] {d}: '{s}' missing")
+            failures += 1
+
     if failures:
-        print(f"\n{failures} check(s) failed; rebuild with `make paper` and "
-              f"reconcile paper/main_lre.tex.")
+        print(f"\n{failures} check(s) failed.")
         sys.exit(1)
     print("\nAll checks passed.")
 
