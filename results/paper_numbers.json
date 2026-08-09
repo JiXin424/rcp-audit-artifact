@@ -81,5 +81,13 @@
     -0.21
   ],
   "n_degenerate_excluded": 5,
-  "degenerate_description": "3 x alpha=1.0 distillation (empty output) + 2 ladder fractions (BLEU approx 0)"
+  "degenerate_description": "3 x alpha=1.0 distillation (empty output) + 2 ladder fractions (BLEU approx 0)",
+  "n_descriptive_comparisons": 3,
+  "wer_gate_type": "one-sided",
+  "wer_gate_threshold": 86.37,
+  "headline_ci_primary": "donor-cluster",
+  "headline_ci": [
+    8.87,
+    11.64
+  ]
 }
