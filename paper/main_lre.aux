@@ -17,13 +17,13 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\citation{saunders2021continuous}
 \Newlabel{1}{1}
+\citation{saunders2021continuous}
 \citation{walsh2024datadriven,hong2026conditional}
 \citation{signbleu,silverscore,jiang2025meaningful}
 \citation{slrtp2025}
-\citation{czehmann2026sacred}
-\@writefile{toc}{\contentsline {section}{\numberline {1}1. Introduction}{2}{section.1}\protected@file@percent }
+\citation{chen2022repro}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1}\protected@file@percent }
 \citation{camgoz2018neural,saunders2020progressive}
 \citation{saunders2021continuous}
 \citation{signbleu}
@@ -32,6 +32,10 @@
 \citation{walsh2024datadriven,signstitching,soke,darslp}
 \citation{slrtp2025}
 \citation{carlini2021extracting,kandpal2022memorization,khandelwal2020knnlm}
+\@writefile{toc}{\contentsline {paragraph}{Why a constructed probe matters.}{3}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Learned evaluation in sign language production.}{3}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Retrieval and shortcut risks.}{3}{section*.4}\protected@file@percent }
 \citation{hong2026conditional}
 \citation{walsh2024datadriven}
 \citation{jiang2025meaningful}
@@ -39,126 +43,147 @@
 \citation{czehmann2026sacred}
 \citation{alkain2026critical}
 \citation{artiaga2025signer}
-\@writefile{toc}{\contentsline {paragraph}{Why a constructed probe matters.}{3}{section*.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}2. Related Work}{3}{section.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Learned evaluation in sign language production.}{3}{section*.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Retrieval and shortcut risks.}{3}{section*.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Robustness of learned metrics and corpus audits.}{3}{section*.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Three-way data provenance for PHX-public. The released evaluator's training manifest matches the released pose materialization (7{,}060/515/641), not the full official PHOENIX-2014T split. All 41 missing IDs share the reason \texttt  {absent\_from\_slrtp2025\_released\_pose\_records} (SI\nobreakspace  {}Sup.\nobreakspace  {}A). SHA-256 hashes verify file integrity.\relax }}{4}{table.caption.7}\protected@file@percent }
+\citation{chen2022repro}
+\citation{camgoz2018neural}
+\citation{alkain2026critical}
+\citation{czehmann2026sacred}
+\citation{artiaga2025signer}
+\@writefile{toc}{\contentsline {paragraph}{Robustness of learned metrics and corpus audits.}{4}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Reproducibility of learned evaluation metrics.}{4}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{PHOENIX-2014T as a language resource: known limitations.}{4}{section*.7}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Novelty relative to closely related PHOENIX-2014T and learned-metric reproducibility studies.\relax }}{5}{table.caption.9}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{tab:provenance}{{1}{4}{Three-way data provenance for PHX-public. The released evaluator's training manifest matches the released pose materialization (7{,}060/515/641), not the full official PHOENIX-2014T split. All 41 missing IDs share the reason \texttt {absent\_from\_slrtp2025\_released\_pose\_records} (SI~Sup.~A). SHA-256 hashes verify file integrity.\relax }{table.caption.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}3. Methods}{4}{section.3}\protected@file@percent }
-\newlabel{sec:method}{{3}{4}{3. Methods}{section.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}3.1 Evaluation design}{4}{subsection.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}3.2 Systems and retrieval controls}{4}{subsection.3.2}\protected@file@percent }
-\newlabel{sec:retrieval}{{3.2}{4}{3.2 Systems and retrieval controls}{subsection.3.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Retrieval composition.}{5}{section*.8}\protected@file@percent }
-\newlabel{sec:composition}{{3.2}{5}{Retrieval composition}{section*.8}{}}
-\@writefile{toc}{\contentsline {paragraph}{Donor-origin contrast retrieval systems.}{5}{section*.9}\protected@file@percent }
-\newlabel{sec:exposure_systems}{{3.2}{5}{Donor-origin contrast retrieval systems}{section*.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}3.3 Evaluator checkpoint family}{5}{subsection.3.3}\protected@file@percent }
+\newlabel{tab:novelty}{{1}{5}{Novelty relative to closely related PHOENIX-2014T and learned-metric reproducibility studies.\relax }{table.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{5}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{5}{Methods}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Evaluation design}{5}{subsection.3.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Three-way data provenance for PHX-public. The released evaluator's training manifest matches the released pose materialization (7{,}060/515/641), not the full official PHOENIX-2014T split. All 41 missing IDs share the reason \texttt  {absent\_from\_slrtp2025\_released\_pose\_records} (SI\nobreakspace  {}Sup.\nobreakspace  {}A). SHA-256 hashes verify file integrity.\relax }}{6}{table.caption.12}\protected@file@percent }
+\newlabel{tab:provenance}{{2}{6}{Three-way data provenance for PHX-public. The released evaluator's training manifest matches the released pose materialization (7{,}060/515/641), not the full official PHOENIX-2014T split. All 41 missing IDs share the reason \texttt {absent\_from\_slrtp2025\_released\_pose\_records} (SI~Sup.~A). SHA-256 hashes verify file integrity.\relax }{table.caption.12}{}}
+\@writefile{toc}{\contentsline {paragraph}{Operational definition of public-recipe sufficiency.}{6}{section*.10}\protected@file@percent }
+\newlabel{sec:sufficiency_def}{{3.1}{6}{Operational definition of public-recipe sufficiency}{section*.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Systems and retrieval controls}{7}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:retrieval}{{3.2}{7}{Systems and retrieval controls}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Lexical coupling of the source-conditioned probe.}{7}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Retrieval composition.}{7}{section*.14}\protected@file@percent }
+\newlabel{sec:composition}{{3.2}{7}{Retrieval composition}{section*.14}{}}
+\@writefile{toc}{\contentsline {paragraph}{Donor-origin contrast retrieval systems.}{8}{section*.15}\protected@file@percent }
+\newlabel{sec:exposure_systems}{{3.2}{8}{Donor-origin contrast retrieval systems}{section*.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Evaluator checkpoint family}{8}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Training-pool readout (descriptive observation).}{8}{section*.16}\protected@file@percent }
+\newlabel{sec:readout_def}{{3.3}{8}{Training-pool readout (descriptive observation)}{section*.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Reconstruction sanity checks}{9}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:sanity_checks}{{3.4}{9}{Reconstruction sanity checks}{subsection.3.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Teacher-forced and free-decode diagnostic statistics for the released evaluator and the fourteen reconstruction seeds (full table in \texttt  {results/checkpoint\_stats.json}). Teacher-forced values are on 500 randomly sampled items; free-decode values are full-pool (7{,}060 train / 515 dev) under the uniform beam-3 protocol (\S  \ref  {sec:sanity_checks}). sacreBLEU \texttt  {signature: BLEU|c|n:4|e:no|tok:13a|s:exp|v:2.5.1}.\relax }}{9}{table.caption.18}\protected@file@percent }
+\newlabel{tab:sanity_stats}{{3}{9}{Teacher-forced and free-decode diagnostic statistics for the released evaluator and the fourteen reconstruction seeds (full table in \texttt {results/checkpoint\_stats.json}). Teacher-forced values are on 500 randomly sampled items; free-decode values are full-pool (7{,}060 train / 515 dev) under the uniform beam-3 protocol (\S \ref {sec:sanity_checks}). sacreBLEU \texttt {signature: BLEU|c|n:4|e:no|tok:13a|s:exp|v:2.5.1}.\relax }{table.caption.18}{}}
 \citation{post2018sacrebleu}
 \citation{zhang2020bertscore}
-\@writefile{toc}{\contentsline {paragraph}{Readout-with-generalization signature (post-hoc operational definition).}{6}{section*.10}\protected@file@percent }
-\newlabel{sec:readout_def}{{3.3}{6}{Readout-with-generalization signature (post-hoc operational definition)}{section*.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}3.4 Metrics and uncertainty}{6}{subsection.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}4. Results}{6}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}4.1 Retrieval reverses the reference ranking}{6}{subsection.4.1}\protected@file@percent }
-\newlabel{sec:public-diagnostic}{{4.1}{6}{4.1 Retrieval reverses the reference ranking}{subsection.4.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Headline reversal under the released evaluator and its absence across recipe reconstructions. (a) System scores under the released evaluator (sacreBLEU-4, canonical 641-query protocol): TN-PURE 23.02 vs.\ REC 12.78 ($\Delta =+10.24$, 95\% CI $[8.88,11.62]$), with TN-PTCOMP 18.86, PT 1.59, oracle-gloss PURE 11.4, and random-donor PURE 0.90 (seeds 0--19, $\pm $1 SD). (b) Per-checkpoint PURE$-$REC gaps: released evaluator ($+10.24$) vs.\ fourteen recipe reconstructions, all negative (paired-item bootstrap 95\% CIs; seed-level 95\% PI $[-1.94,-0.46]$). All reconstructions are less competent than the released evaluator; the figure demonstrates public-pipeline non-replication, not an isolated causal checkpoint effect.\relax }}{7}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:headline}{{1}{7}{Headline reversal under the released evaluator and its absence across recipe reconstructions. (a) System scores under the released evaluator (sacreBLEU-4, canonical 641-query protocol): TN-PURE 23.02 vs.\ REC 12.78 ($\Delta =+10.24$, 95\% CI $[8.88,11.62]$), with TN-PTCOMP 18.86, PT 1.59, oracle-gloss PURE 11.4, and random-donor PURE 0.90 (seeds 0--19, $\pm $1 SD). (b) Per-checkpoint PURE$-$REC gaps: released evaluator ($+10.24$) vs.\ fourteen recipe reconstructions, all negative (paired-item bootstrap 95\% CIs; seed-level 95\% PI $[-1.94,-0.46]$). All reconstructions are less competent than the released evaluator; the figure demonstrates public-pipeline non-replication, not an isolated causal checkpoint effect.\relax }{figure.caption.11}{}}
-\@writefile{toc}{\contentsline {paragraph}{Decoding-parameter sensitivity.}{7}{section*.12}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces PHX-public conditioning and construction controls (641 sequences). Columns distinguish whole-donor copy from PT-scaffold composition; all rows share the query set, donor pool, evaluator, and sacreBLEU protocol. Semantic retrievers (LaBSE, multi-SBERT) lie between the canonical retriever and oracle gloss (artifact).\relax }}{8}{table.caption.14}\protected@file@percent }
-\newlabel{tab:isomorphic_conditioning}{{2}{8}{PHX-public conditioning and construction controls (641 sequences). Columns distinguish whole-donor copy from PT-scaffold composition; all rows share the query set, donor pool, evaluator, and sacreBLEU protocol. Semantic retrievers (LaBSE, multi-SBERT) lie between the canonical retriever and oracle gloss (artifact).\relax }{table.caption.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}4.2 Independent reconstructions do not reproduce the reversal}{8}{subsection.4.2}\protected@file@percent }
-\newlabel{sec:what-drives-reversal}{{4.2}{8}{4.2 Independent reconstructions do not reproduce the reversal}{subsection.4.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}4.2.1 Recipe-conditioned evaluator reconstructions}{8}{subsubsection.4.2.1}\protected@file@percent }
-\newlabel{sec:multiseed_factorial}{{4.2.1}{8}{4.2.1 Recipe-conditioned evaluator reconstructions}{subsubsection.4.2.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Canonical fixed-output evaluation on the released 641-pose PHX-public subset, decoded with the \S  \ref  {sec:retrieval} donor registry. PURE is TN-PURE-v1; COMP is TN-PTCOMP-v1. Gaps are relative to local REC (BLEU points). Per-cell values in the artifact.\relax }}{8}{table.caption.16}\protected@file@percent }
-\newlabel{tab:multiseed_factorial}{{3}{8}{Canonical fixed-output evaluation on the released 641-pose PHX-public subset, decoded with the \S \ref {sec:retrieval} donor registry. PURE is TN-PURE-v1; COMP is TN-PTCOMP-v1. Gaps are relative to local REC (BLEU points). Per-cell values in the artifact.\relax }{table.caption.16}{}}
+\citation{yazdani2025critical}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Discovery timeline and pre-registration status}{10}{subsection.3.5}\protected@file@percent }
+\newlabel{sec:discovery}{{3.5}{10}{Discovery timeline and pre-registration status}{subsection.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Metrics and uncertainty}{10}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Terminology: run, checkpoint, unique binary, family, evaluator}{11}{subsection.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{11}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Stress probe and conditioning controls (RQ2 preamble)}{11}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:public-diagnostic}{{4.1}{11}{Stress probe and conditioning controls (RQ2 preamble)}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Decoding-parameter sensitivity.}{11}{section*.20}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Headline reversal under the released evaluator and its absence across recipe reconstructions. (a) System scores under the released evaluator (sacreBLEU-4, canonical 641-query protocol): TN-PURE 23.02 vs.\ REC 12.78 ($\Delta =+10.24$, 95\% CI $[8.88,11.62]$), with TN-PTCOMP 18.86, PT 1.59, oracle-gloss PURE 11.4, and random-donor PURE 0.90 (seeds 0--19, $\pm $1 SD). (b) Per-checkpoint PURE$-$REC gaps: released evaluator ($+10.24$) vs.\ fourteen recipe reconstructions, all negative (paired-item bootstrap 95\% CIs; seed-level 95\% PI $[-1.94,-0.46]$). All reconstructions are less competent than the released evaluator; the figure demonstrates public-pipeline non-replication, not an isolated causal checkpoint effect.\relax }}{12}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:headline}{{1}{12}{Headline reversal under the released evaluator and its absence across recipe reconstructions. (a) System scores under the released evaluator (sacreBLEU-4, canonical 641-query protocol): TN-PURE 23.02 vs.\ REC 12.78 ($\Delta =+10.24$, 95\% CI $[8.88,11.62]$), with TN-PTCOMP 18.86, PT 1.59, oracle-gloss PURE 11.4, and random-donor PURE 0.90 (seeds 0--19, $\pm $1 SD). (b) Per-checkpoint PURE$-$REC gaps: released evaluator ($+10.24$) vs.\ fourteen recipe reconstructions, all negative (paired-item bootstrap 95\% CIs; seed-level 95\% PI $[-1.94,-0.46]$). All reconstructions are less competent than the released evaluator; the figure demonstrates public-pipeline non-replication, not an isolated causal checkpoint effect.\relax }{figure.caption.19}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces PHX-public conditioning and construction controls (641 sequences). Columns distinguish whole-donor copy from PT-scaffold composition; all rows share the query set, donor pool, evaluator, and sacreBLEU protocol. Semantic retrievers (LaBSE, multi-SBERT) lie between the canonical retriever and oracle gloss (artifact).\relax }}{12}{table.caption.22}\protected@file@percent }
+\newlabel{tab:isomorphic_conditioning}{{4}{12}{PHX-public conditioning and construction controls (641 sequences). Columns distinguish whole-donor copy from PT-scaffold composition; all rows share the query set, donor pool, evaluator, and sacreBLEU protocol. Semantic retrievers (LaBSE, multi-SBERT) lie between the canonical retriever and oracle gloss (artifact).\relax }{table.caption.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}RQ2: Multi-checkpoint reproduction of the stress-test ordering}{12}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:what-drives-reversal}{{4.2}{12}{RQ2: Multi-checkpoint reproduction of the stress-test ordering}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Recipe-conditioned evaluator reconstructions}{13}{subsubsection.4.2.1}\protected@file@percent }
+\newlabel{sec:multiseed_factorial}{{4.2.1}{13}{Recipe-conditioned evaluator reconstructions}{subsubsection.4.2.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Canonical fixed-output evaluation on the released 641-pose PHX-public subset, decoded with the \S  \ref  {sec:retrieval} donor registry. PURE is TN-PURE-v1; COMP is TN-PTCOMP-v1. Gaps are relative to local REC (BLEU points). Per-cell values in the artifact.\relax }}{13}{table.caption.24}\protected@file@percent }
+\newlabel{tab:multiseed_factorial}{{5}{13}{Canonical fixed-output evaluation on the released 641-pose PHX-public subset, decoded with the \S \ref {sec:retrieval} donor registry. PURE is TN-PURE-v1; COMP is TN-PTCOMP-v1. Gaps are relative to local REC (BLEU points). Per-cell values in the artifact.\relax }{table.caption.24}{}}
+\@writefile{toc}{\contentsline {paragraph}{Competence gate and trajectory analysis.}{13}{section*.25}\protected@file@percent }
 \citation{jiang2025meaningful}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Decoded competence and training-pool readout separate the released evaluator from every constructible checkpoint. (a) Dev-BLEU-4 training trajectories on a common optimizer-step axis: the released evaluator (orange) reaches 13.38 at step 1{,}820 of 2{,}828 (archived validation log, 202 logged points); fourteen reconstructions form a median band (blue), plus uniformly decoded epoch-25/50 points. (b) Canonical PURE$-$REC gap vs.\ decoded dev BLEU-4 by family: reconstructions (circles), config-faithful/step-faithful/confirmation/long-schedule (squares), rescue (triangle), distillation students (diamonds), released evaluator (star); the gray band marks the observed 6.5--9.8 range (uniform protocol) and the (9.8, 13.38) interval is unobserved by recipe-constructed checkpoints (the nine released-weight fine-tunes occupy 12.92--13.18 but are weight perturbations); degenerate checkpoints are hollow gray points. (c) Full-training-pool free-decode readout (beam-3, full 7{,}060 poses) vs.\ decoded dev BLEU-4: every constructible checkpoint reads out 6.6--9.3 BLEU, while the released evaluator reads out 78.8 BLEU (70.7\% exact match) at dev 13.38. Families are descriptive; checkpoints are not IID replicates.\relax }}{14}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:competence}{{2}{14}{Decoded competence and training-pool readout separate the released evaluator from every constructible checkpoint. (a) Dev-BLEU-4 training trajectories on a common optimizer-step axis: the released evaluator (orange) reaches 13.38 at step 1{,}820 of 2{,}828 (archived validation log, 202 logged points); fourteen reconstructions form a median band (blue), plus uniformly decoded epoch-25/50 points. (b) Canonical PURE$-$REC gap vs.\ decoded dev BLEU-4 by family: reconstructions (circles), config-faithful/step-faithful/confirmation/long-schedule (squares), rescue (triangle), distillation students (diamonds), released evaluator (star); the gray band marks the observed 6.5--9.8 range (uniform protocol) and the (9.8, 13.38) interval is unobserved by recipe-constructed checkpoints (the nine released-weight fine-tunes occupy 12.92--13.18 but are weight perturbations); degenerate checkpoints are hollow gray points. (c) Full-training-pool free-decode readout (beam-3, full 7{,}060 poses) vs.\ decoded dev BLEU-4: every constructible checkpoint reads out 6.6--9.3 BLEU, while the released evaluator reads out 78.8 BLEU (70.7\% exact match) at dev 13.38. Families are descriptive; checkpoints are not IID replicates.\relax }{figure.caption.27}{}}
+\@writefile{toc}{\contentsline {paragraph}{What the released training log establishes.}{14}{section*.26}\protected@file@percent }
+\newlabel{sec:original_trajectory}{{4.2.1}{14}{What the released training log establishes}{section*.26}{}}
 \citation{czehmann2026sacred}
 \citation{alkain2026critical}
-\@writefile{toc}{\contentsline {paragraph}{Competence gate and trajectory analysis.}{9}{section*.17}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{What the released training log establishes.}{9}{section*.18}\protected@file@percent }
-\newlabel{sec:original_trajectory}{{4.2.1}{9}{What the released training log establishes}{section*.18}{}}
-\@writefile{toc}{\contentsline {paragraph}{Cross-metric consistency across checkpoints.}{9}{section*.20}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Rank stability (see SI\nobreakspace  {}Sup.\nobreakspace  {}H).}{9}{section*.21}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Reference-frame sensitivity: matched-subset analysis.}{9}{section*.22}\protected@file@percent }
-\newlabel{sec:human_refs}{{4.2.1}{9}{Reference-frame sensitivity: matched-subset analysis}{section*.22}{}}
-\newlabel{sec:floor_effect}{{4.2.1}{9}{Reference-frame sensitivity: matched-subset analysis}{section*.22}{}}
+\@writefile{toc}{\contentsline {paragraph}{Cross-metric consistency across checkpoints.}{15}{section*.28}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces PURE--REC gap across metrics and evaluators on PHX-public (641 sequences; canonical decoding). chrF, WER, and ROUGE-L use the official SLRTP2025 implementations. WER and NLL are sign-flipped so positive means PURE is better than REC (lower WER, lower NLL). BERTScore-F1 uses \texttt  {bert-base-multilingual-cased} (no baseline rescaling). The gap is consistently positive under the original evaluator and consistently near-zero or negative under the six primary reconstructions; the eight extension seeds show the same pattern (see main-text multiseed factorial table).\relax }}{15}{table.caption.30}\protected@file@percent }
+\newlabel{tab:cross_metric_gap}{{6}{15}{PURE--REC gap across metrics and evaluators on PHX-public (641 sequences; canonical decoding). chrF, WER, and ROUGE-L use the official SLRTP2025 implementations. WER and NLL are sign-flipped so positive means PURE is better than REC (lower WER, lower NLL). BERTScore-F1 uses \texttt {bert-base-multilingual-cased} (no baseline rescaling). The gap is consistently positive under the original evaluator and consistently near-zero or negative under the six primary reconstructions; the eight extension seeds show the same pattern (see main-text multiseed factorial table).\relax }{table.caption.30}{}}
+\@writefile{toc}{\contentsline {paragraph}{Rank stability (see SI\nobreakspace  {}Sup.\nobreakspace  {}H).}{15}{section*.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Reference-frame sensitivity: matched-subset analysis.}{15}{section*.32}\protected@file@percent }
+\newlabel{sec:human_refs}{{4.2.1}{15}{Reference-frame sensitivity: matched-subset analysis}{section*.32}{}}
+\newlabel{sec:floor_effect}{{4.2.1}{15}{Reference-frame sensitivity: matched-subset analysis}{section*.32}{}}
 \citation{jiang2025meaningful}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Decoded competence and training-pool readout separate the released evaluator from every constructible checkpoint. (a) Dev-BLEU-4 training trajectories on a common optimizer-step axis: the released evaluator (orange) reaches 13.38 at step 1{,}820 of 2{,}828 (archived validation log, 202 logged points); fourteen reconstructions form a median band (blue), plus uniformly decoded epoch-25/50 points. (b) Canonical PURE$-$REC gap vs.\ decoded dev BLEU-4 by family: reconstructions (circles), config-faithful/step-faithful/confirmation/long-schedule (squares), rescue (triangle), distillation students (diamonds), released evaluator (star); the gray band marks the observed 4.5--10.9 range and the (10.9, 13.38) interval is unobserved; degenerate checkpoints are hollow gray points. (c) Full-training-pool free-decode readout (beam-3, full 7{,}060 poses) vs.\ decoded dev BLEU-4: every constructible checkpoint reads out 5.9--9.4 BLEU, while the released evaluator reads out 78.8 BLEU (70.7\% exact match) at dev 13.38. Families are descriptive; checkpoints are not IID replicates.\relax }}{10}{figure.caption.19}\protected@file@percent }
-\newlabel{fig:competence}{{2}{10}{Decoded competence and training-pool readout separate the released evaluator from every constructible checkpoint. (a) Dev-BLEU-4 training trajectories on a common optimizer-step axis: the released evaluator (orange) reaches 13.38 at step 1{,}820 of 2{,}828 (archived validation log, 202 logged points); fourteen reconstructions form a median band (blue), plus uniformly decoded epoch-25/50 points. (b) Canonical PURE$-$REC gap vs.\ decoded dev BLEU-4 by family: reconstructions (circles), config-faithful/step-faithful/confirmation/long-schedule (squares), rescue (triangle), distillation students (diamonds), released evaluator (star); the gray band marks the observed 4.5--10.9 range and the (10.9, 13.38) interval is unobserved; degenerate checkpoints are hollow gray points. (c) Full-training-pool free-decode readout (beam-3, full 7{,}060 poses) vs.\ decoded dev BLEU-4: every constructible checkpoint reads out 5.9--9.4 BLEU, while the released evaluator reads out 78.8 BLEU (70.7\% exact match) at dev 13.38. Families are descriptive; checkpoints are not IID replicates.\relax }{figure.caption.19}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}4.3 Donor-origin contrast}{11}{subsection.4.3}\protected@file@percent }
-\newlabel{sec:exposure_results}{{4.3}{11}{4.3 Donor-origin contrast}{subsection.4.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Path-dependent decomposition and balanced factorial.}{11}{section*.23}\protected@file@percent }
-\newlabel{sec:decomposition}{{4.3}{11}{Path-dependent decomposition and balanced factorial}{section*.23}{}}
-\newlabel{sec:factorial_corrected}{{4.3}{11}{Path-dependent decomposition and balanced factorial}{section*.23}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Donor-origin contrast}{16}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:exposure_results}{{4.3}{16}{Donor-origin contrast}{subsection.4.3}{}}
 \citation{slrtp2025}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}4.4 Competitive-system context}{12}{subsection.4.4}\protected@file@percent }
-\newlabel{sec:competition_real}{{4.4}{12}{4.4 Competitive-system context}{subsection.4.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Scope limit and cross-evaluator re-decoding.}{12}{section*.24}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Released-checkpoint local-robustness checks (experiments A1--A2, SI\nobreakspace  {}Sup.\nobreakspace  {}F).}{12}{section*.25}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Per-item gap decomposition (experiment C, SI\nobreakspace  {}Sup.\nobreakspace  {}K).}{12}{section*.26}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}4.5 What distinguishes the released evaluator}{13}{subsection.4.5}\protected@file@percent }
-\newlabel{sec:positive_evidence}{{4.5}{13}{4.5 What distinguishes the released evaluator}{subsection.4.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Summary of the five diagnostic views. The released evaluator sits far outside the family range on all five views. Per-view family composition in SI\nobreakspace  {}Sup.\nobreakspace  {}D.\relax }}{13}{table.caption.28}\protected@file@percent }
-\newlabel{tab:diagnostic_summary}{{4}{13}{Summary of the five diagnostic views. The released evaluator sits far outside the family range on all five views. Per-view family composition in SI~Sup.~D.\relax }{table.caption.28}{}}
-\@writefile{toc}{\contentsline {paragraph}{Readout \emph  {with} generalization: the distinctive combination.}{13}{section*.29}\protected@file@percent }
-\newlabel{sec:insample}{{4.5}{13}{Readout \emph {with} generalization: the distinctive combination}{section*.29}{}}
-\@writefile{toc}{\contentsline {paragraph}{Leakage sanity checks for the train-pool readout.}{13}{section*.30}\protected@file@percent }
-\newlabel{sec:leakage_checks}{{4.5}{13}{Leakage sanity checks for the train-pool readout}{section*.30}{}}
-\citation{saunders2021continuous}
-\@writefile{toc}{\contentsline {paragraph}{Knowledge-distillation competence ladder.}{14}{section*.31}\protected@file@percent }
-\newlabel{sec:distillation_ladder}{{4.5}{14}{Knowledge-distillation competence ladder}{section*.31}{}}
-\@writefile{toc}{\contentsline {paragraph}{Competence extrapolation (exploratory).}{14}{section*.32}\protected@file@percent }
-\newlabel{sec:extrapolation}{{4.5}{14}{Competence extrapolation (exploratory)}{section*.32}{}}
-\@writefile{toc}{\contentsline {paragraph}{Synthesis.}{14}{section*.33}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}4.6 Checkpoint-targeted oracle stress tests (SI)}{14}{subsection.4.6}\protected@file@percent }
-\newlabel{sec:non-bleu-audit}{{4.6}{14}{4.6 Checkpoint-targeted oracle stress tests (SI)}{subsection.4.6}{}}
-\newlabel{sec:bt_likelihood_attack}{{4.6}{14}{4.6 Checkpoint-targeted oracle stress tests (SI)}{subsection.4.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}5. Discussion}{14}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Path-dependent decomposition and balanced factorial.}{17}{section*.33}\protected@file@percent }
+\newlabel{sec:decomposition}{{4.3}{17}{Path-dependent decomposition and balanced factorial}{section*.33}{}}
+\newlabel{sec:factorial_corrected}{{4.3}{17}{Path-dependent decomposition and balanced factorial}{section*.33}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Competitive-system context}{17}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:competition_real}{{4.4}{17}{Competitive-system context}{subsection.4.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Cross-evaluator re-decoding of realistic retrieval outputs.}{17}{section*.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Released-checkpoint local-robustness checks (experiments A1--A2, SI\nobreakspace  {}Sup.\nobreakspace  {}F).}{18}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Per-item gap decomposition (experiment C, SI\nobreakspace  {}Sup.\nobreakspace  {}K).}{18}{section*.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}RQ1: Public-recipe insufficiency---what the released evaluator has that reconstructions lack}{18}{subsection.4.5}\protected@file@percent }
+\newlabel{sec:positive_evidence}{{4.5}{18}{RQ1: Public-recipe insufficiency---what the released evaluator has that reconstructions lack}{subsection.4.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Readout \emph  {with} generalization: the distinctive combination.}{18}{section*.39}\protected@file@percent }
+\newlabel{sec:insample}{{4.5}{18}{Readout \emph {with} generalization: the distinctive combination}{section*.39}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Summary of the five descriptive comparisons. The released evaluator sits far outside the family range on all five views. Per-view family composition in SI\nobreakspace  {}Sup.\nobreakspace  {}D.\relax }}{19}{table.caption.38}\protected@file@percent }
+\newlabel{tab:diagnostic_summary}{{7}{19}{Summary of the five descriptive comparisons. The released evaluator sits far outside the family range on all five views. Per-view family composition in SI~Sup.~D.\relax }{table.caption.38}{}}
+\@writefile{toc}{\contentsline {paragraph}{Leakage sanity checks for the train-pool readout.}{19}{section*.40}\protected@file@percent }
+\newlabel{sec:leakage_checks}{{4.5}{19}{Leakage sanity checks for the train-pool readout}{section*.40}{}}
+\@writefile{toc}{\contentsline {paragraph}{Knowledge-distillation competence ladder.}{19}{section*.41}\protected@file@percent }
+\newlabel{sec:distillation_ladder}{{4.5}{19}{Knowledge-distillation competence ladder}{section*.41}{}}
+\@writefile{toc}{\contentsline {paragraph}{Competence extrapolation (exploratory).}{20}{section*.42}\protected@file@percent }
+\newlabel{sec:extrapolation}{{4.5}{20}{Competence extrapolation (exploratory)}{section*.42}{}}
+\@writefile{toc}{\contentsline {paragraph}{Synthesis.}{20}{section*.43}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Checkpoint-targeted oracle stress tests (SI)}{20}{subsection.4.6}\protected@file@percent }
+\newlabel{sec:non-bleu-audit}{{4.6}{20}{Checkpoint-targeted oracle stress tests (SI)}{subsection.4.6}{}}
+\newlabel{sec:bt_likelihood_attack}{{4.6}{20}{Checkpoint-targeted oracle stress tests (SI)}{subsection.4.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{20}{section.5}\protected@file@percent }
 \citation{czehmann2026sacred}
 \citation{hong2026conditional}
 \citation{walsh2024datadriven}
 \citation{jiang2025meaningful}
 \citation{soke}
-\@writefile{toc}{\contentsline {paragraph}{Relation to prior work.}{15}{section*.34}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Actionable recommendations for benchmark organizers.}{15}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Relation to prior work.}{22}{section*.44}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Value of the audit infrastructure despite the competence confound.}{22}{section*.45}\protected@file@percent }
 \citation{czehmann2026sacred}
 \citation{czehmann2026sacred,alkain2026critical}
 \citation{saunders2021continuous}
-\@writefile{toc}{\contentsline {paragraph}{Limitations.}{16}{section*.36}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}6. Conclusion}{17}{section.6}\protected@file@percent }
-\newlabel{sec:ethics}{{6}{17}{Compliance with Ethical Standards}{section*.37}{}}
-\@writefile{toc}{\contentsline {paragraph}{Conflict of interest.}{17}{section*.38}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Ethical approval.}{17}{section*.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Funding.}{17}{section*.40}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Data availability.}{17}{section*.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Actionable recommendations for benchmark organizers.}{23}{section*.46}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Limitations.}{23}{section*.47}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{24}{section.6}\protected@file@percent }
+\citation{czehmann2026sacred}
+\newlabel{sec:ethics}{{6}{25}{Declarations}{section*.48}{}}
+\@writefile{toc}{\contentsline {paragraph}{Funding.}{25}{section*.49}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Conflict of interest.}{25}{section*.50}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Ethics approval.}{25}{section*.51}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Data availability.}{25}{section*.52}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Author contribution.}{25}{section*.53}\protected@file@percent }
 \bibdata{references}
 \bibcite{alkain2026critical}{{1}{2026}{{Alkain et~al.}}{{Alkain, N{\'u}{\~n}ez-Marcos, Escolano, Doc{\'i}o-Fern{\'a}ndez, Perez-de Vi{\~n}aspre, and Labaka}}}
 \bibcite{artiaga2025signer}{{2}{2025}{{Artiaga et~al.}}{{Artiaga, Kamila, Afli, Lynch, and Hasanuzzaman}}}
-\@writefile{toc}{\contentsline {section}{Supplementary Information}{18}{section*.42}\protected@file@percent }
 \bibcite{camgoz2018neural}{{3}{2018}{{Camgoz et~al.}}{{Camgoz, Hadfield, Koller, Ney, and Bowden}}}
+\@writefile{toc}{\contentsline {section}{Supplementary Information}{26}{section*.54}\protected@file@percent }
 \bibcite{carlini2021extracting}{{4}{2021}{{Carlini et~al.}}{{Carlini, Tramer, Wallace, Jagielski, Herbert-Voss, Lee, Roberts, Brown, Song, Erlingsson, Oprea, and Raffel}}}
-\bibcite{backtranslation2}{{5}{2025}{{Cory et~al.}}{{Cory, Ivashechkin, Sahin, Ranum, Low, Fish, Pelykh, et~al.}}}
-\bibcite{czehmann2026sacred}{{6}{2025}{{Czehmann et~al.}}{{Czehmann, Yazdani, Hamidullah, Nunnari, and Avramidis}}}
-\bibcite{he2023blind}{{7}{2024}{{He et~al.}}{{He, Rahul, Hupkes, and Cotterell}}}
-\bibcite{hong2026conditional}{{8}{2025}{{Hong and {Ko{\v {s}}eck{\'{a}}, Jana}}}{{Hong and {Ko{\v {s}}eck{\'{a}}, Jana}}}}
-\bibcite{silverscore}{{9}{2025}{{Imai}}{{Imai}}}
-\bibcite{jiang2025meaningful}{{10}{2025}{{Jiang et~al.}}{{Jiang et~al.}}}
-\bibcite{kandpal2022memorization}{{11}{2022}{{Kandpal et~al.}}{{Kandpal, Wallace, and Raffel}}}
-\bibcite{khandelwal2020knnlm}{{12}{2020}{{Khandelwal et~al.}}{{Khandelwal, Fan, Jurafsky, Zettlemoyer, and Lewis}}}
-\bibcite{signbleu}{{13}{2024}{{Kim et~al.}}{{Kim, Huerta-Enochian, Ko, and Lee}}}
-\bibcite{post2018sacrebleu}{{14}{2018}{{Post}}{{Post}}}
-\bibcite{saunders2020progressive}{{15}{2020}{{Saunders et~al.}}{{Saunders, Camgoz, and Bowden}}}
-\bibcite{saunders2021continuous}{{16}{2021}{{Saunders et~al.}}{{Saunders, Camg{\"o}z, and Bowden}}}
-\bibcite{darslp}{{17}{2025}{{Tasyurek et~al.}}{{Tasyurek, Kiziltepe, and Keles}}}
-\bibcite{slrtp2025}{{18}{2025}{{Walsh et~al.}}{{Walsh, Fish, Mercanoglu~Sincan, Lakhal, Bowden, Fox, Woll, Wu, Li, Zhao, Wang, Zhou, Li, Tang, He, Wang, Zhang, Wang, Cheng, Tasyurek, Kiziltepe, and Keles}}}
-\bibcite{walsh2024datadriven}{{19}{2024}{{Walsh et~al.}}{{Walsh, Ravanshad, Rahmani, and Bowden}}}
-\bibcite{signstitching}{{20}{2024}{{Walsh et~al.}}{{Walsh, Saunders, and Bowden}}}
-\bibcite{yazdani2025critical}{{21}{2025}{{Yazdani et~al.}}{{Yazdani et~al.}}}
-\bibcite{zhang2020bertscore}{{22}{2020}{{Zhang et~al.}}{{Zhang, Kishore, Wu, Weinberger, and Artzi}}}
-\bibcite{soke}{{23}{2025}{{Zuo et~al.}}{{Zuo, Potamias, Ververas, Deng, and Zafeiriou}}}
-\gdef \@abspage@last{20}
+\bibcite{chen2022repro}{{5}{2022}{{Chen and Eger}}{{Chen and Eger}}}
+\bibcite{backtranslation2}{{6}{2025}{{Cory et~al.}}{{Cory, Ivashechkin, Sahin, Ranum, Low, Fish, Pelykh, et~al.}}}
+\bibcite{czehmann2026sacred}{{7}{2025}{{Czehmann et~al.}}{{Czehmann, Yazdani, Hamidullah, Nunnari, and Avramidis}}}
+\bibcite{he2023blind}{{8}{2024}{{He et~al.}}{{He, Rahul, Hupkes, and Cotterell}}}
+\bibcite{hong2026conditional}{{9}{2026}{{Hong and {Ko{\v {s}}eck{\'{a}}, Jana}}}{{Hong and {Ko{\v {s}}eck{\'{a}}, Jana}}}}
+\bibcite{silverscore}{{10}{2025}{{Imai}}{{Imai}}}
+\bibcite{jiang2025meaningful}{{11}{2025}{{Jiang et~al.}}{{Jiang, Leong, Moryossef, Cory, Ivashechkin, Tarigopula, Zhang, G{\"o}hring, Rios, Sennrich, and Ebling}}}
+\bibcite{kandpal2022memorization}{{12}{2022}{{Kandpal et~al.}}{{Kandpal, Wallace, and Raffel}}}
+\bibcite{khandelwal2020knnlm}{{13}{2020}{{Khandelwal et~al.}}{{Khandelwal, Fan, Jurafsky, Zettlemoyer, and Lewis}}}
+\bibcite{signbleu}{{14}{2024}{{Kim et~al.}}{{Kim, Huerta-Enochian, Ko, and Lee}}}
+\bibcite{post2018sacrebleu}{{15}{2018}{{Post}}{{Post}}}
+\bibcite{saunders2020progressive}{{16}{2020}{{Saunders et~al.}}{{Saunders, Camgoz, and Bowden}}}
+\bibcite{saunders2021continuous}{{17}{2021}{{Saunders et~al.}}{{Saunders, Camg{\"o}z, and Bowden}}}
+\bibcite{darslp}{{18}{2025}{{Tasyurek et~al.}}{{Tasyurek, Kiziltepe, and Keles}}}
+\bibcite{slrtp2025}{{19}{2025}{{Walsh et~al.}}{{Walsh, Fish, Mercanoglu~Sincan, Lakhal, Bowden, Fox, Woll, Wu, Li, Zhao, Wang, Zhou, Li, Tang, He, Wang, Zhang, Wang, Cheng, Tasyurek, Kiziltepe, and Keles}}}
+\bibcite{walsh2024datadriven}{{20}{2024}{{Walsh et~al.}}{{Walsh, Ravanshad, Rahmani, and Bowden}}}
+\bibcite{signstitching}{{21}{2024}{{Walsh et~al.}}{{Walsh, Saunders, and Bowden}}}
+\bibcite{yazdani2025critical}{{22}{2026}{{Yazdani et~al.}}{{Yazdani et~al.}}}
+\bibcite{zhang2020bertscore}{{23}{2020}{{Zhang et~al.}}{{Zhang, Kishore, Wu, Weinberger, and Artzi}}}
+\bibcite{soke}{{24}{2025}{{Zuo et~al.}}{{Zuo, Potamias, Ververas, Deng, and Zafeiriou}}}
+\gdef \@abspage@last{28}

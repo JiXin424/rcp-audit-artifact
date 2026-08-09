@@ -11,45 +11,45 @@ Warning--no number and no volume in hong2026conditional
 Warning--page numbers missing in hong2026conditional
 Warning--no number and no volume in darslp
 Warning--page numbers missing in darslp
-You've used 23 entries,
+You've used 24 entries,
             3209 wiz_defined-function locations,
-            815 strings with 11650 characters,
-and the built_in function-call counts, 21809 in all, are:
-= -- 1625
-> -- 2173
-< -- 7
-+ -- 696
-- -- 710
-* -- 2123
-:= -- 3955
-add.period$ -- 84
-call.type$ -- 23
-change.case$ -- 225
-chr.to.int$ -- 23
-cite$ -- 29
-duplicate$ -- 576
-empty$ -- 1117
-format.name$ -- 786
-if$ -- 4168
+            822 strings with 12069 characters,
+and the built_in function-call counts, 23576 in all, are:
+= -- 1754
+> -- 2370
+< -- 9
++ -- 762
+- -- 776
+* -- 2315
+:= -- 4260
+add.period$ -- 88
+call.type$ -- 24
+change.case$ -- 242
+chr.to.int$ -- 24
+cite$ -- 30
+duplicate$ -- 617
+empty$ -- 1187
+format.name$ -- 860
+if$ -- 4513
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 23
-newline$ -- 127
-num.names$ -- 230
-pop$ -- 268
+missing$ -- 24
+newline$ -- 132
+num.names$ -- 240
+pop$ -- 286
 preamble$ -- 1
-purify$ -- 363
+purify$ -- 386
 quote$ -- 0
-skip$ -- 519
+skip$ -- 561
 stack$ -- 0
-substring$ -- 782
-swap$ -- 188
-text.length$ -- 7
+substring$ -- 866
+swap$ -- 211
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 460
+type$ -- 480
 warning$ -- 6
-while$ -- 182
+while$ -- 194
 width$ -- 0
-write$ -- 331
+write$ -- 347
 (There were 6 warnings)

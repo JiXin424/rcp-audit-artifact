@@ -1,0 +1,72 @@
+{
+ "matched461": {
+  "n": 461,
+  "same_item": {
+   "orig": {
+    "rec": 14.943168909345621,
+    "pure": 24.9763046508492,
+    "gap": 10.03313574150358
+   },
+   "human": {
+    "rec": 7.347195345666542,
+    "pure": 8.296949395512428,
+    "gap": 0.9497540498458861
+   }
+  },
+  "permuted_floor": {
+   "orig": {
+    "rec": {
+     "mean": 1.5440645747466577,
+     "max": 2.208026444206015,
+     "min": 0.9003096998264807
+    },
+    "pure": {
+     "mean": 1.488874899436237,
+     "max": 2.010326923183429,
+     "min": 0.9290649542168067
+    }
+   },
+   "human": {
+    "rec": {
+     "mean": 0.9763374748118767,
+     "max": 1.3396785554139192,
+     "min": 0.5493152802486734
+    },
+    "pure": {
+     "mean": 0.8855422589614351,
+     "max": 1.2890060898886053,
+     "min": 0.4802006039926772
+    }
+   }
+  }
+ },
+ "full641": {
+  "n": 641,
+  "same_item": {
+   "orig": {
+    "rec": 12.777148564612425,
+    "pure": 23.020464394404755,
+    "gap": 10.24331582979233
+   }
+  },
+  "permuted_floor": {
+   "orig": {
+    "rec": {
+     "mean": 1.226083622368905,
+     "max": 1.7144192180016031,
+     "min": 0.7228905709477592
+    },
+    "pure": {
+     "mean": 1.172576748950002,
+     "max": 1.6156291310532862,
+     "min": 0.6540931249714522
+    }
+   }
+  }
+ },
+ "meta": {
+  "n_perm": 30,
+  "seed": 42,
+  "note": "floor = corpus BLEU of hypotheses scored against permuted references (other items in the same subset); quantifies the score obtainable from in-domain reference mismatch alone."
+ }
+}

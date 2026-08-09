@@ -36,6 +36,14 @@ Carlini, N., F.~Tramer, E.~Wallace, M.~Jagielski, A.~Herbert-Voss, K.~Lee,
 \newblock In {\em 30th USENIX Security Symposium (USENIX Security 21)}, pp.\
   2633--2650.
 
+\bibitem[\protect\citeauthoryear{Chen and Eger}{Chen and
+  Eger}{2022}]{chen2022repro}
+Chen, Y. and S.~Eger 2022.
+\newblock Reproducibility issues for {BERT}-based evaluation metrics.
+\newblock In {\em Proceedings of the 2022 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pp.\  9089--9107. Association for
+  Computational Linguistics.
+
 \bibitem[\protect\citeauthoryear{Cory, Ivashechkin, Sahin, Ranum, Low, Fish,
   Pelykh, et~al.}{Cory et~al.}{2025}]{backtranslation2}
 Cory, O., M.~Ivashechkin, K.~Sahin, O.~Ranum, J.~Low, E.~Fish, A.~Pelykh,
@@ -66,8 +74,8 @@ He, T., K.~Rahul, D.~Hupkes, and R.~Cotterell 2024.
   the Association for Computational Linguistics}.
 
 \bibitem[\protect\citeauthoryear{Hong and {Ko{\v{s}}eck{\'{a}}, Jana}}{Hong and
-  {Ko{\v{s}}eck{\'{a}}, Jana}}{2025}]{hong2026conditional}
-Hong, R. and {Ko{\v{s}}eck{\'{a}}, Jana}. 2025.
+  {Ko{\v{s}}eck{\'{a}}, Jana}}{2026}]{hong2026conditional}
+Hong, R. and {Ko{\v{s}}eck{\'{a}}, Jana}. 2026.
 \newblock Conditional collapse in sign language production: A diagnostic and a
   scaling argument.
 \newblock {\em arXiv preprint arXiv:2606.01643\/}.
@@ -81,12 +89,14 @@ Imai, S. 2025.
 \newblock In {\em Proceedings of the International Conference on Recent
   Advances in Natural Language Processing (RANLP 2025)}, pp.\  519--528.
 
-\bibitem[\protect\citeauthoryear{Jiang et~al.}{Jiang
+\bibitem[\protect\citeauthoryear{Jiang, Leong, Moryossef, Cory, Ivashechkin,
+  Tarigopula, Zhang, G{\"o}hring, Rios, Sennrich, and Ebling}{Jiang
   et~al.}{2025}]{jiang2025meaningful}
-Jiang, Z. et~al. 2025.
+Jiang, Z., C.~Leong, A.~Moryossef, O.~Cory, M.~Ivashechkin, N.~Tarigopula,
+  B.~Zhang, A.~G{\"o}hring, A.~Rios, R.~Sennrich, and S.~Ebling 2025.
 \newblock Meaningful pose-based sign language evaluation.
-\newblock In {\em Proceedings of the 10th Workshop on Machine Translation
-  (WMT)}.
+\newblock In {\em Proceedings of the Tenth Conference on Machine Translation
+  (WMT)}, pp.\  64--80.
 
 \bibitem[\protect\citeauthoryear{Kandpal, Wallace, and Raffel}{Kandpal
   et~al.}{2022}]{kandpal2022memorization}
@@ -165,8 +175,8 @@ Walsh, H., B.~Saunders, and R.~Bowden 2024.
 \newblock In {\em British Machine Vision Conference}.
 
 \bibitem[\protect\citeauthoryear{Yazdani et~al.}{Yazdani
-  et~al.}{2025}]{yazdani2025critical}
-Yazdani, M. et~al. 2025.
+  et~al.}{2026}]{yazdani2025critical}
+Yazdani, M. et~al. 2026.
 \newblock A critical study of automatic evaluation in sign language
   translation.
 \newblock In {\em Proceedings of LREC-COLING 2026}.

@@ -86,14 +86,20 @@ print('\nBy category:')
 for k, v in sorted(cats.items()):
     print(f'  {k}: {v}')
 
-# Verify key files now in ledger
+# Verify key files now in ledger (paths relative to the artifact root)
 key_files = [
-    'artifact/results/checkpoint_registry.json',
-    'artifact/results/unified_checkpoint_registry.json',
-    'artifact/artifact_ledger.json',
-    'generated_figures/dose_response.pdf',
-    'generated_figures/original_trajectory.pdf',
-    'generated_figures/checkpoint_sensitivity_schematic.pdf',
+    'results/checkpoint_registry.json',
+    'results/unified_checkpoint_registry.json',
+    'results/gap_43_canonical_beam3.json',
+    'results/dev_gate_table.json',
+    'results/readout_overfit.json',
+    'results/floor_calibration.json',
+    'paper/main_lre.tex',
+    'paper/supplementary.tex',
+    'paper/dose_response.pdf',
+    'paper/original_trajectory.pdf',
+    'paper/checkpoint_sensitivity_schematic.pdf',
+    'paper/generated_figures/fig3_competence.pdf',
 ]
 print('\nKey files coverage:')
 for kf in key_files:

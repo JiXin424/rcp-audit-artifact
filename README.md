@@ -2,7 +2,7 @@
 
 This artifact accompanies the manuscript:
 
-**"Auditing a Released Back-Translation Evaluator for Sign Language Production: Replay Sensitivity and Public-Recipe (Non-)Reproducibility"**
+**"Auditing a Released Back-Translation Evaluator for Sign Language Production: A Public-Recipe Sufficiency and Replay-Probe Reproducibility Audit"**
 
 submitted to *Language Resources and Evaluation* (Springer 10579). LRE is
 **single-blind**; author information appears in the paper itself. The artifact
@@ -55,6 +55,28 @@ and legacy training-time dev BLEU-4 values (including the non-reproducible
 `results/canonical_checkpoint_registry.json`, and `results/paper_numbers.json`
 for all paper numbers.
 
+## 0b. Round-3 revision (C1 protocol unification + reviewer-driven analyses)
+
+Round 3 (2026-08-09) unifies the dev evaluation protocol and adds three
+reviewer-driven analyses. **Canonical evaluation protocol:** full pool
+(7,060/515/641), beam=3, alpha=−1, `[::2]` subsample, `max_output_len=400`,
+sacreBLEU 13a/exp/effective_order=False, official jiwer 3.1.0 normalized WER.
+It reproduces the released training log exactly (dev BLEU-4 13.38 / WER
+83.37); the earlier 500-sample `e_checkpoint_stats` protocol (which produced
+17.95/83.93) is deprecated.
+
+| Analysis | Script | Output | What it does |
+|---|---|---|---|
+| C1 protocol (Exp 1) | `scripts/e_dev_uniform.py` | `results/dev_uniform/*.json`, `results/dev_gate_table.json` | Uniform-protocol dev BLEU/WER for every checkpoint; competence gate: **0/28 decoded recipe-constructed runs pass** (|dev BLEU−13.38|≤1.0 AND WER≤86.37); 9/9 released-weight fine-tunes pass but are excluded as weight perturbations; 24 withheld runs (training-log max dev 10.02). |
+| Readout–overfit (Exp 2) | `scripts/e_readout_overfit.py` | `results/readout_overfit.json` | Spearman across the 31 checkpoints with uniform full-pool readouts: readout tracks decoded competence (ρ=0.916, n=31; ρ=0.873 non-degenerate, n=27) but not the train−dev overfit indicator (ρ=0.040) nor the PURE−REC gap (ρ=−0.082). |
+| Floor calibration (Exp 3) | `scripts/e_floor_calibration.py` | `results/floor_calibration.json` | Reference-permutation BLEU floor calibration (reviewer R1-M3). |
+
+Round-3 locked numbers: unobserved competence interval **(9.8, 13.38)**
+(decoded family max 9.83 = `cf_101`; training-log max 10.02); released
+training-pool readout **78.8 BLEU / 70.7% EM** vs. family max 9.3; 38
+non-degenerate decoded runs (37 unique binaries) with strictly negative gaps
+$[-2.01, -0.21]$.
+
 ## 1. Layout
 
 ```
@@ -77,7 +99,10 @@ artifact/
 │   ├── canonical_checkpoint_registry.json   # 47 unique binaries, 48 training runs (SHA-256 primary key)
 │   ├── canonical_matched_subset.json        # 461-item confidence=1 reference-frame analysis
 │   ├── canonical_floor_effect.json          # asymmetric floor-effect numbers
-│   ├── full_readout/ + full_readout_summary.json  # uniform full-7060 readout (30 ckpts)
+│   ├── full_readout/ + full_readout_summary.json  # uniform full-7060 readout (31 ckpts incl. released)
+│   ├── dev_uniform/ + dev_gate_table.json         # C1 uniform dev BLEU/WER + competence gate
+│   ├── readout_overfit.json                       # Exp 2 readout–competence/overfit Spearman table
+│   ├── floor_calibration.json                     # Exp 3 reference-permutation floor calibration
 │   ├── donor_cluster_bootstrap.json         # donor reuse stats + cluster bootstrap CIs
 │   ├── ref_frame_paired_items.json          # per-item reference-frame paired data
 │   ├── released_perturbation.json           # experiment A1: weight-noise scan at competence parity
@@ -167,6 +192,12 @@ Leakage / permutation / readout controls:
 - `e_leakage_sanity.py` — train-pool 78.8 BLEU / 70.7% EM readout, permutation, stratified EM, membership control.
 - `e_input_permutation.py`, `e_equivariance.py` — input-side pose permutation + output-equivariance verification.
 - `e_full_readout.py` — uniform full-7060 readout across the reconstruction family (this revision).
+
+Round-3 protocol analyses:
+- `e_dev_uniform.py` — uniform full-pool beam-3 dev BLEU/WER (the canonical C1 protocol).
+- `e_readout_overfit.py` — readout–competence/overfit Spearman table (Exp 2).
+- `e_gate_table.py` — competence gate table (0/28 pass; 9/9 fine-tunes).
+- `e_floor_calibration.py` — reference-permutation BLEU floor calibration (Exp 3, R1-M3).
 
 Bootstrap / decomposition:
 - `e_donor_cluster_bootstrap.py` — donor reuse + donor-cluster / two-way / signer / show / date bootstrap CIs.
