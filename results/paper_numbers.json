@@ -74,31 +74,8 @@
     "pure_orig": 23.020464394404755,
     "pure_human": 6.522085455507202
   },
-  "n_non_degenerate": 36,
-  "n_non_degenerate_unique": 36,
-  "non_degenerate_gap_range": [
-    -2.01,
-    -0.21
-  ],
-  "n_degenerate_excluded": 5,
-  "degenerate_description": "3 x alpha=1.0 distillation (empty output) + 2 ladder fractions (BLEU approx 0)",
-  "n_total_trained": 70,
-  "n_beam3_decoded": 41,
-  "n_unique_binaries": 40,
-  "n_sha256_collisions": 1,
-  "n_descriptive_comparisons": 3,
-  "wer_gate_type": "one-sided",
-  "wer_gate_threshold": 86.37,
-  "headline_ci_primary": "donor-cluster",
-  "headline_ci": [
-    8.87,
-    11.64
-  ],
-  "matched_donor_pool": {
-    "caliper": 0.05,
-    "n_matched": 148,
-    "smd_jaccard": 0.065,
-    "origin_effect": 9.56,
-    "origin_ci": [7.47, 11.76]
-  }
+  "n_non_degenerate": 44,
+  "n_total_trained": 78,
+  "n_decoded": 49,
+  "n_unique_binaries": 48
 }

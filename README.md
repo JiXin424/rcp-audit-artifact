@@ -4,19 +4,19 @@ Paper sources, training scripts, and evaluation harness for the LRE
 (*Language Resources and Evaluation*, Springer 10579) submission:
 
 > **Auditing a Released Back-Translation Evaluator for Sign Language
-> Production: A Public-Recipe Sufficiency and Replay-Probe Reproducibility
-> Audit**
+> Production: A Failed Reconstruction and Descriptive Probe Analysis
+> Audit (Round-9 revision)**
 
 The paper audits whether the SLRTP2025 released back-translation (BT)
 evaluator's $+10.24$ sacreBLEU retrieval-vs-recorded-poses (PURE–REC) reversal
 on the 641-sequence PHX-public test set reproduces across checkpoints
 reconstructed from the publicly documented training recipe. Spoiler: it does
-not reproduce — 38 non-degenerate decoded runs (37 unique weight binaries
-after SHA-256 deduplication) all have strictly negative PURE–REC gaps (range
+not reproduce — 44 non-degenerate decoded runs (48 unique weight binaries
+after SHA-256 deduplication) 43 of 44 have strictly negative PURE–REC gaps (one $+0.24$; range
 $[-2.01, -0.21]$), and the released evaluator's competence (dev BLEU-4 13.38
 under the uniform beam-3 protocol) and training-pool readout (78.8 BLEU,
 70.7% exact match) are outside anything the public recipe constructs (decoded
-family max dev BLEU-4 9.8; unobserved competence interval $(9.8, 13.38)$).
+family decoded max dev BLEU-4 10.5; unobserved competence interval $(9.8, 13.38)$).
 The paper is scoped as a public-recipe sufficiency audit, not a causal
 checkpoint-identity claim.
 
@@ -166,7 +166,7 @@ pdflatex -interaction=nonstopmode main_lre.tex
 
 ## Data licensing
 
-- **PHOENIX-2014T**: CC BY-NC-SA 4.0 (RWTH Aachen) — not redistributed.
+- **PHOENIX-2014T**: RWTH Aachen academic research licence (the distributed copy's specified version; the official landing page does not display a Creative Commons licence) — not redistributed.
 - **SLRTP2025 pose bundle and released BT checkpoint**: challenge terms —
   obtain from the [SLRTP2025 organizers](https://github.com/walsharry/SLRTP-Sign-Production-Evaluation).
 - **Czehmann et al. (2026) human back-translations**: CC BY-NC-SA 4.0 — not redistributed.
