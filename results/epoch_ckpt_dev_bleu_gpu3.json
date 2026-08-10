@@ -1,0 +1,14 @@
+{
+ "checkpoints/long_schedule/seed_202/best.ckpt": {
+  "dev_bleu": 8.774732881793268,
+  "time_s": 8.2157621383667
+ },
+ "checkpoints/rescue/seed_202_wd0/best.ckpt": {
+  "dev_bleu": 8.94020691456465,
+  "time_s": 6.890811443328857
+ },
+ "checkpoints/distillation/alpha_1.0_seed_101/best.ckpt": {
+  "dev_bleu": 0.0,
+  "time_s": 0.9689102172851562
+ }
+}

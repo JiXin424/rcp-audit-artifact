@@ -1,0 +1,33 @@
+{
+  "schema": "donor-pool-resampling-v1",
+  "design": "Repeatedly subsample 640-item donor pools from the 7060-item training pool to match the 640-item unseen test-pool size. Same source-Jaccard retrieval rule. Pool size is equalized (640 vs 640); only pool origin (train vs test) differs. No re-decoding: released-evaluator hypotheses for all 7060 training poses are cached in backTranslation_PHIX_model.json.",
+  "generated_by": "scripts/e_donor_pool_resampling.py",
+  "n_resamples": 1000,
+  "subpool_size": 640,
+  "train_pool_size": 7060,
+  "test_pool_size": 640,
+  "n_queries": 641,
+  "reference_baseline": {
+    "unseen_test_pool_bleu": 8.50681625258706,
+    "canonical_full_pool_bleu": 23.020464394404755,
+    "canonical_full_pool_origin_effect": 14.513648141817695,
+    "canonical_full_pool_n": 7060
+  },
+  "resampled_640_subpool_distribution": {
+    "pure_bleu_mean": 16.886866864981442,
+    "pure_bleu_median": 16.897489223849902,
+    "pure_bleu_ci95": [
+      15.942587155914923,
+      17.849248251771154
+    ],
+    "origin_effect_mean": 8.380050612394381,
+    "origin_effect_median": 8.390672971262841,
+    "origin_effect_ci95": [
+      7.435770903327864,
+      9.342431999184095
+    ],
+    "fraction_positive": 1.0,
+    "mean_best_donor_jaccard": 0.4113025653064251
+  },
+  "interpretation": "With pool size equalized (640 vs 640), the origin effect remains positive and its resampling CI excludes zero. This is a pool-size-controlled association; it is still not an identified training-exposure effect because donor diversity, reuse, and training exposure remain confounded with pool origin. This replaces the earlier 34%/66% attribution (which compared different-target-population estimates) with a sampling distribution under equal pool size."
+}

@@ -1,0 +1,570 @@
+{
+  "schema": "robustness-diagnostics-v1",
+  "generated_by": "scripts/e_robustness_diagnostics.py",
+  "part1_spearman_readout_competence": {
+    "all_incl_released": {
+      "rho": 0.9160613397901533,
+      "p": 4.952354387120664e-13,
+      "n": 31
+    },
+    "excl_released": {
+      "rho": 0.9073702961478511,
+      "p": 4.7232079362729035e-12,
+      "n": 30
+    },
+    "reconstructions_only": {
+      "rho": 0.8999999999999999,
+      "p": 4.871970948735606e-06,
+      "n": 15
+    },
+    "distillation_only": {
+      "rho": 0.9568345323741009,
+      "p": 2.380344215287166e-08,
+      "n": 15
+    },
+    "released_point": {
+      "train_bleu": 78.81879546693305,
+      "dev_bleu": 13.378651856913775
+    }
+  },
+  "part2_training_diagnostics": {
+    "implementation_details_by_family": {
+      "paper-derived (legacy)": {
+        "n_logs": 14,
+        "batch_size": 128,
+        "grad_accum": 2,
+        "effective_batch": 256,
+        "selection": "nll",
+        "skeleton_subsample": 2,
+        "config_sha256": "0321104aeed82a6192e13b6f007c5cd3cdd8a1902c493c6d24eed2377194ae44"
+      },
+      "config-faithful": {
+        "n_logs": 4,
+        "batch_size": 256,
+        "grad_accum": 1,
+        "effective_batch": 256,
+        "selection": "nll",
+        "skeleton_subsample": 2,
+        "config_sha256": "0321104aeed82a6192e13b6f007c5cd3cdd8a1902c493c6d24eed2377194ae44"
+      },
+      "step-faithful": {
+        "n_logs": 2,
+        "batch_size": 256,
+        "grad_accum": 1,
+        "effective_batch": 256,
+        "selection": "nll",
+        "skeleton_subsample": 2,
+        "config_sha256": "0321104aeed82a6192e13b6f007c5cd3cdd8a1902c493c6d24eed2377194ae44"
+      },
+      "confirmation": {
+        "n_logs": 2,
+        "batch_size": 256,
+        "grad_accum": 1,
+        "effective_batch": 256,
+        "selection": "nll",
+        "skeleton_subsample": 2,
+        "config_sha256": "0321104aeed82a6192e13b6f007c5cd3cdd8a1902c493c6d24eed2377194ae44"
+      },
+      "long-schedule": {
+        "n_logs": 1,
+        "batch_size": 256,
+        "grad_accum": 1,
+        "effective_batch": 256,
+        "selection": "nll",
+        "skeleton_subsample": 2,
+        "config_sha256": "0321104aeed82a6192e13b6f007c5cd3cdd8a1902c493c6d24eed2377194ae44"
+      },
+      "rescue": {
+        "n_logs": 1,
+        "batch_size": 256,
+        "grad_accum": 1,
+        "effective_batch": 256,
+        "selection": "nll",
+        "skeleton_subsample": 2,
+        "config_sha256": "0321104aeed82a6192e13b6f007c5cd3cdd8a1902c493c6d24eed2377194ae44"
+      },
+      "ladder": {
+        "n_logs": 4,
+        "batch_size": 256,
+        "grad_accum": 8,
+        "effective_batch": 2048,
+        "selection": "nll",
+        "skeleton_subsample": 2,
+        "config_sha256": "0321104aeed82a6192e13b6f007c5cd3cdd8a1902c493c6d24eed2377194ae44"
+      },
+      "distillation": {
+        "n_logs": 15,
+        "batch_size": 32,
+        "grad_accum": 8,
+        "effective_batch": 256,
+        "selection": null,
+        "skeleton_subsample": 2,
+        "config_sha256": "0321104aeed82a6192e13b6f007c5cd3cdd8a1902c493c6d24eed2377194ae44"
+      }
+    },
+    "early_epoch_medians_reconstructions": {
+      "epoch1": {
+        "epoch": 1,
+        "train_nll_median": 5.830878153239814,
+        "train_nll_iqr": [
+          5.811195492975802,
+          5.862534503860785
+        ],
+        "dev_nll_median": 4.548637001811594,
+        "dev_nll_iqr": [
+          4.208282674436074,
+          4.633044454722717
+        ],
+        "n": 28
+      },
+      "epoch5": {
+        "epoch": 5,
+        "train_nll_median": 2.992685323522247,
+        "train_nll_iqr": [
+          2.9916008155824763,
+          3.011685227651332
+        ],
+        "dev_nll_median": 2.692513470635898,
+        "dev_nll_iqr": [
+          2.362000125228366,
+          2.8087972329798268
+        ],
+        "n": 28
+      },
+      "epoch10": {
+        "epoch": 10,
+        "train_nll_median": 2.5406524563571873,
+        "train_nll_iqr": [
+          2.535945764425972,
+          2.551282369815974
+        ],
+        "dev_nll_median": 2.5401756534299986,
+        "dev_nll_iqr": [
+          2.2250528962367837,
+          2.6196568865147363
+        ],
+        "n": 28
+      },
+      "epoch25": {
+        "epoch": 25,
+        "train_nll_median": 2.092214607899228,
+        "train_nll_iqr": [
+          2.089122682452761,
+          2.0997268471702206
+        ],
+        "dev_nll_median": 2.4453546080658404,
+        "dev_nll_iqr": [
+          2.1772249224690223,
+          2.512254110723285
+        ],
+        "n": 26
+      }
+    },
+    "n_reconstruction_logs": 28,
+    "field_notes": {
+      "recorded_per_epoch": [
+        "train_nll",
+        "dev_nll",
+        "lr",
+        "elapsed_s",
+        "improved"
+      ],
+      "not_recorded": [
+        "per-step loss",
+        "gradient norm",
+        "per-token accuracy (teacher-forced, per epoch)",
+        "learning-rate warmup schedule (only plateau-reduction lr values logged)"
+      ],
+      "lr_schedule": "Adam(1e-3, wd 1e-3) with plateau x0.8 on dev NLL; lr values visible per epoch in epochs_log"
+    },
+    "all_logs_summary": [
+      {
+        "path": "checkpoints/reconstructions/seed_303/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 303,
+        "eff_batch": 256,
+        "epochs_logged": 56,
+        "best_epoch": 41,
+        "best_dev_nll": 2.4201050158514494
+      },
+      {
+        "path": "checkpoints/reconstructions/seed_1102/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 1102,
+        "eff_batch": 256,
+        "epochs_logged": 47,
+        "best_epoch": 32,
+        "best_dev_nll": 2.4758820608966974
+      },
+      {
+        "path": "checkpoints/reconstructions/seed_707/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 707,
+        "eff_batch": 256,
+        "epochs_logged": 50,
+        "best_epoch": 35,
+        "best_dev_nll": 2.487657927088821
+      },
+      {
+        "path": "checkpoints/reconstructions/seed_1001/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 1001,
+        "eff_batch": 256,
+        "epochs_logged": 51,
+        "best_epoch": 36,
+        "best_dev_nll": 2.429050601682801
+      },
+      {
+        "path": "checkpoints/reconstructions/seed_505/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 505,
+        "eff_batch": 256,
+        "epochs_logged": 39,
+        "best_epoch": 24,
+        "best_dev_nll": 2.404557900249094
+      },
+      {
+        "path": "checkpoints/reconstructions/seed_404/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 404,
+        "eff_batch": 256,
+        "epochs_logged": 36,
+        "best_epoch": 21,
+        "best_dev_nll": 2.4887135973613996
+      },
+      {
+        "path": "checkpoints/reconstructions/seed_101/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 101,
+        "eff_batch": 256,
+        "epochs_logged": 41,
+        "best_epoch": 26,
+        "best_dev_nll": 2.49134280981607
+      },
+      {
+        "path": "checkpoints/reconstructions/seed_1203/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 1203,
+        "eff_batch": 256,
+        "epochs_logged": 45,
+        "best_epoch": 30,
+        "best_dev_nll": 2.501899859791847
+      },
+      {
+        "path": "checkpoints/reconstructions/seed_1405/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 1405,
+        "eff_batch": 256,
+        "epochs_logged": 43,
+        "best_epoch": 28,
+        "best_dev_nll": 2.424499987616055
+      },
+      {
+        "path": "checkpoints/reconstructions/seed_909/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 909,
+        "eff_batch": 256,
+        "epochs_logged": 43,
+        "best_epoch": 28,
+        "best_dev_nll": 2.4042509341032607
+      },
+      {
+        "path": "checkpoints/reconstructions/seed_808/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 808,
+        "eff_batch": 256,
+        "epochs_logged": 44,
+        "best_epoch": 29,
+        "best_dev_nll": 2.4967396129261363
+      },
+      {
+        "path": "checkpoints/reconstructions/seed_1304/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 1304,
+        "eff_batch": 256,
+        "epochs_logged": 39,
+        "best_epoch": 24,
+        "best_dev_nll": 2.485549305749901
+      },
+      {
+        "path": "checkpoints/reconstructions/seed_606/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 606,
+        "eff_batch": 256,
+        "epochs_logged": 42,
+        "best_epoch": 27,
+        "best_dev_nll": 2.4206619943812275
+      },
+      {
+        "path": "checkpoints/reconstructions/seed_202/training_log.json",
+        "family": "paper-derived (legacy)",
+        "seed": 202,
+        "eff_batch": 256,
+        "epochs_logged": 41,
+        "best_epoch": 26,
+        "best_dev_nll": 2.4227266111512114
+      },
+      {
+        "path": "checkpoints/config_faithful/seed_303/training_log.json",
+        "family": "config-faithful",
+        "seed": 303,
+        "eff_batch": 256,
+        "epochs_logged": 39,
+        "best_epoch": 24,
+        "best_dev_nll": 2.1174704815991174
+      },
+      {
+        "path": "checkpoints/config_faithful/seed_404/training_log.json",
+        "family": "config-faithful",
+        "seed": 404,
+        "eff_batch": 256,
+        "epochs_logged": 35,
+        "best_epoch": 20,
+        "best_dev_nll": 2.094741896774238
+      },
+      {
+        "path": "checkpoints/config_faithful/seed_101/training_log.json",
+        "family": "config-faithful",
+        "seed": 101,
+        "eff_batch": 256,
+        "epochs_logged": 53,
+        "best_epoch": 38,
+        "best_dev_nll": 2.108842715514182
+      },
+      {
+        "path": "checkpoints/config_faithful/seed_202/training_log.json",
+        "family": "config-faithful",
+        "seed": 202,
+        "eff_batch": 256,
+        "epochs_logged": 51,
+        "best_epoch": 36,
+        "best_dev_nll": 2.108995229460145
+      },
+      {
+        "path": "checkpoints/step_faithful/seed_505/training_log.json",
+        "family": "step-faithful",
+        "seed": 505,
+        "eff_batch": 256,
+        "epochs_logged": 48,
+        "best_epoch": 33,
+        "best_dev_nll": 2.098856687666129
+      },
+      {
+        "path": "checkpoints/step_faithful/seed_606/training_log.json",
+        "family": "step-faithful",
+        "seed": 606,
+        "eff_batch": 256,
+        "epochs_logged": 46,
+        "best_epoch": 31,
+        "best_dev_nll": 2.114613329961046
+      },
+      {
+        "path": "checkpoints/confirmation/seed_1607/training_log.json",
+        "family": "confirmation",
+        "seed": 1607,
+        "eff_batch": 256,
+        "epochs_logged": 41,
+        "best_epoch": 26,
+        "best_dev_nll": 2.0985251259647315
+      },
+      {
+        "path": "checkpoints/confirmation/seed_1506/training_log.json",
+        "family": "confirmation",
+        "seed": 1506,
+        "eff_batch": 256,
+        "epochs_logged": 42,
+        "best_epoch": 27,
+        "best_dev_nll": 2.1081783751054943
+      },
+      {
+        "path": "checkpoints/long_schedule/seed_202/training_log.json",
+        "family": "long-schedule",
+        "seed": 202,
+        "eff_batch": 256,
+        "epochs_logged": 51,
+        "best_epoch": 36,
+        "best_dev_nll": 2.108995229460145
+      },
+      {
+        "path": "checkpoints/rescue/seed_202_wd0/training_log.json",
+        "family": "rescue",
+        "seed": 202,
+        "eff_batch": 256,
+        "epochs_logged": 51,
+        "best_epoch": 36,
+        "best_dev_nll": 2.1088827950613838
+      },
+      {
+        "path": "checkpoints/ladder/frac_05/training_log.json",
+        "family": "ladder",
+        "seed": 101,
+        "eff_batch": 2048,
+        "epochs_logged": 142,
+        "best_epoch": 127,
+        "best_dev_nll": 2.390424902664177
+      },
+      {
+        "path": "checkpoints/ladder/frac_075/training_log.json",
+        "family": "ladder",
+        "seed": 101,
+        "eff_batch": 2048,
+        "epochs_logged": 97,
+        "best_epoch": 82,
+        "best_dev_nll": 2.273651776994978
+      },
+      {
+        "path": "checkpoints/ladder/frac_0125/training_log.json",
+        "family": "ladder",
+        "seed": 101,
+        "eff_batch": 2048,
+        "epochs_logged": 22,
+        "best_epoch": 7,
+        "best_dev_nll": 6.312707374722954
+      },
+      {
+        "path": "checkpoints/ladder/frac_025/training_log.json",
+        "family": "ladder",
+        "seed": 101,
+        "eff_batch": 2048,
+        "epochs_logged": 19,
+        "best_epoch": 4,
+        "best_dev_nll": 6.312827353017731
+      },
+      {
+        "path": "checkpoints/distillation/alpha_1.0_seed_303/training_log.json",
+        "family": "distillation",
+        "seed": 303,
+        "eff_batch": 256,
+        "epochs_logged": 32,
+        "best_epoch": 17,
+        "best_dev_nll": 10.014989255321622
+      },
+      {
+        "path": "checkpoints/distillation/alpha_1.0_seed_101/training_log.json",
+        "family": "distillation",
+        "seed": 101,
+        "eff_batch": 256,
+        "epochs_logged": 28,
+        "best_epoch": 13,
+        "best_dev_nll": 9.854774538883158
+      },
+      {
+        "path": "checkpoints/distillation/alpha_0.75_seed_303/training_log.json",
+        "family": "distillation",
+        "seed": 303,
+        "eff_batch": 256,
+        "epochs_logged": 176,
+        "best_epoch": 161,
+        "best_dev_nll": 3.205531163139284
+      },
+      {
+        "path": "checkpoints/distillation/alpha_0.0_seed_202/training_log.json",
+        "family": "distillation",
+        "seed": 202,
+        "eff_batch": 256,
+        "epochs_logged": 45,
+        "best_epoch": 30,
+        "best_dev_nll": 2.9437841085936944
+      },
+      {
+        "path": "checkpoints/distillation/alpha_0.75_seed_101/training_log.json",
+        "family": "distillation",
+        "seed": 101,
+        "eff_batch": 256,
+        "epochs_logged": 122,
+        "best_epoch": 107,
+        "best_dev_nll": 3.2321458632469313
+      },
+      {
+        "path": "checkpoints/distillation/alpha_0.25_seed_202/training_log.json",
+        "family": "distillation",
+        "seed": 202,
+        "eff_batch": 256,
+        "epochs_logged": 51,
+        "best_epoch": 36,
+        "best_dev_nll": 2.9337983911835104
+      },
+      {
+        "path": "checkpoints/distillation/alpha_0.25_seed_101/training_log.json",
+        "family": "distillation",
+        "seed": 101,
+        "eff_batch": 256,
+        "epochs_logged": 48,
+        "best_epoch": 33,
+        "best_dev_nll": 2.943845078883334
+      },
+      {
+        "path": "checkpoints/distillation/alpha_0.0_seed_101/training_log.json",
+        "family": "distillation",
+        "seed": 101,
+        "eff_batch": 256,
+        "epochs_logged": 38,
+        "best_epoch": 23,
+        "best_dev_nll": 2.9070645030030993
+      },
+      {
+        "path": "checkpoints/distillation/alpha_0.0_seed_303/training_log.json",
+        "family": "distillation",
+        "seed": 303,
+        "eff_batch": 256,
+        "epochs_logged": 44,
+        "best_epoch": 29,
+        "best_dev_nll": 2.9158126573750467
+      },
+      {
+        "path": "checkpoints/distillation/alpha_0.5_seed_101/training_log.json",
+        "family": "distillation",
+        "seed": 101,
+        "eff_batch": 256,
+        "epochs_logged": 81,
+        "best_epoch": 66,
+        "best_dev_nll": 2.9966989846680243
+      },
+      {
+        "path": "checkpoints/distillation/alpha_0.5_seed_303/training_log.json",
+        "family": "distillation",
+        "seed": 303,
+        "eff_batch": 256,
+        "epochs_logged": 69,
+        "best_epoch": 54,
+        "best_dev_nll": 3.0208235572143574
+      },
+      {
+        "path": "checkpoints/distillation/alpha_0.75_seed_202/training_log.json",
+        "family": "distillation",
+        "seed": 202,
+        "eff_batch": 256,
+        "epochs_logged": 192,
+        "best_epoch": 177,
+        "best_dev_nll": 3.2164505327053647
+      },
+      {
+        "path": "checkpoints/distillation/alpha_0.25_seed_303/training_log.json",
+        "family": "distillation",
+        "seed": 303,
+        "eff_batch": 256,
+        "epochs_logged": 46,
+        "best_epoch": 31,
+        "best_dev_nll": 2.941360543904974
+      },
+      {
+        "path": "checkpoints/distillation/alpha_1.0_seed_202/training_log.json",
+        "family": "distillation",
+        "seed": 202,
+        "eff_batch": 256,
+        "epochs_logged": 21,
+        "best_epoch": 6,
+        "best_dev_nll": 9.669659701457219
+      },
+      {
+        "path": "checkpoints/distillation/alpha_0.5_seed_202/training_log.json",
+        "family": "distillation",
+        "seed": 202,
+        "eff_batch": 256,
+        "epochs_logged": 68,
+        "best_epoch": 53,
+        "best_dev_nll": 3.0176180482366797
+      }
+    ]
+  }
+}

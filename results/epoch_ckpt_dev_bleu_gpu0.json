@@ -1,0 +1,18 @@
+{
+ "checkpoints/config_faithful/seed_101/best.ckpt": {
+  "dev_bleu": 9.83014708421366,
+  "time_s": 8.058892726898193
+ },
+ "checkpoints/config_faithful/seed_202/best.ckpt": {
+  "dev_bleu": 8.774732881793268,
+  "time_s": 6.298000335693359
+ },
+ "checkpoints/config_faithful/seed_303/best.ckpt": {
+  "dev_bleu": 7.367036024342177,
+  "time_s": 4.912637948989868
+ },
+ "checkpoints/config_faithful/seed_404/best.ckpt": {
+  "dev_bleu": 7.927592129179093,
+  "time_s": 3.963728666305542
+ }
+}

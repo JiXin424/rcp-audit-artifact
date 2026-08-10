@@ -4,3 +4,6 @@ __pycache__/
 
 # All checkpoints are hosted externally (see scripts/download_checkpoints.sh)
 checkpoints/
+
+# Pose tensors (large; use external storage)
+*.pt

@@ -1,0 +1,246 @@
+{
+  "n_points": 30,
+  "n_with_both": 29,
+  "points": [
+    {
+      "id": "reco_seed_101",
+      "family": "reconstructions_primary",
+      "dev_nll": 2.49134280981607,
+      "gap": -0.1256125138514399,
+      "GT_bleu": 8.706389260154296,
+      "PURE_bleu": 8.580776746302856
+    },
+    {
+      "id": "reco_seed_202",
+      "family": "reconstructions_primary",
+      "dev_nll": 2.4227266111512114,
+      "gap": -0.4925092434502947,
+      "GT_bleu": 8.40878065707558,
+      "PURE_bleu": 7.916271413625285
+    },
+    {
+      "id": "reco_seed_303",
+      "family": "reconstructions_primary",
+      "dev_nll": 2.4201050158514494,
+      "gap": -0.8253902242758482,
+      "GT_bleu": 8.904513916551748,
+      "PURE_bleu": 8.0791236922759
+    },
+    {
+      "id": "reco_seed_404",
+      "family": "reconstructions_primary",
+      "dev_nll": 2.4887135973613996,
+      "gap": -0.34957603219269107,
+      "GT_bleu": 8.28962282919888,
+      "PURE_bleu": 7.940046797006189
+    },
+    {
+      "id": "reco_seed_505",
+      "family": "reconstructions_primary",
+      "dev_nll": 2.404557900249094,
+      "gap": -1.123356870086976,
+      "GT_bleu": 9.137045667442559,
+      "PURE_bleu": 8.013688797355583
+    },
+    {
+      "id": "reco_seed_606",
+      "family": "reconstructions_primary",
+      "dev_nll": 2.4206619943812275,
+      "gap": -1.0130866254597963,
+      "GT_bleu": 8.575988893753113,
+      "PURE_bleu": 7.562902268293317
+    },
+    {
+      "id": "reco_seed_707",
+      "family": "reconstructions_extension",
+      "dev_nll": 2.487657927088821,
+      "gap": -0.23888423161341343,
+      "GT_bleu": 9.354720074819555,
+      "PURE_bleu": 9.115835843206142
+    },
+    {
+      "id": "reco_seed_808",
+      "family": "reconstructions_extension",
+      "dev_nll": 2.4967396129261363,
+      "gap": -0.40022544118552617,
+      "GT_bleu": 8.553969753488646,
+      "PURE_bleu": 8.15374431230312
+    },
+    {
+      "id": "reco_seed_909",
+      "family": "reconstructions_extension",
+      "dev_nll": 2.4042509341032607,
+      "gap": -0.1850030280948154,
+      "GT_bleu": 8.801204655522962,
+      "PURE_bleu": 8.616201627428147
+    },
+    {
+      "id": "reco_seed_1001",
+      "family": "reconstructions_extension",
+      "dev_nll": 2.429050601682801,
+      "gap": -0.032466566709901556,
+      "GT_bleu": 8.616716678183284,
+      "PURE_bleu": 8.584250111473382
+    },
+    {
+      "id": "reco_seed_1102",
+      "family": "reconstructions_extension",
+      "dev_nll": 2.4758820608966974,
+      "gap": -1.108535932874025,
+      "GT_bleu": 9.750849892031013,
+      "PURE_bleu": 8.642313959156988
+    },
+    {
+      "id": "reco_seed_1203",
+      "family": "reconstructions_extension",
+      "dev_nll": 2.501899859791847,
+      "gap": -0.6928933914883775,
+      "GT_bleu": 9.34551815009472,
+      "PURE_bleu": 8.652624758606343
+    },
+    {
+      "id": "reco_seed_1304",
+      "family": "reconstructions_extension",
+      "dev_nll": 2.485549305749901,
+      "gap": -1.1081207155301547,
+      "GT_bleu": 8.894436714935846,
+      "PURE_bleu": 7.786315999405692
+    },
+    {
+      "id": "reco_seed_1405",
+      "family": "reconstructions_extension",
+      "dev_nll": 2.424499987616055,
+      "gap": -1.442616900062701,
+      "GT_bleu": 8.678048715066703,
+      "PURE_bleu": 7.235431815004002
+    },
+    {
+      "id": "distill_alpha_0.0_seed_101",
+      "family": "distillation",
+      "dev_nll": 2.9070645030030993,
+      "gap": -0.9478787262541744,
+      "GT_bleu": 9.316009827135542,
+      "PURE_bleu": 8.368131100881367
+    },
+    {
+      "id": "distill_alpha_0.0_seed_202",
+      "family": "distillation",
+      "dev_nll": 2.9437841085936944,
+      "gap": -1.2680573710032093,
+      "GT_bleu": 9.570671455983403,
+      "PURE_bleu": 8.302614084980194
+    },
+    {
+      "id": "distill_alpha_0.0_seed_303",
+      "family": "distillation",
+      "dev_nll": 2.9158126573750467,
+      "gap": -0.8273380306322373,
+      "GT_bleu": 9.318646734731518,
+      "PURE_bleu": 8.49130870409928
+    },
+    {
+      "id": "distill_alpha_0.25_seed_101",
+      "family": "distillation",
+      "dev_nll": 2.943845078883334,
+      "gap": -0.8303578560354046,
+      "GT_bleu": 8.743393851063603,
+      "PURE_bleu": 7.913035995028198
+    },
+    {
+      "id": "distill_alpha_0.25_seed_202",
+      "family": "distillation",
+      "dev_nll": 2.9337983911835104,
+      "gap": -1.2434484863465034,
+      "GT_bleu": 9.146286037696601,
+      "PURE_bleu": 7.902837551350098
+    },
+    {
+      "id": "distill_alpha_0.25_seed_303",
+      "family": "distillation",
+      "dev_nll": 2.941360543904974,
+      "gap": -0.6528492706765174,
+      "GT_bleu": 8.846776825084408,
+      "PURE_bleu": 8.19392755440789
+    },
+    {
+      "id": "distill_alpha_0.5_seed_101",
+      "family": "distillation",
+      "dev_nll": 2.9966989846680243,
+      "gap": -0.692574870753548,
+      "GT_bleu": 8.908129197874372,
+      "PURE_bleu": 8.215554327120824
+    },
+    {
+      "id": "distill_alpha_0.5_seed_202",
+      "family": "distillation",
+      "dev_nll": 3.0176180482366797,
+      "gap": -1.2764754247018928,
+      "GT_bleu": 9.323484078697676,
+      "PURE_bleu": 8.047008653995784
+    },
+    {
+      "id": "distill_alpha_0.5_seed_303",
+      "family": "distillation",
+      "dev_nll": 3.0208235572143574,
+      "gap": -0.2986819797347362,
+      "GT_bleu": 8.49219017837023,
+      "PURE_bleu": 8.193508198635493
+    },
+    {
+      "id": "distill_alpha_0.75_seed_101",
+      "family": "distillation",
+      "dev_nll": 3.2321458632469313,
+      "gap": -0.07599321067590825,
+      "GT_bleu": 6.695372721153688,
+      "PURE_bleu": 6.6193795104777795
+    },
+    {
+      "id": "distill_alpha_0.75_seed_202",
+      "family": "distillation",
+      "dev_nll": 3.2164505327053647,
+      "gap": -0.2656654638631535,
+      "GT_bleu": 7.131355989567963,
+      "PURE_bleu": 6.865690525704809
+    },
+    {
+      "id": "distill_alpha_0.75_seed_303",
+      "family": "distillation",
+      "dev_nll": 3.205531163139284,
+      "gap": -0.5221136688952779,
+      "GT_bleu": 7.908892430253328,
+      "PURE_bleu": 7.38677876135805
+    },
+    {
+      "id": "distill_alpha_1.0_seed_101",
+      "family": "distillation",
+      "dev_nll": 9.854774538883158,
+      "gap": 0.0,
+      "GT_bleu": 0.007551982001362107,
+      "PURE_bleu": 0.007551982001362107
+    },
+    {
+      "id": "distill_alpha_1.0_seed_202",
+      "family": "distillation",
+      "dev_nll": 9.669659701457219,
+      "gap": -0.0007573215547646431,
+      "GT_bleu": 0.005508759818986952,
+      "PURE_bleu": 0.004751438264222309
+    },
+    {
+      "id": "distill_alpha_1.0_seed_303",
+      "family": "distillation",
+      "dev_nll": 10.014989255321622,
+      "gap": 0.0,
+      "GT_bleu": 0.007551982001362107,
+      "PURE_bleu": 0.007551982001362107
+    },
+    {
+      "id": "released_original",
+      "family": "released",
+      "dev_nll": 3.0595668324495393,
+      "gap": 9.879274940956389,
+      "GT_bleu": 12.238342736848768,
+      "PURE_bleu": 22.117617677805157
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+ "n": 100,
+ "epochs": 300,
+ "seed": 42,
+ "train_nll_best": null,
+ "free_decode_bleu": 100.0,
+ "verdict": "PASS"
+}

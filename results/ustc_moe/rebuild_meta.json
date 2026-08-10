@@ -1,0 +1,5999 @@
+[
+ {
+  "ai": 0,
+  "key": "25October_2010_Monday_tagesschau-17",
+  "branch": "retrieval",
+  "target_frames": 50,
+  "hyp_gloss": [
+   "MORGEN",
+   "MEISTENS",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 1,
+  "key": "25October_2010_Monday_tagesschau-24",
+  "branch": "retrieval",
+  "target_frames": 43,
+  "hyp_gloss": [
+   "SAMSTAG",
+   "REGION",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 2,
+  "key": "15December_2010_Wednesday_tagesschau-37",
+  "branch": "retrieval",
+  "target_frames": 65,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 3,
+  "key": "10March_2011_Thursday_heute-58",
+  "branch": "retrieval",
+  "target_frames": 77,
+  "hyp_gloss": [
+   "REGION",
+   "WECHSELHAFT",
+   "STARK",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 4,
+  "key": "14August_2009_Friday_tagesschau-62",
+  "branch": "retrieval",
+  "target_frames": 61,
+  "hyp_gloss": [
+   "SKANDINAVIEN",
+   "HOCH",
+   "KOMMEN",
+   "EINFLUSS",
+   "WETTER"
+  ]
+ },
+ {
+  "ai": 5,
+  "key": "14August_2009_Friday_tagesschau-73",
+  "branch": "retrieval",
+  "target_frames": 51,
+  "hyp_gloss": [
+   "BISSCHEN",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 6,
+  "key": "14August_2009_Friday_tagesschau-75",
+  "branch": "retrieval",
+  "target_frames": 93,
+  "hyp_gloss": [
+   "TAG",
+   "NORDOST",
+   "SUED",
+   "VIEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 7,
+  "key": "26January_2010_Tuesday_heute-105",
+  "branch": "retrieval",
+  "target_frames": 50,
+  "hyp_gloss": [
+   "SUED",
+   "WEST",
+   "KLAR"
+  ]
+ },
+ {
+  "ai": 8,
+  "key": "26January_2010_Tuesday_heute-106",
+  "branch": "retrieval",
+  "target_frames": 36,
+  "hyp_gloss": [
+   "SONNTAG",
+   "WECHSELHAFT",
+   "KUEHL"
+  ]
+ },
+ {
+  "ai": 9,
+  "key": "01November_2010_Monday_tagesschau-133",
+  "branch": "retrieval",
+  "target_frames": 40,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 10,
+  "key": "01November_2010_Monday_tagesschau-136",
+  "branch": "retrieval",
+  "target_frames": 109,
+  "hyp_gloss": [
+   "FREITAG",
+   "SUEDOST",
+   "TEIL",
+   "STARK",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 11,
+  "key": "01November_2010_Monday_tagesschau-137",
+  "branch": "retrieval",
+  "target_frames": 68,
+  "hyp_gloss": [
+   "SONNTAG",
+   "VIEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 12,
+  "key": "08May_2010_Saturday_tagesschau-175",
+  "branch": "retrieval",
+  "target_frames": 34,
+  "hyp_gloss": [
+   "HOCH",
+   "KOMMEN",
+   "WEITER"
+  ]
+ },
+ {
+  "ai": 13,
+  "key": "08May_2010_Saturday_tagesschau-176",
+  "branch": "retrieval",
+  "target_frames": 75,
+  "hyp_gloss": [
+   "SPAETER",
+   "KOMMEN",
+   "GEWITTER",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 14,
+  "key": "24November_2011_Thursday_heute-224",
+  "branch": "retrieval",
+  "target_frames": 46,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "KLAR"
+  ]
+ },
+ {
+  "ai": 15,
+  "key": "21August_2011_Sunday_tagesschau-263",
+  "branch": "retrieval",
+  "target_frames": 73,
+  "hyp_gloss": [
+   "REGION",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 16,
+  "key": "22November_2010_Monday_heute-283",
+  "branch": "retrieval",
+  "target_frames": 90,
+  "hyp_gloss": [
+   "FREITAG",
+   "WECHSELHAFT",
+   "MEHR",
+   "KUEHL"
+  ]
+ },
+ {
+  "ai": 17,
+  "key": "14October_2010_Thursday_tagesschau-287",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "MOEGLICH",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 18,
+  "key": "14October_2010_Thursday_tagesschau-290",
+  "branch": "retrieval",
+  "target_frames": 101,
+  "hyp_gloss": [
+   "DONNERSTAG",
+   "FREITAG",
+   "VIEL",
+   "SONNE",
+   "SUED",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 19,
+  "key": "14October_2010_Thursday_tagesschau-291",
+  "branch": "retrieval",
+  "target_frames": 29,
+  "hyp_gloss": [
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 20,
+  "key": "14October_2010_Thursday_tagesschau-294",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "NORD",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 21,
+  "key": "06April_2010_Tuesday_tagesschau-306",
+  "branch": "retrieval",
+  "target_frames": 87,
+  "hyp_gloss": [
+   "KOENNEN",
+   "REGEN",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 22,
+  "key": "12May_2010_Wednesday_tagesschau-323",
+  "branch": "retrieval",
+  "target_frames": 50,
+  "hyp_gloss": [
+   "NACHT",
+   "MEHR",
+   "MILD"
+  ]
+ },
+ {
+  "ai": 23,
+  "key": "12April_2010_Monday_tagesschau-365",
+  "branch": "retrieval",
+  "target_frames": 67,
+  "hyp_gloss": [
+   "SAMSTAG",
+   "VIEL",
+   "SONNE",
+   "KUESTE",
+   "BISSCHEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 24,
+  "key": "12July_2010_Monday_tagesschau-373",
+  "branch": "retrieval",
+  "target_frames": 65,
+  "hyp_gloss": [
+   "WIND",
+   "IX",
+   "STURM"
+  ]
+ },
+ {
+  "ai": 25,
+  "key": "12July_2010_Monday_tagesschau-374",
+  "branch": "retrieval",
+  "target_frames": 111,
+  "hyp_gloss": [
+   "SUEDOST",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 26,
+  "key": "17February_2011_Thursday_heute-387",
+  "branch": "retrieval",
+  "target_frames": 93,
+  "hyp_gloss": [
+   "DEUTSCH",
+   "LAND",
+   "HOCH",
+   "MORGEN",
+   "EINFLUSS",
+   "WETTER"
+  ]
+ },
+ {
+  "ai": 27,
+  "key": "17April_2010_Saturday_tagesschau-399",
+  "branch": "retrieval",
+  "target_frames": 59,
+  "hyp_gloss": [
+   "SONNTAG",
+   "NORDOST",
+   "VIEL",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 28,
+  "key": "17April_2010_Saturday_tagesschau-406",
+  "branch": "retrieval",
+  "target_frames": 51,
+  "hyp_gloss": [
+   "NORDWEST",
+   "WIND"
+  ]
+ },
+ {
+  "ai": 29,
+  "key": "01October_2009_Thursday_tagesschau-420",
+  "branch": "retrieval",
+  "target_frames": 14,
+  "hyp_gloss": [
+   "WEITER",
+   "WECHSELHAFT"
+  ]
+ },
+ {
+  "ai": 30,
+  "key": "01October_2009_Thursday_tagesschau-421",
+  "branch": "retrieval",
+  "target_frames": 56,
+  "hyp_gloss": [
+   "ZWISCHEN",
+   "OFT",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 31,
+  "key": "04May_2010_Tuesday_heute-460",
+  "branch": "retrieval",
+  "target_frames": 20,
+  "hyp_gloss": [
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 32,
+  "key": "30January_2013_Wednesday_tagesschau-476",
+  "branch": "retrieval",
+  "target_frames": 75,
+  "hyp_gloss": [
+   "AB",
+   "MITTWOCH",
+   "WIEDER",
+   "FRISCH"
+  ]
+ },
+ {
+  "ai": 33,
+  "key": "07February_2010_Sunday_tagesschau-499",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "FREITAG",
+   "MEHR",
+   "KUEHL"
+  ]
+ },
+ {
+  "ai": 34,
+  "key": "20October_2011_Thursday_tagesschau-506",
+  "branch": "retrieval",
+  "target_frames": 89,
+  "hyp_gloss": [
+   "WETTER",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 35,
+  "key": "20October_2011_Thursday_tagesschau-513",
+  "branch": "retrieval",
+  "target_frames": 38,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "WEST",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 36,
+  "key": "14October_2009_Wednesday_tagesschau-516",
+  "branch": "retrieval",
+  "target_frames": 52,
+  "hyp_gloss": [
+   "ALPEN",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 37,
+  "key": "14October_2009_Wednesday_tagesschau-526",
+  "branch": "retrieval",
+  "target_frames": 17,
+  "hyp_gloss": [
+   "REGION",
+   "WOLKE",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 38,
+  "key": "12October_2009_Monday_tagesschau-548",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "IN-KOMMEND",
+   "NORDOST",
+   "BLEIBEN",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 39,
+  "key": "12October_2009_Monday_tagesschau-560",
+  "branch": "retrieval",
+  "target_frames": 55,
+  "hyp_gloss": [
+   "IN-KOMMEND",
+   "BLEIBEN",
+   "SO"
+  ]
+ },
+ {
+  "ai": 40,
+  "key": "12October_2009_Monday_tagesschau-561",
+  "branch": "retrieval",
+  "target_frames": 72,
+  "hyp_gloss": [
+   "IN-KOMMEND",
+   "MEHR",
+   "WARM"
+  ]
+ },
+ {
+  "ai": 41,
+  "key": "12October_2009_Monday_tagesschau-562",
+  "branch": "retrieval",
+  "target_frames": 85,
+  "hyp_gloss": [
+   "REGEN",
+   "BERG",
+   "UMWANDELN",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 42,
+  "key": "12October_2009_Monday_tagesschau-563",
+  "branch": "retrieval",
+  "target_frames": 98,
+  "hyp_gloss": [
+   "FREITAG",
+   "NORD",
+   "SCHAUER",
+   "SUED",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 43,
+  "key": "25February_2011_Friday_tagesschau-568",
+  "branch": "retrieval",
+  "target_frames": 67,
+  "hyp_gloss": [
+   "SUEDOST",
+   "GEWITTER",
+   "UNWETTER",
+   "GEFAHR"
+  ]
+ },
+ {
+  "ai": 44,
+  "key": "09July_2010_Friday_tagesschau-591",
+  "branch": "retrieval",
+  "target_frames": 34,
+  "hyp_gloss": [
+   "KAUM",
+   "REGEN",
+   "SONST",
+   "REGION",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 45,
+  "key": "06October_2010_Wednesday_tagesschau-638",
+  "branch": "retrieval",
+  "target_frames": 113,
+  "hyp_gloss": [
+   "SONNTAG",
+   "WEST",
+   "KOMMEN",
+   "STARK",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 46,
+  "key": "14December_2010_Tuesday_heute-650",
+  "branch": "retrieval",
+  "target_frames": 62,
+  "hyp_gloss": [
+   "IN-KOMMEND",
+   "NORDOST",
+   "WECHSELHAFT"
+  ]
+ },
+ {
+  "ai": 47,
+  "key": "14December_2010_Tuesday_heute-651",
+  "branch": "retrieval",
+  "target_frames": 87,
+  "hyp_gloss": [
+   "FREITAG",
+   "WECHSELHAFT",
+   "SONNE",
+   "WOLKE",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 48,
+  "key": "11July_2009_Saturday_tagesschau-655",
+  "branch": "retrieval",
+  "target_frames": 83,
+  "hyp_gloss": [
+   "DONNERSTAG",
+   "WEST",
+   "NORDWEST",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 49,
+  "key": "11July_2009_Saturday_tagesschau-664",
+  "branch": "retrieval",
+  "target_frames": 95,
+  "hyp_gloss": [
+   "FREITAG",
+   "SUEDOST",
+   "BISSCHEN",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 50,
+  "key": "11July_2009_Saturday_tagesschau-665",
+  "branch": "retrieval",
+  "target_frames": 116,
+  "hyp_gloss": [
+   "SONNTAG",
+   "AUCH",
+   "MEISTENS",
+   "SONNE",
+   "NORDOST",
+   "MAL",
+   "WOLKE",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 51,
+  "key": "11July_2009_Saturday_tagesschau-667",
+  "branch": "retrieval",
+  "target_frames": 68,
+  "hyp_gloss": [
+   "DANN",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 52,
+  "key": "31January_2011_Monday_tagesschau-668",
+  "branch": "retrieval",
+  "target_frames": 54,
+  "hyp_gloss": [
+   "NORDOST",
+   "REGEN",
+   "ODER",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 53,
+  "key": "04August_2011_Thursday_tagesschau-712",
+  "branch": "retrieval",
+  "target_frames": 100,
+  "hyp_gloss": [
+   "SACHSEN",
+   "REGION",
+   "SUED",
+   "REGION",
+   "MEHR",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 54,
+  "key": "04August_2011_Thursday_tagesschau-713",
+  "branch": "retrieval",
+  "target_frames": 79,
+  "hyp_gloss": [
+   "WEST",
+   "NORDWEST",
+   "BISSCHEN",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 55,
+  "key": "26June_2010_Saturday_tagesschau-724",
+  "branch": "retrieval",
+  "target_frames": 74,
+  "hyp_gloss": [
+   "SONNTAG",
+   "SUEDOST",
+   "BISSCHEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 56,
+  "key": "26June_2010_Saturday_tagesschau-725",
+  "branch": "retrieval",
+  "target_frames": 101,
+  "hyp_gloss": [
+   "SUED",
+   "SUEDWEST",
+   "SPAETER",
+   "KOENNEN",
+   "UNWETTER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 57,
+  "key": "19April_2010_Monday_heute-782",
+  "branch": "copy",
+  "target_frames": 112,
+  "hyp_gloss": [
+   "BESONDERS",
+   "NORD",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 58,
+  "key": "06October_2011_Thursday_tagesschau-823",
+  "branch": "retrieval",
+  "target_frames": 67,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "NORDOST",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 59,
+  "key": "06October_2011_Thursday_tagesschau-825",
+  "branch": "retrieval",
+  "target_frames": 79,
+  "hyp_gloss": [
+   "SUED",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 60,
+  "key": "04December_2009_Friday_tagesschau-833",
+  "branch": "retrieval",
+  "target_frames": 71,
+  "hyp_gloss": [
+   "OST",
+   "MEHR",
+   "SONNE",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 61,
+  "key": "04December_2009_Friday_tagesschau-834",
+  "branch": "retrieval",
+  "target_frames": 80,
+  "hyp_gloss": [
+   "SONST",
+   "WOLKE",
+   "REGEN",
+   "WIND",
+   "NORDOST"
+  ]
+ },
+ {
+  "ai": 62,
+  "key": "04December_2009_Friday_tagesschau-835",
+  "branch": "retrieval",
+  "target_frames": 98,
+  "hyp_gloss": [
+   "NORD",
+   "MITTE",
+   "WOLKE",
+   "SUED",
+   "STERN",
+   "KOENNEN",
+   "SEHEN"
+  ]
+ },
+ {
+  "ai": 63,
+  "key": "04December_2009_Friday_tagesschau-844",
+  "branch": "retrieval",
+  "target_frames": 92,
+  "hyp_gloss": [
+   "MONTAG",
+   "SUEDOST",
+   "NOCH",
+   "REGEN",
+   "SONST",
+   "REGION",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 64,
+  "key": "04December_2009_Friday_tagesschau-845",
+  "branch": "retrieval",
+  "target_frames": 82,
+  "hyp_gloss": [
+   "HEUTE",
+   "ABEND",
+   "MEISTENS",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 65,
+  "key": "11July_2011_Monday_tagesschau-849",
+  "branch": "retrieval",
+  "target_frames": 78,
+  "hyp_gloss": [
+   "SAMSTAG",
+   "WEST",
+   "MOEGLICH",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 66,
+  "key": "28July_2010_Wednesday_tagesschau-864",
+  "branch": "retrieval",
+  "target_frames": 72,
+  "hyp_gloss": [
+   "DONNERSTAG",
+   "SUEDOST",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 67,
+  "key": "28July_2010_Wednesday_tagesschau-871",
+  "branch": "retrieval",
+  "target_frames": 70,
+  "hyp_gloss": [
+   "MORGEN",
+   "ALPEN",
+   "VIEL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 68,
+  "key": "28July_2010_Wednesday_tagesschau-872",
+  "branch": "retrieval",
+  "target_frames": 121,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "WECHSELHAFT",
+   "WIND",
+   "MEHR",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 69,
+  "key": "23October_2010_Saturday_tagesschau-895",
+  "branch": "retrieval",
+  "target_frames": 83,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "FREUNDLICH",
+   "SUEDWEST"
+  ]
+ },
+ {
+  "ai": 70,
+  "key": "23October_2010_Saturday_tagesschau-896",
+  "branch": "retrieval",
+  "target_frames": 53,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "TROCKEN",
+   "KLAR",
+   "STERN",
+   "KOENNEN",
+   "SEHEN"
+  ]
+ },
+ {
+  "ai": 71,
+  "key": "31March_2010_Wednesday_tagesschau-999",
+  "branch": "retrieval",
+  "target_frames": 58,
+  "hyp_gloss": [
+   "SCHAUER",
+   "BERG",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 72,
+  "key": "31March_2010_Wednesday_tagesschau-1000",
+  "branch": "retrieval",
+  "target_frames": 27,
+  "hyp_gloss": [
+   "SUEDOST",
+   "MEHR",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 73,
+  "key": "31March_2010_Wednesday_tagesschau-1008",
+  "branch": "retrieval",
+  "target_frames": 81,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "NORDWEST",
+   "SCHNEE",
+   "STARK"
+  ]
+ },
+ {
+  "ai": 74,
+  "key": "29October_2009_Thursday_tagesschau-1013",
+  "branch": "retrieval",
+  "target_frames": 59,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "SUED",
+   "BISSCHEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 75,
+  "key": "29October_2009_Thursday_tagesschau-1024",
+  "branch": "retrieval",
+  "target_frames": 103,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "IX",
+   "SCHAUER",
+   "GEWITTER",
+   "SONST",
+   "REGION",
+   "KLAR"
+  ]
+ },
+ {
+  "ai": 76,
+  "key": "27April_2010_Tuesday_heute-1028",
+  "branch": "retrieval",
+  "target_frames": 73,
+  "hyp_gloss": [
+   "SAMSTAG",
+   "NUR",
+   "OST",
+   "OFT",
+   "TROCKEN",
+   "MANCHMAL",
+   "FREUNDLICH",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 77,
+  "key": "27April_2010_Tuesday_heute-1038",
+  "branch": "retrieval",
+  "target_frames": 87,
+  "hyp_gloss": [
+   "NACH",
+   "MITTAG",
+   "NORD",
+   "KOMMEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 78,
+  "key": "27April_2010_Tuesday_heute-1039",
+  "branch": "retrieval",
+  "target_frames": 65,
+  "hyp_gloss": [
+   "FREITAG",
+   "VIEL",
+   "SONNE",
+   "SOMMER",
+   "WARM"
+  ]
+ },
+ {
+  "ai": 79,
+  "key": "06September_2010_Monday_tagesschau-1147",
+  "branch": "retrieval",
+  "target_frames": 41,
+  "hyp_gloss": [
+   "FREITAG",
+   "MEHR",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 80,
+  "key": "06September_2010_Monday_tagesschau-1153",
+  "branch": "retrieval",
+  "target_frames": 38,
+  "hyp_gloss": [
+   "SAMSTAG",
+   "SONNE",
+   "BISSCHEN",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 81,
+  "key": "06November_2010_Saturday_tagesschau-1162",
+  "branch": "retrieval",
+  "target_frames": 36,
+  "hyp_gloss": [
+   "DONNERSTAG",
+   "MEHR",
+   "RUHIG"
+  ]
+ },
+ {
+  "ai": 82,
+  "key": "04June_2010_Friday_tagesschau-1173",
+  "branch": "retrieval",
+  "target_frames": 43,
+  "hyp_gloss": [
+   "OFT",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 83,
+  "key": "04June_2010_Friday_tagesschau-1176",
+  "branch": "retrieval",
+  "target_frames": 34,
+  "hyp_gloss": [
+   "WEST",
+   "KOMMEN",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 84,
+  "key": "09August_2009_Sunday_tagesschau-1186",
+  "branch": "retrieval",
+  "target_frames": 34,
+  "hyp_gloss": [
+   "NORDOST",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 85,
+  "key": "05July_2010_Monday_tagesschau-1202",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "TEIL",
+   "REGEN",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 86,
+  "key": "05July_2010_Monday_tagesschau-1205",
+  "branch": "retrieval",
+  "target_frames": 111,
+  "hyp_gloss": [
+   "NACH",
+   "MITTAG",
+   "WEST",
+   "SUEDWEST",
+   "NEU",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 87,
+  "key": "05October_2010_Tuesday_heute-1218",
+  "branch": "retrieval",
+  "target_frames": 68,
+  "hyp_gloss": [
+   "WIND",
+   "MEHR",
+   "MILD"
+  ]
+ },
+ {
+  "ai": 88,
+  "key": "27May_2010_Thursday_heute-1236",
+  "branch": "retrieval",
+  "target_frames": 38,
+  "hyp_gloss": [
+   "NORD",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 89,
+  "key": "02August_2010_Monday_heute-1243",
+  "branch": "retrieval",
+  "target_frames": 71,
+  "hyp_gloss": [
+   "NORDOST",
+   "TEIL",
+   "STURM"
+  ]
+ },
+ {
+  "ai": 90,
+  "key": "20June_2011_Monday_tagesschau-1249",
+  "branch": "retrieval",
+  "target_frames": 105,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "ALPEN",
+   "SCHNEE",
+   "REST",
+   "REGION",
+   "KLAR"
+  ]
+ },
+ {
+  "ai": 91,
+  "key": "20June_2011_Monday_tagesschau-1256",
+  "branch": "retrieval",
+  "target_frames": 50,
+  "hyp_gloss": [
+   "WEST",
+   "KOMMEN",
+   "WIND"
+  ]
+ },
+ {
+  "ai": 92,
+  "key": "20June_2011_Monday_tagesschau-1257",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "SUED",
+   "UNWETTER",
+   "GEFAHR"
+  ]
+ },
+ {
+  "ai": 93,
+  "key": "12July_2011_Tuesday_heute-1283",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "NORD",
+   "MEHR",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 94,
+  "key": "02October_2010_Saturday_tagesschau-1300",
+  "branch": "retrieval",
+  "target_frames": 42,
+  "hyp_gloss": [
+   "NOCH",
+   "WETTER"
+  ]
+ },
+ {
+  "ai": 95,
+  "key": "18April_2011_Monday_tagesschau-1314",
+  "branch": "retrieval",
+  "target_frames": 87,
+  "hyp_gloss": [
+   "WOCHE",
+   "NORD",
+   "WEST",
+   "WOLKE",
+   "MAL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 96,
+  "key": "22August_2010_Sunday_tagesschau-1344",
+  "branch": "retrieval",
+  "target_frames": 46,
+  "hyp_gloss": [
+   "SONNE",
+   "WARM"
+  ]
+ },
+ {
+  "ai": 97,
+  "key": "26October_2009_Monday_tagesschau-1394",
+  "branch": "retrieval",
+  "target_frames": 50,
+  "hyp_gloss": [
+   "NORDOST",
+   "VIEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 98,
+  "key": "26October_2009_Monday_tagesschau-1402",
+  "branch": "retrieval",
+  "target_frames": 66,
+  "hyp_gloss": [
+   "BERG",
+   "GLATT"
+  ]
+ },
+ {
+  "ai": 99,
+  "key": "26October_2009_Monday_tagesschau-1403",
+  "branch": "retrieval",
+  "target_frames": 48,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "GRUEN"
+  ]
+ },
+ {
+  "ai": 100,
+  "key": "13August_2011_Saturday_tagesschau-1412",
+  "branch": "retrieval",
+  "target_frames": 42,
+  "hyp_gloss": [
+   "WEST",
+   "MEHR",
+   "MILD"
+  ]
+ },
+ {
+  "ai": 101,
+  "key": "17February_2010_Wednesday_heute-1478",
+  "branch": "retrieval",
+  "target_frames": 63,
+  "hyp_gloss": [
+   "AUCH",
+   "WOCHENENDE"
+  ]
+ },
+ {
+  "ai": 102,
+  "key": "17February_2010_Wednesday_heute-1482",
+  "branch": "retrieval",
+  "target_frames": 106,
+  "hyp_gloss": [
+   "MONTAG",
+   "REGION",
+   "SUED",
+   "MITTE",
+   "DURCHGEHEND",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 103,
+  "key": "08February_2010_Monday_heute-1497",
+  "branch": "retrieval",
+  "target_frames": 56,
+  "hyp_gloss": [
+   "NORD",
+   "MEISTENS",
+   "KLAR"
+  ]
+ },
+ {
+  "ai": 104,
+  "key": "08February_2010_Monday_heute-1498",
+  "branch": "retrieval",
+  "target_frames": 103,
+  "hyp_gloss": [
+   "NEBEL",
+   "VERSCHWINDEN",
+   "WEST",
+   "SUED",
+   "OFT",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 105,
+  "key": "08February_2010_Monday_heute-1501",
+  "branch": "retrieval",
+  "target_frames": 81,
+  "hyp_gloss": [
+   "WEST",
+   "WOLKE",
+   "KOMMEN"
+  ]
+ },
+ {
+  "ai": 106,
+  "key": "07April_2010_Wednesday_heute-1619",
+  "branch": "retrieval",
+  "target_frames": 108,
+  "hyp_gloss": [
+   "IN-KOMMEND",
+   "TEIL",
+   "STURM",
+   "WECHSELHAFT"
+  ]
+ },
+ {
+  "ai": 107,
+  "key": "07April_2010_Wednesday_heute-1626",
+  "branch": "retrieval",
+  "target_frames": 106,
+  "hyp_gloss": [
+   "VORHER",
+   "ALPEN",
+   "NACHT",
+   "TEIL",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 108,
+  "key": "07April_2010_Wednesday_heute-1630",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "OST",
+   "WIND",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 109,
+  "key": "18July_2009_Saturday_tagesschau-1634",
+  "branch": "retrieval",
+  "target_frames": 50,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "SUED",
+   "WEST"
+  ]
+ },
+ {
+  "ai": 110,
+  "key": "18July_2009_Saturday_tagesschau-1640",
+  "branch": "retrieval",
+  "target_frames": 42,
+  "hyp_gloss": [
+   "SUED",
+   "AUCH",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 111,
+  "key": "13October_2009_Tuesday_tagesschau-1657",
+  "branch": "copy",
+  "target_frames": 34,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "VIEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 112,
+  "key": "13October_2009_Tuesday_tagesschau-1658",
+  "branch": "retrieval",
+  "target_frames": 60,
+  "hyp_gloss": [
+   "SUEDOST",
+   "BISSCHEN",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 113,
+  "key": "13October_2009_Tuesday_tagesschau-1659",
+  "branch": "retrieval",
+  "target_frames": 113,
+  "hyp_gloss": [
+   "REGION",
+   "SCHNEE",
+   "REGEN",
+   "GLATT",
+   "GEFAHR"
+  ]
+ },
+ {
+  "ai": 114,
+  "key": "03July_2011_Sunday_tagesschau-1665",
+  "branch": "retrieval",
+  "target_frames": 59,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 115,
+  "key": "03July_2011_Sunday_tagesschau-1672",
+  "branch": "retrieval",
+  "target_frames": 86,
+  "hyp_gloss": [
+   "ALPEN",
+   "NORDWEST",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 116,
+  "key": "12January_2011_Wednesday_tagesschau-1727",
+  "branch": "retrieval",
+  "target_frames": 110,
+  "hyp_gloss": [
+   "TAG",
+   "NORD",
+   "NORDWEST",
+   "BISSCHEN",
+   "LEICHT",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 117,
+  "key": "09March_2011_Wednesday_heute-1741",
+  "branch": "retrieval",
+  "target_frames": 36,
+  "hyp_gloss": [
+   "DONNERSTAG",
+   "MEHR",
+   "RUHIG"
+  ]
+ },
+ {
+  "ai": 118,
+  "key": "25February_2010_Thursday_tagesschau-1761",
+  "branch": "retrieval",
+  "target_frames": 28,
+  "hyp_gloss": [
+   "REGION",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 119,
+  "key": "12August_2009_Wednesday_tagesschau-1806",
+  "branch": "retrieval",
+  "target_frames": 53,
+  "hyp_gloss": [
+   "STELLENWEISE",
+   "BISSCHEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 120,
+  "key": "05November_2010_Friday_tagesschau-1872",
+  "branch": "retrieval",
+  "target_frames": 17,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 121,
+  "key": "31May_2011_Tuesday_heute-1904",
+  "branch": "retrieval",
+  "target_frames": 45,
+  "hyp_gloss": [
+   "DANN",
+   "VERSCHWINDEN"
+  ]
+ },
+ {
+  "ai": 122,
+  "key": "28December_2011_Wednesday_tagesschau-1912",
+  "branch": "retrieval",
+  "target_frames": 71,
+  "hyp_gloss": [
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 123,
+  "key": "08December_2009_Tuesday_tagesschau-1938",
+  "branch": "retrieval",
+  "target_frames": 43,
+  "hyp_gloss": [
+   "MOEGLICH",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 124,
+  "key": "07September_2010_Tuesday_tagesschau-1945",
+  "branch": "retrieval",
+  "target_frames": 67,
+  "hyp_gloss": [
+   "NACHT",
+   "MEHR",
+   "MILD"
+  ]
+ },
+ {
+  "ai": 125,
+  "key": "07September_2010_Tuesday_tagesschau-1954",
+  "branch": "retrieval",
+  "target_frames": 56,
+  "hyp_gloss": [
+   "SCHOEN",
+   "ABEND"
+  ]
+ },
+ {
+  "ai": 126,
+  "key": "11May_2010_Tuesday_tagesschau-1969",
+  "branch": "retrieval",
+  "target_frames": 37,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "WECHSELHAFT"
+  ]
+ },
+ {
+  "ai": 127,
+  "key": "03July_2009_Friday_tagesschau-2014",
+  "branch": "retrieval",
+  "target_frames": 74,
+  "hyp_gloss": [
+   "HOCH",
+   "REGION",
+   "SUED",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 128,
+  "key": "03July_2009_Friday_tagesschau-2015",
+  "branch": "retrieval",
+  "target_frames": 96,
+  "hyp_gloss": [
+   "NACHT",
+   "NORD",
+   "REGEN",
+   "SCHNEE",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 129,
+  "key": "30April_2010_Friday_tagesschau-2025",
+  "branch": "retrieval",
+  "target_frames": 103,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "MITTWOCH",
+   "VIEL",
+   "SONNE",
+   "WENN",
+   "NEBEL",
+   "VERSCHWINDEN"
+  ]
+ },
+ {
+  "ai": 130,
+  "key": "25October_2010_Monday_heute-2049",
+  "branch": "retrieval",
+  "target_frames": 76,
+  "hyp_gloss": [
+   "REGION",
+   "WOLKE",
+   "WECHSELHAFT"
+  ]
+ },
+ {
+  "ai": 131,
+  "key": "03February_2010_Wednesday_tagesschau-2054",
+  "branch": "retrieval",
+  "target_frames": 102,
+  "hyp_gloss": [
+   "NORDWEST",
+   "SONNE",
+   "WOLKE",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 132,
+  "key": "03February_2010_Wednesday_tagesschau-2056",
+  "branch": "retrieval",
+  "target_frames": 94,
+  "hyp_gloss": [
+   "TAG",
+   "SUED",
+   "ANFANG",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 133,
+  "key": "03February_2010_Wednesday_tagesschau-2061",
+  "branch": "retrieval",
+  "target_frames": 101,
+  "hyp_gloss": [
+   "SUED",
+   "HOCH",
+   "LUFT",
+   "DRUCK",
+   "DESHALB",
+   "NEBEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 134,
+  "key": "03February_2010_Wednesday_tagesschau-2062",
+  "branch": "retrieval",
+  "target_frames": 60,
+  "hyp_gloss": [
+   "TAG",
+   "WOLKE",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 135,
+  "key": "03February_2010_Wednesday_tagesschau-2064",
+  "branch": "retrieval",
+  "target_frames": 83,
+  "hyp_gloss": [
+   "SONST",
+   "FREITAG",
+   "REGION",
+   "MEISTENS",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 136,
+  "key": "14December_2009_Monday_tagesschau-2088",
+  "branch": "retrieval",
+  "target_frames": 101,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "WEST",
+   "MITTE",
+   "BERG"
+  ]
+ },
+ {
+  "ai": 137,
+  "key": "14December_2009_Monday_tagesschau-2092",
+  "branch": "retrieval",
+  "target_frames": 93,
+  "hyp_gloss": [
+   "MORGEN",
+   "NEBEL",
+   "VERSCHWINDEN",
+   "SUED",
+   "REGION",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 138,
+  "key": "14December_2009_Monday_tagesschau-2093",
+  "branch": "retrieval",
+  "target_frames": 104,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "TEIL",
+   "STARK",
+   "REGEN",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 139,
+  "key": "18November_2011_Friday_tagesschau-2142",
+  "branch": "retrieval",
+  "target_frames": 88,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "WOLKE",
+   "REGEN",
+   "DURCHGEHEND",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 140,
+  "key": "17April_2011_Sunday_tagesschau-2152",
+  "branch": "retrieval",
+  "target_frames": 96,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "SUED",
+   "MITTWOCH",
+   "OST",
+   "AUCH"
+  ]
+ },
+ {
+  "ai": 141,
+  "key": "06August_2010_Friday_tagesschau-2178",
+  "branch": "retrieval",
+  "target_frames": 120,
+  "hyp_gloss": [
+   "SUEDOST",
+   "SCHAUER",
+   "SONST",
+   "REGION",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 142,
+  "key": "24August_2010_Tuesday_tagesschau-2196",
+  "branch": "retrieval",
+  "target_frames": 76,
+  "hyp_gloss": [
+   "MONTAG",
+   "OST",
+   "SUEDOST",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 143,
+  "key": "30December_2010_Thursday_tagesschau-2232",
+  "branch": "retrieval",
+  "target_frames": 52,
+  "hyp_gloss": [
+   "NACHT",
+   "STERN",
+   "KOENNEN",
+   "SEHEN"
+  ]
+ },
+ {
+  "ai": 144,
+  "key": "05January_2011_Wednesday_tagesschau-2255",
+  "branch": "retrieval",
+  "target_frames": 73,
+  "hyp_gloss": [
+   "MONTAG",
+   "MEHR",
+   "WIND",
+   "WENIG"
+  ]
+ },
+ {
+  "ai": 145,
+  "key": "30October_2009_Friday_tagesschau-2267",
+  "branch": "retrieval",
+  "target_frames": 137,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "OST",
+   "SUEDOST",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 146,
+  "key": "30October_2009_Friday_tagesschau-2273",
+  "branch": "retrieval",
+  "target_frames": 45,
+  "hyp_gloss": [
+   "SUED",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 147,
+  "key": "30October_2009_Friday_tagesschau-2274",
+  "branch": "retrieval",
+  "target_frames": 44,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "OST",
+   "LANG",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 148,
+  "key": "28March_2011_Monday_tagesschau-2285",
+  "branch": "retrieval",
+  "target_frames": 53,
+  "hyp_gloss": [
+   "MORGEN",
+   "VIEL",
+   "WOLKE",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 149,
+  "key": "28March_2011_Monday_tagesschau-2286",
+  "branch": "retrieval",
+  "target_frames": 21,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "MEHR",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 150,
+  "key": "28March_2011_Monday_tagesschau-2287",
+  "branch": "retrieval",
+  "target_frames": 61,
+  "hyp_gloss": [
+   "SAMSTAG",
+   "TEIL",
+   "REGEN",
+   "SCHNEE",
+   "BERG"
+  ]
+ },
+ {
+  "ai": 151,
+  "key": "13April_2010_Tuesday_tagesschau-2308",
+  "branch": "retrieval",
+  "target_frames": 52,
+  "hyp_gloss": [
+   "WETTER",
+   "BLEIBEN",
+   "SO"
+  ]
+ },
+ {
+  "ai": 152,
+  "key": "13April_2010_Tuesday_tagesschau-2314",
+  "branch": "retrieval",
+  "target_frames": 48,
+  "hyp_gloss": [
+   "ALPEN",
+   "AUCH",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 153,
+  "key": "13April_2010_Tuesday_tagesschau-2318",
+  "branch": "retrieval",
+  "target_frames": 54,
+  "hyp_gloss": [
+   "SEE",
+   "ALPEN",
+   "STURM"
+  ]
+ },
+ {
+  "ai": 154,
+  "key": "26September_2009_Saturday_tagesschau-2336",
+  "branch": "retrieval",
+  "target_frames": 33,
+  "hyp_gloss": [
+   "BISSCHEN",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 155,
+  "key": "26September_2009_Saturday_tagesschau-2339",
+  "branch": "retrieval",
+  "target_frames": 18,
+  "hyp_gloss": [
+   "SONST",
+   "BISSCHEN",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 156,
+  "key": "26September_2009_Saturday_tagesschau-2340",
+  "branch": "retrieval",
+  "target_frames": 32,
+  "hyp_gloss": [
+   "WETTER",
+   "WECHSELHAFT"
+  ]
+ },
+ {
+  "ai": 157,
+  "key": "26September_2009_Saturday_tagesschau-2341",
+  "branch": "retrieval",
+  "target_frames": 46,
+  "hyp_gloss": [
+   "SUED",
+   "LANG",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 158,
+  "key": "03February_2010_Wednesday_heute-2354",
+  "branch": "retrieval",
+  "target_frames": 93,
+  "hyp_gloss": [
+   "SUEDOST",
+   "MEHR",
+   "SONNE",
+   "NEBEL"
+  ]
+ },
+ {
+  "ai": 159,
+  "key": "03February_2010_Wednesday_heute-2355",
+  "branch": "retrieval",
+  "target_frames": 72,
+  "hyp_gloss": [
+   "IX",
+   "NACHT",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 160,
+  "key": "03February_2010_Wednesday_heute-2356",
+  "branch": "retrieval",
+  "target_frames": 41,
+  "hyp_gloss": [
+   "MONTAG",
+   "SONNE",
+   "WOLKE",
+   "WECHSELHAFT"
+  ]
+ },
+ {
+  "ai": 161,
+  "key": "03February_2010_Wednesday_heute-2360",
+  "branch": "retrieval",
+  "target_frames": 37,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "STARK",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 162,
+  "key": "03February_2010_Wednesday_heute-2361",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "SUED",
+   "MEISTENS",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 163,
+  "key": "03February_2010_Wednesday_heute-2362",
+  "branch": "copy",
+  "target_frames": 63,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "MEHR",
+   "MILD",
+   "WECHSELHAFT"
+  ]
+ },
+ {
+  "ai": 164,
+  "key": "14July_2009_Tuesday_tagesschau-2425",
+  "branch": "retrieval",
+  "target_frames": 71,
+  "hyp_gloss": [
+   "REGION",
+   "LANG",
+   "REGEN",
+   "VIEL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 165,
+  "key": "14July_2009_Tuesday_tagesschau-2427",
+  "branch": "retrieval",
+  "target_frames": 75,
+  "hyp_gloss": [
+   "NORDOST",
+   "REGEN",
+   "UMWANDELN",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 166,
+  "key": "14July_2009_Tuesday_tagesschau-2430",
+  "branch": "retrieval",
+  "target_frames": 85,
+  "hyp_gloss": [
+   "KUESTE",
+   "AUCH",
+   "REGEN",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 167,
+  "key": "14July_2009_Tuesday_tagesschau-2433",
+  "branch": "retrieval",
+  "target_frames": 112,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "GLEICH",
+   "MITTWOCH",
+   "WEITER",
+   "WIND"
+  ]
+ },
+ {
+  "ai": 168,
+  "key": "10February_2010_Wednesday_tagesschau-2514",
+  "branch": "retrieval",
+  "target_frames": 51,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "MEHR",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 169,
+  "key": "10February_2010_Wednesday_tagesschau-2515",
+  "branch": "retrieval",
+  "target_frames": 57,
+  "hyp_gloss": [
+   "IN-KOMMEND",
+   "TEIL",
+   "WOLKE",
+   "TEIL",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 170,
+  "key": "10February_2010_Wednesday_tagesschau-2523",
+  "branch": "retrieval",
+  "target_frames": 104,
+  "hyp_gloss": [
+   "IX",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 171,
+  "key": "25November_2010_Thursday_tagesschau-2527",
+  "branch": "retrieval",
+  "target_frames": 73,
+  "hyp_gloss": [
+   "AUCH",
+   "REGEN",
+   "TEIL",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 172,
+  "key": "25November_2010_Thursday_tagesschau-2528",
+  "branch": "copy",
+  "target_frames": 83,
+  "hyp_gloss": [
+   "WETTER",
+   "WIE-AUSSEHEN",
+   "MORGEN"
+  ]
+ },
+ {
+  "ai": 173,
+  "key": "12January_2010_Tuesday_heute-2543",
+  "branch": "retrieval",
+  "target_frames": 70,
+  "hyp_gloss": [
+   "SONNTAG",
+   "SUED",
+   "SCHNEE",
+   "NORD",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 174,
+  "key": "12January_2010_Tuesday_heute-2544",
+  "branch": "retrieval",
+  "target_frames": 101,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "REGION",
+   "REGEN",
+   "SPAETER",
+   "WEST",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 175,
+  "key": "22September_2010_Wednesday_heute-2624",
+  "branch": "retrieval",
+  "target_frames": 76,
+  "hyp_gloss": [
+   "SUED",
+   "NORDOST",
+   "MEISTENS",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 176,
+  "key": "22September_2010_Wednesday_heute-2625",
+  "branch": "retrieval",
+  "target_frames": 88,
+  "hyp_gloss": [
+   "IN-KOMMEND",
+   "WECHSELHAFT"
+  ]
+ },
+ {
+  "ai": 177,
+  "key": "22September_2010_Wednesday_heute-2626",
+  "branch": "copy",
+  "target_frames": 111,
+  "hyp_gloss": [
+   "TAG",
+   "SUED",
+   "OST",
+   "NORDOST",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 178,
+  "key": "03June_2010_Thursday_tagesschau-2628",
+  "branch": "retrieval",
+  "target_frames": 93,
+  "hyp_gloss": [
+   "WEST",
+   "SUEDOST",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 179,
+  "key": "03June_2010_Thursday_tagesschau-2629",
+  "branch": "retrieval",
+  "target_frames": 52,
+  "hyp_gloss": [
+   "IN-KOMMEND",
+   "WECHSELHAFT"
+  ]
+ },
+ {
+  "ai": 180,
+  "key": "03June_2010_Thursday_tagesschau-2636",
+  "branch": "retrieval",
+  "target_frames": 86,
+  "hyp_gloss": [
+   "FREITAG",
+   "LANG",
+   "SCHNEE",
+   "HERZ",
+   "BERG",
+   "SUED"
+  ]
+ },
+ {
+  "ai": 181,
+  "key": "06July_2010_Tuesday_tagesschau-2657",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "IN-KOMMEND",
+   "MEHR",
+   "MILD"
+  ]
+ },
+ {
+  "ai": 182,
+  "key": "06July_2010_Tuesday_tagesschau-2658",
+  "branch": "retrieval",
+  "target_frames": 83,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "BISSCHEN",
+   "KLAR",
+   "ABEND",
+   "NORDWEST",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 183,
+  "key": "05January_2010_Tuesday_tagesschau-2667",
+  "branch": "retrieval",
+  "target_frames": 65,
+  "hyp_gloss": [
+   "REGION",
+   "TROCKEN",
+   "SONNE",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 184,
+  "key": "05January_2010_Tuesday_tagesschau-2668",
+  "branch": "retrieval",
+  "target_frames": 107,
+  "hyp_gloss": [
+   "SONNTAG",
+   "REGION",
+   "WECHSELHAFT",
+   "MEHR",
+   "KUEHL"
+  ]
+ },
+ {
+  "ai": 185,
+  "key": "19January_2011_Wednesday_heute-2690",
+  "branch": "copy",
+  "target_frames": 70,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "WOLKE",
+   "SUED",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 186,
+  "key": "01October_2010_Friday_tagesschau-2700",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "OST",
+   "REGEN",
+   "BERG",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 187,
+  "key": "01October_2010_Friday_tagesschau-2701",
+  "branch": "retrieval",
+  "target_frames": 66,
+  "hyp_gloss": [
+   "SCHAUER",
+   "ABEND",
+   "SUED",
+   "WARM",
+   "GEWITTER",
+   "KOENNEN"
+  ]
+ },
+ {
+  "ai": 188,
+  "key": "31January_2013_Thursday_tagesschau-2708",
+  "branch": "retrieval",
+  "target_frames": 55,
+  "hyp_gloss": [
+   "SAMSTAG",
+   "WIND",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 189,
+  "key": "31January_2013_Thursday_tagesschau-2713",
+  "branch": "retrieval",
+  "target_frames": 64,
+  "hyp_gloss": [
+   "IN-KOMMEND",
+   "BLEIBEN",
+   "MILD"
+  ]
+ },
+ {
+  "ai": 190,
+  "key": "03August_2010_Tuesday_tagesschau-2780",
+  "branch": "retrieval",
+  "target_frames": 100,
+  "hyp_gloss": [
+   "NACHT",
+   "TEIL",
+   "UNWETTER",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 191,
+  "key": "26January_2010_Tuesday_tagesschau-2784",
+  "branch": "retrieval",
+  "target_frames": 82,
+  "hyp_gloss": [
+   "MORGEN",
+   "FRANKREICH",
+   "KOMMEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 192,
+  "key": "08February_2010_Monday_tagesschau-2797",
+  "branch": "retrieval",
+  "target_frames": 124,
+  "hyp_gloss": [
+   "REGEN",
+   "SUED",
+   "KOMMEN",
+   "HEUTE",
+   "NACHT",
+   "REGION",
+   "SACHSEN"
+  ]
+ },
+ {
+  "ai": 193,
+  "key": "04March_2011_Friday_tagesschau-2838",
+  "branch": "retrieval",
+  "target_frames": 118,
+  "hyp_gloss": [
+   "SAMSTAG",
+   "SUED",
+   "WOLKE",
+   "REGEN",
+   "REGION",
+   "WECHSELHAFT",
+   "MEHR",
+   "MILD"
+  ]
+ },
+ {
+  "ai": 194,
+  "key": "02October_2012_Tuesday_tagesschau-2847",
+  "branch": "retrieval",
+  "target_frames": 91,
+  "hyp_gloss": [
+   "BERG",
+   "IX",
+   "MEISTENS",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 195,
+  "key": "02July_2009_Thursday_tagesschau-2860",
+  "branch": "retrieval",
+  "target_frames": 78,
+  "hyp_gloss": [
+   "MONTAG",
+   "NORD",
+   "TRUEB",
+   "REGION",
+   "BLEIBEN"
+  ]
+ },
+ {
+  "ai": 196,
+  "key": "22July_2009_Wednesday_tagesschau-2873",
+  "branch": "retrieval",
+  "target_frames": 121,
+  "hyp_gloss": [
+   "MITTE",
+   "EUROPA",
+   "HOCH",
+   "KOMMEN",
+   "IN-KOMMEND",
+   "EINFLUSS",
+   "WETTER"
+  ]
+ },
+ {
+  "ai": 197,
+  "key": "28January_2010_Thursday_heute-2882",
+  "branch": "copy",
+  "target_frames": 82,
+  "hyp_gloss": [
+   "FREITAG",
+   "TEIL",
+   "REGEN",
+   "SCHAUER",
+   "BERG",
+   "TEIL",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 198,
+  "key": "28January_2010_Thursday_heute-2883",
+  "branch": "retrieval",
+  "target_frames": 39,
+  "hyp_gloss": [
+   "DONNERSTAG",
+   "FREUNDLICH",
+   "WETTER"
+  ]
+ },
+ {
+  "ai": 199,
+  "key": "24October_2010_Sunday_tagesschau-2908",
+  "branch": "retrieval",
+  "target_frames": 99,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "ANFANG",
+   "SONNE",
+   "WEST",
+   "SPAETER",
+   "REGEN",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 200,
+  "key": "24October_2010_Sunday_tagesschau-2909",
+  "branch": "retrieval",
+  "target_frames": 89,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "LEICHT",
+   "REGEN",
+   "WIND"
+  ]
+ },
+ {
+  "ai": 201,
+  "key": "24October_2010_Sunday_tagesschau-2910",
+  "branch": "retrieval",
+  "target_frames": 78,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "OST",
+   "DOCH",
+   "UNWETTER",
+   "GEFAHR"
+  ]
+ },
+ {
+  "ai": 202,
+  "key": "05February_2010_Friday_tagesschau-2916",
+  "branch": "retrieval",
+  "target_frames": 57,
+  "hyp_gloss": [
+   "MILD"
+  ]
+ },
+ {
+  "ai": 203,
+  "key": "05February_2010_Friday_tagesschau-2924",
+  "branch": "retrieval",
+  "target_frames": 79,
+  "hyp_gloss": [
+   "NORD",
+   "MITTE",
+   "BISSCHEN",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 204,
+  "key": "20September_2010_Monday_heute-2929",
+  "branch": "retrieval",
+  "target_frames": 41,
+  "hyp_gloss": [
+   "TAG",
+   "HEISS"
+  ]
+ },
+ {
+  "ai": 205,
+  "key": "20September_2010_Monday_heute-2930",
+  "branch": "retrieval",
+  "target_frames": 76,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "SUED",
+   "VIEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 206,
+  "key": "29September_2012_Saturday_tagesschau-2963",
+  "branch": "retrieval",
+  "target_frames": 113,
+  "hyp_gloss": [
+   "SKANDINAVIEN",
+   "TIEF",
+   "KOMMEN",
+   "NORDOST",
+   "KOMMEN"
+  ]
+ },
+ {
+  "ai": 207,
+  "key": "25January_2011_Tuesday_tagesschau-2993",
+  "branch": "retrieval",
+  "target_frames": 118,
+  "hyp_gloss": [
+   "MORGEN",
+   "OST",
+   "SUED",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 208,
+  "key": "24August_2010_Tuesday_heute-3006",
+  "branch": "copy",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "REGION",
+   "MEHR",
+   "WOLKE",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 209,
+  "key": "24August_2010_Tuesday_heute-3007",
+  "branch": "retrieval",
+  "target_frames": 66,
+  "hyp_gloss": [
+   "MORGEN",
+   "NORDOST",
+   "MEER",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 210,
+  "key": "24August_2010_Tuesday_heute-3010",
+  "branch": "retrieval",
+  "target_frames": 51,
+  "hyp_gloss": [
+   "ABEND",
+   "WEST",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 211,
+  "key": "07October_2012_Sunday_tagesschau-3032",
+  "branch": "retrieval",
+  "target_frames": 112,
+  "hyp_gloss": [
+   "BERG",
+   "SCHNEE",
+   "REGION",
+   "TROCKEN",
+   "KLAR",
+   "STERN",
+   "KOENNEN",
+   "SEHEN"
+  ]
+ },
+ {
+  "ai": 212,
+  "key": "07October_2012_Sunday_tagesschau-3033",
+  "branch": "retrieval",
+  "target_frames": 41,
+  "hyp_gloss": [
+   "SCHNEE",
+   "BIS",
+   "FLACH"
+  ]
+ },
+ {
+  "ai": 213,
+  "key": "31January_2011_Monday_heute-3053",
+  "branch": "copy",
+  "target_frames": 7,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "KLAR",
+   "STERN",
+   "KOENNEN",
+   "SEHEN"
+  ]
+ },
+ {
+  "ai": 214,
+  "key": "20April_2011_Wednesday_tagesschau-3086",
+  "branch": "retrieval",
+  "target_frames": 94,
+  "hyp_gloss": [
+   "TAG",
+   "SUED",
+   "ANFANG",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 215,
+  "key": "16November_2009_Monday_tagesschau-3105",
+  "branch": "retrieval",
+  "target_frames": 51,
+  "hyp_gloss": [
+   "ZUERST",
+   "BISSCHEN",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 216,
+  "key": "16November_2009_Monday_tagesschau-3106",
+  "branch": "retrieval",
+  "target_frames": 111,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "WOLKE",
+   "REGEN",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 217,
+  "key": "21April_2010_Wednesday_heute-3108",
+  "branch": "copy",
+  "target_frames": 67,
+  "hyp_gloss": [
+   "SUED",
+   "BLEIBEN",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 218,
+  "key": "21April_2010_Wednesday_heute-3109",
+  "branch": "retrieval",
+  "target_frames": 37,
+  "hyp_gloss": [
+   "VIEL",
+   "WOLKE",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 219,
+  "key": "24May_2010_Monday_tagesschau-3139",
+  "branch": "retrieval",
+  "target_frames": 96,
+  "hyp_gloss": [
+   "SONST",
+   "SCHAUER",
+   "GEWITTER",
+   "SUEDOST",
+   "UNWETTER",
+   "GEFAHR"
+  ]
+ },
+ {
+  "ai": 220,
+  "key": "26August_2009_Wednesday_tagesschau-3213",
+  "branch": "retrieval",
+  "target_frames": 127,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "WOLKE",
+   "TROCKEN",
+   "SUEDWEST",
+   "OFT",
+   "KLAR",
+   "STERN",
+   "KOENNEN",
+   "SEHEN",
+   "TEILWEISE",
+   "NEBEL"
+  ]
+ },
+ {
+  "ai": 221,
+  "key": "26August_2009_Wednesday_tagesschau-3226",
+  "branch": "retrieval",
+  "target_frames": 59,
+  "hyp_gloss": [
+   "IN-KOMMEND",
+   "SONNE",
+   "WARM"
+  ]
+ },
+ {
+  "ai": 222,
+  "key": "26August_2009_Wednesday_tagesschau-3227",
+  "branch": "retrieval",
+  "target_frames": 60,
+  "hyp_gloss": [
+   "MORGEN",
+   "HOCH",
+   "MITTE",
+   "EUROPA",
+   "KOMMEN"
+  ]
+ },
+ {
+  "ai": 223,
+  "key": "14August_2011_Sunday_tagesschau-3230",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "TAG",
+   "NORD",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 224,
+  "key": "14August_2011_Sunday_tagesschau-3232",
+  "branch": "retrieval",
+  "target_frames": 75,
+  "hyp_gloss": [
+   "SUED",
+   "MITTE",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 225,
+  "key": "22February_2010_Monday_tagesschau-3246",
+  "branch": "retrieval",
+  "target_frames": 44,
+  "hyp_gloss": [
+   "BERG",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 226,
+  "key": "22February_2010_Monday_tagesschau-3247",
+  "branch": "retrieval",
+  "target_frames": 64,
+  "hyp_gloss": [
+   "BLEIBEN",
+   "STURM"
+  ]
+ },
+ {
+  "ai": 227,
+  "key": "22September_2010_Wednesday_tagesschau-3258",
+  "branch": "retrieval",
+  "target_frames": 12,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "KLAR",
+   "STERN",
+   "KOENNEN",
+   "SEHEN"
+  ]
+ },
+ {
+  "ai": 228,
+  "key": "27August_2009_Thursday_tagesschau-3267",
+  "branch": "retrieval",
+  "target_frames": 95,
+  "hyp_gloss": [
+   "WARNUNG",
+   "DEUTSCH",
+   "WETTER",
+   "DIENST"
+  ]
+ },
+ {
+  "ai": 229,
+  "key": "27August_2009_Thursday_tagesschau-3268",
+  "branch": "retrieval",
+  "target_frames": 104,
+  "hyp_gloss": [
+   "NORDOST",
+   "VIEL",
+   "WOLKE",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 230,
+  "key": "27August_2009_Thursday_tagesschau-3269",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "ABEND",
+   "ALPEN"
+  ]
+ },
+ {
+  "ai": 231,
+  "key": "15March_2011_Tuesday_tagesschau-3322",
+  "branch": "retrieval",
+  "target_frames": 80,
+  "hyp_gloss": [
+   "SUEDWEST",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 232,
+  "key": "15March_2011_Tuesday_tagesschau-3325",
+  "branch": "retrieval",
+  "target_frames": 52,
+  "hyp_gloss": [
+   "NORDOST",
+   "STURM"
+  ]
+ },
+ {
+  "ai": 233,
+  "key": "15March_2011_Tuesday_tagesschau-3326",
+  "branch": "retrieval",
+  "target_frames": 29,
+  "hyp_gloss": [
+   "REGION",
+   "AUCH",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 234,
+  "key": "05May_2010_Wednesday_tagesschau-3348",
+  "branch": "retrieval",
+  "target_frames": 110,
+  "hyp_gloss": [
+   "WEST",
+   "TIEF",
+   "KOMMEN"
+  ]
+ },
+ {
+  "ai": 235,
+  "key": "05May_2010_Wednesday_tagesschau-3352",
+  "branch": "retrieval",
+  "target_frames": 14,
+  "hyp_gloss": [
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 236,
+  "key": "05May_2010_Wednesday_tagesschau-3353",
+  "branch": "retrieval",
+  "target_frames": 46,
+  "hyp_gloss": [
+   "DONNERSTAG",
+   "IX",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 237,
+  "key": "05May_2010_Wednesday_tagesschau-3359",
+  "branch": "retrieval",
+  "target_frames": 102,
+  "hyp_gloss": [
+   "NORDOST",
+   "SCHAUER",
+   "TEILWEISE",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 238,
+  "key": "05May_2010_Wednesday_tagesschau-3360",
+  "branch": "retrieval",
+  "target_frames": 100,
+  "hyp_gloss": [
+   "NORD",
+   "MEHR",
+   "FREUNDLICH",
+   "SONNE",
+   "KAUM",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 239,
+  "key": "18May_2010_Tuesday_heute-3366",
+  "branch": "retrieval",
+  "target_frames": 80,
+  "hyp_gloss": [
+   "SUEDOST",
+   "GEWITTER",
+   "REGEN",
+   "REGION",
+   "MEHR",
+   "KUEHL"
+  ]
+ },
+ {
+  "ai": 240,
+  "key": "01April_2011_Friday_tagesschau-3374",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "OST",
+   "SUEDOST",
+   "KUESTE"
+  ]
+ },
+ {
+  "ai": 241,
+  "key": "01April_2011_Friday_tagesschau-3377",
+  "branch": "retrieval",
+  "target_frames": 49,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "VIEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 242,
+  "key": "01April_2011_Friday_tagesschau-3387",
+  "branch": "retrieval",
+  "target_frames": 38,
+  "hyp_gloss": [
+   "SONST",
+   "VIEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 243,
+  "key": "01April_2011_Friday_tagesschau-3388",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "SUED",
+   "LANG",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 244,
+  "key": "17September_2010_Friday_tagesschau-3412",
+  "branch": "retrieval",
+  "target_frames": 29,
+  "hyp_gloss": [
+   "REGION",
+   "AUCH",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 245,
+  "key": "17September_2010_Friday_tagesschau-3413",
+  "branch": "retrieval",
+  "target_frames": 103,
+  "hyp_gloss": [
+   "OST",
+   "AUCH",
+   "SCHNEE",
+   "BIS",
+   "BERG"
+  ]
+ },
+ {
+  "ai": 246,
+  "key": "23September_2010_Thursday_tagesschau-3448",
+  "branch": "retrieval",
+  "target_frames": 44,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "KLAR"
+  ]
+ },
+ {
+  "ai": 247,
+  "key": "01December_2011_Thursday_tagesschau-3473",
+  "branch": "retrieval",
+  "target_frames": 40,
+  "hyp_gloss": [
+   "ABER",
+   "BLEIBEN",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 248,
+  "key": "25September_2010_Saturday_tagesschau-3489",
+  "branch": "retrieval",
+  "target_frames": 66,
+  "hyp_gloss": [
+   "SONNE",
+   "WOLKE",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 249,
+  "key": "11December_2009_Friday_tagesschau-3504",
+  "branch": "retrieval",
+  "target_frames": 132,
+  "hyp_gloss": [
+   "WOCHE",
+   "TIEF",
+   "REGEN",
+   "STURM"
+  ]
+ },
+ {
+  "ai": 250,
+  "key": "11November_2010_Thursday_tagesschau-3564",
+  "branch": "retrieval",
+  "target_frames": 100,
+  "hyp_gloss": [
+   "SONNTAG",
+   "WEST",
+   "NORDWEST",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 251,
+  "key": "11November_2010_Thursday_tagesschau-3565",
+  "branch": "retrieval",
+  "target_frames": 53,
+  "hyp_gloss": [
+   "SPAETER",
+   "VIEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 252,
+  "key": "28January_2013_Monday_tagesschau-3624",
+  "branch": "retrieval",
+  "target_frames": 96,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "SONNE",
+   "WOLKE",
+   "MEISTENS",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 253,
+  "key": "02December_2010_Thursday_tagesschau-3631",
+  "branch": "retrieval",
+  "target_frames": 101,
+  "hyp_gloss": [
+   "MORGEN",
+   "WEST",
+   "NORDWEST",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 254,
+  "key": "22April_2010_Thursday_tagesschau-3736",
+  "branch": "retrieval",
+  "target_frames": 16,
+  "hyp_gloss": [
+   "REGEN",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 255,
+  "key": "22April_2010_Thursday_tagesschau-3738",
+  "branch": "retrieval",
+  "target_frames": 54,
+  "hyp_gloss": [
+   "SUED",
+   "HOCH",
+   "NEBEL"
+  ]
+ },
+ {
+  "ai": 256,
+  "key": "05May_2011_Thursday_heute-3747",
+  "branch": "retrieval",
+  "target_frames": 51,
+  "hyp_gloss": [
+   "WEST",
+   "KOENNEN",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 257,
+  "key": "19November_2009_Thursday_tagesschau-3781",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "NACHT",
+   "NORDOST",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 258,
+  "key": "19September_2010_Sunday_tagesschau-3802",
+  "branch": "retrieval",
+  "target_frames": 30,
+  "hyp_gloss": [
+   "REGION",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 259,
+  "key": "14April_2010_Wednesday_tagesschau-3809",
+  "branch": "retrieval",
+  "target_frames": 51,
+  "hyp_gloss": [
+   "TAG",
+   "OST",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 260,
+  "key": "14February_2010_Sunday_tagesschau-3834",
+  "branch": "retrieval",
+  "target_frames": 57,
+  "hyp_gloss": [
+   "STARK",
+   "REGEN",
+   "UNWETTER"
+  ]
+ },
+ {
+  "ai": 261,
+  "key": "25June_2010_Friday_tagesschau-3877",
+  "branch": "retrieval",
+  "target_frames": 71,
+  "hyp_gloss": [
+   "TEIL",
+   "REGEN",
+   "HOCH",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 262,
+  "key": "25June_2010_Friday_tagesschau-3879",
+  "branch": "retrieval",
+  "target_frames": 116,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "VIEL",
+   "WOLKE",
+   "BISSCHEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 263,
+  "key": "25June_2010_Friday_tagesschau-3880",
+  "branch": "retrieval",
+  "target_frames": 95,
+  "hyp_gloss": [
+   "NORDWEST",
+   "NACH",
+   "MITTAG",
+   "WIEDER",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 264,
+  "key": "25June_2010_Friday_tagesschau-3881",
+  "branch": "retrieval",
+  "target_frames": 39,
+  "hyp_gloss": [
+   "FREITAG",
+   "WECHSELHAFT",
+   "MEHR",
+   "KUEHL"
+  ]
+ },
+ {
+  "ai": 265,
+  "key": "25June_2010_Friday_tagesschau-3882",
+  "branch": "retrieval",
+  "target_frames": 100,
+  "hyp_gloss": [
+   "SONNTAG",
+   "REGEN",
+   "KOMMEN"
+  ]
+ },
+ {
+  "ai": 266,
+  "key": "17June_2010_Thursday_tagesschau-3903",
+  "branch": "copy",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "NACHT",
+   "NORDWEST",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 267,
+  "key": "05June_2010_Saturday_tagesschau-3925",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "ABEND",
+   "ALPEN"
+  ]
+ },
+ {
+  "ai": 268,
+  "key": "05June_2010_Saturday_tagesschau-3926",
+  "branch": "retrieval",
+  "target_frames": 86,
+  "hyp_gloss": [
+   "NORD",
+   "MOEGLICH",
+   "SCHNEE",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 269,
+  "key": "05June_2010_Saturday_tagesschau-3932",
+  "branch": "retrieval",
+  "target_frames": 82,
+  "hyp_gloss": [
+   "MONTAG",
+   "MITTE",
+   "BERG",
+   "MOEGLICH",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 270,
+  "key": "24March_2011_Thursday_tagesschau-3937",
+  "branch": "retrieval",
+  "target_frames": 140,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "TROCKEN",
+   "SPAETER",
+   "WEST",
+   "KOMMEN",
+   "REGEN",
+   "BERG",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 271,
+  "key": "24March_2011_Thursday_tagesschau-3938",
+  "branch": "retrieval",
+  "target_frames": 9,
+  "hyp_gloss": [
+   "MEHR",
+   "KUEHL",
+   "DANN",
+   "RUHIG",
+   "WETTER"
+  ]
+ },
+ {
+  "ai": 272,
+  "key": "08April_2010_Thursday_tagesschau-3950",
+  "branch": "retrieval",
+  "target_frames": 73,
+  "hyp_gloss": [
+   "OST",
+   "ALPEN",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 273,
+  "key": "08April_2010_Thursday_tagesschau-3957",
+  "branch": "retrieval",
+  "target_frames": 90,
+  "hyp_gloss": [
+   "IX",
+   "BLEIBEN",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 274,
+  "key": "08April_2010_Thursday_tagesschau-3961",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "BERG",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 275,
+  "key": "24April_2010_Saturday_tagesschau-3967",
+  "branch": "retrieval",
+  "target_frames": 61,
+  "hyp_gloss": [
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 276,
+  "key": "24April_2010_Saturday_tagesschau-3971",
+  "branch": "retrieval",
+  "target_frames": 96,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "NORD",
+   "TROCKEN",
+   "SUED",
+   "STARK",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 277,
+  "key": "08January_2010_Friday_tagesschau-3981",
+  "branch": "retrieval",
+  "target_frames": 44,
+  "hyp_gloss": [
+   "ALPEN",
+   "NOCH",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 279,
+  "key": "04May_2011_Wednesday_heute-3995",
+  "branch": "retrieval",
+  "target_frames": 39,
+  "hyp_gloss": [
+   "SUEDOST",
+   "BISSCHEN",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 280,
+  "key": "18January_2010_Monday_tagesschau-4023",
+  "branch": "retrieval",
+  "target_frames": 67,
+  "hyp_gloss": [
+   "MITTE",
+   "BIS",
+   "OST",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 281,
+  "key": "02December_2009_Wednesday_tagesschau-4039",
+  "branch": "retrieval",
+  "target_frames": 94,
+  "hyp_gloss": [
+   "TIEF",
+   "DRUCK",
+   "KOMMEN",
+   "SUED",
+   "VIEL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 282,
+  "key": "02December_2009_Wednesday_tagesschau-4045",
+  "branch": "retrieval",
+  "target_frames": 78,
+  "hyp_gloss": [
+   "SPAETER",
+   "WEST",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 283,
+  "key": "15July_2010_Thursday_tagesschau-4056",
+  "branch": "retrieval",
+  "target_frames": 57,
+  "hyp_gloss": [
+   "NACH",
+   "MITTAG",
+   "NORD",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 284,
+  "key": "05September_2009_Saturday_tagesschau-4085",
+  "branch": "retrieval",
+  "target_frames": 62,
+  "hyp_gloss": [
+   "NORD",
+   "HEUTE",
+   "NACHT",
+   "WOLKE",
+   "SUED",
+   "HOCH",
+   "NEBEL"
+  ]
+ },
+ {
+  "ai": 285,
+  "key": "19February_2010_Friday_tagesschau-4093",
+  "branch": "retrieval",
+  "target_frames": 74,
+  "hyp_gloss": [
+   "WEST",
+   "MILD",
+   "LUFT",
+   "KOMMEN"
+  ]
+ },
+ {
+  "ai": 286,
+  "key": "21October_2011_Friday_tagesschau-4103",
+  "branch": "retrieval",
+  "target_frames": 75,
+  "hyp_gloss": [
+   "REGION",
+   "WOLKE",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 287,
+  "key": "21October_2011_Friday_tagesschau-4104",
+  "branch": "retrieval",
+  "target_frames": 60,
+  "hyp_gloss": [
+   "TAG",
+   "SONNE",
+   "WOLKE",
+   "VOR",
+   "MITTAG",
+   "BISSCHEN",
+   "NEBEL"
+  ]
+ },
+ {
+  "ai": 288,
+  "key": "07October_2010_Thursday_tagesschau-4117",
+  "branch": "retrieval",
+  "target_frames": 46,
+  "hyp_gloss": [
+   "WETTER",
+   "MORGEN",
+   "BISSCHEN",
+   "FRISCH"
+  ]
+ },
+ {
+  "ai": 289,
+  "key": "07October_2010_Thursday_tagesschau-4121",
+  "branch": "retrieval",
+  "target_frames": 85,
+  "hyp_gloss": [
+   "REGEN",
+   "BERG",
+   "UMWANDELN",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 290,
+  "key": "07October_2010_Thursday_tagesschau-4122",
+  "branch": "retrieval",
+  "target_frames": 35,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 291,
+  "key": "07October_2010_Thursday_tagesschau-4127",
+  "branch": "retrieval",
+  "target_frames": 29,
+  "hyp_gloss": [
+   "REGION",
+   "AUCH",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 292,
+  "key": "07October_2010_Thursday_tagesschau-4129",
+  "branch": "retrieval",
+  "target_frames": 55,
+  "hyp_gloss": [
+   "TAG",
+   "NORDOST",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 293,
+  "key": "07December_2010_Tuesday_tagesschau-4155",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "SCHNEE",
+   "BIS",
+   "TIEF"
+  ]
+ },
+ {
+  "ai": 294,
+  "key": "04January_2010_Monday_heute-7395",
+  "branch": "copy",
+  "target_frames": 43,
+  "hyp_gloss": [
+   "REGION",
+   "WECHSELHAFT",
+   "WIND",
+   "KUEHL"
+  ]
+ },
+ {
+  "ai": 295,
+  "key": "08December_2009_Tuesday_heute-4199",
+  "branch": "retrieval",
+  "target_frames": 56,
+  "hyp_gloss": [
+   "NACHT",
+   "MEISTENS",
+   "KLAR",
+   "HIMMEL",
+   "STERN",
+   "KOENNEN",
+   "SEHEN"
+  ]
+ },
+ {
+  "ai": 296,
+  "key": "24October_2009_Saturday_tagesschau-4286",
+  "branch": "retrieval",
+  "target_frames": 33,
+  "hyp_gloss": [
+   "SONNTAG",
+   "OFT",
+   "FREUNDLICH",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 297,
+  "key": "24October_2009_Saturday_tagesschau-4287",
+  "branch": "retrieval",
+  "target_frames": 71,
+  "hyp_gloss": [
+   "NORDWEST",
+   "VIEL",
+   "WOLKE",
+   "BISSCHEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 298,
+  "key": "24October_2009_Saturday_tagesschau-4289",
+  "branch": "retrieval",
+  "target_frames": 41,
+  "hyp_gloss": [
+   "SUED",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 299,
+  "key": "01April_2010_Thursday_tagesschau-4329",
+  "branch": "retrieval",
+  "target_frames": 72,
+  "hyp_gloss": [
+   "SONNE",
+   "BESONDERS",
+   "ALPEN"
+  ]
+ },
+ {
+  "ai": 300,
+  "key": "01April_2010_Thursday_tagesschau-4330",
+  "branch": "retrieval",
+  "target_frames": 72,
+  "hyp_gloss": [
+   "SUEDOST",
+   "WETTER",
+   "WECHSELHAFT"
+  ]
+ },
+ {
+  "ai": 301,
+  "key": "01April_2010_Thursday_tagesschau-4331",
+  "branch": "retrieval",
+  "target_frames": 80,
+  "hyp_gloss": [
+   "NACHT",
+   "OFT",
+   "KLAR",
+   "STERN",
+   "KOENNEN",
+   "SEHEN",
+   "SUEDOST",
+   "STARK",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 302,
+  "key": "01April_2010_Thursday_tagesschau-4332",
+  "branch": "retrieval",
+  "target_frames": 53,
+  "hyp_gloss": [
+   "IX",
+   "SCHAUER",
+   "GEWITTER",
+   "KOENNEN"
+  ]
+ },
+ {
+  "ai": 303,
+  "key": "23May_2010_Sunday_tagesschau-4337",
+  "branch": "retrieval",
+  "target_frames": 72,
+  "hyp_gloss": [
+   "WEST",
+   "TIEF",
+   "KOMMEN",
+   "SUED"
+  ]
+ },
+ {
+  "ai": 304,
+  "key": "11August_2009_Tuesday_tagesschau-4354",
+  "branch": "retrieval",
+  "target_frames": 40,
+  "hyp_gloss": [
+   "TAG",
+   "NORDWEST",
+   "SONNE",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 305,
+  "key": "11August_2009_Tuesday_tagesschau-4355",
+  "branch": "retrieval",
+  "target_frames": 71,
+  "hyp_gloss": [
+   "WETTER",
+   "WECHSELHAFT",
+   "SONNE",
+   "DABEI"
+  ]
+ },
+ {
+  "ai": 306,
+  "key": "11August_2009_Tuesday_tagesschau-4356",
+  "branch": "retrieval",
+  "target_frames": 113,
+  "hyp_gloss": [
+   "IN-KOMMEND",
+   "MISCHUNG",
+   "SONNE",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 307,
+  "key": "25November_2011_Friday_tagesschau-4398",
+  "branch": "retrieval",
+  "target_frames": 71,
+  "hyp_gloss": [
+   "MORGEN",
+   "NORD",
+   "WOLKE",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 308,
+  "key": "25November_2011_Friday_tagesschau-4399",
+  "branch": "retrieval",
+  "target_frames": 135,
+  "hyp_gloss": [
+   "REGION",
+   "BIS",
+   "L",
+   "REGION",
+   "WOLKE",
+   "MANCHMAL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 309,
+  "key": "12August_2010_Thursday_tagesschau-4403",
+  "branch": "retrieval",
+  "target_frames": 137,
+  "hyp_gloss": [
+   "FREITAG",
+   "TEIL",
+   "REGEN",
+   "SUED",
+   "BISSCHEN",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 310,
+  "key": "24May_2011_Tuesday_tagesschau-4468",
+  "branch": "retrieval",
+  "target_frames": 94,
+  "hyp_gloss": [
+   "TAG",
+   "SUED",
+   "ANFANG",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 311,
+  "key": "24May_2011_Tuesday_tagesschau-4477",
+  "branch": "retrieval",
+  "target_frames": 91,
+  "hyp_gloss": [
+   "UNWETTER",
+   "SCHAUER",
+   "GEWITTER",
+   "STARK",
+   "REGEN",
+   "HAGEL"
+  ]
+ },
+ {
+  "ai": 312,
+  "key": "29June_2011_Wednesday_tagesschau-4490",
+  "branch": "retrieval",
+  "target_frames": 114,
+  "hyp_gloss": [
+   "NACH",
+   "MITTAG",
+   "ABEND",
+   "WEST",
+   "STARK",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 313,
+  "key": "09February_2010_Tuesday_tagesschau-4504",
+  "branch": "retrieval",
+  "target_frames": 68,
+  "hyp_gloss": [
+   "NORD",
+   "AUCH",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 314,
+  "key": "18February_2010_Thursday_tagesschau-4531",
+  "branch": "retrieval",
+  "target_frames": 95,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "OST",
+   "MEISTENS",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 315,
+  "key": "18February_2010_Thursday_tagesschau-4532",
+  "branch": "retrieval",
+  "target_frames": 92,
+  "hyp_gloss": [
+   "NACHT",
+   "REGEN",
+   "NORDWEST"
+  ]
+ },
+ {
+  "ai": 316,
+  "key": "18February_2010_Thursday_tagesschau-4533",
+  "branch": "retrieval",
+  "target_frames": 115,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "WECHSELHAFT",
+   "SONNE",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 317,
+  "key": "28October_2009_Wednesday_tagesschau-4535",
+  "branch": "retrieval",
+  "target_frames": 75,
+  "hyp_gloss": [
+   "MORGEN",
+   "NORDWEST",
+   "WOLKE",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 318,
+  "key": "28October_2009_Wednesday_tagesschau-4537",
+  "branch": "retrieval",
+  "target_frames": 118,
+  "hyp_gloss": [
+   "SONNTAG",
+   "REGEN",
+   "SUEDWEST",
+   "REGEN",
+   "NORDOST",
+   "FREUNDLICH",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 319,
+  "key": "28October_2009_Wednesday_tagesschau-4539",
+  "branch": "retrieval",
+  "target_frames": 97,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "SONNE",
+   "SUEDOST",
+   "LANG",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 320,
+  "key": "28October_2009_Wednesday_tagesschau-4540",
+  "branch": "retrieval",
+  "target_frames": 64,
+  "hyp_gloss": [
+   "NACHT",
+   "SCHAUER",
+   "OST",
+   "SEE",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 321,
+  "key": "28October_2009_Wednesday_tagesschau-4543",
+  "branch": "retrieval",
+  "target_frames": 100,
+  "hyp_gloss": [
+   "NORD",
+   "NORDWEST",
+   "REGEN",
+   "LANG",
+   "STARK",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 322,
+  "key": "28October_2009_Wednesday_tagesschau-4544",
+  "branch": "retrieval",
+  "target_frames": 86,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "NORDWEST",
+   "BISSCHEN",
+   "WOLKE",
+   "BISSCHEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 323,
+  "key": "04April_2010_Sunday_tagesschau-4574",
+  "branch": "retrieval",
+  "target_frames": 98,
+  "hyp_gloss": [
+   "SAMSTAG",
+   "NORDWEST",
+   "SONNE",
+   "WOLKE",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 324,
+  "key": "13September_2010_Monday_tagesschau-4592",
+  "branch": "retrieval",
+  "target_frames": 82,
+  "hyp_gloss": [
+   "SUEDWEST",
+   "TIEF",
+   "MILD",
+   "LUFT",
+   "KOMMEN"
+  ]
+ },
+ {
+  "ai": 326,
+  "key": "07February_2011_Monday_heute-4658",
+  "branch": "copy",
+  "target_frames": 53,
+  "hyp_gloss": [
+   "SECHSHUNDERT",
+   "OST",
+   "SUEDOST"
+  ]
+ },
+ {
+  "ai": 327,
+  "key": "28September_2009_Monday_tagesschau-4681",
+  "branch": "copy",
+  "target_frames": 50,
+  "hyp_gloss": [
+   "BISSCHEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 328,
+  "key": "28September_2009_Monday_tagesschau-4682",
+  "branch": "retrieval",
+  "target_frames": 65,
+  "hyp_gloss": [
+   "WIND",
+   "IX",
+   "STURM"
+  ]
+ },
+ {
+  "ai": 329,
+  "key": "19March_2011_Saturday_tagesschau-4686",
+  "branch": "retrieval",
+  "target_frames": 103,
+  "hyp_gloss": [
+   "WEST",
+   "MEHR",
+   "KLAR",
+   "HIMMEL",
+   "BLEIBEN",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 330,
+  "key": "02March_2011_Wednesday_tagesschau-4702",
+  "branch": "retrieval",
+  "target_frames": 65,
+  "hyp_gloss": [
+   "WIND",
+   "IX",
+   "STURM"
+  ]
+ },
+ {
+  "ai": 331,
+  "key": "04October_2010_Monday_tagesschau-4722",
+  "branch": "retrieval",
+  "target_frames": 88,
+  "hyp_gloss": [
+   "TAG",
+   "IX",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 332,
+  "key": "04October_2010_Monday_tagesschau-4723",
+  "branch": "retrieval",
+  "target_frames": 112,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "GLEICH",
+   "MITTWOCH",
+   "WEITER",
+   "WIND"
+  ]
+ },
+ {
+  "ai": 333,
+  "key": "12December_2009_Saturday_tagesschau-4728",
+  "branch": "retrieval",
+  "target_frames": 82,
+  "hyp_gloss": [
+   "WEST",
+   "KOMMEN",
+   "GEWITTER",
+   "KUEHL"
+  ]
+ },
+ {
+  "ai": 334,
+  "key": "24February_2011_Thursday_tagesschau-4771",
+  "branch": "retrieval",
+  "target_frames": 66,
+  "hyp_gloss": [
+   "OST",
+   "SUEDOST",
+   "NACHT",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 335,
+  "key": "04December_2010_Saturday_tagesschau-4834",
+  "branch": "retrieval",
+  "target_frames": 48,
+  "hyp_gloss": [
+   "MILD",
+   "LUFT",
+   "KOMMEN"
+  ]
+ },
+ {
+  "ai": 336,
+  "key": "21January_2011_Friday_tagesschau-4889",
+  "branch": "retrieval",
+  "target_frames": 43,
+  "hyp_gloss": [
+   "MORGEN",
+   "WIEDER"
+  ]
+ },
+ {
+  "ai": 337,
+  "key": "21November_2009_Saturday_tagesschau-4907",
+  "branch": "retrieval",
+  "target_frames": 34,
+  "hyp_gloss": [
+   "NORD",
+   "NORDWEST",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 338,
+  "key": "21November_2009_Saturday_tagesschau-4908",
+  "branch": "retrieval",
+  "target_frames": 73,
+  "hyp_gloss": [
+   "MITTE",
+   "WOLKE",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 339,
+  "key": "28February_2011_Monday_tagesschau-4988",
+  "branch": "copy",
+  "target_frames": 75,
+  "hyp_gloss": [
+   "MORGEN",
+   "AUCH",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 340,
+  "key": "01June_2010_Tuesday_tagesschau-5008",
+  "branch": "retrieval",
+  "target_frames": 66,
+  "hyp_gloss": [
+   "SONNTAG",
+   "SUEDWEST",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 341,
+  "key": "01June_2010_Tuesday_tagesschau-5009",
+  "branch": "retrieval",
+  "target_frames": 80,
+  "hyp_gloss": [
+   "FREITAG",
+   "NUR",
+   "NORD",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 342,
+  "key": "29August_2009_Saturday_tagesschau-5018",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "WIND",
+   "TEIL",
+   "MILD"
+  ]
+ },
+ {
+  "ai": 343,
+  "key": "29August_2009_Saturday_tagesschau-5019",
+  "branch": "retrieval",
+  "target_frames": 71,
+  "hyp_gloss": [
+   "SONNE",
+   "HEISS",
+   "BLEIBEN"
+  ]
+ },
+ {
+  "ai": 344,
+  "key": "29August_2009_Saturday_tagesschau-5020",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "DONNERSTAG",
+   "VIEL",
+   "SONNE",
+   "WARM"
+  ]
+ },
+ {
+  "ai": 345,
+  "key": "01September_2010_Wednesday_tagesschau-5039",
+  "branch": "retrieval",
+  "target_frames": 61,
+  "hyp_gloss": [
+   "SUEDOST",
+   "KUESTE",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 346,
+  "key": "16July_2009_Thursday_tagesschau-5052",
+  "branch": "retrieval",
+  "target_frames": 73,
+  "hyp_gloss": [
+   "MORGEN",
+   "TIEF",
+   "LUFT",
+   "DRUCK",
+   "KOMMEN"
+  ]
+ },
+ {
+  "ai": 347,
+  "key": "21May_2010_Friday_tagesschau-5092",
+  "branch": "retrieval",
+  "target_frames": 16,
+  "hyp_gloss": [
+   "OST",
+   "AUCH",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 348,
+  "key": "21May_2010_Friday_tagesschau-5094",
+  "branch": "retrieval",
+  "target_frames": 51,
+  "hyp_gloss": [
+   "SUED",
+   "MEISTENS",
+   "KLAR"
+  ]
+ },
+ {
+  "ai": 349,
+  "key": "21May_2010_Friday_tagesschau-5096",
+  "branch": "retrieval",
+  "target_frames": 82,
+  "hyp_gloss": [
+   "BIS",
+   "NORD",
+   "SEE",
+   "REGEN",
+   "KOENNEN"
+  ]
+ },
+ {
+  "ai": 350,
+  "key": "21May_2010_Friday_tagesschau-5097",
+  "branch": "retrieval",
+  "target_frames": 60,
+  "hyp_gloss": [
+   "MORGEN",
+   "NORDOST",
+   "SUEDOST",
+   "MEHR",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 351,
+  "key": "17July_2009_Friday_tagesschau-5101",
+  "branch": "retrieval",
+  "target_frames": 79,
+  "hyp_gloss": [
+   "NORDOST",
+   "WOLKE",
+   "NEBEL"
+  ]
+ },
+ {
+  "ai": 352,
+  "key": "17July_2009_Friday_tagesschau-5104",
+  "branch": "retrieval",
+  "target_frames": 19,
+  "hyp_gloss": [
+   "SAMSTAG",
+   "MEHR",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 353,
+  "key": "17July_2009_Friday_tagesschau-5105",
+  "branch": "retrieval",
+  "target_frames": 79,
+  "hyp_gloss": [
+   "WOCHENENDE",
+   "WETTER",
+   "RUHIG"
+  ]
+ },
+ {
+  "ai": 354,
+  "key": "17July_2009_Friday_tagesschau-5106",
+  "branch": "copy",
+  "target_frames": 84,
+  "hyp_gloss": [
+   "TIEF",
+   "KOMMEN",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 355,
+  "key": "05April_2011_Tuesday_heute-5120",
+  "branch": "retrieval",
+  "target_frames": 54,
+  "hyp_gloss": [
+   "DEUTSCH",
+   "WETTER",
+   "DIENST",
+   "WARNUNG",
+   "DURCHGEHEND",
+   "REGEN",
+   "OST"
+  ]
+ },
+ {
+  "ai": 356,
+  "key": "27November_2011_Sunday_tagesschau-5138",
+  "branch": "retrieval",
+  "target_frames": 90,
+  "hyp_gloss": [
+   "TIEF",
+   "DESHALB",
+   "MORGEN",
+   "WECHSELHAFT"
+  ]
+ },
+ {
+  "ai": 357,
+  "key": "27November_2011_Sunday_tagesschau-5149",
+  "branch": "retrieval",
+  "target_frames": 81,
+  "hyp_gloss": [
+   "SONNTAG",
+   "WIEDER",
+   "STURM",
+   "DABEI",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 358,
+  "key": "27August_2010_Friday_tagesschau-5164",
+  "branch": "retrieval",
+  "target_frames": 70,
+  "hyp_gloss": [
+   "SAMSTAG",
+   "SONNE",
+   "WOLKE",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 359,
+  "key": "14September_2010_Tuesday_tagesschau-5220",
+  "branch": "retrieval",
+  "target_frames": 65,
+  "hyp_gloss": [
+   "NORDOST",
+   "GEWITTER",
+   "DABEI"
+  ]
+ },
+ {
+  "ai": 360,
+  "key": "14September_2010_Tuesday_tagesschau-5223",
+  "branch": "retrieval",
+  "target_frames": 46,
+  "hyp_gloss": [
+   "SCHOEN",
+   "ABEND",
+   "NOCH"
+  ]
+ },
+ {
+  "ai": 361,
+  "key": "16May_2010_Sunday_tagesschau-5226",
+  "branch": "retrieval",
+  "target_frames": 76,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "WEST",
+   "NORD"
+  ]
+ },
+ {
+  "ai": 362,
+  "key": "08September_2010_Wednesday_tagesschau-5240",
+  "branch": "retrieval",
+  "target_frames": 74,
+  "hyp_gloss": [
+   "REGEN",
+   "NEG-HABEN",
+   "BLEIBEN",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 363,
+  "key": "08September_2010_Wednesday_tagesschau-5246",
+  "branch": "retrieval",
+  "target_frames": 37,
+  "hyp_gloss": [
+   "AUCH",
+   "WOLKE",
+   "WEST"
+  ]
+ },
+ {
+  "ai": 364,
+  "key": "20July_2010_Tuesday_heute-5254",
+  "branch": "retrieval",
+  "target_frames": 63,
+  "hyp_gloss": [
+   "WEST",
+   "AUCH",
+   "WOLKE",
+   "KOMMEN"
+  ]
+ },
+ {
+  "ai": 365,
+  "key": "06September_2009_Sunday_tagesschau-5308",
+  "branch": "retrieval",
+  "target_frames": 101,
+  "hyp_gloss": [
+   "MONTAG",
+   "OST",
+   "SUEDOST",
+   "SONNE",
+   "WEST",
+   "MEHR",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 366,
+  "key": "06September_2009_Sunday_tagesschau-5309",
+  "branch": "retrieval",
+  "target_frames": 62,
+  "hyp_gloss": [
+   "NORDWEST",
+   "SUEDOST",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 367,
+  "key": "23August_2010_Monday_heute-5328",
+  "branch": "retrieval",
+  "target_frames": 38,
+  "hyp_gloss": [
+   "ABER",
+   "AUCH",
+   "FREUNDLICH",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 368,
+  "key": "23August_2010_Monday_heute-5329",
+  "branch": "retrieval",
+  "target_frames": 84,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "WEST",
+   "NORD",
+   "WIND",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 369,
+  "key": "08October_2009_Thursday_tagesschau-5345",
+  "branch": "retrieval",
+  "target_frames": 71,
+  "hyp_gloss": [
+   "FREITAG",
+   "NORD",
+   "WIND",
+   "STARK",
+   "NORD",
+   "STURM"
+  ]
+ },
+ {
+  "ai": 370,
+  "key": "08October_2009_Thursday_tagesschau-5352",
+  "branch": "retrieval",
+  "target_frames": 108,
+  "hyp_gloss": [
+   "MITTE",
+   "KLAR",
+   "VORSICHT",
+   "GLATT"
+  ]
+ },
+ {
+  "ai": 371,
+  "key": "08October_2009_Thursday_tagesschau-5353",
+  "branch": "retrieval",
+  "target_frames": 59,
+  "hyp_gloss": [
+   "SONST",
+   "SONNE",
+   "WOLKE",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 372,
+  "key": "08October_2009_Thursday_tagesschau-5357",
+  "branch": "retrieval",
+  "target_frames": 65,
+  "hyp_gloss": [
+   "SUED",
+   "GEWITTER",
+   "SONST",
+   "REGION",
+   "HEUTE",
+   "NACHT",
+   "STERN",
+   "KOENNEN",
+   "SEHEN"
+  ]
+ },
+ {
+  "ai": 373,
+  "key": "08October_2009_Thursday_tagesschau-5358",
+  "branch": "retrieval",
+  "target_frames": 101,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "MEHR",
+   "SONNE",
+   "WOLKE",
+   "MEISTENS",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 374,
+  "key": "08October_2009_Thursday_tagesschau-5359",
+  "branch": "retrieval",
+  "target_frames": 123,
+  "hyp_gloss": [
+   "FREITAG",
+   "SUED",
+   "SUEDWEST",
+   "KOENNEN",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 375,
+  "key": "01October_2012_Monday_tagesschau-5370",
+  "branch": "retrieval",
+  "target_frames": 124,
+  "hyp_gloss": [
+   "NACHT",
+   "NORDOST",
+   "TEIL",
+   "SCHNEE",
+   "REGEN",
+   "ODER",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 376,
+  "key": "08July_2010_Thursday_tagesschau-5388",
+  "branch": "retrieval",
+  "target_frames": 104,
+  "hyp_gloss": [
+   "WEST",
+   "IM-VERLAUF",
+   "KOMMEN",
+   "OST"
+  ]
+ },
+ {
+  "ai": 377,
+  "key": "08July_2010_Thursday_tagesschau-5389",
+  "branch": "retrieval",
+  "target_frames": 94,
+  "hyp_gloss": [
+   "NORD",
+   "ALPEN",
+   "MEHR",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 378,
+  "key": "21November_2011_Monday_heute-5428",
+  "branch": "retrieval",
+  "target_frames": 58,
+  "hyp_gloss": [
+   "FREITAG",
+   "KOMMEN",
+   "SUED"
+  ]
+ },
+ {
+  "ai": 379,
+  "key": "21November_2011_Monday_heute-5437",
+  "branch": "copy",
+  "target_frames": 87,
+  "hyp_gloss": [
+   "SUEDOST",
+   "SCHNEE",
+   "ODER",
+   "GEFRIEREN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 380,
+  "key": "05March_2011_Saturday_tagesschau-5442",
+  "branch": "retrieval",
+  "target_frames": 40,
+  "hyp_gloss": [
+   "DANN",
+   "MILD",
+   "LUFT",
+   "KOMMEN"
+  ]
+ },
+ {
+  "ai": 381,
+  "key": "05March_2011_Saturday_tagesschau-5443",
+  "branch": "retrieval",
+  "target_frames": 31,
+  "hyp_gloss": [
+   "ALPEN",
+   "MEHR",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 382,
+  "key": "05March_2011_Saturday_tagesschau-5447",
+  "branch": "retrieval",
+  "target_frames": 122,
+  "hyp_gloss": [
+   "NACH",
+   "MITTAG",
+   "SUEDWEST",
+   "BISSCHEN",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 383,
+  "key": "08June_2010_Tuesday_tagesschau-5521",
+  "branch": "retrieval",
+  "target_frames": 137,
+  "hyp_gloss": [
+   "NORDWEST",
+   "WOLKE",
+   "KOMMEN",
+   "NORD",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 384,
+  "key": "08June_2010_Tuesday_tagesschau-5524",
+  "branch": "retrieval",
+  "target_frames": 51,
+  "hyp_gloss": [
+   "MEISTENS",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 385,
+  "key": "08June_2010_Tuesday_tagesschau-5529",
+  "branch": "retrieval",
+  "target_frames": 53,
+  "hyp_gloss": [
+   "NORD",
+   "WOLKE",
+   "HIMMEL",
+   "MEISTENS",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 386,
+  "key": "08June_2010_Tuesday_tagesschau-5530",
+  "branch": "retrieval",
+  "target_frames": 49,
+  "hyp_gloss": [
+   "SUEDOST",
+   "BLEIBEN",
+   "SO"
+  ]
+ },
+ {
+  "ai": 387,
+  "key": "06October_2011_Thursday_heute-5534",
+  "branch": "retrieval",
+  "target_frames": 63,
+  "hyp_gloss": [
+   "SUED",
+   "REGION",
+   "NEBEL"
+  ]
+ },
+ {
+  "ai": 388,
+  "key": "06October_2011_Thursday_heute-5535",
+  "branch": "retrieval",
+  "target_frames": 37,
+  "hyp_gloss": [
+   "FREUNDLICH",
+   "SONNE",
+   "OST",
+   "SUEDOST"
+  ]
+ },
+ {
+  "ai": 389,
+  "key": "17May_2010_Monday_heute-5576",
+  "branch": "retrieval",
+  "target_frames": 30,
+  "hyp_gloss": [
+   "MEISTENS",
+   "MILD"
+  ]
+ },
+ {
+  "ai": 390,
+  "key": "17May_2010_Monday_heute-5577",
+  "branch": "copy",
+  "target_frames": 44,
+  "hyp_gloss": [
+   "FREITAG",
+   "BISSCHEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 391,
+  "key": "18November_2009_Wednesday_tagesschau-5578",
+  "branch": "retrieval",
+  "target_frames": 53,
+  "hyp_gloss": [
+   "WEST",
+   "SCHAUER",
+   "SONST",
+   "REGION",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 392,
+  "key": "07December_2010_Tuesday_heute-5633",
+  "branch": "retrieval",
+  "target_frames": 108,
+  "hyp_gloss": [
+   "BERG",
+   "SUED",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 393,
+  "key": "06January_2011_Thursday_tagesschau-5641",
+  "branch": "retrieval",
+  "target_frames": 48,
+  "hyp_gloss": [
+   "NORD",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 394,
+  "key": "15May_2010_Saturday_tagesschau-5656",
+  "branch": "retrieval",
+  "target_frames": 50,
+  "hyp_gloss": [
+   "WETTER",
+   "WIE-IMMER"
+  ]
+ },
+ {
+  "ai": 395,
+  "key": "15May_2010_Saturday_tagesschau-5659",
+  "branch": "retrieval",
+  "target_frames": 56,
+  "hyp_gloss": [
+   "SONST",
+   "WOLKE",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 396,
+  "key": "21November_2010_Sunday_tagesschau-5672",
+  "branch": "retrieval",
+  "target_frames": 35,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 397,
+  "key": "21November_2010_Sunday_tagesschau-5676",
+  "branch": "retrieval",
+  "target_frames": 46,
+  "hyp_gloss": [
+   "SUED",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 398,
+  "key": "24November_2009_Tuesday_tagesschau-5678",
+  "branch": "retrieval",
+  "target_frames": 36,
+  "hyp_gloss": [
+   "FREITAG",
+   "RUHIG",
+   "WETTER"
+  ]
+ },
+ {
+  "ai": 399,
+  "key": "24November_2009_Tuesday_tagesschau-5679",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "REGEN",
+   "NACH",
+   "MITTAG",
+   "VERSCHWINDEN"
+  ]
+ },
+ {
+  "ai": 400,
+  "key": "24November_2009_Tuesday_tagesschau-5680",
+  "branch": "retrieval",
+  "target_frames": 46,
+  "hyp_gloss": [
+   "MORGEN",
+   "BISSCHEN",
+   "SONNE",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 401,
+  "key": "24November_2009_Tuesday_tagesschau-5684",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "ABEND",
+   "ALPEN"
+  ]
+ },
+ {
+  "ai": 402,
+  "key": "24November_2009_Tuesday_tagesschau-5685",
+  "branch": "retrieval",
+  "target_frames": 30,
+  "hyp_gloss": [
+   "GEWITTER",
+   "MANCHMAL",
+   "KLAR",
+   "STERN",
+   "KOENNEN",
+   "SEHEN"
+  ]
+ },
+ {
+  "ai": 403,
+  "key": "24November_2009_Tuesday_tagesschau-5686",
+  "branch": "retrieval",
+  "target_frames": 30,
+  "hyp_gloss": [
+   "GEWITTER",
+   "MANCHMAL",
+   "KLAR",
+   "STERN",
+   "KOENNEN",
+   "SEHEN"
+  ]
+ },
+ {
+  "ai": 404,
+  "key": "24November_2009_Tuesday_tagesschau-5688",
+  "branch": "retrieval",
+  "target_frames": 53,
+  "hyp_gloss": [
+   "OST",
+   "SUEDOST",
+   "MEHR",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 405,
+  "key": "24November_2009_Tuesday_tagesschau-5689",
+  "branch": "retrieval",
+  "target_frames": 74,
+  "hyp_gloss": [
+   "SUED",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 406,
+  "key": "24November_2009_Tuesday_tagesschau-5690",
+  "branch": "retrieval",
+  "target_frames": 56,
+  "hyp_gloss": [
+   "SUED",
+   "LANG",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 407,
+  "key": "24November_2009_Tuesday_tagesschau-5691",
+  "branch": "retrieval",
+  "target_frames": 51,
+  "hyp_gloss": [
+   "NORDWEST",
+   "BISSCHEN",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 408,
+  "key": "24November_2009_Tuesday_tagesschau-5692",
+  "branch": "retrieval",
+  "target_frames": 64,
+  "hyp_gloss": [
+   "SUED",
+   "MEHR",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 409,
+  "key": "30March_2010_Tuesday_tagesschau-5699",
+  "branch": "retrieval",
+  "target_frames": 50,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "IX",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 410,
+  "key": "29August_2011_Monday_tagesschau-5710",
+  "branch": "retrieval",
+  "target_frames": 61,
+  "hyp_gloss": [
+   "MOEGLICH",
+   "STARK",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 411,
+  "key": "30November_2009_Monday_tagesschau-5750",
+  "branch": "retrieval",
+  "target_frames": 55,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "REGION",
+   "KLAR",
+   "STERN",
+   "KOENNEN",
+   "SEHEN"
+  ]
+ },
+ {
+  "ai": 412,
+  "key": "30November_2009_Monday_tagesschau-5751",
+  "branch": "retrieval",
+  "target_frames": 42,
+  "hyp_gloss": [
+   "DONNERSTAG",
+   "SONNE",
+   "WARM"
+  ]
+ },
+ {
+  "ai": 413,
+  "key": "30November_2009_Monday_tagesschau-5752",
+  "branch": "retrieval",
+  "target_frames": 33,
+  "hyp_gloss": [
+   "ALPEN"
+  ]
+ },
+ {
+  "ai": 414,
+  "key": "30November_2009_Monday_tagesschau-5753",
+  "branch": "retrieval",
+  "target_frames": 80,
+  "hyp_gloss": [
+   "SUEDWEST",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 415,
+  "key": "03October_2010_Sunday_tagesschau-5770",
+  "branch": "retrieval",
+  "target_frames": 131,
+  "hyp_gloss": [
+   "MORGEN",
+   "SUEDOST",
+   "DURCHGEHEND",
+   "REGEN",
+   "NORDWEST",
+   "SCHAUER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 416,
+  "key": "12December_2011_Monday_heute-5800",
+  "branch": "retrieval",
+  "target_frames": 101,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "OST",
+   "SUEDOST",
+   "SCHAUER",
+   "SONST",
+   "REGION",
+   "WOLKE",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 417,
+  "key": "12December_2011_Monday_heute-5804",
+  "branch": "retrieval",
+  "target_frames": 53,
+  "hyp_gloss": [
+   "MORGEN",
+   "REGEN",
+   "ODER",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 418,
+  "key": "12December_2011_Monday_heute-5805",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "BERG",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 419,
+  "key": "12December_2011_Monday_heute-5811",
+  "branch": "retrieval",
+  "target_frames": 49,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "MEISTENS",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 420,
+  "key": "25March_2011_Friday_tagesschau-5828",
+  "branch": "retrieval",
+  "target_frames": 67,
+  "hyp_gloss": [
+   "HOCH",
+   "KOMMEN",
+   "VIEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 421,
+  "key": "09November_2010_Tuesday_heute-5840",
+  "branch": "copy",
+  "target_frames": 135,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "TEIL",
+   "WOLKE",
+   "ABER",
+   "NUR",
+   "IX",
+   "BISSCHEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 422,
+  "key": "28August_2009_Friday_tagesschau-5878",
+  "branch": "retrieval",
+  "target_frames": 48,
+  "hyp_gloss": [
+   "BIS",
+   "MITTAG",
+   "VERSCHWINDEN"
+  ]
+ },
+ {
+  "ai": 423,
+  "key": "28August_2009_Friday_tagesschau-5879",
+  "branch": "retrieval",
+  "target_frames": 64,
+  "hyp_gloss": [
+   "HOCH",
+   "KOMMEN",
+   "SUEDOST",
+   "EUROPA"
+  ]
+ },
+ {
+  "ai": 424,
+  "key": "28August_2009_Friday_tagesschau-5881",
+  "branch": "retrieval",
+  "target_frames": 60,
+  "hyp_gloss": [
+   "NORD",
+   "STARK",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 425,
+  "key": "28August_2009_Friday_tagesschau-5882",
+  "branch": "retrieval",
+  "target_frames": 31,
+  "hyp_gloss": [
+   "MEHR",
+   "MILD"
+  ]
+ },
+ {
+  "ai": 426,
+  "key": "28August_2009_Friday_tagesschau-5883",
+  "branch": "retrieval",
+  "target_frames": 71,
+  "hyp_gloss": [
+   "NACHT",
+   "IX",
+   "BLEIBEN",
+   "FROST"
+  ]
+ },
+ {
+  "ai": 427,
+  "key": "28August_2009_Friday_tagesschau-5884",
+  "branch": "retrieval",
+  "target_frames": 55,
+  "hyp_gloss": [
+   "SPEZIELL",
+   "OST",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 428,
+  "key": "28August_2009_Friday_tagesschau-5886",
+  "branch": "retrieval",
+  "target_frames": 36,
+  "hyp_gloss": [
+   "MOEGLICH",
+   "UNWETTER",
+   "GEWITTER"
+  ]
+ },
+ {
+  "ai": 429,
+  "key": "09August_2010_Monday_heute-5890",
+  "branch": "retrieval",
+  "target_frames": 125,
+  "hyp_gloss": [
+   "MONTAG",
+   "REGEN",
+   "SCHNEE",
+   "SCHNEIEN",
+   "KOENNEN"
+  ]
+ },
+ {
+  "ai": 430,
+  "key": "09August_2010_Monday_heute-5891",
+  "branch": "retrieval",
+  "target_frames": 48,
+  "hyp_gloss": [
+   "NORD",
+   "HOCH",
+   "DRUCK"
+  ]
+ },
+ {
+  "ai": 431,
+  "key": "09August_2010_Monday_heute-5892",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "REGION",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 432,
+  "key": "16December_2009_Wednesday_tagesschau-5907",
+  "branch": "retrieval",
+  "target_frames": 56,
+  "hyp_gloss": [
+   "MEHR",
+   "WARM"
+  ]
+ },
+ {
+  "ai": 433,
+  "key": "16December_2009_Wednesday_tagesschau-5912",
+  "branch": "retrieval",
+  "target_frames": 45,
+  "hyp_gloss": [
+   "SUED",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 434,
+  "key": "16December_2009_Wednesday_tagesschau-5913",
+  "branch": "retrieval",
+  "target_frames": 72,
+  "hyp_gloss": [
+   "MORGEN",
+   "NORDOST",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 435,
+  "key": "16December_2009_Wednesday_tagesschau-5914",
+  "branch": "retrieval",
+  "target_frames": 37,
+  "hyp_gloss": [
+   "NACH",
+   "MITTAG",
+   "NORD",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 436,
+  "key": "04October_2010_Monday_heute-5953",
+  "branch": "retrieval",
+  "target_frames": 74,
+  "hyp_gloss": [
+   "WEST",
+   "ALPEN",
+   "BISSCHEN",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 437,
+  "key": "09June_2010_Wednesday_tagesschau-5960",
+  "branch": "retrieval",
+  "target_frames": 68,
+  "hyp_gloss": [
+   "DONNERSTAG",
+   "GLEICH",
+   "MORGEN"
+  ]
+ },
+ {
+  "ai": 438,
+  "key": "09June_2010_Wednesday_tagesschau-5961",
+  "branch": "copy",
+  "target_frames": 59,
+  "hyp_gloss": [
+   "SUED",
+   "KLAR"
+  ]
+ },
+ {
+  "ai": 439,
+  "key": "11May_2010_Tuesday_heute-5990",
+  "branch": "retrieval",
+  "target_frames": 62,
+  "hyp_gloss": [
+   "SUED",
+   "OFT",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 440,
+  "key": "11May_2010_Tuesday_heute-5994",
+  "branch": "retrieval",
+  "target_frames": 53,
+  "hyp_gloss": [
+   "DANN",
+   "MEHR",
+   "KUEHL"
+  ]
+ },
+ {
+  "ai": 441,
+  "key": "25August_2010_Wednesday_heute-6005",
+  "branch": "retrieval",
+  "target_frames": 49,
+  "hyp_gloss": [
+   "WEST",
+   "SUEDOST",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 442,
+  "key": "25August_2010_Wednesday_heute-6006",
+  "branch": "retrieval",
+  "target_frames": 40,
+  "hyp_gloss": [
+   "MITTE",
+   "OST"
+  ]
+ },
+ {
+  "ai": 443,
+  "key": "07April_2010_Wednesday_tagesschau-6024",
+  "branch": "retrieval",
+  "target_frames": 16,
+  "hyp_gloss": [
+   "AUCH",
+   "TEILWEISE"
+  ]
+ },
+ {
+  "ai": 444,
+  "key": "24May_2011_Tuesday_heute-6062",
+  "branch": "copy",
+  "target_frames": 95,
+  "hyp_gloss": [
+   "NORD",
+   "WOLKE",
+   "OFT",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 445,
+  "key": "24May_2011_Tuesday_heute-6067",
+  "branch": "retrieval",
+  "target_frames": 44,
+  "hyp_gloss": [
+   "BERG",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 446,
+  "key": "24September_2009_Thursday_heute-6079",
+  "branch": "retrieval",
+  "target_frames": 79,
+  "hyp_gloss": [
+   "MONTAG",
+   "OST",
+   "NORDOST",
+   "BISSCHEN",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 447,
+  "key": "24September_2009_Thursday_heute-6080",
+  "branch": "retrieval",
+  "target_frames": 59,
+  "hyp_gloss": [
+   "IX",
+   "STERN",
+   "KOENNEN",
+   "SEHEN"
+  ]
+ },
+ {
+  "ai": 448,
+  "key": "24September_2009_Thursday_heute-6081",
+  "branch": "retrieval",
+  "target_frames": 44,
+  "hyp_gloss": [
+   "BERG",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 449,
+  "key": "24September_2009_Thursday_heute-6082",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "MONTAG",
+   "WECHSELHAFT"
+  ]
+ },
+ {
+  "ai": 450,
+  "key": "24September_2009_Thursday_heute-6083",
+  "branch": "retrieval",
+  "target_frames": 107,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "MITTE",
+   "KUESTE",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 451,
+  "key": "24September_2009_Thursday_heute-6084",
+  "branch": "retrieval",
+  "target_frames": 75,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "MITTWOCH",
+   "AUCH",
+   "GLEICH"
+  ]
+ },
+ {
+  "ai": 452,
+  "key": "24September_2009_Thursday_heute-6090",
+  "branch": "retrieval",
+  "target_frames": 89,
+  "hyp_gloss": [
+   "VIEL",
+   "WOLKE",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 453,
+  "key": "24September_2009_Thursday_heute-6091",
+  "branch": "copy",
+  "target_frames": 88,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "WEST",
+   "SUEDWEST",
+   "BIS",
+   "MITTE",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 454,
+  "key": "18December_2010_Saturday_tagesschau-6118",
+  "branch": "retrieval",
+  "target_frames": 34,
+  "hyp_gloss": [
+   "TAG",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 455,
+  "key": "18December_2010_Saturday_tagesschau-6125",
+  "branch": "retrieval",
+  "target_frames": 74,
+  "hyp_gloss": [
+   "MORGEN",
+   "FREUNDLICH",
+   "VIEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 456,
+  "key": "18December_2010_Saturday_tagesschau-6126",
+  "branch": "retrieval",
+  "target_frames": 74,
+  "hyp_gloss": [
+   "SUED",
+   "VORSICHT",
+   "GLATT"
+  ]
+ },
+ {
+  "ai": 457,
+  "key": "07August_2009_Friday_tagesschau-6165",
+  "branch": "copy",
+  "target_frames": 59,
+  "hyp_gloss": [
+   "REGION",
+   "WECHSELHAFT",
+   "REGEN",
+   "SCHNEE",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 458,
+  "key": "21April_2010_Wednesday_tagesschau-6235",
+  "branch": "retrieval",
+  "target_frames": 43,
+  "hyp_gloss": [
+   "NORD",
+   "HEUTE",
+   "NACHT",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 459,
+  "key": "26July_2010_Monday_tagesschau-6266",
+  "branch": "retrieval",
+  "target_frames": 31,
+  "hyp_gloss": [
+   "BERG",
+   "WINTER"
+  ]
+ },
+ {
+  "ai": 460,
+  "key": "26July_2010_Monday_tagesschau-6267",
+  "branch": "retrieval",
+  "target_frames": 32,
+  "hyp_gloss": [
+   "AUCH",
+   "MITTWOCH"
+  ]
+ },
+ {
+  "ai": 461,
+  "key": "26July_2010_Monday_tagesschau-6268",
+  "branch": "retrieval",
+  "target_frames": 46,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "SUED",
+   "VIEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 462,
+  "key": "16September_2010_Thursday_tagesschau-6278",
+  "branch": "retrieval",
+  "target_frames": 83,
+  "hyp_gloss": [
+   "MORGEN",
+   "WOLKE",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 463,
+  "key": "17February_2011_Thursday_tagesschau-6310",
+  "branch": "retrieval",
+  "target_frames": 85,
+  "hyp_gloss": [
+   "MORGEN",
+   "AUCH",
+   "REGION",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 464,
+  "key": "24January_2013_Thursday_tagesschau-6322",
+  "branch": "retrieval",
+  "target_frames": 96,
+  "hyp_gloss": [
+   "TAG",
+   "IM-VERLAUF",
+   "REGEN",
+   "KOMMEN",
+   "SUED",
+   "KOMMEN"
+  ]
+ },
+ {
+  "ai": 465,
+  "key": "24July_2010_Saturday_tagesschau-6343",
+  "branch": "retrieval",
+  "target_frames": 57,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "SUEDOST",
+   "MITTWOCH",
+   "SUED"
+  ]
+ },
+ {
+  "ai": 466,
+  "key": "06June_2010_Sunday_tagesschau-6363",
+  "branch": "retrieval",
+  "target_frames": 63,
+  "hyp_gloss": [
+   "NACHT",
+   "NORD",
+   "MITTE",
+   "LEICHT",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 467,
+  "key": "10January_2011_Monday_tagesschau-6402",
+  "branch": "retrieval",
+  "target_frames": 65,
+  "hyp_gloss": [
+   "SONST",
+   "REGION",
+   "TROCKEN",
+   "SUED",
+   "VIEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 468,
+  "key": "10January_2011_Monday_tagesschau-6403",
+  "branch": "retrieval",
+  "target_frames": 93,
+  "hyp_gloss": [
+   "HEUTE",
+   "NACHT",
+   "TEIL",
+   "REGEN",
+   "SUEDWEST",
+   "SCHNEE",
+   "GLATT",
+   "GEFAHR"
+  ]
+ },
+ {
+  "ai": 469,
+  "key": "06May_2011_Friday_tagesschau-6434",
+  "branch": "retrieval",
+  "target_frames": 56,
+  "hyp_gloss": [
+   "OST",
+   "TIEF",
+   "HEUTE",
+   "NACHT",
+   "SCHNEE",
+   "SCHNEIEN"
+  ]
+ },
+ {
+  "ai": 470,
+  "key": "06May_2011_Friday_tagesschau-6435",
+  "branch": "retrieval",
+  "target_frames": 63,
+  "hyp_gloss": [
+   "SAMSTAG",
+   "VIEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 471,
+  "key": "06May_2011_Friday_tagesschau-6436",
+  "branch": "retrieval",
+  "target_frames": 105,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "NORD",
+   "WOLKE",
+   "BISSCHEN",
+   "REGEN",
+   "SONST",
+   "REGION",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 472,
+  "key": "20June_2011_Monday_heute-6510",
+  "branch": "retrieval",
+  "target_frames": 72,
+  "hyp_gloss": [
+   "TIEF",
+   "KOMMEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 473,
+  "key": "20June_2011_Monday_heute-6511",
+  "branch": "copy",
+  "target_frames": 54,
+  "hyp_gloss": [
+   "FREITAG",
+   "AUCH",
+   "SONNE",
+   "HEISS"
+  ]
+ },
+ {
+  "ai": 475,
+  "key": "20November_2009_Friday_tagesschau-6560",
+  "branch": "retrieval",
+  "target_frames": 78,
+  "hyp_gloss": [
+   "APRIL",
+   "WETTER",
+   "WECHSELHAFT",
+   "FRISCH"
+  ]
+ },
+ {
+  "ai": 476,
+  "key": "20November_2009_Friday_tagesschau-6561",
+  "branch": "retrieval",
+  "target_frames": 53,
+  "hyp_gloss": [
+   "FREITAG",
+   "SUEDWEST",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 477,
+  "key": "20November_2009_Friday_tagesschau-6562",
+  "branch": "retrieval",
+  "target_frames": 91,
+  "hyp_gloss": [
+   "DIENSTAG",
+   "VIEL",
+   "WOLKE",
+   "TEIL",
+   "REGEN",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 478,
+  "key": "20November_2009_Friday_tagesschau-6565",
+  "branch": "retrieval",
+  "target_frames": 75,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "SONNE",
+   "WOLKE",
+   "BISSCHEN",
+   "SCHAUER"
+  ]
+ },
+ {
+  "ai": 479,
+  "key": "20November_2009_Friday_tagesschau-6566",
+  "branch": "retrieval",
+  "target_frames": 69,
+  "hyp_gloss": [
+   "NACHT",
+   "SUEDOST",
+   "BAYERN",
+   "LANG",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 480,
+  "key": "20November_2009_Friday_tagesschau-6567",
+  "branch": "retrieval",
+  "target_frames": 110,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "VIEL",
+   "SONNE",
+   "OST",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 481,
+  "key": "20November_2009_Friday_tagesschau-6574",
+  "branch": "retrieval",
+  "target_frames": 143,
+  "hyp_gloss": [
+   "OST",
+   "REGEN",
+   "NORDWEST",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 482,
+  "key": "20November_2009_Friday_tagesschau-6575",
+  "branch": "retrieval",
+  "target_frames": 73,
+  "hyp_gloss": [
+   "OST",
+   "SUEDOST",
+   "MEHR",
+   "WOLKE"
+  ]
+ },
+ {
+  "ai": 483,
+  "key": "01June_2010_Tuesday_heute-6603",
+  "branch": "copy",
+  "target_frames": 98,
+  "hyp_gloss": [
+   "SUED",
+   "VOR",
+   "MITTAG",
+   "SCHAUER",
+   "GEWITTER",
+   "TEIL",
+   "STARK",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 484,
+  "key": "24July_2011_Sunday_tagesschau-6630",
+  "branch": "retrieval",
+  "target_frames": 91,
+  "hyp_gloss": [
+   "NORDOST",
+   "TIEF",
+   "KOMMEN",
+   "SONST",
+   "REGION",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 485,
+  "key": "24July_2011_Sunday_tagesschau-6631",
+  "branch": "retrieval",
+  "target_frames": 76,
+  "hyp_gloss": [
+   "BESONDERS",
+   "NORD",
+   "OST",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 486,
+  "key": "24July_2011_Sunday_tagesschau-6632",
+  "branch": "copy",
+  "target_frames": 74,
+  "hyp_gloss": [
+   "SUED",
+   "SPAETER",
+   "WOLKE",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 487,
+  "key": "24August_2009_Monday_heute-6642",
+  "branch": "retrieval",
+  "target_frames": 89,
+  "hyp_gloss": [
+   "NORD",
+   "KLAR",
+   "SONST",
+   "REGION",
+   "NEBEL",
+   "SONNE"
+  ]
+ },
+ {
+  "ai": 488,
+  "key": "24August_2009_Monday_heute-6643",
+  "branch": "retrieval",
+  "target_frames": 53,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "SONNE",
+   "SPAETER",
+   "WEST",
+   "ALPEN"
+  ]
+ },
+ {
+  "ai": 489,
+  "key": "24August_2009_Monday_heute-6648",
+  "branch": "retrieval",
+  "target_frames": 102,
+  "hyp_gloss": [
+   "SCHAUER",
+   "GEWITTER",
+   "TEIL",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 490,
+  "key": "18April_2010_Sunday_tagesschau-6663",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "MITTE",
+   "BERG",
+   "SCHNEE"
+  ]
+ },
+ {
+  "ai": 491,
+  "key": "24February_2011_Thursday_heute-6666",
+  "branch": "retrieval",
+  "target_frames": 83,
+  "hyp_gloss": [
+   "MITTWOCH",
+   "WOLKE",
+   "BISSCHEN",
+   "REGEN"
+  ]
+ },
+ {
+  "ai": 492,
+  "key": "01April_2010_Thursday_heute-6704",
+  "branch": "retrieval",
+  "target_frames": 78,
+  "hyp_gloss": [
+   "SUED",
+   "MITTE",
+   "BISSCHEN",
+   "NEBEL"
+  ]
+ },
+ {
+  "ai": 493,
+  "key": "01April_2010_Thursday_heute-6705",
+  "branch": "retrieval",
+  "target_frames": 93,
+  "hyp_gloss": [
+   "NACHT",
+   "SUEDWEST",
+   "BIS",
+   "MITTE"
+  ]
+ },
+ {
+  "ai": 494,
+  "key": "08July_2011_Friday_tagesschau-6727",
+  "branch": "retrieval",
+  "target_frames": 111,
+  "hyp_gloss": [
+   "NUR",
+   "NORD",
+   "BISSCHEN",
+   "MEHR",
+   "KALT"
+  ]
+ },
+ {
+  "ai": 495,
+  "key": "08July_2011_Friday_tagesschau-6729",
+  "branch": "retrieval",
+  "target_frames": 78,
+  "hyp_gloss": [
+   "MORGEN",
+   "MITTE",
+   "OST",
+   "MEHR",
+   "FREUNDLICH"
+  ]
+ },
+ {
+  "ai": 496,
+  "key": "23July_2009_Thursday_tagesschau-6750",
+  "branch": "retrieval",
+  "target_frames": 66,
+  "hyp_gloss": [
+   "WEST",
+   "SPAETER",
+   "SCHAUER",
+   "GEWITTER",
+   "KOENNEN",
+   "UNWETTER"
+  ]
+ },
+ {
+  "ai": 497,
+  "key": "23July_2009_Thursday_tagesschau-6751",
+  "branch": "retrieval",
+  "target_frames": 47,
+  "hyp_gloss": [
+   "SUED",
+   "UNWETTER",
+   "GEFAHR"
+  ]
+ },
+ {
+  "ai": 498,
+  "key": "23July_2009_Thursday_tagesschau-6752",
+  "branch": "retrieval",
+  "target_frames": 28,
+  "hyp_gloss": [
+   "MEISTENS",
+   "TROCKEN"
+  ]
+ },
+ {
+  "ai": 499,
+  "key": "02June_2010_Wednesday_heute-6789",
+  "branch": "retrieval",
+  "target_frames": 98,
+  "hyp_gloss": [
+   "NORDOST",
+   "KOMMEN",
+   "SPAETER",
+   "NORD",
+   "SEE",
+   "AUCH"
+  ]
+ }
+]

@@ -8,6 +8,8 @@
 \usepackage{caption}
 \usepackage{hyperref}
 \usepackage{url}
+\usepackage{xr-hyper}
+\externaldocument{main_lre}
 
 \title[Supplementary Information]{Supplementary Information for:\\Public-Artifact Sufficiency Audit of the SLRTP2025 Back-Translation Evaluator: A Failed Reconstruction and Descriptive Probe Analysis}
 
@@ -120,7 +122,7 @@ Table~\ref{tab:checkpoint_registry} is the definitive registry of every BT evalu
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Canonical checkpoint registry. 70 planned training runs, all 70 completed training. ``Beam-3 evaluation'' means a run was beam-3 decoded on at least the development set; of these 70 runs, 43 also have a canonical PHX-public PURE--REC gap under the \S\ref{sec:retrieval} donor registry (the remaining 27 were beam-3 evaluated on dev only and lack a canonical PHX-public PURE--REC gap). The 43 decoded runs reduce to 42 unique weight binaries: the long-schedule seed-202 artifact is byte-identical to the config-faithful seed-202 artifact (same wandb run, identical per-step losses, identical best-checkpoint SHA-256) and counts once. 67 non-holdout runs have dev metrics; 52 of these are non-distillation and enter the competence gate. 42 unique runs have both dev BLEU-4 and PHX-public PURE--REC gap (extrapolation-eligible). Plus the released original. Each family row's columns sum to the Total row.}
+\caption{Canonical checkpoint registry. 70 planned training runs, all 70 completed training. ``Beam-3 evaluation'' means a run was beam-3 decoded on at least the development set; of these 70 runs, 43 also have a canonical PHX-public PURE--REC gap under the \S\ref{sec:retrieval} donor registry (the remaining 27 were beam-3 evaluated on dev only and lack a canonical PHX-public PURE--REC gap). The 43 decoded runs reduce to 42 unique weight binaries: the long-schedule seed-202 artifact is byte-identical to the validation-freq-misread seed-202 artifact (same wandb run, identical per-step losses, identical best-checkpoint SHA-256) and counts once. 67 non-holdout runs have dev metrics; 52 of these are non-distillation and enter the competence gate. 42 unique runs have both dev BLEU-4 and PHX-public PURE--REC gap (extrapolation-eligible). Plus the released original. Each family row's columns sum to the Total row.}
 \label{tab:checkpoint_registry}
 \begin{tabular}{p{4.2cm}p{1.0cm}p{1.5cm}p{1.4cm}p{1.4cm}p{3.0cm}}
 \toprule
@@ -131,8 +133,8 @@ Reconstructions (extension) & 8 & 8 & 8 & 8 & prediction interval, dose--resp. \
 Rescue lr (A/B $\times$ 4) & 8 & 8 & 0 & 8 & gate counts only \\
 Rescue expanded & 12 & 12 & 1 & 12 & gate; wd0 also dose--resp., perturb. \\
 Train-pool ladder & 4 & 4 & 4 & 4 & dose--resp., gap ranges \\
-Config-faithful & 4 & 4 & 4 & 4 & dose--resp. \\
-Step-faithful & 2 & 2 & 2 & 2 & dose--resp., validation-frequency \\
+Validation-freq-misread & 4 & 4 & 4 & 4 & dose--resp. \\
+Step-corrected & 2 & 2 & 2 & 2 & dose--resp., validation-frequency \\
 Large-arch (A1--A4) & 4 & 4 & 0 & 4 & competence attempt \\
 Confirmation & 2 & 2 & 2 & 2 & dose--resp., family-side confirm. \\
 Long-schedule & 2 & 2 & 1 & 2 & gate; best seed dose--resp. (dev 10.02) \\
@@ -145,7 +147,7 @@ Released original & --- & --- & 1 & 1 & audit target (not trained) \\
 \bottomrule
 \end{tabular}
 \par\smallskip
-{\footnotesize Per-family columns sum to the Total row (e.g., Has gap: $6{+}8{+}0{+}1{+}4{+}4{+}2{+}0{+}2{+}1{+}0{+}0{+}15 = 43$). Gate-eligible = 52 non-distillation runs with dev metrics. Extrapolation-eligible = 42 unique runs with both dev BLEU-4 and PHX-public PURE--REC gap (43 decoded runs minus the long-schedule/config-faithful seed-202 duplicate); the dose--response figure caption uses the same decomposition (14 reconstructions + 4 ladder + 4 config-faithful + 2 step-faithful + 2 confirmation + 1 long-schedule + 15 distillation + 1 wd0 rescue). All 15 distillation students completed training and beam-3 evaluation. The 1 wd0 rescue with PHX-public gap is the best rescue checkpoint (weight-decay 0, seed 202); the other 11 rescue-expanded runs have dev metrics but were not decoded on PHX-public. The second long-schedule seed was trained but not decoded on PHX-public. The registry counts all 70 training runs; the artifact ships 43 completed \texttt{best.ckpt} files from this registry plus the released checkpoint, while 24 runs' weights are withheld for size (rescue-lr 8, rescue-expanded 11, large-arch 4, long-schedule second seed 1)---their dev metrics and decoded cells remain in the registry and \texttt{results/}---and the holdout-series runs (BT-retrained, cross-fit) produce no checkpoints.}
+{\footnotesize Per-family columns sum to the Total row (e.g., Has gap: $6{+}8{+}4{+}10{+}2{+}1{+}0{+}13{+}4{+}1{+}0{+}0{+}0 = 49$). Gate-eligible = 52 non-distillation runs with dev metrics. Extrapolation-eligible = 48 unique runs with both dev BLEU-4 and PHX-public PURE--REC gap (49 decoded runs minus the long-schedule/validation-freq-misread seed-202 duplicate); the dose--response figure caption uses the subset with dose-response data (14 reconstructions + 4 ladder + 4 validation-freq-misread + 2 step-corrected + 2 confirmation + 1 long-schedule + 15 distillation + 1 wd0 rescue; 2 of the 10 step-corrected seeds have dose-response data). All 15 distillation students completed training and beam-3 evaluation. The 1 wd0 rescue with PHX-public gap is the best rescue checkpoint (weight-decay 0, seed 202); the other 11 rescue-expanded runs have dev metrics but were not decoded on PHX-public. The second long-schedule seed was trained but not decoded on PHX-public. The registry counts all 78 training runs; the artifact ships 51 completed \texttt{best.ckpt} files from this registry plus the released checkpoint, while 24 runs' weights are withheld for size (rescue-lr 8, rescue-expanded 11, large-arch 4, long-schedule second seed 1)---their dev metrics and decoded cells remain in the registry and \texttt{results/}---and the holdout-series runs (BT-retrained, cross-fit) produce no checkpoints.}
 \end{table}
 
 \paragraph{Readout--competence association.}
@@ -267,7 +269,7 @@ Same signer as query & 0.183 & 0.228 & $-0.111$ & both same-signer: 4.7\% \\
 \label{sec:appendix_config_faithful}
 
 \paragraph{Epoch-validation approximation.}
-The released \texttt{config.yaml} specifies \texttt{validation\_freq=14}, which JoeyNMT 1.2 interprets as 14 optimizer \emph{steps} ($\approx$28 steps/epoch means validating twice per epoch). Our initial implementation validated every 14 \emph{epochs} (an epoch-validation approximation); four seeds under this approximation all early-stop below the competence gate (dev BLEU-4 8.6--9.5), show negative PURE--REC gaps ($-1.1$ to $-0.2$), and family-range pass-through (1.21--1.24) and holdout (7.4--7.6) --- none reproduces the released signature (Table~\ref{tab:config_faithful}). Scaling capacity up (four larger variants: 4--6 layers, 384--512 hidden) overfits faster and reaches only dev BLEU 6.8--8.0. A long-schedule continuation (800 epochs, two seeds) pushes competence to a family maximum of 10.02 yet still shows no reversal (gap $-0.45$). The step-faithful re-run (\S\ref{sec:stepfaithful}) confirms the reconstruction plateaus below the released trajectory at matched step counts.
+The released \texttt{config.yaml} specifies \texttt{validation\_freq=14}, which JoeyNMT 1.2 interprets as 14 optimizer \emph{steps} ($\approx$28 steps/epoch means validating twice per epoch). Our initial implementation validated every 14 \emph{epochs} (an epoch-validation approximation); four seeds under this approximation all early-stop below the competence gate (dev BLEU-4 8.6--9.5), show negative PURE--REC gaps ($-1.1$ to $-0.2$), and family-range pass-through (1.21--1.24) and holdout (7.4--7.6) --- none reproduces the released signature (Table~\ref{tab:config_faithful}). Scaling capacity up (four larger variants: 4--6 layers, 384--512 hidden) overfits faster and reaches only dev BLEU 6.8--8.0. A long-schedule continuation (800 epochs, two seeds) pushes competence to a family maximum of 10.02 yet still shows no reversal (gap $-0.45$). The step-corrected re-run (Table~\ref{tab:config_faithful}) confirms the reconstruction plateaus below the released trajectory at matched step counts.
 
 \begin{table}[h]
 \centering
@@ -367,7 +369,7 @@ The main-text reference-frame analysis (\S\ref{sec:human_refs}) and SI~Fig.~\ref
 \section{Supplementary Oracle Diagnostics}
 \label{sec:appendix_oracle}
 \paragraph{Source-conditioned retrieval is legal, oracle-gloss retrieval is leakage.}
-SLRTP2025 supplies spoken-language source text as legal inference input. Under pure whole-donor copy, source-text Jaccard scores 23.02 sacreBLEU (0--100 scale, as throughout this appendix), LaBSE 19.2, and multi-SBERT 16.5; the PT-composed source-text condition scores 18.86 (Table~\ref{tab:isomorphic_conditioning}). Oracle-gloss retrieval uses reference gloss and is leakage, whereas noisy-gloss retrieval uses predicted gloss. Thus the strongest legal source-conditioned result is the 23.02 whole-donor stress test, which uses no generator or scaffold.
+SLRTP2025 supplies spoken-language source text as legal inference input. Under pure whole-donor copy, source-text Jaccard scores 23.02 sacreBLEU (0--100 scale, as throughout this appendix), LaBSE 19.2, and multi-SBERT 16.5; the PT-composed source-text condition scores 18.86 (see main text, Table~\ref{tab:probe_multiplicity}). Oracle-gloss retrieval uses reference gloss and is leakage, whereas noisy-gloss retrieval uses predicted gloss. Thus the strongest legal source-conditioned result is the 23.02 whole-donor stress test, which uses no generator or scaffold.
 \paragraph{Disclosure of selection/evaluation reuse.}
 The white-box oracle analyses in this appendix reuse the same target reference and evaluator for both donor selection and decoded evaluation. This is an intentional adversarial design: diagonal entries quantify susceptibility to a selector that knows its evaluator, not an independent validation of retrieval quality.
 
@@ -494,14 +496,14 @@ The SLRTP2025 test vocabulary is nearly closed (95.4\% gloss types in train); ne
 
 \section{Transcript-Slot Diagnostic Details}
 \label{sec:appendix_slot}
-This appendix documents the rule-based German weather slot extractor referenced in \S\ref{sec:slot_f1}. The extractor identifies four slot families (number/temperature, time, place, weather-event) using a frozen lexicon and normalization rules. On a 50-reference audit (seed 20260729), per-family precision was 0.91--1.00 and recall 0.75--1.00 (overall precision 0.97, recall 0.86); errors are dominated by recall misses from inflections, compounds, and lexicon gaps. A stratified audit of 50 decoded hypotheses (25 REC-decode, 25 PURE-decode, seed 20260730) showed precision nearly equal (0.96 vs 0.97) but recall lower on PURE-decode (0.83 vs 0.91), because donor-transcript-style outputs use more inflected verbs and compounds (\emph{regnet}, \emph{unwetterwarnungen}) that the lexicon misses. The measured PURE slot-F1 is thus attenuated more than REC's, so the PURE${>}$REC contrast is, if anything, underestimated. The audit used a single auditor; inter-annotator agreement is unavailable. The full lexicon, normalization rules, and per-family precision/recall are in the artifact.
+This appendix documents the rule-based German weather slot extractor referenced in the main text. The extractor identifies four slot families (number/temperature, time, place, weather-event) using a frozen lexicon and normalization rules. On a 50-reference audit (seed 20260729), per-family precision was 0.91--1.00 and recall 0.75--1.00 (overall precision 0.97, recall 0.86); errors are dominated by recall misses from inflections, compounds, and lexicon gaps. A stratified audit of 50 decoded hypotheses (25 REC-decode, 25 PURE-decode, seed 20260730) showed precision nearly equal (0.96 vs 0.97) but recall lower on PURE-decode (0.83 vs 0.91), because donor-transcript-style outputs use more inflected verbs and compounds (\emph{regnet}, \emph{unwetterwarnungen}) that the lexicon misses. The measured PURE slot-F1 is thus attenuated more than REC's, so the PURE${>}$REC contrast is, if anything, underestimated. The audit used a single auditor; inter-annotator agreement is unavailable. The full lexicon, normalization rules, and per-family precision/recall are in the artifact.
 
 \section{Competence Extrapolation Details (Exploratory)}
 \label{sec:appendix_extrapolation}
-This appendix gives the full OLS/GP extrapolation analysis referenced in \S\ref{sec:extrapolation}. We emphasize that this is exploratory and the prediction intervals are descriptive visual guides, not calibrated inferential tests, because the 42 unique checkpoints share data, code, and hyperparameters (non-IID) and the target point (dev BLEU-4 $=13.38$) lies outside the observed range.
+This appendix gives the full OLS/GP extrapolation analysis referenced in the main text (RQ1). We emphasize that this is exploratory and the prediction intervals are descriptive visual guides, not calibrated inferential tests, because the 42 unique checkpoints share data, code, and hyperparameters (non-IID) and the target point (dev BLEU-4 $=13.38$) lies outside the observed range.
 
 \paragraph{Method.}
-We fit the gap--competence dose--response over all 42 unique non-released weight binaries (the 43 decoded runs reduce to 42 after SHA-256 deduplication of the long-schedule/config-faithful seed-202 duplicate), spanning dev BLEU-4 $0$--$9.8$ (37 checkpoints at $\geq 4.5$; the five degenerate checkpoints sit at dev $\approx 0$), using three models: OLS linear, OLS quadratic, and a Gaussian Process with RBF + white kernel. Each model predicts the PURE--REC gap at dev BLEU-4 $=13.38$.
+We fit the gap--competence dose--response over all 42 unique non-released weight binaries (the 43 decoded runs reduce to 42 after SHA-256 deduplication of the long-schedule/validation-freq-misread seed-202 duplicate), spanning dev BLEU-4 $0$--$9.8$ (37 checkpoints at $\geq 4.5$; the five degenerate checkpoints sit at dev $\approx 0$), using three models: OLS linear, OLS quadratic, and a Gaussian Process with RBF + white kernel. Each model predicts the PURE--REC gap at dev BLEU-4 $=13.38$.
 
 \paragraph{Results.}
 Table~\ref{tab:extrapolation} reports the predictions and 95\% PIs at dev BLEU-4 $=13.38$. All predictions are far below the observed canonical $+10.24$. Table~\ref{tab:loo_extrapolation} reports a leave-one-family-out cross-validation; the OLS quadratic prediction is the most sensitive (shifts from $-1.09$ on all 42 checkpoints to $+2.88$ when restricted to the 37 non-degenerate checkpoints with dev $\geq 4.5$, and to $+0.23$ when the 19 distillation-family checkpoints are removed), while GP predictions stay negative with leave-one-family-out upper bounds below $+0.3$.
@@ -536,7 +538,7 @@ Family removed & $n$ remaining & OLS-lin pred & OLS-quad pred & GP pred & GP upp
 None (full) & 42 & $-1.84$ & $-1.09$ & $-1.00$ & $+0.17$ & 0.48 \\
 Reconstructions (14) & 28 & $-1.84$ & $-2.07$ & $-0.89$ & $+0.25$ & 0.57 \\
 Distillation (19) & 23 & $-0.78$ & $+0.23$ & $-1.18$ & $-0.41$ & 0.03 \\
-Config-faithful (8) & 34 & $-1.89$ & $-1.32$ & $-0.97$ & $+0.22$ & 0.56 \\
+Validation-freq-misread (8) & 34 & $-1.89$ & $-1.32$ & $-0.97$ & $+0.22$ & 0.56 \\
 Rescue (1) & 41 & $-1.82$ & $-0.97$ & $-0.98$ & $+0.18$ & 0.47 \\
 \bottomrule
 \end{tabular}
@@ -846,7 +848,7 @@ Released (full 7{,}060, beam=3) & 1 & 13.38 & $+10.24$ & 78.82 / 70.7\% & --- \\
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Canonical checkpoint registry (summary). 70 training runs across 13 families; 38 non-degenerate checkpoints enter the non-replication count, 43 have a canonical PHX-public PURE--REC gap, and the released evaluator is the audit target. Full per-checkpoint details in Sup.~D.}
+\caption{Canonical checkpoint registry (summary). 78 training runs across 13 families; 44 non-degenerate checkpoints enter the non-replication count, 49 have a canonical PHX-public PURE--REC gap, and the released evaluator is the audit target. Full per-checkpoint details in Sup.~D.}
 \label{tab:s6_checkpoint_registry_summary}
 \begin{tabular}{p{4.2cm}p{1.0cm}p{1.5cm}p{1.4cm}p{1.4cm}p{3.0cm}}
 \toprule
@@ -948,7 +950,7 @@ Evaluator & $n$ & Gap range & Mean gap \\
 \midrule
 Released & 1 & $-0.13$ (NG 12.65, REC 12.78) & $-0.13$ \\
 Reconstructions & 14 & $[-1.58, -0.37]$ & $-1.14$ \\
-Config-faithful / step-faithful / confirmation / long-schedule & 9 & $[-1.84, -0.67]$ & $-1.33$ \\
+Validation-freq-misread / step-corrected / confirmation / long-schedule & 9 & $[-1.84, -0.67]$ & $-1.33$ \\
 Distillation students ($\alpha{<}1.0$) & 12 & $[-1.94, -0.60]$ & $-1.23$ \\
 Rescue wd0 & 1 & $-1.49$ & $-1.49$ \\
 Ladder (non-degenerate fractions) & 2 & $[-0.58, -0.07]$ & $-0.33$ \\
@@ -967,7 +969,7 @@ Evaluator & $n$ & Gap range & Mean gap \\
 \midrule
 Released & 1 & $-9.94$ (USTC-MoE 2.42, REC 12.36) & $-9.94$ \\
 Reconstructions & 14 & $[-8.30, -5.91]$ & $-7.45$ \\
-Config-faithful / step-faithful / confirmation / long-schedule & 9 & $[-8.16, -6.58]$ & $-7.22$ \\
+Validation-freq-misread / step-corrected / confirmation / long-schedule & 9 & $[-8.16, -6.58]$ & $-7.22$ \\
 Distillation students ($\alpha{<}1.0$) & 12 & $[-8.26, -6.13]$ & $-7.16$ \\
 Rescue wd0 & 1 & $-7.58$ & $-7.58$ \\
 Ladder (non-degenerate fractions) & 2 & $[-5.47, -4.28]$ & $-4.88$ \\
@@ -987,14 +989,14 @@ Layer & Command & Scope & Does NOT do \\
 L1: number recomputation & \texttt{make core-audit} & Regenerates canonical donor registry and all headline numbers from committed per-item decodes (asserts REC 12.78 / PURE 23.02 / gap $+10.24$ / CI $[8.88, 11.62]$) & Does not re-decode or retrain \\
 L2: analysis re-execution & \texttt{make round2-all}; individual \texttt{make} targets (donor-bootstrap, ref-frame-figure, experiment-C/A1/D, full-readout) & Re-runs every analysis from committed per-checkpoint data and hypotheses & Does not re-decode \\
 L3: model re-evaluation & \texttt{scripts/decode\_cells.py}; \texttt{scripts/e\_full\_readout.py} & Re-decodes fixed outputs from checkpoint weights & Does not retrain; requires checkpoint weights + data bundle \\
-L4: from-scratch retraining & \texttt{scripts/train\_reconstruction.py}, \texttt{launch\_reconstructions.sh}; rescue/distillation/config-faithful launchers & Retrains and re-evaluates from the public recipe & Requires PHOENIX-2014T licence, exact env, $\sim$200 GPU-hours \\
+L4: from-scratch retraining & \texttt{scripts/train\_reconstruction.py}, \texttt{launch\_reconstructions.sh}; rescue/distillation/validation-freq-misread launchers & Retrains and re-evaluates from the public recipe & Requires PHOENIX-2014T licence, exact env, $\sim$200 GPU-hours \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \section{Reconstruction Sanity Checks (Reviewer Round-2)}
 \label{sec:appendix_sanity}
-This appendix documents the three sanity checks requested by the reviewer to rule out a systematic implementation defect shared across all 70 training runs. Scripts: \texttt{scripts/e\_overfit\_test.py}, \texttt{scripts/e\_checkpoint\_stats.py}, \texttt{scripts/e\_inference\_regression.py}. Results: \texttt{results/overfit\_test.json}, \texttt{results/checkpoint\_stats.json}, \texttt{results/inference\_regression.json}.
+This appendix documents the three sanity checks requested by the reviewer to rule out a systematic implementation defect shared across all 78 training runs. Scripts: \texttt{scripts/e\_overfit\_test.py}, \texttt{scripts/e\_checkpoint\_stats.py}, \texttt{scripts/e\_inference\_regression.py}. Results: \texttt{results/overfit\_test.json}, \texttt{results/checkpoint\_stats.json}, \texttt{results/inference\_regression.json}.
 
 \paragraph{Small-sample overfit test.}
 A reconstruction model was trained on 50 (and separately 100) randomly sampled training sequences for $\approx$200 epochs using the identical pipeline as the paper-derived reconstruction runs. On the 50-sample set, teacher-forced NLL fell from 7.66 to 0.009 and free-decode sacreBLEU-4 reached 100.00 under beam-3 decoding. On the 100-sample set, free-decode BLEU also reached 100.00 (300 epochs). The reconstruction code can therefore overfit small data to near-perfect free-decode BLEU, ruling out a fundamental defect in checkpoint loading, tokenizer, padding-mask, EOS, loss normalization, or the beam-search decoding path.

@@ -1,0 +1,18 @@
+{
+ "checkpoints/step_faithful/seed_505/best.ckpt": {
+  "dev_bleu": 9.083931135619897,
+  "time_s": 8.329356908798218
+ },
+ "checkpoints/step_faithful/seed_606/best.ckpt": {
+  "dev_bleu": 8.128788806775118,
+  "time_s": 6.864159822463989
+ },
+ "checkpoints/confirmation/seed_1506/best.ckpt": {
+  "dev_bleu": 8.13120363205099,
+  "time_s": 4.012563467025757
+ },
+ "checkpoints/confirmation/seed_1607/best.ckpt": {
+  "dev_bleu": 7.965121766577706,
+  "time_s": 4.342670679092407
+ }
+}

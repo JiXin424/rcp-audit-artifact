@@ -1,0 +1,119 @@
+{
+  "schema": "fps-regression-test-v1",
+  "generated_by": "scripts/test_fps_regression.py",
+  "n_samples_checked": 8,
+  "all_samples_passed": true,
+  "assertions": [
+    "canonical [::2] frame count == ceil(T/2)",
+    "canonical == raw even-index frames",
+    "canonical != double-subsampled [::2][::2] (no double subsampling)",
+    "first frame preserved (alignment)"
+  ],
+  "interpretation": "On all checked released pose tensors, our 25->12.5 fps subsampling path ([::2]) is correct and does not accidentally double-subsample. The evaluator therefore sees the same frame rate it was trained on.",
+  "per_sample": {
+    "27April_2010_Tuesday_heute-1028": {
+      "n_frames_raw": 185,
+      "n_frames_canonical": 93,
+      "n_frames_expected": 93,
+      "len_halved": true,
+      "equals_raw_even_index": true,
+      "not_equal_double_subsample": true,
+      "first_frame_preserved": true,
+      "canonical_fps": 12.5,
+      "raw_fps": 25.0,
+      "double_subsample_fps": 6.25,
+      "all_passed": true
+    },
+    "11September_2009_Friday_tagesschau-8773": {
+      "n_frames_raw": 56,
+      "n_frames_canonical": 28,
+      "n_frames_expected": 28,
+      "len_halved": true,
+      "equals_raw_even_index": true,
+      "not_equal_double_subsample": true,
+      "first_frame_preserved": true,
+      "canonical_fps": 12.5,
+      "raw_fps": 25.0,
+      "double_subsample_fps": 6.25,
+      "all_passed": true
+    },
+    "11November_2009_Wednesday_tagesschau-8042": {
+      "n_frames_raw": 85,
+      "n_frames_canonical": 43,
+      "n_frames_expected": 43,
+      "len_halved": true,
+      "equals_raw_even_index": true,
+      "not_equal_double_subsample": true,
+      "first_frame_preserved": true,
+      "canonical_fps": 12.5,
+      "raw_fps": 25.0,
+      "double_subsample_fps": 6.25,
+      "all_passed": true
+    },
+    "30October_2009_Friday_tagesschau-2273": {
+      "n_frames_raw": 106,
+      "n_frames_canonical": 53,
+      "n_frames_expected": 53,
+      "len_halved": true,
+      "equals_raw_even_index": true,
+      "not_equal_double_subsample": true,
+      "first_frame_preserved": true,
+      "canonical_fps": 12.5,
+      "raw_fps": 25.0,
+      "double_subsample_fps": 6.25,
+      "all_passed": true
+    },
+    "25August_2010_Wednesday_tagesschau-8516": {
+      "n_frames_raw": 107,
+      "n_frames_canonical": 54,
+      "n_frames_expected": 54,
+      "len_halved": true,
+      "equals_raw_even_index": true,
+      "not_equal_double_subsample": true,
+      "first_frame_preserved": true,
+      "canonical_fps": 12.5,
+      "raw_fps": 25.0,
+      "double_subsample_fps": 6.25,
+      "all_passed": true
+    },
+    "20November_2009_Friday_tagesschau-6561": {
+      "n_frames_raw": 124,
+      "n_frames_canonical": 62,
+      "n_frames_expected": 62,
+      "len_halved": true,
+      "equals_raw_even_index": true,
+      "not_equal_double_subsample": true,
+      "first_frame_preserved": true,
+      "canonical_fps": 12.5,
+      "raw_fps": 25.0,
+      "double_subsample_fps": 6.25,
+      "all_passed": true
+    },
+    "05February_2010_Friday_tagesschau-2924": {
+      "n_frames_raw": 121,
+      "n_frames_canonical": 61,
+      "n_frames_expected": 61,
+      "len_halved": true,
+      "equals_raw_even_index": true,
+      "not_equal_double_subsample": true,
+      "first_frame_preserved": true,
+      "canonical_fps": 12.5,
+      "raw_fps": 25.0,
+      "double_subsample_fps": 6.25,
+      "all_passed": true
+    },
+    "18January_2010_Monday_tagesschau-4023": {
+      "n_frames_raw": 96,
+      "n_frames_canonical": 48,
+      "n_frames_expected": 48,
+      "len_halved": true,
+      "equals_raw_even_index": true,
+      "not_equal_double_subsample": true,
+      "first_frame_preserved": true,
+      "canonical_fps": 12.5,
+      "raw_fps": 25.0,
+      "double_subsample_fps": 6.25,
+      "all_passed": true
+    }
+  }
+}

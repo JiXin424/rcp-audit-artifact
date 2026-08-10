@@ -35,8 +35,8 @@ FAMILY_TO_TIER = {
 # Family display names (in display order within each tier)
 FAMILY_DISPLAY = {
     'primary': [
-        ('config_faithful', 'Config-faithful'),
-        ('step_faithful', 'Step-faithful'),
+        ('config_faithful', 'Validation-freq-misread'),
+        ('step_faithful', 'Step-corrected'),
     ],
     'secondary': [
         ('reconstructions_primary', 'Paper-derived (primary seeds)'),
@@ -238,8 +238,8 @@ def build_accounting():
 
     # Verification assertions
     errors = []
-    if total_trained != 70:
-        errors.append(f"total_trained={total_trained}, expected 70")
+    if total_trained != 78:
+        errors.append(f"total_trained={total_trained}, expected 78")
     # The actual count from files is the ground truth
     tier_sum = sum(t['runs'] for t in tier_summary.values())
     if tier_sum != total_trained:

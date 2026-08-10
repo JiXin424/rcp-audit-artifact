@@ -1,1019 +1,744 @@
 {
-  "schema": "canonical-checkpoint-registry-v4",
-  "generated_by": "scripts/rebuild_canonical_registry.py",
-  "note": "checkpoint_sha256 is the primary key. Every unique binary has one entry. Training runs that share a binary (e.g., cf_202==ls_202) are listed under training_runs.",
+  "schema": "canonical-checkpoint-registry-v3",
+  "generated_by": "manual; single source of truth for paper counts",
+  "note": "Beam-3 primary protocol. All 41 dose-response checkpoints included. No greedy data here.",
   "summary": {
-    "total_training_runs": 48,
-    "unique_checkpoint_binaries": 47,
-    "total_with_gap": 43,
-    "non_released_with_gap": 42,
-    "non_degenerate": 38,
-    "non_released_non_degenerate": 37,
-    "degenerate": 5,
-    "released": 1,
-    "sha_collisions": 1
+    "planned_trained_runs": 70,
+    "completed_trained_runs": 70,
+    "beam3_evaluated": 70,
+    "beam3_eval_oom": 0,
+    "greedy_evaluated": 70,
+    "non_holdout_with_dev_metrics": 67,
+    "gate_eligible_non_distillation": 52,
+    "canonical_gap_checkpoints": 43,
+    "dev_only_checkpoints": 24,
+    "holdout_only_controls": 3,
+    "released_original": 1,
+    "total_checkpoints_with_released": 71
   },
-  "sha_collisions": [
-    {
-      "checkpoint_sha256": "911de1fed3d10880936b7a8153b7a1d08dd9ba4b2a05b257bafe85875fa830c7",
-      "training_runs": [
-        "config_faithful/seed_202/best.ckpt",
-        "long_schedule/seed_202/best.ckpt"
-      ],
-      "families": [
-        "config_faithful",
-        "long_schedule"
-      ],
-      "note": "These training runs produced the same binary; counted once as a unique checkpoint."
-    }
-  ],
-  "degenerate_entries": [
-    {
-      "gap_key": "ladder_0125",
-      "families": [
-        "ladder"
-      ],
-      "gap": -5.3780641179434325e-06,
-      "note": "BLEU-4 gap ≈ 0; excluded from non-degenerate count."
-    },
-    {
-      "gap_key": "distill_a1.0_303",
-      "families": [
-        "distillation"
-      ],
-      "gap": 0.0,
-      "note": "BLEU-4 gap ≈ 0; excluded from non-degenerate count."
-    },
-    {
-      "gap_key": "ladder_025",
-      "families": [
-        "ladder"
-      ],
-      "gap": -1.086863362265763e-05,
-      "note": "BLEU-4 gap ≈ 0; excluded from non-degenerate count."
-    },
-    {
-      "gap_key": "distill_a1.0_202",
-      "families": [
-        "distillation"
-      ],
-      "gap": 0.0,
-      "note": "BLEU-4 gap ≈ 0; excluded from non-degenerate count."
-    },
-    {
-      "gap_key": "distill_a1.0_101",
-      "families": [
-        "distillation"
-      ],
-      "gap": 0.0,
-      "note": "BLEU-4 gap ≈ 0; excluded from non-degenerate count."
-    }
-  ],
-  "entries_without_binary": [],
   "checkpoints": [
     {
-      "checkpoint_sha256": "00a27c47800f763dc585e18b0b4a7bbc90df2f752a71f697f699b86f2e910631",
-      "families": [
-        "ladder"
-      ],
-      "training_runs": [
-        "ladder/frac_05/best.ckpt"
-      ],
-      "primary_family": "ladder",
-      "gap_key": "ladder_05",
-      "secondary_gap_keys": [],
+      "id": "released",
+      "family": "released",
+      "has_dev": true,
       "has_gap": true,
-      "gap": -0.20798342572298179,
-      "gt_bleu": 6.524123356842155,
-      "pure_bleu": 6.3161399311191735,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": false,
+      "dose_response": false,
+      "note": "audit target"
     },
     {
-      "checkpoint_sha256": "02d22a2417f2e428be256c38711f13347671201cae4cb7aef8fa0498631d28fd",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_808/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_808",
-      "secondary_gap_keys": [],
+      "id": "seed_101",
+      "family": "reconstructions_primary",
+      "seed": 101,
+      "has_dev": true,
       "has_gap": true,
-      "gap": -1.4824711089862035,
-      "gt_bleu": 9.867442071008462,
-      "pure_bleu": 8.384970962022258,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": true,
+      "dose_response": true
     },
     {
-      "checkpoint_sha256": "0d2c1f008dd8ba36d0909124764bef0c829495da7584b8d45c7ef134903c511c",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_404/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_404",
-      "secondary_gap_keys": [],
+      "id": "seed_202",
+      "family": "reconstructions_primary",
+      "seed": 202,
+      "has_dev": true,
       "has_gap": true,
-      "gap": -1.8061088354143893,
-      "gt_bleu": 9.51604000822853,
-      "pure_bleu": 7.70993117281414,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": true,
+      "dose_response": true
     },
     {
-      "checkpoint_sha256": "0f1762403d4c9fd3af1921f63a9e52599f1dd68ba1c4aadbe0b30fb31100d5af",
-      "families": [
-        "step_faithful"
-      ],
-      "training_runs": [
-        "step_faithful/seed_505/best.ckpt"
-      ],
-      "primary_family": "step_faithful",
-      "gap_key": "sf_505",
-      "secondary_gap_keys": [],
+      "id": "seed_303",
+      "family": "reconstructions_primary",
+      "seed": 303,
+      "has_dev": true,
       "has_gap": true,
-      "gap": -1.5944430262799543,
-      "gt_bleu": 9.766429452658574,
-      "pure_bleu": 8.17198642637862,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": true,
+      "dose_response": true
     },
     {
-      "checkpoint_sha256": "18dbea7bd22d042aefb70c5a2d7d51739fcccfb1aad4942c666c964122870ffb",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_1304/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_1304",
-      "secondary_gap_keys": [],
+      "id": "seed_404",
+      "family": "reconstructions_primary",
+      "seed": 404,
+      "has_dev": true,
       "has_gap": true,
-      "gap": -1.1831717770138859,
-      "gt_bleu": 9.68236584982076,
-      "pure_bleu": 8.499194072806874,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": true,
+      "dose_response": true
     },
     {
-      "checkpoint_sha256": "27dbded1cf19da647f3e30cc8bc9a9dacb64ddc4582d5c7aa4d470144616fe1e",
-      "families": [
-        "config_faithful"
-      ],
-      "training_runs": [
-        "config_faithful/seed_303/best.ckpt"
-      ],
-      "primary_family": "config_faithful",
-      "gap_key": "cf_303",
-      "secondary_gap_keys": [],
+      "id": "seed_505",
+      "family": "reconstructions_primary",
+      "seed": 505,
+      "has_dev": true,
       "has_gap": true,
-      "gap": -1.5123522241305007,
-      "gt_bleu": 8.740584958595353,
-      "pure_bleu": 7.228232734464852,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": true,
+      "dose_response": true
     },
     {
-      "checkpoint_sha256": "30971158b0d953b42faa2635ad218ff592c9300dbead8952e99965b7aa1fd122",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_0.25_seed_202/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a0.25_202",
-      "secondary_gap_keys": [],
+      "id": "seed_606",
+      "family": "reconstructions_primary",
+      "seed": 606,
+      "has_dev": true,
       "has_gap": true,
-      "gap": -2.012652363040133,
-      "gt_bleu": 9.74869462118646,
-      "pure_bleu": 7.736042258146326,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": true,
+      "dose_response": true
     },
     {
-      "checkpoint_sha256": "319bc625796a0572d13c6e95d6b1d8b669379c54665ab80f69e84937101974b9",
-      "families": [
-        "ladder"
-      ],
-      "training_runs": [
-        "ladder/frac_0125/best.ckpt"
-      ],
-      "primary_family": "ladder",
-      "gap_key": "ladder_0125",
-      "secondary_gap_keys": [],
+      "id": "seed_707",
+      "family": "reconstructions_extension",
+      "seed": 707,
+      "has_dev": true,
       "has_gap": true,
-      "gap": -5.3780641179434325e-06,
-      "gt_bleu": 0.00041133343393502425,
-      "pure_bleu": 0.0004059553698170808,
-      "is_degenerate": true,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": true,
+      "dose_response": true
     },
     {
-      "checkpoint_sha256": "39000f7ac149367715ab3ec54848ebaee6ab7c2440cb98adf425ff3ca5d8e41d",
-      "families": [
-        "finetune_released"
-      ],
-      "training_runs": [
-        "finetune_released/lr5e-06_seed789/best.ckpt"
-      ],
-      "primary_family": "finetune_released",
-      "gap_key": null,
-      "secondary_gap_keys": [],
+      "id": "seed_808",
+      "family": "reconstructions_extension",
+      "seed": 808,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "seed_909",
+      "family": "reconstructions_extension",
+      "seed": 909,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "seed_1001",
+      "family": "reconstructions_extension",
+      "seed": 1001,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "seed_1102",
+      "family": "reconstructions_extension",
+      "seed": 1102,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "seed_1203",
+      "family": "reconstructions_extension",
+      "seed": 1203,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "seed_1304",
+      "family": "reconstructions_extension",
+      "seed": 1304,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "seed_1405",
+      "family": "reconstructions_extension",
+      "seed": 1405,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "ladder_0.125",
+      "family": "ladder",
+      "frac": 0.125,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "ladder_0.25",
+      "family": "ladder",
+      "frac": 0.25,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "ladder_0.5",
+      "family": "ladder",
+      "frac": 0.5,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "ladder_0.75",
+      "family": "ladder",
+      "frac": 0.75,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "cfaith_101",
+      "family": "config_faithful",
+      "seed": 101,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "cfaith_202",
+      "family": "config_faithful",
+      "seed": 202,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "cfaith_303",
+      "family": "config_faithful",
+      "seed": 303,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "cfaith_404",
+      "family": "config_faithful",
+      "seed": 404,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "stepfaith_101",
+      "family": "step_faithful",
+      "seed": 101,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "stepfaith_202",
+      "family": "step_faithful",
+      "seed": 202,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "confirm_1506",
+      "family": "confirmation",
+      "seed": 1506,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "confirm_1607",
+      "family": "confirmation",
+      "seed": 1607,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true
+    },
+    {
+      "id": "long_sched_best",
+      "family": "long_schedule",
+      "seed": 101,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": true,
+      "note": "the one reaching family-max 10.02"
+    },
+    {
+      "id": "long_sched_other",
+      "family": "long_schedule",
+      "seed": 202,
+      "has_dev": true,
       "has_gap": false,
-      "gap": null,
-      "gt_bleu": null,
-      "pure_bleu": null,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": true,
+      "dose_response": false,
+      "note": "other long-schedule seed; no gap"
     },
     {
-      "checkpoint_sha256": "393eb89db543c8e16d9e47f8a2c46d1da76a9cb157309a9368f9cc84f0ede552",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_202/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_202",
-      "secondary_gap_keys": [],
+      "id": "rescue_wd0_s202",
+      "family": "rescue2",
+      "variant": "weight_decay_0",
+      "seed": 202,
+      "has_dev": true,
       "has_gap": true,
-      "gap": -1.3038001883039048,
-      "gt_bleu": 8.22474084561602,
-      "pure_bleu": 6.920940657312116,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": true,
+      "dose_response": true
     },
     {
-      "checkpoint_sha256": "3b426a1e690ab66f6f38852d7122142e33da80dc8e21952d2f3a00318fbbe704",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_0.25_seed_101/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a0.25_101",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.2083456657590963,
-      "gt_bleu": 8.689403025749774,
-      "pure_bleu": 7.481057359990678,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "3e2c7b1fe3c28b8cd1161fa0f3ca11b8ed399b14f04f1acf52c40ee6e73848c7",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_1.0_seed_303/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a1.0_303",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": 0.0,
-      "gt_bleu": 0.0,
-      "pure_bleu": 0.0,
-      "is_degenerate": true,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "3f11e0c3e7ba8f7779825cd1f180e2c8982e2ac43de99fb11915dba8be27651b",
-      "families": [
-        "config_faithful"
-      ],
-      "training_runs": [
-        "config_faithful/seed_404/best.ckpt"
-      ],
-      "primary_family": "config_faithful",
-      "gap_key": "cf_404",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -0.523460621369181,
-      "gt_bleu": 8.43063755196499,
-      "pure_bleu": 7.907176930595809,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "3f5f74d35183c261e4cc2e5c3478f1c1535497be28741352036ac4a976139e89",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_909/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_909",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -0.8916581348549251,
-      "gt_bleu": 9.198038952490654,
-      "pure_bleu": 8.306380817635729,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "43bec130a457b0fd867d93e5ead90fc08a9db21efbf2639616fdc2a733618cc1",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_606/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_606",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.2417728555268068,
-      "gt_bleu": 7.550306940456959,
-      "pure_bleu": 6.3085340849301526,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "5082a8fd643083e0eefb91b60d5e27964b4208beebad1ff1818544bd77216d0d",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_1001/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_1001",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -0.8666973341180251,
-      "gt_bleu": 8.81381551712025,
-      "pure_bleu": 7.9471181830022255,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "522b665982b0f948623c8fa660d97369f23abe9c0692f9b48d506d109e0ee520",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_0.5_seed_101/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a0.5_101",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.3791736933436294,
-      "gt_bleu": 9.387065360110553,
-      "pure_bleu": 8.007891666766923,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "58722f9cf085001d0d67c4365c7c0e6f206abe7a1df7506283f5f9ec4478092b",
-      "families": [
-        "finetune_released"
-      ],
-      "training_runs": [
-        "finetune_released/lr5e-06_seed123/best.ckpt"
-      ],
-      "primary_family": "finetune_released",
-      "gap_key": null,
-      "secondary_gap_keys": [],
+      "id": "rescue_lr_1",
+      "family": "rescue_lr",
+      "has_dev": true,
       "has_gap": false,
-      "gap": null,
-      "gt_bleu": null,
-      "pure_bleu": null,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": true,
+      "dose_response": false
     },
     {
-      "checkpoint_sha256": "6f99fdf4d056f1ac8c781edca13cd7f3f01cad6e02fc6801dcfeb49c31816cdb",
-      "families": [
-        "ladder"
-      ],
-      "training_runs": [
-        "ladder/frac_025/best.ckpt"
-      ],
-      "primary_family": "ladder",
-      "gap_key": "ladder_025",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.086863362265763e-05,
-      "gt_bleu": 0.0004126455189661539,
-      "pure_bleu": 0.0004017768853434963,
-      "is_degenerate": true,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "722e8fd1577b99c2e7846b54429492ffeecb02eb6c1ec343e6c4c0aed16fd519",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_505/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_505",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.2771440168127004,
-      "gt_bleu": 9.712969756526272,
-      "pure_bleu": 8.435825739713572,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "75cf9569c30a766008ffddad6fc2c72c3a4caaacc9d36f1b12ef2f5c9d8ff13f",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_0.75_seed_303/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a0.75_303",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.2086592674028962,
-      "gt_bleu": 8.573002619112357,
-      "pure_bleu": 7.3643433517094605,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "847e2b710d9fa127f110c0409452079041015e4ecc6ac5ac04eeb49a891ef9ce",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_1203/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_1203",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -0.9529094196778232,
-      "gt_bleu": 9.060814263255011,
-      "pure_bleu": 8.107904843577188,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "8648347fefef31b69206130816890b8018ca1b9c35679458d105bcf8f2b23033",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_707/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_707",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -0.8905855849940494,
-      "gt_bleu": 9.857787169528539,
-      "pure_bleu": 8.96720158453449,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "8a01e57aca44d557cf32ce364aae59f854c50a2af426871e9469032c2234d072",
-      "families": [
-        "config_faithful"
-      ],
-      "training_runs": [
-        "config_faithful/seed_101/best.ckpt"
-      ],
-      "primary_family": "config_faithful",
-      "gap_key": "cf_101",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -0.6029063568173783,
-      "gt_bleu": 10.116515620379378,
-      "pure_bleu": 9.513609263562,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "8f4fc9b97d416015460a26660c068bc19371970e19c4a3bd013b972e338030ac",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_0.0_seed_303/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a0.0_303",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.1117348084090928,
-      "gt_bleu": 9.840848482867468,
-      "pure_bleu": 8.729113674458375,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "8facf591b7153b71735339e257ffa063bb8512d4ffe891459d63451f82fc8786",
-      "families": [
-        "confirmation"
-      ],
-      "training_runs": [
-        "confirmation/seed_1607/best.ckpt"
-      ],
-      "primary_family": "confirmation",
-      "gap_key": "conf_1607",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -0.8177423618909847,
-      "gt_bleu": 8.544632857016472,
-      "pure_bleu": 7.726890495125487,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "911de1fed3d10880936b7a8153b7a1d08dd9ba4b2a05b257bafe85875fa830c7",
-      "families": [
-        "config_faithful",
-        "long_schedule"
-      ],
-      "training_runs": [
-        "config_faithful/seed_202/best.ckpt",
-        "long_schedule/seed_202/best.ckpt"
-      ],
-      "primary_family": "config_faithful",
-      "gap_key": "cf_202",
-      "secondary_gap_keys": [
-        "ls_202"
-      ],
-      "has_gap": true,
-      "gap": -1.7017072014028187,
-      "gt_bleu": 10.135759351997688,
-      "pure_bleu": 8.43405215059487,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 2,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "a4dff28d059496ac563ef2c974dac189618cd0b5eae469176c63c5fb5138071b",
-      "families": [
-        "step_faithful"
-      ],
-      "training_runs": [
-        "step_faithful/seed_606/best.ckpt"
-      ],
-      "primary_family": "step_faithful",
-      "gap_key": "sf_606",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.0429684957585028,
-      "gt_bleu": 8.558574260244667,
-      "pure_bleu": 7.515605764486164,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "a599049db1979f9b13c5c62d2a961bafcbe3abfa2b848ad12f1014e04492411b",
-      "families": [
-        "confirmation"
-      ],
-      "training_runs": [
-        "confirmation/seed_1506/best.ckpt"
-      ],
-      "primary_family": "confirmation",
-      "gap_key": "conf_1506",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.0089676605047035,
-      "gt_bleu": 8.414034876936054,
-      "pure_bleu": 7.40506721643135,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "a6c28a178293372fceac03c27ae749bde7aa0e99ffe5d485634682684e3bb732",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_0.0_seed_202/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a0.0_202",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.7061800855080982,
-      "gt_bleu": 9.08458594821344,
-      "pure_bleu": 7.378405862705343,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "ac8c8c1bd515eca1b73131b4b2746d8b156b82f1c1bd386ec5ae31acc79911ba",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_0.75_seed_101/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a0.75_101",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -0.8107405224604687,
-      "gt_bleu": 8.380794217811347,
-      "pure_bleu": 7.570053695350879,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "ae4c301797837fe6ad4f25c32c3af4deb81c5d310090383fe9e66d64b0c7d166",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_0.75_seed_202/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a0.75_202",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -0.9787063108735774,
-      "gt_bleu": 8.223574429489362,
-      "pure_bleu": 7.244868118615785,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "b3ad4742d89ff446dec919b87d87d1e0db6d36b5a16aa12a81f845d0b9d78796",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_1.0_seed_202/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a1.0_202",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": 0.0,
-      "gt_bleu": 0.0,
-      "pure_bleu": 0.0,
-      "is_degenerate": true,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "b62631fc643d27f274a01e7caf7125b5dffc2a4c6efcf98be52c6c04b144f8ef",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_1.0_seed_101/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a1.0_101",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": 0.0,
-      "gt_bleu": 0.0,
-      "pure_bleu": 0.0,
-      "is_degenerate": true,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "b7b40ab5f249311687ba158ea01e022a23e6bcabc9157315fdd5e6c38f6d5646",
-      "families": [
-        "rescue"
-      ],
-      "training_runs": [
-        "rescue/seed_202_wd0/best.ckpt"
-      ],
-      "primary_family": "rescue",
-      "gap_key": "rescue_wd0",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.5866138556862328,
-      "gt_bleu": 9.876997087566306,
-      "pure_bleu": 8.290383231880073,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "baace5922f01ba413ae2e5a67b885da1370701a30284ff84a2ec65311e7a9d3f",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_0.5_seed_202/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a0.5_202",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -0.7723509742571588,
-      "gt_bleu": 8.456033660611899,
-      "pure_bleu": 7.68368268635474,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "bb98e9b2ae80b755832fb413f1b39c1db44c5da957b4509ed04755b7c7cfd387",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_1405/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_1405",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.185139514978344,
-      "gt_bleu": 8.045188535101843,
-      "pure_bleu": 6.860049020123499,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "c0bebb1692c6efe17adb3472ffcfe62c2e16923947f648c1781f539e26e1fd61",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_303/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_303",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.8537782967501908,
-      "gt_bleu": 9.104548709428274,
-      "pure_bleu": 7.250770412678083,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "c264dab831ffc585ec39b9cd8e1744497d6fddd9f57f55a2a6ae2ee8cb762ec6",
-      "families": [
-        "finetune_released"
-      ],
-      "training_runs": [
-        "finetune_released/lr1e-05_seed42/best.ckpt"
-      ],
-      "primary_family": "finetune_released",
-      "gap_key": null,
-      "secondary_gap_keys": [],
+      "id": "rescue_lr_2",
+      "family": "rescue_lr",
+      "has_dev": true,
       "has_gap": false,
-      "gap": null,
-      "gt_bleu": null,
-      "pure_bleu": null,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": true,
+      "dose_response": false
     },
     {
-      "checkpoint_sha256": "cabbe6e6bb771bedc2151a3c33f4f88f1b5e1050561af2a13cda1fb61afd87b3",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_1102/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_1102",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.1223890782898316,
-      "gt_bleu": 9.747940185437447,
-      "pure_bleu": 8.625551107147615,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "ce51e960c3972ddd9f1efe1065aca9793e7561954e7a1ecf6189bbe5a673ba0b",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_0.5_seed_303/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a0.5_303",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -1.1909481900468144,
-      "gt_bleu": 8.946014991545086,
-      "pure_bleu": 7.7550668014982715,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "d7be12e2f41a0b2aa32919e64b42ec790bb7f998ab0d629dea3417c20ea09a94",
-      "families": [
-        "ladder"
-      ],
-      "training_runs": [
-        "ladder/frac_075/best.ckpt"
-      ],
-      "primary_family": "ladder",
-      "gap_key": "ladder_075",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -0.4038217954045109,
-      "gt_bleu": 7.599032512505718,
-      "pure_bleu": 7.195210717101207,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "e1968f07725ea464e40143debe646ea3078052fbb276ba5cb83da2a47453df84",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_0.0_seed_101/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a0.0_101",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -0.8044045718134853,
-      "gt_bleu": 9.436094206834762,
-      "pure_bleu": 8.631689635021276,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
-    },
-    {
-      "checkpoint_sha256": "e3ef292316a95b9a42955dafced04376aa0c64124dc5dc210d0dbe3d3c31bd7d",
-      "families": [
-        "finetune_released"
-      ],
-      "training_runs": [
-        "finetune_released/lr5e-06_seed42/best.ckpt"
-      ],
-      "primary_family": "finetune_released",
-      "gap_key": null,
-      "secondary_gap_keys": [],
+      "id": "rescue_lr_3",
+      "family": "rescue_lr",
+      "has_dev": true,
       "has_gap": false,
-      "gap": null,
-      "gt_bleu": null,
-      "pure_bleu": null,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": true,
+      "dose_response": false
     },
     {
-      "checkpoint_sha256": "e5fc6238a92856b83d8471bf4ed0cdcc0c354d2b610cf57a1727e26ebc05362a",
-      "families": [
-        "distillation"
-      ],
-      "training_runs": [
-        "distillation/alpha_0.25_seed_303/best.ckpt"
-      ],
-      "primary_family": "distillation",
-      "gap_key": "distill_a0.25_303",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": -0.7710025818722475,
-      "gt_bleu": 9.337979040250229,
-      "pure_bleu": 8.566976458377981,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "id": "rescue_lr_4",
+      "family": "rescue_lr",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
     },
     {
-      "checkpoint_sha256": "f081cfd2cca93a3610ed3a13d34bf9b3cb36db5390fda83181db84abab1aa428",
-      "families": [
-        "released"
-      ],
-      "training_runs": [
-        "released/backTranslation_PHIX_model/best.ckpt"
-      ],
-      "primary_family": "released",
-      "gap_key": "released",
-      "secondary_gap_keys": [],
-      "has_gap": true,
-      "gap": 10.24331582979233,
-      "gt_bleu": 12.777148564612425,
-      "pure_bleu": 23.020464394404755,
-      "is_degenerate": false,
-      "is_released": true,
-      "training_run_count": 1,
-      "unique_binary": true
+      "id": "rescue_lr_5",
+      "family": "rescue_lr",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
     },
     {
-      "checkpoint_sha256": "fde191ae41712a9fd8647bcd6a8098ea172a106896ee859d9a42953011695d42",
-      "families": [
-        "reconstructions"
-      ],
-      "training_runs": [
-        "reconstructions/seed_101/best.ckpt"
-      ],
-      "primary_family": "reconstructions",
-      "gap_key": "reco_101",
-      "secondary_gap_keys": [],
+      "id": "rescue_lr_6",
+      "family": "rescue_lr",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "rescue_lr_7",
+      "family": "rescue_lr",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "rescue_lr_8",
+      "family": "rescue_lr",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "rescue2_1",
+      "family": "rescue2",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "rescue2_2",
+      "family": "rescue2",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "rescue2_3",
+      "family": "rescue2",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "rescue2_4",
+      "family": "rescue2",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "rescue2_5",
+      "family": "rescue2",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "rescue2_6",
+      "family": "rescue2",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "rescue2_7",
+      "family": "rescue2",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "rescue2_8",
+      "family": "rescue2",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "rescue2_9",
+      "family": "rescue2",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "rescue2_10",
+      "family": "rescue2",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "rescue2_11",
+      "family": "rescue2",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "big_arch_1",
+      "family": "big_arch",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "big_arch_2",
+      "family": "big_arch",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "big_arch_3",
+      "family": "big_arch",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "big_arch_4",
+      "family": "big_arch",
+      "has_dev": true,
+      "has_gap": false,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "distill_a0.0_s101",
+      "family": "distillation",
+      "alpha": 0.0,
+      "seed": 101,
+      "has_dev": true,
       "has_gap": true,
-      "gap": -0.797690953765084,
-      "gt_bleu": 9.244213728671678,
-      "pure_bleu": 8.446522774906594,
-      "is_degenerate": false,
-      "is_released": false,
-      "training_run_count": 1,
-      "unique_binary": true
+      "gate": false,
+      "dose_response": true
+    },
+    {
+      "id": "distill_a0.0_s202",
+      "family": "distillation",
+      "alpha": 0.0,
+      "seed": 202,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": false,
+      "dose_response": true
+    },
+    {
+      "id": "distill_a0.0_s303",
+      "family": "distillation",
+      "alpha": 0.0,
+      "seed": 303,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": false,
+      "dose_response": true
+    },
+    {
+      "id": "distill_a0.25_s101",
+      "family": "distillation",
+      "alpha": 0.25,
+      "seed": 101,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": false,
+      "dose_response": true
+    },
+    {
+      "id": "distill_a0.25_s202",
+      "family": "distillation",
+      "alpha": 0.25,
+      "seed": 202,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": false,
+      "dose_response": true
+    },
+    {
+      "id": "distill_a0.25_s303",
+      "family": "distillation",
+      "alpha": 0.25,
+      "seed": 303,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": false,
+      "dose_response": true
+    },
+    {
+      "id": "distill_a0.5_s101",
+      "family": "distillation",
+      "alpha": 0.5,
+      "seed": 101,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": false,
+      "dose_response": true
+    },
+    {
+      "id": "distill_a0.5_s202",
+      "family": "distillation",
+      "alpha": 0.5,
+      "seed": 202,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": false,
+      "dose_response": true
+    },
+    {
+      "id": "distill_a0.5_s303",
+      "family": "distillation",
+      "alpha": 0.5,
+      "seed": 303,
+      "has_dev": false,
+      "has_gap": false,
+      "gate": false,
+      "dose_response": false,
+      "note": "OOM under beam-3 protocol; completed only under greedy (batch=64, grad_accum=4); see greedy registry"
+    },
+    {
+      "id": "distill_a0.75_s101",
+      "family": "distillation",
+      "alpha": 0.75,
+      "seed": 101,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": false,
+      "dose_response": true
+    },
+    {
+      "id": "distill_a0.75_s202",
+      "family": "distillation",
+      "alpha": 0.75,
+      "seed": 202,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": false,
+      "dose_response": true
+    },
+    {
+      "id": "distill_a0.75_s303",
+      "family": "distillation",
+      "alpha": 0.75,
+      "seed": 303,
+      "has_dev": false,
+      "has_gap": false,
+      "gate": false,
+      "dose_response": false,
+      "note": "OOM under beam-3 protocol; completed only under greedy (batch=64, grad_accum=4); see greedy registry"
+    },
+    {
+      "id": "distill_a1.0_s101",
+      "family": "distillation",
+      "alpha": 1.0,
+      "seed": 101,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": false,
+      "dose_response": true
+    },
+    {
+      "id": "distill_a1.0_s202",
+      "family": "distillation",
+      "alpha": 1.0,
+      "seed": 202,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": false,
+      "dose_response": true
+    },
+    {
+      "id": "distill_a1.0_s303",
+      "family": "distillation",
+      "alpha": 1.0,
+      "seed": 303,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": false,
+      "dose_response": true
+    },
+    {
+      "id": "bt_retrained",
+      "family": "bt_retrained_holdout",
+      "has_dev": false,
+      "has_gap": false,
+      "gate": false,
+      "dose_response": false,
+      "note": "holdout-only control"
+    },
+    {
+      "id": "crossfit_A",
+      "family": "crossfit",
+      "has_dev": false,
+      "has_gap": false,
+      "gate": false,
+      "dose_response": false,
+      "note": "holdout-only control"
+    },
+    {
+      "id": "crossfit_B",
+      "family": "crossfit",
+      "has_dev": false,
+      "has_gap": false,
+      "gate": false,
+      "dose_response": false,
+      "note": "holdout-only control"
+    },
+    {
+      "id": "sf_1701",
+      "family": "step_faithful",
+      "seed": 1701,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "sf_1702",
+      "family": "step_faithful",
+      "seed": 1702,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "sf_1703",
+      "family": "step_faithful",
+      "seed": 1703,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "sf_1704",
+      "family": "step_faithful",
+      "seed": 1704,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "sf_1705",
+      "family": "step_faithful",
+      "seed": 1705,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "sf_1706",
+      "family": "step_faithful",
+      "seed": 1706,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "sf_1707",
+      "family": "step_faithful",
+      "seed": 1707,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": false
+    },
+    {
+      "id": "sf_1708",
+      "family": "step_faithful",
+      "seed": 1708,
+      "has_dev": true,
+      "has_gap": true,
+      "gate": true,
+      "dose_response": false
     }
-  ]
+  ],
+  "_validation": {
+    "planned_entries": 70,
+    "completed_entries": 68,
+    "failed_entries": 2,
+    "released_entries": 1,
+    "has_dev": 65,
+    "gate_eligible": 52,
+    "has_gap": 41,
+    "dev_only": 24,
+    "holdout_only": 3,
+    "dose_response_calculation": "14 recon + 4 ladder + 4 cfaith + 2 stepfaith + 2 confirm + 1 long-sched + 13 distill + 1 wd0 rescue = 41",
+    "gate_calculation": "6+8+8+12+4+4+2+4+2+2 = 52 non-distillation with dev metrics",
+    "dev_total_calculation": "52 non-distillation + 13 distillation = 65",
+    "family_rows_sum_check": "planned 70 / completed 68 / has_gap 41 / has_dev 65 (all match summary)"
+  }
 }

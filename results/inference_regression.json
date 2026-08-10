@@ -1,0 +1,87 @@
+{
+ "sacrebleu_signature": "2.5.1",
+ "beam_settings": "size=3, alpha=-1, max_len=50",
+ "smooth_method": "exp",
+ "effective_order": false,
+ "tokenizer": "sacreBLEU builtin 13a (language-pair-independent)",
+ "inference_path": "make_back_translation_model() + back_translate() -- identical code path for ALL checkpoints",
+ "all_vocabs_byte_identical": true,
+ "n_unique_txt_vocab_hashes": 1,
+ "n_unique_gls_vocab_hashes": 1,
+ "released_rec_canonical": 12.78,
+ "released_rec_observed": 12.78,
+ "rec_regression_pass": true,
+ "released_teacher_forced_dev_nll": 3.235,
+ "reconstruction_teacher_forced_dev_nll_range": [
+  2.4201050158514494,
+  2.49134280981607
+ ],
+ "per_checkpoint_rec": {
+  "released": 12.78,
+  "reco_101": 9.24,
+  "reco_202": 8.22,
+  "reco_303": 9.1
+ },
+ "vocab_hashes": {
+  "reco_101": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "reco_202": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "reco_303": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "reco_404": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "reco_505": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "reco_606": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "reco_707": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "reco_808": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "reco_909": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "reco_1001": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "reco_1102": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "reco_1203": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "reco_1304": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "reco_1405": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  },
+  "released": {
+   "txt": "f45eb2df34ab02ac...",
+   "gls": "149ed86e65aec4af..."
+  }
+ }
+}

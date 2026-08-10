@@ -1,0 +1,18 @@
+{
+ "checkpoints/ladder/frac_0125/best.ckpt": {
+  "dev_bleu": 0.0005086564536843932,
+  "time_s": 216.21451377868652
+ },
+ "checkpoints/ladder/frac_025/best.ckpt": {
+  "dev_bleu": 0.0005018273015620924,
+  "time_s": 215.93364644050598
+ },
+ "checkpoints/ladder/frac_05/best.ckpt": {
+  "dev_bleu": 5.9437492274856085,
+  "time_s": 3.838740587234497
+ },
+ "checkpoints/ladder/frac_075/best.ckpt": {
+  "dev_bleu": 7.162627721623878,
+  "time_s": 3.5953309535980225
+ }
+}

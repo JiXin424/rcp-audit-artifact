@@ -1,0 +1,130 @@
+{
+ "checkpoints/reconstructions/seed_1001/epoch_0025.ckpt": {
+  "dev_bleu": 9.327816172593797,
+  "time_s": 14.337764024734497
+ },
+ "checkpoints/reconstructions/seed_1001/epoch_0050.ckpt": {
+  "dev_bleu": 9.327816172593797,
+  "time_s": 10.300822496414185
+ },
+ "checkpoints/reconstructions/seed_101/epoch_0025.ckpt": {
+  "dev_bleu": 8.507170696935113,
+  "time_s": 9.499696969985962
+ },
+ "checkpoints/reconstructions/seed_1102/epoch_0025.ckpt": {
+  "dev_bleu": 8.666174925193639,
+  "time_s": 5.532922029495239
+ },
+ "checkpoints/reconstructions/seed_1203/epoch_0025.ckpt": {
+  "dev_bleu": 7.451828256480625,
+  "time_s": 5.347395420074463
+ },
+ "checkpoints/reconstructions/seed_1304/epoch_0025.ckpt": {
+  "dev_bleu": 8.925766493754413,
+  "time_s": 14.68471908569336
+ },
+ "checkpoints/reconstructions/seed_1405/epoch_0025.ckpt": {
+  "dev_bleu": 7.217484111267986,
+  "time_s": 10.106221914291382
+ },
+ "checkpoints/reconstructions/seed_202/epoch_0025.ckpt": {
+  "dev_bleu": 6.880618306021232,
+  "time_s": 10.131354093551636
+ },
+ "checkpoints/reconstructions/seed_303/epoch_0025.ckpt": {
+  "dev_bleu": 7.724289556538267,
+  "time_s": 5.801285028457642
+ },
+ "checkpoints/reconstructions/seed_303/epoch_0050.ckpt": {
+  "dev_bleu": 7.724289556538267,
+  "time_s": 5.466624736785889
+ },
+ "checkpoints/reconstructions/seed_404/epoch_0025.ckpt": {
+  "dev_bleu": 7.325223918868315,
+  "time_s": 14.61829948425293
+ },
+ "checkpoints/reconstructions/seed_505/epoch_0025.ckpt": {
+  "dev_bleu": 9.04083951359973,
+  "time_s": 9.974249362945557
+ },
+ "checkpoints/reconstructions/seed_606/epoch_0025.ckpt": {
+  "dev_bleu": 6.486004404603312,
+  "time_s": 9.07290005683899
+ },
+ "checkpoints/reconstructions/seed_707/epoch_0025.ckpt": {
+  "dev_bleu": 9.371864923774385,
+  "time_s": 5.529494047164917
+ },
+ "checkpoints/reconstructions/seed_707/epoch_0050.ckpt": {
+  "dev_bleu": 9.371864923774385,
+  "time_s": 5.39860200881958
+ },
+ "checkpoints/reconstructions/seed_808/epoch_0025.ckpt": {
+  "dev_bleu": 8.969757552588877,
+  "time_s": 12.770954608917236
+ },
+ "checkpoints/reconstructions/seed_909/epoch_0025.ckpt": {
+  "dev_bleu": 7.842267731153712,
+  "time_s": 6.993447542190552
+ },
+ "checkpoints/config_faithful/seed_101/best.ckpt": {
+  "dev_bleu": 9.83014708421366,
+  "time_s": 8.058892726898193
+ },
+ "checkpoints/config_faithful/seed_202/best.ckpt": {
+  "dev_bleu": 8.774732881793268,
+  "time_s": 6.298000335693359
+ },
+ "checkpoints/config_faithful/seed_303/best.ckpt": {
+  "dev_bleu": 7.367036024342177,
+  "time_s": 4.912637948989868
+ },
+ "checkpoints/config_faithful/seed_404/best.ckpt": {
+  "dev_bleu": 7.927592129179093,
+  "time_s": 3.963728666305542
+ },
+ "checkpoints/step_faithful/seed_505/best.ckpt": {
+  "dev_bleu": 9.083931135619897,
+  "time_s": 8.329356908798218
+ },
+ "checkpoints/step_faithful/seed_606/best.ckpt": {
+  "dev_bleu": 8.128788806775118,
+  "time_s": 6.864159822463989
+ },
+ "checkpoints/confirmation/seed_1506/best.ckpt": {
+  "dev_bleu": 8.13120363205099,
+  "time_s": 4.012563467025757
+ },
+ "checkpoints/confirmation/seed_1607/best.ckpt": {
+  "dev_bleu": 7.965121766577706,
+  "time_s": 4.342670679092407
+ },
+ "checkpoints/ladder/frac_0125/best.ckpt": {
+  "dev_bleu": 0.0005086564536843932,
+  "time_s": 216.21451377868652
+ },
+ "checkpoints/ladder/frac_025/best.ckpt": {
+  "dev_bleu": 0.0005018273015620924,
+  "time_s": 215.93364644050598
+ },
+ "checkpoints/ladder/frac_05/best.ckpt": {
+  "dev_bleu": 5.9437492274856085,
+  "time_s": 3.838740587234497
+ },
+ "checkpoints/ladder/frac_075/best.ckpt": {
+  "dev_bleu": 7.162627721623878,
+  "time_s": 3.5953309535980225
+ },
+ "checkpoints/long_schedule/seed_202/best.ckpt": {
+  "dev_bleu": 8.774732881793268,
+  "time_s": 8.2157621383667
+ },
+ "checkpoints/rescue/seed_202_wd0/best.ckpt": {
+  "dev_bleu": 8.94020691456465,
+  "time_s": 6.890811443328857
+ },
+ "checkpoints/distillation/alpha_1.0_seed_101/best.ckpt": {
+  "dev_bleu": 0.0,
+  "time_s": 0.9689102172851562
+ }
+}

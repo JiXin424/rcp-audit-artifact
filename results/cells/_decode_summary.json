@@ -1,0 +1,215 @@
+{
+  "n_cells": 30,
+  "summary": [
+    {
+      "evaluator": "distill_0.0_101",
+      "system": "GT-v1",
+      "bleu": 9.316009827135542,
+      "nll": 2.5640312408885917,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.0_101",
+      "system": "TN-PURE-v1",
+      "bleu": 8.368131100881367,
+      "nll": 2.8008476882795743,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.0_202",
+      "system": "GT-v1",
+      "bleu": 9.570671455983403,
+      "nll": 2.587423872264552,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.0_202",
+      "system": "TN-PURE-v1",
+      "bleu": 8.302614084980194,
+      "nll": 2.846490469027924,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.0_303",
+      "system": "GT-v1",
+      "bleu": 9.318646734731518,
+      "nll": 2.563674571076854,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.0_303",
+      "system": "TN-PURE-v1",
+      "bleu": 8.49130870409928,
+      "nll": 2.850032621002092,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.25_101",
+      "system": "GT-v1",
+      "bleu": 8.743393851063603,
+      "nll": 2.582743251550047,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.25_101",
+      "system": "TN-PURE-v1",
+      "bleu": 7.913035995028198,
+      "nll": 2.8281621191418953,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.25_202",
+      "system": "GT-v1",
+      "bleu": 9.146286037696601,
+      "nll": 2.569890189246286,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.25_202",
+      "system": "TN-PURE-v1",
+      "bleu": 7.902837551350098,
+      "nll": 2.8426430870690185,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.25_303",
+      "system": "GT-v1",
+      "bleu": 8.846776825084408,
+      "nll": 2.5698344341725785,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.25_303",
+      "system": "TN-PURE-v1",
+      "bleu": 8.19392755440789,
+      "nll": 2.8242137171569994,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.5_101",
+      "system": "GT-v1",
+      "bleu": 8.908129197874372,
+      "nll": 2.6263616449897214,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.5_101",
+      "system": "TN-PURE-v1",
+      "bleu": 8.215554327120824,
+      "nll": 2.8847504734074474,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.5_202",
+      "system": "GT-v1",
+      "bleu": 9.323484078697676,
+      "nll": 2.651504987698042,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.5_202",
+      "system": "TN-PURE-v1",
+      "bleu": 8.047008653995784,
+      "nll": 2.913036182101244,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.5_303",
+      "system": "GT-v1",
+      "bleu": 8.49219017837023,
+      "nll": 2.6503980706042487,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.5_303",
+      "system": "TN-PURE-v1",
+      "bleu": 8.193508198635493,
+      "nll": 2.9188122925091786,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.75_101",
+      "system": "GT-v1",
+      "bleu": 6.695372721153688,
+      "nll": 2.863653816780548,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.75_101",
+      "system": "TN-PURE-v1",
+      "bleu": 6.6193795104777795,
+      "nll": 3.0623480067649385,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.75_202",
+      "system": "GT-v1",
+      "bleu": 7.131355989567963,
+      "nll": 2.8310648588407283,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.75_202",
+      "system": "TN-PURE-v1",
+      "bleu": 6.865690525704809,
+      "nll": 3.053335609603991,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.75_303",
+      "system": "GT-v1",
+      "bleu": 7.908892430253328,
+      "nll": 2.825864269665197,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_0.75_303",
+      "system": "TN-PURE-v1",
+      "bleu": 7.38677876135805,
+      "nll": 3.056748825439596,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_1.0_101",
+      "system": "GT-v1",
+      "bleu": 0.007551982001362107,
+      "nll": 8.809157382543098,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_1.0_101",
+      "system": "TN-PURE-v1",
+      "bleu": 0.007551982001362107,
+      "nll": 8.947911383335448,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_1.0_202",
+      "system": "GT-v1",
+      "bleu": 0.005508759818986952,
+      "nll": 8.697486023805794,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_1.0_202",
+      "system": "TN-PURE-v1",
+      "bleu": 0.004751438264222309,
+      "nll": 8.769749090838182,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_1.0_303",
+      "system": "GT-v1",
+      "bleu": 0.007551982001362107,
+      "nll": 9.001331109743427,
+      "n_items": 641
+    },
+    {
+      "evaluator": "distill_1.0_303",
+      "system": "TN-PURE-v1",
+      "bleu": 0.007551982001362107,
+      "nll": 9.134615366027194,
+      "n_items": 641
+    }
+  ]
+}
