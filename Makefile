@@ -97,7 +97,7 @@ probe-multiplicity:
 # mirror retains the per-binary schema (47 unique-binary entries) for
 # backward compatibility with the round-2 Makefile targets above; the scripts
 # as committed will not run cleanly against the per-binary registry.
-# The reported numbers (70 trained, 36 non-degenerate, +9.56 origin effect,
+# The reported numbers (78 trained, 44 non-degenerate, +9.56 origin effect,
 # SMD 0.065, +14.51 estimand) are verified in CI via check_paper_numbers.py
 # string assertions against main_lre.tex, and the canonical JSON values live
 # in results/paper_numbers.json (n_total_trained, n_non_degenerate,
