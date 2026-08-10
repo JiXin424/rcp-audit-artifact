@@ -44,7 +44,8 @@ def main():
     for jpath, regex, tol, desc in CHECKS:
         jval = jget(NUMS, jpath)
         if jval is None:
-            print(f"  [SKIP] {desc}: '{jpath}' not in JSON")
+            print(f"  [FAIL] {desc}: '{jpath}' not in JSON — CI must not skip missing paths")
+            failures += 1
             continue
         m = re.search(regex, TEX)
         if not m:
@@ -67,7 +68,12 @@ def main():
 
     # Critical string presence
     for s, d in [("$+10.24$", "gap"), ("23.02", "PURE"), ("12.78", "REC"),
-                 ("78.8", "readout"), ("13.38", "dev BLEU")]:
+                 ("78.8", "readout"), ("13.38", "dev BLEU"),
+                 ("+9.56", "donor-pool origin effect (matched)"),
+                 ("0.065", "matched SMD Jaccard"),
+                 ("+14.51", "donor-origin estimand"),
+                 ("In total 70 from-scratch", "total trained runs (accounting)"),
+                 ("36 non-degenerate", "non-degenerate count")]:
         if s in TEX:
             print(f"  [ ok ] {d}: '{s}'")
         else:

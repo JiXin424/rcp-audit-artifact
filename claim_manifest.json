@@ -1,0 +1,93 @@
+{
+  "description": "Claim-to-file manifest mapping each headline number in main_lre.tex to its source file and verification command. This enables automated checking that every reported value traces to a canonical source.",
+  "schema": "claim-manifest-v1",
+  "claims": [
+    {
+      "claim": "Headline PURE-REC gap +10.24",
+      "tex_value": "+10.24",
+      "source_file": "results/paper_numbers.json:headline.gap",
+      "verification": "make core-audit",
+      "tolerance": 0.01
+    },
+    {
+      "claim": "Headline PURE BLEU 23.02",
+      "tex_value": "23.02",
+      "source_file": "results/paper_numbers.json:headline.pure",
+      "verification": "make core-audit",
+      "tolerance": 0.01
+    },
+    {
+      "claim": "Headline REC BLEU 12.78",
+      "tex_value": "12.78",
+      "source_file": "results/paper_numbers.json:headline.gt",
+      "verification": "make core-audit",
+      "tolerance": 0.01
+    },
+    {
+      "claim": "Donor-cluster bootstrap CI [8.87, 11.64]",
+      "tex_value": "[8.87, 11.64]",
+      "source_file": "results/paper_numbers.json:headline_ci",
+      "verification": "python3 scripts/e_donor_cluster_bootstrap.py"
+    },
+    {
+      "claim": "14-seed prediction interval [-1.94, -0.46]",
+      "tex_value": "[-1.94, -0.46]",
+      "source_file": "results/paper_numbers.json:reco_14seed_PI.PI",
+      "verification": "python3 scripts/e_seed_pi.py"
+    },
+    {
+      "claim": "Training-pool readout BLEU 78.8",
+      "tex_value": "78.8",
+      "source_file": "results/full_readout.json:released.train_bleu",
+      "verification": "python3 scripts/e_full_readout.py"
+    },
+    {
+      "claim": "Released dev BLEU-4 13.38",
+      "tex_value": "13.38",
+      "source_file": "results/dev_gate_table.json:released.dev_bleu4",
+      "verification": "python3 scripts/e_dev_uniform.py"
+    },
+    {
+      "claim": "Matched attenuation 90.5%",
+      "tex_value": "90.5",
+      "source_file": "results/canonical_matched_subset.json:matched_confidence1.attenuation.pct",
+      "verification": "python3 scripts/e_matched_subset_residual_ci.py"
+    },
+    {
+      "claim": "Total trained runs 70",
+      "tex_value": "70",
+      "source_file": "results/accounting_table.json:headline_counts.total_trained_runs",
+      "verification": "python3 scripts/build_accounting_table.py"
+    },
+    {
+      "claim": "Non-degenerate decoded runs 36",
+      "tex_value": "36",
+      "source_file": "results/accounting_table.json:headline_counts.total_non_degenerate",
+      "verification": "python3 scripts/build_accounting_table.py"
+    },
+    {
+      "claim": "Matched donor-pool origin effect +9.56",
+      "tex_value": "+9.56",
+      "source_file": "results/matched_donor_pool.json:matched_subsets.caliper_0.05.origin_effect",
+      "verification": "python3 scripts/e_matched_donor_pool.py"
+    },
+    {
+      "claim": "Matched donor-pool SMD 0.065",
+      "tex_value": "0.065",
+      "source_file": "results/matched_donor_pool.json:matched_subsets.caliper_0.05.smd_jaccard",
+      "verification": "python3 scripts/e_matched_donor_pool.py"
+    },
+    {
+      "claim": "Donor origin estimand +14.51",
+      "tex_value": "+14.51",
+      "source_file": "results/paper_numbers.json:donor_origin.estimand",
+      "verification": "python3 scripts/e_donor_origin.py"
+    }
+  ],
+  "reproduction_layers": {
+    "L1": "Recompute selected reported statistics from committed per-item decodes (make core-audit). Does NOT retrain or decode from checkpoints.",
+    "L2": "Analysis re-execution: each script runs from committed per-checkpoint data.",
+    "L3": "Model re-evaluation: re-decode from checkpoint weights (requires training bundle).",
+    "L4": "From-scratch retraining (requires PHOENIX-2014T license, environment, ~200 GPU-hours)."
+  }
+}
