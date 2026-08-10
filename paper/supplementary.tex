@@ -122,7 +122,7 @@ Table~\ref{tab:checkpoint_registry} is the definitive registry of every BT evalu
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Canonical checkpoint registry. 70 planned training runs, all 70 completed training. ``Beam-3 evaluation'' means a run was beam-3 decoded on at least the development set; of these 70 runs, 43 also have a canonical PHX-public PURE--REC gap under the \S\ref{sec:retrieval} donor registry (the remaining 27 were beam-3 evaluated on dev only and lack a canonical PHX-public PURE--REC gap). The 43 decoded runs reduce to 42 unique weight binaries: the long-schedule seed-202 artifact is byte-identical to the validation-freq-misread seed-202 artifact (same wandb run, identical per-step losses, identical best-checkpoint SHA-256) and counts once. 67 non-holdout runs have dev metrics; 52 of these are non-distillation and enter the competence gate. 42 unique runs have both dev BLEU-4 and PHX-public PURE--REC gap (extrapolation-eligible). Plus the released original. Each family row's columns sum to the Total row.}
+\caption{Canonical checkpoint registry. 78 planned training runs, all 78 completed training. ``Beam-3 evaluation'' means a run was beam-3 decoded on at least the development set; of these 78 runs, 49 also have a canonical PHX-public PURE--REC gap under the \S\ref{sec:retrieval} donor registry (the remaining 29 were beam-3 evaluated on dev only and lack a canonical PHX-public PURE--REC gap). The 49 decoded runs reduce to 48 unique weight binaries: the long-schedule seed-202 artifact is byte-identical to the validation-freq-misread seed-202 artifact (same wandb run, identical per-step losses, identical best-checkpoint SHA-256) and counts once. 75 non-holdout runs have dev metrics; 52 of these are non-distillation and enter the competence gate. 48 unique runs have both dev BLEU-4 and PHX-public PURE--REC gap (extrapolation-eligible). Plus the released original. Each family row's columns sum to the Total row.}
 \label{tab:checkpoint_registry}
 \begin{tabular}{p{4.2cm}p{1.0cm}p{1.5cm}p{1.4cm}p{1.4cm}p{3.0cm}}
 \toprule
@@ -134,15 +134,15 @@ Rescue lr (A/B $\times$ 4) & 8 & 8 & 0 & 8 & gate counts only \\
 Rescue expanded & 12 & 12 & 1 & 12 & gate; wd0 also dose--resp., perturb. \\
 Train-pool ladder & 4 & 4 & 4 & 4 & dose--resp., gap ranges \\
 Validation-freq-misread & 4 & 4 & 4 & 4 & dose--resp. \\
-Step-corrected & 2 & 2 & 2 & 2 & dose--resp., validation-frequency \\
+Step-corrected & 10 & 10 & 10 & 10 & validation-frequency; dose--resp.\ (2/10) \\
 Large-arch (A1--A4) & 4 & 4 & 0 & 4 & competence attempt \\
 Confirmation & 2 & 2 & 2 & 2 & dose--resp., family-side confirm. \\
 Long-schedule & 2 & 2 & 1 & 2 & gate; best seed dose--resp. (dev 10.02) \\
 BT-retrained & 1 & 1 & 0 & 0 & holdout series \\
 Cross-fit A/B & 2 & 2 & 0 & 0 & holdout series \\
-Distillation students & 15 & 15 & 15 & 15 & ladder, dose--resp. \\
+Distillation students & 15 & 15 & 13 & 15 & ladder, dose--resp. \\
 \midrule
-Total & 70 & 70 & 43 & 67 & \\
+Total & 78 & 78 & 49 & 75 & \\
 Released original & --- & --- & 1 & 1 & audit target (not trained) \\
 \bottomrule
 \end{tabular}
@@ -749,7 +749,7 @@ The tables in this section were moved from the main text to satisfy the journal 
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Decoded-text metric sensitivity under the original SLRTP2025 evaluator (641 sequences). The reversal direction is consistent across decoded-text metrics; teacher-forced NLL and pose-DTWp do not reproduce it (full protocol details in Sup.~F).}
+\caption{Decoded-text metric sensitivity under the original SLRTP2025 evaluator (641 sequences). The reversal direction is consistent across decoded-text metrics; teacher-forced NLL does not reproduce it (SI~Sup.~O). Item-level pose-DTWp is not reported (see main text).}
 \label{tab:s1_metric_sensitivity}
 \begin{tabular}{lrrrrrr}
 \toprule

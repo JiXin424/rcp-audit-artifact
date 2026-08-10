@@ -72,8 +72,8 @@ def main():
                  ("+9.56", "donor-pool origin effect (matched)"),
                  ("0.065", "matched SMD Jaccard"),
                  ("+14.51", "donor-origin estimand"),
-                 ("In total 70 from-scratch", "total trained runs (accounting)"),
-                 ("36 non-degenerate", "non-degenerate count")]:
+                 ("In total 78 from-scratch", "total trained runs (accounting)"),
+                 ("44 non-degenerate", "non-degenerate count")]:
         if s in TEX:
             print(f"  [ ok ] {d}: '{s}'")
         else:

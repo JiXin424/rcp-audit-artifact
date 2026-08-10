@@ -19,7 +19,11 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = ROOT / "artifact/claim_manifest.json"
+# Manifest lives at artifact/claim_manifest.json in RCP, claim_manifest.json at
+# the repo root in the artifact mirror. Resolve whichever exists.
+_MANIFEST_PRIMARY = ROOT / "artifact" / "claim_manifest.json"
+_MANIFEST_FALLBACK = ROOT / "claim_manifest.json"
+MANIFEST = _MANIFEST_PRIMARY if _MANIFEST_PRIMARY.exists() else _MANIFEST_FALLBACK
 ACCOUNTING = ROOT / "results/accounting_table.json"
 PAPER = ROOT / "main_lre.tex"
 
@@ -76,15 +80,9 @@ def main():
     if hc["total_unique_binaries"] > hc["total_decoded_gap_panel"]:
         errors.append("accounting: unique > decoded (impossible)")
 
-    # (3) Paper headline counts match accounting
+    # (3) Paper headline counts match accounting (dynamic from registry)
     tex = open(PAPER).read()
-    expected_counts = {
-        "70": hc["total_trained_runs"],
-        "41": hc["total_decoded_gap_panel"],
-        "40": hc["total_unique_binaries"],
-        "36": hc["total_non_degenerate"],
-    }
-    # Check the bold total row appears: \textbf{70} & \textbf{41} ...
+    # Check the bold total row appears, e.g. \textbf{78} & \textbf{49} ...
     total_row = (f"\\textbf{{{hc['total_trained_runs']}}} & "
                  f"\\textbf{{{hc['total_decoded_gap_panel']}}} & "
                  f"\\textbf{{{hc['total_unique_binaries']}}} & "

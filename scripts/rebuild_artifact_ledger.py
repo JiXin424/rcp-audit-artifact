@@ -11,7 +11,6 @@ ROOT = Path(__file__).resolve().parents[1]
 # Include the artifact directory + figures (paper assets)
 LEDGER_DIRS = [
     ARTI,
-    ARTI / 'figures',
 ]
 SKIP_DIRS = {'__pycache__', '.git', 'tests/__pycache__'}
 SKIP_FILES = {'.DS_Store', '__pycache__'}
@@ -99,7 +98,7 @@ key_files = [
     'paper/dose_response.pdf',
     'paper/original_trajectory.pdf',
     'paper/checkpoint_sensitivity_schematic.pdf',
-    'paper/generated_figures/fig3_competence.pdf',
+    'figures/fig3_competence.pdf',  # paper/generated_figures symlinks to ../figures
 ]
 print('\nKey files coverage:')
 for kf in key_files:
