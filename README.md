@@ -2,7 +2,7 @@
 
 This artifact accompanies the manuscript:
 
-**"A Reproducibility Audit of the Released SLRTP2025 Back-Translation Evaluator"**
+**"Public-Artifact Sufficiency Audit of the SLRTP2025 Back-Translation Evaluator: A Failed Reconstruction and Descriptive Probe Analysis"**
 
 submitted to *Language Resources and Evaluation* (Springer 10579). LRE is
 **single-blind**; author information appears in the paper itself. The artifact
