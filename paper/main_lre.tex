@@ -204,6 +204,36 @@ Reconstructions (mean) & 0.572 & 1.82 & 8.35 & 2.66 & 8.13 \\
 \label{sec:training_diag}
 The reconstruction training logs (\texttt{checkpoints/*/training\_log.json}, $n{=}43$) record per-epoch train/dev NLL and learning rate. All recipe-conditioned runs use effective batch size 256 (physical batch 64 $\times$ gradient accumulation 4), Adam (1e-3, weight decay 1e-3), and the plateau $\times0.8$ schedule on dev NLL, with identical config (\texttt{config\_sha256} \texttt{0321104a\ldots}) and byte-identical vocabularies to the released evaluator. The median train-NLL trajectory is healthy (epoch 1: 5.83; epoch 5: 2.99; epoch 10: 2.54; epoch 25: 2.09 across 28 reconstruction logs), confirming normal optimization. Per-step loss, gradient norm, and per-epoch teacher-forced token accuracy are not archived (only per-epoch NLL aggregates were logged); we therefore cannot rule out a subtle scheduler-timing or normalization difference, which is consistent with our scoped ``failed reconstruction attempt'' framing. A 25$\to$12.5\,fps pose-subsampling regression test (\texttt{scripts/test\_fps\_regression.py}) passes on 8 released pose tensors, ruling out double subsampling. Full diagnostics in \texttt{results/robustness\_diagnostics.json} and \texttt{results/fps\_regression\_test.json}.
 
+\paragraph{Protocol robustness: three training-protocol variants.}
+\label{sec:protocol_robustness}
+The original reconstruction training (\texttt{train\_matched.py}) differs from the released \texttt{config.yaml} in four respects: (i) the loss omits the recognition/CTC term despite \texttt{recognition\_loss\_weight=1.0}; (ii) dev validation runs once per epoch rather than every \texttt{validation\_freq=14} optimizer steps (JoeyNMT semantics); (iii) the \texttt{--selection bleu} branch's \texttt{improved} flag is hard-coded \texttt{False}, so it never saves a BLEU-best checkpoint; (iv) the released checkpoint uses beam-search evaluation while our original runs used NLL or greedy decode. To isolate whether these differences explain the competence gap or the non-reproduction, we trained three protocol variants on the same released config, architecture, data, and vocabularies:
+
+\begin{itemize}\itemsep0pt
+\item \emph{Translation-only protocol} (original; seeds 101--606, 707--1405, 1701--1708): translation cross-entropy only (the CTC term is read from config but not added to the loss); epoch-level validation; NLL checkpoint selection. This is the protocol used for all main-text results.
+\item \emph{Joint-loss protocol (greedy selection)} (seeds 1801--1808): corrects (i)--(iii)---joint CTC recognition loss ($w{=}1.0$) plus translation CE; step-level validation every 14 optimizer steps; decoded-BLEU checkpoint selection via greedy decode.
+\item \emph{Joint-loss protocol (beam-search selection)} (seeds 1901--1908): corrects (iv) additionally---decoded-BLEU selection uses beam search (\texttt{eval\_translation\_beam\_size=3}), matching the released config's evaluation metric. We include this variant because greedy-optimal checkpoints can differ from beam-3-optimal: the greedy ``best'' of protocol~2 might be a checkpoint that beam-3 selection would not have chosen, so protocol~3 removes this confound by selecting on the same beam-3 criterion the released model was trained under.
+\end{itemize}
+
+\noindent All three variants share the same architecture, data pipeline, manifests, and vocabularies (\texttt{config\_sha256} \texttt{0321104a\ldots}); they differ only in loss composition, validation cadence, and selection decode. Table~\ref{tab:protocol_robustness} reports the beam-3 dev BLEU-4 and PURE--REC gap for each. The corrected protocols confirm that the competence gap and the non-reproduction are not artefacts of the four original-implementation differences: dev BLEU-4 remains 6--10 (vs.\ released 13.38) and PURE--REC gaps remain negative across all near-faithful runs.
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Training-protocol robustness. All variants share the released architecture and data; they differ only in loss, validation cadence, and selection decode. Dev BLEU-4 is the uniform beam-3 full-pool value; gap is the canonical PURE--REC sacreBLEU-4 difference on the 641-item test set. No variant meets the competence gate (dev BLEU-4 $\geq$ 12.38).}
+\label{tab:protocol_robustness}
+\begin{tabular}{p{3.0cm}p{3.0cm}rr}
+\toprule
+Protocol & Selection / validation & Dev BLEU-4 & Gap range (neg.\ fraction) \\
+\midrule
+Translation-only & NLL / epoch & 6.5--9.8 & $[-2.01,+0.24]$ (43/44) \\
+Joint-loss (greedy) & greedy-BLEU / 14 steps & 6.3--10.2 & $[-1.59,-0.48]$ (8/8) \\
+Joint-loss (beam-3) & beam-3-BLEU / 14 steps & 8.7--10.5 & $[-1.38,-0.37]$ (8/8) \\
+\midrule
+Released evaluator & --- & 13.38 & $+10.24$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \subsection{Discovery timeline and pre-registration status}
 \label{sec:discovery}
 The $+10.24$ probe response was first observed on 2026-07-24 (canonical materialization; earlier pre-exclusion gap $+11.01$ on 2026-07-22). The six prospectively specified legacy seeds (101--606) were specified before their results were inspected; the eight extension seeds (707--1405) were added post-hoc. The Jaccard retriever, PURE protocol, and 641-query set were locked before reconstruction training began, after exploring the probes in Table~\ref{tab:probe_multiplicity}. No external pre-registration exists; these six seeds constitute the only prospectively specified within-project follow-up evidence. Because the Jaccard pure-copy probe was selected as the maximal-gap probe post-hoc, its CI is descriptive, not prospectively confirmed. Full provenance in SI~Sup.~C.
@@ -490,7 +520,7 @@ An OLS regression ($R^2=0.33$, $n=641$) attributes the largest share of per-item
 \section{Discussion}
 The audit yields three findings organized around the question of whether the publicly documented recipe is sufficient to reproduce the released SLRTP2025 BT evaluator and its behavior on a constructed replay probe.
 
-\emph{RQ1---Failed public-artifact reconstruction.} Using our disclosed reconstruction implementation and the publicly released artifacts, none of the 14 near-faithful runs (4 validation-freq-misread, 10 step-corrected) or 14 legacy-implementation seeds reached the released evaluator's competence (dev BLEU-4 6.5--9.8 vs.\ 13.38), training-pool readout (7.2--9.3 vs.\ 78.8), or teacher-forced token accuracy (55--60\% vs.\ 96.5\%; Table~\ref{tab:sanity_stats}). Three descriptive comparisons (Table~\ref{tab:diagnostic_summary}) all place the released evaluator far outside any constructible range. The source of the gap remains unidentified.
+\emph{RQ1---Failed public-artifact reconstruction.} Using our disclosed reconstruction implementation and the publicly released artifacts, none of the 14 near-faithful runs (4 validation-freq-misread, 10 step-corrected) or 14 legacy-implementation seeds reached the released evaluator's competence (dev BLEU-4 6.5--9.8 vs.\ 13.38), training-pool readout (7.2--9.3 vs.\ 78.8), or teacher-forced token accuracy (55--60\% vs.\ 96.5\%; Table~\ref{tab:sanity_stats}). Three descriptive comparisons (Table~\ref{tab:diagnostic_summary}) all place the released evaluator far outside any constructible range. The source of the gap remains unidentified. A protocol-robustness check (\S\ref{sec:protocol_robustness}) confirms that correcting the four original-implementation differences (joint CTC$+$translation loss, step-level validation, decoded-BLEU selection) does not close the competence gap or reproduce the probe: the corrected joint-loss protocols also plateau at dev BLEU-4 6--10 with strictly negative PURE--REC gaps.
 
 \emph{RQ2---Descriptive non-reproduction under competence-unmatched reconstructions.} Because every constructible checkpoint is less competent than the released evaluator (dev BLEU-4 6.5--9.8 vs.\ 13.38), the non-reproduction of the adversarial probe response (43 of 44 non-degenerate gaps negative, range $[-2.01,+0.24]$; one step-corrected seed gives a small positive gap of $+0.24$) \emph{cannot distinguish} whether it reflects the competence gap, an unrecovered training mechanism, or their interaction. This is a descriptive observation about our public-artifact reconstruction attempt, not a causal checkpoint-identity claim. Without a competence-matched independent implementation---which we could not obtain (the released repo is eval-only; our trained checkpoints were lost in a host compromise)---the identification problem is unresolved. The descriptive step-corrected 10-seed prediction interval $[-1.89,+0.45]$ includes zero, whereas the prospectively specified 6-seed legacy interval $[-2.48,-0.28]$ does not; the prospectively specified non-reproduction direction rests on the latter. Cross-evaluator re-decoding of a realistic noisy-gloss retrieval output yields a released-evaluator gap of $-0.13$ and 43/44 negative gaps, confirming the probe response is specific to the constructed adversarial design.
 
