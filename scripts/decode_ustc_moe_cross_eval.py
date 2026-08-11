@@ -33,8 +33,16 @@ EVA = {
     "cf_202": "checkpoints/config_faithful/seed_202",
     "cf_303": "checkpoints/config_faithful/seed_303",
     "cf_404": "checkpoints/config_faithful/seed_404",
-    "sf_505": "checkpoints/step_faithful/seed_505",
-    "sf_606": "checkpoints/step_faithful/seed_606",
+    # Step-corrected (re-trained Round-26: translation-only + step-val + decoded-BLEU)
+    **{f"sf_{s}": f"checkpoints/step_faithful/seed_{s}"
+       for s in ["1701", "1702", "1703", "1704", "1705", "1706", "1707", "1708",
+                 "505", "606"]},
+    # Joint-loss greedy (1801-1808)
+    **{f"sf_{s}": f"checkpoints/reconstructions_v2/seed_{s}"
+       for s in ["1801", "1802", "1803", "1804", "1805", "1806", "1807", "1808"]},
+    # Joint-loss beam-3 (1901-1908)
+    **{f"sf_{s}": f"checkpoints/reconstructions_v3/seed_{s}"
+       for s in ["1901", "1902", "1903", "1904", "1905", "1906", "1907", "1908"]},
     "conf_1506": "checkpoints/confirmation/seed_1506",
     "conf_1607": "checkpoints/confirmation/seed_1607",
     "ls_202": "checkpoints/long_schedule/seed_202",

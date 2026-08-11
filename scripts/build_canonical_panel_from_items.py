@@ -125,6 +125,7 @@ def main():
         ("sacrebleu_signature", "BLEU|nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1"),
         ("fps", "12.5 (skeleton_subsample=2 applied before decoding)"),
         ("note", "Each entry's gt_bleu/pure_bleu is recomputed from per-item JSON via sacrebleu.corpus_bleu(force=True). Released gap is fixed at +10.24 under the canonical donor registry."),
+        ("legacy_filename_note", "The filename 'gap_43_canonical_beam3.json' is retained for backward compatibility with external links (anonymous.4open.science URL, prior revisions, and 30+ script references). The '43' was the original count when the panel was first built; the actual content is 67 non-released entries (62 non-degenerate, 5 degenerate) plus the released evaluator. See n_entries_total / n_non_released above for the current count."),
     ])
 
     output = OrderedDict()
