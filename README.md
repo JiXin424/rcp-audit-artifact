@@ -60,12 +60,20 @@ sn-jnl.cls, sn-chicago.bst   Springer Nature LaTeX class / style
 
 ### Set up
 
+For L1 audit (recompute headline numbers from committed per-item decodes,
+verify paper-count consistency), only 4 Python packages are needed:
+
 ```bash
-cd /ssd/xkb4/RCP
-python -m venv .venv
+cd /ssd/xkb4/rcp-audit-artifact
+python3 -m venv .venv
 source .venv/bin/activate
-pip install -r /ssd/xkb4/rcp-audit-artifact/requirements.lock.txt
+make install-audit   # pip install -r requirements-audit.txt
 ```
+
+For L3 re-decoding and L4 from-scratch retraining, the full
+`requirements.lock.txt` (236 packages including training/LLM tooling) is
+required; this is **not** needed for L1 audit. CPU-only Linux x86_64 with
+Python 3.10–3.12 is sufficient for L1.
 
 The raw SLRTP2025 data is licensed and must be obtained from the challenge
 organizers (see Data licensing below); on this host it is symlinked from
@@ -79,9 +87,27 @@ One command in the artifact mirror regenerates every paper number:
 
 ```bash
 cd /ssd/xkb4/rcp-audit-artifact
-make core-audit PYTHON=/path/to/python3
+make core-audit
 # → asserts GT 12.78 / PURE 23.02 / gap +10.24 / CI [8.88, 11.62]
+# → check-paper passes (all TeX values match canonical numbers)
+# → regression passes (transfer-cell local-GT alignment)
 ```
+
+### Verify paper-count consistency
+
+After `make core-audit`, also run the disk-scanned registry verifier:
+
+```bash
+make check-consistency
+# → 25+ invariants: registry summary ↔ entry counts; accounting family sums;
+#   paper bold total row; gap panel meta ↔ actual range; cross-checks against
+#   matched_donor_pool.json, donor_pool_resampling.json, robustness_diagnostics.json.
+# All checks must pass (exit code 0).
+```
+
+`check_paper_consistency.py` is layout-aware: it finds `paper/main_lre.tex`
+in this artifact mirror and `./main_lre.tex` in the RCP working repo
+automatically.
 
 ### Round-3 experiments (C1 protocol unification + reviewer-driven analyses)
 
@@ -206,11 +232,19 @@ Pose tensors may retain signer identity; no per-signer raw poses are released.
 
 A host compromise on 2026-07-14 was cleaned; the released BT checkpoint,
 SLRTP2025 raw dataset, decoded BT cells, canonical checkpoint registry, and
-paper sources are intact. **All trained checkpoints were rebuilt from scratch
-after the incident** (14 reconstructions, 15 distillation students, rescue and
-diagnostic families, 9 released-weight fine-tunes). The 30-rater DGS
-evaluation raw response CSVs are preserved in `评分/`, but the video stimuli
-and UUID-to-system manifest were lost, so that feasibility study is not
-reported in the paper (see Ethics in `main_lre.tex`). The host is treated as
-untrusted until rebuilt; credentials from before 2026-07-14 should be
-considered compromised.
+paper sources are intact. **Most trained checkpoints were rebuilt from scratch
+after the incident**: 14 reconstructions, 4 validation-freq-misread,
+10 step-corrected (re-trained in Round-26 with the TRUE step-val + decoded-BLEU
+protocol), 16 joint-loss greedy/beam-3, 15 distillation students, 4 ladder,
+2 confirmation, 1 long-schedule, 1 rescue (wd0), 9 released-weight fine-tunes.
+**Five checkpoint families listed in earlier manual registries (4 large-arch,
+8 rescue-lr, 2 cross-fit, 1 BT-retrained holdout, plus 11 of 12 rescue-expanded)
+could not be recovered from disk and are omitted from the disk-scanned
+registry**; their family-level summary statistics had been retained in the
+legacy manual registry but cannot be reproduced from current artifacts. This
+is documented in SI~Sup.~D (Table D footnote) and the main-text Limitations
+paragraph. The 30-rater DGS evaluation raw response CSVs are preserved in
+`评分/`, but the video stimuli and UUID-to-system manifest were lost, so that
+feasibility study is not reported in the paper (see Ethics in
+`paper/main_lre.tex`). The host is treated as untrusted until rebuilt;
+credentials from before 2026-07-14 should be considered compromised.

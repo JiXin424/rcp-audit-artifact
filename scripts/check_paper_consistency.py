@@ -42,8 +42,15 @@ MANIFEST = _MANIFEST_PRIMARY if _MANIFEST_PRIMARY.exists() else _MANIFEST_FALLBA
 REGISTRY = ROOT / "results" / "canonical_checkpoint_registry.json"
 ACCOUNTING = ROOT / "results/accounting_table.json"
 GAP_PANEL = ROOT / "results/gap_43_canonical_beam3.json"
-PAPER = ROOT / "main_lre.tex"
-SUPP = ROOT / "supplementary.tex"
+# Layout-aware: artifact mirror has paper/main_lre.tex; RCP working repo has ./main_lre.tex
+_paper = ROOT / "paper" / "main_lre.tex"
+if not _paper.exists():
+    _paper = ROOT / "main_lre.tex"
+_supp = ROOT / "paper" / "supplementary.tex"
+if not _supp.exists():
+    _supp = ROOT / "supplementary.tex"
+PAPER = _paper
+SUPP = _supp
 
 errors = []
 warnings = []
@@ -104,7 +111,14 @@ def main():
             fail(f"registry non_degenerate count ({non_deg}) != summary.non_degenerate ({summ.get('non_degenerate')})")
 
     # (3) Disk ↔ registry consistency
+    # Only enforced when checkpoints/ is populated (RCP working repo). In the
+    # artifact mirror, checkpoints/ is gitignored and weights are hosted
+    # externally (see scripts/download_checkpoints.sh); the registry remains
+    # the source of truth but cannot be cross-checked against missing files.
     if reg is not None and CKPT_ROOT.exists():
+        # Detect artifact-mirror layout (paper/ subdir present + checkpoints
+        # essentially empty or marked as external).
+        is_artifact_mirror = (ROOT / "paper" / "main_lre.tex").exists()
         disk_dirs = set()
         for fam_dir in CKPT_ROOT.iterdir():
             if not fam_dir.is_dir() or fam_dir.name in SKIP_DIRS: continue
@@ -118,7 +132,12 @@ def main():
         reg_dirs = {c.get("training_dir") for c in ckpts if c.get("training_dir")}
         only_disk = disk_dirs - reg_dirs
         only_reg = reg_dirs - disk_dirs
-        if not only_disk and not only_reg:
+        if is_artifact_mirror:
+            # Artifact mirror ships only a subset of checkpoints (the rest are
+            # hosted externally per scripts/download_checkpoints.sh). Disk ↔
+            # registry match is enforced in RCP, not here.
+            ok(f"artifact mirror: skipping disk ↔ registry invariant ({len(disk_dirs)} ckpt dirs on disk, {len(reg_dirs)} in registry); enforced in RCP")
+        elif not only_disk and not only_reg:
             ok(f"disk ↔ registry: {len(disk_dirs)} training dirs match")
         else:
             if only_disk:

@@ -1,0 +1,31 @@
+# requirements-audit.txt — minimal L1 audit dependencies
+#
+# These are the ONLY packages needed to run the L1 audit (`make core-audit`):
+#   - build_paper_numbers.py        (numpy, scipy, sacrebleu)
+#   - check_paper_numbers.py        (stdlib only)
+#   - build_accounting_table.py     (stdlib only)
+#   - build_checkpoint_registry.py  (stdlib only)
+#   - build_canonical_panel_from_items.py  (sacrebleu)
+#   - check_paper_consistency.py    (stdlib only)
+#   - tests/test_checkpoint_gt_alignment.py (stdlib only)
+#
+# The full requirements.lock.txt pins 236 packages including training/LLM
+# tooling (accelerate, axolotl, autoawq, torch+cuda, etc.) needed only for
+# L3/L4 re-decoding and from-scratch retraining. For L1 audit on a fresh
+# Linux container, install this file instead:
+#
+#     pip install -r requirements-audit.txt
+#
+# Tested on Python 3.10--3.12, Linux x86_64, no GPU required.
+
+numpy>=1.24,<2.3
+scipy>=1.10,<1.17
+sacrebleu>=2.3,<2.6
+pyyaml>=6.0,<7.0
+
+# torch is needed only by scripts/build_canonical_panel.py (re-decoding).
+# For L1 audit (which loads pre-computed per-item JSON via
+# build_canonical_panel_from_items.py), torch is NOT required. We list it
+# here as optional so a reviewer who wants to spot-re-decode one checkpoint
+# can do so without re-installing. CPU-only torch is sufficient.
+# torch>=2.0,<3.0  # uncomment to enable re-decoding

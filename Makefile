@@ -1,7 +1,7 @@
 .PHONY: core-audit regression paper experiment-A1 experiment-D experiment-C \
         competition donor-bootstrap full-readout ref-frame-figure \
         perturbation-figure decomposition-figure reproduction-dag \
-        probe-multiplicity
+        probe-multiplicity install-audit check-consistency
 PYTHON ?= python3
 GPU ?= 0
 
@@ -21,6 +21,18 @@ GPU ?= 0
 # in the paper. Full reproduction requires the training bundle (L3/L4).
 # The earlier pre-exclusion materialization (PURE 23.79 / gap +11.01) is
 # reported only as a sensitivity analysis in SI~Sup.~N and is NOT reproduced.
+
+# ---- Setup ----
+# For L1 audit on a fresh Linux container, install ONLY requirements-audit.txt
+# (4 packages: numpy, scipy, sacrebleu, pyyaml). The full requirements.lock.txt
+# pins 236 packages including training/LLM tooling needed only for L3/L4.
+install-audit:
+	$(PYTHON) -m pip install -r requirements-audit.txt
+
+# Verify the paper's headline counts/ranges against the disk-scanned registry.
+# Layout-aware (works in both RCP working repo and this artifact mirror).
+check-consistency:
+	$(PYTHON) scripts/check_paper_consistency.py
 
 core-audit: regression paper check-paper
 	@$(PYTHON) -c "import json; d=json.load(open('results/paper_numbers.json')); h=d['headline']; print('canonical headline: GT %.2f  PURE %.2f  gap %+.2f  CI %s' % (h['gt'], h['pure'], h['gap'], h.get('bootstrap_ci'))); assert abs(h['pure']-23.02)<0.05 and abs(h['gap']-10.24)<0.05, 'canonical headline mismatch'; print('core-audit PASS: headline matches canonical 23.02/+10.24')"

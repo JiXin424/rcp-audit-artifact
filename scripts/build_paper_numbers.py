@@ -106,6 +106,25 @@ def main():
     results["n_non_released"] = len(all_gaps)
     results["n_positive"] = sum(1 for g in all_gaps if g > 0)
 
+    # 4b. Disk-scanned registry counts (so check_paper_numbers CI can verify
+    # the bold total row in Table tab:accounting)
+    REGISTRY = ROOT / "results" / "canonical_checkpoint_registry.json"
+    if REGISTRY.exists():
+        reg = json.load(open(REGISTRY))
+        rs = reg.get("summary", {})
+        results["n_total_trained"] = rs.get("total_trained_runs")
+        results["n_decoded"] = rs.get("decoded_gap_panel")
+        results["n_unique_binaries"] = rs.get("unique_binaries")
+        results["n_non_degenerate"] = rs.get("non_degenerate")
+        # non-degenerate gap range (excludes 5 degenerate)
+        nd_gaps = [c.get("gap") for c in reg.get("checkpoints", [])
+                   if c.get("has_gap") and not c.get("degenerate") and c.get("gap") is not None]
+        if nd_gaps:
+            results["non_degenerate_gap_range"] = [float(min(nd_gaps)), float(max(nd_gaps))]
+            results["n_negative"] = sum(1 for g in nd_gaps if g < 0)
+            results["n_zero"] = sum(1 for g in nd_gaps if g == 0)
+            results["n_positive_non_degenerate"] = sum(1 for g in nd_gaps if g > 0)
+
     # 5. Matched-subset (Czehmann conf=1)
     def load_csv(path):
         out = {}
