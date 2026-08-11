@@ -267,6 +267,65 @@ Same signer as query & 0.183 & 0.228 & $-0.111$ & both same-signer: 4.7\% \\
 \section{Config-Faithful and Perturbation Details}
 \label{sec:appendix_config_faithful}
 
+\paragraph{Released \texttt{config.yaml} to training-code mapping.}
+\label{sec:config_mapping}
+Table~\ref{tab:config_mapping} maps each field of the released \texttt{config.yaml} (verbatim copy shipped in \texttt{configs/released.yaml}, SHA-256 \texttt{0321104a\ldots}) to its implementation in our disclosed reconstruction code, and labels each field by its semantic source: \emph{JoeyNMT 1.2} (the field's documented semantics in the JoeyNMT config schema, which the released config inherits verbatim), \emph{SLRTP2025 original} (a value or behaviour established by the released checkpoint bundle itself, e.g., the shipped \texttt{.pt} manifest), or \emph{author inference} (a value or behaviour we inferred because no public source unambiguously specifies it). Author-inference rows are the load-bearing sites where a defect in our disclosed implementation could in principle explain the competence gap; the four protocol mismatches documented in main \S\ref{sec:protocol_robustness} were identified by auditing this table. We do not claim that this mapping is exhaustive or authoritative---an independent implementation that attained the released competence from the same public artifacts would invalidate any insufficiency interpretation.
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Released \texttt{config.yaml} field-by-field mapping to our disclosed reconstruction code. ``Source'' labels which semantics the value/behaviour comes from. Author-inference rows are the load-bearing sites where a defect in our disclosed implementation could in principle explain the competence gap.}
+\label{tab:config_mapping}
+\begin{tabular}{p{3.4cm}p{2.8cm}p{3.8cm}p{2.4cm}}
+\toprule
+Config field & Released value & Code reference / our handling & Source \\
+\midrule
+\multicolumn{4}{l}{\emph{data}} \\
+\quad \texttt{feature\_size} & 534 & read from pose tensors; we sum reduced-dim keypoints & SLRTP2025 original \\
+\quad \texttt{skeleton\_subsample} & 2 & applied as \texttt{pose[::2]} before decoding & JoeyNMT 1.2 \\
+\quad \texttt{max\_sent\_length} & 400 & enforced in \texttt{SLRTPDataset.\_\_init\_\_} & JoeyNMT 1.2 \\
+\quad \texttt{txt\_lowercase} & true & applied in tokenisation & JoeyNMT 1.2 \\
+\midrule
+\multicolumn{4}{l}{\emph{training}} \\
+\quad \texttt{recognition\_loss\_weight} & 1.0 & v1 protocol: \emph{omitted} (bug); v2/v3: CTC added (\S\ref{sec:protocol_robustness}) & JoeyNMT 1.2 (weight); CTC reduction mode is \emph{author inference} \\
+\quad \texttt{translation\_loss\_weight} & 1.0 & applied as CE mean & JoeyNMT 1.2 \\
+\quad \texttt{translation\_normalization} & batch & \emph{not implemented} in our v1; CE mean is per-token reduction & \emph{author inference: we treated as token-mean; could differ} \\
+\quad \texttt{batch\_size} & 256 & physical 64 $\times$ grad-accum 4 in v1 (we inferred from missing fields); v1.5/v2/v3 use 256 directly & \emph{author inference: no field specifies physical batch or grad-accum} \\
+\quad \texttt{learning\_rate} & 0.001 & Adam lr & JoeyNMT 1.2 \\
+\quad \texttt{betas} & [0.9, 0.998] & Adam betas & JoeyNMT 1.2 \\
+\quad \texttt{weight\_decay} & 0.001 & Adam wd & JoeyNMT 1.2 \\
+\quad \texttt{scheduling} & plateau & ReduceLROnPlateau & JoeyNMT 1.2 \\
+\quad \texttt{decrease\_factor} & 0.8 & LR $\times$ 0.8 on plateau & JoeyNMT 1.2 \\
+\quad \texttt{patience} & 5 & scheduler patience (in validation steps) & JoeyNMT 1.2 \\
+\quad \texttt{learning\_rate\_min} & 1e-8 & scheduler floor & JoeyNMT 1.2 \\
+\quad \texttt{label\_smoothing} & 0.0 & not applied (0.0) & JoeyNMT 1.2 \\
+\quad \texttt{validation\_freq} & 14 & v1: read as 14 \emph{epochs} (bug); v1.5/v2/v3: 14 \emph{steps} (JoeyNMT semantics) & JoeyNMT 1.2 \\
+\quad \texttt{eval\_metric} & bleu & v1: \texttt{--selection bleu} branch had \texttt{improved=False} hard-coded (bug, never saved); v1.5/v2/v3: actually works & JoeyNMT 1.2 \\
+\quad \texttt{early\_stopping\_metric} & eval\_metric & ties to eval\_metric behaviour above & JoeyNMT 1.2 \\
+\quad \texttt{eval\_translation\_beam\_size} & 3 & v1/v1.5/v2: greedy selection; v3: beam-3 selection & JoeyNMT 1.2; selection-decoder choice is \emph{author inference} \\
+\quad \texttt{epochs} & 3000 & we use 300 with early-stop patience 15 & \emph{author inference: no public guidance on early-stop criterion} \\
+\quad \texttt{keep\_last\_ckpts} & 1 & only best.ckpt archived & JoeyNMT 1.2 \\
+\quad \texttt{random\_seed} & 42 & used for released; we use 101--606, 707--1405, 1701--1708, 505, 606, 1801--1908 & SLRTP2025 original (released seed); seed sweep is \emph{author inference} \\
+\midrule
+\multicolumn{4}{l}{\emph{model}} \\
+\quad encoder/decoder type & transformer & \texttt{src/models/bt\_encoders.py}, \texttt{bt\_transformer\_layers.py} & JoeyNMT 1.2 \\
+\quad \texttt{hidden\_size}, \texttt{ff\_size}, \texttt{num\_heads}, \texttt{num\_layers} & 256 / 512 / 8 / 3 & applied verbatim & JoeyNMT 1.2 \\
+\quad \texttt{dropout} & 0.1 & applied & JoeyNMT 1.2 \\
+\quad \texttt{embeddings.embedding\_dim} & 256 & applied & JoeyNMT 1.2 \\
+\quad \texttt{embeddings.norm\_type} & batch & BatchNorm1d applied to embeddings & JoeyNMT 1.2; exact placement is \emph{author inference} \\
+\quad \texttt{embeddings.activation\_type} & softsign & \texttt{torch.nn.Softsign} applied & JoeyNMT 1.2 \\
+\quad \texttt{initializer} / \texttt{embed\_initializer} & xavier & Xavier uniform on linear layers & JoeyNMT 1.2; \texttt{init\_gain=1.0} applied \\
+\quad \texttt{tied\_softmax} & false & softmax not tied to embeddings & JoeyNMT 1.2 \\
+\midrule
+\multicolumn{4}{l}{\emph{testing}} \\
+\quad \texttt{eval\_translation\_beam\_alpha} & $-1$ & length penalty applied as $-1$ & JoeyNMT 1.2 \\
+\quad \texttt{translation\_max\_output\_length} & 30 & used in v3 selection decode & JoeyNMT 1.2 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+{\footnotesize Load-bearing author inferences (where a defect could in principle explain the gap): \texttt{recognition\_loss\_weight} CTC reduction semantics; \texttt{translation\_normalization} batch vs.\ token interpretation; physical batch size and grad-accum factor (no field specifies these); \texttt{validation\_freq} step vs.\ epoch (corrected in v1.5); \texttt{eval\_metric} improved-flag (corrected in v1.5); selection-decoder choice (greedy vs.\ beam-3); early-stop criterion and patience unit; embeddings \texttt{norm\_type} placement; optimiser-step semantics under grad-accum. An authoritative training command from the original authors would resolve each of these.}
+\end{table}
+
 \paragraph{Epoch-validation approximation.}
 The released \texttt{config.yaml} specifies \texttt{validation\_freq=14}, which JoeyNMT 1.2 interprets as 14 optimizer \emph{steps} ($\approx$28 steps/epoch means validating twice per epoch). Our initial implementation validated every 14 \emph{epochs} (an epoch-validation approximation); four seeds under this approximation all early-stop below the competence gate (dev BLEU-4 8.6--9.5), show negative PURE--REC gaps ($-1.1$ to $-0.2$), and family-range pass-through (1.21--1.24) and holdout (7.4--7.6) --- none reproduces the released signature (Table~\ref{tab:config_faithful}). Scaling capacity up (four larger variants: 4--6 layers, 384--512 hidden) overfits faster and reaches only dev BLEU 6.8--8.0. A long-schedule continuation (800 epochs, two seeds) pushes competence to a family maximum of 10.02 yet still shows no reversal (gap $-0.45$). The step-corrected re-run (Table~\ref{tab:config_faithful}) confirms the reconstruction plateaus below the released trajectory at matched step counts.
 
