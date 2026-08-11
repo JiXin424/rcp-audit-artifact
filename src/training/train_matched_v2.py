@@ -153,12 +153,28 @@ def main():
     ap.add_argument("--patience", type=int, default=15)
     ap.add_argument("--selection", choices=["nll", "bleu"], default="bleu",
                     help="Checkpoint selection (config eval_metric=bleu).")
+    ap.add_argument("--rec-weight", type=float, default=None,
+                    help="Override config recognition_loss_weight. Set to 0 to produce "
+                         "the v1.5 translation-only-step-val-bleu protocol (same val/selection "
+                         "as v2 but translation-only loss).")
+    ap.add_argument("--protocol-name", default=None,
+                    help="Override the protocol string written to training_log.json. "
+                         "Defaults: 'v2-joint-ctc-translation-step-val' when rec_weight>0, "
+                         "'v1.5-trans-only-step-val-bleu' when rec_weight==0.")
     ap.add_argument("--output", required=True)
     ap.add_argument("--smoke", action="store_true")
     args = ap.parse_args()
 
     set_seed(args.seed)
-    os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
+    # CUDA_VISIBLE_DEVICES must be set externally BEFORE Python starts so torch
+    # enumerates only the pinned GPU. Setting it here is too late: torch is
+    # imported at the top of this module and has already enumerated all devices.
+    # The launcher (scripts/launch_reconstructions.sh or equivalent) is
+    # responsible for `CUDA_VISIBLE_DEVICES=N python -m src.training.train_matched_v2 --gpu 0 ...`.
+    if args.gpu != 0 and "CUDA_VISIBLE_DEVICES" not in os.environ:
+        print(f"WARNING: --gpu {args.gpu} passed but CUDA_VISIBLE_DEVICES not set externally; "
+              f"torch will use device 0 of however many it sees. Set "
+              f"CUDA_VISIBLE_DEVICES={args.gpu} before invoking Python.", flush=True)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     out_dir = Path(args.output); out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -191,8 +207,14 @@ def main():
     rec_weight = float(cfg["training"].get("recognition_loss_weight", 1.0))
     trans_weight = float(cfg["training"].get("translation_loss_weight", 1.0))
     val_freq = int(cfg["training"].get("validation_freq", 14))
+    if args.rec_weight is not None:
+        rec_weight = args.rec_weight
     do_rec = rec_weight > 0; do_tr = trans_weight > 0
-    print(f"loss weights: rec={rec_weight} trans={trans_weight} | val_freq={val_freq} steps | selection={args.selection}")
+    if args.protocol_name is not None:
+        protocol_name = args.protocol_name
+    else:
+        protocol_name = "v2-joint-ctc-translation-step-val" if do_rec else "v1.5-trans-only-step-val-bleu"
+    print(f"loss weights: rec={rec_weight} trans={trans_weight} | val_freq={val_freq} steps | selection={args.selection} | protocol={protocol_name}")
 
     model = build_model(cfg=cfg["model"], gls_vocab=gls_vocab, txt_vocab=txt_vocab,
                         sgn_dim=feat_size, do_recognition=do_rec,
@@ -214,7 +236,7 @@ def main():
 
     log = {"seed": args.seed, "config": str(args.config),
            "config_sha256": sha256_file(args.config),
-           "protocol": "v2-joint-ctc-translation-step-val",
+           "protocol": protocol_name,
            "rec_weight": rec_weight, "trans_weight": trans_weight,
            "validation_freq_steps": val_freq, "selection": args.selection,
            "batch_size": args.batch_size, "grad_accum": args.grad_accum,
@@ -269,6 +291,29 @@ def main():
     log["best"] = {"step": best_step, "dev_metric": best_metric, "selection": args.selection}
     log["finished_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     (out_dir / "training_log.json").write_text(json.dumps(log, indent=2))
+
+    # Copy config.yaml and vocab files so make_back_translation_model can load this dir directly
+    # Override recognition_loss_weight in the saved config so it matches the actual training
+    # protocol (matters when --rec-weight was passed on the CLI).
+    import shutil
+    cfg_dest = out_dir / "config.yaml"
+    if not cfg_dest.exists():
+        shutil.copy(args.config, cfg_dest)
+    # Override rec_weight in the saved config
+    try:
+        import yaml
+        with open(cfg_dest) as f: cfg_copy = yaml.safe_load(f)
+        if cfg_copy and "training" in cfg_copy:
+            cfg_copy["training"]["recognition_loss_weight"] = rec_weight
+            with open(cfg_dest, "w") as f: yaml.safe_dump(cfg_copy, f, default_flow_style=False, sort_keys=False)
+    except Exception as e:
+        print(f"  WARN: could not override rec_weight in saved config: {e}", flush=True)
+    for vocab_name in ["txt.vocab", "gls.vocab"]:
+        vocab_src = Path(args.txt_vocab if "txt" in vocab_name else args.gls_vocab)
+        vocab_dest = out_dir / vocab_name
+        if not vocab_dest.exists() and vocab_src.exists():
+            shutil.copy(vocab_src, vocab_dest)
+
     print(f"\nDone. best {args.selection}={best_metric:.4f} @ step {best_step}")
     print(f"  {out_dir}/best.ckpt  +  {out_dir}/training_log.json")
 

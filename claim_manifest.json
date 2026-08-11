@@ -37,8 +37,8 @@
     },
     {
       "id": "checkpoint_accounting",
-      "statement": "From-scratch training runs, beam-3 decoded, unique binaries, non-degenerate",
-      "values": {"total_trained_runs": 78, "total_decoded_gap_panel": 49, "total_unique_binaries": 48, "total_non_degenerate": 44},
+      "statement": "From-scratch training runs, beam-3 decoded, unique binaries, non-degenerate (disk-scanned registry v4)",
+      "values": {"total_trained_runs": 68, "total_decoded_gap_panel": 66, "total_unique_binaries": 65, "total_non_degenerate": 61, "negative_gap_count": 61, "positive_gap_count": 0, "gap_range": [-2.0127, -0.2080]},
       "source_file": "results/accounting_table.json",
       "verify_command": "python3 scripts/build_accounting_table.py",
       "tex_section": "tab:accounting"

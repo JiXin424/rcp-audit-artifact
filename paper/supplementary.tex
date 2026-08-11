@@ -122,32 +122,31 @@ Table~\ref{tab:checkpoint_registry} is the definitive registry of every BT evalu
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Canonical checkpoint registry. 78 planned training runs, all 78 completed training. ``Beam-3 evaluation'' means a run was beam-3 decoded on at least the development set; of these 78 runs, 49 also have a canonical PHX-public PURE--REC gap under the \S\ref{sec:retrieval} donor registry (the remaining 29 were beam-3 evaluated on dev only and lack a canonical PHX-public PURE--REC gap). The 49 decoded runs reduce to 48 unique weight binaries: the long-schedule seed-202 artifact is byte-identical to the validation-freq-misread seed-202 artifact (same wandb run, identical per-step losses, identical best-checkpoint SHA-256) and counts once. 75 non-holdout runs have dev metrics; 52 of these are non-distillation and enter the competence gate. 48 unique runs have both dev BLEU-4 and PHX-public PURE--REC gap (extrapolation-eligible). Plus the released original. Each family row's columns sum to the Total row.}
+\caption{Canonical checkpoint registry. 68 training runs across 11 families (disk-scanned; auto-generated from \texttt{results/canonical\_checkpoint\_registry.json}). Of these 68 runs, 66 were beam-3 decoded on PHX-public under the canonical \S\ref{sec:retrieval} donor registry. The 66 decoded runs reduce to 65 unique weight binaries: the long-schedule seed-202 artifact is byte-identical to the validation-freq-misread seed-202 artifact (same wandb run, identical per-step losses, identical best-checkpoint SHA-256) and counts once. 61 non-degenerate decoded training runs enter the non-replication count (all 61 with strictly negative gaps). Each family row's columns sum to the Total row.}
 \label{tab:checkpoint_registry}
 \begin{tabular}{p{4.2cm}p{1.0cm}p{1.5cm}p{1.4cm}p{1.4cm}p{3.0cm}}
 \toprule
-Family & Planned & Trained & Has gap (beam-3) & Has dev & Enters \\
+Family & Runs & Trained & Has gap (beam-3) & Has dev & Enters \\
 \midrule
 Reconstructions (primary) & 6 & 6 & 6 & 6 & multiseed, bootstrap, dose--resp. \\
 Reconstructions (extension) & 8 & 8 & 8 & 8 & prediction interval, dose--resp. \\
-Rescue lr (A/B $\times$ 4) & 8 & 8 & 0 & 8 & gate counts only \\
-Rescue expanded & 12 & 12 & 1 & 12 & gate; wd0 also dose--resp., perturb. \\
-Train-pool ladder & 4 & 4 & 4 & 4 & dose--resp., gap ranges \\
 Validation-freq-misread & 4 & 4 & 4 & 4 & dose--resp. \\
-Step-corrected & 10 & 10 & 10 & 10 & validation-frequency; dose--resp.\ (2/10) \\
-Large-arch (A1--A4) & 4 & 4 & 0 & 4 & competence attempt \\
+Step-corrected (re-trained) & 10 & 10 & 10 & 10 & recipe-faithfulness; dose--resp. \\
+Joint-loss (greedy, 1801--1808) & 8 & 8 & 8 & 8 & protocol-robustness \\
+Joint-loss (beam-3, 1901--1908) & 8 & 8 & 8 & 8 & protocol-robustness \\
+Joint-loss supplementary (1809/1810) & 1 & 1 & 0 & 1 & exploratory; no canonical gap \\
+Train-pool ladder & 4 & 4 & 4 & 4 & dose--resp., gap ranges \\
+Rescue (dropout/wd; only wd0 archived) & 1 & 1 & 0 & 1 & gate \\
 Confirmation & 2 & 2 & 2 & 2 & dose--resp., family-side confirm. \\
-Long-schedule & 2 & 2 & 1 & 2 & gate; best seed dose--resp. (dev 10.02) \\
-BT-retrained & 1 & 1 & 0 & 0 & holdout series \\
-Cross-fit A/B & 2 & 2 & 0 & 0 & holdout series \\
-Distillation students & 15 & 15 & 13 & 15 & ladder, dose--resp. \\
+Long-schedule & 1 & 1 & 1 & 1 & gate; best seed dose--resp. \\
+Distillation students & 15 & 15 & 15 & 15 & ladder, dose--resp. \\
 \midrule
-Total & 78 & 78 & 49 & 75 & \\
+Total & 68 & 68 & 66 & 68 & \\
 Released original & --- & --- & 1 & 1 & audit target (not trained) \\
 \bottomrule
 \end{tabular}
 \par\smallskip
-{\footnotesize Per-family columns sum to the Total row (e.g., Has gap: $6{+}8{+}4{+}10{+}2{+}1{+}0{+}13{+}4{+}1{+}0{+}0{+}0 = 49$). Gate-eligible = 52 non-distillation runs with dev metrics. Extrapolation-eligible = 48 unique runs with both dev BLEU-4 and PHX-public PURE--REC gap (49 decoded runs minus the long-schedule/validation-freq-misread seed-202 duplicate); the dose--response figure caption uses the subset with dose-response data (14 reconstructions + 4 ladder + 4 validation-freq-misread + 2 step-corrected + 2 confirmation + 1 long-schedule + 15 distillation + 1 wd0 rescue; 2 of the 10 step-corrected seeds have dose-response data). All 15 distillation students completed training and beam-3 evaluation. The 1 wd0 rescue with PHX-public gap is the best rescue checkpoint (weight-decay 0, seed 202); the other 11 rescue-expanded runs have dev metrics but were not decoded on PHX-public. The second long-schedule seed was trained but not decoded on PHX-public. The registry counts all 78 training runs; the artifact ships 51 completed \texttt{best.ckpt} files from this registry plus the released checkpoint, while 24 runs' weights are withheld for size (rescue-lr 8, rescue-expanded 11, large-arch 4, long-schedule second seed 1)---their dev metrics and decoded cells remain in the registry and \texttt{results/}---and the holdout-series runs (BT-retrained, cross-fit) produce no checkpoints.}
+{\footnotesize Per-family columns sum to the Total row. Has-gap counts reflect the disk-scanned registry: 66 beam-3-decoded training runs; one validation-freq-misread seed-202 / long-schedule collision reduces unique binaries to 65. Five of the 66 decoded runs are degenerate (three $\alpha{=}1.0$ distillation students with empty output and two smallest ladder fractions with BLEU$\approx 0$), leaving 61 non-degenerate runs that enter the headline non-replication count. The large-arch (4), rescue-lr (8), rescue-expanded (11 of 12), cross-fit (2), and BT-retrained-holdout (1) families listed in earlier registries were not recoverable from disk after the 2026-07-14 host compromise documented in our security incident report; their family-level summary statistics had been retained in the manual legacy registry but cannot be reproduced from current artifacts, and they are omitted from this disk-scanned table. The 11 released-weight fine-tune variants (Gaussian noise, fine-tuning) live under \texttt{checkpoints/finetune\_released/} and are NOT counted as from-scratch training.}
 \end{table}
 
 \paragraph{Readout--competence association.}
@@ -297,7 +296,7 @@ Table~\ref{tab:perturbation} reports the full pose-perturbation battery. Reversi
 \paragraph{Released-checkpoint weight-noise perturbation (experiment A1).}
 The reviewer's competence confound (released dev BLEU-4 13.38 vs.\ reconstructions $\leq 9.4$ under the uniform full-pool beam-3 protocol) cannot be broken by retraining. Starting from the released weights, we add i.i.d.\ Gaussian noise to every parameter (excluding BatchNorm running statistics, which must remain positive) at scale $\sigma\in\{0, 10^{-3}, 3\!\times\!10^{-3}, 10^{-2}, 3\!\times\!10^{-2}\}$ with two seeds each, and re-decode PHX-public REC/PURE and the dev set under the canonical donor registry (Fig.~\ref{fig:s2_released_perturbation}). Small $\sigma$ perturbs checkpoint identity while preserving competence, so this design operates where the 14-seed reconstruction family cannot --- at and below the released competence from the released checkpoint itself.
 
-The reversal is preserved under competence-preserving perturbation and collapses in lockstep with competence. At $\sigma\leq 3\!\times\!10^{-3}$ the dev BLEU-4 stays at $12.50$--$13.38$ (above every reconstruction's uniform maximum of $9.4$) and the PURE--REC gap stays at $+9.50$ to $+10.35$ (within $\pm 0.75$ of the baseline $+10.24$). The collapse happens only at $\sigma\geq 10^{-2}$, where dev BLEU-4 simultaneously degrades to $7.3$--$10.2$ (gap $+3.2$ to $+4.2$), and at $\sigma=3\!\times\!10^{-2}$ both dev BLEU-4 ($\approx 0.1$) and the gap ($\approx 0$) are extinguished together. Two conclusions follow: the reversal is not a fragile identity-level artifact under small-weight perturbations (at competence parity it is locally robust), and it tracks competence rather than checkpoint identity. However, Gaussian noise probes only the isotropic weight-norm ball around the released checkpoint; it does not show that an independently trained, competence-matched model would exhibit the reversal, nor does it narrow the unobserved competence interval above the family ceiling of 9.8 (uniform protocol).
+The reversal is preserved under competence-preserving perturbation and collapses in lockstep with competence. At $\sigma\leq 3\!\times\!10^{-3}$ the dev BLEU-4 stays at $12.50$--$13.38$ (above every reconstruction's uniform maximum of $10.5$) and the PURE--REC gap stays at $+9.50$ to $+10.35$ (within $\pm 0.75$ of the baseline $+10.24$). The collapse happens only at $\sigma\geq 10^{-2}$, where dev BLEU-4 simultaneously degrades to $7.3$--$10.2$ (gap $+3.2$ to $+4.2$), and at $\sigma=3\!\times\!10^{-2}$ both dev BLEU-4 ($\approx 0.1$) and the gap ($\approx 0$) are extinguished together. Two conclusions follow: the reversal is not a fragile identity-level artifact under small-weight perturbations (at competence parity it is locally robust), and it tracks competence rather than checkpoint identity. However, Gaussian noise probes only the isotropic weight-norm ball around the released checkpoint; it does not show that an independently trained, competence-matched model would exhibit the reversal, nor does it narrow the unobserved competence interval above the family ceiling of 10.5 (joint-loss beam-3 / step-corrected max under the uniform protocol).
 
 \begin{figure}[t]
 \centering
@@ -307,7 +306,7 @@ The reversal is preserved under competence-preserving perturbation and collapses
 \end{figure}
 
 \paragraph{Released-checkpoint fine-tuning (experiment A2).}
-Gaussian weight noise probes only the isotropic neighbourhood; to test local robustness along genuine gradient directions, we fine-tune the released checkpoint with small fixed learning rates (5e-6, 1e-5, 3e-5) for 60 epochs, 3 seeds each (9 runs total), using the identical training data and architecture as the released evaluator. Models are selected by best dev NLL and decoded under the canonical donor registry (beam-3). All fine-tuned variants preserve the reversal (gaps $+10.37$ to $+10.77$, all within $\pm 0.5$ of baseline $+10.24$, dev BLEU-4 $12.92$--$13.18$, all above the reconstruction ceiling of $9.4$ under the uniform protocol) and retain the training-pool readout signature (train BLEU $80.5$--$81.8$, EM $72.6$--$74.0\%$, vs.\ baseline $78.8$/$70.7\%$). Results are in \texttt{results/released\_finetune.json}. In contrast to isotropic noise, fine-tuning moves weights along data-driven gradient directions near the released optimum; the persistence of both the reversal and the readout signature under fine-tuning confirms they are not fragile singular-point properties. The same scope limit applies: like the Gaussian noise experiment, fine-tuning probes only the vicinity of the released weights and does not narrow the unobserved interval above the family ceiling (9.8).
+Gaussian weight noise probes only the isotropic neighbourhood; to test local robustness along genuine gradient directions, we fine-tune the released checkpoint with small fixed learning rates (5e-6, 1e-5, 3e-5) for 60 epochs, 3 seeds each (9 runs total), using the identical training data and architecture as the released evaluator. Models are selected by best dev NLL and decoded under the canonical donor registry (beam-3). All fine-tuned variants preserve the reversal (gaps $+10.37$ to $+10.77$, all within $\pm 0.5$ of baseline $+10.24$, dev BLEU-4 $12.92$--$13.18$, all above the reconstruction ceiling of $10.5$ under the uniform protocol) and retain the training-pool readout signature (train BLEU $80.5$--$81.8$, EM $72.6$--$74.0\%$, vs.\ baseline $78.8$/$70.7\%$). Results are in \texttt{results/released\_finetune.json}. In contrast to isotropic noise, fine-tuning moves weights along data-driven gradient directions near the released optimum; the persistence of both the reversal and the readout signature under fine-tuning confirms they are not fragile singular-point properties. The same scope limit applies: like the Gaussian noise experiment, fine-tuning probes only the vicinity of the released weights and does not narrow the unobserved interval above the family ceiling (10.5).
 
 \paragraph{Epoch-checkpoint decoupling search (experiment D).}
 We searched the four available intermediate epoch checkpoints (\texttt{rescue/seed\_202\_wd0} and \texttt{long\_schedule/seed\_202} at epochs 25 and 50, plus their best checkpoints) for a decoupling point that would break the within-family readout--gap coupling --- e.g., elevated train-pool readout but PURE--REC gap still $\leq 0$. No such point exists: all six checkpoints stay in the (low readout, negative gap) quadrant, with train-pool BLEU $5.5$--$8.9$ ($1.6$--$2.0\%$ EM) and PURE--REC gap $-0.94$ to $-1.70$ (per-checkpoint values in \texttt{results/epoch\_decouple.json}). The within-family relationship between low readout and negative gap is therefore monotone across the entire observable trajectory.
@@ -500,18 +499,18 @@ This appendix documents the rule-based German weather slot extractor referenced 
 
 \section{Competence Extrapolation Details (Exploratory)}
 \label{sec:appendix_extrapolation}
-This appendix gives the full OLS/GP extrapolation analysis referenced in the main text (RQ1). We emphasize that this is exploratory and the prediction intervals are descriptive visual guides, not calibrated inferential tests, because the 48 unique non-released checkpoints share data, code, and hyperparameters (non-IID) and the target point (dev BLEU-4 $=13.38$) lies outside the observed range.
+This appendix gives the full OLS/GP extrapolation analysis referenced in the main text (RQ1). We emphasize that this is exploratory and the prediction intervals are descriptive visual guides, not calibrated inferential tests, because the 65 unique non-released checkpoints share data, code, and hyperparameters (non-IID) and the target point (dev BLEU-4 $=13.38$) lies outside the observed range.
 
 \paragraph{Method.}
-We fit the gap--competence dose--response over the 48 unique non-released weight binaries (the 49 decoded runs reduce to 48 after SHA-256 deduplication), spanning dev BLEU-4 $0$--$10.5$ (43 checkpoints at $\geq 4.5$; five degenerate checkpoints sit at dev $\approx 0$), using three models: OLS linear, OLS quadratic, and a Gaussian Process with RBF + white kernel. Each model predicts the PURE--REC gap at dev BLEU-4 $=13.38$.
+We fit the gap--competence dose--response over the 65 unique non-released weight binaries (the 66 decoded runs reduce to 65 after SHA-256 deduplication of the validation-freq-misread/long-schedule seed-202 collision), spanning dev BLEU-4 $0$--$10.5$ (61 non-degenerate checkpoints; five degenerate checkpoints sit at dev $\approx 0$), using three models: OLS linear, OLS quadratic, and a Gaussian Process with RBF + white kernel. Each model predicts the PURE--REC gap at dev BLEU-4 $=13.38$.
 
 \paragraph{Results.}
-Table~\ref{tab:extrapolation} reports the predictions and 95\% PIs at dev BLEU-4 $=13.38$. All predictions are far below the observed canonical $+10.24$. Table~\ref{tab:loo_extrapolation} reports a leave-one-family-out cross-validation; the OLS quadratic prediction is the most sensitive (shifts from $-1.09$ on all 42 checkpoints to $+2.88$ when restricted to the 37 non-degenerate checkpoints with dev $\geq 4.5$, and to $+0.23$ when the 19 distillation-family checkpoints are removed), while GP predictions stay negative with leave-one-family-out upper bounds below $+0.3$.
+Table~\ref{tab:extrapolation} reports the predictions and 95\% PIs at dev BLEU-4 $=13.38$. All predictions are far below the observed canonical $+10.24$. Table~\ref{tab:loo_extrapolation} reports a leave-one-family-out cross-validation; the OLS quadratic prediction is the most sensitive (shifts from $-1.09$ on all 66 checkpoints to $+2.88$ when restricted to the 61 non-degenerate checkpoints with dev $\geq 4.5$, and to $+0.23$ when the distillation-family checkpoints are removed), while GP predictions stay negative with leave-one-family-out upper bounds below $+0.3$.
 
 \begin{table}[h]
 \centering
 \small
-\caption{Competence extrapolation: gap predictions at dev BLEU-4 $=13.38$ from three fits over 48 unique non-released binaries (dev BLEU-4 0--10.5; 43 at $\geq 4.5$). All predictions are far below the observed canonical $+10.24$. PIs are \emph{descriptive} (non-IID checkpoints); they should not be read as calibrated uncertainty intervals. Sensitivity row: the quadratic restricted to the 37 non-degenerate checkpoints (dev $\geq 4.5$) shifts to $+2.88$.}
+\caption{Competence extrapolation: gap predictions at dev BLEU-4 $=13.38$ from three fits over 65 unique non-released binaries (dev BLEU-4 0--10.5; 61 non-degenerate). All predictions are far below the observed canonical $+10.24$. PIs are \emph{descriptive} (non-IID checkpoints); they should not be read as calibrated uncertainty intervals.}
 \label{tab:extrapolation}
 \begin{tabular}{lrrr}
 \toprule
@@ -545,7 +544,7 @@ Rescue (1) & 41 & $-1.82$ & $-0.97$ & $-0.98$ & $+0.18$ & 0.47 \\
 \end{table}
 
 \paragraph{Caveats.}
-First, the GP upper bound ($+0.3$) partly reflects RBF kernel prior shrinkage toward the mean in the extrapolation region (sparse data beyond dev BLEU-4 9.8), not purely data evidence. Second, the OLS quadratic fit is sensitive to the distillation family and to the inclusion of the degenerate checkpoints. Third, the 42 checkpoints are not IID. We therefore report these fits only as descriptive visualizations and explicitly avoid claiming that ``competence alone is unlikely to explain the reversal'' on the basis of these fits. The unobserved $(9.8, 13.38)$ interval could in principle harbor non-linear behavior that the present experiments cannot rule out.
+First, the GP upper bound ($+0.3$) partly reflects RBF kernel prior shrinkage toward the mean in the extrapolation region (sparse data beyond dev BLEU-4 10.5), not purely data evidence. Second, the OLS quadratic fit is sensitive to the distillation family and to the inclusion of the degenerate checkpoints. Third, the 61 non-degenerate checkpoints are not IID. We therefore report these fits only as descriptive visualizations and explicitly avoid claiming that ``competence alone is unlikely to explain the reversal'' on the basis of these fits. The unobserved $(10.5, 13.38)$ interval could in principle harbor non-linear behavior that the present experiments cannot rule out.
 
 \paragraph{Per-item gap decomposition (experiment C).}
 To characterize the \emph{mechanism} rather than the identity question, we regress the per-item sentence-level PURE--REC gap $y_i$ (sacreBLEU sentence BLEU-4 under the released evaluator, canonical donor registry; mean $8.4$, SD $18.7$, $n=641$) on interpretable item-level features: donor--reference token-set Jaccard, normalized character Levenshtein between donor and reference, an exact-match-train-text flag, the number of training texts sharing the reference's 60-character prefix (template density), the number of training texts with Jaccard $\geq 0.5$ to the reference (high-overlap-train), reference text length, donor reuse count, a confidence=1 flag, and a 9-level signer one-hot block (Fig.~\ref{fig:s3_per_item_decomp}). The full model explains $R^2=0.33$ of the per-item variance. The strongest single-feature contributions, measured by leave-one-out $R^2$ drop, are high-overlap-train ($0.093$), template density ($0.051$), and donor--reference Levenshtein ($0.039$); the donor--reference Jaccard contributes $0.007$, the exact-match flag $0.001$, and the entire signer block $0.008$ --- signer identity is essentially irrelevant.
@@ -848,18 +847,20 @@ Released (full 7{,}060, beam=3) & 1 & 13.38 & $+10.24$ & 78.82 / 70.7\% & --- \\
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Canonical checkpoint registry (summary). 78 training runs across 13 families; 44 non-degenerate checkpoints enter the non-replication count, 49 have a canonical PHX-public PURE--REC gap, and the released evaluator is the audit target. Full per-checkpoint details in Sup.~D.}
+\caption{Canonical checkpoint registry (summary). 68 training runs across 11 families; 61 non-degenerate checkpoints enter the non-replication count (all 61 with strictly negative gaps), 66 have a canonical PHX-public PURE--REC gap, and the released evaluator is the audit target. Auto-generated from the disk-scanned \texttt{results/canonical\_checkpoint\_registry.json}; full per-checkpoint details in Sup.~D.}
 \label{tab:s6_checkpoint_registry_summary}
 \begin{tabular}{p{4.2cm}p{1.0cm}p{1.5cm}p{1.4cm}p{1.4cm}p{3.0cm}}
 \toprule
-Family & Planned & Trained & Has gap & Has dev & Enters \\
+Family & Runs & Trained & Has gap & Has dev & Enters \\
 \midrule
-Reconstructions (14) & 14 & 14 & 14 & 14 & multiseed, bootstrap, PI, dose--resp. \\
-Rescue (20) & 20 & 20 & 1 & 20 & gate; wd0 dose--resp. \\
-Other families (21) & 21 & 21 & 14 & 20 & dose--resp. \\
+Reconstructions (paper-derived, 14) & 14 & 14 & 14 & 14 & multiseed, bootstrap, PI, dose--resp. \\
+Near-faithful (config-faithful + step-corrected, 14) & 14 & 14 & 14 & 14 & recipe-faithfulness evidence \\
+Joint-loss (greedy + beam-3, 16) & 16 & 16 & 16 & 16 & protocol-robustness \\
+Other diagnostic (confirmation + rescue + ladder + long-schedule, 8) & 8 & 8 & 6 & 8 & dose--resp. \\
 Distillation (15) & 15 & 15 & 15 & 15 & ladder, dose--resp. \\
+Joint-loss supplementary (1809/1810, 1) & 1 & 1 & 0 & 1 & (exploratory, not decoded) \\
 \midrule
-Total & 70 & 70 & 43 & 67 & \\
+Total & 68 & 68 & 65 & 68 & \\
 Released original & --- & --- & 1 & 1 & audit target \\
 \bottomrule
 \end{tabular}
@@ -942,7 +943,7 @@ Human refs, reconstructions (6 seeds) & 641 & 3.49--4.62 & 3.35--4.35 & $-0.15$ 
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Cross-evaluator re-decoding of the noisy-gloss retrieval outputs (641 PHX-public keys; \S\ref{sec:competition_real}). Gap = noisy-gloss $-$ REC, corpus sacreBLEU-4 (flat-reference form, \S\ref{sec:method} protocol). The realistic retrieval pipeline is roughly even with REC under the released evaluator ($-0.13$), and every non-degenerate evaluator gives a negative gap; the five degenerate checkpoints (three $\alpha{=}1.0$ distillation students, two smallest ladder fractions) decode empty or near-empty hypotheses.}
+\caption{Cross-evaluator re-decoding of the noisy-gloss retrieval outputs (641 PHX-public keys; \S\ref{sec:competition_real}). Gap = noisy-gloss $-$ REC, corpus sacreBLEU-4 (flat-reference form, \S\ref{sec:method} protocol). The realistic retrieval pipeline is roughly even with REC under the released evaluator ($-0.13$), and every non-degenerate evaluator gives a negative gap; the five degenerate checkpoints (three $\alpha{=}1.0$ distillation students, two smallest ladder fractions) decode empty or near-empty hypotheses. Note: this table reflects the families that had been cross-evaluated at the time of the Round-9 revision; the joint-loss (greedy/beam-3) and re-trained step-corrected families (\S\ref{sec:protocol_robustness}) are not yet in this cross-eval but follow the same pattern (negative gaps under all evaluators in the canonical panel, Table~\ref{tab:accounting}).}
 \label{tab:s11_noisy_gloss_cross_eval}
 \begin{tabular}{lrrr}
 \toprule
@@ -996,7 +997,7 @@ L4: from-scratch retraining & \texttt{scripts/train\_reconstruction.py}, \texttt
 
 \section{Reconstruction Sanity Checks (Reviewer Round-2)}
 \label{sec:appendix_sanity}
-This appendix documents the three sanity checks requested by the reviewer to rule out a systematic implementation defect shared across all 78 training runs. Scripts: \texttt{scripts/e\_overfit\_test.py}, \texttt{scripts/e\_checkpoint\_stats.py}, \texttt{scripts/e\_inference\_regression.py}. Results: \texttt{results/overfit\_test.json}, \texttt{results/checkpoint\_stats.json}, \texttt{results/inference\_regression.json}.
+This appendix documents the three sanity checks requested by the reviewer to rule out a systematic implementation defect shared across all 68 training runs. Scripts: \texttt{scripts/e\_overfit\_test.py}, \texttt{scripts/e\_checkpoint\_stats.py}, \texttt{scripts/e\_inference\_regression.py}. Results: \texttt{results/overfit\_test.json}, \texttt{results/checkpoint\_stats.json}, \texttt{results/inference\_regression.json}.
 
 \paragraph{Small-sample overfit test.}
 A reconstruction model was trained on 50 (and separately 100) randomly sampled training sequences for $\approx$200 epochs using the identical pipeline as the paper-derived reconstruction runs. On the 50-sample set, teacher-forced NLL fell from 7.66 to 0.009 and free-decode sacreBLEU-4 reached 100.00 under beam-3 decoding. On the 100-sample set, free-decode BLEU also reached 100.00 (300 epochs). The reconstruction code can therefore overfit small data to near-perfect free-decode BLEU, ruling out a fundamental defect in checkpoint loading, tokenizer, padding-mask, EOS, loss normalization, or the beam-search decoding path.

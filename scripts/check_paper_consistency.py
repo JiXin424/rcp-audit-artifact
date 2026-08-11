@@ -1,15 +1,29 @@
 #!/usr/bin/env python3
-"""Paper--artifact consistency test (reviewer M1 + M4).
+"""Paper--artifact consistency test.
 
-Reads artifact/claim_manifest.json and asserts:
-  (1) every source_file and audit_target_file referenced in the manifest exists;
-  (2) results/accounting_table.json is internally consistent (family sums match
-      headline counts; decoded <= runs; non-degenerate <= decoded);
-  (3) headline counts in main_lre.tex match the accounting registry;
-  (4) selected headline numbers in main_lre.tex match their JSON sources.
+Single command an auditor runs to verify the paper's numbers trace to
+machine-readable sources. Exit code 0 = all checks passed.
 
-This is the single command an auditor runs to verify the paper's numbers trace
-to machine-readable sources. Exit code 0 = all checks passed.
+Reads:
+  - artifact/claim_manifest.json
+  - results/canonical_checkpoint_registry.json (disk-scanned, schema v4)
+  - results/accounting_table.json (derived from the registry)
+  - results/gap_43_canonical_beam3.json (canonical gap panel)
+  - results/matched_donor_pool.json, donor_pool_resampling.json,
+    robustness_diagnostics.json, probe_multiplicity.json
+  - main_lre.tex, supplementary.tex
+
+Invariants verified:
+  (1) manifest-referenced files exist;
+  (2) registry summary counts match entry counts (no stale summary);
+  (3) disk ↔ registry: every checkpoint dir with best.ckpt or training_log.json
+      under checkpoints/*/* is in the registry and vice versa;
+  (4) accounting internal consistency (family sums match headline; monotonicity);
+  (5) paper bold total row in main_lre.tex matches accounting JSON;
+  (6) gap panel JSON's non_released_gap_range matches registry's gap range;
+  (7) selected headline numbers in main_lre.tex match their JSON sources;
+  (8) probe multiplicity "6 of 12 explored" statement present;
+  (9) supplementary.tex does not contain stale 70/70/43/67 Table S6.
 
 Run: python3 scripts/check_paper_consistency.py
 """
@@ -19,124 +33,226 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-# Manifest lives at artifact/claim_manifest.json in RCP, claim_manifest.json at
-# the repo root in the artifact mirror. Resolve whichever exists.
+CKPT_ROOT = ROOT / "checkpoints"
+SKIP_DIRS = {"released", "finetune_released", "step_faithful_legacy_nll", "retrain_logs"}
+
 _MANIFEST_PRIMARY = ROOT / "artifact" / "claim_manifest.json"
 _MANIFEST_FALLBACK = ROOT / "claim_manifest.json"
 MANIFEST = _MANIFEST_PRIMARY if _MANIFEST_PRIMARY.exists() else _MANIFEST_FALLBACK
+REGISTRY = ROOT / "results" / "canonical_checkpoint_registry.json"
 ACCOUNTING = ROOT / "results/accounting_table.json"
+GAP_PANEL = ROOT / "results/gap_43_canonical_beam3.json"
 PAPER = ROOT / "main_lre.tex"
+SUPP = ROOT / "supplementary.tex"
 
 errors = []
 warnings = []
 passed = []
 
 
+def ok(msg): passed.append(msg)
+def warn(msg): warnings.append(msg)
+def fail(msg): errors.append(msg)
+
+
 def check_file(rel):
     p = ROOT / rel
     if p.exists():
-        passed.append(f"file exists: {rel}")
+        ok(f"file exists: {rel}")
         return True
-    errors.append(f"MISSING file referenced in manifest: {rel}")
+    fail(f"MISSING file referenced in manifest: {rel}")
     return False
 
 
 def main():
     # (1) Manifest file existence
-    manifest = json.load(open(MANIFEST))
-    for f in manifest.get("audit_target_files", []):
-        check_file(f.rstrip("/"))
-    for claim in manifest.get("claims", []):
-        sf = claim.get("source_file")
-        if sf:
-            check_file(sf.rstrip("/"))
-
-    # (2) Accounting internal consistency
-    acc = json.load(open(ACCOUNTING))
-    hc = acc["headline_counts"]
-    fam = acc["family_detail"]
-    sum_runs = sum(f["runs"] for f in fam.values())
-    sum_decoded = sum(f["decoded"] for f in fam.values())
-    sum_nondeg = sum(f["non_degenerate"] for f in fam.values())
-
-    if sum_runs == hc["total_trained_runs"]:
-        passed.append(f"accounting: family runs sum {sum_runs} == headline {hc['total_trained_runs']}")
+    if not MANIFEST.exists():
+        fail(f"manifest not found at {MANIFEST}")
     else:
-        errors.append(f"accounting: family runs sum {sum_runs} != headline {hc['total_trained_runs']}")
-    if sum_decoded == hc["total_decoded_gap_panel"]:
-        passed.append(f"accounting: decoded sum {sum_decoded} == headline {hc['total_decoded_gap_panel']}")
-    else:
-        errors.append(f"accounting: decoded sum {sum_decoded} != headline {hc['total_decoded_gap_panel']}")
-    if sum_nondeg == hc["total_non_degenerate"]:
-        passed.append(f"accounting: non-deg sum {sum_nondeg} == headline {hc['total_non_degenerate']}")
-    else:
-        errors.append(f"accounting: non-deg sum {sum_nondeg} != headline {hc['total_non_degenerate']}")
+        manifest = json.load(open(MANIFEST))
+        for f in manifest.get("audit_target_files", []):
+            check_file(f.rstrip("/"))
+        for claim in manifest.get("claims", []):
+            sf = claim.get("source_file")
+            if sf:
+                check_file(sf.rstrip("/"))
 
-    # Sanity inequalities
-    if hc["total_decoded_gap_panel"] > hc["total_trained_runs"]:
-        errors.append("accounting: decoded > trained (impossible)")
-    if hc["total_non_degenerate"] > hc["total_decoded_gap_panel"]:
-        errors.append("accounting: non-degenerate > decoded (impossible)")
-    if hc["total_unique_binaries"] > hc["total_decoded_gap_panel"]:
-        errors.append("accounting: unique > decoded (impossible)")
-
-    # (3) Paper headline counts match accounting (dynamic from registry)
-    tex = open(PAPER).read()
-    # Check the bold total row appears, e.g. \textbf{78} & \textbf{49} ...
-    total_row = (f"\\textbf{{{hc['total_trained_runs']}}} & "
-                 f"\\textbf{{{hc['total_decoded_gap_panel']}}} & "
-                 f"\\textbf{{{hc['total_unique_binaries']}}} & "
-                 f"\\textbf{{{hc['total_non_degenerate']}}}")
-    if total_row in tex:
-        passed.append(f"tex: accounting total row matches registry ({hc['total_trained_runs']}/"
-                      f"{hc['total_decoded_gap_panel']}/{hc['total_unique_binaries']}/"
-                      f"{hc['total_non_degenerate']})")
+    # (2) Registry summary vs entry counts
+    if not REGISTRY.exists():
+        fail(f"registry not found at {REGISTRY}")
+        reg = None
     else:
-        errors.append(f"tex: accounting total row NOT found as {total_row}")
-
-    # (4) Cross-check selected headline numbers against JSON sources
-    cross_checks = [
-        ("results/gap_43_canonical_beam3.json", ["released", "gap"], 10.243,
-         "+10.24", 0.1),
-        ("results/matched_donor_pool.json",
-         ["matched_subsets", "caliper_0.05", "origin_effect"], 9.56,
-         "+9.56", 0.1),
-        ("results/donor_pool_resampling.json",
-         ["resampled_640_subpool_distribution", "origin_effect_mean"], 8.38,
-         "+8.38", 0.1),
-        ("results/robustness_diagnostics.json",
-         ["part1_spearman_readout_competence", "excl_released", "rho"], 0.907,
-         "0.907", 0.005),
-    ]
-    for src, key_path, expected_json, tex_token, tol in cross_checks:
-        if not (ROOT / src).exists():
-            errors.append(f"cross-check source missing: {src}")
-            continue
-        d = json.load(open(ROOT / src))
-        for k in (key_path if isinstance(key_path, list) else [key_path]):
-            d = d[k]
-        if abs(d - expected_json) > tol:
-            errors.append(f"cross-check {src}: JSON value {d} != expected {expected_json}")
+        reg = json.load(open(REGISTRY))
+        ckpts = reg.get("checkpoints", [])
+        summ = reg.get("summary", {})
+        # total_trained_runs == len(checkpoints)
+        if summ.get("total_trained_runs") == len(ckpts):
+            ok(f"registry summary.total_trained_runs ({summ['total_trained_runs']}) == len(checkpoints) ({len(ckpts)})")
         else:
-            passed.append(f"cross-check {src}: {key_path} = {d}")
-        if tex_token.replace("+", "") in tex or tex_token in tex:
-            passed.append(f"tex: contains '{tex_token}'")
+            fail(f"registry summary.total_trained_runs ({summ.get('total_trained_runs')}) != len(checkpoints) ({len(ckpts)})")
+        # Recompute counts
+        has_gap = sum(1 for c in ckpts if c.get("has_gap"))
+        has_dev = sum(1 for c in ckpts if c.get("has_dev"))
+        non_deg = sum(1 for c in ckpts if c.get("has_gap") and not c.get("degenerate"))
+        if has_gap == summ.get("decoded_gap_panel"):
+            ok(f"registry has_gap count ({has_gap}) == summary.decoded_gap_panel")
         else:
-            errors.append(f"tex: does NOT contain '{tex_token}'")
+            fail(f"registry has_gap count ({has_gap}) != summary.decoded_gap_panel ({summ.get('decoded_gap_panel')})")
+        if non_deg == summ.get("non_degenerate"):
+            ok(f"registry non_degenerate count ({non_deg}) == summary.non_degenerate")
+        else:
+            fail(f"registry non_degenerate count ({non_deg}) != summary.non_degenerate ({summ.get('non_degenerate')})")
 
-    # Probe multiplicity: 6/12 explored
-    pm = json.load(open(ROOT / "results/probe_multiplicity.json"))
-    # The manifest says 6 explored matrix cells + 2 random baselines
-    explored_matrix = sum(1 for c in pm["complete_matrix"] if c.get("explored"))
-    n_baseline = len(pm.get("baseline_probes", []))
-    if "of the 12 retrieval--construction cells, 6 were explored" in tex.lower().replace("--", "-"):
-        passed.append("tex: probe multiplicity '6 explored of 12' statement present")
-    else:
-        # try alternate phrasing
-        if re.search(r"6 were explored", tex):
-            passed.append("tex: probe multiplicity '6 were explored' present")
+    # (3) Disk ↔ registry consistency
+    if reg is not None and CKPT_ROOT.exists():
+        disk_dirs = set()
+        for fam_dir in CKPT_ROOT.iterdir():
+            if not fam_dir.is_dir() or fam_dir.name in SKIP_DIRS: continue
+            for seed_dir in fam_dir.iterdir():
+                if not seed_dir.is_dir(): continue
+                if seed_dir.name.startswith("_") or seed_dir.name.endswith("_OOM"): continue
+                has_ckpt = (seed_dir / "best.ckpt").exists()
+                has_log = (seed_dir / "training_log.json").exists()
+                if has_ckpt or has_log:
+                    disk_dirs.add(str(seed_dir.relative_to(ROOT)))
+        reg_dirs = {c.get("training_dir") for c in ckpts if c.get("training_dir")}
+        only_disk = disk_dirs - reg_dirs
+        only_reg = reg_dirs - disk_dirs
+        if not only_disk and not only_reg:
+            ok(f"disk ↔ registry: {len(disk_dirs)} training dirs match")
         else:
-            errors.append("tex: probe multiplicity '6 explored' statement NOT found")
+            if only_disk:
+                fail(f"on disk but not in registry: {sorted(only_disk)[:5]}{'...' if len(only_disk)>5 else ''}")
+            if only_reg:
+                fail(f"in registry but not on disk: {sorted(only_reg)[:5]}{'...' if len(only_reg)>5 else ''}")
+
+    # (4) Accounting internal consistency
+    if not ACCOUNTING.exists():
+        fail(f"accounting not found at {ACCOUNTING}")
+    else:
+        acc = json.load(open(ACCOUNTING))
+        hc = acc["headline_counts"]
+        fam = acc["family_detail"]
+        sum_runs = sum(f["runs"] for f in fam.values())
+        sum_decoded = sum(f["decoded"] for f in fam.values())
+        sum_nondeg = sum(f["non_degenerate"] for f in fam.values())
+        if sum_runs == hc["total_trained_runs"]:
+            ok(f"accounting: family runs sum ({sum_runs}) == headline ({hc['total_trained_runs']})")
+        else:
+            fail(f"accounting: family runs sum ({sum_runs}) != headline ({hc['total_trained_runs']})")
+        if sum_decoded == hc["total_decoded_gap_panel"]:
+            ok(f"accounting: decoded sum ({sum_decoded}) == headline ({hc['total_decoded_gap_panel']})")
+        else:
+            fail(f"accounting: decoded sum ({sum_decoded}) != headline ({hc['total_decoded_gap_panel']})")
+        if sum_nondeg == hc["total_non_degenerate"]:
+            ok(f"accounting: non-deg sum ({sum_nondeg}) == headline ({hc['total_non_degenerate']})")
+        else:
+            fail(f"accounting: non-deg sum ({sum_nondeg}) != headline ({hc['total_non_degenerate']})")
+        # Sanity inequalities
+        if hc["total_decoded_gap_panel"] > hc["total_trained_runs"]:
+            fail("accounting: decoded > trained (impossible)")
+        if hc["total_non_degenerate"] > hc["total_decoded_gap_panel"]:
+            fail("accounting: non-degenerate > decoded (impossible)")
+        if hc["total_unique_binaries"] > hc["total_decoded_gap_panel"]:
+            fail("accounting: unique > decoded (impossible)")
+        # accounting vs registry
+        if reg is not None:
+            rsum = reg["summary"]
+            for k in ("total_trained_runs", "decoded_gap_panel", "unique_binaries",
+                     "sha256_collisions", "non_degenerate"):
+                ak = {"total_trained_runs": "total_trained_runs",
+                      "decoded_gap_panel": "total_decoded_gap_panel",
+                      "unique_binaries": "total_unique_binaries",
+                      "sha256_collisions": "sha256_collisions",
+                      "non_degenerate": "total_non_degenerate"}[k]
+                if hc[ak] == rsum[k]:
+                    ok(f"accounting.{ak} ({hc[ak]}) == registry.summary.{k}")
+                else:
+                    fail(f"accounting.{ak} ({hc[ak]}) != registry.summary.{k} ({rsum[k]})")
+
+        # (5) Paper bold total row matches accounting
+        if PAPER.exists():
+            tex = open(PAPER).read()
+            total_row = (f"\\textbf{{{hc['total_trained_runs']}}} & "
+                         f"\\textbf{{{hc['total_decoded_gap_panel']}}} & "
+                         f"\\textbf{{{hc['total_unique_binaries']}}} & "
+                         f"\\textbf{{{hc['total_non_degenerate']}}}")
+            if total_row in tex:
+                ok(f"tex: accounting total row matches ({hc['total_trained_runs']}/"
+                    f"{hc['total_decoded_gap_panel']}/{hc['total_unique_binaries']}/"
+                    f"{hc['total_non_degenerate']})")
+            else:
+                fail(f"tex: accounting total row NOT found as {total_row}")
+
+            # (9) Supplementary should not have stale 70/70/43/67 table
+            if SUPP.exists():
+                stex = open(SUPP).read()
+                # The old Table S6 line said "Total & 70 & 70 & 43 & 67"
+                if re.search(r"Total\s*&\s*70\s*&\s*70\s*&\s*43\s*&\s*67", stex):
+                    fail("supplementary.tex: stale 'Total & 70 & 70 & 43 & 67' Table S6 still present")
+                else:
+                    ok("supplementary.tex: stale 70/70/43/67 table removed")
+
+            # (7) Cross-check selected headline numbers
+            cross_checks = [
+                ("results/gap_43_canonical_beam3.json", ["released", "gap"], 10.243,
+                 "+10.24", 0.1),
+                ("results/matched_donor_pool.json",
+                 ["matched_subsets", "caliper_0.05", "origin_effect"], 9.56,
+                 "+9.56", 0.1),
+                ("results/donor_pool_resampling.json",
+                 ["resampled_640_subpool_distribution", "origin_effect_mean"], 8.38,
+                 "+8.38", 0.1),
+                ("results/robustness_diagnostics.json",
+                 ["part1_spearman_readout_competence", "excl_released", "rho"], 0.907,
+                 "0.907", 0.005),
+            ]
+            for src, key_path, expected_json, tex_token, tol in cross_checks:
+                if not (ROOT / src).exists():
+                    fail(f"cross-check source missing: {src}")
+                    continue
+                d = json.load(open(ROOT / src))
+                for k in (key_path if isinstance(key_path, list) else [key_path]):
+                    d = d[k]
+                if abs(d - expected_json) > tol:
+                    fail(f"cross-check {src}: JSON value {d} != expected {expected_json}")
+                else:
+                    ok(f"cross-check {src}: {key_path} = {d}")
+                if tex_token.replace("+", "") in tex or tex_token in tex:
+                    ok(f"tex: contains '{tex_token}'")
+                else:
+                    fail(f"tex: does NOT contain '{tex_token}'")
+
+            # (8) Probe multiplicity
+            pm_path = ROOT / "results/probe_multiplicity.json"
+            if pm_path.exists():
+                pm = json.load(open(pm_path))
+                explored_matrix = sum(1 for c in pm.get("complete_matrix", []) if c.get("explored"))
+                if "of the 12 retrieval--construction cells, 6 were explored" in tex.lower().replace("--", "-"):
+                    ok("tex: probe multiplicity '6 explored of 12' statement present")
+                elif re.search(r"6 were explored", tex):
+                    ok("tex: probe multiplicity '6 were explored' present")
+                else:
+                    fail("tex: probe multiplicity '6 explored' statement NOT found")
+
+            # (6) Gap panel JSON non_released_gap_range matches registry
+            if reg is not None and GAP_PANEL.exists():
+                panel = json.load(open(GAP_PANEL))
+                meta = panel.get("_meta", {})
+                declared_range = meta.get("non_released_gap_range")
+                # Compute actual range from non-released non-degenerate entries in panel
+                non_released = [v for k, v in panel.items()
+                                if k not in ("released", "_meta") and isinstance(v, dict) and "gap" in v]
+                if non_released:
+                    gaps = [v["gap"] for v in non_released if v.get("gap") is not None]
+                    actual_min = min(gaps); actual_max = max(gaps)
+                    # Sanity: meta range should match
+                    if declared_range and (abs(declared_range[0] - actual_min) > 0.01 or
+                                           abs(declared_range[1] - actual_max) > 0.01):
+                        fail(f"gap panel _meta.non_released_gap_range ({declared_range}) != "
+                             f"actual min/max ({actual_min:.4f}/{actual_max:.4f})")
+                    else:
+                        ok(f"gap panel _meta range matches actual ({actual_min:.4f}/{actual_max:.4f})")
 
     # Report
     print("=" * 60)
@@ -144,15 +260,15 @@ def main():
     print("=" * 60)
     print(f"\nPassed checks: {len(passed)}")
     for p in passed:
-        print(f"  OK  {p}")
+        print(f"  OK   {p}")
     if warnings:
         print(f"\nWarnings: {len(warnings)}")
         for w in warnings:
-            print(f"  WARN  {w}")
+            print(f"  WARN {w}")
     if errors:
         print(f"\nFAILED checks: {len(errors)}")
         for e in errors:
-            print(f"  FAIL  {e}")
+            print(f"  FAIL {e}")
         print("\n=== RESULT: FAIL ===")
         sys.exit(1)
     else:

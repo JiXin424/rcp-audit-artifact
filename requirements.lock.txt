@@ -48,7 +48,7 @@ evaluate==0.4.1
 exceptiongroup==1.3.0
 fastapi==0.120.0
 fastcore==1.8.13
-fastdtw @ file:///home/xkb4/.cache/pip/wheels/ab/d0/26/b82cb0f49ae73e5e6bba4e8462fff2c9851d7bd2ec64f8891e/fastdtw-0.3.4-py3-none-any.whl#sha256=aab042121e571aa871b608c08f815fe23dba6e37543904aa880d3fc8cdaaa367
+fastdtw==0.3.4
 ffmpy==0.6.4
 filelock==3.20.0
 fire==0.7.1

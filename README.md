@@ -11,12 +11,12 @@ The paper audits whether the SLRTP2025 released back-translation (BT)
 evaluator's $+10.24$ sacreBLEU retrieval-vs-recorded-poses (PURE–REC) reversal
 on the 641-sequence PHX-public test set reproduces across checkpoints
 reconstructed from the publicly documented training recipe. Spoiler: it does
-not reproduce — 44 non-degenerate decoded runs (48 unique weight binaries
-after SHA-256 deduplication) 43 of 44 have strictly negative PURE–REC gaps (one $+0.24$; range
+not reproduce — 61 non-degenerate decoded runs (65 unique weight binaries
+after SHA-256 deduplication) all 61 have strictly negative PURE–REC gaps (range
 $[-2.01, -0.21]$), and the released evaluator's competence (dev BLEU-4 13.38
 under the uniform beam-3 protocol) and training-pool readout (78.8 BLEU,
 70.7% exact match) are outside anything the public recipe constructs (decoded
-family decoded max dev BLEU-4 10.5; unobserved competence interval $(9.8, 13.38)$).
+family decoded max dev BLEU-4 10.5; unobserved competence interval $(10.5, 13.38)$).
 The paper is scoped as a public-recipe sufficiency audit, not a causal
 checkpoint-identity claim.
 
@@ -33,7 +33,7 @@ regenerates every paper number from the canonical donor registry (SHA-256
 `9170a53026ab3263b451a3632a9e02318745acabf12f0b679921477afbefa301`). If the
 artifact's `paper/` sources look stale, sync them from this repo (see
 `AGENTS.md` §1b). Note: the artifact README still carries the pre-Round-3
-title and the old `[10.9, 12.7]` transition interval — the $(9.8, 13.38)$
+title and the old `[10.9, 12.7]` transition interval — the $(10.5, 13.38)$
 interval here supersedes it.
 
 ## Repository layout
@@ -42,7 +42,7 @@ interval here supersedes it.
 src/                  Python package: data, models, training, evaluation, utils
 scripts/              46 CLI entry points (40 *.py + 6 *.sh)
 configs/              YAML configs (released, reconstruction, distillation, rescue_wd0)
-checkpoints/          Trained model weights (.ckpt gitignored; 70 trained + released + 9 finetunes)
+checkpoints/          Trained model weights (.ckpt gitignored; 68 trained + released + 9 finetunes)
 data/SLRTP2025/       SLRTP2025 pose records + released BT checkpoint (symlink, not in git)
 data/sacrebird/       Czehmann et al. human back-translation CSVs (CC BY-NC-SA 4.0)
 results/              Experiment outputs (canonical registries, decoded cells, protocol readouts)
@@ -118,40 +118,56 @@ bash scripts/launch_reconstructions.sh
 
 ### Train step-corrected near-faithful seeds (10 seeds: 505, 606, 1701-1708)
 
-Step-corrected runs use the correct `validation_freq=14` interpretation (14 optimizer steps, not 14 epochs) and NLL-based checkpoint selection. One seed takes ~6 min on a single GPU (7060 train items, effective batch 256, early-stop ~epoch 25-45).
+Step-corrected runs use the correct `validation_freq=14` interpretation (14 optimizer steps, not 14 epochs) AND decoded-BLEU checkpoint selection (matching the released recipe). The training script is `src/training/train_matched_v2.py` invoked with `--rec-weight 0` (translation-only loss) and `--selection bleu` (decoded-BLEU selection). One seed takes ~6 min on a single GPU (7060 train items, effective batch 256, early-stop ~epoch 30-50).
 
 ```bash
 # Single seed
-python -m src.training.train_matched \
+CUDA_VISIBLE_DEVICES=0 python -m src.training.train_matched_v2 \
     --config configs/released.yaml \
     --train-pickle data/SLRTP2025/SLRTP-Sign-Production-Evaluation-Data/data/train.pt \
     --dev-pickle data/SLRTP2025/SLRTP-Sign-Production-Evaluation-Data/data/dev.pt \
     --txt-vocab checkpoints/released/backTranslation_PHIX_model/txt.vocab \
     --gls-vocab checkpoints/released/backTranslation_PHIX_model/gls.vocab \
-    --seed 1701 --gpu 0 --epochs 300 --batch-size 256 --grad-accum 1 --selection nll \
+    --seed 1701 --gpu 0 --epochs 300 --batch-size 256 --patience 15 \
+    --rec-weight 0 --selection bleu \
     --output checkpoints/step_faithful/seed_1701
 
-# 8 seeds in parallel on 8 GPUs (seeds 1701-1708)
+# 10 seeds in parallel on 8 GPUs (seeds 1701-1708 + 505, 606)
 for i in $(seq 0 7); do
-  CUDA_VISIBLE_DEVICES=$i python -m src.training.train_matched \
+  CUDA_VISIBLE_DEVICES=$i python -m src.training.train_matched_v2 \
     --config configs/released.yaml \
     --train-pickle data/SLRTP2025/SLRTP-Sign-Production-Evaluation-Data/data/train.pt \
     --dev-pickle data/SLRTP2025/SLRTP-Sign-Production-Evaluation-Data/data/dev.pt \
     --txt-vocab checkpoints/released/backTranslation_PHIX_model/txt.vocab \
     --gls-vocab checkpoints/released/backTranslation_PHIX_model/gls.vocab \
-    --seed $((1701+i)) --gpu 0 --epochs 300 --batch-size 256 --grad-accum 1 --selection nll \
+    --seed $((1701+i)) --gpu 0 --epochs 300 --batch-size 256 --patience 15 \
+    --rec-weight 0 --selection bleu \
     --output checkpoints/step_faithful/seed_$((1701+i)) &
+done
+# Then launch seeds 505 and 606 on freed GPUs
+for SEED in 505 606; do
+  GPU=$([ $SEED -eq 505 ] && echo 0 || echo 1)
+  CUDA_VISIBLE_DEVICES=$GPU python -m src.training.train_matched_v2 \
+    --config configs/released.yaml \
+    --train-pickle data/SLRTP2025/SLRTP-Sign-Production-Evaluation-Data/data/train.pt \
+    --dev-pickle data/SLRTP2025/SLRTP-Sign-Production-Evaluation-Data/data/dev.pt \
+    --txt-vocab checkpoints/released/backTranslation_PHIX_model/txt.vocab \
+    --gls-vocab checkpoints/released/backTranslation_PHIX_model/gls.vocab \
+    --seed $SEED --gpu 0 --epochs 300 --batch-size 256 --patience 15 \
+    --rec-weight 0 --selection bleu \
+    --output checkpoints/step_faithful/seed_$SEED &
 done; wait
 ```
 
 ### Decode a step-corrected seed (REC + PURE gap panel + dev BLEU)
 
 ```bash
-python scripts/decode_step_faithful.py --ckpt-dir checkpoints/step_faithful/seed_1701 --gpu 0
+CUDA_VISIBLE_DEVICES=0 python scripts/decode_checkpoints_only.py \
+    --checkpoints sf_1701:checkpoints/step_faithful/seed_1701 --gpu 0
 python scripts/e_dev_uniform.py --gpu 0 --ckpt-dir checkpoints/step_faithful/seed_1701
 ```
 
-`decode_step_faithful.py` writes `results/gap_43_canonical_beam3_items/sf_1701_{gt,pure}.json`. Expected across the 10 step-corrected seeds: PURE--REC gaps in $[-1.59, +0.24]$, 9/10 negative (per-seed values in SI~Table~S27).
+`decode_checkpoints_only.py` writes `results/gap_43_canonical_beam3_items/sf_1701_{gt,pure}.json`. Observed across the 10 step-corrected seeds (Round-10 re-train): PURE--REC gaps in $[-1.37, -0.36]$, **all 10 negative** (per-seed values in SI~Table~S27). The earlier `+0.24` positive gap reported for the legacy `step_faithful` runs was an artifact of those runs using NLL selection + epoch validation (i.e., the same protocol as `config_faithful`); the re-trained runs use the actually-corrected protocol and eliminate the positive gap.
 
 ### Compile the paper
 

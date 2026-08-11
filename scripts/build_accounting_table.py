@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Build a single canonical accounting table from the checkpoint registry.
+"""Build a single canonical accounting table from the disk-scanned registry.
 
 This is the SINGLE SOURCE OF TRUTH for all run/checkpoint counts in the paper.
 Every number in the abstract, tables, and text must match this output.
+
+Reads: results/canonical_checkpoint_registry.json (schema v4, disk scan)
+Writes: results/accounting_table.json
 
 Usage:
     python3 scripts/build_accounting_table.py
@@ -10,276 +13,245 @@ Usage:
 import json
 import os
 import sys
-from collections import OrderedDict
+from collections import OrderedDict, defaultdict
+from pathlib import Path
 
-REGISTRY_PATH = os.path.join(os.path.dirname(__file__), '..', 'results', 'canonical_checkpoint_registry.json')
-OUTPUT_PATH = os.path.join(os.path.dirname(__file__), '..', 'results', 'accounting_table.json')
+REGISTRY_PATH = Path(__file__).resolve().parents[1] / "results" / "canonical_checkpoint_registry.json"
+OUTPUT_PATH = Path(__file__).resolve().parents[1] / "results" / "accounting_table.json"
 
-# Family -> tier mapping (frozen; matches paper stratification)
-FAMILY_TO_TIER = {
-    'config_faithful':       'primary',
-    'step_faithful':         'primary',
-    'reconstructions_primary':   'secondary',
-    'reconstructions_extension': 'secondary',
-    'confirmation':          'diagnostic',
-    'rescue2':               'diagnostic',
-    'rescue_lr':             'diagnostic',
-    'distillation':          'diagnostic',
-    'ladder':                'diagnostic',
-    'long_schedule':         'diagnostic',
-    'big_arch':              'diagnostic',
-    'crossfit':              'holdout_control',
-    'bt_retrained_holdout':  'holdout_control',
-}
+# Family -> tier mapping (must match registry v4)
+FAMILY_TO_TIER = OrderedDict([
+    ("config_faithful",         "near_faithful"),
+    ("step_faithful",           "near_faithful"),
+    ("reconstructions_primary", "secondary"),
+    ("reconstructions_extension", "secondary"),
+    ("confirmation",            "diagnostic"),
+    ("joint_loss_greedy",       "diagnostic"),
+    ("joint_loss_beam3",        "diagnostic"),
+    ("joint_loss_greedy_supp",  "diagnostic"),
+    ("rescue2",                 "diagnostic"),
+    ("rescue_lr",               "diagnostic"),
+    ("distillation",            "diagnostic"),
+    ("ladder",                  "diagnostic"),
+    ("long_schedule",           "diagnostic"),
+    ("big_arch",                "diagnostic"),
+    ("crossfit",                "holdout"),
+    ("bt_retrained_holdout",    "holdout"),
+])
 
-# Family display names (in display order within each tier)
+TIER_DISPLAY = OrderedDict([
+    ("near_faithful", "Near-faithful (corrected-recipe reconstruction)"),
+    ("secondary",     "Secondary (legacy-implementation replication)"),
+    ("diagnostic",    "Diagnostic (post-hoc sensitivity)"),
+    ("holdout",       "Holdout controls"),
+])
+
+# Display order within each tier
 FAMILY_DISPLAY = {
-    'primary': [
-        ('config_faithful', 'Validation-freq-misread'),
-        ('step_faithful', 'Step-corrected'),
+    "near_faithful": [
+        ("config_faithful",         "Validation-freq-misread"),
+        ("step_faithful",           "Step-corrected (re-trained)"),
     ],
-    'secondary': [
-        ('reconstructions_primary', 'Paper-derived (primary seeds)'),
-        ('reconstructions_extension', 'Paper-derived (extension seeds)'),
+    "secondary": [
+        ("reconstructions_primary", "Paper-derived (primary seeds)"),
+        ("reconstructions_extension", "Paper-derived (extension seeds)"),
     ],
-    'diagnostic': [
-        ('confirmation', 'Confirmation'),
-        ('rescue2', 'Rescue (dropout/wd variants)'),
-        ('rescue_lr', 'Rescue (lr variants)'),
-        ('distillation', 'Distillation'),
-        ('ladder', 'Ladder (data fractions)'),
-        ('long_schedule', 'Long-schedule'),
-        ('big_arch', 'Large-arch'),
+    "diagnostic": [
+        ("joint_loss_greedy",       "Joint-loss (greedy selection)"),
+        ("joint_loss_beam3",        "Joint-loss (beam-3 selection)"),
+        ("joint_loss_greedy_supp",  "Joint-loss greedy (supplementary, 1809/1810)"),
+        ("confirmation",            "Confirmation"),
+        ("rescue2",                 "Rescue (dropout/wd variants)"),
+        ("rescue_lr",               "Rescue (lr variants)"),
+        ("distillation",            "Distillation"),
+        ("ladder",                  "Ladder (data fractions)"),
+        ("long_schedule",           "Long-schedule"),
+        ("big_arch",                "Large-arch"),
     ],
-    'holdout_control': [
-        ('crossfit', 'Cross-fit holdout'),
-        ('bt_retrained_holdout', 'BT-retrained holdout'),
+    "holdout": [
+        ("crossfit",                "Cross-fit holdout"),
+        ("bt_retrained_holdout",    "BT-retrained holdout"),
     ],
 }
-
-# Degenerate checkpoints (known from analysis: 3 alpha=1.0 distillation + 2 smallest ladder)
-DEGENERATE_IDS = {
-    'distill_a1.0_s101', 'distill_a1.0_s202', 'distill_a1.0_s303',  # empty hypotheses
-    'ladder_0.125', 'ladder_0.25',  # BLEU approx 0
-}
-
-# SHA collision: cf_202 and ls_202 share the same wandb run (byte-identical weights)
-# Both appear in registry as cfaith_202 and long_sched_best
-# Wait — long_sched_best uses seed 101. Let me check...
-# Actually the paper says "long-schedule seed-202 artifact is byte-identical to config-faithful seed-202"
-# But the registry has long_sched_best (seed 101) and long_sched_other (seed 202, no gap)
-# The collision is between cfaith_202 and... some long_schedule artifact
-# For accounting purposes: 42 unique binaries from 43 decoded = 1 collision
 
 
 def build_accounting():
+    if not REGISTRY_PATH.exists():
+        print(f"ERROR: registry not found at {REGISTRY_PATH}", file=sys.stderr)
+        print("Run scripts/build_checkpoint_registry.py first.", file=sys.stderr)
+        sys.exit(2)
+
     with open(REGISTRY_PATH) as f:
         reg = json.load(f)
 
-    checkpoints = reg['checkpoints']
-
-    # Count actual beam-3 gap panel files (ground truth)
-    gap_dir = os.path.join(os.path.dirname(__file__), '..', 'results', 'gap_43_canonical_beam3_items')
-    pure_files = [f for f in os.listdir(gap_dir) if f.endswith('_pure.json')]
-    training_pure_files = [f for f in pure_files if not f.startswith('released_')]
-    # Some files are greedy-only (OOM under beam-3): distill_a0.5_303, distill_a0.75_303
-    greedy_only = {'distill_a0.5_303', 'distill_a0.75_303'}
-    beam3_training_files = [f for f in training_pure_files
-                            if f.replace('_pure.json', '') not in greedy_only]
-
-    # Separate released from training runs
-    training = [c for c in checkpoints if c['family'] != 'released']
+    checkpoints = reg["checkpoints"]
+    summary = reg["summary"]
 
     # Build per-family stats
-    family_stats = {}
-    for ckpt in training:
-        fam = ckpt['family']
-        if fam not in family_stats:
-            family_stats[fam] = {
-                'runs': 0, 'decoded': 0, 'non_degenerate': 0,
-                'has_dev': 0, 'gate_eligible': 0,
-            }
+    family_stats = defaultdict(lambda: {
+        "runs": 0, "decoded": 0, "non_degenerate": 0,
+        "has_dev": 0, "gate_eligible": 0, "negative": 0, "positive": 0, "zero": 0,
+        "gap_min": None, "gap_max": None,
+    })
+    for ckpt in checkpoints:
+        fam = ckpt["family"]
         s = family_stats[fam]
-        s['runs'] += 1
-        if ckpt.get('has_gap', False):
-            s['decoded'] += 1
-            if ckpt['id'] not in DEGENERATE_IDS:
-                s['non_degenerate'] += 1
-        if ckpt.get('has_dev', False):
-            s['has_dev'] += 1
-        if ckpt.get('gate', False):
-            s['gate_eligible'] += 1
+        s["runs"] += 1
+        if ckpt.get("has_gap"):
+            s["decoded"] += 1
+            if not ckpt.get("degenerate"):
+                s["non_degenerate"] += 1
+                g = ckpt.get("gap")
+                if g is not None:
+                    if g < 0: s["negative"] += 1
+                    elif g == 0: s["zero"] += 1
+                    else: s["positive"] += 1
+                    s["gap_min"] = g if s["gap_min"] is None else min(s["gap_min"], g)
+                    s["gap_max"] = g if s["gap_max"] is None else max(s["gap_max"], g)
+        if ckpt.get("has_dev"):
+            s["has_dev"] += 1
 
-    # Override decoded count with actual file count for beam-3
-    # Map file prefixes to families
-    file_to_family = {
-        'cf_': 'config_faithful', 'sf_': 'step_faithful',
-        'reco_': None,  # depends on seed: 101-606=primary, 707-1405=extension
-        'ladder_': 'ladder', 'conf_': 'confirmation',
-        'distill_': 'distillation', 'ls_': 'long_schedule',
-        'rescue_': 'rescue2',
-    }
-    # Recompute decoded from actual files
-    for fam in family_stats:
-        family_stats[fam]['decoded'] = 0
-        family_stats[fam]['non_degenerate'] = 0
-    for f in beam3_training_files:
-        prefix = f.split('_')[0] + '_'
-        name = f.replace('_pure.json', '')
-        # Determine family
-        if name.startswith('reco_'):
-            seed = int(name.split('_')[1])
-            fam = 'reconstructions_primary' if seed <= 606 else 'reconstructions_extension'
-        elif name.startswith('cf_'):
-            fam = 'config_faithful'
-        elif name.startswith('sf_'):
-            fam = 'step_faithful'
-        elif name.startswith('conf_'):
-            fam = 'confirmation'
-        elif name.startswith('distill_'):
-            fam = 'distillation'
-        elif name.startswith('ladder_'):
-            fam = 'ladder'
-        elif name.startswith('ls_'):
-            fam = 'long_schedule'
-        elif name.startswith('rescue_'):
-            fam = 'rescue2'
-        else:
-            continue
-        family_stats[fam]['decoded'] += 1
-        # Check degenerate
-        degenerate_name = name
-        if 'distill_a1.0' in degenerate_name or 'ladder_0125' in degenerate_name or 'ladder_025' in degenerate_name:
-            pass  # degenerate
-        else:
-            family_stats[fam]['non_degenerate'] += 1
-
-    total_decoded_training = len(beam3_training_files)
-    sha_collisions = 1  # cf_202 = ls_202 (or similar) from same wandb run
-    total_unique_binaries = total_decoded_training - sha_collisions
-    total_non_degenerate = sum(s['non_degenerate'] for s in family_stats.values())
-
-    # Build tier summaries
-    tier_summary = {}
-    for tier in ['primary', 'secondary', 'diagnostic', 'holdout_control']:
-        tier_families = [f for f, t in FAMILY_TO_TIER.items() if t == tier]
-        tier_stats = {'runs': 0, 'decoded': 0, 'unique': 0, 'non_degenerate': 0}
-        for fam in tier_families:
-            if fam in family_stats:
-                s = family_stats[fam]
-                tier_stats['runs'] += s['runs']
-                tier_stats['decoded'] += s['decoded']
-                tier_stats['non_degenerate'] += s['non_degenerate']
-        tier_summary[tier] = tier_stats
-
-    # Adjust unique for SHA collision (subtract 1 from the tier containing the collision)
-    # The collision is between config_faithful and long_schedule, both in primary/diagnostic
-    # We subtract 1 from the total unique, attributing it at the grand-total level
-    tier_summary['primary']['unique'] = tier_summary['primary']['decoded']  # no internal collision
-    tier_summary['secondary']['unique'] = tier_summary['secondary']['decoded']
-    tier_summary['diagnostic']['unique'] = tier_summary['diagnostic']['decoded'] - sha_collisions
-    tier_summary['holdout_control']['unique'] = 0  # not gap-decoded
-
-    # Grand totals
-    total_trained = sum(t['runs'] for t in tier_summary.values())
-    total_decoded_all = sum(t['decoded'] for t in tier_summary.values())
-    total_unique_all = sum(t['unique'] for t in tier_summary.values())
-    total_nondegen_all = sum(t['non_degenerate'] for t in tier_summary.values())
-
-    # Build the output
-    output = OrderedDict()
-    output['schema'] = 'accounting-table-v1'
-    output['source'] = 'canonical_checkpoint_registry.json (schema v3)'
-    output['note'] = 'Single source of truth for all paper counts. Generated by scripts/build_accounting_table.py'
-
-    output['headline_counts'] = {
-        'total_trained_runs': total_trained,
-        'total_decoded_gap_panel': total_decoded_all,
-        'total_unique_binaries': total_unique_all,
-        'total_non_degenerate': total_nondegen_all,
-        'sha256_collisions': sha_collisions,
-        'released_evaluator': 1,
-        'local_perturbation_variants': 11,  # released-weight fine-tunes; NOT from-scratch training
-        'total_checkpoint_artifacts': total_trained + 1,  # +released
-    }
-
-    output['tier_summary'] = {}
-    for tier in ['primary', 'secondary', 'diagnostic', 'holdout_control']:
-        tier_display = {
-            'primary': 'Primary (near-faithful reconstruction)',
-            'secondary': 'Secondary (legacy-implementation replication)',
-            'diagnostic': 'Diagnostic (post-hoc sensitivity)',
-            'holdout_control': 'Holdout controls',
-        }[tier]
-        ts = tier_summary[tier]
-        output['tier_summary'][tier_display] = {
-            'runs': ts['runs'],
-            'decoded': ts['decoded'],
-            'unique_binaries': ts['unique'],
-            'non_degenerate': ts['non_degenerate'],
+    # Tier summaries
+    tier_summary = OrderedDict()
+    for tier in TIER_DISPLAY:
+        tier_runs = tier_decoded = tier_non_deg = tier_neg = tier_pos = 0
+        tier_gap_min = tier_gap_max = None
+        for fam, t in FAMILY_TO_TIER.items():
+            if t != tier: continue
+            s = family_stats.get(fam)
+            if s is None: continue
+            tier_runs += s["runs"]
+            tier_decoded += s["decoded"]
+            tier_non_deg += s["non_degenerate"]
+            tier_neg += s["negative"]
+            tier_pos += s["positive"]
+            if s["gap_min"] is not None:
+                tier_gap_min = s["gap_min"] if tier_gap_min is None else min(tier_gap_min, s["gap_min"])
+            if s["gap_max"] is not None:
+                tier_gap_max = s["gap_max"] if tier_gap_max is None else max(tier_gap_max, s["gap_max"])
+        tier_summary[tier] = {
+            "runs": tier_runs, "decoded": tier_decoded,
+            "non_degenerate": tier_non_deg,
+            "negative": tier_neg, "positive": tier_pos,
+            "gap_range": [round(tier_gap_min, 4) if tier_gap_min is not None else None,
+                          round(tier_gap_max, 4) if tier_gap_max is not None else None],
         }
 
-    output['family_detail'] = {}
-    for tier in ['primary', 'secondary', 'diagnostic', 'holdout_control']:
-        for fam_key, fam_display in FAMILY_DISPLAY[tier]:
-            if fam_key in family_stats:
-                s = family_stats[fam_key]
-                output['family_detail'][fam_display] = {
-                    'tier': {
-                        'primary': 'Primary', 'secondary': 'Secondary',
-                        'diagnostic': 'Diagnostic', 'holdout_control': 'Holdout control',
-                    }[tier],
-                    'runs': s['runs'],
-                    'decoded': s['decoded'],
-                    'non_degenerate': s['non_degenerate'],
-                    'has_dev': s['has_dev'],
-                    'gate_eligible': s['gate_eligible'],
-                }
+    # Build output
+    output = OrderedDict()
+    output["schema"] = "accounting-table-v2"
+    output["source"] = "canonical_checkpoint_registry.json (schema v4, disk scan)"
+    output["note"] = ("Single source of truth for all paper counts. Generated by "
+                      "scripts/build_accounting_table.py from the disk-scanned registry. "
+                      "Run scripts/build_checkpoint_registry.py first if checkpoints changed.")
 
-    # Verification assertions
-    errors = []
-    if total_trained != 78:
-        errors.append(f"total_trained={total_trained}, expected 78")
-    # The actual count from files is the ground truth
-    tier_sum = sum(t['runs'] for t in tier_summary.values())
-    if tier_sum != total_trained:
-        errors.append(f"tier sum={tier_sum} != total_trained={total_trained}")
+    output["headline_counts"] = {
+        "total_trained_runs": summary["total_trained_runs"],
+        "total_decoded_gap_panel": summary["decoded_gap_panel"],
+        "total_unique_binaries": summary["unique_binaries"],
+        "total_non_degenerate": summary["non_degenerate"],
+        "sha256_collisions": summary["sha256_collisions"],
+        "released_evaluator": 1,
+        "released_weight_perturbations": 11,  # finetune_released/ — not from-scratch training
+        "total_checkpoint_artifacts": summary["total_trained_runs"] + 1,  # +released
+    }
+    # Note: released-weight fine-tunes live in checkpoints/finetune_released/ and are
+    # NOT counted as from-scratch training. The scanner skips this directory.
 
-    output['_verification'] = {
-        'all_checks_passed': len(errors) == 0,
-        'errors': errors,
+    output["gap_panel_summary"] = {
+        "decoded": summary["decoded_gap_panel"],
+        "degenerate": summary["degenerate"],
+        "non_degenerate": summary["non_degenerate"],
+        "negative": summary["negative_gap_count"],
+        "zero": summary["zero_gap_count"],
+        "positive": summary["positive_gap_count"],
+        "gap_range": summary["gap_range"],
     }
 
-    # Print summary table
-    print("=" * 70)
-    print("CANONICAL ACCOUNTING TABLE (single source of truth)")
-    print("=" * 70)
-    print(f"\n{'Tier':<45} {'Runs':>5} {'Decoded':>8} {'Unique':>7} {'Non-deg':>8}")
-    print("-" * 75)
-    for tier in ['primary', 'secondary', 'diagnostic', 'holdout_control']:
-        tier_display = {
-            'primary': 'Primary (near-faithful)',
-            'secondary': 'Secondary (paper-derived)',
-            'diagnostic': 'Diagnostic',
-            'holdout_control': 'Holdout controls',
-        }[tier]
+    output["tier_summary"] = OrderedDict()
+    for tier, label in TIER_DISPLAY.items():
         ts = tier_summary[tier]
-        print(f"  {tier_display:<43} {ts['runs']:>5} {ts['decoded']:>8} {ts['unique']:>7} {ts['non_degenerate']:>8}")
-    print("-" * 75)
-    print(f"  {'TOTAL TRAINED':<43} {total_trained:>5} {total_decoded_all:>8} {total_unique_all:>7} {total_nondegen_all:>8}")
-    print(f"  {'+ Released evaluator':<43} {'1':>5}")
-    print(f"  {'+ Local perturbation (released-weight)':<43} {'11':>5}   (not from-scratch; not decoded on gap panel)")
-    print()
+        output["tier_summary"][label] = {
+            "runs": ts["runs"],
+            "decoded": ts["decoded"],
+            "unique_binaries": ts["decoded"],  # SHA collisions accounted at headline level
+            "non_degenerate": ts["non_degenerate"],
+            "negative": ts["negative"],
+            "positive": ts["positive"],
+            "gap_range": ts["gap_range"],
+        }
 
-    print("FAMILY DETAIL:")
-    for tier in ['primary', 'secondary', 'diagnostic', 'holdout_control']:
-        print(f"\n  [{tier.upper()}]")
+    output["family_detail"] = OrderedDict()
+    for tier, label in TIER_DISPLAY.items():
         for fam_key, fam_display in FAMILY_DISPLAY[tier]:
             if fam_key in family_stats:
                 s = family_stats[fam_key]
-                print(f"    {fam_display:<40} runs={s['runs']:>3}  decoded={s['decoded']:>3}  non-deg={s['non_degenerate']:>3}")
+                output["family_detail"][fam_display] = {
+                    "tier": label.split(" (")[0],
+                    "family_key": fam_key,
+                    "runs": s["runs"],
+                    "decoded": s["decoded"],
+                    "non_degenerate": s["non_degenerate"],
+                    "has_dev": s["has_dev"],
+                    "negative": s["negative"],
+                    "positive": s["positive"],
+                    "gap_range": [round(s["gap_min"], 4) if s["gap_min"] is not None else None,
+                                  round(s["gap_max"], 4) if s["gap_max"] is not None else None],
+                }
 
-    print(f"\nSHA-256 collisions: {sha_collisions} (cfaith_202 = long_schedule artifact, same wandb run)")
+    # Internal verification (no hardcoded total — derived from disk scan)
+    errors = []
+    # Family sums == tier sums == headline
+    fam_runs_total = sum(s["runs"] for s in family_stats.values())
+    tier_runs_total = sum(t["runs"] for t in tier_summary.values())
+    if fam_runs_total != summary["total_trained_runs"]:
+        errors.append(f"family runs sum={fam_runs_total} != headline trained={summary['total_trained_runs']}")
+    if tier_runs_total != summary["total_trained_runs"]:
+        errors.append(f"tier runs sum={tier_runs_total} != headline trained={summary['total_trained_runs']}")
+    # Decoded <= trained
+    if summary["decoded_gap_panel"] > summary["total_trained_runs"]:
+        errors.append(f"decoded={summary['decoded_gap_panel']} > trained={summary['total_trained_runs']}")
+    # Non-degenerate <= decoded
+    if summary["non_degenerate"] > summary["decoded_gap_panel"]:
+        errors.append(f"non_degenerate={summary['non_degenerate']} > decoded={summary['decoded_gap_panel']}")
+    # Unique <= decoded
+    if summary["unique_binaries"] > summary["decoded_gap_panel"]:
+        errors.append(f"unique={summary['unique_binaries']} > decoded={summary['decoded_gap_panel']}")
+    # neg + zero + pos == non_degenerate
+    gap_sum = summary["negative_gap_count"] + summary["zero_gap_count"] + summary["positive_gap_count"]
+    if gap_sum != summary["non_degenerate"]:
+        errors.append(f"neg+zero+pos={gap_sum} != non_degenerate={summary['non_degenerate']}")
+
+    output["_verification"] = {
+        "all_checks_passed": len(errors) == 0,
+        "errors": errors,
+    }
+
+    # Print summary
+    print("=" * 80)
+    print("CANONICAL ACCOUNTING TABLE v2 (from disk-scanned registry v4)")
+    print("=" * 80)
+    print(f"\n{'Tier / Family':<50} {'Runs':>5} {'Dec':>5} {'NonD':>5} {'Neg':>5} {'Pos':>5} {'Gap range':>18}")
+    print("-" * 95)
+    for tier, label in TIER_DISPLAY.items():
+        ts = tier_summary[tier]
+        gap_str = f"[{ts['gap_range'][0]:+.2f}, {ts['gap_range'][1]:+.2f}]" if ts["gap_range"][0] is not None else "---"
+        print(f"  {label:<48} {ts['runs']:>5} {ts['decoded']:>5} {ts['non_degenerate']:>5} {ts['negative']:>5} {ts['positive']:>5} {gap_str:>18}")
+        for fam_key, fam_display in FAMILY_DISPLAY[tier]:
+            if fam_key in family_stats:
+                s = family_stats[fam_key]
+                gap_str = f"[{s['gap_min']:+.2f}, {s['gap_max']:+.2f}]" if s["gap_min"] is not None else "---"
+                print(f"    {fam_display:<46} {s['runs']:>5} {s['decoded']:>5} {s['non_degenerate']:>5} {s['negative']:>5} {s['positive']:>5} {gap_str:>18}")
+    print("-" * 95)
+    hc = output["headline_counts"]
+    gs = output["gap_panel_summary"]
+    gap_range = gs["gap_range"]
+    gap_str = f"[{gap_range[0]:+.2f}, {gap_range[1]:+.2f}]"
+    print(f"  {'TOTAL':<48} {hc['total_trained_runs']:>5} {hc['total_decoded_gap_panel']:>5} {hc['total_non_degenerate']:>5} {gs['negative']:>5} {gs['positive']:>5} {gap_str:>18}")
+    print(f"\n  Unique binaries (SHA-256): {hc['total_unique_binaries']}  ({hc['sha256_collisions']} collision(s))")
+    print(f"  Degenerate:                {gs['degenerate']}")
+    print(f"  Released-weight perturbations (not from-scratch): {hc['released_weight_perturbations']}")
+
     if errors:
         print(f"\n⚠ VERIFICATION ERRORS:")
         for e in errors:
@@ -288,10 +260,9 @@ def build_accounting():
     else:
         print(f"\n✓ All verification checks passed.")
 
-    with open(OUTPUT_PATH, 'w') as f:
-        json.dump(output, f, indent=2)
+    OUTPUT_PATH.write_text(json.dumps(output, indent=2))
     print(f"\nWritten to {OUTPUT_PATH}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     build_accounting()
