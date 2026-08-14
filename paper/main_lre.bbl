@@ -36,26 +36,36 @@ Carlini, N., F.~Tramer, E.~Wallace, M.~Jagielski, A.~Herbert-Voss, K.~Lee,
 \newblock In {\em 30th USENIX Security Symposium (USENIX Security 21)}, pp.\
   2633--2650.
 
-\bibitem[\protect\citeauthoryear{Chen and Eger}{Chen and
-  Eger}{2022}]{chen2022repro}
-Chen, Y. and S.~Eger 2022.
+\bibitem[\protect\citeauthoryear{Chen, Belouadi, and Eger}{Chen
+  et~al.}{2022}]{chen2022repro}
+Chen, Y., J.~Belouadi, and S.~Eger 2022.
 \newblock Reproducibility issues for {BERT}-based evaluation metrics.
 \newblock In {\em Proceedings of the 2022 Conference on Empirical Methods in
-  Natural Language Processing (EMNLP)}, pp.\  9089--9107. Association for
+  Natural Language Processing (EMNLP)}, pp.\  2965--2989. Association for
   Computational Linguistics.
 
+\bibitem[\protect\citeauthoryear{Cohen, Xia, Zweigenbaum, Callahan, Hargraves,
+  Goss, Ide, N{\'e}v{\'e}ol, Grouin, and Hunter}{Cohen
+  et~al.}{2018}]{cohen2018three}
+Cohen, K.B., J.~Xia, P.~Zweigenbaum, T.J. Callahan, O.~Hargraves, F.~Goss,
+  N.~Ide, A.~N{\'e}v{\'e}ol, C.~Grouin, and L.E. Hunter 2018.
+\newblock Three dimensions of reproducibility in natural language processing.
+\newblock In {\em Proceedings of the Eleventh International Conference on
+  Language Resources and Evaluation (LREC 2018)}, Miyazaki, Japan, pp.\
+  156--165. European Language Resources Association (ELRA).
+
 \bibitem[\protect\citeauthoryear{Cory, Ivashechkin, Sahin, Ranum, Low, Fish,
-  Pelykh, et~al.}{Cory et~al.}{2025}]{backtranslation2}
+  Pelykh, Mercanoglu~Sincan, and Bowden}{Cory et~al.}{2026}]{backtranslation2}
 Cory, O., M.~Ivashechkin, K.~Sahin, O.~Ranum, J.~Low, E.~Fish, A.~Pelykh,
-  et~al. 2025.
-\newblock {BackTranslation2.0}: A linguistically motivated metric to assess
+  O.~Mercanoglu~Sincan, and R.~Bowden. 2026.
+\newblock {BackTranslation2.0} -- a linguistically motivated metric to assess
   sign language production.
 \newblock {\em arXiv preprint arXiv:2606.28673\/}.
 \newblock {\href{https://arxiv.org/abs/2606.28673}{{arXiv:2606.28673}}} .
 
 \bibitem[\protect\citeauthoryear{Czehmann, Yazdani, Hamidullah, Nunnari, and
-  Avramidis}{Czehmann et~al.}{2025}]{czehmann2026sacred}
-Czehmann, V., S.~Yazdani, Y.~Hamidullah, F.~Nunnari, and E.~Avramidis 2025.
+  Avramidis}{Czehmann et~al.}{2026}]{czehmann2026sacred}
+Czehmann, V., S.~Yazdani, Y.~Hamidullah, F.~Nunnari, and E.~Avramidis 2026.
 \newblock {``A Sacred Bird Called the Phoenix''}: Auditing the most-used
   parallel corpus for {German} sign language recognition and translation.
 \newblock In {\em Proceedings of the LREC2026 12th Workshop on the
@@ -64,6 +74,15 @@ Czehmann, V., S.~Yazdani, Y.~Hamidullah, F.~Nunnari, and E.~Avramidis 2025.
 \newblock ISBN 978-2-493814-82-1. Back-translated test set and annotations:
   \url{https://github.com/DFKI-SignLanguage/sacre-bird-phoenix} (CC BY-NC-SA
   4.0).
+
+\bibitem[\protect\citeauthoryear{Desai, {{De Meulder}}, Hochgesang, Kocab, and
+  Lu}{Desai et~al.}{2024}]{desai2024systemic}
+Desai, A., M.~{{De Meulder}}, J.A. Hochgesang, A.~Kocab, and A.X. Lu. 2024.
+\newblock Systemic biases in sign language {AI} research: A deaf-led call to
+  reevaluate research agendas.
+\newblock {\em arXiv preprint arXiv:2403.02563\/}.
+\newblock {\href{https://arxiv.org/abs/2403.02563}{{arXiv:2403.02563}}}
+  {[cs.CV]}.
 
 \bibitem[\protect\citeauthoryear{He, Rahul, Hupkes, and Cotterell}{He
   et~al.}{2024}]{he2023blind}
@@ -82,12 +101,13 @@ Hong, R. and {Ko{\v{s}}eck{\'{a}}, Jana}. 2026.
 \newblock {\href{https://arxiv.org/abs/2606.01643}{{arXiv:2606.01643}}}
   {[cs.CV]}.
 
-\bibitem[\protect\citeauthoryear{Imai}{Imai}{2025}]{silverscore}
-Imai, S. 2025.
-\newblock {SiLVERScore}: Why aren't semantically-aware embeddings used for sign
-  language generation evaluation?
-\newblock In {\em Proceedings of the International Conference on Recent
-  Advances in Natural Language Processing (RANLP 2025)}, pp.\  519--528.
+\bibitem[\protect\citeauthoryear{Imai, Inan, Sicilia, and Alikhani}{Imai
+  et~al.}{2025}]{silverscore}
+Imai, S., M.~Inan, A.B. Sicilia, and M.~Alikhani 2025.
+\newblock {SiLVERScore}: Semantically-aware embeddings for sign language
+  generation evaluation.
+\newblock In {\em Proceedings of the 15th International Conference on Recent
+  Advances in Natural Language Processing (RANLP 2025)}, pp.\  452--461.
 
 \bibitem[\protect\citeauthoryear{Jiang, Leong, Moryossef, Cory, Ivashechkin,
   Tarigopula, Zhang, G{\"o}hring, Rios, Sennrich, and Ebling}{Jiang
@@ -174,12 +194,14 @@ Walsh, H., B.~Saunders, and R.~Bowden 2024.
 \newblock Sign stitching: A novel approach to sign language production.
 \newblock In {\em British Machine Vision Conference}.
 
-\bibitem[\protect\citeauthoryear{Yazdani et~al.}{Yazdani
-  et~al.}{2026}]{yazdani2025critical}
-Yazdani, M. et~al. 2026.
+\bibitem[\protect\citeauthoryear{Yazdani, Hamidullah, Espa{\~n}a-Bonet,
+  Avramidis, and van Genabith}{Yazdani et~al.}{2026}]{yazdani2025critical}
+Yazdani, S., Y.~Hamidullah, C.~Espa{\~n}a-Bonet, E.~Avramidis, and J.~van
+  Genabith 2026.
 \newblock A critical study of automatic evaluation in sign language
   translation.
-\newblock In {\em Proceedings of LREC-COLING 2026}.
+\newblock In {\em Proceedings of the 15th International Conference on Language
+  Resources and Evaluation (LREC 2026)}, pp.\  9535--9548.
 
 \bibitem[\protect\citeauthoryear{Zhang, Kishore, Wu, Weinberger, and
   Artzi}{Zhang et~al.}{2020}]{zhang2020bertscore}
