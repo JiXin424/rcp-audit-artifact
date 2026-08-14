@@ -1,0 +1,35 @@
+CC BY-NC-SA 4.0 — data files in this directory
+===============================================
+
+The two CSV files in this directory are part of the Czehmann et al. (2026)
+human-back-translation dataset, distributed by their authors under the
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+licence (CC BY-NC-SA 4.0):
+
+  * test_subset_backtranslations_sacrebirdphoenix.csv
+  * test_full_annotations_sacrebirdphoenix.csv
+
+These files are NOT covered by the repository-wide MIT License (see
+/LICENSE at the repository root), which applies only to the software
+(source code, scripts, Makefiles, configuration files) authored by the
+RCP audit authors.
+
+Under CC BY-NC-SA 4.0 you are free to:
+  * Share — copy and redistribute the material in any medium or format
+  * Adapt — remix, transform, and build upon the material
+
+Under the following terms:
+  * Attribution — You must give appropriate credit (see NOTICE below), provide
+    a link to the licence, and indicate if changes were made. You may do so in
+    any reasonable manner, but not in any way that suggests the licensor
+    endorses you or your use.
+  * NonCommercial — You may not use the material for commercial purposes.
+  * ShareAlike — If you remix, transform, or build upon the material, you
+    must distribute your contributions under the same licence as the original.
+
+Full licence text: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+No changes were made to the data content; the file format (pipe-separated
+values) and column schema (name, back translation, translation confidence,
+technical quality problems, comment) are preserved verbatim from the original
+release.

@@ -1,0 +1,34 @@
+NOTICE — Czehmann et al. (2026) human back-translations
+========================================================
+
+Files in this directory:
+  * test_subset_backtranslations_sacrebirdphoenix.csv
+  * test_full_annotations_sacrebirdphoenix.csv
+
+Original source:
+  Czehmann et al., "Reference information loss and human back-translations
+  for PHOENIX-2014T", 2026. Released by the authors under CC BY-NC-SA 4.0
+  as part of the sacrebird supplementary materials.
+
+Original licence: CC BY-NC-SA 4.0
+  https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Repository licence boundary:
+  The MIT License at /LICENSE covers only the RCP audit software (code,
+  scripts, Makefiles, configuration). Data files in this directory and any
+  other data files under /data/ remain under their upstream licences and
+  carry their own attribution requirements.
+
+Citation (please cite the original dataset paper, not this audit, when reusing
+these CSVs):
+  Czehmann et al. (2026). Reference information loss and human
+  back-translations for PHOENIX-2014T.
+
+Modifications since upstream: NONE. The file content, format, and column
+schema are preserved verbatim.
+
+Use in this audit:
+  These CSVs provide the human-reference condition used in main §5.3
+  (Reference-frame sensitivity: matched-subset analysis) and SI Sup.~G
+  (cluster-aware bootstrap). They are NOT used in any of the paper's
+  training runs; they are read-only reference data for evaluation.

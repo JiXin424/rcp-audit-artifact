@@ -208,13 +208,39 @@ pdflatex -interaction=nonstopmode main_lre.tex
 
 ## Data licensing
 
-- **PHOENIX-2014T**: RWTH Aachen academic research licence (the distributed copy's specified version; the official landing page does not display a Creative Commons licence) — not redistributed.
-- **SLRTP2025 pose bundle and released BT checkpoint**: challenge terms —
-  obtain from the [SLRTP2025 organizers](https://github.com/walsharry/SLRTP-Sign-Production-Evaluation).
-- **Czehmann et al. (2026) human back-translations**: CC BY-NC-SA 4.0 — not redistributed.
-- **CSL-Daily**: provider-specific terms — not redistributed.
+The datasets and model weights used in this audit are available under
+research-specific terms; they are not "fully public" in the permissive sense.
 
-Pose tensors may retain signer identity; no per-signer raw poses are released.
+| Component | Terms | In this artifact? |
+|---|---|---|
+| PHOENIX-2014T (RWTH Aachen) | Academic research licence; CC licence not displayed on the official landing page. The distributed copy is governed by the version specified in its own licence header. | No (not redistributed). Obtain from RWTH Aachen. |
+| SLRTP2025 pose bundle + released BT checkpoint | SLRTP2025 challenge terms. | Yes — `checkpoints/released/` is a verbatim copy under the same challenge terms (research-use only). Other trained weights under `checkpoints/` are outputs of training on this data and inherit the same research-use restriction. |
+| Czehmann et al. (2026) human back-translations | CC BY-NC-SA 4.0. | Yes — `data/sacrebird/test_subset_backtranslations_sacrebirdphoenix.csv` and `test_full_annotations_sacrebirdphoenix.csv` are redistributed under CC BY-NC-SA 4.0; see `data/sacrebird/LICENSE` and `data/sacrebird/NOTICE` for attribution and the share-alike / non-commercial boundary. |
+| CSL-Daily | Provider-specific academic terms. | No (not redistributed). |
+
+### Repository licence composition
+
+- Root `/LICENSE` is **MIT** but applies **only to the RCP audit software**
+  (scripts, src, Makefile, configs we authored, paper sources, tests). The
+  preamble in `/LICENSE` enumerates the scope.
+- `/data/sacrebird/LICENSE` is **CC BY-NC-SA 4.0** and governs the two CSVs
+  in that directory; it is not overridden by the root MIT Licence.
+- `/checkpoints/released/` is governed by **SLRTP2025 challenge terms**; the
+  MIT Licence does not extend to it. Other trained checkpoints under
+  `/checkpoints/` are outputs of training on PHOENIX-2014T/SLRTP2025 and
+  remain under the same research-use restriction.
+- Per-directory `LICENSE`/`NOTICE` files document attribution and any
+  modifications.
+
+### Signer-identity note
+
+Pose tensors and decoded texts may retain signer identity, biometric
+features, and signing style. We release per-item decoded text (low
+re-identification risk) and a curated subset of trained checkpoints needed
+for the L1/L3 audit; we do not release per-signer raw poses. The Czehmann
+back-translations were produced by a Deaf fluent L2 DGS signer; ethical
+constraints on reuse (non-commercial, share-alike, attribution) are encoded
+in the CC BY-NC-SA 4.0 licence above.
 
 ## Provenance and integrity
 

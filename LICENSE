@@ -1,4 +1,67 @@
-MIT License
+RCP Audit Artifact — Licence Composition
+=========================================
+
+This repository is a composition of materials under different licences.
+The MIT Licence text below applies to the RCP audit authors' original
+software contributions only. Third-party code, data, model weights, and
+configuration files retain their upstream licences and carry their own
+attribution requirements.
+
+Scope of the MIT Licence
+-------------------------
+Applies to:
+  * scripts/*.py            (analysis scripts authored by the RCP audit authors)
+  * src/*.py                (Python package authored by the RCP audit authors)
+  * Makefile, requirements*.txt, artifact_ledger.json, claim_manifest.json
+  * tests/*.py              (test code)
+  * paper/*.tex             (paper sources — text and macros)
+  * figures/*.py            (figure-generation scripts)
+
+Does NOT apply to (see respective subdirectory licences/attribution):
+  * data/sacrebird/*.csv    (Czehmann et al. 2026, CC BY-NC-SA 4.0; see
+                             /data/sacrebird/LICENSE and /data/sacrebird/NOTICE)
+  * checkpoints/**/*.ckpt   (trained weights; see below)
+  * data/SLRTP2025/         (SLRTP2025 pose bundle; provider-specific terms)
+  * results/transfer_cells.csv (derived data; covered by MIT as our analysis
+                             output, but the underlying evaluator weights
+                             used to produce it remain under SLRTP2025 terms)
+
+Trained checkpoint weights
+---------------------------
+The trained checkpoint weights under /checkpoints/ are outputs of training
+runs that used PHOENIX-2014T and SLRTP2025 data. They are released for
+research-reproduction purposes only, consistent with the upstream dataset
+licences. They carry no additional MIT Licence grant beyond what the upstream
+dataset terms permit.
+
+Released BT evaluator
+---------------------
+The directory /checkpoints/released/backTranslation_PHIX_model/ is a verbatim
+copy of the SLRTP2025 released BT evaluator (model weights, vocab files,
+config.yaml). It is NOT covered by the MIT Licence; it remains under the
+SLRTP2025 challenge terms (obtain from
+https://github.com/walsharry/SLRTP-Sign-Production-Evaluation).
+
+PHOENIX-2014T
+-------------
+Not redistributed in this repository. The data is available from RWTH Aachen
+under its academic research licence. The pose materialisation used in this
+audit was obtained via the SLRTP2025 challenge bundle.
+
+CSL-Daily
+---------
+Not redistributed in this repository.
+
+CC BY-NC-SA 4.0 share-alike boundary
+-------------------------------------
+If you build upon or redistribute the CC BY-NC-SA 4.0 data files
+(/data/sacrebird/*.csv) within a larger work, the ShareAlike clause may
+require the resulting work to also carry CC BY-NC-SA 4.0. This is independent
+of the MIT Licence covering the software layer.
+
+================================================================================
+MIT Licence (applies to original RCP audit software only)
+================================================================================
 
 Copyright (c) 2026 The RCP Audit Authors
 
