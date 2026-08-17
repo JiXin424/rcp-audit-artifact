@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.6.2)  14 AUG 2026 08:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.6.2)  17 AUG 2026 03:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -625,14 +625,6 @@ LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 34
 LaTeX Font Info:    Calculating math sizes for size <9.03374> on input line 34.
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 34--34
- \OT1/cmr/m/n/9.03374 and four-teen near-faithful runs (four validation-freq-mi
-sread, ten step- 
- []
-
-LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 34
-.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -641,6 +633,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1
 
 {/home/xkb4/.texlive2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 34
+.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -649,186 +644,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [2]
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 53.
+(hyperref)                than one, level fixed on input line 52.
 
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 60.
+(hyperref)                than one, level fixed on input line 59.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 63.
+(hyperref)                than one, level fixed on input line 62.
 
 
-Package natbib Warning: Multiple citation on page 4: same authors and year
+Package natbib Warning: Multiple citation on page 3: same authors and year
 (natbib)                without distinguishing extra letter,
 (natbib)                appears as question mark.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
-[]|\OT1/cmr/m/n/9 Distinction from present
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--84
-[]|\OT1/cmr/m/n/9 Czehmann et al.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--84
-[]|\OT1/cmr/m/n/9 Reference replace-
- []
-
-
-Underfull \hbox (badness 4193) in paragraph at lines 84--84
-\OT1/cmr/m/n/9 ment changes BLEU
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--84
-[]|\OT1/cmr/m/n/9 Human back-
- []
-
-
-Underfull \hbox (badness 7186) in paragraph at lines 84--85
-[]|\OT1/cmr/m/n/9 We apply the matched-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-\OT1/cmr/m/n/9 subset pro-to-col to the
- []
-
-
-Underfull \hbox (badness 2080) in paragraph at lines 84--85
-\OT1/cmr/m/n/9 released eval-u-a-tor with a
- []
-
-
-Underfull \hbox (badness 5533) in paragraph at lines 84--85
-\OT1/cmr/m/n/9 frozen replay probe and
- []
-
-
-Underfull \hbox (badness 1577) in paragraph at lines 85--85
-\OT1/cmr/m/n/9 over-lap among tested
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-\OT1/cmr/m/n/9 u-a-tion over-es-ti-mates
- []
-
-
-Underfull \hbox (badness 5345) in paragraph at lines 86--87
-[]|\OT1/cmr/m/n/9 We include signer as a
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
-\OT1/cmr/m/n/9 regres-sion covari-ate (not
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
-\OT1/cmr/m/n/9 signer-disjoint eval-u-a-tion;
- []
-
-
-Underfull \hbox (badness 4660) in paragraph at lines 86--87
-\OT1/cmr/m/n/9 ^^A\OML/cmm/m/it/9 R[]$ \OT1/cmr/m/n/9 from remov-ing the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
-\OT1/cmr/m/n/9 sta-ble cor-re-late of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
-[]|\OT1/cmr/m/n/9 Meta-evaluation of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
-\OT1/cmr/m/n/9 pose/embedding/BT
- []
-
-
-Underfull \hbox (badness 5533) in paragraph at lines 87--88
-[]|\OT1/cmr/m/n/9 We report that teacher-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
-[]|\OT1/cmr/m/n/9 BERT-based met-rics
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
-[]|\OT1/cmr/m/n/9 Multi-implementation
- []
-
-
-Underfull \hbox (badness 7451) in paragraph at lines 88--89
-[]|\OT1/cmr/m/n/9 We extend the learned-
- []
-
-
-Underfull \hbox (badness 5203) in paragraph at lines 89--89
-[]|\OT1/cmr/m/n/9 Our dis-closed recon-
- []
-
-
-Underfull \hbox (badness 4108) in paragraph at lines 89--89
-\OT1/cmr/m/n/9 lic arti-facts did not
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
-[]|\OT1/cmr/m/n/9 68 train-ing runs
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
-\OT1/cmr/m/n/9 across 11 fam-i-lies,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
-\OT1/cmr/m/n/9 fixed-output cross-
- []
-
-
-Underfull \hbox (badness 2359) in paragraph at lines 89--89
-\OT1/cmr/m/n/9 evaluator re-decoding,
- []
-
-
-Overfull \hbox (30.95764pt too wide) in paragraph at lines 75--92
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 100.
+(hyperref)                than one, level fixed on input line 82.
 
 
-Underfull \hbox (badness 5431) in paragraph at lines 102--103
+Underfull \hbox (badness 5431) in paragraph at lines 84--85
 \OT1/cmr/m/n/10 We define an \OT1/cmr/m/it/10.03749 author-operational \OT1/cmr
 /m/n/10 com-pe-tence gate---not a public-sufficiency
  []
@@ -836,311 +679,69 @@ Underfull \hbox (badness 5431) in paragraph at lines 102--103
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [5]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 98.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [6]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 132.
+(hyperref)                than one, level fixed on input line 112.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 126.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 146.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
-[]|\OT1/cmr/m/n/9 Dev
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+[]\OT1/cmr/m/it/10.03749 Loss-normalisation mis-match \OT1/cmr/m/n/10 (v1--v3):
+ the con-fig spec-i-fies
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--159
-[]|\OT1/cmr/m/n/9 Paper-derived
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+[]|\OT1/cmr/m/n/9 Protocol (defects
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--159
-[]|\OT1/cmr/m/n/9 config.yaml + slt
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+[]|\OT1/cmr/m/n/9 Translation-only /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--159
-[]|\OT1/cmr/m/n/9 legacy script; 300
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
+[]| \OT1/cmr/m/n/9 validation-freq-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--159
-[]|\OT1/cmr/m/n/9 NLL on
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[]|\OT1/cmr/bx/n/9 Faithful (all cor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
-[]|\OT1/cmr/m/n/9 Validation-
+Overfull \hbox (26.32855pt too wide) in paragraph at lines 142--161
+ [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
-[]|\OT1/cmr/m/n/9 config.yaml
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
-[]|\OT1/cmtt/m/n/9 validation[]freq=14
- []
-
-
-Underfull \hbox (badness 1082) in paragraph at lines 160--160
-\OT1/cmr/m/n/9 mis-read as epochs ini-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
-[]|\OT1/cmr/m/n/9 decoded
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
-[]|\OT1/cmr/m/n/9 Step-corrected
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
-[]|\OT1/cmr/m/n/9 config.yaml +
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
-\OT1/cmr/m/n/9 JoeyNMT step
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
-[]|\OT1/cmr/m/n/9 fixed \OT1/cmtt/m/n/9 validation[]freq
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
-[]|\OT1/cmr/m/n/9 decoded
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--162
-[]|\OT1/cmr/m/n/9 Joint-loss
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--162
-[]|\OT1/cmr/m/n/9 config.yaml
- []
-
-
-Overfull \hbox (46.76366pt too wide) in paragraph at lines 162--162
-\OT1/cmr/m/n/9 (\OT1/cmtt/m/n/9 recognition[]loss[]weight=1.0\OT1/cmr/m/n/9 )| 
-
- []
-
-
-Underfull \hbox (badness 3503) in paragraph at lines 162--162
-[]|\OT1/cmr/m/n/9 adds CTC recog-ni-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--162
-[]|\OT1/cmr/m/n/9 greedy-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
-[]|\OT1/cmr/m/n/9 Joint-loss
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
-[]|\OT1/cmr/m/n/9 config.yaml
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
-[]|\OT1/cmr/m/n/9 same as greedy but
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
-[]|\OT1/cmr/m/n/9 beam-3-
- []
-
-
-Underfull \hbox (badness 1939) in paragraph at lines 164--164
-[]|\OT1/cmr/m/n/9 independent re-run for
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
-[]|\OT1/cmr/m/n/9 decoded
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--165
-[]|\OT1/cmr/m/n/9 config.yaml
- []
-
-
-Underfull \hbox (badness 1067) in paragraph at lines 165--165
-[]|\OT1/cmr/m/n/9 extended train-ing bud-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--165
-[]|\OT1/cmr/m/n/9 decoded
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--166
-[]|\OT1/cmr/m/n/9 Rescue
- []
-
-
-Underfull \hbox (badness 5787) in paragraph at lines 166--166
-[]|\OT1/cmr/m/n/9 dropout/wd vari-a-tions;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--166
-[]|\OT1/cmr/m/n/9 decoded
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--167
-[]|\OT1/cmr/m/n/9 released check-point
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--167
-[]|\OT1/cmr/m/n/9 student--teacher KL;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--167
-[]|\OT1/cmr/m/n/9 decoded
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--168
-[]|\OT1/cmr/m/n/9 Ladder (data
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--168
-[]|\OT1/cmr/m/n/9 data-subset frac-tions
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--168
-[]|\OT1/cmr/m/n/9 decoded
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
-[]|\OT1/cmr/m/n/9 not
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
-Underfull \hbox (badness 2856) in paragraph at lines 205--205
-\OT1/cmr/m/n/10 teen recon-struc-tion seeds (full table in \OT1/cmtt/m/n/10.037
-49 results/checkpoint[]stats.json\OT1/cmr/m/n/10 ). Teacher-forced val-ues are
- []
-
-
-Underfull \hbox (badness 2951) in paragraph at lines 205--205
-\OT1/cmr/m/n/10 on 500 ran-domly sam-pled items (seed 42, sam-pled with-out rep
-lace-ment; the sam-pling SD across
- []
-
-
-Underfull \hbox (badness 2158) in paragraph at lines 205--205
-\OT1/cmr/m/n/10 5 re-samples is $\OMS/cmsy/m/n/10.03749 ^^T$\OT1/cmr/m/n/10 0.3
- pp for token accu-racy and $\OMS/cmsy/m/n/10.03749 ^^T$\OT1/cmr/m/n/10 0.01 fo
-r NLL/tok); free-decode val-ues are full-
- []
-
-
-Underfull \hbox (badness 3148) in paragraph at lines 205--205
-\OT1/cmr/m/n/10 pool (7,060 train / 515 dev) under the uni-form beam-3 pro-to-c
-ol (\TS1/cmr/m/n/10.03749 §[]\OT1/cmr/m/n/10 3.4[]). sacre-BLEU \OT1/cmtt/m/n/1
-0.03749 signature:
- []
-
-
-Overfull \hbox (116.44247pt too wide) in paragraph at lines 192--206
- [] 
- []
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 208.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
-Underfull \hbox (badness 1292) in paragraph at lines 220--221
-\OT1/cmr/m/n/10 decoded-BLEU selec-tion uses beam search (\OT1/cmtt/m/n/10.0374
-9 eval[]translation[]beam[]size=3\OT1/cmr/m/n/10 ),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--234
-[]|\OT1/cmr/m/n/9 Translation-only /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--235
-[]| \OT1/cmr/m/n/9 + validation-freq-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--236
-[]|\OT1/cmr/m/n/9 Translation-only /
- []
-
-
-Underfull \hbox (badness 3590) in paragraph at lines 236--236
-[]|\OT1/cmr/m/n/9 greedy-BLEU / 14
- []
-
-
-Underfull \hbox (badness 3590) in paragraph at lines 237--237
-[]|\OT1/cmr/m/n/9 greedy-BLEU / 14
- []
-
-
-Underfull \hbox (badness 1231) in paragraph at lines 238--238
-[]|\OT1/cmr/m/n/9 beam-3-BLEU / 14
- []
-
-
-Overfull \hbox (55.15825pt too wide) in paragraph at lines 225--243
- [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 3780) in paragraph at lines 250--251
+Underfull \hbox (badness 3780) in paragraph at lines 168--169
 \OT1/cmr/m/n/10 The recorded test poses (REC) are decoded by each BT rec-og-niz
 er; we
  []
@@ -1148,303 +749,196 @@ er; we
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
+ [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
+ [11]
+Underfull \hbox (badness 3514) in paragraph at lines 185--186
+[]\OT1/cmr/m/n/10 Further con-trols localise the effect to source-conditioned d
+onor retrieval
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 257.
+(hyperref)                than one, level fixed on input line 187.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--269
-[]|\OT1/cmr/m/n/9 Training-pool read-
+Underfull \hbox (badness 2865) in paragraph at lines 189--190
+\OT1/cmr/m/n/10 with three con-struc-tion vari-ants on the released eval-u-a-to
+r alone (6 of 12
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--269
-[]|\OT1/cmr/m/n/9 In-sample autore-gres-sive
+Underfull \hbox (badness 1484) in paragraph at lines 189--190
+\OT1/cmr/m/n/10 cells explored, plus two ran-dom base-lines; full matrix in SI 
+Table S46 and
  []
 
+<generated_figures/fig2_headline.pdf, id=455, 543.21683pt x 254.14684pt>
+File: generated_figures/fig2_headline.pdf Graphic file (type pdf)
+<use generated_figures/fig2_headline.pdf>
+Package pdftex.def Info: generated_figures/fig2_headline.pdf  used on input lin
+e 193.
+(pdftex.def)             Requested size: 372.0pt x 174.05075pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--270
-[]|\OT1/cmr/m/n/9 641-item PHX-public
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
-[]|\OT1/cmr/m/n/9 D (post-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 271--271
-[]|\OT1/cmr/m/n/9 Operational tol-er-
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--295
-[]|\OT1/cmr/m/n/9 Our dis-closed recon-
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [13 <./generated_figures/fig2_headline.pdf>]
 
-Underfull \hbox (badness 1033) in paragraph at lines 297--297
-[]|\OT1/cmr/m/n/9 Probe response reflects
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 297--297
-\OT1/cmr/m/n/9 a causal checkpoint-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
-[]|\OT1/cmr/m/n/9 Reference replace-ment
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
-\OT1/cmr/m/n/9 atten-u-ates the gap
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-[]|\OT1/cmr/m/n/9 Origin effect per-sists
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\OT1/cmr/m/n/9 under matched pools
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--301
-[]|\OT1/cmr/m/n/9 Probe is adver-sar-ial
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--301
-\OT1/cmr/m/n/9 lexical-coupling stress
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 229.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
+Underfull \hbox (badness 10000) in paragraph at lines 249--249
+[]|\OT1/cmr/m/n/9 Family
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--253
+[]|\OT1/cmr/m/n/9 (iii) Com-pe-tence
+ []
+
+
+Overfull \hbox (106.65837pt too wide) in paragraph at lines 242--256
+ [] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-Underfull \hbox (badness 10000) in paragraph at lines 326--326
-[]| \OT1/cmr/m/n/9 Validation-freq-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 327--327
-[]| \OT1/cmr/m/n/9 Step-corrected
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 329--329
-[]| \OT1/cmr/m/n/9 Paper-derived
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
-[]| \OT1/cmr/m/n/9 Paper-derived
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--334
-[]| \OT1/cmr/m/n/9 Joint-loss
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--334
-\OT1/cmr/m/n/9 (sup-ple-men-tary,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 336--336
-[]| \OT1/cmr/m/n/9 Res-cue
- []
-
-
-Underfull \hbox (badness 6300) in paragraph at lines 336--336
-\OT1/cmr/m/n/9 (dropout/wd vari-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
-[]| \OT1/cmr/m/n/9 Lad-der (data
- []
-
-
-Underfull \hbox (badness 1184) in paragraph at lines 343--343
-[]\OT1/cmr/bx/n/10.03749 Table 8\OT1/cmr/m/n/10 : |Check-point account-ing, aut
-o-generated
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 343--343
-\OT1/cmr/m/n/10 from \OT1/cmtt/m/n/10.03749 results/accounting[]table.json \OT1
-/cmr/m/n/10 (sin-gle
- []
-
-
-Underfull \hbox (badness 1237) in paragraph at lines 343--343
-\OT1/cmr/m/n/10 source of truth, disk-scanned). ``Runs'' = from-
- []
-
-
-Underfull \hbox (badness 1721) in paragraph at lines 343--343
-\OT1/cmr/m/n/10 corrected-recipe runs) pro-vides recipe-faithfulness
- []
-
-
-LaTeX Warning: Float too large for page by 27.75316pt on input line 346.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<generated_figures/fig2_headline.pdf, id=504, 543.21683pt x 254.14684pt>
-File: generated_figures/fig2_headline.pdf Graphic file (type pdf)
-<use generated_figures/fig2_headline.pdf>
-Package pdftex.def Info: generated_figures/fig2_headline.pdf  used on input lin
-e 355.
-(pdftex.def)             Requested size: 372.0pt x 174.05075pt.
-
-Underfull \hbox (badness 5519) in paragraph at lines 360--361
-[]\OT1/cmr/m/n/10 Controls local-ized the obser-va-tion to source-conditioned d
-onor retrieval
- []
-
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 362.
-
-
-Underfull \hbox (badness 1087) in paragraph at lines 364--365
-\OT1/cmr/m/n/10 two random-donor base-lines that lie out-side the $4 \OMS/cmsy/
-m/n/10.03749 ^^B \OT1/cmr/m/n/10 3$ matrix (Table []9[] and
- []
+(hyperref)                than one, level fixed on input line 274.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
+<generated_figures/fig3_competence.pdf, id=512, 557.59152pt x 232.47917pt>
+File: generated_figures/fig3_competence.pdf Graphic file (type pdf)
+<use generated_figures/fig3_competence.pdf>
+Package pdftex.def Info: generated_figures/fig3_competence.pdf  used on input l
+ine 283.
+(pdftex.def)             Requested size: 372.0pt x 155.10396pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 414--414
-[]|\OT1/cmr/m/n/9 Family
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 418--418
-[]|\OT1/cmr/m/n/9 (iii) Com-pe-tence
- []
-
-
-Overfull \hbox (134.43248pt too wide) in paragraph at lines 407--421
- [] 
+Underfull \hbox (badness 1622) in paragraph at lines 284--284
+\OT1/cmr/m/n/10 recon-struc-tions (cir-cles), validation-freq-misread/step-corr
+ected/confirmation/long-
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17 <./generated_figures/fig2_headline.pdf>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 423.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+ [17 <./generated_figures/fig3_competence.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
-Overfull \hbox (18.8221pt too wide) in paragraph at lines 447--467
- [] 
- []
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 309.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 309.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 309.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-<generated_figures/fig3_competence.pdf, id=559, 557.41893pt x 232.47917pt>
-File: generated_figures/fig3_competence.pdf Graphic file (type pdf)
-<use generated_figures/fig3_competence.pdf>
-Package pdftex.def Info: generated_figures/fig3_competence.pdf  used on input l
-ine 480.
-(pdftex.def)             Requested size: 372.0pt x 155.15009pt.
 
-Underfull \hbox (badness 2393) in paragraph at lines 481--481
-\OT1/cmr/m/n/10 validation-freq-misread/step-corrected/confirmation/long-schedu
-le (squares), joint-
- []
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 327.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20 <./generated_figures/fig3_competence.pdf>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+
+Package hyperref Warning: Difference (3) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 339.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 506.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 506.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 506.
+(hyperref)                than one, level fixed on input line 342.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
 
+Package hyperref Warning: Difference (3) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 366.
+
+
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 524.
+(hyperref)                than one, level fixed on input line 367.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 1990) in paragraph at lines 368--369
+\OT1/cmr/m/n/10 The datasets and model weights are avail-able under research-sp
+ecific terms:
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 368--369
+\OT1/cmr/m/n/10 PHOENIX-2014T under its RWTH Aachen aca-demic licence; the SLRT
+P2025
+ []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 2012) in paragraph at lines 370--371
+\OT1/cmr/m/n/10 README . md$[]. The arti-fact is version-controlled (git com-mi
+t \OT1/cmtt/m/n/10.03749 493efac\OT1/cmr/m/n/10 , 2026-
+ []
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 370--371
+\OT1/cmr/m/n/10 08-17); a claim-to-file man-i-fest map-ping each head-line num-
+ber to its source
+ []
+
+
+Underfull \hbox (badness 5578) in paragraph at lines 370--371
+\OT1/cmr/m/n/10 file and ver-i-fi-ca-tion com-mand is at \OT1/cmtt/m/n/10.03749
+ claim[]manifest.json \OT1/cmr/m/n/10 (arti-fact root),
+ []
+
+
+Underfull \hbox (badness 2351) in paragraph at lines 370--371
+\OT1/cmr/m/n/10 and a single-command con-sis-tency check (\OT1/cmtt/m/n/10.0374
+9 make check-consistency\OT1/cmr/m/n/10 , invok-ing
+ []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
-
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 536.
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 539.
-
-
+(./main_lre.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
@@ -1453,143 +947,49 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26]
+ [26])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27]
-
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 570.
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 571.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28]
-Underfull \hbox (badness 2012) in paragraph at lines 573--574
-\OT1/cmr/m/n/10 README . md$[]. The arti-fact is version-controlled (git com-mi
-t \OT1/cmtt/m/n/10.03749 739ef0c\OT1/cmr/m/n/10 , 2026-
- []
-
-
-Underfull \hbox (badness 1603) in paragraph at lines 573--574
-\OT1/cmr/m/n/10 08-14); a claim-to-file man-i-fest map-ping each head-line num-
-ber to its source
- []
-
-
-Underfull \hbox (badness 5578) in paragraph at lines 573--574
-\OT1/cmr/m/n/10 file and ver-i-fi-ca-tion com-mand is at \OT1/cmtt/m/n/10.03749
- claim[]manifest.json \OT1/cmr/m/n/10 (arti-fact root),
- []
-
-
-Underfull \hbox (badness 2351) in paragraph at lines 573--574
-\OT1/cmr/m/n/10 and a single-command con-sis-tency check (\OT1/cmtt/m/n/10.0374
-9 make check-consistency\OT1/cmr/m/n/10 , invok-ing
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29]
-Underfull \hbox (badness 1303) in paragraph at lines 580--581
-[]\OT1/cmr/m/n/7 Sup. A: Miss-ing Test ID Sen-si-tiv-ity --- does the absent te
-st item change the head-line gap?
- []
-
-
-Underfull \hbox (badness 2050) in paragraph at lines 582--583
-[]\OT1/cmr/m/n/7 Sup. C: Anal-y-sis Prove-nance --- evi-den-tiary role and mul-
-ti-plic-ity han-dling of each anal-y-sis.
- []
-
-
-Underfull \hbox (badness 5231) in paragraph at lines 585--586
-[]\OT1/cmr/m/n/7 Sup. F: Config-Faithful and Per-tur-ba-tion Details --- protoc
-ol-mismatch check, weight-noise
- []
-
-(./main_lre.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [35]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [36]
 (./main_lre.aux)
 Package rerunfilecheck Info: File `main_lre.out' has not changed.
-(rerunfilecheck)             Checksum: 6F598055FE9A38EFE883D95F73AA421A;15414.
+(rerunfilecheck)             Checksum: B1DEC83715542B8A0A0FD2D8B4C09CD1;14737.
  ) 
 Here is how much of TeX's memory you used:
- 13522 strings out of 480247
- 215048 string characters out of 5896152
- 543927 words of memory out of 5000000
- 31106 multiletter control sequences out of 15000+600000
- 497263 words of font info for 134 fonts, out of 8000000 for 9000
+ 13480 strings out of 480247
+ 214407 string characters out of 5896152
+ 514689 words of memory out of 5000000
+ 31089 multiletter control sequences out of 15000+600000
+ 496412 words of font info for 131 fonts, out of 8000000 for 9000
  24 hyphenation exceptions out of 8191
- 85i,13n,90p,2595b,562s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 85i,13n,90p,2132b,545s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/typ
-e1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
-frm1000.pfb>
-Output written on main_lre.pdf (36 pages, 559686 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/shar
+e/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main_lre.pdf (27 pages, 484867 bytes).
 PDF statistics:
- 884 PDF objects out of 1000 (max. 8388607)
- 753 compressed objects within 8 object streams
- 152 named destinations out of 1000 (max. 500000)
- 507 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 777 PDF objects out of 1000 (max. 8388607)
+ 666 compressed objects within 7 object streams
+ 130 named destinations out of 1000 (max. 500000)
+ 475 words of extra memory for PDF output out of 10000 (max. 10000000)
 

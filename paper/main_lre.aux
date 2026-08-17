@@ -28,14 +28,14 @@
 \citation{saunders2021continuous}
 \citation{signbleu}
 \citation{silverscore}
-\citation{slrtp2025}
 \citation{jiang2025meaningful,backtranslation2}
-\@writefile{toc}{\contentsline {paragraph}{Why a constructed probe matters.}{3}{section*.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}{section.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Learned evaluation in sign language production.}{3}{section*.3}\protected@file@percent }
+\citation{slrtp2025}
 \citation{walsh2024datadriven,signstitching,soke,darslp}
 \citation{slrtp2025}
 \citation{carlini2021extracting,kandpal2022memorization,khandelwal2020knnlm}
+\@writefile{toc}{\contentsline {paragraph}{Why a constructed probe matters.}{3}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Learned evaluation in sign language production.}{3}{section*.3}\protected@file@percent }
 \citation{hong2026conditional}
 \citation{walsh2024datadriven}
 \citation{jiang2025meaningful}
@@ -52,133 +52,121 @@
 \@writefile{toc}{\contentsline {paragraph}{Robustness of learned metrics and corpus audits.}{4}{section*.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Reproducibility of learned evaluation metrics.}{4}{section*.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{PHOENIX-2014T as a language resource: known limitations.}{4}{section*.7}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Novelty relative to closely related PHOENIX-2014T and learned-metric reproducibility studies.\relax }}{5}{table.caption.9}\protected@file@percent }
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{tab:novelty}{{1}{5}{Novelty relative to closely related PHOENIX-2014T and learned-metric reproducibility studies.\relax }{table.caption.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{6}{section.3}\protected@file@percent }
-\newlabel{sec:method}{{3}{6}{Methods}{section.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Evaluation design}{6}{subsection.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Operational definition of reconstruction competence.}{6}{section*.10}\protected@file@percent }
-\newlabel{sec:sufficiency_def}{{3.1}{6}{Operational definition of reconstruction competence}{section*.10}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Three-way data provenance for PHX-public. The released evaluator's training manifest matches the released pose materialization (7{,}060/515/641), not the full official PHOENIX-2014T split. All 41 missing IDs carry the missingness label \texttt  {absent\_from\_slrtp2025\_released\_pose\_records}---a status flag rather than an explained mechanism (SI\nobreakspace  {}Sup.\nobreakspace  {}A). SHA-256 hashes verify file integrity.\relax }}{7}{table.caption.12}\protected@file@percent }
-\newlabel{tab:provenance}{{2}{7}{Three-way data provenance for PHX-public. The released evaluator's training manifest matches the released pose materialization (7{,}060/515/641), not the full official PHOENIX-2014T split. All 41 missing IDs carry the missingness label \texttt {absent\_from\_slrtp2025\_released\_pose\_records}---a status flag rather than an explained mechanism (SI~Sup.~A). SHA-256 hashes verify file integrity.\relax }{table.caption.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Systems and retrieval controls}{7}{subsection.3.2}\protected@file@percent }
-\newlabel{sec:retrieval}{{3.2}{7}{Systems and retrieval controls}{subsection.3.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Lexical coupling of the source-conditioned probe (adversarial design).}{7}{section*.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Retrieval composition.}{8}{section*.14}\protected@file@percent }
-\newlabel{sec:composition}{{3.2}{8}{Retrieval composition}{section*.14}{}}
-\@writefile{toc}{\contentsline {paragraph}{Donor-origin contrast retrieval systems.}{8}{section*.15}\protected@file@percent }
-\newlabel{sec:exposure_systems}{{3.2}{8}{Donor-origin contrast retrieval systems}{section*.15}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Evaluator checkpoint family}{8}{subsection.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{What the 68 runs are---and are not.}{9}{section*.16}\protected@file@percent }
-\newlabel{sec:provenance_table}{{3.3}{9}{What the 68 runs are---and are not}{section*.16}{}}
-\@writefile{toc}{\contentsline {paragraph}{Training-pool readout (descriptive observation).}{9}{section*.19}\protected@file@percent }
-\newlabel{sec:readout_def}{{3.3}{9}{Training-pool readout (descriptive observation)}{section*.19}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Reconstruction sanity checks}{9}{subsection.3.4}\protected@file@percent }
-\newlabel{sec:sanity_checks}{{3.4}{9}{Reconstruction sanity checks}{subsection.3.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Public-artifact provenance of each reconstruction family. ``Dev BLEU-4'' is the uniform full-pool beam-3 value (\S  \ref  {sec:sanity_checks}); the released evaluator scores 13.38. ``Selection'' is the checkpoint-selection rule. The 14 paper-derived runs use NLL selection on a legacy script; the step-corrected runs match the released \texttt  {validation\_freq=14} JoeyNMT semantics (validation every 14 optimiser steps) with decoded-BLEU checkpoint selection; the joint-loss variants additionally correct the recognition-loss omission. Only recipe-faithful families support the public-recipe non-reproduction claim; the rest are diagnostic.\relax }}{10}{table.caption.18}\protected@file@percent }
-\newlabel{tab:public_provenance}{{3}{10}{Public-artifact provenance of each reconstruction family. ``Dev BLEU-4'' is the uniform full-pool beam-3 value (\S \ref {sec:sanity_checks}); the released evaluator scores 13.38. ``Selection'' is the checkpoint-selection rule. The 14 paper-derived runs use NLL selection on a legacy script; the step-corrected runs match the released \texttt {validation\_freq=14} JoeyNMT semantics (validation every 14 optimiser steps) with decoded-BLEU checkpoint selection; the joint-loss variants additionally correct the recognition-loss omission. Only recipe-faithful families support the public-recipe non-reproduction claim; the rest are diagnostic.\relax }{table.caption.18}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Teacher-forced and free-decode diagnostic statistics for the released evaluator and the fourteen reconstruction seeds (full table in \texttt  {results/checkpoint\_stats.json}). Teacher-forced values are on 500 randomly sampled items (seed 42, sampled without replacement; the sampling SD across 5 re-samples is $\leq $0.3 pp for token accuracy and $\leq $0.01 for NLL/tok); free-decode values are full-pool (7{,}060 train / 515 dev) under the uniform beam-3 protocol (\S  \ref  {sec:sanity_checks}). sacreBLEU \texttt  {signature: BLEU|nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1} (max n-gram order 4, the default).\relax }}{11}{table.caption.21}\protected@file@percent }
-\newlabel{tab:sanity_stats}{{4}{11}{Teacher-forced and free-decode diagnostic statistics for the released evaluator and the fourteen reconstruction seeds (full table in \texttt {results/checkpoint\_stats.json}). Teacher-forced values are on 500 randomly sampled items (seed 42, sampled without replacement; the sampling SD across 5 re-samples is $\leq $0.3 pp for token accuracy and $\leq $0.01 for NLL/tok); free-decode values are full-pool (7{,}060 train / 515 dev) under the uniform beam-3 protocol (\S \ref {sec:sanity_checks}). sacreBLEU \texttt {signature: BLEU|nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1} (max n-gram order 4, the default).\relax }{table.caption.21}{}}
-\@writefile{toc}{\contentsline {paragraph}{Training-implementation diagnostics.}{11}{section*.22}\protected@file@percent }
-\newlabel{sec:training_diag}{{3.4}{11}{Training-implementation diagnostics}{section*.22}{}}
-\@writefile{toc}{\contentsline {paragraph}{Protocol robustness: four training-protocol variants.}{11}{section*.23}\protected@file@percent }
-\newlabel{sec:protocol_robustness}{{3.4}{11}{Protocol robustness: four training-protocol variants}{section*.23}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{5}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{5}{Methods}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Evaluation design}{5}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Operational definition of reconstruction competence.}{5}{section*.8}\protected@file@percent }
+\newlabel{sec:sufficiency_def}{{3.1}{5}{Operational definition of reconstruction competence}{section*.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Systems and retrieval controls}{6}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:retrieval}{{3.2}{6}{Systems and retrieval controls}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Lexical coupling of the source-conditioned probe (adversarial design).}{6}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Retrieval composition.}{7}{section*.10}\protected@file@percent }
+\newlabel{sec:composition}{{3.2}{7}{Retrieval composition}{section*.10}{}}
+\@writefile{toc}{\contentsline {paragraph}{Donor-origin contrast retrieval systems.}{7}{section*.11}\protected@file@percent }
+\newlabel{sec:exposure_systems}{{3.2}{7}{Donor-origin contrast retrieval systems}{section*.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Evaluator checkpoint family}{7}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{What the 76 runs are---and are not.}{7}{section*.12}\protected@file@percent }
+\newlabel{sec:provenance_table}{{3.3}{7}{What the 76 runs are---and are not}{section*.12}{}}
+\@writefile{toc}{\contentsline {paragraph}{Training-pool readout (descriptive observation).}{8}{section*.13}\protected@file@percent }
+\newlabel{sec:readout_def}{{3.3}{8}{Training-pool readout (descriptive observation)}{section*.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Reconstruction sanity checks and training diagnostics}{8}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:sanity_checks}{{3.4}{8}{Reconstruction sanity checks and training diagnostics}{subsection.3.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Seven implementation defects, and the faithful re-implementation.}{8}{section*.14}\protected@file@percent }
+\newlabel{sec:protocol_robustness}{{3.4}{8}{Seven implementation defects, and the faithful re-implementation}{section*.14}{}}
+\newlabel{sec:faithful_v4}{{3.4}{8}{Seven implementation defects, and the faithful re-implementation}{section*.14}{}}
 \citation{post2018sacrebleu}
 \citation{zhang2020bertscore}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Discovery timeline and pre-registration status}{12}{subsection.3.5}\protected@file@percent }
-\newlabel{sec:discovery}{{3.5}{12}{Discovery timeline and pre-registration status}{subsection.3.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Training-protocol robustness. All variants share the released architecture and data; they differ only in loss composition, validation cadence, and selection decode. Each row reports only that row's runs (not aggregates across families). Dev BLEU-4 is the uniform beam-3 full-pool value; gap is the canonical PURE--REC sacreBLEU-4 difference on the 641-item test set. No variant meets the competence gate (dev BLEU-4 $\geq $ 12.38).\relax }}{13}{table.caption.25}\protected@file@percent }
-\newlabel{tab:protocol_robustness}{{5}{13}{Training-protocol robustness. All variants share the released architecture and data; they differ only in loss composition, validation cadence, and selection decode. Each row reports only that row's runs (not aggregates across families). Dev BLEU-4 is the uniform beam-3 full-pool value; gap is the canonical PURE--REC sacreBLEU-4 difference on the 641-item test set. No variant meets the competence gate (dev BLEU-4 $\geq $ 12.38).\relax }{table.caption.25}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Metrics and uncertainty}{13}{subsection.3.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Terminology: run, checkpoint, unique binary, family, evaluator}{14}{subsection.3.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Custom-terminology registry.}{14}{section*.26}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Custom-terminology registry. Each term maps to its estimand, the dataset on which it is computed, and its evidence grade (all descriptive).\relax }}{14}{table.caption.28}\protected@file@percent }
-\newlabel{tab:terminology}{{6}{14}{Custom-terminology registry. Each term maps to its estimand, the dataset on which it is computed, and its evidence grade (all descriptive).\relax }{table.caption.28}{}}
-\@writefile{toc}{\contentsline {paragraph}{Claim hierarchy.}{14}{section*.29}\protected@file@percent }
-\newlabel{sec:claim_hierarchy}{{3.7}{14}{Claim hierarchy}{section*.29}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Claim hierarchy. Each key claim mapped to its evidence tier and supporting evidence.\relax }}{15}{table.caption.31}\protected@file@percent }
-\newlabel{tab:claim_hierarchy}{{7}{15}{Claim hierarchy. Each key claim mapped to its evidence tier and supporting evidence.\relax }{table.caption.31}{}}
-\@writefile{toc}{\contentsline {paragraph}{Experimental stratification.}{15}{section*.32}\protected@file@percent }
-\newlabel{sec:stratification}{{3.7}{15}{Experimental stratification}{section*.32}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{16}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Adversarial probe response and conditioning controls}{16}{subsection.4.1}\protected@file@percent }
-\newlabel{sec:public-diagnostic}{{4.1}{16}{Adversarial probe response and conditioning controls}{subsection.4.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Probe multiplicity and post-selection status of the headline gap.}{16}{section*.36}\protected@file@percent }
-\newlabel{sec:probe_multiplicity}{{4.1}{16}{Probe multiplicity and post-selection status of the headline gap}{section*.36}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Headline reversal under the released evaluator and its absence across recipe reconstructions. (a) System scores under the released evaluator (sacreBLEU-4, canonical 641-query protocol): TN-PURE 23.02 vs.\ REC 12.78 ($\Delta =+10.24$, post-selected descriptive 95\% CI $[8.87,11.64]$), with TN-PTCOMP 18.86, PT 1.59, oracle-gloss PURE 11.4, and random-donor PURE 0.90 (seeds 0--19, $\pm $1 SD). (b) Per-checkpoint PURE$-$REC gaps: released evaluator ($+10.24$) vs.\ fourteen \emph  {paper-derived} (legacy) recipe reconstructions (seeds 101--1405), all 14 negative (donor-cluster bootstrap 95\% CIs; descriptive seed dispersion range $[-1.85,-0.80]$, all 14 values below zero). The 10 step-corrected and 16 joint-loss families are shown in Fig.\nobreakspace  {}\ref  {fig:competence}; none of them produces a positive gap either (see Table\nobreakspace  {}\ref  {tab:accounting}). All reconstructions are less competent than the released evaluator; the figure demonstrates non-replication within the constructible family, not an isolated causal checkpoint effect.\relax }}{17}{figure.caption.35}\protected@file@percent }
-\newlabel{fig:headline}{{1}{17}{Headline reversal under the released evaluator and its absence across recipe reconstructions. (a) System scores under the released evaluator (sacreBLEU-4, canonical 641-query protocol): TN-PURE 23.02 vs.\ REC 12.78 ($\Delta =+10.24$, post-selected descriptive 95\% CI $[8.87,11.64]$), with TN-PTCOMP 18.86, PT 1.59, oracle-gloss PURE 11.4, and random-donor PURE 0.90 (seeds 0--19, $\pm $1 SD). (b) Per-checkpoint PURE$-$REC gaps: released evaluator ($+10.24$) vs.\ fourteen \emph {paper-derived} (legacy) recipe reconstructions (seeds 101--1405), all 14 negative (donor-cluster bootstrap 95\% CIs; descriptive seed dispersion range $[-1.85,-0.80]$, all 14 values below zero). The 10 step-corrected and 16 joint-loss families are shown in Fig.~\ref {fig:competence}; none of them produces a positive gap either (see Table~\ref {tab:accounting}). All reconstructions are less competent than the released evaluator; the figure demonstrates non-replication within the constructible family, not an isolated causal checkpoint effect.\relax }{figure.caption.35}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}RQ1: Failed public-artifact reconstruction---what the released evaluator has that reconstructions lack}{18}{subsection.4.2}\protected@file@percent }
-\newlabel{sec:positive_evidence}{{4.2}{18}{RQ1: Failed public-artifact reconstruction---what the released evaluator has that reconstructions lack}{subsection.4.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Readout \emph  {with} generalization: the distinctive combination.}{18}{section*.41}\protected@file@percent }
-\newlabel{sec:insample}{{4.2}{18}{Readout \emph {with} generalization: the distinctive combination}{section*.41}{}}
-\@writefile{toc}{\contentsline {paragraph}{Leakage sanity checks for the train-pool readout.}{18}{section*.42}\protected@file@percent }
-\newlabel{sec:leakage_checks}{{4.2}{18}{Leakage sanity checks for the train-pool readout}{section*.42}{}}
-\@writefile{toc}{\contentsline {paragraph}{Distillation and competence extrapolation.}{18}{section*.43}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Synthesis.}{19}{section*.44}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}RQ2: Multi-checkpoint reproduction of the stress-test ordering}{19}{subsection.4.3}\protected@file@percent }
-\newlabel{sec:what-drives-reversal}{{4.3}{19}{RQ2: Multi-checkpoint reproduction of the stress-test ordering}{subsection.4.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Recipe-conditioned evaluator reconstructions}{19}{subsubsection.4.3.1}\protected@file@percent }
-\newlabel{sec:multiseed_factorial}{{4.3.1}{19}{Recipe-conditioned evaluator reconstructions}{subsubsection.4.3.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{Competence gate and trajectory analysis.}{19}{section*.47}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Implementation ladder from the original defective protocol to the faithful re-implementation. All variants share the released architecture, data, and vocabularies; they differ in loss composition, normalisation, validation cadence, selection decode, and stopping rule. Dev BLEU-4 is the uniform beam-3 full-pool value; gap is the canonical PURE--REC sacreBLEU-4 difference on the 641-item test set; readout is full-training-pool free-decode BLEU-4 (released: 78.8).\relax }}{10}{table.caption.16}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:protocol_robustness}{{1}{10}{Implementation ladder from the original defective protocol to the faithful re-implementation. All variants share the released architecture, data, and vocabularies; they differ in loss composition, normalisation, validation cadence, selection decode, and stopping rule. Dev BLEU-4 is the uniform beam-3 full-pool value; gap is the canonical PURE--REC sacreBLEU-4 difference on the 641-item test set; readout is full-training-pool free-decode BLEU-4 (released: 78.8).\relax }{table.caption.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Discovery timeline and pre-registration status}{10}{subsection.3.5}\protected@file@percent }
+\newlabel{sec:discovery}{{3.5}{10}{Discovery timeline and pre-registration status}{subsection.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Metrics and uncertainty}{10}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Terminology, claim hierarchy, and stratification}{11}{subsection.3.7}\protected@file@percent }
+\newlabel{sec:stratification}{{3.7}{11}{Terminology, claim hierarchy, and stratification}{subsection.3.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{12}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Adversarial probe response: an attack result, confirmed and localised}{12}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:public-diagnostic}{{4.1}{12}{Adversarial probe response: an attack result, confirmed and localised}{subsection.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Adversarial unit-test response under the released evaluator and its absence across constructible evaluators. (a) System scores under the released evaluator (sacreBLEU-4, canonical 641-query protocol): TN-PURE 23.02 vs.\ REC 12.78 ($\Delta =+10.24$, post-selected), with TN-PTCOMP 18.86, PT 1.59, oracle-gloss PURE 11.4, and random-donor PURE 0.90 (seeds 0--19, $\pm $1 SD). (b) Per-checkpoint PURE$-$REC gaps: released evaluator ($+10.24$) vs.\ fourteen legacy recipe reconstructions (seeds 101--1405), all 14 negative (donor-cluster bootstrap 95\% CIs; descriptive seed dispersion range $[-1.85,-0.80]$). The partially-corrected, joint-loss, and faithful families (gaps $[-2.80,-0.21]$ overall; SI\nobreakspace  {}Sup.\nobreakspace  {}P accounting table) are shown in Fig.\nobreakspace  {}\ref  {fig:competence}; none produces a positive gap, including the faithful runs whose test-split competence matches the released evaluator.\relax }}{13}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:headline}{{1}{13}{Adversarial unit-test response under the released evaluator and its absence across constructible evaluators. (a) System scores under the released evaluator (sacreBLEU-4, canonical 641-query protocol): TN-PURE 23.02 vs.\ REC 12.78 ($\Delta =+10.24$, post-selected), with TN-PTCOMP 18.86, PT 1.59, oracle-gloss PURE 11.4, and random-donor PURE 0.90 (seeds 0--19, $\pm $1 SD). (b) Per-checkpoint PURE$-$REC gaps: released evaluator ($+10.24$) vs.\ fourteen legacy recipe reconstructions (seeds 101--1405), all 14 negative (donor-cluster bootstrap 95\% CIs; descriptive seed dispersion range $[-1.85,-0.80]$). The partially-corrected, joint-loss, and faithful families (gaps $[-2.80,-0.21]$ overall; SI~Sup.~P accounting table) are shown in Fig.~\ref {fig:competence}; none produces a positive gap, including the faithful runs whose test-split competence matches the released evaluator.\relax }{figure.caption.18}{}}
+\@writefile{toc}{\contentsline {paragraph}{Probe multiplicity and post-selection status.}{13}{section*.17}\protected@file@percent }
+\newlabel{sec:probe_multiplicity}{{4.1}{13}{Probe multiplicity and post-selection status}{section*.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}RQ1: What the faithful re-implementation recovers, and what it does not}{14}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:positive_evidence}{{4.2}{14}{RQ1: What the faithful re-implementation recovers, and what it does not}{subsection.4.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces The faithful family (\texttt  {train\_faithful.py}, seeds 42--49; all seven defects corrected) versus the released evaluator. Dev/test BLEU-4 are uniform beam-3 decodes (515/641 items); readout is full-training-pool free-decode BLEU-4 (7{,}060 items) with exact-match rate; gap is the canonical PURE$-$REC sacreBLEU-4 difference on the 641-item test panel. The released evaluator's row uses the same protocols.\relax }}{14}{table.caption.20}\protected@file@percent }
+\newlabel{tab:faithful_results}{{2}{14}{The faithful family (\texttt {train\_faithful.py}, seeds 42--49; all seven defects corrected) versus the released evaluator. Dev/test BLEU-4 are uniform beam-3 decodes (515/641 items); readout is full-training-pool free-decode BLEU-4 (7{,}060 items) with exact-match rate; gap is the canonical PURE$-$REC sacreBLEU-4 difference on the 641-item test panel. The released evaluator's row uses the same protocols.\relax }{table.caption.20}{}}
+\@writefile{toc}{\contentsline {paragraph}{Finding 1 (surface competence largely recovered).}{14}{section*.21}\protected@file@percent }
+\newlabel{sec:faithful_results}{{4.2}{14}{Finding 1 (surface competence largely recovered)}{section*.21}{}}
+\@writefile{toc}{\contentsline {paragraph}{Finding 2 (training-pool readout signature not recovered).}{14}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Finding 3 (probe response tracks the signature, not surface competence).}{15}{section*.23}\protected@file@percent }
+\newlabel{sec:insample}{{4.2}{15}{Finding 3 (probe response tracks the signature, not surface competence)}{section*.23}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Summary of the three primary descriptive comparisons over the full constructible family. Family $n$: (i)\nobreakspace  {}74 beam-3-decoded training runs (range over 69 non-degenerate; 5 degenerate excluded); (ii)\nobreakspace  {}38 constructible checkpoints with uniform full-pool readout (released listed separately); (iii)\nobreakspace  {}gate-eligible non-distillation training runs. Per-view family composition in SI\nobreakspace  {}Sup.\nobreakspace  {}D.\relax }}{15}{table.caption.25}\protected@file@percent }
+\newlabel{tab:diagnostic_summary}{{3}{15}{Summary of the three primary descriptive comparisons over the full constructible family. Family $n$: (i)~74 beam-3-decoded training runs (range over 69 non-degenerate; 5 degenerate excluded); (ii)~38 constructible checkpoints with uniform full-pool readout (released listed separately); (iii)~gate-eligible non-distillation training runs. Per-view family composition in SI~Sup.~D.\relax }{table.caption.25}{}}
+\@writefile{toc}{\contentsline {paragraph}{Leakage sanity checks for the train-pool readout.}{15}{section*.26}\protected@file@percent }
+\newlabel{sec:leakage_checks}{{4.2}{15}{Leakage sanity checks for the train-pool readout}{section*.26}{}}
+\@writefile{toc}{\contentsline {paragraph}{Distillation and competence extrapolation.}{16}{section*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Synthesis.}{16}{section*.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Descriptive observation: probe non-reproduction across 69 constructible evaluators}{16}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:what-drives-reversal}{{4.3}{16}{Descriptive observation: probe non-reproduction across 69 constructible evaluators}{subsection.4.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Competence gate and trajectory analysis.}{16}{section*.29}\protected@file@percent }
 \citation{jiang2025meaningful}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Decoded competence and training-pool readout separate the released evaluator from every constructible checkpoint. (a) Dev-BLEU-4 training trajectories on a common optimizer-step axis: the released evaluator (orange) reaches 13.38 at step 1{,}820 of 2{,}828 (archived validation log, 202 logged points); fourteen reconstructions form a median band (blue), plus uniformly decoded epoch-25/50 points. (b) Canonical PURE$-$REC gap vs.\ decoded dev BLEU-4 by family: reconstructions (circles), validation-freq-misread/step-corrected/confirmation/long-schedule (squares), joint-loss greedy/beam-3 (triangles-up/triangles-down), rescue (triangle-right), distillation students (diamonds), released evaluator (star); the gray band marks the observed 6.5--10.5 range (uniform protocol) and the (10.5, 13.38) interval is unobserved by recipe-constructed checkpoints (the nine released-weight fine-tunes occupy 12.92--13.18 but are weight perturbations); degenerate checkpoints are hollow gray points. (c) Full-training-pool free-decode readout (beam-3, full 7{,}060 poses) vs.\ decoded dev BLEU-4: every constructible checkpoint reads out 6.6--9.3 BLEU, while the released evaluator reads out 78.8 BLEU (70.7\% exact match) at dev 13.38. Families are descriptive; checkpoints are not IID replicates.\relax }}{20}{figure.caption.49}\protected@file@percent }
-\newlabel{fig:competence}{{2}{20}{Decoded competence and training-pool readout separate the released evaluator from every constructible checkpoint. (a) Dev-BLEU-4 training trajectories on a common optimizer-step axis: the released evaluator (orange) reaches 13.38 at step 1{,}820 of 2{,}828 (archived validation log, 202 logged points); fourteen reconstructions form a median band (blue), plus uniformly decoded epoch-25/50 points. (b) Canonical PURE$-$REC gap vs.\ decoded dev BLEU-4 by family: reconstructions (circles), validation-freq-misread/step-corrected/confirmation/long-schedule (squares), joint-loss greedy/beam-3 (triangles-up/triangles-down), rescue (triangle-right), distillation students (diamonds), released evaluator (star); the gray band marks the observed 6.5--10.5 range (uniform protocol) and the (10.5, 13.38) interval is unobserved by recipe-constructed checkpoints (the nine released-weight fine-tunes occupy 12.92--13.18 but are weight perturbations); degenerate checkpoints are hollow gray points. (c) Full-training-pool free-decode readout (beam-3, full 7{,}060 poses) vs.\ decoded dev BLEU-4: every constructible checkpoint reads out 6.6--9.3 BLEU, while the released evaluator reads out 78.8 BLEU (70.7\% exact match) at dev 13.38. Families are descriptive; checkpoints are not IID replicates.\relax }{figure.caption.49}{}}
-\@writefile{toc}{\contentsline {paragraph}{What the released training log establishes.}{20}{section*.48}\protected@file@percent }
-\newlabel{sec:original_trajectory}{{4.3.1}{20}{What the released training log establishes}{section*.48}{}}
-\@writefile{toc}{\contentsline {paragraph}{Cross-metric consistency (SI\nobreakspace  {}Table\nobreakspace  {}S22).}{20}{section*.50}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Decoded competence and training-pool readout separate the released evaluator from every constructible checkpoint. (a) Dev-BLEU-4 training trajectories on a common optimizer-step axis: the released evaluator (orange) reaches 13.38 at step 1{,}820 of 2{,}828 (archived validation log, 202 logged points); fourteen defective-protocol reconstructions form a median band (blue) and the eight faithful runs a second band (red) that tracks the released trajectory closely before plateauing at 11.6--12.6. (b) Canonical PURE$-$REC gap vs.\ decoded dev BLEU-4 by family: reconstructions (circles), validation-freq-misread/step-corrected/confirmation/long-schedule (squares), joint-loss greedy/beam-3 (triangles-up/triangles-down), rescue (triangle-right), distillation students (diamonds), released evaluator (star); the gray band spans the constructible 6.5--12.6 range (uniform protocol; faithful runs in red plus-signs); the residual (12.62, 13.38) interval is unobserved by recipe-constructed checkpoints (the nine released-weight fine-tunes occupy 12.92--13.18 but are weight perturbations); degenerate checkpoints are hollow gray points. (c) Full-training-pool free-decode readout (beam-3, full 7{,}060 poses) vs.\ decoded dev BLEU-4: every constructible checkpoint reads out at most 12.1 BLEU (defective families 6.6--9.3; faithful 11.5--12.1), while the released evaluator reads out 78.8 BLEU (70.7\% exact match) at dev 13.38. Families are descriptive; checkpoints are not IID replicates.\relax }}{17}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:competence}{{2}{17}{Decoded competence and training-pool readout separate the released evaluator from every constructible checkpoint. (a) Dev-BLEU-4 training trajectories on a common optimizer-step axis: the released evaluator (orange) reaches 13.38 at step 1{,}820 of 2{,}828 (archived validation log, 202 logged points); fourteen defective-protocol reconstructions form a median band (blue) and the eight faithful runs a second band (red) that tracks the released trajectory closely before plateauing at 11.6--12.6. (b) Canonical PURE$-$REC gap vs.\ decoded dev BLEU-4 by family: reconstructions (circles), validation-freq-misread/step-corrected/confirmation/long-schedule (squares), joint-loss greedy/beam-3 (triangles-up/triangles-down), rescue (triangle-right), distillation students (diamonds), released evaluator (star); the gray band spans the constructible 6.5--12.6 range (uniform protocol; faithful runs in red plus-signs); the residual (12.62, 13.38) interval is unobserved by recipe-constructed checkpoints (the nine released-weight fine-tunes occupy 12.92--13.18 but are weight perturbations); degenerate checkpoints are hollow gray points. (c) Full-training-pool free-decode readout (beam-3, full 7{,}060 poses) vs.\ decoded dev BLEU-4: every constructible checkpoint reads out at most 12.1 BLEU (defective families 6.6--9.3; faithful 11.5--12.1), while the released evaluator reads out 78.8 BLEU (70.7\% exact match) at dev 13.38. Families are descriptive; checkpoints are not IID replicates.\relax }{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {paragraph}{What the released training log establishes.}{17}{section*.30}\protected@file@percent }
+\newlabel{sec:original_trajectory}{{4.3}{17}{What the released training log establishes}{section*.30}{}}
 \citation{czehmann2026sacred}
 \citation{alkain2026critical}
 \citation{jiang2025meaningful}
-\@writefile{toc}{\contentsline {paragraph}{Rank stability (SI\nobreakspace  {}Sup.\nobreakspace  {}H).}{21}{section*.51}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Reference-frame sensitivity: matched-subset analysis.}{21}{section*.52}\protected@file@percent }
-\newlabel{sec:human_refs}{{4.3.1}{21}{Reference-frame sensitivity: matched-subset analysis}{section*.52}{}}
-\newlabel{sec:floor_effect}{{4.3.1}{21}{Reference-frame sensitivity: matched-subset analysis}{section*.52}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Donor-origin contrast}{22}{subsection.4.4}\protected@file@percent }
-\newlabel{sec:exposure_results}{{4.4}{22}{Donor-origin contrast}{subsection.4.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{Matched donor-pool analysis (SMD$<$0.1 control).}{22}{section*.53}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Pool-size-controlled resampling.}{22}{section*.54}\protected@file@percent }
-\newlabel{sec:resampling}{{4.4}{22}{Pool-size-controlled resampling}{section*.54}{}}
+\@writefile{toc}{\contentsline {paragraph}{Cross-metric consistency (SI\nobreakspace  {}Table\nobreakspace  {}S32).}{18}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Rank stability (SI\nobreakspace  {}Sup.\nobreakspace  {}H).}{18}{section*.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Reference-frame sensitivity: matched-subset analysis.}{18}{section*.34}\protected@file@percent }
+\newlabel{sec:human_refs}{{4.3}{18}{Reference-frame sensitivity: matched-subset analysis}{section*.34}{}}
+\newlabel{sec:floor_effect}{{4.3}{18}{Reference-frame sensitivity: matched-subset analysis}{section*.34}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Donor-origin contrast}{19}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:exposure_results}{{4.4}{19}{Donor-origin contrast}{subsection.4.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Matched donor-pool analysis (SMD$<$0.1 control).}{19}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Pool-size-controlled resampling.}{19}{section*.36}\protected@file@percent }
+\newlabel{sec:resampling}{{4.4}{19}{Pool-size-controlled resampling}{section*.36}{}}
+\@writefile{toc}{\contentsline {paragraph}{Balanced factorial and path decomposition.}{19}{section*.37}\protected@file@percent }
+\newlabel{sec:decomposition}{{4.4}{19}{Balanced factorial and path decomposition}{section*.37}{}}
+\newlabel{sec:factorial_corrected}{{4.4}{19}{Balanced factorial and path decomposition}{section*.37}{}}
 \citation{slrtp2025}
-\@writefile{toc}{\contentsline {paragraph}{Balanced factorial and path decomposition.}{23}{section*.55}\protected@file@percent }
-\newlabel{sec:decomposition}{{4.4}{23}{Balanced factorial and path decomposition}{section*.55}{}}
-\newlabel{sec:factorial_corrected}{{4.4}{23}{Balanced factorial and path decomposition}{section*.55}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Competitive-system context}{23}{subsection.4.5}\protected@file@percent }
-\newlabel{sec:competition_real}{{4.5}{23}{Competitive-system context}{subsection.4.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{Per-item gap decomposition (experiment C, SI\nobreakspace  {}Sup.\nobreakspace  {}K).}{23}{section*.56}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{24}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Competitive-system context}{20}{subsection.4.5}\protected@file@percent }
+\newlabel{sec:competition_real}{{4.5}{20}{Competitive-system context}{subsection.4.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Per-item gap decomposition (experiment C, SI\nobreakspace  {}Sup.\nobreakspace  {}K).}{20}{section*.38}\protected@file@percent }
 \citation{czehmann2026sacred}
 \citation{hong2026conditional}
 \citation{walsh2024datadriven}
 \citation{jiang2025meaningful}
 \citation{soke}
-\@writefile{toc}{\contentsline {paragraph}{Relation to prior work.}{25}{section*.57}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Scope limitation: our reconstruction vs.\ public-artifact sufficiency.}{25}{section*.58}\protected@file@percent }
-\newlabel{sec:scope_limit}{{5}{25}{Scope limitation: our reconstruction vs.\ public-artifact sufficiency}{section*.58}{}}
+\citation{chen2022repro}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{21}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Relation to prior work.}{21}{section*.39}\protected@file@percent }
 \citation{cohen2018three}
-\@writefile{toc}{\contentsline {paragraph}{Value, finding, and conclusion reproducibility.}{26}{section*.59}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Value of the audit infrastructure despite the competence confound.}{26}{section*.60}\protected@file@percent }
 \citation{czehmann2026sacred}
 \citation{czehmann2026sacred,alkain2026critical}
-\@writefile{toc}{\contentsline {paragraph}{Actionable recommendations for benchmark organizers.}{27}{section*.61}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Limitations.}{27}{section*.62}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Scope limitation: our reconstruction vs.\ public-artifact sufficiency.}{22}{section*.40}\protected@file@percent }
+\newlabel{sec:scope_limit}{{5}{22}{Scope limitation: our reconstruction vs.\ public-artifact sufficiency}{section*.40}{}}
+\@writefile{toc}{\contentsline {paragraph}{Value, finding, and conclusion reproducibility.}{22}{section*.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Actionable recommendations for benchmark organizers.}{22}{section*.42}\protected@file@percent }
 \citation{czehmann2026sacred}
 \citation{desai2024systemic}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{28}{section.6}\protected@file@percent }
-\newlabel{sec:ethics}{{6}{28}{Statements and Declarations}{section*.63}{}}
-\@writefile{toc}{\contentsline {paragraph}{Funding.}{28}{section*.64}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Conflict of interest.}{28}{section*.65}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Data governance and ethics.}{28}{section*.66}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Data availability.}{29}{section*.67}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Limitations.}{23}{section*.43}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{23}{section.6}\protected@file@percent }
+\newlabel{sec:ethics}{{6}{23}{Statements and Declarations}{section*.44}{}}
+\@writefile{toc}{\contentsline {paragraph}{Funding.}{23}{section*.45}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Conflict of interest.}{23}{section*.46}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Data governance and ethics.}{24}{section*.47}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Data availability.}{24}{section*.48}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Author contribution.}{24}{section*.49}\protected@file@percent }
 \bibdata{references}
 \bibcite{alkain2026critical}{{1}{2026}{{Alkain et~al.}}{{Alkain, N{\'u}{\~n}ez-Marcos, Escolano, Doc{\'i}o-Fern{\'a}ndez, Perez-de Vi{\~n}aspre, and Labaka}}}
-\@writefile{toc}{\contentsline {paragraph}{Author contribution.}{30}{section*.68}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{Supplementary Information}{30}{section*.69}\protected@file@percent }
 \bibcite{artiaga2025signer}{{2}{2025}{{Artiaga et~al.}}{{Artiaga, Kamila, Afli, Lynch, and Hasanuzzaman}}}
 \bibcite{camgoz2018neural}{{3}{2018}{{Camgoz et~al.}}{{Camgoz, Hadfield, Koller, Ney, and Bowden}}}
 \bibcite{carlini2021extracting}{{4}{2021}{{Carlini et~al.}}{{Carlini, Tramer, Wallace, Jagielski, Herbert-Voss, Lee, Roberts, Brown, Song, Erlingsson, Oprea, and Raffel}}}
 \bibcite{chen2022repro}{{5}{2022}{{Chen et~al.}}{{Chen, Belouadi, and Eger}}}
 \bibcite{cohen2018three}{{6}{2018}{{Cohen et~al.}}{{Cohen, Xia, Zweigenbaum, Callahan, Hargraves, Goss, Ide, N{\'e}v{\'e}ol, Grouin, and Hunter}}}
+\@writefile{toc}{\contentsline {section}{Supplementary Information}{25}{section*.50}\protected@file@percent }
 \bibcite{backtranslation2}{{7}{2026}{{Cory et~al.}}{{Cory, Ivashechkin, Sahin, Ranum, Low, Fish, Pelykh, Mercanoglu~Sincan, and Bowden}}}
 \bibcite{czehmann2026sacred}{{8}{2026}{{Czehmann et~al.}}{{Czehmann, Yazdani, Hamidullah, Nunnari, and Avramidis}}}
 \bibcite{desai2024systemic}{{9}{2024}{{Desai et~al.}}{{Desai, {{De Meulder}}, Hochgesang, Kocab, and Lu}}}
@@ -199,12 +187,4 @@
 \bibcite{yazdani2025critical}{{24}{2026}{{Yazdani et~al.}}{{Yazdani, Hamidullah, Espa{\~n}a-Bonet, Avramidis, and van Genabith}}}
 \bibcite{zhang2020bertscore}{{25}{2020}{{Zhang et~al.}}{{Zhang, Kishore, Wu, Weinberger, and Artzi}}}
 \bibcite{soke}{{26}{2025}{{Zuo et~al.}}{{Zuo, Potamias, Ververas, Deng, and Zafeiriou}}}
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Checkpoint accounting, auto-generated from \texttt  {results/accounting\_table.json} (single source of truth, disk-scanned). ``Runs'' = from-scratch training executions; ``Decoded'' = beam-3 decoded on the canonical PHX-public gap panel; ``Unique'' = distinct SHA-256 weight binaries; ``Non-deg.'' = non-degenerate (BLEU $>$ 0, excluding 3 $\alpha {=}1.0$ distillation students with empty output and 2 smallest ladder fractions). The near-faithful tier (14 corrected-recipe runs) provides recipe-faithfulness evidence; secondary (14 legacy, of which 6 prospectively specified) provides the prospectively specified non-reproduction direction plus stability; diagnostic is mechanism exploration.\relax }}{34}{table.caption.34}\protected@file@percent }
-\newlabel{tab:accounting}{{8}{34}{Checkpoint accounting, auto-generated from \texttt {results/accounting\_table.json} (single source of truth, disk-scanned). ``Runs'' = from-scratch training executions; ``Decoded'' = beam-3 decoded on the canonical PHX-public gap panel; ``Unique'' = distinct SHA-256 weight binaries; ``Non-deg.'' = non-degenerate (BLEU $>$ 0, excluding 3 $\alpha {=}1.0$ distillation students with empty output and 2 smallest ladder fractions). The near-faithful tier (14 corrected-recipe runs) provides recipe-faithfulness evidence; secondary (14 legacy, of which 6 prospectively specified) provides the prospectively specified non-reproduction direction plus stability; diagnostic is mechanism exploration.\relax }{table.caption.34}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Complete retrieval $\times $ construction design matrix explored on the released evaluator. Scores are corpus-level sacreBLEU-4 (0--100) on the canonical 641-item PHX-public set (REC$=$12.78). Of the 12 retrieval--construction cells, 6 were explored, 3 are not applicable ($^a$), and 3 were not explored ($^*$, $^\dagger $); full reasons in \texttt  {results/probe\_multiplicity.json}. The headline probe (bold) was selected as the maximal-gap explored cell; its CI is post-selection descriptive. Two random-donor baselines (below the midrule) lie outside the $4\times 3$ matrix.\relax }}{35}{table.caption.38}\protected@file@percent }
-\newlabel{tab:probe_multiplicity}{{9}{35}{Complete retrieval $\times $ construction design matrix explored on the released evaluator. Scores are corpus-level sacreBLEU-4 (0--100) on the canonical 641-item PHX-public set (REC$=$12.78). Of the 12 retrieval--construction cells, 6 were explored, 3 are not applicable ($^a$), and 3 were not explored ($^*$, $^\dagger $); full reasons in \texttt {results/probe\_multiplicity.json}. The headline probe (bold) was selected as the maximal-gap explored cell; its CI is post-selection descriptive. Two random-donor baselines (below the midrule) lie outside the $4\times 3$ matrix.\relax }{table.caption.38}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Summary of the three primary descriptive comparisons. The released evaluator sits far outside the constructible family range on all three views. Family $n$: (i)\nobreakspace  {}66 beam-3-decoded training runs (range over 61 non-degenerate; 5 degenerate excluded); (ii)\nobreakspace  {}30 constructible checkpoints with uniform full-pool readout (released listed separately); (iii)\nobreakspace  {}gate-eligible non-distillation training runs. Per-view family composition in SI\nobreakspace  {}Sup.\nobreakspace  {}D.\relax }}{35}{table.caption.40}\protected@file@percent }
-\newlabel{tab:diagnostic_summary}{{10}{35}{Summary of the three primary descriptive comparisons. The released evaluator sits far outside the constructible family range on all three views. Family $n$: (i)~66 beam-3-decoded training runs (range over 61 non-degenerate; 5 degenerate excluded); (ii)~30 constructible checkpoints with uniform full-pool readout (released listed separately); (iii)~gate-eligible non-distillation training runs. Per-view family composition in SI~Sup.~D.\relax }{table.caption.40}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Canonical fixed-output evaluation on the released 641-pose PHX-public subset (released evaluator and six prospectively specified legacy seeds (101--606); eight extension seeds in SI\nobreakspace  {}Table\nobreakspace  {}S27). PURE is TN-PURE-v1; COMP is TN-PTCOMP-v1. Gaps are relative to local REC.\relax }}{36}{table.caption.46}\protected@file@percent }
-\newlabel{tab:multiseed_factorial}{{11}{36}{Canonical fixed-output evaluation on the released 641-pose PHX-public subset (released evaluator and six prospectively specified legacy seeds (101--606); eight extension seeds in SI~Table~S27). PURE is TN-PURE-v1; COMP is TN-PTCOMP-v1. Gaps are relative to local REC.\relax }{table.caption.46}{}}
-\gdef \@abspage@last{36}
+\gdef \@abspage@last{27}
