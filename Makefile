@@ -101,21 +101,17 @@ round2-all: donor-bootstrap ref-frame-figure experiment-C paper
 probe-multiplicity:
 	$(PYTHON) scripts/e_probe_multiplicity.py
 
-# NOTE on accounting / matched-donor-pool regeneration:
-# scripts/build_accounting_table.py and scripts/e_matched_donor_pool.py are
-# version-controlled here for provenance, but one-click regeneration requires
-# the per-run registry schema from the RCP primary repo
-# (results/canonical_checkpoint_registry.json with 71 per-run entries). This
-# mirror retains the per-binary schema (47 unique-binary entries) for
-# backward compatibility with the round-2 Makefile targets above; the scripts
-# as committed will not run cleanly against the per-binary registry.
-# The reported numbers (78 trained, 44 non-degenerate, +9.56 origin effect,
-# SMD 0.065, +14.51 estimand) are verified in CI via check_paper_numbers.py
-# string assertions against main_lre.tex, and the canonical JSON values live
-# in results/paper_numbers.json (n_total_trained, n_non_degenerate,
-# matched_donor_pool, donor_origin) plus results/matched_donor_pool.json and
-# results/accounting_table.json. For full per-run regeneration, see the RCP
-# primary repo (github.com/JiXin424/slrtp2025-replay-audit).
+# NOTE on accounting regeneration:
+# scripts/build_accounting_table.py and the registry builder live in the RCP
+# primary repo; this mirror carries the canonical outputs
+# (results/canonical_checkpoint_registry.json, results/accounting_table.json,
+# results/paper_numbers.json). Current counts (registry v5): 76 trained /
+# 74 decoded / 73 unique binaries / 69 non-degenerate, all 69 gaps negative
+# (range [-2.80, -0.21]); headline verified in CI via check_paper_numbers.py
+# string assertions against paper/main_lre.tex, and the faithful-family block
+# in results/paper_numbers.json (dev 11.59-12.62, readout 11.45-12.08,
+# gaps [-2.80, -1.37], 8/8 negative). For full per-run regeneration, see the
+# RCP primary repo (github.com/JiXin424/slrtp2025-replay-audit).
 
 # Full reproduction DAG: decode + score all canonical evaluators from checkpoints.
 # Requires model checkpoints and training data. See README for data setup.
@@ -123,3 +119,16 @@ reproduction-dag:
 	$(PYTHON) scripts/build_canonical_panel.py
 	$(PYTHON) scripts/build_paper_numbers.py
 	@echo "reproduction-dag complete: canonical panel + paper numbers regenerated."
+
+# ---- PDF build (clean, warning-checked) ----
+# Builds main_lre.pdf and supplementary.pdf from paper/ sources.
+# The supplementary uses xr-hyper \externaldocument{main_lre}; a filtered copy
+# of main_lre.aux (without \bibcite lines) is used so the imported citations
+# do not collide with the supplementary's own bibliography keys.
+paper-pdf:
+	cd paper && rm -f main_lre.aux main_lre.bbl main_lre.blg supplementary.aux supplementary.bbl supplementary.blg
+	cd paper && grep -v '\\bibcite' main_lre.aux > main_lre_xr.aux 2>/dev/null || true
+	cd paper && pdflatex -interaction=nonstopmode main_lre.tex > /dev/null && bibtex main_lre > /dev/null && pdflatex -interaction=nonstopmode main_lre.tex > /dev/null && pdflatex -interaction=nonstopmode main_lre.tex > /dev/null
+	cd paper && grep -v '\\bibcite' main_lre.aux > main_lre_xr.aux
+	cd paper && pdflatex -interaction=nonstopmode supplementary.tex > /dev/null && bibtex supplementary > /dev/null && pdflatex -interaction=nonstopmode supplementary.tex > /dev/null && pdflatex -interaction=nonstopmode supplementary.tex > /dev/null
+	@cd paper && echo "--- main_lre warnings:" && (grep -cE "multiply defined|undefined" main_lre.log || true) && echo "--- supplementary warnings:" && (grep -cE "multiply defined|undefined" supplementary.log || true)

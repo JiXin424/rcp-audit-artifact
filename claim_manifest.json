@@ -1,157 +1,217 @@
 {
-  "schema": "claim-manifest-v1",
-  "description": "Maps each headline numerical claim in main_lre.tex to its source data file and verification command. Every entry can be checked by running the listed command or by reading the listed file. This file is the single entry point for auditors.",
-  "paper_file": "main_lre.tex",
-  "supplementary_file": "supplementary.tex",
-  "artifact_version_git_ref": "main branch HEAD (run `git log -1` for the exact submission commit)",
-  "generated_at": "2026-08-09",
-  "canonical_materialization_sha256": "9170a53026ab3263b451a3632a9e02318745acabf12f0b679921477afbefa301",
-  "sacrebleu_signature": "BLEU|c|n:4|e:no|tok:13a|s:exp|v:2.5.1",
-  "claims": [
-    {
-      "id": "headline_gap",
-      "statement": "TN-PURE-v1 PURE-REC gap under the released evaluator",
-      "value": 10.24,
-      "ci_95": [8.87, 11.64],
-      "source_file": "results/gap_43_canonical_beam3.json",
-      "ci_source_file": "results/donor_cluster_bootstrap.json",
-      "verify_command": "python3 scripts/e_donor_cluster_bootstrap.py",
-      "tex_section": "sec:public-diagnostic"
-    },
-    {
-      "id": "released_dev_bleu",
-      "statement": "Released evaluator dev BLEU-4 (uniform full-pool beam-3)",
-      "value": 13.38,
-      "source_file": "results/full_readout/backTranslation_PHIX_model.json",
-      "verify_command": "python3 scripts/e_full_readout.py --ckpt checkpoints/released/backTranslation_PHIX_model",
-      "tex_section": "sec:multiseed_factorial"
-    },
-    {
-      "id": "released_train_readout",
-      "statement": "Released evaluator training-pool free-decode BLEU and exact-match",
-      "value_bleu": 78.8,
-      "value_em": 0.707,
-      "source_file": "results/full_readout/backTranslation_PHIX_model.json",
-      "verify_command": "python3 scripts/e_full_readout.py --ckpt checkpoints/released/backTranslation_PHIX_model",
-      "tex_section": "sec:readout_def"
-    },
-    {
-      "id": "checkpoint_accounting",
-      "statement": "From-scratch training runs, beam-3 decoded, unique binaries, non-degenerate (disk-scanned registry v4)",
-      "values": {"total_trained_runs": 68, "total_decoded_gap_panel": 66, "total_unique_binaries": 65, "total_non_degenerate": 61, "negative_gap_count": 61, "positive_gap_count": 0, "gap_range": [-2.0127, -0.2080]},
-      "source_file": "results/accounting_table.json",
-      "verify_command": "python3 scripts/build_accounting_table.py",
-      "tex_section": "tab:accounting"
-    },
-    {
-      "id": "six_seed_PI",
-      "statement": "Six prospectively specified legacy seeds (101-606) PURE-REC gap prediction interval",
-      "value": [-2.48, -0.28],
-      "source_file": "results/inference_regression.json",
-      "verify_command": "python3 scripts/e_inference_regression.py",
-      "tex_section": "sec:discovery"
-    },
-    {
-      "id": "fourteen_seed_PI",
-      "statement": "All 14 paper-derived seeds PURE-REC gap prediction interval",
-      "value": [-1.94, -0.46],
-      "source_file": "results/inference_regression.json",
-      "verify_command": "python3 scripts/e_inference_regression.py",
-      "tex_section": "sec:what-drives-reversal"
-    },
-    {
-      "id": "attenuation_905",
-      "statement": "Reference-replacement attenuation on 461-item matched subset (single-annotator point estimate)",
-      "value_pct": 90.5,
-      "absolute_attenuation": 9.08,
-      "absolute_attenuation_ci": [7.44, 10.86],
-      "residual_gap": 0.95,
-      "source_file": "results/canonical_matched_subset.json",
-      "verify_command": "python3 scripts/e_beam3_matched_subset.py",
-      "tex_section": "sec:human_refs"
-    },
-    {
-      "id": "origin_effect_full",
-      "statement": "Donor-origin effect, full 641-item pool (PURE-seen minus PURE-unseen)",
-      "value": 14.51,
-      "source_file": "results/matched_donor_pool.json",
-      "tex_section": "sec:exposure_results"
-    },
-    {
-      "id": "origin_effect_matched",
-      "statement": "Donor-origin effect on Jaccard-matched subset (SMD<0.1, n=148)",
-      "value": 9.56,
-      "ci_95": [7.47, 11.76],
-      "smd_jaccard": 0.065,
-      "source_file": "results/matched_donor_pool.json",
-      "verify_command": "python3 scripts/e_matched_donor_pool.py",
-      "tex_section": "sec:exposure_results"
-    },
-    {
-      "id": "origin_effect_resampling",
-      "statement": "Pool-size-controlled origin effect (1000 resamples of 640-vs-640 donor pools)",
-      "value_mean": 8.38,
-      "value_median": 8.39,
-      "ci_95": [7.44, 9.34],
-      "fraction_positive": 1.0,
-      "source_file": "results/donor_pool_resampling.json",
-      "verify_command": "python3 scripts/e_donor_pool_resampling.py",
-      "tex_section": "sec:resampling"
-    },
-    {
-      "id": "readout_competence_spearman",
-      "statement": "Spearman rho between training-pool readout BLEU and dev BLEU-4",
-      "value_incl_released": 0.916,
-      "value_excl_released": 0.907,
-      "n_incl_released": 31,
-      "source_file": "results/robustness_diagnostics.json",
-      "verify_command": "python3 scripts/e_robustness_diagnostics.py",
-      "tex_section": "sec:insample"
-    },
-    {
-      "id": "probe_multiplicity",
-      "statement": "Retrieval x construction design matrix cells explored",
-      "values": {"matrix_size": 12, "cells_explored": 6, "cells_not_applicable": 3, "cells_not_explored": 3, "random_baselines": 2},
-      "selected_probe_gap": 10.24,
-      "source_file": "results/probe_multiplicity.json",
-      "verify_command": "python3 scripts/e_probe_multiplicity.py",
-      "tex_section": "sec:probe_multiplicity"
-    },
-    {
-      "id": "training_diagnostics",
-      "statement": "Reconstruction training effective batch size and early-epoch NLL trajectory",
-      "effective_batch": 256,
-      "epoch1_train_nll_median": 5.83,
-      "epoch25_train_nll_median": 2.09,
-      "source_file": "results/robustness_diagnostics.json",
-      "verify_command": "python3 scripts/e_robustness_diagnostics.py",
-      "tex_section": "sec:sanity_checks"
-    },
-    {
-      "id": "fps_regression",
-      "statement": "25->12.5 fps pose-subsampling regression test (no double subsampling)",
-      "n_samples_checked": 8,
-      "all_passed": true,
-      "source_file": "results/fps_regression_test.json",
-      "verify_command": "python3 scripts/test_fps_regression.py",
-      "tex_section": "sec:method"
-    }
-  ],
-  "audit_target_files": [
-    "results/accounting_table.json",
-    "results/canonical_checkpoint_registry.json",
-    "results/unified_checkpoint_registry.json",
-    "results/gap_43_canonical_beam3.json",
-    "results/gap_43_canonical_beam3_items/",
-    "results/full_readout/",
-    "results/full_readout_summary.json",
-    "results/matched_donor_pool.json",
-    "results/donor_pool_resampling.json",
-    "results/probe_multiplicity.json",
-    "results/robustness_diagnostics.json",
-    "results/fps_regression_test.json",
-    "results/donor_cluster_bootstrap.json",
-    "results/inference_regression.json",
-    "results/canonical_matched_subset.json"
-  ]
+ "schema": "claim-manifest-v1",
+ "description": "Maps each headline numerical claim in main_lre.tex to its source data file and verification command. Every entry can be checked by running the listed command or by reading the listed file. This file is the single entry point for auditors.",
+ "paper_file": "main_lre.tex",
+ "supplementary_file": "supplementary.tex",
+ "artifact_version_git_ref": "main branch HEAD (run `git log -1` for the exact submission commit)",
+ "generated_at": "2026-08-17",
+ "canonical_materialization_sha256": "9170a53026ab3263b451a3632a9e02318745acabf12f0b679921477afbefa301",
+ "sacrebleu_signature": "BLEU|c|n:4|e:no|tok:13a|s:exp|v:2.5.1",
+ "claims": [
+  {
+   "id": "headline_gap",
+   "statement": "TN-PURE-v1 PURE-REC gap under the released evaluator",
+   "value": 10.24,
+   "ci_95": [
+    8.87,
+    11.64
+   ],
+   "source_file": "results/gap_43_canonical_beam3.json",
+   "ci_source_file": "results/donor_cluster_bootstrap.json",
+   "verify_command": "python3 scripts/e_donor_cluster_bootstrap.py",
+   "tex_section": "sec:public-diagnostic"
+  },
+  {
+   "id": "released_dev_bleu",
+   "statement": "Released evaluator dev BLEU-4 (uniform full-pool beam-3)",
+   "value": 13.38,
+   "source_file": "results/full_readout/backTranslation_PHIX_model.json",
+   "verify_command": "python3 scripts/e_full_readout.py --ckpt checkpoints/released/backTranslation_PHIX_model",
+   "tex_section": "sec:multiseed_factorial"
+  },
+  {
+   "id": "released_train_readout",
+   "statement": "Released evaluator training-pool free-decode BLEU and exact-match",
+   "value_bleu": 78.8,
+   "value_em": 0.707,
+   "source_file": "results/full_readout/backTranslation_PHIX_model.json",
+   "verify_command": "python3 scripts/e_full_readout.py --ckpt checkpoints/released/backTranslation_PHIX_model",
+   "tex_section": "sec:readout_def"
+  },
+  {
+   "id": "checkpoint_accounting",
+   "statement": "From-scratch training runs, beam-3 decoded, unique binaries, non-degenerate (disk-scanned registry v5)",
+   "values": {
+    "total_trained_runs": 76,
+    "total_decoded_gap_panel": 74,
+    "total_unique_binaries": 73,
+    "total_non_degenerate": 69,
+    "negative_gap_count": 69,
+    "positive_gap_count": 0,
+    "gap_range": [
+     -2.7972,
+     -0.208
+    ]
+   },
+   "source_file": "results/accounting_table.json",
+   "verify_command": "python3 scripts/build_accounting_table.py",
+   "tex_section": "tab:accounting"
+  },
+  {
+   "id": "six_seed_PI",
+   "statement": "Six prospectively specified legacy seeds (101-606) PURE-REC gap prediction interval",
+   "value": [
+    -2.48,
+    -0.28
+   ],
+   "source_file": "results/inference_regression.json",
+   "verify_command": "python3 scripts/e_inference_regression.py",
+   "tex_section": "sec:discovery"
+  },
+  {
+   "id": "fourteen_seed_PI",
+   "statement": "All 14 paper-derived seeds PURE-REC gap prediction interval",
+   "value": [
+    -1.94,
+    -0.46
+   ],
+   "source_file": "results/inference_regression.json",
+   "verify_command": "python3 scripts/e_inference_regression.py",
+   "tex_section": "sec:what-drives-reversal"
+  },
+  {
+   "id": "attenuation_905",
+   "statement": "Reference-replacement attenuation on 461-item matched subset (single-annotator point estimate)",
+   "value_pct": 90.5,
+   "absolute_attenuation": 9.08,
+   "absolute_attenuation_ci": [
+    7.44,
+    10.86
+   ],
+   "residual_gap": 0.95,
+   "source_file": "results/canonical_matched_subset.json",
+   "verify_command": "python3 scripts/e_beam3_matched_subset.py",
+   "tex_section": "sec:human_refs"
+  },
+  {
+   "id": "origin_effect_full",
+   "statement": "Donor-origin effect, full 641-item pool (PURE-seen minus PURE-unseen)",
+   "value": 14.51,
+   "source_file": "results/matched_donor_pool.json",
+   "tex_section": "sec:exposure_results"
+  },
+  {
+   "id": "origin_effect_matched",
+   "statement": "Donor-origin effect on Jaccard-matched subset (SMD<0.1, n=148)",
+   "value": 9.56,
+   "ci_95": [
+    7.47,
+    11.76
+   ],
+   "smd_jaccard": 0.065,
+   "source_file": "results/matched_donor_pool.json",
+   "verify_command": "python3 scripts/e_matched_donor_pool.py",
+   "tex_section": "sec:exposure_results"
+  },
+  {
+   "id": "origin_effect_resampling",
+   "statement": "Pool-size-controlled origin effect (1000 resamples of 640-vs-640 donor pools)",
+   "value_mean": 8.38,
+   "value_median": 8.39,
+   "ci_95": [
+    7.44,
+    9.34
+   ],
+   "fraction_positive": 1.0,
+   "source_file": "results/donor_pool_resampling.json",
+   "verify_command": "python3 scripts/e_donor_pool_resampling.py",
+   "tex_section": "sec:resampling"
+  },
+  {
+   "id": "readout_competence_spearman",
+   "statement": "Spearman rho between training-pool readout BLEU and dev BLEU-4",
+   "value_incl_released": 0.916,
+   "value_excl_released": 0.907,
+   "n_incl_released": 31,
+   "source_file": "results/robustness_diagnostics.json",
+   "verify_command": "python3 scripts/e_robustness_diagnostics.py",
+   "tex_section": "sec:insample"
+  },
+  {
+   "id": "probe_multiplicity",
+   "statement": "Retrieval x construction design matrix cells explored",
+   "values": {
+    "matrix_size": 12,
+    "cells_explored": 6,
+    "cells_not_applicable": 3,
+    "cells_not_explored": 3,
+    "random_baselines": 2
+   },
+   "selected_probe_gap": 10.24,
+   "source_file": "results/probe_multiplicity.json",
+   "verify_command": "python3 scripts/e_probe_multiplicity.py",
+   "tex_section": "sec:probe_multiplicity"
+  },
+  {
+   "id": "training_diagnostics",
+   "statement": "Reconstruction training effective batch size and early-epoch NLL trajectory",
+   "effective_batch": 256,
+   "epoch1_train_nll_median": 5.83,
+   "epoch25_train_nll_median": 2.09,
+   "source_file": "results/robustness_diagnostics.json",
+   "verify_command": "python3 scripts/e_robustness_diagnostics.py",
+   "tex_section": "sec:sanity_checks"
+  },
+  {
+   "id": "fps_regression",
+   "statement": "25->12.5 fps pose-subsampling regression test (no double subsampling)",
+   "n_samples_checked": 8,
+   "all_passed": true,
+   "source_file": "results/fps_regression_test.json",
+   "verify_command": "python3 scripts/test_fps_regression.py",
+   "tex_section": "sec:method"
+  },
+  {
+   "id": "faithful_family",
+   "statement": "Faithful family (train_faithful.py, seeds 42-49): dev BLEU-4 range 11.59-12.62, test REC range 11.60-13.11, train-pool readout 11.45-12.08 BLEU (2.3-2.5% EM), PURE-REC gaps all negative [-2.80, -1.37]",
+   "source_file": "results/paper_numbers.json",
+   "verify_command": "python3 scripts/build_paper_numbers.py && python3 -c \"import json; print(json.load(open('results/paper_numbers.json'))['faithful_family'])\"",
+   "tex_section": "sec:positive_evidence",
+   "also_see": [
+    "results/full_readout/seed_4*.json",
+    "checkpoints/faithful/seed_*/training_log.json"
+   ]
+  },
+  {
+   "id": "frozen_split_confirmation",
+   "statement": "Dev-split confirmation of the headline probe: REC 13.38 / PURE 21.47 / gap +8.10 (515 items, never used for probe exploration)",
+   "source_file": "results/dev_split_confirmation.json",
+   "verify_command": "python3 scripts/e_dev_split_confirmation.py --gpu 0",
+   "tex_section": "sec:public-diagnostic"
+  },
+  {
+   "id": "pose_retrieval_probe",
+   "statement": "Reference-free pose-signature retrieval: POSE-PURE 0.45, gap -12.33 (vs text-retrieval +10.24, random -11.88)",
+   "source_file": "results/pose_retrieval_probe.json",
+   "verify_command": "python3 scripts/e_pose_retrieval_probe.py --gpu 0",
+   "tex_section": "sec:public-diagnostic"
+  }
+ ],
+ "audit_target_files": [
+  "results/accounting_table.json",
+  "results/canonical_checkpoint_registry.json",
+  "results/unified_checkpoint_registry.json",
+  "results/gap_43_canonical_beam3.json",
+  "results/gap_43_canonical_beam3_items/",
+  "results/full_readout/",
+  "results/full_readout_summary.json",
+  "results/matched_donor_pool.json",
+  "results/donor_pool_resampling.json",
+  "results/probe_multiplicity.json",
+  "results/robustness_diagnostics.json",
+  "results/fps_regression_test.json",
+  "results/donor_cluster_bootstrap.json",
+  "results/inference_regression.json",
+  "results/canonical_matched_subset.json"
+ ]
 }

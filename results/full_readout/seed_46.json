@@ -1,0 +1,29 @@
+{
+ "schema": "full-readout-v1",
+ "ckpt_dir": "checkpoints/faithful/seed_46",
+ "beam_size": 3,
+ "beam_alpha": -1,
+ "protocol": "full-pool, beam=3, alpha=-1, [::2] subsample, sacrebleu 13a/exp/effective_order=False",
+ "splits": {
+  "train": {
+   "n": 7060,
+   "bleu": 11.47573631826838,
+   "em": 0.02322946175637394,
+   "n_empty": 0
+  },
+  "dev": {
+   "n": 515,
+   "bleu": 11.802360447917005,
+   "em": 0.013592233009708738,
+   "n_empty": 0
+  },
+  "test": {
+   "n": 641,
+   "bleu": 12.262318816098041,
+   "em": 0.015600624024960999,
+   "n_empty": 0
+  }
+ },
+ "elapsed_s": 751.4215359687805,
+ "note": "per-item hypotheses stripped in this mirror copy for size; full per-item files in the RCP primary repo results/full_readout/ (regenerable via scripts/e_full_readout.py)"
+}

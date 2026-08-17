@@ -1,0 +1,18 @@
+{
+  "split": "dev",
+  "n_queries": 515,
+  "evaluator": "released",
+  "evaluator_ckpt_sha256": "f081cfd2cca93a3610ed3a13d34bf9b3cb36db5390fda83181db84abab1aa428",
+  "donor_registry_sha256": "2d4780a61ac338da0481e55b1f0bf84d5dccb751875464532a4d8f9f99add78e",
+  "construction": "TN-PURE-v1 (NFKC + Jaccard + Levenshtein tb + SHA-256 tb + exact-norm-text exclusion)",
+  "gt_bleu": 13.378651856913775,
+  "pure_bleu": 21.47415417433793,
+  "gap": 8.095502317424154,
+  "test_split_reference": {
+    "gt_bleu": 12.78,
+    "pure_bleu": 23.02,
+    "gap": 10.24
+  },
+  "released_dev_bleu_logged": 13.38,
+  "decode_time_s": 46.999353647232056
+}

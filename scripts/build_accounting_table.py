@@ -19,8 +19,9 @@ from pathlib import Path
 REGISTRY_PATH = Path(__file__).resolve().parents[1] / "results" / "canonical_checkpoint_registry.json"
 OUTPUT_PATH = Path(__file__).resolve().parents[1] / "results" / "accounting_table.json"
 
-# Family -> tier mapping (must match registry v4)
+# Family -> tier mapping (must match registry v5)
 FAMILY_TO_TIER = OrderedDict([
+    ("faithful",                "faithful"),
     ("config_faithful",         "near_faithful"),
     ("step_faithful",           "near_faithful"),
     ("reconstructions_primary", "secondary"),
@@ -40,7 +41,8 @@ FAMILY_TO_TIER = OrderedDict([
 ])
 
 TIER_DISPLAY = OrderedDict([
-    ("near_faithful", "Near-faithful (corrected-recipe reconstruction)"),
+    ("faithful",       "Faithful (config-exact, seed-42-first)"),
+    ("near_faithful", "Near-faithful (partially-corrected recipe)"),
     ("secondary",     "Secondary (legacy-implementation replication)"),
     ("diagnostic",    "Diagnostic (post-hoc sensitivity)"),
     ("holdout",       "Holdout controls"),
@@ -48,6 +50,9 @@ TIER_DISPLAY = OrderedDict([
 
 # Display order within each tier
 FAMILY_DISPLAY = {
+    "faithful": [
+        ("faithful",                "Faithful (train_faithful.py, seeds 42-49)"),
+    ],
     "near_faithful": [
         ("config_faithful",         "Validation-freq-misread"),
         ("step_faithful",           "Step-corrected (re-trained)"),

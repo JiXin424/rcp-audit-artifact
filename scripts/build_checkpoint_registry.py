@@ -36,6 +36,7 @@ Family derivation:
   checkpoints/bt_retrained_holdout/X        -> bt_retrained_holdout
   checkpoints/reconstructions_v2/seed_18XX  -> joint_loss_greedy (1801-1808 main; 1809/1810 supplementary)
   checkpoints/reconstructions_v3/seed_19XX  -> joint_loss_beam3
+  checkpoints/faithful/seed_4X              -> faithful (seed-42-first, batch-norm, joint, beam-3)
 
 Usage:
     python3 scripts/build_checkpoint_registry.py
@@ -55,6 +56,7 @@ SKIP_DIRS = {"released", "finetune_released", "step_faithful_legacy_nll", "retra
 
 # Family-tier mapping (must match paper stratification)
 FAMILY_TO_TIER = {
+    "faithful":                "faithful",  # seed-42-first, batch-norm, joint loss, beam-3 select
     "config_faithful":         "near_faithful",
     "step_faithful":           "near_faithful",
     "reconstructions_primary": "secondary",
@@ -79,6 +81,8 @@ def gap_panel_prefix(family: str, seed, dir_name: str) -> str | None:
     """Return the filename prefix used in gap_43_canonical_beam3_items/, or None if not decoded."""
     if family == "config_faithful":
         return f"cf_{seed}"
+    if family == "faithful":
+        return f"faithful_{seed}"
     if family == "step_faithful":
         return f"sf_{seed}"
     if family in ("reconstructions_primary", "reconstructions_extension"):
@@ -151,6 +155,8 @@ def derive_family(dir_name: str, seed_dir: str, log: dict) -> tuple[str, str]:
         return "reconstructions_extension", f"reco_{seed}"
     if dir_name == "config_faithful":
         return "config_faithful", f"cf_{seed}"
+    if dir_name == "faithful":
+        return "faithful", f"faithful_{seed}"
     if dir_name == "step_faithful":
         return "step_faithful", f"sf_{seed}"
     if dir_name == "confirmation":

@@ -192,11 +192,12 @@ def main():
         # (5) Paper bold total row matches accounting
         if PAPER.exists():
             tex = open(PAPER).read()
+            supp_tex = open(SUPP).read() if SUPP.exists() else ""
             total_row = (f"\\textbf{{{hc['total_trained_runs']}}} & "
                          f"\\textbf{{{hc['total_decoded_gap_panel']}}} & "
                          f"\\textbf{{{hc['total_unique_binaries']}}} & "
                          f"\\textbf{{{hc['total_non_degenerate']}}}")
-            if total_row in tex:
+            if total_row in tex or total_row in supp_tex:
                 ok(f"tex: accounting total row matches ({hc['total_trained_runs']}/"
                     f"{hc['total_decoded_gap_panel']}/{hc['total_unique_binaries']}/"
                     f"{hc['total_non_degenerate']})")
@@ -251,6 +252,8 @@ def main():
                     ok("tex: probe multiplicity '6 explored of 12' statement present")
                 elif re.search(r"6 were explored", tex):
                     ok("tex: probe multiplicity '6 were explored' present")
+                elif "6 of 12 cells explored" in tex:
+                    ok("tex: probe multiplicity '6 of 12 cells explored' present")
                 else:
                     fail("tex: probe multiplicity '6 explored' statement NOT found")
 

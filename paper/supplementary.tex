@@ -9,9 +9,12 @@
 \usepackage{hyperref}
 \usepackage{url}
 \usepackage{xr-hyper}
-\externaldocument{main_lre}
+% main_lre_xr.aux = main_lre.aux with \bibcite lines removed (built by
+% `make paper-pdf` / scripts); prevents xr-hyper from double-defining the
+% citations that both documents share.
+\externaldocument{main_lre_xr}
 
-\title[Supplementary Information]{Supplementary Information for:\\Public-Artifact Sufficiency Audit of the SLRTP2025 Back-Translation Evaluator: A Failed Reconstruction and Descriptive Probe Analysis}
+\title[Supplementary Information]{Supplementary Information for:\\Reconstructing the SLRTP2025 Back-Translation Evaluator from Public Artifacts: What Reproduces, and What Does Not}
 
 \author*[1]{} % Authors retained for blind review
 \affil*[1]{}
@@ -30,14 +33,34 @@ This supplement provides detailed appendices referenced in the main manuscript. 
 \label{sec:appendix_missing_id}
 The official PHOENIX-2014T metadata contain 7,096/519/642 train/development/test IDs. The released SLRTP2025 pose records available to this study contain 7,060/515/641 sequences: 36/4/1 official IDs are absent from the released pose materialization. Their IDs and the reason \texttt{absent\_from\_slrtp2025\_released\_pose\_records} are enumerated in \texttt{artifact/manifests/exclusions.jsonl}. The missing test ID is \texttt{13December\_2010\_Monday\_tagesschau-6940}; its text/gloss metadata are not present in the released pose record, so length and template density cannot be reconstructed without an additional official annotation source. We therefore condition every result on the complete 641-record release rather than assert that the missing item is ignorable. As an empirical observed-extreme sensitivity scenario, assigning the missing item the per-item score of the largest PURE-over-REC outlier observed among the 641 released items changes the corpus-level gap by less than $\pm 0.2$ BLEU points, well within the reported 95\% paired-bootstrap interval $[+9.6,+12.4]$. This is an observed-extreme scenario, not a worst-case bound: corpus BLEU is non-linear and the missing item's reference, hypothesis, and n-gram sufficient statistics are unknown, so the true mathematical worst case is not covered. All primary conclusions are therefore restricted to the released 641-record materialization.
 
-\section{Per-seed Extension Cells (707--1405)}
+\section{Per-seed Legacy Cells (101--606 primary; 707--1405 extension)}
 \label{sec:appendix_extension_cells}
-The eight extension seeds are post-hoc additions that enter only the seed-level prediction interval and descriptive ranges, never the six primary comparisons. Per-seed PHX-public values (sacreBLEU 0--100 scale, canonical \S\ref{sec:retrieval} donor registry):
+The six primary seeds (101--606) were prospectively specified before their results were inspected; the eight extension seeds are post-hoc additions that enter only the within-implementation seed dispersion interval and descriptive ranges, never the six primary comparisons. Per-seed PHX-public values (sacreBLEU 0--100 scale, canonical \S\ref{sec:retrieval} donor registry). PURE is TN-PURE-v1; COMP is TN-PTCOMP-v1; gaps are relative to local REC:
 
 \begin{table}[h]
 \centering
 \scriptsize
-\caption{Per-seed extension cells for the eight post-hoc extension seeds (707--1405). All values are PHX-public sacreBLEU on the 0--100 scale with the canonical \S\ref{sec:retrieval} donor registry (exact-normalized-text exclusion applied). All gaps are negative; these seeds enter only the prediction interval.}
+\caption{Prospectively specified legacy seeds (101--606): canonical fixed-output evaluation on the 641-pose PHX-public panel.}
+\label{tab:primary_cells}
+\begin{tabular}{lrrrrr}
+\toprule
+Evaluator & REC & PURE & Gap & COMP & Gap \\
+\midrule
+Released & 12.78 & 23.02 & $\mathbf{+10.24}$ & 18.86 & $+6.09$ \\
+Seed 101 & 9.24 & 8.45 & $-0.80$ & 7.92 & $-0.65$ \\
+Seed 202 & 8.22 & 6.92 & $-1.30$ & 7.54 & $-1.28$ \\
+Seed 303 & 9.10 & 7.25 & $-1.85$ & 8.71 & $-0.96$ \\
+Seed 404 & 9.52 & 7.71 & $-1.81$ & 6.38 & $-0.81$ \\
+Seed 505 & 9.71 & 8.44 & $-1.28$ & 7.97 & $-1.08$ \\
+Seed 606 & 7.55 & 6.31 & $-1.24$ & 7.93 & $-0.16$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\caption{Per-seed extension cells for the eight post-hoc extension seeds (707--1405). All values are PHX-public sacreBLEU on the 0--100 scale with the canonical \S\ref{sec:retrieval} donor registry (exact-normalized-text exclusion applied). All gaps are negative; these seeds enter only the within-implementation seed dispersion interval.}
 \label{tab:extension_cells}
 \begin{tabular}{lrrrr}
 \toprule
@@ -57,18 +80,18 @@ Seed & dev BLEU-4$^{\dagger}$ & REC & PURE & Gap \\
 \footnotesize $^\dagger$dev BLEU-4 is the training-time validation-selected value recorded by the original training protocol (legacy protocol; not comparable to the uniform full-pool free-decode dev BLEU-4 reported in main \S\ref{sec:insample}). REC, PURE, and Gap are canonical \S\ref{sec:retrieval} beam-3 values.
 \end{table}
 
-\paragraph{Seed-stratified prediction intervals and two-level resampling.}
-The 14-seed prediction interval splits into the six internally prespecified primary seeds and the eight post-hoc extension seeds: the primary-six give a Student-$t$ PI of $[-2.48,-0.28]$ (mean $-1.38$, SD $0.40$, 0/6 positive) and the extension-eight $[-1.61,-0.54]$ (mean $-1.07$, SD $0.21$, 0/8 positive). Leave-one-seed-out refits keep the PI below zero in all 14 folds (PI lower bounds $-1.99$ to $-1.80$; upper bounds $-0.51$ to $-0.42$). A two-level bootstrap resamples seeds with replacement (14 draws), then resamples each drawn seed's 641 items with replacement and averages the corpus gap over the 14 drawn seeds, giving a 95\% CI of $[-1.49,-0.93]$ (10{,}000 resamples, seed 42; per-item BLEU sufficient statistics precomputed once per seed, so the resamples are numerically identical to recomputing corpus BLEU per draw). Every seed-level resampling leaves the non-replication conclusion unchanged.
+\paragraph{Seed-stratified dispersion intervals and two-level resampling.}
+The 14-seed within-implementation seed dispersion interval splits into the six internally prespecified primary seeds and the eight post-hoc extension seeds: the primary-six give a Student-$t$ interval of $[-2.48,-0.28]$ (mean $-1.38$, SD $0.40$, 0/6 positive) and the extension-eight $[-1.61,-0.54]$ (mean $-1.07$, SD $0.21$, 0/8 positive). Leave-one-seed-out refits keep the interval below zero in all 14 folds (lower bounds $-1.99$ to $-1.80$; upper bounds $-0.51$ to $-0.42$). A two-level bootstrap resamples seeds with replacement (14 draws), then resamples each drawn seed's 641 items with replacement and averages the corpus gap over the 14 drawn seeds, giving a 95\% CI of $[-1.49,-0.93]$ (10{,}000 resamples, seed 42; per-item BLEU sufficient statistics precomputed once per seed, so the resamples are numerically identical to recomputing corpus BLEU per draw). Every seed-level resampling leaves the non-replication conclusion unchanged.
 
 \section{Analysis Provenance and Multiplicity}
 \label{sec:provenance}
-Table~\ref{tab:provenance} classifies every analysis in this manuscript by its role in the paper's argument, its evidentiary status, and its multiplicity handling. The PURE--REC decoded-sacreBLEU gap under the released evaluator is the \emph{selected probe gap} (post-selection descriptive; see main \S\ref{sec:probe_multiplicity}); every other analysis is secondary and is grouped by the role it plays---confirmatory control, descriptive triangulation, robustness check, or administrative record. C = confirmatory (frozen protocol with error control); D = descriptive (no formal error control).
+Table~\ref{tab:si_provenance} classifies every analysis in this manuscript by its role in the paper's argument, its evidentiary status, and its multiplicity handling. The PURE--REC decoded-sacreBLEU gap under the released evaluator is the \emph{selected probe gap} (post-selection descriptive; see main \S\ref{sec:probe_multiplicity}); every other analysis is secondary and is grouped by the role it plays---confirmatory control, descriptive triangulation, robustness check, or administrative record. C = confirmatory (frozen protocol with error control); D = descriptive (no formal error control).
 
 \begin{table}[ht]
 \centering
 \scriptsize\setlength{\tabcolsep}{2pt}
 \caption{Evidence-graded analysis registry. Rows are grouped by the role each analysis plays in the argument, not by when it was added.}
-\label{tab:provenance}
+\label{tab:si_provenance}
 \begin{tabular}{p{2.5cm}p{5.0cm}p{0.9cm}p{3.6cm}}
 \toprule
 Evidence role & Analysis & Status & Multiplicity handling \\
@@ -113,7 +136,7 @@ Evidence role & Analysis & Status & Multiplicity handling \\
 \end{table}
 
 \paragraph{Discovery timeline.}
-The $+10.24$ canonical reversal was first observed on 2026-07-24 in the materialization with exact-normalized-text exclusion (SHA-256 \texttt{9170a530}). An earlier pre-exclusion materialization (gap $+11.01$, PURE 23.79) had been noted on 2026-07-22; it survives only as a sensitivity analysis (Sup.~N). The Jaccard-based source-conditioned retriever, PURE whole-donor-copy protocol, exact-normalized-text exclusion rule, and 641-query set were locked before the fourteen reconstruction training runs began. Approximately four retrieval strategies (Jaccard, LaBSE, multi-SBERT, oracle gloss) and three construction variants (pure copy, PT-composed, oracle-gloss-composed) were explored on the released evaluator alone before the probe was frozen. No external pre-registration exists for the specific $+10.24$ probe as a confirmatory hypothesis. Because the Jaccard pure-copy probe was selected after exploring multiple retrievers and construction variants on the same test set (see the probe multiplicity table in main \S\ref{sec:probe_multiplicity}), its CI is conditional on the selection and should be read as descriptive, not confirmatory. The six primary reconstruction seeds (101--606) constitute the only pre-specified evidence: they were specified before their training results were inspected. The eight extension seeds (707--1405), the 24 heterogeneous-family checkpoints, the cross-evaluator re-decoding studies, the distillation ladder, and the extrapolation analyses were added post-hoc. Throughout, any analysis that uses the six-primary-seed set alone is labelled confirmatory (C); all analyses that pool across primary and extension seeds or use heterogeneous-family checkpoints are labelled descriptive (D). The evidence-grading column in Table~\ref{tab:provenance} reflects this distinction.
+The $+10.24$ canonical reversal was first observed on 2026-07-24 in the materialization with exact-normalized-text exclusion (SHA-256 \texttt{9170a530}). An earlier pre-exclusion materialization (gap $+11.01$, PURE 23.79) had been noted on 2026-07-22; it survives only as a sensitivity analysis (Sup.~N). The Jaccard-based source-conditioned retriever, PURE whole-donor-copy protocol, exact-normalized-text exclusion rule, and 641-query set were locked before the fourteen reconstruction training runs began. Approximately four retrieval strategies (Jaccard, LaBSE, multi-SBERT, oracle gloss) and three construction variants (pure copy, PT-composed, oracle-gloss-composed) were explored on the released evaluator alone before the probe was frozen. No external pre-registration exists for the specific $+10.24$ probe as a confirmatory hypothesis. Because the Jaccard pure-copy probe was selected after exploring multiple retrievers and construction variants on the same test set (see the probe multiplicity table in main \S\ref{sec:probe_multiplicity}), its CI is conditional on the selection and should be read as descriptive, not confirmatory. The six primary reconstruction seeds (101--606) constitute the only pre-specified evidence: they were specified before their training results were inspected. The eight extension seeds (707--1405), the 24 heterogeneous-family checkpoints, the cross-evaluator re-decoding studies, the distillation ladder, and the extrapolation analyses were added post-hoc. Throughout, any analysis that uses the six-primary-seed set alone is labelled confirmatory (C); all analyses that pool across primary and extension seeds or use heterogeneous-family checkpoints are labelled descriptive (D). The evidence-grading column in Table~\ref{tab:si_provenance} reflects this distinction.
 
 \section{Checkpoint Registry}
 \label{sec:checkpoint_registry}
@@ -122,12 +145,13 @@ Table~\ref{tab:checkpoint_registry} is the definitive registry of every BT evalu
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Canonical checkpoint registry. 68 training runs across 11 families (disk-scanned; auto-generated from \texttt{results/canonical\_checkpoint\_registry.json}). Of these 68 runs, 66 were beam-3 decoded on PHX-public under the canonical \S\ref{sec:retrieval} donor registry. The 66 decoded runs reduce to 65 unique weight binaries: the long-schedule seed-202 artifact is byte-identical to the validation-freq-misread seed-202 artifact (same wandb run, identical per-step losses, identical best-checkpoint SHA-256) and counts once. 61 non-degenerate decoded training runs enter the non-replication count (all 61 with strictly negative gaps). Each family row's columns sum to the Total row.}
+\caption{Canonical checkpoint registry. 76 training runs across 12 families (disk-scanned; auto-generated from \texttt{results/canonical\_checkpoint\_registry.json}). Of these 76 runs, 74 were beam-3 decoded on PHX-public under the canonical \S\ref{sec:retrieval} donor registry. The 74 decoded runs reduce to 73 unique weight binaries: the long-schedule seed-202 artifact is byte-identical to the validation-freq-misread seed-202 artifact (same wandb run, identical per-step losses, identical best-checkpoint SHA-256) and counts once. 69 non-degenerate decoded training runs enter the non-replication count (all 69 with strictly negative gaps). Each family row's columns sum to the Total row.}
 \label{tab:checkpoint_registry}
 \begin{tabular}{p{4.2cm}p{1.0cm}p{1.5cm}p{1.4cm}p{1.4cm}p{3.0cm}}
 \toprule
 Family & Runs & Trained & Has gap (beam-3) & Has dev & Enters \\
 \midrule
+Faithful (train\_faithful.py, 42--49) & 8 & 8 & 8 & 8 & RQ1 primary; non-reproduction \\
 Reconstructions (primary) & 6 & 6 & 6 & 6 & multiseed, bootstrap, dose--resp. \\
 Reconstructions (extension) & 8 & 8 & 8 & 8 & prediction interval, dose--resp. \\
 Validation-freq-misread & 4 & 4 & 4 & 4 & dose--resp. \\
@@ -141,12 +165,12 @@ Confirmation & 2 & 2 & 2 & 2 & dose--resp., family-side confirm. \\
 Long-schedule & 1 & 1 & 1 & 1 & gate; best seed dose--resp. \\
 Distillation students & 15 & 15 & 15 & 15 & ladder, dose--resp. \\
 \midrule
-Total & 68 & 68 & 66 & 68 & \\
+Total & 76 & 76 & 74 & 76 & \\
 Released original & --- & --- & 1 & 1 & audit target (not trained) \\
 \bottomrule
 \end{tabular}
 \par\smallskip
-{\footnotesize Per-family columns sum to the Total row. Has-gap counts reflect the disk-scanned registry: 66 beam-3-decoded training runs; one validation-freq-misread seed-202 / long-schedule collision reduces unique binaries to 65. Five of the 66 decoded runs are degenerate (three $\alpha{=}1.0$ distillation students with empty output and two smallest ladder fractions with BLEU$\approx 0$), leaving 61 non-degenerate runs that enter the headline non-replication count. The large-arch (4), rescue-lr (8), rescue-expanded (11 of 12), cross-fit (2), and BT-retrained-holdout (1) families listed in earlier registries were not recoverable from disk after the 2026-07-14 host compromise documented in our security incident report; their family-level summary statistics had been retained in the manual legacy registry but cannot be reproduced from current artifacts, and they are omitted from this disk-scanned table. The 11 released-weight fine-tune variants (Gaussian noise, fine-tuning) live under \texttt{checkpoints/finetune\_released/} and are NOT counted as from-scratch training.}
+{\footnotesize Per-family columns sum to the Total row. Has-gap counts reflect the disk-scanned registry: 74 beam-3-decoded training runs; one validation-freq-misread seed-202 / long-schedule collision reduces unique binaries to 73. Five of the 74 decoded runs are degenerate (three $\alpha{=}1.0$ distillation students with empty output and two smallest ladder fractions with BLEU$\approx 0$), leaving 69 non-degenerate runs that enter the headline non-replication count. The large-arch (4), rescue-lr (8), rescue-expanded (11 of 12), cross-fit (2), and BT-retrained-holdout (1) families listed in earlier registries were not recoverable from disk after the 2026-07-14 host compromise documented in our security incident report; their family-level summary statistics had been retained in the manual legacy registry but cannot be reproduced from current artifacts, and they are omitted from this disk-scanned table. The 11 released-weight fine-tune variants (Gaussian noise, fine-tuning) live under \texttt{checkpoints/finetune\_released/} and are NOT counted as from-scratch training.}
 \end{table}
 
 \paragraph{Readout--competence association.}
@@ -267,63 +291,42 @@ Same signer as query & 0.183 & 0.228 & $-0.111$ & both same-signer: 4.7\% \\
 \section{Config-Faithful and Perturbation Details}
 \label{sec:appendix_config_faithful}
 
-\paragraph{Released \texttt{config.yaml} to training-code mapping.}
+\paragraph{Released \texttt{config.yaml} to training-code mapping (four-column, defect-corrected).}
 \label{sec:config_mapping}
-Table~\ref{tab:config_mapping} maps each field of the released \texttt{config.yaml} (verbatim copy shipped in \texttt{configs/released.yaml}, SHA-256 \texttt{0321104a\ldots}) to its implementation in our disclosed reconstruction code, and labels each field by its semantic source: \emph{JoeyNMT 1.2} (the field's documented semantics in the JoeyNMT config schema, which the released config inherits verbatim), \emph{SLRTP2025 original} (a value or behaviour established by the released checkpoint bundle itself, e.g., the shipped \texttt{.pt} manifest), or \emph{author inference} (a value or behaviour we inferred because no public source unambiguously specifies it). Author-inference rows are the load-bearing sites where a defect in our disclosed implementation could in principle explain the competence gap; the four protocol mismatches documented in main \S\ref{sec:protocol_robustness} were identified by auditing this table. We do not claim that this mapping is exhaustive or authoritative---an independent implementation that attained the released competence from the same public artifacts would invalidate any insufficiency interpretation.
+Table~\ref{tab:config_mapping} maps each load-bearing field of the released \texttt{config.yaml} (verbatim copy shipped in \texttt{configs/released.yaml}, SHA-256 \texttt{0321104a\ldots}) to three implementations of the semantics: \emph{original framework} (the behaviour of the original training framework, established empirically from the released bundle itself---the logged \texttt{validations.txt} values, learning-rate decay pattern, and stopping point---or from the JoeyNMT 1.2 schema the config inherits), \emph{our v1--v3 code} (the disclosed reconstruction attempts, including their defects), and \emph{our faithful v4 code} (\texttt{train\_faithful.py}, which corrects every identified defect). The forensic anchors for the original-framework column: (i)~the released log's step-14 \texttt{Translation Loss} 43{,}440.80078 equals 7{,}813 dev target tokens $\times\ln(\mathrm{PPL}\ 259.84015)$, pinning \texttt{translation\_normalization: batch} as token-sum CE divided by the number of sentences; (ii)~all 20 logged learning-rate decays fire on the 6th consecutive non-improving validation, exactly \texttt{ReduceLROnPlateau(mode=max, factor=0.8, patience=5)} stepped once per validation on dev BLEU; (iii)~the released run improved last at validation \#130 (step 1820, BLEU 13.38) and then ran 72 further non-improving validations before ending at step 2828, so patience-5 \emph{early stopping} is provably not the released stopping rule---the only stopping condition reproducible from the config is the learning-rate floor.
 
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Released \texttt{config.yaml} field-by-field mapping to our disclosed reconstruction code. ``Source'' labels which semantics the value/behaviour comes from. Author-inference rows are the load-bearing sites where a defect in our disclosed implementation could in principle explain the competence gap.}
+\caption{Released \texttt{config.yaml} load-bearing field-by-field mapping: original-framework semantics (empirically pinned by the released \texttt{validations.txt} where noted) vs.\ our v1--v3 reconstruction semantics (with defects) vs.\ our faithful v4 semantics. Unlisted fields (model architecture, dropout, initialisers, max lengths) are applied verbatim and identical across v1--v4.}
 \label{tab:config_mapping}
-\begin{tabular}{p{3.4cm}p{2.8cm}p{3.8cm}p{2.4cm}}
+\begin{tabular}{p{2.9cm}p{3.5cm}p{3.4cm}p{3.4cm}}
 \toprule
-Config field & Released value & Code reference / our handling & Source \\
+Field (released value) & Original framework semantics & v1--v3 semantics (defect) & v4 faithful semantics \\
 \midrule
-\multicolumn{4}{l}{\emph{data}} \\
-\quad \texttt{feature\_size} & 534 & read from pose tensors; we sum reduced-dim keypoints & SLRTP2025 original \\
-\quad \texttt{skeleton\_subsample} & 2 & applied as \texttt{pose[::2]} before decoding & JoeyNMT 1.2 \\
-\quad \texttt{max\_sent\_length} & 400 & enforced in \texttt{SLRTPDataset.\_\_init\_\_} & JoeyNMT 1.2 \\
-\quad \texttt{txt\_lowercase} & true & applied in tokenisation & JoeyNMT 1.2 \\
+\texttt{translation\_normalization} (batch) & token-sum CE $\div$ sentences; logged dev Translation Loss is the raw token sum (43{,}440.8 $=$ 7{,}813 $\times$ ln 259.84) & CE \texttt{reduction="mean"} (per-token): $\sim$15--30$\times$ smaller gradient scale; with Adam weight-decay coupling this changes effective regularization & CE \texttt{reduction="sum"} $\div$ batch sentences; smoke-run step-14 dev token-sum 42{,}981.5 vs.\ released 43{,}440.8 (1.1\% off) \\
 \midrule
-\multicolumn{4}{l}{\emph{training}} \\
-\quad \texttt{recognition\_loss\_weight} & 1.0 & v1 protocol: \emph{omitted} (bug); v2/v3: CTC added (\S\ref{sec:protocol_robustness}) & JoeyNMT 1.2 (weight); CTC reduction mode is \emph{author inference} \\
-\quad \texttt{translation\_loss\_weight} & 1.0 & applied as CE mean & JoeyNMT 1.2 \\
-\quad \texttt{translation\_normalization} & batch & \emph{not implemented} in our v1; CE mean is per-token reduction & \emph{author inference: we treated as token-mean; could differ} \\
-\quad \texttt{batch\_size} & 256 & physical 64 $\times$ grad-accum 4 in v1 (we inferred from missing fields); v1.5/v2/v3 use 256 directly & \emph{author inference: no field specifies physical batch or grad-accum} \\
-\quad \texttt{learning\_rate} & 0.001 & Adam lr & JoeyNMT 1.2 \\
-\quad \texttt{betas} & [0.9, 0.998] & Adam betas & JoeyNMT 1.2 \\
-\quad \texttt{weight\_decay} & 0.001 & Adam wd & JoeyNMT 1.2 \\
-\quad \texttt{scheduling} & plateau & ReduceLROnPlateau & JoeyNMT 1.2 \\
-\quad \texttt{decrease\_factor} & 0.8 & LR $\times$ 0.8 on plateau & JoeyNMT 1.2 \\
-\quad \texttt{patience} & 5 & scheduler patience (in validation steps) & JoeyNMT 1.2 \\
-\quad \texttt{learning\_rate\_min} & 1e-8 & scheduler floor & JoeyNMT 1.2 \\
-\quad \texttt{label\_smoothing} & 0.0 & not applied (0.0) & JoeyNMT 1.2 \\
-\quad \texttt{validation\_freq} & 14 & v1: read as 14 \emph{epochs} (bug); v1.5/v2/v3: 14 \emph{steps} (JoeyNMT semantics) & JoeyNMT 1.2 \\
-\quad \texttt{eval\_metric} & bleu & v1: \texttt{--selection bleu} branch had \texttt{improved=False} hard-coded (bug, never saved); v1.5/v2/v3: actually works & JoeyNMT 1.2 \\
-\quad \texttt{early\_stopping\_metric} & eval\_metric & ties to eval\_metric behaviour above & JoeyNMT 1.2 \\
-\quad \texttt{eval\_translation\_beam\_size} & 3 & v1/v1.5/v2: greedy selection; v3: beam-3 selection & JoeyNMT 1.2; selection-decoder choice is \emph{author inference} \\
-\quad \texttt{epochs} & 3000 & we use 300 with early-stop patience 15 & \emph{author inference: no public guidance on early-stop criterion} \\
-\quad \texttt{keep\_last\_ckpts} & 1 & only best.ckpt archived & JoeyNMT 1.2 \\
-\quad \texttt{random\_seed} & 42 & used for released; we use 101--606, 707--1405, 1701--1708, 505, 606, 1801--1908 & SLRTP2025 original (released seed); seed sweep is \emph{author inference} \\
+dev NLL token count & counts \emph{valid} target tokens (mask True $=$ valid) & \texttt{(~txt\_mask).sum()} counts \emph{padding} positions (all of v1--v3); also truncates v2 greedy-selection hypotheses/references by padding count & \texttt{txt\_mask.sum()}; PPL and per-token NLL computed on valid tokens only \\
 \midrule
-\multicolumn{4}{l}{\emph{model}} \\
-\quad encoder/decoder type & transformer & \texttt{src/models/bt\_encoders.py}, \texttt{bt\_transformer\_layers.py} & JoeyNMT 1.2 \\
-\quad \texttt{hidden\_size}, \texttt{ff\_size}, \texttt{num\_heads}, \texttt{num\_layers} & 256 / 512 / 8 / 3 & applied verbatim & JoeyNMT 1.2 \\
-\quad \texttt{dropout} & 0.1 & applied & JoeyNMT 1.2 \\
-\quad \texttt{embeddings.embedding\_dim} & 256 & applied & JoeyNMT 1.2 \\
-\quad \texttt{embeddings.norm\_type} & batch & BatchNorm1d applied to embeddings & JoeyNMT 1.2; exact placement is \emph{author inference} \\
-\quad \texttt{embeddings.activation\_type} & softsign & \texttt{torch.nn.Softsign} applied & JoeyNMT 1.2 \\
-\quad \texttt{initializer} / \texttt{embed\_initializer} & xavier & Xavier uniform on linear layers & JoeyNMT 1.2; \texttt{init\_gain=1.0} applied \\
-\quad \texttt{tied\_softmax} & false & softmax not tied to embeddings & JoeyNMT 1.2 \\
+\texttt{recognition\_loss\_weight} (1.0) & joint CTC$+$translation; logged Recognition Loss column normalisation not exactly identifiable (17.28 at step 14 matches neither per-sentence 39.9 nor per-gloss-token 12.3 in our stack) & v1: CTC omitted entirely; step-corrected family: \texttt{--rec-weight 0} (CTC off); v2/v3: joint with per-token-mean CTC & joint CTC$+$translation, CTC token-sum $\div$ sentences (batch-consistent); recognition-column normalisation documented as not identifiable \\
 \midrule
-\multicolumn{4}{l}{\emph{testing}} \\
-\quad \texttt{eval\_translation\_beam\_alpha} & $-1$ & length penalty applied as $-1$ & JoeyNMT 1.2 \\
-\quad \texttt{translation\_max\_output\_length} & 30 & used in v3 selection decode & JoeyNMT 1.2 \\
+\texttt{validation\_freq} (14) & every 14 \emph{optimiser steps} (logged \texttt{Steps: 14, 28, \ldots}) & v1: misread as 14 \emph{epochs}; v1.5+/v2/v3: 14 steps (corrected) & 14 optimiser steps \\
+\midrule
+\texttt{eval\_translation\_beam\_size} (3) for selection & autoregressive beam-3 decode for validation BLEU (WER/BLEU columns of released log) & v1: selection branch never saved (hard-coded \texttt{improved=False}); v1.5/v2: teacher-forced greedy argmax, not autoregressive; v3: beam-3 (corrected) & autoregressive beam-3 (via \texttt{back\_translate}), identical to the evaluation decoder \\
+\midrule
+\texttt{epochs} (3000) / stopping & released run ended at step 2828 (101 epochs) after 72 consecutive non-improving validations---patience-5 early stop is \emph{provably not} the released rule; LR-floor is the only config-reproducible stop & 300-epoch cap with early-stop patience 15 & 3000-epoch cap; default stop rule $=$ LR floor (1e-8); patience rule available but off and documented as not released-faithful \\
+\midrule
+\texttt{scheduling} (plateau), \texttt{decrease\_factor} (0.8), \texttt{patience} (5) & ReduceLROnPlateau(mode=max) on dev BLEU; every logged decay fires on the 6th consecutive non-improving validation & present since v1, but reached only $\sim$60--90 validations before the patience-15 stop & identical scheduler wiring; LR logged after \texttt{scheduler.step} as in the released log \\
+\midrule
+\texttt{batch\_size} (256) & 256 sentences per optimiser step & v1: physical 64 $\times$ grad-accum 4 (inferred); v1.5+/v2/v3: 256 & 256 \\
+\midrule
+\texttt{random\_seed} (42) & 42 (released run) & never used as the primary seed (101--1405, 1701--1908 sweeps) & 42 is the primary run; 43--49 as within-implementation dispersion \\
+\midrule
+gradient clipping & not specified in config; JoeyNMT-framework default threshold 1.0 (author inference) & hard-coded \texttt{max\_norm=1.0} (with token-mean loss it almost never binds) & \texttt{--clip} 1.0 default, disclosed as author inference; with batch-normalised loss the norm genuinely binds (first steps 377/568/145) \\
 \bottomrule
 \end{tabular}
 \par\smallskip
-{\footnotesize Load-bearing author inferences (where a defect could in principle explain the gap): \texttt{recognition\_loss\_weight} CTC reduction semantics; \texttt{translation\_normalization} batch vs.\ token interpretation; physical batch size and grad-accum factor (no field specifies these); \texttt{validation\_freq} step vs.\ epoch (corrected in v1.5); \texttt{eval\_metric} improved-flag (corrected in v1.5); selection-decoder choice (greedy vs.\ beam-3); early-stop criterion and patience unit; embeddings \texttt{norm\_type} placement; optimiser-step semantics under grad-accum. An authoritative training command from the original authors would resolve each of these.}
+{\footnotesize Fields applied verbatim in all our versions (not shown): \texttt{learning\_rate} 0.001, \texttt{betas} [0.9, 0.998], \texttt{weight\_decay} 0.001, \texttt{label\_smoothing} 0.0, \texttt{learning\_rate\_min} 1e-8, \texttt{keep\_last\_ckpts} 1, architecture block (transformer, 256/512/8/3, dropout 0.1, softsign, xavier), \texttt{eval\_translation\_beam\_alpha} $-1$, \texttt{translation\_max\_output\_length} 30, \texttt{skeleton\_subsample} 2, \texttt{txt\_lowercase} true, \texttt{max\_sent\_length} 400. Remaining author inferences: exact CTC reduction of the original stack; gradient-clip threshold; embeddings \texttt{norm\_type} placement. An authoritative training command from the original authors would resolve each.}
 \end{table}
 
 \paragraph{Epoch-validation approximation.}
@@ -464,7 +467,7 @@ To test whether the headline reversal survives donor exclusion on the same split
 Condition & sacreBLEU & $\Delta$ vs REC & Reversal? \\
 \midrule
 REC baseline                             & 12.8 & ---   & --- \\
-Text-nearest pure (no exclusion)        & 23.8 & $+11.0$ & YES \\
+Text-nearest pure (no exclusion; pre-exclusion historical materialization, Sup.~N) & 23.8 & $+11.0$ & YES \\
 Text-nearest pure (canonical, w/ exclusion) & 23.02 & $+10.24$ & YES \\
 Exact-text excluded                     & 23.0 & $+10.2$ & YES \\
 $\tau{=}0.7$ (Jaccard $>$ 0.7 excluded) & 21.2 & $+8.4$ & YES \\
@@ -504,13 +507,13 @@ High (n=213)  & 0.510 & 26.1 & 38.6 & $+12.4$ \\
 \end{tabular}
 \end{table}
 
-\paragraph{Holdout boundary controls.}
-Truncating to 64/32 frames shrinks the gap from $+11.0$ to $+10.5$/$+5.6$ but the reversal persists. Four holdout controls (Table~\ref{tab:holdout_series}) all fail to reproduce the reversal: the same-evaluator seen-holdout gives REC 77.0 (readout), BT-retrained on unseen holdout gives gap $-0.9$, retrained BT on PHX-public gives gap $-0.4$, and cross-fit A/B gives gap $-0.1$.
+\paragraph{Holdout boundary controls (historical analyses).}
+The controls in this paragraph predate the host-storage incident of 2026-07-14; their per-item decode artifacts are retained in the artifact repository, but the training runs themselves could not be recovered from disk, so they cannot be re-executed from the public bundle and are labelled historical. Truncating to 64/32 frames shrinks the gap from $+10.24$ (canonical; $+11.0$ in the pre-exclusion materialization) to $+10.5$/$+5.6$ but the reversal persists. Four holdout controls (Table~\ref{tab:holdout_series}) all fail to reproduce the reversal: the same-evaluator seen-holdout gives REC 77.0 (readout), BT-retrained on unseen holdout gives gap $-0.9$, retrained BT on PHX-public gives gap $-0.4$, and cross-fit A/B gives gap $-0.1$.
 
 \begin{table}[h]
 \centering
 \scriptsize
-\caption{Holdout boundary controls (sacreBLEU, 0--100). None reproduces the $+11.0$ reversal.}
+\caption{Holdout boundary controls (sacreBLEU, 0--100; historical---per-item artifacts retained, training runs unrecoverable after the 2026-07-14 host incident). None reproduces the canonical $+10.24$ reversal.}
 \label{tab:holdout_series}
 \begin{tabular}{llrrr}
 \toprule
@@ -755,7 +758,7 @@ The canonical \S\ref{sec:retrieval} donor registry applies exact-normalized-text
 
 \paragraph{Per-item provenance.} On 610/641 items (95.2\%) both materializations produce identical donor choices. On the 31 differing items, a post-hoc candidate search found that 30 had at least one excluded Jaccard=1.0 candidate whose released-evaluator decode matched the earlier hypothesis, consistent with the exclusion rule explaining the difference on those items; one item remained unresolved (\texttt{results/donor\_identification\_31.json}).
 
-\paragraph{14-reconstruction sensitivity.} Re-decoding all 14 reconstruction checkpoints under both materializations gives mean $|\Delta\text{gap}| = 0.65$ BLEU (max 1.45). The sign of the gap is unchanged on every checkpoint, and the 14-seed prediction interval remains strictly negative under both materializations, so the non-replication conclusion is unaffected. All headline numbers in the main text and in Sup.~G use the canonical materialization (SHA-256 \texttt{9170a53026ab3263b451a3632a9e02318745acabf12f0b679921477afbefa301}); this appendix is the only place the pre-exclusion values appear.
+\paragraph{14-reconstruction sensitivity.} Re-decoding all 14 reconstruction checkpoints under both materializations gives mean $|\Delta\text{gap}| = 0.65$ BLEU (max 1.45). The sign of the gap is unchanged on every checkpoint, and the 14-seed within-implementation dispersion interval remains strictly negative under both materializations, so the non-replication conclusion is unaffected. All headline numbers in the main text and in Sup.~G use the canonical materialization (SHA-256 \texttt{9170a53026ab3263b451a3632a9e02318745acabf12f0b679921477afbefa301}); this appendix is the only place the pre-exclusion values appear.
 
 \section{BLEURT-Substitute Validation}
 \label{sec:appendix_bleurt}
@@ -789,7 +792,7 @@ The main-text audit design figure (SI~Fig.~S4) fixes a set of pose outputs and s
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{generated_figures/fig4_reference_frame.pdf}
-\caption{Human sign-to-text references remove most of the replay advantage on the matched high-confidence subset ($n=461$; released evaluator, canonical hypotheses). (a) Corpus BLEU-4 under original vs.\ human references: REC 14.94 $\to$ 7.35, PURE 24.98 $\to$ 8.30; the gap attenuates $+10.03 \to +0.95$ (90.5\%). (b) Bootstrap distribution of the attenuation contrast (10{,}000 paired resamples; mean 9.08, 95\% CI $[7.44, 10.86]$). (c) PURE$-$REC gap under original vs.\ human references across BLEU-4, BLEU-1, and chrF. References are back-translations by a single deaf fluent L2 DGS signer~\cite{czehmann2026sacred}; replacement cannot distinguish reference-text defects, paraphrase shift, BLEU floor effects, or disruption of the lexical coupling.}
+\caption{Human sign-to-text references remove most of the replay advantage on the matched high-confidence subset ($n=461$; released evaluator, canonical hypotheses). (a) Corpus BLEU-4 under original vs.\ human references: REC 14.94 $\to$ 7.35, PURE 24.98 $\to$ 8.30; the reference-frame intervention contrast reduces the gap $+10.03 \to +0.95$ (90.5\%). (b) Bootstrap distribution of the intervention contrast (10{,}000 paired resamples; mean 9.08, 95\% CI $[7.44, 10.86]$). (c) PURE$-$REC gap under original vs.\ human references across BLEU-4, BLEU-1, and chrF. References are back-translations by a single deaf fluent L2 DGS signer~\cite{czehmann2026sacred}; replacement cannot distinguish reference-text defects, paraphrase shift, BLEU floor effects, or disruption of the lexical coupling.}
 \label{fig:s5_ref_frame}
 \end{figure}
 
@@ -802,6 +805,156 @@ The main-text audit design figure (SI~Fig.~S4) fixes a set of pose outputs and s
 
 \section{Main-Text Tables (Moved from the Main Text; Sup.~P)}
 \label{sec:appendix_moved_tables}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Three-way data provenance for PHX-public. The released evaluator's training manifest matches the released pose materialization (7{,}060/515/641), not the full official PHOENIX-2014T split. All 41 missing IDs carry the missingness label \texttt{absent\_from\_slrtp2025\_released\_pose\_records}---a status flag rather than an explained mechanism (SI~Sup.~A). SHA-256 hashes verify file integrity.}
+\label{tab:provenance}
+\begin{tabular}{lrrp{3.5cm}}
+\toprule
+Split source & Train & Dev & Test \\
+\midrule
+Official PHOENIX-2014T & 7{,}096 & 519 & 642 \\
+Released SLRTP2025 pose (\texttt{.pt}) & 7{,}060 & 515 & 641 \\
+Released evaluator \texttt{config.yaml} manifest & 7{,}060 & 515 & 641 \\
+\midrule
+Missing from official & 36 & 4 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Checkpoint accounting, auto-generated from \texttt{results/accounting\_table.json} (single source of truth, disk-scanned). ``Runs'' = from-scratch training executions; ``Decoded'' = beam-3 decoded on the canonical PHX-public gap panel; ``Unique'' = distinct SHA-256 weight binaries; ``Non-deg.'' = non-degenerate (BLEU $>$ 0, excluding 3 $\alpha{=}1.0$ distillation students with empty output and 2 smallest ladder fractions). The partially-corrected tier (14 corrected-recipe runs) provides recipe-faithfulness evidence; secondary (14 legacy, of which 6 prospectively specified) provides the prospectively specified non-reproduction direction plus stability; diagnostic is mechanism exploration.}
+\label{tab:accounting}
+\begin{tabular}{p{2.8cm}rrrr}
+\toprule
+Tier / Family & Runs & Decoded & Unique & Non-deg. \\
+\midrule
+\textbf{Faithful} & 8 & 8 & 8 & 8 \\
+\quad Faithful (train\_faithful.py, seeds 42--49) & 8 & 8 & 8 & 8 \\
+\textbf{Partially-corrected} & 14 & 14 & 14 & 14 \\
+\quad Validation-freq-misread & 4 & 4 & 4 & 4 \\
+\quad Step-corrected (re-trained) & 10 & 10 & 10 & 10 \\
+\textbf{Secondary} & 14 & 14 & 14 & 14 \\
+\quad Paper-derived (prospectively specified) & 6 & 6 & 6 & 6 \\
+\quad Paper-derived (extension seeds) & 8 & 8 & 8 & 8 \\
+\textbf{Diagnostic} & 40 & 38 & 37$^*$ & 33 \\
+\quad Joint-loss (greedy selection) & 8 & 8 & 8 & 8 \\
+\quad Joint-loss (beam-3 selection) & 8 & 8 & 8 & 8 \\
+\quad Joint-loss (supplementary, 1809/1810) & 1 & 0 & 0 & 0 \\
+\quad Confirmation & 2 & 2 & 2 & 2 \\
+\quad Rescue (dropout/wd variants) & 1 & 0 & 0 & 0 \\
+\quad Distillation & 15 & 15 & 15 & 12 \\
+\quad Ladder (data fractions) & 4 & 4 & 4 & 2 \\
+\quad Long-schedule & 1 & 1 & 0$^*$ & 1 \\
+\midrule
+\textbf{Total trained} & \textbf{76} & \textbf{74} & \textbf{73} & \textbf{69} \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+{\footnotesize $^*$One validation-freq-misread seed-202 artifact is byte-identical to a long-schedule artifact (same wandb run); it counts once in the unique-binary column (total unique = 74 decoded $-$ 1 collision = 73). The released evaluator (1 checkpoint) is not a training run and is not included above. Eleven released-weight fine-tune variants (Gaussian noise, local perturbation) are not from-scratch training and are not counted here. The previously-reported large-arch, rescue-lr, cross-fit, and BT-retrained holdout families were not recoverable from disk after a host compromise (SI~Sup.~D) and are omitted; their family-level summary statistics had been retained in the legacy manual registry but cannot be reproduced from artifacts.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{2pt}
+\caption{Novelty relative to closely related PHOENIX-2014T and learned-metric reproducibility studies.}
+\label{tab:novelty}
+\begin{tabular}{p{3.0cm}p{3.3cm}p{3.3cm}p{4.0cm}}
+\toprule
+Study & Primary finding & Method & Distinction from present work \\
+\midrule
+Czehmann et al. (2026) & Reference replacement changes BLEU scores and rankings on PHOENIX-2014T & Human back-translations of test set & We apply the matched-subset protocol to the released evaluator with a frozen replay probe and quantify the paired reference-frame intervention contrast \\
+Alkain et al. (2026) & Highest train--test text overlap among tested SLT corpora & N-gram overlap quantification & We use their finding to contextualize why PHX-public is particularly susceptible to reference coupling \\
+Artiaga et al. (2025) & Signer-dependent evaluation overestimates SLT capability & Signer-disjoint splits & We include signer as a regression covariate (not signer-disjoint evaluation; $\Delta R^2$ from removing the signer block is $\leq1\%$) \\
+Jiang et al. (2025) & BT likelihood is a more stable correlate of human judgment than decoded BLEU & Meta-evaluation of pose/embedding/BT metrics & We report that teacher-forced likelihood does not reproduce the reversal (REC NLL 3.060 vs PURE 3.479) \\
+Chen et al. (2022) & BERT-based metrics fail to reproduce due to missing preprocessing/code & Multi-implementation replication & We extend the learned-metric reproducibility question to a full SLP evaluator pipeline with 68 training runs across 11 families \\
+This work & Our disclosed reconstruction from the public artifacts did not attain the released evaluator's competence or replay-probe behavior & 68 training runs across 11 families, fixed-output cross-evaluator re-decoding, reference/donor substitution & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{2pt}
+\caption{Public-artifact provenance of each reconstruction family. ``Dev BLEU-4'' is the uniform full-pool beam-3 value (\S\ref{sec:sanity_checks}); the released evaluator scores 13.38. ``Selection'' is the checkpoint-selection rule. The faithful runs implement the released config exactly; the paper-derived runs use NLL selection on a legacy script; the step-corrected runs match the released \texttt{validation\_freq=14} JoeyNMT semantics with decoded-BLEU selection; the joint-loss variants additionally correct the recognition-loss omission.}
+\label{tab:public_provenance}
+\begin{tabular}{p{2.2cm}p{3.0cm}p{3.5cm}p{0.8cm}p{1.5cm}p{1.2cm}}
+\toprule
+Family & Public source used & Known deviation & Runs & Selection & Dev BLEU-4 \\
+\midrule
+\textbf{Faithful} & released config.yaml exactly & none (seven defects corrected; seed 42 first) & 8 & beam-3-BLEU & 11.59--12.62 \\
+Paper-derived (prosp.-spec. + ext.) & config.yaml + slt architecture & legacy script; 300 epochs; NLL selection & 14 & NLL on dev & 6.5--9.4 \\
+Validation-freq-misread & config.yaml (decoded-BLEU) & \texttt{validation\_freq=14} misread as epochs initially & 4 & decoded BLEU & 8.3--9.8 \\
+Step-corrected (re-trained) & config.yaml + JoeyNMT step semantics & fixed \texttt{validation\_freq} interpretation; translation-only loss & 10 & greedy-BLEU & 7.6--10.5 \\
+Joint-loss (greedy) & config.yaml (\texttt{recognition\_loss\_weight=1.0}) & adds CTC; token-mean loss; greedy selection & 8 & greedy-BLEU & 6.3--10.2 \\
+Joint-loss (beam-3) & config.yaml (eval\_beam=3) & adds CTC; token-mean loss; beam-3 selection & 8 & beam-3-BLEU & 8.7--10.5 \\
+Confirmation & recipe-faithful protocol & independent re-run for reproducibility & 2 & decoded BLEU & 9.0--9.5 \\
+Long-schedule & config.yaml (epochs=3000) & extended training budget & 1 & decoded BLEU & $\leq$10.02 \\
+Rescue (dropout/wd) & hyperparameter grid & dropout/wd variations; none passed gate & 1 & decoded BLEU & $\leq$10.02 \\
+Distillation & released checkpoint as teacher & student--teacher KL; students trained from scratch & 15 & decoded BLEU & 7.0--9.0 \\
+Ladder (data fractions) & config.yaml & data-subset fractions (0.125--0.75$\times$) & 4 & decoded BLEU & $\leq$9.8 \\
+Joint-loss (supplementary) & exploratory v2 seeds (1809/1810) & out-of-protocol v2 explorations & 1 & --- & not decoded \\
+\midrule
+\textbf{Total} & & & \textbf{76} & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{2pt}
+\caption{Teacher-forced and free-decode diagnostic statistics for the released evaluator and the fourteen reconstruction seeds (full table in \texttt{results/checkpoint\_stats.json}). Teacher-forced values are on 500 randomly sampled items (seed 42, sampled without replacement; the sampling SD across 5 re-samples is $\leq$0.3 pp for token accuracy and $\leq$0.01 for NLL/tok); free-decode values are full-pool (7{,}060 train / 515 dev) under the uniform beam-3 protocol (\S\ref{sec:sanity_checks}). sacreBLEU \texttt{signature: BLEU|nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1} (max n-gram order 4, the default).}
+\label{tab:sanity_stats}
+\begin{tabular}{lrrrrr}
+\toprule
+Checkpoint & Train tok.\ acc.\ & Train NLL/tok & Train free-decode BLEU & Dev NLL/tok & Dev free-decode BLEU \\
+\midrule
+Released & 0.965 & 0.158 & 78.82 & 3.236 & 13.38 \\
+Reconstructions (range) & 0.550--0.596 & 1.72--1.92 & 7.20--9.25 & 2.63--2.68 & 6.49--9.37 \\
+Reconstructions (mean) & 0.572 & 1.82 & 8.35 & 2.66 & 8.13 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Custom-terminology registry. Each term maps to its estimand, the dataset on which it is computed, and its evidence grade (all descriptive).}
+\label{tab:terminology}
+\begin{tabular}{p{3.0cm}p{4.0cm}p{3.5cm}p{1.5cm}}
+\toprule
+Term & Estimand & Dataset & Grade \\
+\midrule
+Training-pool readout & In-sample autoregressive free-decode BLEU/EM & Full 7{,}060-item training set & D \\
+PURE--REC gap & Corpus sacreBLEU-4 difference (PURE $-$ REC) & 641-item PHX-public test & D (post-selection) \\
+Operational tolerance gate & One-sided: dev BLEU-4 $\geq$ 12.38 \emph{and} dev WER $\leq$ 86.37 & 515-item dev set & D \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Claim hierarchy. Each key claim mapped to its evidence tier and supporting evidence.}
+\label{tab:claim_hierarchy}
+\begin{tabular}{p{3.5cm}p{1.0cm}p{5.0cm}}
+\toprule
+Claim & Tier & Evidence \\
+\midrule
+Our disclosed reconstruction did not attain released evaluator competence & D & 28 recipe-conditioned runs, all dev BLEU $<$ 10.5; not a public-artifact-insufficiency claim \\
+Probe response does not reproduce across constructible checkpoints & D & 69/69 non-degenerate gaps negative \\
+Probe response reflects a causal checkpoint-identity effect & NI & Competence confound: 6.5--10.5 vs 13.38 \\
+Headline gap $+10.24$ is post-selection & S & Max-gap probe among 8 explored; CI descriptive \\
+Reference-frame intervention contrast: gap falls 90.5\% under human back-translations & S & Single-annotator, 461-item, 4 confounded changes \\
+Origin effect persists under matched pools ($+9.56$) & S & 148 items, SMD$<$0.1; association not causal \\
+Probe is adversarial lexical-coupling stress test & D & Source $=$ reference in PHX-public; retriever uses source Jaccard \\
+\bottomrule
+\end{tabular}
+\end{table}
 The tables in this section were moved from the main text to satisfy the journal page limit; the main text references them as SI~Table~S22--S33.
 
 \begin{table}[h]
@@ -906,14 +1059,14 @@ Released (full 7{,}060, beam=3) & 1 & 13.38 & $+10.24$ & 78.82 / 70.7\% & --- \\
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Canonical checkpoint registry (summary). 68 training runs across 11 families; 61 non-degenerate checkpoints enter the non-replication count (all 61 with strictly negative gaps), 66 have a canonical PHX-public PURE--REC gap, and the released evaluator is the audit target. Auto-generated from the disk-scanned \texttt{results/canonical\_checkpoint\_registry.json}; full per-checkpoint details in Sup.~D.}
+\caption{Canonical checkpoint registry (summary). 76 training runs across 12 families; 69 non-degenerate checkpoints enter the non-reproduction count (all 69 with strictly negative gaps), 74 have a canonical PHX-public PURE--REC gap, and the released evaluator is the audit target. Auto-generated from the disk-scanned \texttt{results/canonical\_checkpoint\_registry.json}; full per-checkpoint details in Sup.~D.}
 \label{tab:s6_checkpoint_registry_summary}
 \begin{tabular}{p{4.2cm}p{1.0cm}p{1.5cm}p{1.4cm}p{1.4cm}p{3.0cm}}
 \toprule
 Family & Runs & Trained & Has gap & Has dev & Enters \\
 \midrule
 Reconstructions (paper-derived, 14) & 14 & 14 & 14 & 14 & multiseed, bootstrap, PI, dose--resp. \\
-Near-faithful (config-faithful + step-corrected, 14) & 14 & 14 & 14 & 14 & recipe-faithfulness evidence \\
+Partially-corrected (config-faithful + step-corrected, 14) & 14 & 14 & 14 & 14 & recipe-faithfulness evidence \\
 Joint-loss (greedy + beam-3, 16) & 16 & 16 & 16 & 16 & protocol-robustness \\
 Other diagnostic (confirmation + rescue + ladder + long-schedule, 8) & 8 & 8 & 6 & 8 & dose--resp. \\
 Distillation (15) & 15 & 15 & 15 & 15 & ladder, dose--resp. \\
@@ -987,12 +1140,12 @@ Reference condition & $N$ & REC & PURE & Gap \\
 \multicolumn{5}{l}{\emph{Primary: matched confidence=1 subset}} \\
 Original (speech-transcribed) & 461 & 14.94 & 24.98 & $+10.03$ \\
 Human back-translation (conf=1) & 461 & 7.35 & 8.30 & $+0.95$ \\
-Paired attenuation & \multicolumn{4}{r}{$9.08$ BLEU pts (90.5\%), CI $[7.44, 10.86]$; ratio CI $[0.81, 1.01]$} \\
+Paired reference-frame intervention contrast & \multicolumn{4}{r}{$9.08$ BLEU pts (90.5\% gap reduction), CI $[7.44, 10.86]$; ratio CI $[0.81, 1.01]$} \\
 \midrule
 \multicolumn{5}{l}{\emph{Sensitivity: full 641 items}} \\
 Original (speech-transcribed) & 641 & 12.78 & 23.02 & $+10.24$ $[+8.88,+11.62]$ \\
 Human back-translation (full) & 641 & 5.66 & 6.52 & $+0.86$ $[+0.38,+1.91]$ \\
-Paired attenuation & \multicolumn{4}{r}{$9.38$ BLEU pts (91.6\%)} \\
+Paired intervention contrast (sensitivity) & \multicolumn{4}{r}{$9.38$ BLEU pts (91.6\%)} \\
 \midrule
 Human refs, reconstructions (6 seeds) & 641 & 3.49--4.62 & 3.35--4.35 & $-0.15$ to $-0.65$ \\
 \bottomrule
@@ -1110,6 +1263,51 @@ Reco.\ range & 0.550--0.596 & 1.718--1.922 & 7.20--9.25 & 2.632--2.682 & 6.49--9
 \end{table}
 
 Key observation: the released evaluator achieves 96.5\% teacher-forced token accuracy on training data versus 55--60\% for reconstructions. On the development set, reconstructions achieve slightly lower teacher-forced NLL (2.63--2.68 vs.\ released 3.24, consistent with less overfitting) but comparable token accuracy (45.8--47.4\% vs.\ 48.6\%). The gap in free-decode BLEU is visible already in teacher-forced training-set metrics, not solely a decoding phenomenon.
+
+\section{Frozen-Split Confirmation and Reference-Free Retrieval}
+\label{sec:appendix_frozen_split}
+
+\paragraph{Dev-split confirmation of the headline probe.}
+The canonical probe panel was constructed and explored on the 641-item PHX-public \emph{test} split; the probe response was therefore confirmed on the development split (515 items), which was never used for probe construction or exploration. The identical TN-PURE-v1 construction (NFKC normalization, token-set Jaccard, character-Levenshtein then SHA-256 tie-breaks, exact-normalized-text exclusion, donors from the same 7{,}060-item training pool) was applied with dev items as queries, and both REC (recorded dev poses) and PURE (donor poses) were decoded under the released evaluator with the canonical beam-3 protocol. The released evaluator's dev REC BLEU-4 is 13.379, matching the 13.38 logged in its released \texttt{validations.txt} to three digits and independently validating the decode pipeline. The dev-split PURE score is 21.47, a gap of $+8.10$ versus the test-split $+10.24$ (REC 13.38 / PURE 21.47 vs.\ 12.78 / 23.02). The reversal therefore reproduces, with consistent direction and comparable magnitude, on a split untouched by probe exploration. Per-item files and the dev donor registry (SHA-256 recorded in the result JSON) are in \texttt{results/dev\_split\_confirmation.json} and \texttt{results/dev\_split\_confirmation\_items/}.
+
+\paragraph{Pose-retrieval probe: donor selection without the scored reference.}
+The text-based retrievers (Jaccard, LaBSE, multi-SBERT) all select donors using the query's text---which is identical to the BLEU scoring reference (target leakage by construction). To sever this channel while retaining a meaningful retrieval signal, donors were selected by \emph{pose} similarity to the query's own recorded pose sequence, an input-side signal available to a deployed system: each sequence (after the canonical 12.5\,fps subsampling) is summarised by its time-averaged pose and mean absolute frame-to-frame velocity, each part z-normalized per dimension over the pooled queries and donors and L2-normalized, and the donor minimising the combined Euclidean distance is selected (ties by donor-ID hash, the same final tie-break convention as the canonical retriever; no text is used anywhere in the loop). Under the released evaluator on the same 641-item test split, POSE-PURE scores 0.45 (gap $-12.33$ vs.\ REC 12.78), indistinguishable from the random-donor baseline (0.90, gap $-11.88$) and far below text-retrieval TN-PURE (23.02, $+10.24$). The positive probe response is therefore \emph{entirely dependent} on selecting donors with the scored reference text: any reference-free selection rule examined (random, pose-similarity) collapses to deeply negative gaps. Implementation and per-item files: \texttt{scripts/e\_pose\_retrieval\_probe.py}, \texttt{results/pose\_retrieval\_probe.json}, \texttt{results/pose\_retrieval\_probe\_items/}.
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Complete retrieval $\times$ construction design matrix explored on the released evaluator. Scores are corpus-level sacreBLEU-4 (0--100) on the canonical 641-item PHX-public set (REC$=$12.78). Of the 12 retrieval--construction cells, 6 were explored, 3 are not applicable ($^a$), and 3 were not explored ($^*$, $^\dagger$); full reasons in \texttt{results/probe\_multiplicity.json}. The headline probe (bold) was selected as the maximal-gap explored cell; its CI is post-selection descriptive. Two random-donor baselines (below the midrule) lie outside the $4\times3$ matrix.}
+\label{tab:probe_multiplicity}
+\begin{tabular}{lllrr}
+\toprule
+Retriever & Construction & Explored & Score & Gap vs.\ REC \\
+\midrule
+\textbf{Source-text Jaccard} & \textbf{Pure donor copy} & \checkmark & \textbf{23.02} & $\mathbf{+10.24}$ \\
+Source-text Jaccard & PT-composed & \checkmark & 18.86 & $+6.08$ \\
+Source-text Jaccard & Oracle-gloss-comp. & --- & --- & N/A$^a$ \\
+LaBSE & Pure donor copy & \checkmark & 19.2 & $+6.42$ \\
+LaBSE & PT-composed & --- & --- & not explored$^*$ \\
+LaBSE & Oracle-gloss-comp. & --- & --- & N/A$^a$ \\
+multi-SBERT & Pure donor copy & \checkmark & 16.5 & $+3.72$ \\
+multi-SBERT & PT-composed & --- & --- & not explored$^*$ \\
+multi-SBERT & Oracle-gloss-comp. & --- & --- & N/A$^a$ \\
+Oracle gloss & Pure donor copy & \checkmark & 11.4 & $-1.38$ \\
+Oracle gloss & PT-composed & \checkmark & 11.8 & $-0.98$ \\
+Oracle gloss & Oracle-gloss-comp. & --- & --- & not explored$^\dagger$ \\
+\midrule
+\multicolumn{5}{l}{\emph{Reference-free retrieval and random baselines (outside the $4\times3$ matrix)}} \\
+Pose-signature NN (no text) & Pure donor copy & \checkmark & 0.45 & $-12.33$ \\
+Random donor & Pure donor copy & \checkmark & 0.90 & $-11.88$ \\
+Random donor & PT-composed & \checkmark & 0.77 & $-12.01$ \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+{\footnotesize $^a$Oracle-gloss-composed is definitionally tied to the oracle-gloss retriever, so it cannot be applied to a text-based retriever without changing the retriever. $^*$Not explored; deemed low priority after Jaccard pure-copy dominated. $^\dagger$Subsumed by Oracle-gloss $\times$ PT-composed. Of the 12 retrieval--construction cells, 6 were explored, 3 are not applicable, and 3 were not explored. The headline probe was selected as the maximal-gap cell, so its CI is post-selection descriptive.}
+\end{table}
+
+Table~\ref{tab:probe_multiplicity} extends the main-text multiplicity summary with the pose-signature row: reference-free retrieval joins the random baselines far below REC.
+
+
 
 \bibliography{references}
 

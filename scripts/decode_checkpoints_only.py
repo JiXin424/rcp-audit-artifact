@@ -59,6 +59,7 @@ def parse_checkpoint_arg(spec):
     fam = p.parent.name
     seed = p.name.replace("seed_", "")
     fam_prefix = {
+        "faithful": "faithful",
         "step_faithful": "sf",
         "config_faithful": "cf",
         "reconstructions": "reco",

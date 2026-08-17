@@ -209,6 +209,40 @@ def main():
             "pure_orig": corpus_bleu([pure_map[i] for i in ids_full], [ref_map[i] for i in ids_full]),
             "pure_human": corpus_bleu([pure_map[i] for i in ids_full], rh_f)}
 
+    # 10. Faithful family (train_faithful.py, seeds 42-49): registry gaps +
+    # uniform full-pool readout (dev BLEU from training logs / readout).
+    if REGISTRY.exists():
+        fath = [c for c in reg.get("checkpoints", []) if c.get("family") == "faithful"]
+        fsum = {"n": len(fath), "seeds": [], "gaps": []}
+        for c in fath:
+            seed = c.get("seed")
+            entry = {"seed": seed, "gap": c.get("gap"),
+                     "gt_bleu": c.get("gt_bleu"), "pure_bleu": c.get("pure_bleu")}
+            rj = ROOT / "results" / "full_readout" / f"seed_{seed}.json"
+            if rj.exists():
+                fr = json.load(open(rj))
+                sp = fr.get("splits", {})
+                if "train" in sp:
+                    entry["train_bleu"] = sp["train"].get("bleu")
+                    entry["train_em"] = sp["train"].get("em")
+                if "dev" in sp:
+                    entry["dev_bleu"] = sp["dev"].get("bleu")
+                if "test" in sp:
+                    entry["test_bleu"] = sp["test"].get("bleu")
+            fsum["seeds"].append(entry)
+            if c.get("gap") is not None:
+                fsum["gaps"].append(c["gap"])
+        if fsum["gaps"]:
+            fsum["gap_range"] = [min(fsum["gaps"]), max(fsum["gaps"])]
+            fsum["n_negative"] = sum(1 for g in fsum["gaps"] if g < 0)
+        devs = [s.get("dev_bleu") for s in fsum["seeds"] if s.get("dev_bleu") is not None]
+        if devs:
+            fsum["dev_bleu_range"] = [min(devs), max(devs)]
+        trs = [s.get("train_bleu") for s in fsum["seeds"] if s.get("train_bleu") is not None]
+        if trs:
+            fsum["train_readout_bleu_range"] = [min(trs), max(trs)]
+        results["faithful_family"] = fsum
+
     OUT.write_text(json.dumps(results, indent=1, ensure_ascii=False))
     print(f"Paper numbers written to {OUT}")
     print(json.dumps(results, indent=1, ensure_ascii=False))

@@ -1,0 +1,21 @@
+{
+  "split": "test (same 641 items as headline probe)",
+  "n_queries": 641,
+  "evaluator": "released",
+  "evaluator_ckpt_sha256": "f081cfd2cca93a3610ed3a13d34bf9b3cb36db5390fda83181db84abab1aa428",
+  "donor_registry_sha256": "83f15009ff0ff294b1b23752d0848273af7ddd088ba70d5d0a90fb0ad5f6423d",
+  "retriever": "pose-signature nearest neighbour (mean pose + mean |delta pose|, z-normalized, half-L2-normalized, Euclidean/nearest-dot; no text used)",
+  "gt_bleu": 12.777148564612425,
+  "pure_bleu": 0.4474266798979289,
+  "gap": -12.329721884714496,
+  "text_retrieval_reference": {
+    "gt_bleu": 12.78,
+    "pure_bleu": 23.02,
+    "gap": 10.24
+  },
+  "random_donor_reference": {
+    "pure_bleu": 0.9,
+    "gap": -11.88
+  },
+  "decode_time_s": 69.05795240402222
+}

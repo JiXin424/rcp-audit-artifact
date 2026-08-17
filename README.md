@@ -1,24 +1,20 @@
-# RCP — Auditing a Released Back-Translation Evaluator for Sign Language Production
+# RCP — Reconstructing the SLRTP2025 Back-Translation Evaluator from Public Artifacts
 
 Paper sources, training scripts, and evaluation harness for the LRE
 (*Language Resources and Evaluation*, Springer 10579) submission:
 
-> **Auditing a Released Back-Translation Evaluator for Sign Language
-> Production: A Failed Reconstruction and Descriptive Probe Analysis
-> Audit (Round-9 revision)**
+> **Reconstructing the SLRTP2025 Back-Translation Evaluator from Public
+> Artifacts: What Reproduces, and What Does Not**
 
-The paper audits whether the SLRTP2025 released back-translation (BT)
-evaluator's $+10.24$ sacreBLEU retrieval-vs-recorded-poses (PURE–REC) reversal
-on the 641-sequence PHX-public test set reproduces across checkpoints
-reconstructed from the publicly documented training recipe. Spoiler: it does
-not reproduce — 61 non-degenerate decoded runs (65 unique weight binaries
-after SHA-256 deduplication) all 61 have strictly negative PURE–REC gaps (range
-$[-2.01, -0.21]$), and the released evaluator's competence (dev BLEU-4 13.38
-under the uniform beam-3 protocol) and training-pool readout (78.8 BLEU,
-70.7% exact match) are outside anything the public recipe constructs (decoded
-family decoded max dev BLEU-4 10.5; unobserved competence interval $(10.5, 13.38)$).
-The paper is scoped as a public-recipe sufficiency audit, not a causal
-checkpoint-identity claim.
+A faithful, config-exact re-implementation (`src/training/train_faithful.py`,
+correcting seven defects identified in our earlier reconstruction code)
+recovers most of the released evaluator's surface competence (dev BLEU-4
+11.59–12.62 vs. 13.38 across seeds 42–49; test decoding up to 13.11 vs. 12.78)
+but not its training-pool readout signature (released 78.8 BLEU / 70.7% EM;
+faithful family 11.45–12.08 / 2.3–2.5%) nor the response to a constructed
+adversarial probe (+10.24 on the released evaluator): all 69 non-degenerate
+constructible evaluators give negative PURE–REC gaps (range $[-2.80, -0.21]$;
+76 trained / 74 decoded / 73 unique binaries in the disk-scanned registry).
 
 ## Two repositories (read this first)
 

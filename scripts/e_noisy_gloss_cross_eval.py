@@ -32,6 +32,8 @@ BLEU = sacrebleu.metrics.BLEU(tokenize="13a", smooth_method="exp",
 
 EVA = {
     "released": "checkpoints/released/backTranslation_PHIX_model",
+    **{f"faithful_{s}": f"checkpoints/faithful/seed_{s}"
+       for s in range(42, 50)},
     **{f"reco_{s}": f"checkpoints/reconstructions/seed_{s}"
        for s in ["101", "202", "303", "404", "505", "606", "707", "808", "909",
                  "1001", "1102", "1203", "1304", "1405"]},
