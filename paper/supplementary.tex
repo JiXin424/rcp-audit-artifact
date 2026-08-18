@@ -14,7 +14,7 @@
 % citations that both documents share.
 \externaldocument{main_lre_xr}
 
-\title[Supplementary Information]{Supplementary Information for:\\Reconstructing the SLRTP2025 Back-Translation Evaluator from Public Artifacts: What Reproduces, and What Does Not}
+\title[Supplementary Information]{Supplementary Information for:\\Auditing the Reproducibility of the SLRTP2025 Back-Translation Evaluator from Public Artifacts: What Reproduces, and What One Inference Hid}
 
 \author*[1]{} % Authors retained for blind review
 \affil*[1]{}
@@ -145,13 +145,13 @@ Table~\ref{tab:checkpoint_registry} is the definitive registry of every BT evalu
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Canonical checkpoint registry. 76 training runs across 12 families (disk-scanned; auto-generated from \texttt{results/canonical\_checkpoint\_registry.json}). Of these 76 runs, 74 were beam-3 decoded on PHX-public under the canonical \S\ref{sec:retrieval} donor registry. The 74 decoded runs reduce to 73 unique weight binaries: the long-schedule seed-202 artifact is byte-identical to the validation-freq-misread seed-202 artifact (same wandb run, identical per-step losses, identical best-checkpoint SHA-256) and counts once. 69 non-degenerate decoded training runs enter the non-replication count (all 69 with strictly negative gaps). Each family row's columns sum to the Total row.}
+\caption{Canonical checkpoint registry. 76 training runs across 12 families (disk-scanned; auto-generated from \texttt{results/canonical\_checkpoint\_registry.json}). Of these 76 runs, 74 were beam-3 decoded on PHX-public under the canonical \S\ref{sec:retrieval} donor registry. The 74 decoded runs reduce to 73 unique weight binaries: the long-schedule seed-202 artifact is byte-identical to the validation-freq-misread seed-202 artifact (same wandb run, identical per-step losses, identical best-checkpoint SHA-256) and counts once. 69 non-degenerate decoded training runs enter the non-replication count (all 69 with strictly negative gaps; all share the clip$=$1.0 inference, resolved in Sup.~U). Each family row's columns sum to the Total row.}
 \label{tab:checkpoint_registry}
 \begin{tabular}{p{4.2cm}p{1.0cm}p{1.5cm}p{1.4cm}p{1.4cm}p{3.0cm}}
 \toprule
 Family & Runs & Trained & Has gap (beam-3) & Has dev & Enters \\
 \midrule
-Faithful (train\_faithful.py, 42--49) & 8 & 8 & 8 & 8 & RQ1 primary; non-reproduction \\
+Faithful (train\_faithful.py, 42--49) & 8 & 8 & 8 & 8 & RQ1 primary; non-reproduction (clip$=$1.0 panel; resolved Sup.~U) \\
 Reconstructions (primary) & 6 & 6 & 6 & 6 & multiseed, bootstrap, dose--resp. \\
 Reconstructions (extension) & 8 & 8 & 8 & 8 & prediction interval, dose--resp. \\
 Validation-freq-misread & 4 & 4 & 4 & 4 & dose--resp. \\
@@ -174,25 +174,26 @@ Released original & --- & --- & 1 & 1 & audit target (not trained) \\
 \end{table}
 
 \paragraph{Readout--competence association.}
-Thirty of the constructible checkpoints plus the released evaluator have a uniform full-pool beam-3 free-decode readout (SI~Sup.~E protocol), giving 31 points across which we test whether the training-pool readout behaves as an overfit signature or as a competence proxy. Table~\ref{tab:readout_assoc} reports the Spearman correlations. The readout tracks decoded dev BLEU-4 ($\rho{=}0.916$) and remains significant when the three degenerate $\alpha{=}1.0$ distillation students (readout 0.0) are excluded ($\rho{=}0.873$, $n{=}27$), but is uncorrelated with the train-minus-dev overfit indicator ($\rho{=}0.040$) and with the PURE--REC gap ($\rho{=}{-}0.082$). Within the constructible family, therefore, the readout is a competence proxy: checkpoints that decode better on dev also read out more of their training pool, and there is no within-family association between readout and overfit or between readout and the replay gap. The released evaluator's 78.8 readout at train-minus-dev 65.4 remains outside the family trend on both axes (family train-minus-dev range $-0.7$ to $+0.9$), so the overfitting interpretation of its readout-with-generalization signature is not supported by any within-family association. Teacher-forced correlations are computed over the 15 checkpoints with checkpoint-level stats (14 reconstructions plus the released evaluator): readout correlates negatively with train NLL ($\rho{=}{-}0.561$, $p{=}0.030$) and positively with train token accuracy ($\rho{=}0.509$, $p{=}0.052$).
+Thirty-eight constructible checkpoints plus the released evaluator have a uniform full-pool beam-3 free-decode readout (SI~Sup.~E protocol; the set of 31 used in earlier rounds plus the eight faithful readouts). Table~\ref{tab:readout_assoc} reports the Spearman correlations recomputed over this current set (\texttt{results/readout\_gap\_correlation.json}; \texttt{rescue\_wd0} has a uniform readout but no canonical gap and enters the readout--dev correlation only). Within the constructible family the readout is associated with decoded dev BLEU-4 ($\rho{=}0.86$--$0.88$ over the checkpoints that also have uniform dev decodes, $n{=}17$--$18$), but the readout--gap association is \emph{negative} ($\rho{=}{-}0.56$ excluding the released evaluator; $-0.44$ including it; $-0.44$ over non-degenerate constructible checkpoints): better-reading-out constructible checkpoints have \emph{more} negative gaps. The released evaluator is the single positive-gap checkpoint of the canonical (clip$=$1.0) family and lies outside the family trend on both axes (family readout range $0$--$12.08$ vs.\ $78.8$; family train-minus-dev range $-0.7$ to $+0.9$ vs.\ $65.4$), so neither a tracking nor an overfitting interpretation of its readout-with-generalization signature is supported by any within-family association. These within-regime facts must not be extrapolated across clipping regimes: the sensitivity grid of Sup.~U shows the readout--gap relation turning positive once unclipped training enters the memorisation regime (readout 99.98, gap $+11.19$), resolving the co-occurrence as a clipping-regime property rather than an uncovered region. Teacher-forced correlations are computed over the 15 checkpoints with checkpoint-level stats (14 reconstructions plus the released evaluator): readout correlates negatively with train NLL ($\rho{=}{-}0.561$, $p{=}0.030$) and positively with train token accuracy ($\rho{=}0.509$, $p{=}0.052$).
 
 \begin{table}[h]
 \centering
 \small
-\caption{Spearman correlations across the 31 checkpoints with uniform full-pool readouts (30 constructible plus the released evaluator). $n$ is the number of checkpoints entering each correlation; ``non-degenerate'' excludes the three $\alpha{=}1.0$ distillation students that decode to empty output.}
+\caption{Spearman correlations across the current uniform-readout set (38 constructible plus the released evaluator; 37 constructible have canonical gaps). ``Non-degenerate'' excludes the three $\alpha{=}1.0$ distillation students that decode to empty output. Dev-based pairs use the checkpoints that also have uniform dev decodes. Supersedes the 31-point table of earlier rounds (\texttt{results/readout\_gap\_correlation.json}).}
 \label{tab:readout_assoc}
 \begin{tabular}{lrrr}
 \toprule
 Pair & $\rho$ & $p$ & $n$ \\
 \midrule
-Readout vs.\ dev BLEU-4 & $0.916$ & $5.0\times10^{-13}$ & 31 \\
-Readout vs.\ dev BLEU-4 (non-degenerate) & $0.873$ & $2.9\times10^{-9}$ & 27 \\
-Readout vs.\ train$-$dev BLEU-4 & $0.040$ & $0.83$ & 31 \\
-Readout vs.\ PURE$-$REC gap & $-0.082$ & $0.66$ & 31 \\
-Gap vs.\ dev BLEU-4 & $-0.120$ & $0.52$ & 31 \\
+Readout vs.\ dev BLEU-4 (incl.\ released) & $0.880$ & $1.5\times10^{-6}$ & 18 \\
+Readout vs.\ dev BLEU-4 (excl.\ released) & $0.858$ & $1.1\times10^{-5}$ & 17 \\
+Readout vs.\ PURE$-$REC gap (incl.\ released) & $-0.444$ & $0.0053$ & 38 \\
+Readout vs.\ PURE$-$REC gap (excl.\ released) & $-0.564$ & $0.00028$ & 37 \\
+Readout vs.\ gap (non-deg., incl.\ released) & $-0.319$ & $0.062$ & 35 \\
+Readout vs.\ gap (non-deg., excl.\ released) & $-0.438$ & $0.0095$ & 34 \\
+Gap vs.\ dev BLEU-4 (incl.\ released) & $0.502$ & $0.040$ & 17 \\
 Readout vs.\ train NLL & $-0.561$ & $0.030$ & 15 \\
 Readout vs.\ train token accuracy & $0.509$ & $0.052$ & 15 \\
-Train$-$dev BLEU-4 vs.\ gap & $-0.053$ & $0.78$ & 31 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -322,11 +323,11 @@ dev NLL token count & counts \emph{valid} target tokens (mask True $=$ valid) & 
 \midrule
 \texttt{random\_seed} (42) & 42 (released run) & never used as the primary seed (101--1405, 1701--1908 sweeps) & 42 is the primary run; 43--49 as within-implementation dispersion \\
 \midrule
-gradient clipping & not specified in config; JoeyNMT-framework default threshold 1.0 (author inference) & hard-coded \texttt{max\_norm=1.0} (with token-mean loss it almost never binds) & \texttt{--clip} 1.0 default, disclosed as author inference; with batch-normalised loss the norm genuinely binds (first steps 377/568/145) \\
+gradient clipping & \textbf{not specified in config} $\Rightarrow$ signjoey framework default \textbf{no clipping} (\texttt{build\_gradient\_clipper} returns \texttt{None} when \texttt{clip\_grad\_val}/\texttt{clip\_grad\_norm} absent; framework clips by value, not norm)---resolved in round 33 as the eighth defect (Sup.~U) & hard-coded \texttt{max\_norm=1.0} (with token-mean loss it almost never binds) & \texttt{--clip} 1.0 default, disclosed as author inference; with batch-normalised loss the norm genuinely binds (first steps 377/568/145)---\emph{overturned}: unclipped reproduces the signature and probe response (Sup.~U) \\
 \bottomrule
 \end{tabular}
 \par\smallskip
-{\footnotesize Fields applied verbatim in all our versions (not shown): \texttt{learning\_rate} 0.001, \texttt{betas} [0.9, 0.998], \texttt{weight\_decay} 0.001, \texttt{label\_smoothing} 0.0, \texttt{learning\_rate\_min} 1e-8, \texttt{keep\_last\_ckpts} 1, architecture block (transformer, 256/512/8/3, dropout 0.1, softsign, xavier), \texttt{eval\_translation\_beam\_alpha} $-1$, \texttt{translation\_max\_output\_length} 30, \texttt{skeleton\_subsample} 2, \texttt{txt\_lowercase} true, \texttt{max\_sent\_length} 400. Remaining author inferences: exact CTC reduction of the original stack; gradient-clip threshold; embeddings \texttt{norm\_type} placement. An authoritative training command from the original authors would resolve each.}
+{\footnotesize Fields applied verbatim in all our versions (not shown): \texttt{learning\_rate} 0.001, \texttt{betas} [0.9, 0.998], \texttt{weight\_decay} 0.001, \texttt{label\_smoothing} 0.0, \texttt{learning\_rate\_min} 1e-8, \texttt{keep\_last\_ckpts} 1, architecture block (transformer, 256/512/8/3, dropout 0.1, softsign, xavier), \texttt{eval\_translation\_beam\_alpha} $-1$, \texttt{translation\_max\_output\_length} 30, \texttt{skeleton\_subsample} 2, \texttt{txt\_lowercase} true, \texttt{max\_sent\_length} 400. Remaining author inferences: exact CTC reduction of the original stack (signjoey applies the raw sum; not identifiable from the released log); embeddings \texttt{norm\_type} placement. The gradient-clip threshold, previously an author inference, is resolved by signjoey source semantics as no clipping (Sup.~U).}
 \end{table}
 
 \paragraph{Epoch-validation approximation.}
@@ -780,19 +781,19 @@ The vendored official scorer (SacreBLEU 1.4.2) and the paper scorer (SacreBLEU 2
 All secondary metrics use the official SLRTP2025 implementations: they reproduce the official repository values (BLEU-4 12.777, chrF 34.585, WER 85.775, ROUGE 35.196 \cite{slrtp2025}) exactly. Implementation choices matter for chrF (corpus-level sacrebleu \texttt{CHRF} defaults; a sentence-level variant yields 48.05 instead of 34.59) and WER (jiwer 3.1.0 with official normalization; raw whitespace-split yields 79.26 instead of 85.78). BLEU-4 is invariant; the official implementations are fixed throughout.
 
 \paragraph{Audit design overview (moved from the main text).}
-The main-text audit design figure (SI~Fig.~S4) fixes a set of pose outputs and scores them under two interventions: the evaluator checkpoint (released, fourteen recipe reconstructions, heterogeneous diagnostic checkpoints) and the reference frame (speech-transcribed vs.\ human sign-to-text).
+The main-text audit design figure (SI~Fig.~S4) fixes a set of pose outputs and scores them under two contrast axes: the evaluator checkpoint (released, fourteen recipe reconstructions, heterogeneous diagnostic checkpoints) and the reference frame (speech-transcribed vs.\ human sign-to-text).
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.62\textwidth]{generated_figures/fig1_audit_design.pdf}
-\caption{Audit design: a fixed set of pose outputs is scored under two interventions. (a) Data and provenance: the official PHOENIX-2014T split (7{,}096/519/642) was materialized by the SLRTP2025 release as 7{,}060/515/641 poses, matching the released evaluator's training manifest (36/4/1 official records absent). (b) Fixed output conditions for one German source sentence: recorded test poses (REC), Progressive-Transformer output (PT), whole-donor copy TN-PURE (source-text token-set Jaccard, exact-normalized-text exclusion), and PT-scaffold composition TN-PTCOMP. (c) Two intervention axes: the evaluator (released, fourteen recipe reconstructions, heterogeneous diagnostic checkpoints) and the reference frame (speech-transcribed vs.\ human sign-to-text), with pose outputs and the donor registry fixed; the primary estimand is $\Delta_c=\mathrm{BLEU}_c(\mathrm{PURE})-\mathrm{BLEU}_c(\mathrm{REC})$.}
+\caption{Audit design: a fixed set of pose outputs is scored under two contrast axes. (a) Data and provenance: the official PHOENIX-2014T split (7{,}096/519/642) was materialized by the SLRTP2025 release as 7{,}060/515/641 poses, matching the released evaluator's training manifest (36/4/1 official records absent). (b) Fixed output conditions for one German source sentence: recorded test poses (REC), Progressive-Transformer output (PT), whole-donor copy TN-PURE (source-text token-set Jaccard, exact-normalized-text exclusion), and PT-scaffold composition TN-PTCOMP. (c) Two contrast axes: the evaluator (released, fourteen recipe reconstructions, heterogeneous diagnostic checkpoints) and the reference frame (speech-transcribed vs.\ human sign-to-text), with pose outputs and the donor registry fixed; the primary estimand is $\Delta_c=\mathrm{BLEU}_c(\mathrm{PURE})-\mathrm{BLEU}_c(\mathrm{REC})$.}
 \label{fig:s4_audit_design}
 \end{figure}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{generated_figures/fig4_reference_frame.pdf}
-\caption{Human sign-to-text references remove most of the replay advantage on the matched high-confidence subset ($n=461$; released evaluator, canonical hypotheses). (a) Corpus BLEU-4 under original vs.\ human references: REC 14.94 $\to$ 7.35, PURE 24.98 $\to$ 8.30; the reference-frame intervention contrast reduces the gap $+10.03 \to +0.95$ (90.5\%). (b) Bootstrap distribution of the intervention contrast (10{,}000 paired resamples; mean 9.08, 95\% CI $[7.44, 10.86]$). (c) PURE$-$REC gap under original vs.\ human references across BLEU-4, BLEU-1, and chrF. References are back-translations by a single deaf fluent L2 DGS signer~\cite{czehmann2026sacred}; replacement cannot distinguish reference-text defects, paraphrase shift, BLEU floor effects, or disruption of the lexical coupling.}
+\caption{Human sign-to-text references remove most of the replay advantage on the matched high-confidence subset ($n=461$; released evaluator, canonical hypotheses). (a) Corpus BLEU-4 under original vs.\ human references: REC 14.94 $\to$ 7.35, PURE 24.98 $\to$ 8.30; the reference-frame contrast reduces the gap $+10.03 \to +0.95$ (90.5\%). (b) Bootstrap distribution of the contrast (10{,}000 paired resamples; mean 9.08, 95\% CI $[7.44, 10.86]$). (c) PURE$-$REC gap under original vs.\ human references across BLEU-4, BLEU-1, and chrF. References are back-translations by a single deaf fluent L2 DGS signer~\cite{czehmann2026sacred}; replacement cannot distinguish reference-text defects, paraphrase shift, BLEU floor effects, or disruption of the lexical coupling.}
 \label{fig:s5_ref_frame}
 \end{figure}
 
@@ -867,7 +868,7 @@ Tier / Family & Runs & Decoded & Unique & Non-deg. \\
 \toprule
 Study & Primary finding & Method & Distinction from present work \\
 \midrule
-Czehmann et al. (2026) & Reference replacement changes BLEU scores and rankings on PHOENIX-2014T & Human back-translations of test set & We apply the matched-subset protocol to the released evaluator with a frozen replay probe and quantify the paired reference-frame intervention contrast \\
+Czehmann et al. (2026) & Reference replacement changes BLEU scores and rankings on PHOENIX-2014T & Human back-translations of test set & We apply the matched-subset protocol to the released evaluator with a frozen replay probe and quantify the paired reference-frame contrast \\
 Alkain et al. (2026) & Highest train--test text overlap among tested SLT corpora & N-gram overlap quantification & We use their finding to contextualize why PHX-public is particularly susceptible to reference coupling \\
 Artiaga et al. (2025) & Signer-dependent evaluation overestimates SLT capability & Signer-disjoint splits & We include signer as a regression covariate (not signer-disjoint evaluation; $\Delta R^2$ from removing the signer block is $\leq1\%$) \\
 Jiang et al. (2025) & BT likelihood is a more stable correlate of human judgment than decoded BLEU & Meta-evaluation of pose/embedding/BT metrics & We report that teacher-forced likelihood does not reproduce the reversal (REC NLL 3.060 vs PURE 3.479) \\
@@ -946,10 +947,10 @@ Operational tolerance gate & One-sided: dev BLEU-4 $\geq$ 12.38 \emph{and} dev W
 Claim & Tier & Evidence \\
 \midrule
 Our disclosed reconstruction did not attain released evaluator competence & D & 28 recipe-conditioned runs, all dev BLEU $<$ 10.5; not a public-artifact-insufficiency claim \\
-Probe response does not reproduce across constructible checkpoints & D & 69/69 non-degenerate gaps negative \\
-Probe response reflects a causal checkpoint-identity effect & NI & Competence confound: 6.5--10.5 vs 13.38 \\
+Probe response does not reproduce across canonical (clip$=$1.0) constructible checkpoints & D & 69/69 non-degenerate gaps negative; resolved by the clipping sensitivity (Sup.~U: unclipped $+11.19$) \\
+Probe response reflects a causal checkpoint-identity effect & NI & Resolved as a clipping-regime property; no identity effect remains to attribute \\
 Headline gap $+10.24$ is post-selection & S & Max-gap probe among 8 explored; CI descriptive \\
-Reference-frame intervention contrast: gap falls 90.5\% under human back-translations & S & Single-annotator, 461-item, 4 confounded changes \\
+Reference-frame contrast: gap falls 90.5\% under human back-translations & S & Single-annotator, 461-item, 4 confounded changes \\
 Origin effect persists under matched pools ($+9.56$) & S & 148 items, SMD$<$0.1; association not causal \\
 Probe is adversarial lexical-coupling stress test & D & Source $=$ reference in PHX-public; retriever uses source Jaccard \\
 \bottomrule
@@ -1059,7 +1060,7 @@ Released (full 7{,}060, beam=3) & 1 & 13.38 & $+10.24$ & 78.82 / 70.7\% & --- \\
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Canonical checkpoint registry (summary). 76 training runs across 12 families; 69 non-degenerate checkpoints enter the non-reproduction count (all 69 with strictly negative gaps), 74 have a canonical PHX-public PURE--REC gap, and the released evaluator is the audit target. Auto-generated from the disk-scanned \texttt{results/canonical\_checkpoint\_registry.json}; full per-checkpoint details in Sup.~D.}
+\caption{Canonical checkpoint registry (summary). 76 training runs across 12 families; 69 non-degenerate checkpoints enter the non-reproduction count (all 69 with strictly negative gaps; all share the clip$=$1.0 inference, resolved in Sup.~U), 74 have a canonical PHX-public PURE--REC gap, and the released evaluator is the audit target. Auto-generated from the disk-scanned \texttt{results/canonical\_checkpoint\_registry.json}; full per-checkpoint details in Sup.~D.}
 \label{tab:s6_checkpoint_registry_summary}
 \begin{tabular}{p{4.2cm}p{1.0cm}p{1.5cm}p{1.4cm}p{1.4cm}p{3.0cm}}
 \toprule
@@ -1140,12 +1141,12 @@ Reference condition & $N$ & REC & PURE & Gap \\
 \multicolumn{5}{l}{\emph{Primary: matched confidence=1 subset}} \\
 Original (speech-transcribed) & 461 & 14.94 & 24.98 & $+10.03$ \\
 Human back-translation (conf=1) & 461 & 7.35 & 8.30 & $+0.95$ \\
-Paired reference-frame intervention contrast & \multicolumn{4}{r}{$9.08$ BLEU pts (90.5\% gap reduction), CI $[7.44, 10.86]$; ratio CI $[0.81, 1.01]$} \\
+Paired reference-frame contrast & \multicolumn{4}{r}{$9.08$ BLEU pts (90.5\% gap reduction), CI $[7.44, 10.86]$; ratio CI $[0.81, 1.01]$} \\
 \midrule
 \multicolumn{5}{l}{\emph{Sensitivity: full 641 items}} \\
 Original (speech-transcribed) & 641 & 12.78 & 23.02 & $+10.24$ $[+8.88,+11.62]$ \\
 Human back-translation (full) & 641 & 5.66 & 6.52 & $+0.86$ $[+0.38,+1.91]$ \\
-Paired intervention contrast (sensitivity) & \multicolumn{4}{r}{$9.38$ BLEU pts (91.6\%)} \\
+Paired contrast (sensitivity) & \multicolumn{4}{r}{$9.38$ BLEU pts (91.6\%)} \\
 \midrule
 Human refs, reconstructions (6 seeds) & 641 & 3.49--4.62 & 3.35--4.35 & $-0.15$ to $-0.65$ \\
 \bottomrule
@@ -1307,7 +1308,76 @@ Random donor & PT-composed & \checkmark & 0.77 & $-12.01$ \\
 
 Table~\ref{tab:probe_multiplicity} extends the main-text multiplicity summary with the pose-signature row: reference-free retrieval joins the random baselines far below REC.
 
+\section{Retrieval-Query Decoupling Grid}
+\label{sec:appendix_query_decoupling}
+\textbf{Question answered:} does the released evaluator's positive probe response require selecting donors with the \emph{scored reference text} specifically, or does any lexically competent text-based selection produce it?
 
+\textbf{Design.} A $2\times2$ grid crosses the retrieval query text (original reference vs.\ Czehmann et al.\ human back-translation) with the scoring frame (original vs.\ human), on the matched 461-item confidence=1 subset. Retrieval is the same source-Jaccard argmax with the canonical exact-normalized-text exclusion (the excluded text is the query's original reference in both arms); no re-decoding is needed because the released evaluator's hypotheses for all 7{,}060 training-pool poses are cached (\texttt{results/full\_readout/backTranslation\_PHIX\_model.json}). Outputs: \texttt{results/retrieval\_query\_decoupling.json} (\texttt{scripts/e\_retrieval\_query\_decoupling.py}).
+
+\begin{table}[h]
+\centering
+\small
+\caption{Retrieval-query $\times$ scoring-frame grid under the released evaluator (461-item subset; sacreBLEU-4; descriptive paired bootstrap CIs, 10{,}000 resamples). The response is positive only on the diagonal where the retrieval query coincides with the scoring reference. The two selectors pick the same donor for only 6.5\% of queries; human-query donors still average Jaccard 0.30 to the original reference texts (canonical selector: 0.55; human-query selector against the human text: 0.33).}
+\label{tab:query_decoupling}
+\begin{tabular}{lrrr}
+\toprule
+ & REC (recorded poses) & PURE, query=original & PURE, query=human \\
+\midrule
+Score vs.\ original refs & 14.94 & 24.98 & 10.92 \\
+Gap vs.\ REC & --- & $+10.03$ $[8.41,11.69]$ & $-4.02$ $[-5.50,-2.62]$ \\
+\midrule
+Score vs.\ human refs & 7.35 & 8.30 & 11.64 \\
+Gap vs.\ REC & --- & $+0.95$ $[-0.14,2.02]$ & $+4.29$ $[3.09,5.49]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Three readings. (i) \emph{Replacing the query alone removes the response} ($-4.02$) although the selected donors remain lexically close to the original references (Jaccard 0.30) and decode far above the random-donor regime, so the collapse is not explained by retrieval quality alone. (ii) \emph{Re-coupling query and scoring frame on the human back-translations partially restores the response} ($+4.29$), at a magnitude consistent with the weaker lexical coupling of that diagonal (donor--human-text Jaccard 0.33 vs.\ 0.55 on the original diagonal). (iii) Uniform randomisation within the Jaccard top-$k$ (query = original, full 641 queries) interpolates between the regimes: gap $+7.06$ at $k{=}5$ and $+3.34$ at $k{=}20$ (10 draws each), against $-11.87$ for uniform random donors. Together with the text-free selectors of Sup.~S (pose-signature $-12.33$), the response tracks the lexical identity of the retrieval query with the scoring reference rather than text-based selection as such; all quantities remain descriptive associations under a single evaluator, and the human frame is a single-annotator resource.
+
+\section{Gradient-Clipping and CTC-Normalisation Sensitivity (Sup.~U)}
+\label{sec:appendix_clip_sensitivity}
+\textbf{Question answered:} are the training-pool readout signature and the positive probe response unrecoverable properties of the released evaluator, or artefacts of the two disclosed training-dynamics inferences (gradient-clip threshold; CTC-term normalisation)?
+
+\textbf{Design.} Seed-42 sensitivity runs of the faithful protocol (\texttt{src/training/train\_faithful.py}) varying one knob each: CTC denominator (sentences / gloss tokens / input frames / raw sum) at clip 1.0; gradient-clip \texttt{max\_norm} (1.0 = the faithful run, 2.0, 3.0, 5.0, none $=\infty$); and a signjoey-exact run (no clipping $+$ CTC raw sum, the literal \texttt{\_train\_batch} semantics of the underlying framework). All runs use the released seed-42 init, the released config otherwise, and the \texttt{--stop-frozen} termination (LR frozen at the plateau scheduler's numerical floor with the best checkpoint unchanged); none belongs to the canonical 76-run panel (registry directories \texttt{checkpoints/ctc\_clip\_sens/}, \texttt{checkpoints/faithful\_steps/}). Evaluation: canonical 641-query REC/PURE protocol, full 7{,}060-item training-pool free-decode readout with exact-match, via \texttt{scripts/eval\_step\_ckpts.py} into \texttt{results/faithful\_steps\_eval.json}.
+
+\textbf{Source evidence for no clipping.} The released repository reuses the signjoey (\texttt{neccam/slt}) pipeline: its \texttt{validations.txt} column layout matches signjoey's \texttt{\_add\_report} line format field-for-field, and the data/model code paths correspond. In signjoey's \texttt{training.py}, \texttt{build\_gradient\_clipper} inspects the config fields \texttt{clip\_grad\_val} and \texttt{clip\_grad\_norm}; when neither is present it returns \texttt{None}, and \texttt{\_train\_batch} then applies no clipping (when present, the framework clips by \emph{value}, not by norm). The released \texttt{config.yaml} contains neither field, so the framework-default reading of the release is that the released training ran unclipped. The same source pins the CTC-term semantics: \texttt{\_train\_batch} divides the translation loss by \texttt{num\_seqs} (the \texttt{batch} normalization) but the recognition loss only by \texttt{batch\_multiplier} ($=$1), i.e.\ the raw CTC sum---the source carries an explicit developer comment (\texttt{\# TODO (Cihan): Add Gloss Token normalization (?)}) acknowledging the missing normalisation. Our \texttt{max\_norm}$=$1.0 was inherited from the v1--v3 scripts and disclosed as an author inference; this table overturns it. The inference chain is source-semantic (framework version assumption), not a released transcript; the behavioural confirmation is the ``none'' row reproducing both previously unreproduced properties. (signjoey's stock stopping logic---stop when a plateau decay fires and no improvement occurred at the pre-decay LR---would have terminated the released run at roughly the second post-best decay, a dozen validations after its step-1{,}820 best; the released run instead logged 72 further validations, so the release's own stopping rule remains externally terminated and the step-matched analysis of the main text applies.)
+
+\begin{table}[h]
+\centering
+\small
+\caption{Sensitivity grid (seed 42; protocols as in the main text). The CTC block varies the CTC denominator at clip 1.0; the clipping block varies \texttt{max\_norm} with the per-sentence CTC default; the released row is the shipped evaluator. Readout is full-training-pool free-decode BLEU-4 (7{,}060 items) with exact-match rate.}
+\label{tab:clip_grid_full}
+\begin{tabular}{llrrrrr}
+\toprule
+Knob & Setting & Dev BLEU-4 & Test REC & PURE & Gap & Readout (EM\%) \\
+\midrule
+CTC denom.\ (clip 1.0) & sentences & 12.05 & 13.11 & 10.32 & $-2.80$ & 11.96 (2.4\%) \\
+ & gloss tokens & 10.79 & 10.42 & 9.01 & $-1.40$ & 10.06 (2.0\%) \\
+ & input frames & 9.55 & 9.62 & 8.75 & $-0.88$ & 9.18 (1.9\%) \\
+ & raw sum & 0.90 & 0.95 & 0.95 & $+0.01$ & 0.67 (0.0\%) \\
+\midrule
+Clip $\infty$? (CTC sent) & 1.0 (faithful) & 12.05 & 13.11 & 10.32 & $-2.80$ & 11.96 (2.4\%) \\
+ & 2.0 & 17.17 & 16.35 & 15.90 & $-0.45$ & 23.65 (9.0\%) \\
+ & 3.0 & 17.13 & 16.78 & 21.82 & $+5.04$ & 53.21 (31.8\%) \\
+ & 5.0 & 16.54 & 15.92 & 23.97 & $+8.05$ & 82.69 (68.4\%) \\
+ & none (seed 42) & 16.32 & 15.08 & 26.27 & $+11.19$ & 99.98 (99.9\%) \\
+ & none (seed 43) & 15.78 & 14.32 & 25.63 & $+11.31$ & 95.25 (90.5\%) \\
+ & none (seed 44) & 15.74 & 15.96 & 26.27 & $+10.31$ & 99.98 (99.9\%) \\
+\midrule
+signjoey-exact & none $+$ raw sum & 16.04 & 15.12 & 25.80 & $+10.68$ & 97.60 (95.1\%) \\
+\midrule
+\multicolumn{2}{l}{Released evaluator} & 13.38 & 12.78 & 23.02 & $+10.24$ & 78.8 (70.7\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Unclipped trajectory.} The unclipped seed-42 run improves dev BLEU-4 monotonically to 15.69 at the released run's own best step (1{,}820), reaches its best 16.32 at step 2{,}352, and continues to the scheduler's numerical floor (step 7{,}014, 501 validations, LR frozen at 4.4e-8) without the best checkpoint changing; it was then terminated externally (the same manual rule as the published faithful runs). Pre-clip gradient norms over the first ten optimiser steps (377, 568, 145, 33, \ldots) exceed the 1.0 threshold by up to two orders of magnitude, so the clipped and unclipped regimes diverge from the first update: at clip 1.0 every step is direction-preserving truncation, and the memorisation regime is never entered.
+
+\textbf{Step-matched unclipped readout.} A fresh unclipped run with checkpoints fixed at the released run's own best (1{,}820) and final (2{,}828) steps shows the memorisation regime is entered \emph{early}: at step 1{,}820 the readout is already 99.94 BLEU / 99.7\% EM (dev 15.69, REC 14.64, PURE 26.32, gap $+11.68$); at step 2{,}828, 99.98 / 99.9\% (dev 15.80, gap $+11.49$). The overshoot relative to the released evaluator's step-1{,}820 readout of 78.8 is therefore not an artefact of training longer than the released run: under unclipped dynamics the training pool is essentially memorised before the released run's best checkpoint.
+
+\textbf{Multi-seed confirmation.} Across seeds 42--44 the unclipped protocol gives dev 15.74--16.32, REC 14.32--15.96, gaps $+11.19$/$+11.31$/$+10.31$, and readouts 99.98/95.25/99.98 BLEU (90.5--99.9\% EM): the reproduction of both properties is stable across seeds, and every seed's gap is within 1 BLEU point of the released $+10.24$.
+
+\textbf{Interpretation and caveats.} The readout signature and the probe response are clipping-regime properties of the released recipe, constructible by disabling clipping (or, at intermediate strength, dialled to the released magnitude: clip 5.0 gives readout 82.69/68.4\% vs.\ the released 78.8/70.7\%, the closest single match of the ladder). The released operating point is bracketed but not matched in all coordinates---no single threshold places dev 13.38, readout 78.8, REC 12.78, and gap $+10.24$ simultaneously---so at least one further quantitative difference (CTC normalisation, stopping point, framework version, or data-order effects) persists; because the released config implies no clipping, the mismatch indicates the released run's trajectory was slower than ours in dev-competence terms, not that it was clipped. The within-regime readout--gap association of the canonical panel ($\rho{=}{-}0.56$; Sup.~D) must not be extrapolated across regimes: across the ladder it is strictly positive (readout and gap rise together at every step from clip 1.0 to none).
 
 \bibliography{references}
 

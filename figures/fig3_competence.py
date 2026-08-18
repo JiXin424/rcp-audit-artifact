@@ -38,7 +38,27 @@ READOUT = ROOT / "results/full_readout_summary.json"
 ECKPD = ROOT / "results/epoch_ckpt_dev_bleu_all.json"
 EPOCH_DEC = ROOT / "results/epoch_decouple.json"
 LEAK = ROOT / "results/leakage_sanity.json"
+FS_EVAL = ROOT / "results/faithful_steps_eval.json"
 OUT = ROOT / "figures/fig3_competence.pdf"
+
+# round-33 clipping sensitivity ladder (outside the canonical panel): order in
+# which the dose-response path is drawn; missing variants are skipped
+CLIP_ORDER = ["clip2p0_seed42", "clip3p0_seed42", "clip5p0_seed42",
+              "clipinf_seed42"]
+C_CLIP = "#7b3294"   # purple for the clip ladder path
+
+
+def load_clip_rows():
+    """clip-ladder rows from results/faithful_steps_eval.json (best ckpts)."""
+    if not FS_EVAL.exists():
+        return {}
+    rows = json.load(open(FS_EVAL)).get("rows", [])
+    out = {}
+    for r in rows:
+        for key in CLIP_ORDER:
+            if r["ckpt"] == f"ctc_clip_sens/{key}/best":
+                out[key] = r
+    return out
 
 PRIMARY = [101, 202, 303, 404, 505, 606]
 EXTENSION = [707, 808, 909, 1001, 1102, 1203, 1304, 1405]
@@ -103,6 +123,14 @@ def main():
     epoch_dec = json.load(open(EPOCH_DEC))
     leak = json.load(open(LEAK))["experiment_a_free_decode"]
     ckpts = load_merged_ckpts()
+    clip_rows = load_clip_rows()
+    # faithful seed-42 anchors the ladder at clip 1.0
+    clip_pts = [(ro["seed_42"]["dev"]["bleu"], gap["faithful_42"]["gap"],
+                 ro["seed_42"]["train"]["bleu"])]
+    for key in CLIP_ORDER:
+        if key in clip_rows:
+            r = clip_rows[key]
+            clip_pts.append((r["dev_bleu"], r["gap"], r["train_readout_bleu"]))
 
     # ---------- build per-family point sets (dev BLEU, gap) ----------
     def ro_key_of(id_):
@@ -232,12 +260,22 @@ def main():
         else:
             axb.plot(pts["x"], pts["y"], FAM_MARKERS[fam], color=FAM_COLORS[fam],
                      ms=5.5, mew=1.0, ls="", zorder=3)
+    # round-33 clip ladder (dose-response path), drawn after canonical points
+    if len(clip_pts) > 1:
+        bx = [p[0] for p in clip_pts]; by = [p[1] for p in clip_pts]
+        axb.plot(bx, by, "--", color=C_CLIP, lw=1.1, zorder=4,
+                 label="clip ladder (seed 42)")
+        axb.plot(bx, by, "s", color=C_CLIP, mfc="white", ms=5.5, mew=1.2,
+                 zorder=4)
+        axb.annotate(f"unclipped {by[-1]:+.2f}", xy=(bx[-1], by[-1]),
+                     xytext=(bx[-1] - 0.1, by[-1] + 0.4), fontsize=7.2,
+                     ha="right", color=C_CLIP)
     axb.text(13.6, -1.4, "residual\nunobserved\ninterval\n(12.62, 13.38)",
              fontsize=7.0, ha="center", va="center", color="#555555",
              style="italic",
              bbox=dict(facecolor="white", alpha=0.85, edgecolor="none",
                        pad=1.2))
-    axb.set_xlim(0, 14.5)
+    axb.set_xlim(0, 18.5)
     axb.set_ylim(-4.5, 12.5)
     axb.set_xlabel("decoded dev BLEU-4")
     axb.set_ylabel("gap (PURE \u2212 REC, sacreBLEU)")
@@ -264,18 +302,26 @@ def main():
     for x, ty, fam in read_pts:
         axc.plot(x, ty, FAM_MARKERS[fam], color=FAM_COLORS[fam],
                  ms=5, mew=0.8, zorder=3)
+    if len(clip_pts) > 1:
+        cx = [p[0] for p in clip_pts]; cy = [p[2] for p in clip_pts]
+        axc.plot(cx, cy, "--", color=C_CLIP, lw=1.1, zorder=4)
+        axc.plot(cx, cy, "s", color=C_CLIP, mfc="white", ms=5.5, mew=1.2,
+                 zorder=4)
+        axc.annotate(f"unclipped\n{cy[-1]:.1f} BLEU",
+                     xy=(cx[-1], cy[-1]), xytext=(cx[-1] - 0.3, cy[-1] - 9),
+                     fontsize=7.2, ha="right", color=C_CLIP)
     axc.plot(RELEASED_BEST[1], leak["bleu"], M_RELEASED, color=C_RELEASED,
              ms=14, zorder=5)
     axc.annotate(f"released evaluator\n{leak['bleu']:.1f} BLEU, "
                  f"{leak['em_pct']:.1f}% EM",
                  xy=(RELEASED_BEST[1], leak["bleu"]),
-                 xytext=(13.38, 73),
+                 xytext=(11.2, 90),
                  fontsize=7.6, va="center", ha="center", color="#333333",
                  bbox=dict(facecolor="white", alpha=0.85, edgecolor="none",
                            pad=1.2),
                  arrowprops=dict(arrowstyle="-", color="#888888", lw=0.7))
-    axc.set_xlim(0, 14.5)
-    axc.set_ylim(0, 85)
+    axc.set_xlim(0, 18.5)
+    axc.set_ylim(0, 105)
     axc.set_xlabel("decoded dev BLEU-4")
     axc.set_ylabel("training-pool free-decode BLEU")
     axc.spines[["top", "right"]].set_visible(False)

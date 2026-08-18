@@ -41,7 +41,7 @@ FAMILY_TO_TIER = OrderedDict([
 ])
 
 TIER_DISPLAY = OrderedDict([
-    ("faithful",       "Faithful (config-exact, seed-42-first)"),
+    ("faithful",       "Faithful (config-faithful best-effort, seed-42-first)"),
     ("near_faithful", "Near-faithful (partially-corrected recipe)"),
     ("secondary",     "Secondary (legacy-implementation replication)"),
     ("diagnostic",    "Diagnostic (post-hoc sensitivity)"),

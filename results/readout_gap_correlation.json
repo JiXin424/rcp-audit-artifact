@@ -1,0 +1,356 @@
+{
+  "schema": "readout-gap-correlation-v1",
+  "generated_by": "scripts/e_readout_gap_correlation.py",
+  "note": "Current-set Spearman correlations for SI tab:readout_assoc. Supersedes the 31-point table (rho=-0.082 readout~gap) which predates the eight faithful full-pool readouts. rescue_wd0 has a uniform readout but no canonical gap (not in the 74-run decoded gap panel), so it enters readout~dev only.",
+  "n_readout_entries_constructible": 38,
+  "conventions": {
+    "all_with_gap_incl_released": "released + constructible with canonical gap",
+    "excl_released": "constructible only",
+    "non_degenerate_incl_released": "adds released, drops 3 empty-output distill students",
+    "non_degenerate_excl_released": "constructible non-degenerate only"
+  },
+  "correlations": {
+    "readout_vs_gap": {
+      "all_incl_released": {
+        "rho": -0.4437,
+        "p": 0.0052685446732086685,
+        "n": 38
+      },
+      "excl_released": {
+        "rho": -0.564,
+        "p": 0.00027716146644628654,
+        "n": 37
+      },
+      "non_degenerate_incl_released": {
+        "rho": -0.3185,
+        "p": 0.06222983222033882,
+        "n": 35
+      },
+      "non_degenerate_excl_released": {
+        "rho": -0.4383,
+        "p": 0.009511337729170365,
+        "n": 34
+      }
+    },
+    "readout_vs_dev_bleu": {
+      "all_incl_released": {
+        "rho": 0.8803,
+        "p": 1.4473368008429358e-06,
+        "n": 18
+      },
+      "excl_released": {
+        "rho": 0.8578,
+        "p": 1.0661126185774074e-05,
+        "n": 17
+      },
+      "non_degenerate_incl_released": {
+        "rho": 0.8803,
+        "p": 1.4473368008429358e-06,
+        "n": 18
+      },
+      "non_degenerate_excl_released": {
+        "rho": 0.8578,
+        "p": 1.0661126185774074e-05,
+        "n": 17
+      }
+    },
+    "gap_vs_dev_bleu": {
+      "all_incl_released": {
+        "rho": 0.5025,
+        "p": 0.03983296762323776,
+        "n": 17
+      },
+      "excl_released": {
+        "rho": 0.4029,
+        "p": 0.121745762952543,
+        "n": 16
+      },
+      "non_degenerate_incl_released": {
+        "rho": 0.5025,
+        "p": 0.03983296762323776,
+        "n": 17
+      },
+      "non_degenerate_excl_released": {
+        "rho": 0.4029,
+        "p": 0.121745762952543,
+        "n": 16
+      }
+    }
+  },
+  "interpretation_note": "Within the constructible family the readout~gap association is NEGATIVE (higher-readout checkpoints have more negative gaps), and the released evaluator is the single positive-gap point far outside the family trend on both axes. The data therefore support co-occurrence in one checkpoint plus an uncovered readout region, not 'the probe response tracks the signature'.",
+  "rows": [
+    {
+      "run_id": "reco_202",
+      "readout": 7.623130433303206,
+      "gap": -1.3038,
+      "dev_bleu": 6.880618306021232,
+      "degenerate": false
+    },
+    {
+      "run_id": "reco_505",
+      "readout": 8.580361481625326,
+      "gap": -1.2771,
+      "dev_bleu": 9.04083951359973,
+      "degenerate": false
+    },
+    {
+      "run_id": "distill_a0.0_s202",
+      "readout": 8.44704332929335,
+      "gap": -1.7062,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "distill_a0.5_s303",
+      "readout": 8.012649665096326,
+      "gap": -1.1909,
+      "dev_bleu": 8.172845132265232,
+      "degenerate": false
+    },
+    {
+      "run_id": "reco_707",
+      "readout": 9.246199891507384,
+      "gap": -0.8906,
+      "dev_bleu": 9.371864923774385,
+      "degenerate": false
+    },
+    {
+      "run_id": "distill_a1.0_s202",
+      "readout": 0.0,
+      "gap": 0.0,
+      "dev_bleu": null,
+      "degenerate": true
+    },
+    {
+      "run_id": "distill_a0.75_s303",
+      "readout": 7.014712911268864,
+      "gap": -1.2087,
+      "dev_bleu": 7.542651465511559,
+      "degenerate": false
+    },
+    {
+      "run_id": "reco_1304",
+      "readout": 8.467293145469698,
+      "gap": -1.1832,
+      "dev_bleu": 8.925766493754413,
+      "degenerate": false
+    },
+    {
+      "run_id": "distill_a0.0_s303",
+      "readout": 8.779804255083285,
+      "gap": -1.1117,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "reco_606",
+      "readout": 7.196915598617877,
+      "gap": -1.2418,
+      "dev_bleu": 6.486004404603312,
+      "degenerate": false
+    },
+    {
+      "run_id": "distill_a0.0_s101",
+      "readout": 8.873006041138149,
+      "gap": -0.8044,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "reco_909",
+      "readout": 8.577438162211152,
+      "gap": -0.8917,
+      "dev_bleu": 7.842267731153712,
+      "degenerate": false
+    },
+    {
+      "run_id": "distill_a1.0_s101",
+      "readout": 0.0,
+      "gap": 0.0,
+      "dev_bleu": null,
+      "degenerate": true
+    },
+    {
+      "run_id": "reco_1203",
+      "readout": 8.378742791812469,
+      "gap": -0.9529,
+      "dev_bleu": 7.451828256480625,
+      "degenerate": false
+    },
+    {
+      "run_id": "reco_1405",
+      "readout": 7.338902560059302,
+      "gap": -1.1851,
+      "dev_bleu": 7.217484111267986,
+      "degenerate": false
+    },
+    {
+      "run_id": "distill_a0.5_s101",
+      "readout": 8.197068261958632,
+      "gap": -1.3792,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "distill_a0.25_s303",
+      "readout": 8.625839549727898,
+      "gap": -0.771,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "reco_1001",
+      "readout": 8.633713049761589,
+      "gap": -0.8667,
+      "dev_bleu": 9.327816172593797,
+      "degenerate": false
+    },
+    {
+      "run_id": "distill_a0.25_s202",
+      "readout": 8.412296639042664,
+      "gap": -2.0127,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "distill_a0.25_s101",
+      "readout": 7.813399793508507,
+      "gap": -1.2083,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "rescue_wd0",
+      "readout": 8.919655143594191,
+      "gap": null,
+      "dev_bleu": 8.94020691456465,
+      "degenerate": false
+    },
+    {
+      "run_id": "reco_1102",
+      "readout": 8.944705571150239,
+      "gap": -1.1224,
+      "dev_bleu": 8.666174925193639,
+      "degenerate": false
+    },
+    {
+      "run_id": "distill_a1.0_s303",
+      "readout": 0.0,
+      "gap": 0.0,
+      "dev_bleu": null,
+      "degenerate": true
+    },
+    {
+      "run_id": "distill_a0.5_s202",
+      "readout": 7.730299251791728,
+      "gap": -0.7724,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "reco_808",
+      "readout": 9.111863577322456,
+      "gap": -1.4825,
+      "dev_bleu": 8.969757552588877,
+      "degenerate": false
+    },
+    {
+      "run_id": "reco_101",
+      "readout": 8.535673375150298,
+      "gap": -0.7977,
+      "dev_bleu": 8.507170696935113,
+      "degenerate": false
+    },
+    {
+      "run_id": "distill_a0.75_s202",
+      "readout": 6.900117680277298,
+      "gap": -0.9787,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "reco_303",
+      "readout": 8.236931032251738,
+      "gap": -1.8538,
+      "dev_bleu": 7.724289556538267,
+      "degenerate": false
+    },
+    {
+      "run_id": "distill_a0.75_s101",
+      "readout": 6.585434166126915,
+      "gap": -0.8107,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "reco_404",
+      "readout": 8.060910613420903,
+      "gap": -1.8061,
+      "dev_bleu": 7.325223918868315,
+      "degenerate": false
+    },
+    {
+      "run_id": "faithful_42",
+      "readout": 11.957600195032148,
+      "gap": -2.7972,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "faithful_43",
+      "readout": 11.451048940798174,
+      "gap": -1.372,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "faithful_44",
+      "readout": 11.738011881408298,
+      "gap": -2.2522,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "faithful_45",
+      "readout": 11.867730556878323,
+      "gap": -1.9669,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "faithful_46",
+      "readout": 11.47573631826838,
+      "gap": -2.1016,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "faithful_47",
+      "readout": 12.077019380771805,
+      "gap": -2.1978,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "faithful_48",
+      "readout": 11.670823398020781,
+      "gap": -2.3487,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "faithful_49",
+      "readout": 11.483871192283003,
+      "gap": -2.0879,
+      "dev_bleu": null,
+      "degenerate": false
+    },
+    {
+      "run_id": "released",
+      "readout": 78.81879546693305,
+      "gap": 10.24331582979233,
+      "dev_bleu": 13.38,
+      "degenerate": false
+    }
+  ]
+}

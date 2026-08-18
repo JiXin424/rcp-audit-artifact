@@ -25,7 +25,7 @@
     ]
   },
   "tier_summary": {
-    "Faithful (config-exact, seed-42-first)": {
+    "Faithful (config-faithful best-effort, seed-42-first)": {
       "runs": 8,
       "decoded": 8,
       "unique_binaries": 8,

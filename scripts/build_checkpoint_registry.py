@@ -52,7 +52,8 @@ GAP_ITEMS_DIR = ROOT / "results" / "gap_43_canonical_beam3_items"
 OUT_PATH = ROOT / "results" / "canonical_checkpoint_registry.json"
 
 # Directories to skip (not from-scratch reconstruction training)
-SKIP_DIRS = {"released", "finetune_released", "step_faithful_legacy_nll", "retrain_logs"}
+SKIP_DIRS = {"released", "finetune_released", "step_faithful_legacy_nll", "retrain_logs",
+              "faithful_steps", "ctc_clip_sens"}  # round-33 sensitivity runs: outside the canonical panel
 
 # Family-tier mapping (must match paper stratification)
 FAMILY_TO_TIER = {

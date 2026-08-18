@@ -1,0 +1,114 @@
+{
+  "schema": "retrieval-query-decoupling-v1",
+  "generated_by": "scripts/e_retrieval_query_decoupling.py",
+  "design": "2x2 retrieval-query x scoring-frame grid on the 461-item confidence=1 Czehmann subset, rescored from the cached released-evaluator training-pool decodes (no GPU). Retrieval: source-Jaccard argmax with canonical exact-normalized-text exclusion (excluded text = the query's ORIGINAL reference, matching the canonical registry rule in both arms).",
+  "grid_2x2": {
+    "subset_n": 461,
+    "score_orig": {
+      "REC": 14.943168909345621,
+      "PURE_query_orig": 24.9763046508492,
+      "PURE_query_human": 10.92304856749611,
+      "gap_query_orig": 10.03313574150358,
+      "gap_query_human": -4.020120341849511
+    },
+    "score_human": {
+      "REC": 7.347195345666542,
+      "PURE_query_orig": 8.296949395512428,
+      "PURE_query_human": 11.641749230713575,
+      "gap_query_orig": 0.9497540498458861,
+      "gap_query_human": 4.2945538850470335
+    }
+  },
+  "diagnostics": {
+    "frac_same_donor_both_queries": 0.0650759219088937,
+    "mean_jac_query_orig_to_donor_of_query_orig_selector": 0.5452100038528442,
+    "mean_jac_query_orig_to_donor_of_query_human_selector": 0.2994462549686432,
+    "mean_jac_query_human_to_donor_of_query_human_selector": 0.3342057466506958,
+    "mean_jac_query_human_to_donor_of_query_orig_selector": 0.1687348335981369,
+    "mean_jac_scoring_orig_ref_to_donor": {
+      "query_orig": 0.545209995264473,
+      "query_human": 0.29944623904349177
+    }
+  },
+  "bootstrap_ci95_descriptive": {
+    "gap_q_orig_s_orig": [
+      8.413404929885534,
+      11.685683822203824
+    ],
+    "gap_q_hum_s_orig": [
+      -5.496020524850721,
+      -2.616477042679532
+    ],
+    "gap_q_orig_s_human": [
+      -0.13590144620966954,
+      2.0214346051527223
+    ],
+    "gap_q_hum_s_human": [
+      3.0915534359964107,
+      5.49182589094035
+    ],
+    "contrast_q_hum_minus_q_orig_s_orig": [
+      -15.756100741071315,
+      -12.358576820918564
+    ]
+  },
+  "full_641_controls": {
+    "rec_bleu": 12.777148564612425,
+    "pure_query_orig_bleu": 23.020464394404755,
+    "gap_query_orig": 10.24331582979233,
+    "topk_random_within_jaccard_k5": {
+      "k": 5,
+      "gaps": [
+        7.270676732512047,
+        6.761659451163727,
+        6.958383279967716,
+        7.218328660429698,
+        7.472913321319734,
+        7.333787310578678,
+        6.74716770094437,
+        7.010045024465256,
+        6.957486072748768,
+        6.917077913929354
+      ],
+      "mean": 7.064752546805934,
+      "min": 6.74716770094437,
+      "max": 7.472913321319734
+    },
+    "topk_random_within_jaccard_k20": {
+      "k": 20,
+      "gaps": [
+        3.134672394173963,
+        3.0012036224986804,
+        3.372237567815972,
+        2.962688326952568,
+        3.6543989474491205,
+        3.6226333041787697,
+        3.8993721051018575,
+        3.160140493637524,
+        2.986920284688111,
+        3.6274937261452678
+      ],
+      "mean": 3.3421760772641833,
+      "min": 2.962688326952568,
+      "max": 3.8993721051018575
+    },
+    "uniform_random": {
+      "gaps": [
+        -11.703120916644025,
+        -11.733451808219241,
+        -12.189220803072338,
+        -11.738945350603878,
+        -11.929138215136343,
+        -11.843851650155713,
+        -11.911692325953169,
+        -12.007911386847242,
+        -11.702231534995077,
+        -11.926272133112958
+      ],
+      "mean": -11.868583612473998,
+      "min": -12.189220803072338,
+      "max": -11.702231534995077
+    }
+  },
+  "interpretation": "Scoring frame and selection query are partially separable: see grid. If the query=human gap against ORIGINAL references remains large, the positive response does not require selecting donors with the scored reference specifically -- any lexically competent text retrieval suffices; the coupling is to lexical similarity in general, not to the exact scored text. If it collapses, coupling to the exact scored reference is implicated. Either outcome weakens the earlier 'entirely dependent' phrasing in a specific, data-supported direction."
+}

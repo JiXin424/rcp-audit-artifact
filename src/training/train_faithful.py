@@ -88,12 +88,22 @@ def collate_v2(batch, txt_pad, gls_vocab, gls_pad=GlsPad):
             "gls": gls, "gls_lengths": gls_lengths, "ids": ids}
 
 
-def compute_loss_faithful(model, batch, device, rec_weight, trans_weight):
+def compute_loss_faithful(model, batch, device, rec_weight, trans_weight,
+                          ctc_norm="sent"):
     """translation_normalization: batch -> token-sum CE / n_sentences (JoeyNMT).
 
     The bt_model.get_loss_for_batch docstring ("sum of losses over non-pad
     elements", divided by batch size for 'batch' normalization) and the
     released validations.txt magnitudes both pin this semantics.
+
+    ctc_norm controls the CTC-term denominator (round-33 sensitivity):
+      sent  : CTC sum / n_sentences      (default; matches trans normalization)
+      gtok  : CTC sum / n_gloss_tokens
+      frame : CTC sum / n_input_frames
+      sum   : raw CTC sum
+    The released log's dev Recognition Loss (17.28 at step 14) is not
+    identifiable from public artifacts (our per-sentence value is 39.9), so
+    these variants bracket the unidentifiable choice.
     """
     B = batch["sgn"].size(0)
     out = model(sgn=batch["sgn"], sgn_mask=batch["sgn_mask"], sgn_lengths=batch["sgn_lengths"],
@@ -107,9 +117,18 @@ def compute_loss_faithful(model, batch, device, rec_weight, trans_weight):
     loss = trans_weight * trans_loss
     rec_loss_v = 0.0
     if gloss_probs is not None:
-        rec_loss = F.ctc_loss(gloss_probs, batch["gls"], batch["sgn_lengths"].long(),
-                              batch["gls_lengths"].long(), blank=GlsBlank, reduction="sum",
-                              zero_infinity=True) / B
+        rec_sum = F.ctc_loss(gloss_probs, batch["gls"], batch["sgn_lengths"].long(),
+                             batch["gls_lengths"].long(), blank=GlsBlank, reduction="sum",
+                             zero_infinity=True)
+        if ctc_norm == "sent":
+            denom = float(B)
+        elif ctc_norm == "gtok":
+            denom = float(batch["gls_lengths"].sum().item())
+        elif ctc_norm == "frame":
+            denom = float(batch["sgn_lengths"].sum().item())
+        else:  # sum
+            denom = 1.0
+        rec_loss = rec_sum / max(denom, 1.0)
         loss = loss + rec_weight * rec_loss
         rec_loss_v = rec_loss.item()
     return loss, trans_loss.item(), rec_loss_v
@@ -130,6 +149,7 @@ def evaluate_dev_faithful(model, dev_items_raw, dev_loader, device, subsample):
     model.do_recognition = True
     model.eval()
     total_nll, total_tokens, total_rec, total_sents = 0.0, 0, 0.0, 0
+    total_gls_tok, total_frames = 0, 0
     for batch in dev_loader:
         for k in batch:
             if torch.is_tensor(batch[k]): batch[k] = batch[k].to(device)
@@ -143,6 +163,8 @@ def evaluate_dev_faithful(model, dev_items_raw, dev_loader, device, subsample):
         n_tok = batch["txt_mask"].reshape(batch["txt_mask"].shape[0], -1).sum().item()
         total_nll += nll.item(); total_tokens += n_tok
         total_sents += batch["sgn"].size(0)
+        total_gls_tok += int(batch["gls_lengths"].sum().item())
+        total_frames += int(batch["sgn_lengths"].sum().item())
         if gloss_probs is not None:
             rec = F.ctc_loss(gloss_probs, batch["gls"], batch["sgn_lengths"].long(),
                              batch["gls_lengths"].long(), blank=GlsBlank, reduction="sum",
@@ -180,6 +202,10 @@ def evaluate_dev_faithful(model, dev_items_raw, dev_loader, device, subsample):
     model.train()
     return {"nll_sum": total_nll, "n_tok": total_tokens, "nll_per_tok": nll_per_tok,
             "ppl": ppl, "rec_per_sent": total_rec / max(1, total_sents),
+            "rec_sum": total_rec, "n_gls_tokens": total_gls_tok,
+            "n_sgn_frames": total_frames,
+            "rec_per_gtok": total_rec / max(1, total_gls_tok),
+            "rec_per_frame": total_rec / max(1, total_frames),
             "n_sents": total_sents, "bleu": bleu}
 
 
@@ -221,6 +247,23 @@ def main():
     ap.add_argument("--clip", type=float, default=1.0,
                     help="Grad-norm clip (v1-v3 hardcoded 1.0; JoeyNMT-framework default, "
                          "author inference).")
+    ap.add_argument("--ctc-norm", choices=["sent", "gtok", "frame", "sum"],
+                    default="sent",
+                    help="CTC-term denominator (round-33 sensitivity; the released "
+                         "log's dev Recognition Loss is not identifiable: our "
+                         "per-sentence dev CTC is 39.9 vs logged 17.28).")
+    ap.add_argument("--save-steps", default="",
+                    help="Comma-separated optimizer steps at which to additionally "
+                         "save step_<n>.ckpt (round-33 step-matched experiment: "
+                         "1820,2828 -- the released run's best and final steps).")
+    ap.add_argument("--save-final", action="store_true",
+                    help="Save final.ckpt at termination (post-training weights, "
+                         "as opposed to the best checkpoint).")
+    ap.add_argument("--stop-frozen", type=int, default=0,
+                    help="Stop when the LR has been unchanged for this many "
+                         "consecutive validations AND the best checkpoint is "
+                         "unchanged (mirrors the published family's external "
+                         "termination at the scheduler's numerical floor; 0=off).")
     ap.add_argument("--max-validations", type=int, default=1200,
                     help="Hard safety cap (LR floor expected at ~450 validations).")
     ap.add_argument("--output", required=True)
@@ -298,11 +341,15 @@ def main():
         optimizer, mode="max", factor=float(opt_cfg.get("decrease_factor", 0.8)),
         patience=patience, min_lr=min_lr)
 
+    save_steps = sorted({int(s) for s in args.save_steps.split(",") if s.strip()})
+    protocol = PROTOCOL if (args.ctc_norm == "sent" and not save_steps) \
+        else PROTOCOL + f"-ctc{args.ctc_norm}" + ("-stepckpt" if save_steps else "")
     log = {"seed": seed, "config": str(args.config), "config_sha256": sha256_file(args.config),
-           "protocol": PROTOCOL, "rec_weight": rec_weight, "trans_weight": trans_weight,
+           "protocol": protocol, "rec_weight": rec_weight, "trans_weight": trans_weight,
            "validation_freq_steps": val_freq, "selection": "bleu", "beam_size": model.beam_size,
            "batch_size": batch_size, "grad_accum": args.grad_accum,
            "translation_normalization": "batch", "loss_reduction": "token-sum / n_sentences",
+           "ctc_norm": args.ctc_norm, "save_steps": save_steps,
            "stop_rule": args.stop_rule, "patience": patience, "clip": args.clip,
            "max_validations": args.max_validations,
            "stop_rule_note": ("released run improved last at val#130 (step 1820) then ran 72 "
@@ -314,6 +361,7 @@ def main():
 
     best_metric = float("-inf")  # first validation (BLEU 0.00) counts as improved, as in released log
     best_step = -1; no_improve = 0; global_step = 0; stop_reason = None
+    prev_lr_val = None; lr_frozen_run = 0
     val_fh = open(out_dir / "validations.txt", "w")
 
     for epoch in range(1, epochs + 1):
@@ -321,7 +369,8 @@ def main():
         for batch in train_loader:
             for k in batch:
                 if torch.is_tensor(batch[k]): batch[k] = batch[k].to(device)
-            loss, tl, rl = compute_loss_faithful(model, batch, device, rec_weight, trans_weight)
+            loss, tl, rl = compute_loss_faithful(model, batch, device, rec_weight, trans_weight,
+                                                 ctc_norm=args.ctc_norm)
             (loss / args.grad_accum).backward()
             if (global_step + 1) % args.grad_accum == 0:
                 if len(log["first_grad_norms"]) < 10:
@@ -330,6 +379,11 @@ def main():
                 else:
                     torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=args.clip)
                 optimizer.step(); optimizer.zero_grad()
+                if global_step + 1 in save_steps:
+                    torch.save({"model_state": model.state_dict(), "step": global_step + 1,
+                                "epoch": epoch, "config": cfg, "variant": "fixed-step"},
+                               out_dir / f"step_{global_step + 1}.ckpt")
+                    print(f"  saved step_{global_step + 1}.ckpt", flush=True)
             global_step += 1
             if global_step % val_freq == 0:
                 dev = evaluate_dev_faithful(model, dev_items_raw, dev_loader, device, subsample)
@@ -353,6 +407,9 @@ def main():
                                            "dev_nll_per_tok": dev["nll_per_tok"],
                                            "dev_ppl": dev["ppl"],
                                            "dev_rec_per_sent": dev["rec_per_sent"],
+                                           "dev_rec_sum": dev["rec_sum"],
+                                           "dev_rec_per_gtok": dev["rec_per_gtok"],
+                                           "dev_rec_per_frame": dev["rec_per_frame"],
                                            "dev_bleu": dev["bleu"], "lr": lr, "improved": better})
                 val_fh.write(format_validation_line(global_step, dev, lr, better) + "\n")
                 val_fh.flush()
@@ -367,6 +424,15 @@ def main():
                 if args.stop_rule == "lr_floor" and lr <= min_lr * (1.0 + 1e-9):
                     stop_reason = "lr_floor"; print(f"  LR floor {min_lr} reached; stop", flush=True)
                     break
+                if args.stop_frozen > 0:
+                    lr_frozen_run = lr_frozen_run + 1 if (prev_lr_val is not None and lr == prev_lr_val) else 0
+                    prev_lr_val = lr
+                    if lr_frozen_run >= args.stop_frozen and no_improve > 200:
+                        stop_reason = (f"lr_frozen_{lr_frozen_run}vals_best_unchanged"
+                                       f"_{no_improve}vals")
+                        print(f"  LR frozen {lr_frozen_run} validations with best "
+                              f"unchanged {no_improve}; stop", flush=True)
+                        break
                 if args.stop_rule == "patience" and no_improve >= patience:
                     stop_reason = f"patience({patience})"; print(f"  early stop at step {global_step}", flush=True)
                     break
@@ -376,6 +442,11 @@ def main():
         if stop_reason: break
 
     val_fh.close()
+    if args.save_final:
+        torch.save({"model_state": model.state_dict(), "step": global_step,
+                    "epoch": epoch, "config": cfg, "variant": "final-at-termination"},
+                   out_dir / "final.ckpt")
+        print(f"  saved final.ckpt @ step {global_step}", flush=True)
     log["best"] = {"step": best_step, "dev_metric": best_metric, "selection": "bleu"}
     log["stop_reason"] = stop_reason or f"epochs({epochs})"
     log["finished_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())

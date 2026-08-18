@@ -34,7 +34,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CKPT_ROOT = ROOT / "checkpoints"
-SKIP_DIRS = {"released", "finetune_released", "step_faithful_legacy_nll", "retrain_logs"}
+SKIP_DIRS = {"released", "finetune_released", "step_faithful_legacy_nll", "retrain_logs",
+              "faithful_steps", "ctc_clip_sens"}  # round-33 sensitivity runs: outside the canonical panel
 
 _MANIFEST_PRIMARY = ROOT / "artifact" / "claim_manifest.json"
 _MANIFEST_FALLBACK = ROOT / "claim_manifest.json"
@@ -223,9 +224,9 @@ def main():
                 ("results/donor_pool_resampling.json",
                  ["resampled_640_subpool_distribution", "origin_effect_mean"], 8.38,
                  "+8.38", 0.1),
-                ("results/robustness_diagnostics.json",
-                 ["part1_spearman_readout_competence", "excl_released", "rho"], 0.907,
-                 "0.907", 0.005),
+                ("results/readout_gap_correlation.json",
+                 ["correlations", "readout_vs_gap", "excl_released", "rho"], -0.564,
+                 "{-}0.56", 0.005),
             ]
             for src, key_path, expected_json, tex_token, tol in cross_checks:
                 if not (ROOT / src).exists():
@@ -242,6 +243,52 @@ def main():
                     ok(f"tex: contains '{tex_token}'")
                 else:
                     fail(f"tex: does NOT contain '{tex_token}'")
+
+            # (7a) Round-33 sensitivity headline: unclipped (clipinf) run
+            fs_path = ROOT / "results/faithful_steps_eval.json"
+            if fs_path.exists():
+                fs = json.load(open(fs_path))
+                row = next((r for r in fs.get("rows", [])
+                            if "clipinf" in r.get("ckpt", "") and r["ckpt"].endswith("/best")), None)
+                if row is None:
+                    fail("faithful_steps_eval.json: clipinf best row missing")
+                else:
+                    if abs(row["gap"] - 11.19) > 0.01:
+                        fail(f"clipinf gap {row['gap']} != 11.19")
+                    else:
+                        ok(f"clipinf gap = {row['gap']}")
+                    if abs(row["train_readout_bleu"] - 99.98) > 0.01:
+                        fail(f"clipinf readout {row['train_readout_bleu']} != 99.98")
+                    else:
+                        ok(f"clipinf readout = {row['train_readout_bleu']}")
+                    for token in ("+11.19", "99.98"):
+                        if token in tex:
+                            ok(f"tex: contains '{token}'")
+                        else:
+                            fail(f"tex: does NOT contain '{token}'")
+                row5 = next((r for r in fs.get("rows", [])
+                             if r.get("ckpt") == "ctc_clip_sens/clip5p0_seed42/best"), None)
+                if row5 is None:
+                    fail("faithful_steps_eval.json: clip5p0 best row missing")
+                else:
+                    if abs(row5["train_readout_bleu"] - 82.69) > 0.01:
+                        fail(f"clip5p0 readout {row5['train_readout_bleu']} != 82.69")
+                    else:
+                        ok(f"clip5p0 readout = {row5['train_readout_bleu']}")
+                    if "82.69" in tex or "82.7" in tex:
+                        ok("tex: contains clip5.0 readout token")
+                    else:
+                        fail("tex: does NOT contain clip5.0 readout token (82.69/82.7)")
+            else:
+                fail("cross-check source missing: results/faithful_steps_eval.json")
+
+            # (7b) Regression guards: stale 31-point readout--gap correlations
+            # (superseded by results/readout_gap_correlation.json, round 33)
+            for stale in ("0.916", "0.907", "-0.082", "rho{=}{-}0.082"):
+                if stale in tex:
+                    fail(f"tex: stale readout-correlation token '{stale}' present")
+            else:
+                ok("tex: no stale 31-point readout-correlation tokens")
 
             # (8) Probe multiplicity
             pm_path = ROOT / "results/probe_multiplicity.json"
