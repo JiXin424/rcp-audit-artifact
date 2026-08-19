@@ -14,7 +14,7 @@
 % citations that both documents share.
 \externaldocument{main_lre_xr}
 
-\title[Supplementary Information]{Supplementary Information for:\\Auditing the Reproducibility of the SLRTP2025 Back-Translation Evaluator from Public Artifacts: What Reproduces, and What One Inference Hid}
+\title[Supplementary Information]{Supplementary Information for:\\Reconstructing the SLRTP2025 Back-Translation Evaluator: An Artifact Audit and Gradient-Clipping Sensitivity Study}
 
 \author*[1]{} % Authors retained for blind review
 \affil*[1]{}
@@ -31,7 +31,7 @@ This supplement provides detailed appendices referenced in the main manuscript. 
 
 \section{Missing Test ID Sensitivity}
 \label{sec:appendix_missing_id}
-The official PHOENIX-2014T metadata contain 7,096/519/642 train/development/test IDs. The released SLRTP2025 pose records available to this study contain 7,060/515/641 sequences: 36/4/1 official IDs are absent from the released pose materialization. Their IDs and the reason \texttt{absent\_from\_slrtp2025\_released\_pose\_records} are enumerated in \texttt{artifact/manifests/exclusions.jsonl}. The missing test ID is \texttt{13December\_2010\_Monday\_tagesschau-6940}; its text/gloss metadata are not present in the released pose record, so length and template density cannot be reconstructed without an additional official annotation source. We therefore condition every result on the complete 641-record release rather than assert that the missing item is ignorable. As an empirical observed-extreme sensitivity scenario, assigning the missing item the per-item score of the largest PURE-over-REC outlier observed among the 641 released items changes the corpus-level gap by less than $\pm 0.2$ BLEU points, well within the reported 95\% paired-bootstrap interval $[+9.6,+12.4]$. This is an observed-extreme scenario, not a worst-case bound: corpus BLEU is non-linear and the missing item's reference, hypothesis, and n-gram sufficient statistics are unknown, so the true mathematical worst case is not covered. All primary conclusions are therefore restricted to the released 641-record materialization.
+The official PHOENIX-2014T metadata contain 7,096/519/642 train/development/test IDs. The released SLRTP2025 pose records available to this study contain 7,060/515/641 sequences: 36/4/1 official IDs are absent from the released pose materialization. Their IDs are enumerated in \texttt{artifact/manifests/exclusions.jsonl}, and the ID-level reconciliation of \texttt{results/split\_reconciliation.json} (SI~Sup.~V) classifies them: all 41 are present in an independent upstream skeleton extraction carrying the full official counts (7,096/519/642), so the drop occurred inside the SLRTP2025 pose packaging rather than upstream; the dropped items show no duration or signer anomaly (train frames 22--262 across six of nine signers), and only two of the 36 dropped training texts lack an exact copy in the retained pool (both high-frequency template sentences). The shipped \texttt{train.pt} contains exactly 7,060 items, so the released training manifest is itself the reduced pool. The missing test ID is \texttt{13December\_2010\_Monday\_tagesschau-6940}; its text/gloss metadata are not present in the released pose record, so length and template density cannot be reconstructed without an additional official annotation source. We therefore condition every result on the complete 641-record release rather than assert that the missing item is ignorable. As an empirical observed-extreme sensitivity scenario, assigning the missing item the per-item score of the largest PURE-over-REC outlier observed among the 641 released items changes the corpus-level gap by less than $\pm 0.2$ BLEU points, well within the reported 95\% paired-bootstrap interval $[+9.6,+12.4]$. This is an observed-extreme scenario, not a worst-case bound: corpus BLEU is non-linear and the missing item's reference, hypothesis, and n-gram sufficient statistics are unknown, so the true mathematical worst case is not covered. All primary conclusions are therefore restricted to the released 641-record materialization.
 
 \section{Per-seed Legacy Cells (101--606 primary; 707--1405 extension)}
 \label{sec:appendix_extension_cells}
@@ -155,7 +155,7 @@ Faithful (train\_faithful.py, 42--49) & 8 & 8 & 8 & 8 & RQ1 primary; non-reprodu
 Reconstructions (primary) & 6 & 6 & 6 & 6 & multiseed, bootstrap, dose--resp. \\
 Reconstructions (extension) & 8 & 8 & 8 & 8 & prediction interval, dose--resp. \\
 Validation-freq-misread & 4 & 4 & 4 & 4 & dose--resp. \\
-Step-corrected (re-trained) & 10 & 10 & 10 & 10 & recipe-faithfulness; dose--resp. \\
+Step-corrected (re-trained) & 10 & 10 & 10 & 10 & recipe-adherence; dose--resp. \\
 Joint-loss (greedy, 1801--1808) & 8 & 8 & 8 & 8 & protocol-robustness \\
 Joint-loss (beam-3, 1901--1908) & 8 & 8 & 8 & 8 & protocol-robustness \\
 Joint-loss supplementary (1809/1810) & 1 & 1 & 0 & 1 & exploratory; no canonical gap \\
@@ -174,7 +174,7 @@ Released original & --- & --- & 1 & 1 & audit target (not trained) \\
 \end{table}
 
 \paragraph{Readout--competence association.}
-Thirty-eight constructible checkpoints plus the released evaluator have a uniform full-pool beam-3 free-decode readout (SI~Sup.~E protocol; the set of 31 used in earlier rounds plus the eight faithful readouts). Table~\ref{tab:readout_assoc} reports the Spearman correlations recomputed over this current set (\texttt{results/readout\_gap\_correlation.json}; \texttt{rescue\_wd0} has a uniform readout but no canonical gap and enters the readout--dev correlation only). Within the constructible family the readout is associated with decoded dev BLEU-4 ($\rho{=}0.86$--$0.88$ over the checkpoints that also have uniform dev decodes, $n{=}17$--$18$), but the readout--gap association is \emph{negative} ($\rho{=}{-}0.56$ excluding the released evaluator; $-0.44$ including it; $-0.44$ over non-degenerate constructible checkpoints): better-reading-out constructible checkpoints have \emph{more} negative gaps. The released evaluator is the single positive-gap checkpoint of the canonical (clip$=$1.0) family and lies outside the family trend on both axes (family readout range $0$--$12.08$ vs.\ $78.8$; family train-minus-dev range $-0.7$ to $+0.9$ vs.\ $65.4$), so neither a tracking nor an overfitting interpretation of its readout-with-generalization signature is supported by any within-family association. These within-regime facts must not be extrapolated across clipping regimes: the sensitivity grid of Sup.~U shows the readout--gap relation turning positive once unclipped training enters the memorisation regime (readout 99.98, gap $+11.19$), resolving the co-occurrence as a clipping-regime property rather than an uncovered region. Teacher-forced correlations are computed over the 15 checkpoints with checkpoint-level stats (14 reconstructions plus the released evaluator): readout correlates negatively with train NLL ($\rho{=}{-}0.561$, $p{=}0.030$) and positively with train token accuracy ($\rho{=}0.509$, $p{=}0.052$).
+Thirty-eight constructible checkpoints plus the released evaluator have a uniform full-pool beam-3 free-decode readout (SI~Sup.~E protocol; the set of 31 used in earlier rounds plus the eight seven-correction readouts). Table~\ref{tab:readout_assoc} reports the Spearman correlations recomputed over this current set (\texttt{results/readout\_gap\_correlation.json}; \texttt{rescue\_wd0} has a uniform readout but no canonical gap and enters the readout--dev correlation only). Within the constructible family the readout is associated with decoded dev BLEU-4 ($\rho{=}0.86$--$0.88$ over the checkpoints that also have uniform dev decodes, $n{=}17$--$18$), but the readout--gap association is \emph{negative} ($\rho{=}{-}0.56$ excluding the released evaluator; $-0.44$ including it; $-0.44$ over non-degenerate constructible checkpoints): better-reading-out constructible checkpoints have \emph{more} negative gaps. The released evaluator is the single positive-gap checkpoint of the canonical (clip$=$1.0) family and lies outside the family trend on both axes (family readout range $0$--$12.08$ vs.\ $78.8$; family train-minus-dev range $-0.7$ to $+0.9$ vs.\ $65.4$), so neither a tracking nor an overfitting interpretation of its readout-with-generalization signature is supported by any within-family association. These within-regime facts must not be extrapolated across clipping regimes: the sensitivity grid of Sup.~U shows the readout--gap relation turning positive once unclipped training enters the memorisation regime (readout 99.98, gap $+11.19$), resolving the co-occurrence as a clipping-regime property rather than an uncovered region. Teacher-forced correlations are computed over the 15 checkpoints with checkpoint-level stats (14 reconstructions plus the released evaluator): readout correlates negatively with train NLL ($\rho{=}{-}0.561$, $p{=}0.030$) and positively with train token accuracy ($\rho{=}0.509$, $p{=}0.052$).
 
 \begin{table}[h]
 \centering
@@ -299,11 +299,11 @@ Table~\ref{tab:config_mapping} maps each load-bearing field of the released \tex
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Released \texttt{config.yaml} load-bearing field-by-field mapping: original-framework semantics (empirically pinned by the released \texttt{validations.txt} where noted) vs.\ our v1--v3 reconstruction semantics (with defects) vs.\ our faithful v4 semantics. Unlisted fields (model architecture, dropout, initialisers, max lengths) are applied verbatim and identical across v1--v4.}
+\caption{Released \texttt{config.yaml} load-bearing field-by-field mapping: original-framework semantics (empirically pinned by the released \texttt{validations.txt} where noted) vs.\ our v1--v3 reconstruction semantics (with defects) vs.\ our seven-correction v4 semantics. Unlisted fields (model architecture, dropout, initialisers, max lengths) are applied verbatim and identical across v1--v4.}
 \label{tab:config_mapping}
 \begin{tabular}{p{2.9cm}p{3.5cm}p{3.4cm}p{3.4cm}}
 \toprule
-Field (released value) & Original framework semantics & v1--v3 semantics (defect) & v4 faithful semantics \\
+Field (released value) & Original framework semantics & v1--v3 semantics (defect) & v4 seven-correction semantics \\
 \midrule
 \texttt{translation\_normalization} (batch) & token-sum CE $\div$ sentences; logged dev Translation Loss is the raw token sum (43{,}440.8 $=$ 7{,}813 $\times$ ln 259.84) & CE \texttt{reduction="mean"} (per-token): $\sim$15--30$\times$ smaller gradient scale; with Adam weight-decay coupling this changes effective regularization & CE \texttt{reduction="sum"} $\div$ batch sentences; smoke-run step-14 dev token-sum 42{,}981.5 vs.\ released 43{,}440.8 (1.1\% off) \\
 \midrule
@@ -315,7 +315,7 @@ dev NLL token count & counts \emph{valid} target tokens (mask True $=$ valid) & 
 \midrule
 \texttt{eval\_translation\_beam\_size} (3) for selection & autoregressive beam-3 decode for validation BLEU (WER/BLEU columns of released log) & v1: selection branch never saved (hard-coded \texttt{improved=False}); v1.5/v2: teacher-forced greedy argmax, not autoregressive; v3: beam-3 (corrected) & autoregressive beam-3 (via \texttt{back\_translate}), identical to the evaluation decoder \\
 \midrule
-\texttt{epochs} (3000) / stopping & released run ended at step 2828 (101 epochs) after 72 consecutive non-improving validations---patience-5 early stop is \emph{provably not} the released rule; LR-floor is the only config-reproducible stop & 300-epoch cap with early-stop patience 15 & 3000-epoch cap; default stop rule $=$ LR floor (1e-8); patience rule available but off and documented as not released-faithful \\
+\texttt{epochs} (3000) / stopping & released run ended at step 2828 (101 epochs) after 72 consecutive non-improving validations---patience-5 early stop is \emph{provably not} the released rule; LR-floor is the only config-reproducible stop & 300-epoch cap with early-stop patience 15 & 3000-epoch cap; default stop rule $=$ LR floor (1e-8); patience rule available but off and documented as not release-matching \\
 \midrule
 \texttt{scheduling} (plateau), \texttt{decrease\_factor} (0.8), \texttt{patience} (5) & ReduceLROnPlateau(mode=max) on dev BLEU; every logged decay fires on the 6th consecutive non-improving validation & present since v1, but reached only $\sim$60--90 validations before the patience-15 stop & identical scheduler wiring; LR logged after \texttt{scheduler.step} as in the released log \\
 \midrule
@@ -415,7 +415,7 @@ Signer$\times$Show           & combined        & 17  & $+10.14$ & $[+7.89, +11.9
 \end{tabular}
 \end{table}
 
-The donor-cluster and donor two-way CIs ($[+8.87,+11.64]$ and $[+8.79,+11.74]$) match the query-level CI ($[+8.88,+11.62]$) to within 0.03 BLEU, so donor reuse (61/565 donors reused, max 6$\times$) does not materially inflate the item-level precision. The signer-cluster CI ($[+9.29,+11.39]$, 9 clusters) is slightly tighter than the query-level CI, consistent with within-signer positive correlation; with only 9 clusters the percentile coverage of this cluster bootstrap is unreliable, so it serves as a sensitivity reference rather than a confirmatory interval (as flagged in the main-text Discussion). The broadcast-show split has only 2 clusters (\emph{heute} 133 items, \emph{tagesschau} 508) and gives a wider CI ($[+5.16,+11.44]$); we report it as an illustrative sensitivity check without confirmatory weight. The broadcast-date (297 clusters) and signer$\times$show (17 clusters) CIs both match the query-level CI closely. All cluster designs are computed on the canonical materialization (the pre-exclusion version is reported as a sensitivity analysis in Sup.~N). The donor-pool decomposition analysis of \S\ref{sec:exposure_results} additionally reports separate one-way cluster bootstraps and a joint multiway replicate for the origin contrast, all matching to within $\pm 0.3$ (Appendix~\ref{sec:appendix_decomposition}).
+The donor-cluster CI ($[+8.87,+11.64]$) matches the query-level CI ($[+8.88,+11.62]$) to within 0.03 BLEU and the donor two-way CI ($[+8.79,+11.74]$) to within 0.12, so donor reuse (61/565 donors reused, max 6$\times$) does not materially inflate the item-level precision. The signer-cluster CI ($[+9.29,+11.39]$, 9 clusters) is slightly tighter than the query-level CI, consistent with within-signer positive correlation; with only 9 clusters the percentile coverage of this cluster bootstrap is unreliable, so it serves as a sensitivity reference rather than a confirmatory interval (as flagged in the main-text Discussion). The broadcast-show split has only 2 clusters (\emph{heute} 133 items, \emph{tagesschau} 508) and gives a wider CI ($[+5.16,+11.44]$); we report it as an illustrative sensitivity check without confirmatory weight. The broadcast-date (297 clusters) and signer$\times$show (17 clusters) CIs both match the query-level CI closely. All cluster designs are computed on the canonical materialization (the pre-exclusion version is reported as a sensitivity analysis in Sup.~N). The donor-pool decomposition analysis of \S\ref{sec:exposure_results} additionally reports separate one-way cluster bootstraps and a joint multiway replicate for the origin contrast, all matching to within $\pm 0.3$ (Appendix~\ref{sec:appendix_decomposition}).
 
 \section{Per-Item Reference-Frame Sensitivity (matched 461-item subset)}
 \label{sec:appendix_ref_frame_paired}
@@ -828,7 +828,7 @@ Missing from official & 36 & 4 & 1 \\
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Checkpoint accounting, auto-generated from \texttt{results/accounting\_table.json} (single source of truth, disk-scanned). ``Runs'' = from-scratch training executions; ``Decoded'' = beam-3 decoded on the canonical PHX-public gap panel; ``Unique'' = distinct SHA-256 weight binaries; ``Non-deg.'' = non-degenerate (BLEU $>$ 0, excluding 3 $\alpha{=}1.0$ distillation students with empty output and 2 smallest ladder fractions). The partially-corrected tier (14 corrected-recipe runs) provides recipe-faithfulness evidence; secondary (14 legacy, of which 6 prospectively specified) provides the prospectively specified non-reproduction direction plus stability; diagnostic is mechanism exploration.}
+\caption{Checkpoint accounting, auto-generated from \texttt{results/accounting\_table.json} (single source of truth, disk-scanned). ``Runs'' = from-scratch training executions; ``Decoded'' = beam-3 decoded on the canonical PHX-public gap panel; ``Unique'' = distinct SHA-256 weight binaries; ``Non-deg.'' = non-degenerate (BLEU $>$ 0, excluding 3 $\alpha{=}1.0$ distillation students with empty output and 2 smallest ladder fractions). The partially-corrected tier (14 corrected-recipe runs) provides recipe-adherence evidence; secondary (14 legacy, of which 6 prospectively specified) provides the prospectively specified non-reproduction direction plus stability; diagnostic is mechanism exploration.}
 \label{tab:accounting}
 \begin{tabular}{p{2.8cm}rrrr}
 \toprule
@@ -881,7 +881,7 @@ This work & Our disclosed reconstruction from the public artifacts did not attai
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{2pt}
-\caption{Public-artifact provenance of each reconstruction family. ``Dev BLEU-4'' is the uniform full-pool beam-3 value (\S\ref{sec:sanity_checks}); the released evaluator scores 13.38. ``Selection'' is the checkpoint-selection rule. The faithful runs implement the released config exactly; the paper-derived runs use NLL selection on a legacy script; the step-corrected runs match the released \texttt{validation\_freq=14} JoeyNMT semantics with decoded-BLEU selection; the joint-loss variants additionally correct the recognition-loss omission.}
+\caption{Public-artifact provenance of each reconstruction family. ``Dev BLEU-4'' is the uniform full-pool beam-3 value (\S\ref{sec:sanity_checks}); the released evaluator scores 13.38. ``Selection'' is the checkpoint-selection rule. The seven-correction runs implement the released config exactly; the paper-derived runs use NLL selection on a legacy script; the step-corrected runs match the released \texttt{validation\_freq=14} JoeyNMT semantics with decoded-BLEU selection; the joint-loss variants additionally correct the recognition-loss omission.}
 \label{tab:public_provenance}
 \begin{tabular}{p{2.2cm}p{3.0cm}p{3.5cm}p{0.8cm}p{1.5cm}p{1.2cm}}
 \toprule
@@ -893,7 +893,7 @@ Validation-freq-misread & config.yaml (decoded-BLEU) & \texttt{validation\_freq=
 Step-corrected (re-trained) & config.yaml + JoeyNMT step semantics & fixed \texttt{validation\_freq} interpretation; translation-only loss & 10 & greedy-BLEU & 7.6--10.5 \\
 Joint-loss (greedy) & config.yaml (\texttt{recognition\_loss\_weight=1.0}) & adds CTC; token-mean loss; greedy selection & 8 & greedy-BLEU & 6.3--10.2 \\
 Joint-loss (beam-3) & config.yaml (eval\_beam=3) & adds CTC; token-mean loss; beam-3 selection & 8 & beam-3-BLEU & 8.7--10.5 \\
-Confirmation & recipe-faithful protocol & independent re-run for reproducibility & 2 & decoded BLEU & 9.0--9.5 \\
+Confirmation & recipe-adherent protocol & independent re-run for reproducibility & 2 & decoded BLEU & 9.0--9.5 \\
 Long-schedule & config.yaml (epochs=3000) & extended training budget & 1 & decoded BLEU & $\leq$10.02 \\
 Rescue (dropout/wd) & hyperparameter grid & dropout/wd variations; none passed gate & 1 & decoded BLEU & $\leq$10.02 \\
 Distillation & released checkpoint as teacher & student--teacher KL; students trained from scratch & 15 & decoded BLEU & 7.0--9.0 \\
@@ -1067,7 +1067,7 @@ Released (full 7{,}060, beam=3) & 1 & 13.38 & $+10.24$ & 78.82 / 70.7\% & --- \\
 Family & Runs & Trained & Has gap & Has dev & Enters \\
 \midrule
 Reconstructions (paper-derived, 14) & 14 & 14 & 14 & 14 & multiseed, bootstrap, PI, dose--resp. \\
-Partially-corrected (config-faithful + step-corrected, 14) & 14 & 14 & 14 & 14 & recipe-faithfulness evidence \\
+Partially-corrected (config-adherent + step-corrected, 14) & 14 & 14 & 14 & 14 & recipe-adherence evidence \\
 Joint-loss (greedy + beam-3, 16) & 16 & 16 & 16 & 16 & protocol-robustness \\
 Other diagnostic (confirmation + rescue + ladder + long-schedule, 8) & 8 & 8 & 6 & 8 & dose--resp. \\
 Distillation (15) & 15 & 15 & 15 & 15 & ladder, dose--resp. \\
@@ -1156,13 +1156,14 @@ Human refs, reconstructions (6 seeds) & 641 & 3.49--4.62 & 3.35--4.35 & $-0.15$ 
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Cross-evaluator re-decoding of the noisy-gloss retrieval outputs (641 PHX-public keys; \S\ref{sec:competition_real}). Gap = noisy-gloss $-$ REC, corpus sacreBLEU-4 (flat-reference form, \S\ref{sec:method} protocol). The realistic retrieval pipeline is roughly even with REC under the released evaluator ($-0.13$), and every non-degenerate evaluator gives a negative gap; the five degenerate checkpoints (three $\alpha{=}1.0$ distillation students, two smallest ladder fractions) decode empty or near-empty hypotheses and are excluded.}
+\caption{Cross-evaluator re-decoding of the noisy-gloss retrieval outputs (641 PHX-public keys; \S\ref{sec:competition_real}). Gap = noisy-gloss $-$ REC, corpus sacreBLEU-4 (flat-reference form, \S\ref{sec:method} protocol). Rows sum to 70 cross-evaluation decodes over 69 unique evaluators (the byte-identical \texttt{cf\_202}/\texttt{ls\_202} pair counted once). The realistic retrieval pipeline is roughly even with REC under the released evaluator ($-0.13$), and every non-degenerate evaluator gives a negative gap; the five degenerate checkpoints (three $\alpha{=}1.0$ distillation students, two smallest ladder fractions) decode empty or near-empty hypotheses and are excluded.}
 \label{tab:s11_noisy_gloss_cross_eval}
 \begin{tabular}{lrrr}
 \toprule
 Evaluator & $n$ & Gap range & Mean gap \\
 \midrule
 Released & 1 & $-0.13$ (NG 12.65, REC 12.78) & $-0.13$ \\
+Faithful (seeds 42--49) & 8 & $[-3.22, -1.59]$ & $-2.22$ \\
 Reconstructions & 14 & $[-1.58, -0.37]$ & $-1.14$ \\
 Validation-freq-misread & 4 & $[-1.79, -1.00]$ & $-1.51$ \\
 Step-corrected (re-trained) & 10 & $[-1.36, -0.42]$ & $-0.85$ \\
@@ -1180,7 +1181,7 @@ Ladder (non-degenerate fractions) & 2 & $[-0.58, -0.07]$ & $-0.33$ \\
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Cross-evaluator re-decoding of the rebuilt USTC-MoE fixed outputs (497 of 641 PHX-public keys; \S\ref{sec:competition_real}). Gap = USTC-MoE $-$ REC, corpus sacreBLEU-4. The rebuild decodes far below the officially reported leaderboard score (2.42 vs.\ 12.06), so it is pipeline-faithful but not score-faithful to the archived submission; every non-degenerate evaluator gives a negative gap. The five degenerate checkpoints (three $\alpha{=}1.0$ distillation students, two smallest ladder fractions) decode empty or near-empty hypotheses and are excluded.}
+\caption{Cross-evaluator re-decoding of the rebuilt USTC-MoE fixed outputs (497 of 641 PHX-public keys; \S\ref{sec:competition_real}). Gap = USTC-MoE $-$ REC, corpus sacreBLEU-4 (REC recomputed on the same 497 keys, hence 12.36 rather than the 641-key 12.78). The rebuild decodes far below the officially reported leaderboard score (2.42 vs.\ 12.06), so it is pipeline-equivalent but not score-equivalent to the archived submission; every non-degenerate evaluator gives a negative gap. The eight seven-correction checkpoints were cross-evaluated for the noisy-gloss system (Table~\ref{tab:s11_noisy_gloss_cross_eval}) but not for this rebuild. The five degenerate checkpoints (three $\alpha{=}1.0$ distillation students, two smallest ladder fractions) decode empty or near-empty hypotheses and are excluded.}
 \label{tab:s12_ustc_moe_cross_eval}
 \begin{tabular}{lrrr}
 \toprule
@@ -1338,9 +1339,9 @@ Three readings. (i) \emph{Replacing the query alone removes the response} ($-4.0
 \label{sec:appendix_clip_sensitivity}
 \textbf{Question answered:} are the training-pool readout signature and the positive probe response unrecoverable properties of the released evaluator, or artefacts of the two disclosed training-dynamics inferences (gradient-clip threshold; CTC-term normalisation)?
 
-\textbf{Design.} Seed-42 sensitivity runs of the faithful protocol (\texttt{src/training/train\_faithful.py}) varying one knob each: CTC denominator (sentences / gloss tokens / input frames / raw sum) at clip 1.0; gradient-clip \texttt{max\_norm} (1.0 = the faithful run, 2.0, 3.0, 5.0, none $=\infty$); and a signjoey-exact run (no clipping $+$ CTC raw sum, the literal \texttt{\_train\_batch} semantics of the underlying framework). All runs use the released seed-42 init, the released config otherwise, and the \texttt{--stop-frozen} termination (LR frozen at the plateau scheduler's numerical floor with the best checkpoint unchanged); none belongs to the canonical 76-run panel (registry directories \texttt{checkpoints/ctc\_clip\_sens/}, \texttt{checkpoints/faithful\_steps/}). Evaluation: canonical 641-query REC/PURE protocol, full 7{,}060-item training-pool free-decode readout with exact-match, via \texttt{scripts/eval\_step\_ckpts.py} into \texttt{results/faithful\_steps\_eval.json}.
+\textbf{Design.} Seed-42 sensitivity runs of the seven-correction protocol (\texttt{src/training/train\_faithful.py}) varying one knob each: CTC denominator (sentences / gloss tokens / input frames / raw sum) at clip 1.0; gradient-clip \texttt{max\_norm} (1.0 = the faithful run, 2.0, 3.0, 5.0, none $=\infty$); and a candidate-upstream run (no clipping $+$ CTC raw sum, the literal \texttt{\_train\_batch} semantics of the underlying framework). All runs use the released seed-42 init, the released config otherwise, and the \texttt{--stop-frozen} termination (LR frozen at the plateau scheduler's numerical floor with the best checkpoint unchanged); none belongs to the canonical 76-run panel (registry directories \texttt{checkpoints/ctc\_clip\_sens/}, \texttt{checkpoints/faithful\_steps/}). Evaluation: canonical 641-query REC/PURE protocol, full 7{,}060-item training-pool free-decode readout with exact-match, via \texttt{scripts/eval\_step\_ckpts.py} into \texttt{results/faithful\_steps\_eval.json}.
 
-\textbf{Source evidence for no clipping.} The released repository reuses the signjoey (\texttt{neccam/slt}) pipeline: its \texttt{validations.txt} column layout matches signjoey's \texttt{\_add\_report} line format field-for-field, and the data/model code paths correspond. In signjoey's \texttt{training.py}, \texttt{build\_gradient\_clipper} inspects the config fields \texttt{clip\_grad\_val} and \texttt{clip\_grad\_norm}; when neither is present it returns \texttt{None}, and \texttt{\_train\_batch} then applies no clipping (when present, the framework clips by \emph{value}, not by norm). The released \texttt{config.yaml} contains neither field, so the framework-default reading of the release is that the released training ran unclipped. The same source pins the CTC-term semantics: \texttt{\_train\_batch} divides the translation loss by \texttt{num\_seqs} (the \texttt{batch} normalization) but the recognition loss only by \texttt{batch\_multiplier} ($=$1), i.e.\ the raw CTC sum---the source carries an explicit developer comment (\texttt{\# TODO (Cihan): Add Gloss Token normalization (?)}) acknowledging the missing normalisation. Our \texttt{max\_norm}$=$1.0 was inherited from the v1--v3 scripts and disclosed as an author inference; this table overturns it. The inference chain is source-semantic (framework version assumption), not a released transcript; the behavioural confirmation is the ``none'' row reproducing both previously unreproduced properties. (signjoey's stock stopping logic---stop when a plateau decay fires and no improvement occurred at the pre-decay LR---would have terminated the released run at roughly the second post-best decay, a dozen validations after its step-1{,}820 best; the released run instead logged 72 further validations, so the release's own stopping rule remains externally terminated and the step-matched analysis of the main text applies.)
+\textbf{Source evidence for no clipping.} The released repository reuses the signjoey (\texttt{neccam/slt}) pipeline: its \texttt{validations.txt} column layout matches signjoey's \texttt{\_add\_report} line format field-for-field, and the data/model code paths correspond. In signjoey's \texttt{builders.py} (commit \texttt{249d3cd}, 2025-04-27), \texttt{build\_gradient\_clipper} inspects the config fields \texttt{clip\_grad\_val} and \texttt{clip\_grad\_norm}: the former selects value clipping (\texttt{clip\_grad\_value\_}), the latter norm clipping (\texttt{clip\_grad\_norm\_}), the two are mutually exclusive, and when neither is present the builder returns \texttt{None}---no clipping at all. The released \texttt{config.yaml} contains neither field, so under the candidate upstream semantics the released configuration implies no clipping; this reading is conditional on the framework version and unconfirmed by any released training transcript. The same source pins the CTC-term semantics: \texttt{\_train\_batch} divides the translation loss by \texttt{num\_seqs} (the \texttt{batch} normalization) but the recognition loss only by \texttt{batch\_multiplier} ($=$1), i.e.\ the raw CTC sum---the source carries an explicit developer comment (\texttt{\# TODO (Cihan): Add Gloss Token normalization (?)}) acknowledging the missing normalisation. Our \texttt{max\_norm}$=$1.0 was inherited from the v1--v3 scripts and disclosed as an author inference; this table overturns it. The inference chain is source-semantic (framework version assumption), not a released transcript; the behavioural confirmation is the ``none'' row reproducing both previously unreproduced properties. (signjoey's stock stopping logic---stop when a plateau decay fires and no improvement occurred at the pre-decay LR---would have terminated the released run at roughly the second post-best decay, a dozen validations after its step-1{,}820 best; the released run instead logged 72 further validations, so the release's own stopping rule remains externally terminated and the step-matched analysis of the main text applies.)
 
 \begin{table}[h]
 \centering
@@ -1356,7 +1357,7 @@ CTC denom.\ (clip 1.0) & sentences & 12.05 & 13.11 & 10.32 & $-2.80$ & 11.96 (2.
  & input frames & 9.55 & 9.62 & 8.75 & $-0.88$ & 9.18 (1.9\%) \\
  & raw sum & 0.90 & 0.95 & 0.95 & $+0.01$ & 0.67 (0.0\%) \\
 \midrule
-Clip $\infty$? (CTC sent) & 1.0 (faithful) & 12.05 & 13.11 & 10.32 & $-2.80$ & 11.96 (2.4\%) \\
+Clip $\infty$? (CTC sent) & 1.0 (seven-correction) & 12.05 & 13.11 & 10.32 & $-2.80$ & 11.96 (2.4\%) \\
  & 2.0 & 17.17 & 16.35 & 15.90 & $-0.45$ & 23.65 (9.0\%) \\
  & 3.0 & 17.13 & 16.78 & 21.82 & $+5.04$ & 53.21 (31.8\%) \\
  & 5.0 & 16.54 & 15.92 & 23.97 & $+8.05$ & 82.69 (68.4\%) \\
@@ -1364,21 +1365,176 @@ Clip $\infty$? (CTC sent) & 1.0 (faithful) & 12.05 & 13.11 & 10.32 & $-2.80$ & 1
  & none (seed 43) & 15.78 & 14.32 & 25.63 & $+11.31$ & 95.25 (90.5\%) \\
  & none (seed 44) & 15.74 & 15.96 & 26.27 & $+10.31$ & 99.98 (99.9\%) \\
 \midrule
-signjoey-exact & none $+$ raw sum & 16.04 & 15.12 & 25.80 & $+10.68$ & 97.60 (95.1\%) \\
+candidate-upstream & none $+$ raw sum & 16.04 & 15.12 & 25.80 & $+10.68$ & 97.60 (95.1\%) \\
 \midrule
 \multicolumn{2}{l}{Released evaluator} & 13.38 & 12.78 & 23.02 & $+10.24$ & 78.8 (70.7\%) \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textbf{Unclipped trajectory.} The unclipped seed-42 run improves dev BLEU-4 monotonically to 15.69 at the released run's own best step (1{,}820), reaches its best 16.32 at step 2{,}352, and continues to the scheduler's numerical floor (step 7{,}014, 501 validations, LR frozen at 4.4e-8) without the best checkpoint changing; it was then terminated externally (the same manual rule as the published faithful runs). Pre-clip gradient norms over the first ten optimiser steps (377, 568, 145, 33, \ldots) exceed the 1.0 threshold by up to two orders of magnitude, so the clipped and unclipped regimes diverge from the first update: at clip 1.0 every step is direction-preserving truncation, and the memorisation regime is never entered.
+\textbf{Unclipped trajectory.} The unclipped seed-42 run improves dev BLEU-4 monotonically to 15.69 at the released run's own best step (1{,}820), reaches its best 16.32 at step 2{,}352, and continues to the scheduler's numerical floor (step 7{,}014, 501 validations, LR frozen at 4.4e-8) without the best checkpoint changing; it was then terminated externally (the same manual rule as the published seven-correction runs). Pre-clip gradient norms over the first ten optimiser steps (377, 568, 145, 33, \ldots) exceed the 1.0 threshold by up to two orders of magnitude, so the clipped and unclipped regimes diverge from the first update: at clip 1.0 every step is direction-preserving truncation, and the memorisation regime is never entered.
 
 \textbf{Step-matched unclipped readout.} A fresh unclipped run with checkpoints fixed at the released run's own best (1{,}820) and final (2{,}828) steps shows the memorisation regime is entered \emph{early}: at step 1{,}820 the readout is already 99.94 BLEU / 99.7\% EM (dev 15.69, REC 14.64, PURE 26.32, gap $+11.68$); at step 2{,}828, 99.98 / 99.9\% (dev 15.80, gap $+11.49$). The overshoot relative to the released evaluator's step-1{,}820 readout of 78.8 is therefore not an artefact of training longer than the released run: under unclipped dynamics the training pool is essentially memorised before the released run's best checkpoint.
 
-\textbf{Multi-seed confirmation.} Across seeds 42--44 the unclipped protocol gives dev 15.74--16.32, REC 14.32--15.96, gaps $+11.19$/$+11.31$/$+10.31$, and readouts 99.98/95.25/99.98 BLEU (90.5--99.9\% EM): the reproduction of both properties is stable across seeds, and every seed's gap is within 1 BLEU point of the released $+10.24$.
+\textbf{Multi-seed confirmation.} Across seeds 42--44 the unclipped protocol gives dev 15.74--16.32, REC 14.32--15.96, gaps $+11.19$/$+11.31$/$+10.31$, and readouts 99.98/95.25/99.98 BLEU (90.5--99.9\% EM): the reproduction of both properties is stable across seeds, and every seed's gap is within 1 BLEU point of the released $+10.24$. Round 34 extends the replication to the intermediate thresholds (three seeds each at clip 2/3/5; Table~\ref{tab:clip_ladder_multiseed}).
 
 \textbf{Interpretation and caveats.} The readout signature and the probe response are clipping-regime properties of the released recipe, constructible by disabling clipping (or, at intermediate strength, dialled to the released magnitude: clip 5.0 gives readout 82.69/68.4\% vs.\ the released 78.8/70.7\%, the closest single match of the ladder). The released operating point is bracketed but not matched in all coordinates---no single threshold places dev 13.38, readout 78.8, REC 12.78, and gap $+10.24$ simultaneously---so at least one further quantitative difference (CTC normalisation, stopping point, framework version, or data-order effects) persists; because the released config implies no clipping, the mismatch indicates the released run's trajectory was slower than ours in dev-competence terms, not that it was clipped. The within-regime readout--gap association of the canonical panel ($\rho{=}{-}0.56$; Sup.~D) must not be extrapolated across regimes: across the ladder it is strictly positive (readout and gap rise together at every step from clip 1.0 to none).
+
+\section{Round-34 additions: split reconciliation, frozen-dev probe panel, multi-seed ladder, and relocated tables}
+\label{sec:appendix_round34}
+This appendix collects the round-34 additions and three tables relocated from the main text for length. New analyses: the ID-level split reconciliation (main \S3.1), the frozen-dev-probe evaluation of the sensitivity checkpoints (main \S4.3), and multi-seed clip-ladder replicates (main \S4.3).
+
+\paragraph{Frozen-dev-probe panel (\texttt{results/dev\_probe\_eval.json}).}
+The dev-split TN-PURE-v1 donor registry was constructed with the identical algorithm, frozen, and never used for probe construction or exploration; the released evaluator scores REC 13.38 / PURE 21.47 / gap $+8.10$ on it. The sensitivity checkpoints evaluated under the same frozen registry:
+
+\paragraph{Tables relocated from the main text.}
+The three tables below moved to the SI in round 34 for length (main-text pointers: SI Tables S49--S51).
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Summary of the three primary descriptive comparisons over the full constructible family. Family $n$: (i)~74 beam-3-decoded training runs (range over 69 non-degenerate; 5 degenerate excluded); (ii)~38 constructible checkpoints with uniform full-pool readout (released listed separately); (iii)~gate-eligible non-distillation training runs. Per-view family composition in SI~Sup.~D. All canonical families share the clip$=$1.0 inference; the clipping sensitivity of \S\ref{sec:sensitivity} (outside this panel) extends the constructible ranges to readout 99.98 BLEU / 99.9\% EM and gap $+11.19$.}
+\label{tab:diagnostic_summary}
+\begin{tabular}{p{3.0cm}p{1.0cm}p{2.8cm}rr}
+\toprule
+Comparison & Family $n$ & Released evaluator & Family range & Released $-$ family max \\
+\midrule
+(i) Gap--competence & 74 & $+10.24$ at dev 13.38 & $[-2.80, -0.21]$ (69 non-deg.) & $+10.45$ \\
+(ii) Train-pool readout BLEU & 38 & 78.8 (70.7\% EM) & 6.6--12.08 (1--2.5\% EM) & $+66.7$ \\
+(iii) Competence gate (dev) & 60 & 13.38 & 6.5--12.62 (seven-correction max 12.62; 1/8 pass) & $+0.76$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Reproducibility accounting per headline claim. Layers: L1 recompute from committed decodes; L2 analysis re-execution; L3 re-decode from checkpoint weights; L4 from-scratch retraining. ``Licensed'' = verifiable end-to-end by a third party holding the PHOENIX-2014T and SLRTP2025 research licences.}
+\label{tab:repro_tiers}
+\begin{tabular}{p{3.3cm}p{2.5cm}cp{1.9cm}p{2.6cm}}
+\toprule
+Claim & Inputs beyond artifact & Layer & Licensed end-to-end & Compute / failure condition \\
+\midrule
+REC 12.78, PURE 23.02, gap $+10.24$ & none (per-item decodes committed) & L1 & yes, licence-free & $\sim$10 CPU-min; fails if donor-registry SHA-256 $\neq$ \texttt{9170a530\ldots} \\
+Faithful family (Table~\ref{tab:faithful_results}) & checkpoints (external mirror) or retrain & L3/L4 & yes with licences & L3 $\approx$1 GPU-h/ckpt; L4 $\approx$6 GPU-h/seed; fails if decodes leave seed-dispersion range \\
+Readout 78.8 / 70.7\% EM & released ckpt $+$ train poses & L3 & yes with licences & $\approx$1 GPU-h; fails if EM deviates \\
+Readout--gap correlations (\S\ref{sec:insample}) & per-checkpoint readouts $+$ gaps & L2 & yes, licence-free & minutes; fails if $\rho$ leaves CI \\
+Reference-frame contrast 9.08 & Czehmann CSV (CC BY-NC-SA, in artifact) & L1/L2 & yes, licence-free & minutes; fails if matched subset $\neq$ 461 \\
+Step-matched / CTC / clip sensitivity (\S\ref{sec:sensitivity}) & retraining & L4 & yes with licences & $\approx$6 GPU-h/run; fails if the unclipped run's readout or gap leaves the signature regime, or if CTC variants flip any conclusion \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{4pt}
+\caption{Step-matched evaluation of fresh seven-correction runs at the released run's best (1{,}820) and final (2{,}828) optimizer steps. Dev BLEU-4 is the training-time validation at the matched step; REC/PURE/gap use the canonical 641-query protocol; readout is full-training-pool free-decode BLEU-4 (7{,}060 items) with exact-match rate. Released evaluator at its best step: dev 13.38, readout 78.8 (70.7\%), gap $+10.24$.}
+\label{tab:step_matched}
+\begin{tabular}{llrrrrr}
+\toprule
+Seed & Step & Dev BLEU-4 & Test REC & PURE & Gap & Readout (EM\%) \\
+\midrule
+42 & 1{,}820 & 11.05 & 11.88 & 9.87 & $-2.00$ & 10.85 (2.2\%) \\
+43 & 1{,}820 & 11.27 & 11.28 & 9.82 & $-1.46$ & 11.23 (2.3\%) \\
+44 & 1{,}820 & 11.06 & 12.37 & 9.75 & $-2.63$ & 11.51 (2.4\%) \\
+42 & 2{,}828 & 11.60 & 12.56 & 10.56 & $-2.00$ & 11.81 (2.4\%) \\
+43 & 2{,}828 & 11.23 & 11.46 & 9.69 & $-1.77$ & 11.32 (2.3\%) \\
+44 & 2{,}828 & 11.78 & 12.46 & 9.96 & $-2.49$ & 11.61 (2.4\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{4pt}
+\caption{Frozen-dev-probe evaluation (515 queries; beam-3; registry SHA-256 prefix 2d4780a61ac3). All rows are best checkpoints. Test-split gaps for the same checkpoints are in Table~\ref{tab:clip_grid_full}/main Table~\ref{tab:clip_sensitivity}.}
+\label{tab:dev_probe_panel}
+\begin{tabular}{lrrr}
+\toprule
+Evaluator & Dev REC & Dev PURE & Dev gap \\
+\midrule
+\texttt{ctc\_clip\_sens/clipinf\_seed42} & 16.32 & 24.39 & $+8.07$ \\
+\texttt{ctc\_clip\_sens/clipinf\_seed43} & 15.78 & 23.78 & $+8.00$ \\
+\texttt{ctc\_clip\_sens/clipinf\_seed44} & 15.74 & 24.39 & $+8.64$ \\
+\texttt{ctc\_clip\_sens/candidate-upstream\_seed42} & 16.04 & 23.91 & $+7.87$ \\
+\texttt{ctc\_clip\_sens/clip5p0\_seed42} & 16.54 & 22.50 & $+5.96$ \\
+\texttt{ctc\_clip\_sens/clip3p0\_seed42} & 17.13 & 21.27 & $+4.14$ \\
+\texttt{ctc\_clip\_sens/clip2p0\_seed42} & 17.17 & 15.39 & $-1.79$ \\
+seven-correction seed 42 (clip 1.0) & 12.05 & 10.70 & $-1.35$ \\
+\midrule
+Released (reference) & 13.38 & 21.47 & $+8.10$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Implementation ladder from the original defective protocol to the seven-correction re-implementation and the unclipped resolution. All variants share the released architecture, data, and vocabularies; they differ in loss composition, normalisation, validation cadence, selection decode, stopping rule, and (final row) gradient clipping. Dev BLEU-4 is the uniform beam-3 full-pool value; gap is the canonical PURE--REC sacreBLEU-4 difference on the 641-item test set; readout is full-training-pool free-decode BLEU-4 (released: 78.8).}
+\label{tab:protocol_robustness}
+\begin{tabular}{p{3.4cm}p{2.6cm}rrr}
+\toprule
+Protocol (defects remaining) & Selection / validation & Dev BLEU-4 & Readout & Gap range (neg.\ frac.) \\
+\midrule
+Translation-only / epoch / NLL (1--4, 5--7) & NLL / epoch & 6.5--9.4 & 7.2--9.3 & $[-1.85,-0.80]$ (14/14) \\
+\quad validation-freq-misread (2 corrected) & NLL / epoch & 8.3--9.8 & --- & $[-1.70,-0.52]$ (4/4) \\
+Translation-only / step-val / BLEU (1, 4, 5--7) & greedy / 14 steps & 7.6--10.5 & --- & $[-1.37,-0.36]$ (10/10) \\
+Joint-loss / step-val / greedy-BLEU (4--7) & greedy / 14 steps & 6.3--10.2 & --- & $[-1.59,-0.48]$ (8/8) \\
+Joint-loss / step-val / beam-3 (5--7) & beam-3 / 14 steps & 8.7--10.5 & --- & $[-1.38,-0.37]$ (8/8) \\
+\textbf{Seven-correction (7 corrected; clip 1.0; seeds 42--49)} & beam-3 / 14 steps & \textbf{11.59--12.62} & \textbf{11.45--12.08} & $\mathbf{[-2.80,-1.37]}$ (8/8) \\
+Seven-correction, unclipped (8th corrected; seed 42) & beam-3 / 14 steps & 16.32 & 99.98 & $+11.19$ \\
+\midrule
+Released evaluator & --- & 13.38 & 78.8 & $+10.24$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{4pt}
+\caption{CTC-term normalisation sensitivity (seed 42, clip 1.0, otherwise the seven-correction protocol). REC/PURE/gap use the canonical 641-query protocol; readout is full-training-pool free-decode BLEU-4 (7{,}060 items) with exact-match rate. None of the four denominators matches the released log's step-14 Recognition Loss of 17.28 (\S\ref{sec:faithful_v4}); the raw-sum degeneracy holds only at clip 1.0 (see the candidate-upstream run, Table~\ref{tab:clip_sensitivity}).}
+\label{tab:ctc_sensitivity}
+\begin{tabular}{lrrrrr}
+\toprule
+CTC denominator & Dev BLEU-4 & Test REC & PURE & Gap & Readout (EM\%) \\
+\midrule
+sentences (default) & 12.05 & 13.11 & 10.32 & $-2.80$ & 11.96 (2.4\%) \\
+gloss tokens & 10.79 & 10.42 & 9.01 & $-1.40$ & 10.06 (2.0\%) \\
+input frames & 9.55 & 9.62 & 8.75 & $-0.88$ & 9.18 (1.9\%) \\
+raw sum & 0.90 & 0.95 & 0.95 & $+0.01$ & 0.67 (0.0\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\clearpage
+\paragraph{Multi-seed clip-ladder replicates (round 34).}
+Seeds 43--44 replicate the intermediate clip thresholds (\texttt{results/faithful\_steps\_eval.json}, \texttt{results/dev\_probe\_eval.json}). The seed-43/44 runs terminated at the 1{,}200-validation hard safety cap rather than the LR-floor trigger: by termination the LR was frozen at the scheduler's numerical floor (4.36e-8, the same terminal state as the published family) and the best checkpoint was unchanged over the final $\gtrsim$900 validations, so the cap does not affect best-checkpoint selection. Across the three seeds per threshold, readout, test gap, and dev-probe gap are each monotone in the threshold, and every adjacent threshold pair is separated by more than the between-seed range at either threshold.
+
+\begin{table}[h]
+\centering
+\scriptsize\setlength{\tabcolsep}{4pt}
+\caption{Multi-seed clip ladder (three seeds per threshold; seed-42 rows correspond to main Table~\ref{tab:clip_sensitivity}). Dev BLEU-4 is the training-time best validation; REC/PURE/gap use the canonical 641-query protocol; readout is full-training-pool free-decode BLEU-4 with exact-match rate; dev-probe gap uses the frozen dev-split registry. Mean $\pm$ SD over the three seeds.}
+\label{tab:clip_ladder_multiseed}
+\begin{tabular}{lrrrrrr}
+\toprule
+Threshold & Seeds & Test gap & Readout (EM\%) & Dev-probe gap & Dev BLEU-4 & Test REC \\
+\midrule
+1.0 & 42--49 (8) & $[-2.80,-1.37]$ & 11.45--12.08 (2.3--2.5) & s42: $-1.35$ & 11.59--12.62 & 11.60--13.11 \\
+2.0 & 42--44 & $-1.11\pm0.63$ & $23.2\pm0.5$ (8.5--9.0) & $-1.81\pm0.26$ & $17.10\pm0.44$ & $16.65\pm0.58$ \\
+3.0 & 42--44 & $+5.39\pm0.69$ & $56.5\pm4.3$ (31.8--40.3) & $+3.90\pm0.22$ & $17.34\pm0.48$ & $16.77\pm0.24$ \\
+5.0 & 42--44 & $+9.28\pm1.07$ & $92.5\pm8.8$ (68.4--99.0) & $+6.85\pm0.76$ & $16.77\pm0.29$ & $16.06\pm0.16$ \\
+none & 42--44 & $+10.94\pm0.55$ & $98.4\pm2.7$ (90.5--99.9) & $+8.24\pm0.35$ & $15.95\pm0.32$ & $15.12\pm0.43$ \\
+candidate-upstream & 42 & $+10.68$ & 97.60 (95.1) & $+7.87$ & 16.04 & 15.12 \\
+\midrule
+Released & --- & $+10.24$ & 78.8 (70.7) & $+8.10$ & 13.38 & 12.78 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \bibliography{references}
 
 \end{document}
+

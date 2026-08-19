@@ -209,6 +209,78 @@
       "train_readout_bleu": 11.61,
       "train_readout_em": 0.024,
       "dev_bleu": 11.78
+    },
+    {
+      "run": "ctc_clip_sens/clip2p0_seed43",
+      "ckpt": "ctc_clip_sens/clip2p0_seed43/best",
+      "rec_bleu": 16.231459035313744,
+      "pure_bleu": 15.073197052423504,
+      "gap": -1.1582619828902398,
+      "val_step": 2534,
+      "dev_bleu": 16.532232834879526,
+      "train_readout_bleu": 22.685531636546344,
+      "train_readout_em": 0.08470254957507083,
+      "elapsed_s": 72.1598916053772
+    },
+    {
+      "run": "ctc_clip_sens/clip2p0_seed44",
+      "ckpt": "ctc_clip_sens/clip2p0_seed44/best",
+      "rec_bleu": 17.372544735362283,
+      "pure_bleu": 15.663149197763357,
+      "gap": -1.709395537598926,
+      "val_step": 3304,
+      "dev_bleu": 17.401021680079886,
+      "train_readout_bleu": 23.174822171262786,
+      "train_readout_em": 0.08611898016997167,
+      "elapsed_s": 71.72424864768982
+    },
+    {
+      "run": "ctc_clip_sens/clip3p0_seed43",
+      "ckpt": "ctc_clip_sens/clip3p0_seed43/best",
+      "rec_bleu": 16.32463358296076,
+      "pure_bleu": 22.499865296157452,
+      "gap": 6.175231713196691,
+      "val_step": 2856,
+      "dev_bleu": 17.92175212338419,
+      "train_readout_bleu": 61.311838927680775,
+      "train_readout_em": 0.4028328611898017,
+      "elapsed_s": 74.51557850837708
+    },
+    {
+      "run": "ctc_clip_sens/clip3p0_seed44",
+      "ckpt": "ctc_clip_sens/clip3p0_seed44/best",
+      "rec_bleu": 17.19731508944035,
+      "pure_bleu": 22.139068512792342,
+      "gap": 4.94175342335199,
+      "val_step": 2366,
+      "dev_bleu": 16.982985872869016,
+      "train_readout_bleu": 54.90029641105245,
+      "train_readout_em": 0.3406515580736544,
+      "elapsed_s": 67.96905541419983
+    },
+    {
+      "run": "ctc_clip_sens/clip5p0_seed43",
+      "ckpt": "ctc_clip_sens/clip5p0_seed43/best",
+      "rec_bleu": 16.029910737275102,
+      "pure_bleu": 25.78781786112985,
+      "gap": 9.757907123854746,
+      "val_step": 2170,
+      "dev_bleu": 16.662807185294135,
+      "train_readout_bleu": 95.07274528865327,
+      "train_readout_em": 0.886685552407932,
+      "elapsed_s": 71.92923784255981
+    },
+    {
+      "run": "ctc_clip_sens/clip5p0_seed44",
+      "ckpt": "ctc_clip_sens/clip5p0_seed44/best",
+      "rec_bleu": 16.242838919863352,
+      "pure_bleu": 26.26009061979283,
+      "gap": 10.017251699929478,
+      "val_step": 2352,
+      "dev_bleu": 17.118215304037754,
+      "train_readout_bleu": 99.80471996789335,
+      "train_readout_em": 0.9902266288951841,
+      "elapsed_s": 77.85249710083008
     }
   ]
 }

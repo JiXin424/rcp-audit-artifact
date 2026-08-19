@@ -198,7 +198,11 @@ def main():
                          f"\\textbf{{{hc['total_decoded_gap_panel']}}} & "
                          f"\\textbf{{{hc['total_unique_binaries']}}} & "
                          f"\\textbf{{{hc['total_non_degenerate']}}}")
-            if total_row in tex or total_row in supp_tex:
+            summary_form = (f"{hc['total_trained_runs']} trained / "
+                            f"{hc['total_decoded_gap_panel']} decoded / "
+                            f"{hc['total_unique_binaries']} unique / "
+                            f"{hc['total_non_degenerate']} non-degenerate")
+            if total_row in tex or total_row in supp_tex or summary_form in tex:
                 ok(f"tex: accounting total row matches ({hc['total_trained_runs']}/"
                     f"{hc['total_decoded_gap_panel']}/{hc['total_unique_binaries']}/"
                     f"{hc['total_non_degenerate']})")
@@ -322,6 +326,81 @@ def main():
                              f"actual min/max ({actual_min:.4f}/{actual_max:.4f})")
                     else:
                         ok(f"gap panel _meta range matches actual ({actual_min:.4f}/{actual_max:.4f})")
+
+    # (10) Round-34: title, terminology, dev-probe panel, split reconciliation,
+    # seven-correction family mean/SD
+    if PAPER.exists():
+        tex = open(PAPER).read()
+        # Title tokens
+        if "Gradient-Clipping Sensitivity Study" in tex:
+            ok("tex: round-34 title present")
+        else:
+            fail("tex: round-34 title token missing")
+        for stale in ("What One Inference Hid", "What Reproduces, and What Does Not"):
+            if stale in tex:
+                fail(f"tex: stale title fragment '{stale}' present")
+        if "signjoey-exact" in tex:
+            fail("tex: stale 'signjoey-exact' terminology present (now candidate-upstream)")
+        else:
+            ok("tex: candidate-upstream terminology in use")
+        # Dev-probe panel
+        dp_path = ROOT / "results/dev_probe_eval.json"
+        if dp_path.exists():
+            dp = json.load(open(dp_path))
+            gaps = {r["ckpt"]: r["gap"] for r in dp.get("rows", [])}
+            for ck, expect in (("ctc_clip_sens/clipinf_seed42/best", 8.07),
+                               ("ctc_clip_sens/clipinf_seed43/best", 8.00),
+                               ("ctc_clip_sens/clipinf_seed44/best", 8.64),
+                               ("ctc_clip_sens/signjoeyexact_seed42/best", 7.87),
+                               ("faithful/seed_42/best", -1.35)):
+                if ck not in gaps:
+                    fail(f"dev_probe_eval.json: row missing: {ck}")
+                elif abs(gaps[ck] - expect) > 0.01:
+                    fail(f"dev_probe_eval.json: {ck} gap {gaps[ck]} != {expect}")
+                else:
+                    ok(f"dev probe {ck}: gap = {gaps[ck]}")
+            for token in ("+8.07", "+8.00", "+8.64", "+7.87", "+8.10"):
+                if token in tex:
+                    ok(f"tex: contains dev-probe token '{token}'")
+                else:
+                    fail(f"tex: dev-probe token '{token}' missing")
+        else:
+            fail("cross-check source missing: results/dev_probe_eval.json")
+        # Split reconciliation
+        sr_path = ROOT / "results/split_reconciliation.json"
+        if sr_path.exists():
+            sr = json.load(open(sr_path))
+            for split, miss in (("train", 36), ("dev", 4), ("test", 1)):
+                got = sr["splits"][split]["missing_from_slrtp"]
+                if got != miss:
+                    fail(f"split_reconciliation: {split} missing {got} != {miss}")
+                else:
+                    ok(f"split_reconciliation: {split} missing = {got}")
+            for token in ("7,096/519/642", "36/4/1"):
+                if token in tex:
+                    ok(f"tex: contains split token '{token}'")
+                else:
+                    fail(f"tex: split token '{token}' missing")
+        else:
+            fail("cross-check source missing: results/split_reconciliation.json")
+        # Seven-correction family test-REC mean/SD
+        if REGISTRY.exists():
+            regd = json.load(open(REGISTRY))
+            vals = [c["gt_bleu"] for c in regd["checkpoints"]
+                    if c["run_id"].startswith("faithful_") and c.get("gt_bleu") is not None]
+            if len(vals) == 8:
+                mean = sum(vals) / 8
+                sd = (sum((v - mean) ** 2 for v in vals) / 7) ** 0.5
+                if abs(mean - 12.27) > 0.01 or abs(sd - 0.46) > 0.01:
+                    fail(f"faithful test-REC mean/SD {mean:.3f}/{sd:.3f} != 12.27/0.46")
+                else:
+                    ok(f"faithful test-REC mean/SD = {mean:.3f}/{sd:.3f}")
+                if "12.27" in tex and "0.46" in tex:
+                    ok("tex: contains mean±SD tokens")
+                else:
+                    fail("tex: mean±SD tokens (12.27/0.46) missing")
+            else:
+                fail(f"registry faithful rows = {len(vals)}, expected 8")
 
     # Report
     print("=" * 60)

@@ -1,0 +1,229 @@
+{
+  "registry_sha256_prefix": "2d4780a61ac3",
+  "rows": [
+    {
+      "run": "ctc_clip_sens/clipinf_seed42",
+      "ckpt": "ctc_clip_sens/clipinf_seed42/best",
+      "ckpt_sha256_prefix": "0b0b2ae52af3",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 16.31664827223091,
+      "pure_bleu": 24.38570460532892,
+      "gap": 8.069056333098011,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 33.6260130405426
+    },
+    {
+      "run": "ctc_clip_sens/clipinf_seed43",
+      "ckpt": "ctc_clip_sens/clipinf_seed43/best",
+      "ckpt_sha256_prefix": "785b9aa0ef0b",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 15.777225107064838,
+      "pure_bleu": 23.780338014677177,
+      "gap": 8.003112907612339,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 29.36893343925476
+    },
+    {
+      "run": "ctc_clip_sens/clipinf_seed44",
+      "ckpt": "ctc_clip_sens/clipinf_seed44/best",
+      "ckpt_sha256_prefix": "856beabc44e8",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 15.7443514833108,
+      "pure_bleu": 24.38570460532892,
+      "gap": 8.641353122018122,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 42.14777994155884
+    },
+    {
+      "run": "ctc_clip_sens/signjoeyexact_seed42",
+      "ckpt": "ctc_clip_sens/signjoeyexact_seed42/best",
+      "ckpt_sha256_prefix": "892e338cf38f",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 16.04009789453541,
+      "pure_bleu": 23.91208409993184,
+      "gap": 7.8719862053964285,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 28.891092538833618
+    },
+    {
+      "run": "ctc_clip_sens/clip5p0_seed42",
+      "ckpt": "ctc_clip_sens/clip5p0_seed42/best",
+      "ckpt_sha256_prefix": "f45beccd3fc1",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 16.54154969389833,
+      "pure_bleu": 22.501522085451548,
+      "gap": 5.959972391553219,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 31.66641068458557
+    },
+    {
+      "run": "ctc_clip_sens/clip3p0_seed42",
+      "ckpt": "ctc_clip_sens/clip3p0_seed42/best",
+      "ckpt_sha256_prefix": "00de50378990",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 17.132582007308695,
+      "pure_bleu": 21.270764721957317,
+      "gap": 4.138182714648622,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 31.655083894729614
+    },
+    {
+      "run": "ctc_clip_sens/clip2p0_seed42",
+      "ckpt": "ctc_clip_sens/clip2p0_seed42/best",
+      "ckpt_sha256_prefix": "01ac9e3c4a7d",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 17.17360582172006,
+      "pure_bleu": 15.386606422369445,
+      "gap": -1.7869993993506146,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 25.05345869064331
+    },
+    {
+      "run": "faithful/seed_42",
+      "ckpt": "faithful/seed_42/best",
+      "ckpt_sha256_prefix": "8e3fba93a73b",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 12.05402190316041,
+      "pure_bleu": 10.701518598074198,
+      "gap": -1.352503305086211,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 20.732348680496216
+    },
+    {
+      "run": "ctc_clip_sens/clip2p0_seed43",
+      "ckpt": "ctc_clip_sens/clip2p0_seed43/best",
+      "ckpt_sha256_prefix": "147de51505f7",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 16.532232834879526,
+      "pure_bleu": 14.968311263220285,
+      "gap": -1.5639215716592414,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 8.770228385925293
+    },
+    {
+      "run": "ctc_clip_sens/clip2p0_seed44",
+      "ckpt": "ctc_clip_sens/clip2p0_seed44/best",
+      "ckpt_sha256_prefix": "cb52af6f442e",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 17.401021680079886,
+      "pure_bleu": 15.322991551351544,
+      "gap": -2.078030128728342,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 8.63377571105957
+    },
+    {
+      "run": "ctc_clip_sens/clip3p0_seed43",
+      "ckpt": "ctc_clip_sens/clip3p0_seed43/best",
+      "ckpt_sha256_prefix": "62ec73a528db",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 17.92175212338419,
+      "pure_bleu": 21.63072996912456,
+      "gap": 3.7089778457403675,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 8.409975528717041
+    },
+    {
+      "run": "ctc_clip_sens/clip3p0_seed44",
+      "ckpt": "ctc_clip_sens/clip3p0_seed44/best",
+      "ckpt_sha256_prefix": "7f184f7ac5e6",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 16.98387141124833,
+      "pure_bleu": 20.825683020579824,
+      "gap": 3.8418116093314936,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 8.577643394470215
+    },
+    {
+      "run": "ctc_clip_sens/clip5p0_seed43",
+      "ckpt": "ctc_clip_sens/clip5p0_seed43/best",
+      "ckpt_sha256_prefix": "fb062b29dd93",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 16.662807185294135,
+      "pure_bleu": 24.067634977448503,
+      "gap": 7.404827792154368,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 8.680944919586182
+    },
+    {
+      "run": "ctc_clip_sens/clip5p0_seed44",
+      "ckpt": "ctc_clip_sens/clip5p0_seed44/best",
+      "ckpt_sha256_prefix": "f595e06417ab",
+      "split": "dev",
+      "n_queries": 515,
+      "rec_bleu": 17.121039646739447,
+      "pure_bleu": 24.308051879156945,
+      "gap": 7.187012232417498,
+      "released_dev_reference": {
+        "rec": 13.379,
+        "pure": 21.474,
+        "gap": 8.096
+      },
+      "elapsed_s": 8.797770023345947
+    }
+  ]
+}

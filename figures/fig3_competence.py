@@ -229,7 +229,7 @@ def main():
         f_b4[i, :int(m.sum())] = b4[m]
     axa.fill_between(f_steps, f_b4.min(0), f_b4.max(0),
                      color=FAM_COLORS["faithful"], alpha=0.14, zorder=1,
-                     label="8 faithful runs (band)")
+                     label="8 seven-correction runs (band)")
     axa.plot(f_steps, np.median(f_b4, 0), color=FAM_COLORS["faithful"],
              lw=1.2, zorder=2)
 

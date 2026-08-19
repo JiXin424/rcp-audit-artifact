@@ -231,6 +231,92 @@
       "source_file": "results/readout_gap_correlation.json",
       "verify_command": "python3 scripts/e_readout_gap_correlation.py",
       "tex_section": "sec:insample"
+    },
+    {
+      "id": "dev_probe_unclipped",
+      "statement": "Frozen-dev-split probe gap, unclipped reconstructions (seeds 42-44) and candidate-upstream variant; released reference +8.10",
+      "value": [
+        8.07,
+        8.0,
+        8.64,
+        7.87
+      ],
+      "source_file": "results/dev_probe_eval.json",
+      "verify_command": "python3 scripts/eval_dev_probe.py --run-dir checkpoints/ctc_clip_sens/clipinf_seed42 --ckpts best",
+      "tex_section": "sec:clip_source"
+    },
+    {
+      "id": "split_reconciliation",
+      "statement": "Official 7,096/519/642 vs released 7,060/515/641: 36/4/1 IDs absent, all present in independent upstream skeleton extraction",
+      "value": {
+        "train_missing": 36,
+        "dev_missing": 4,
+        "test_missing": 1,
+        "shipped_train_pt": 7060
+      },
+      "source_file": "results/split_reconciliation.json",
+      "verify_command": "python3 scripts/split_reconciliation.py",
+      "tex_section": "sec:sufficiency_def"
+    },
+    {
+      "id": "seven_correction_family_mean_sd",
+      "statement": "Seven-correction family test REC mean/SD over seeds 42-49 (best-of-8 = 13.11 reported separately, not relied on)",
+      "value": {
+        "mean": 12.27,
+        "sd": 0.46,
+        "range": [
+          11.6,
+          13.11
+        ]
+      },
+      "source_file": "results/canonical_checkpoint_registry.json",
+      "verify_command": "python3 scripts/check_paper_consistency.py",
+      "tex_section": "sec:faithful_results"
+    },
+    {
+      "id": "clip_ladder_multiseed",
+      "statement": "Multi-seed clip ladder (seeds 42-44 at clip 2/3/5): test gap -1.11+/-0.63, +5.39+/-0.69, +9.28+/-1.07, +10.94+/-0.55; readout 23.2+/-0.5, 56.5+/-4.3, 92.5+/-8.8, 98.4+/-2.7; monotone in every seed",
+      "value": {
+        "gap_mean_sd": {
+          "2.0": [
+            -1.11,
+            0.63
+          ],
+          "3.0": [
+            5.39,
+            0.69
+          ],
+          "5.0": [
+            9.28,
+            1.07
+          ],
+          "none": [
+            10.94,
+            0.55
+          ]
+        },
+        "readout_mean_sd": {
+          "2.0": [
+            23.2,
+            0.5
+          ],
+          "3.0": [
+            56.5,
+            4.3
+          ],
+          "5.0": [
+            92.5,
+            8.8
+          ],
+          "none": [
+            98.4,
+            2.7
+          ]
+        }
+      },
+      "source_file": "results/faithful_steps_eval.json",
+      "verify_command": "python3 scripts/eval_step_ckpts.py --run-dir checkpoints/ctc_clip_sens/clip3p0_seed43 --ckpts best",
+      "tex_section": "sec:sensitivity"
     }
   ],
   "audit_target_files": [
