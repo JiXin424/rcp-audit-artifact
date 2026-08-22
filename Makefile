@@ -35,7 +35,7 @@ check-consistency:
 	$(PYTHON) scripts/check_paper_consistency.py
 
 core-audit: regression paper check-paper
-	@$(PYTHON) -c "import json; d=json.load(open('results/paper_numbers.json')); h=d['headline']; print('canonical headline: GT %.2f  PURE %.2f  gap %+.2f  CI %s' % (h['gt'], h['pure'], h['gap'], h.get('bootstrap_ci'))); assert abs(h['pure']-23.02)<0.05 and abs(h['gap']-10.24)<0.05, 'canonical headline mismatch'; print('core-audit PASS: headline matches canonical 23.02/+10.24')"
+	@$(PYTHON) -c "import json; d=json.load(open('results/paper_numbers.json')); h=d['headline']; b=json.load(open('results/donor_cluster_bootstrap.json')); dc=b['bootstraps']['donor']; print('canonical headline: GT %.2f  PURE %.2f  gap %+.2f' % (h['gt'], h['pure'], h['gap'])); print('  donor-cluster CI (primary, reported): [%.2f, %.2f]' % (dc['ci_lo'], dc['ci_hi'])); print('  item-level  CI (secondary):          [%s]' % (h.get('bootstrap_ci'),)); assert abs(dc['ci_lo']-8.87)<0.01 and abs(dc['ci_hi']-11.64)<0.01, 'donor-cluster CI mismatch'; assert abs(h['pure']-23.02)<0.05 and abs(h['gap']-10.24)<0.05, 'canonical headline mismatch'; print('core-audit PASS: headline matches canonical 23.02/+10.24; primary CI [8.87, 11.64]')"
 
 regression:
 	@$(PYTHON) -c "import tests.test_checkpoint_gt_alignment as t; t.test_every_transfer_cell_uses_its_evaluators_local_gt(); print('checkpoint-GT alignment PASS')"

@@ -327,16 +327,17 @@ def main():
                     else:
                         ok(f"gap panel _meta range matches actual ({actual_min:.4f}/{actual_max:.4f})")
 
-    # (10) Round-34: title, terminology, dev-probe panel, split reconciliation,
+    # (10) Title, terminology, dev-probe panel, split reconciliation,
     # seven-correction family mean/SD
     if PAPER.exists():
         tex = open(PAPER).read()
         # Title tokens
-        if "Gradient-Clipping Sensitivity Study" in tex:
-            ok("tex: round-34 title present")
+        if "Auditing and Partially Reproducing the SLRTP2025 Back-Translation Evaluator" in tex:
+            ok("tex: title present")
         else:
-            fail("tex: round-34 title token missing")
-        for stale in ("What One Inference Hid", "What Reproduces, and What Does Not"):
+            fail("tex: title token missing")
+        for stale in ("What One Inference Hid", "What Reproduces, and What Does Not",
+                      "Reconstructing the SLRTP2025 Back-Translation Evaluator: An Artifact"):
             if stale in tex:
                 fail(f"tex: stale title fragment '{stale}' present")
         if "signjoey-exact" in tex:
@@ -401,6 +402,139 @@ def main():
                     fail("tex: mean±SD tokens (12.27/0.46) missing")
             else:
                 fail(f"registry faithful rows = {len(vals)}, expected 8")
+
+    # (11) Cross-document consistency: claim manifest, README, SI, upstream
+    # archive, update-level diagnostics (single source of truth checks).
+    supp_tex = open(SUPP).read() if SUPP.exists() else ""
+    readme_path = ROOT / "README.md"
+    readme = open(readme_path).read() if readme_path.exists() else ""
+
+    # (11a) claim_manifest Spearman entry must match the authoritative JSON
+    if MANIFEST.exists():
+        mm = json.load(open(MANIFEST))
+        rgc_path = ROOT / "results/readout_gap_correlation.json"
+        if rgc_path.exists():
+            rgc = json.load(open(rgc_path))
+            rho_incl = rgc["correlations"]["readout_vs_dev_bleu"]["all_incl_released"]["rho"]
+            rho_excl = rgc["correlations"]["readout_vs_dev_bleu"]["excl_released"]["rho"]
+            n_incl = rgc["correlations"]["readout_vs_dev_bleu"]["all_incl_released"]["n"]
+            claim = next((c for c in mm.get("claims", [])
+                          if c.get("id") == "readout_competence_spearman"), None)
+            if claim is None:
+                fail("claim_manifest: readout_competence_spearman entry missing")
+            else:
+                if (abs(claim.get("value_incl_released", -9) - round(rho_incl, 3)) > 0.001
+                        or abs(claim.get("value_excl_released", -9) - round(rho_excl, 3)) > 0.001
+                        or claim.get("n_incl_released") != n_incl):
+                    fail(f"claim_manifest spearman {claim.get('value_incl_released')}/"
+                         f"{claim.get('value_excl_released')} n={claim.get('n_incl_released')} "
+                         f"!= JSON {round(rho_incl, 3)}/{round(rho_excl, 3)} n={n_incl}")
+                else:
+                    ok(f"claim_manifest spearman matches JSON "
+                       f"({round(rho_incl, 3)}/{round(rho_excl, 3)}, n={n_incl})")
+                if claim.get("value_incl_released") in (0.916, "0.916") or \
+                   claim.get("value_excl_released") in (0.907, "0.907"):
+                    fail("claim_manifest: stale spearman VALUES (0.916/0.907)")
+        # (11b) headline CI digits agree across manifest / README / probe script
+        hg = next((c for c in mm.get("claims", []) if c.get("id") == "headline_gap"), None)
+        if hg:
+            if list(hg.get("ci_95", [])) != [8.87, 11.64]:
+                fail(f"claim_manifest headline CI {hg.get('ci_95')} != [8.87, 11.64]")
+            else:
+                ok("claim_manifest headline CI = [8.87, 11.64] (donor-cluster)")
+        # README checks only apply to the reviewer-facing artifact mirror
+        # (paper/ subdir layout); the RCP working repo has an internal README
+        # that legitimately documents local-only files.
+        if readme and (ROOT / "paper").exists():
+            for token in ("8.87", "11.64"):
+                if token in readme:
+                    ok(f"README: contains CI token {token}")
+                else:
+                    fail(f"README: CI token {token} missing")
+            for stale in ("CI [8.88, 11.62]", "neccam/slt`, commit `249d3cd",
+                          "评分", "30-rater"):
+                if stale in readme:
+                    fail(f"README: stale token present: {stale!r}")
+            else:
+                ok("README: no stale CI/attribution/评分 tokens")
+            if "NaVi-start/Sign-IDD-SLT" in readme and \
+               "249d3cd8fc249b1a06eba39f84cb2d289ed37bce" in readme:
+                ok("README: candidate-upstream full SHA present")
+            else:
+                fail("README: candidate-upstream repo/full SHA missing")
+
+    # (11c) SI hygiene: no revision-process traces, no stale claims
+    if supp_tex:
+        for stale in ("Round-34", "round 34", "Reviewer Round-2", "round-33",
+                      "clips by value, not norm",
+                      "within 1 BLEU point of the released",
+                      "every adjacent threshold pair is separated by more than "
+                      "the between-seed range at either threshold."):
+            if stale in supp_tex:
+                fail(f"supplementary.tex: stale token present: {stale!r}")
+        else:
+            ok("supplementary.tex: no revision traces / stale ladder claims")
+        for required in ("1.1 BLEU", "NaVi-start/Sign-IDD-SLT",
+                         "249d3cd8fc249b1a06eba39f84cb2d289ed37bce",
+                         "Dev-Split Consistency Check",
+                         "Update-Level Gradient Diagnostics"):
+            if required not in supp_tex:
+                fail(f"supplementary.tex: required token missing: {required!r}")
+        else:
+            ok("supplementary.tex: upstream archive + Sup W + renames present")
+    if tex:
+        if "for the test gap and the dev-probe gap every adjacent threshold pair" not in tex:
+            fail("main_lre.tex: qualified adjacent-threshold separation claim missing")
+        else:
+            ok("main_lre.tex: adjacent-threshold claim qualified per metric")
+        if "tab:claims_register" in tex:
+            fail("main_lre.tex: claims-register table still in main text (should be SI)")
+        else:
+            ok("main_lre.tex: claims register moved to SI")
+        for stale_tok in ("Round-34", "Reviewer Round-2", "earlier rounds"):
+            if stale_tok in tex:
+                fail(f"main_lre.tex: revision trace {stale_tok!r} present")
+        else:
+            ok("main_lre.tex: no revision traces")
+
+    # (11d) upstream source archive present and hash-verified (artifact layout)
+    tp = ROOT / "third_party" / "signjoey-signidd-slt-249d3cd8fc2"
+    if tp.exists():
+        sums = tp / "SHA256SUMS"
+        prov = tp / "PROVENANCE.json"
+        if not (sums.exists() and prov.exists()):
+            fail("third_party archive: SHA256SUMS/PROVENANCE.json missing")
+        else:
+            import hashlib
+            n_ok, n_bad = 0, []
+            for line in sums.read_text().splitlines():
+                h, _, fname = line.partition("  ")
+                fpath = tp / fname.strip()
+                if not fpath.exists():
+                    n_bad.append(fname)
+                    continue
+                if hashlib.sha256(fpath.read_bytes()).hexdigest() == h:
+                    n_ok += 1
+                else:
+                    n_bad.append(fname)
+            if n_bad:
+                fail(f"third_party archive: {len(n_bad)} missing/hash-mismatch files")
+            else:
+                ok(f"third_party archive: {n_ok} files hash-verified")
+    else:
+        warn("third_party archive not present (RCP working layout)")
+
+    # (11e) update-level diagnostics result files (Sup. W)
+    diag = ROOT / "results/grad_diag_dual_seed42.json"
+    if diag.exists():
+        dd = json.load(open(diag))
+        s = dd.get("summary", {})
+        if "clip1.0" in s and "dual" in s:
+            ok("grad_diag_dual_seed42.json: summary statistics present")
+        else:
+            fail("grad_diag_dual_seed42.json: summary missing")
+    else:
+        warn("results/grad_diag_dual_seed42.json not present yet (Sup. W pending)")
 
     # Report
     print("=" * 60)

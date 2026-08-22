@@ -96,7 +96,7 @@ output = {
     "note": (
         "The headline probe was selected as the maximal-gap probe after exploring "
         f"{n_probes} probe configurations on the same 641-item test set and the same "
-        "released evaluator.  Its 95% CI [+8.88, +11.62] is conditional on this "
+        "released evaluator.  Its 95% donor-cluster CI [+8.87, +11.64] is conditional on this "
         "selection and should be read as post-selection descriptive, not confirmatory."
     ),
     "bonferroni_note": (

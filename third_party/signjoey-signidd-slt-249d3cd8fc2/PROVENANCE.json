@@ -1,0 +1,27 @@
+{
+  "what": "Verbatim source archive of the candidate upstream framework cited in the paper (gradient-clip default and CTC normalisation semantics).",
+  "repository": "https://github.com/NaVi-start/Sign-IDD-SLT",
+  "branch": "main",
+  "commit_full_sha256_git": "249d3cd8fc249b1a06eba39f84cb2d289ed37bce",
+  "commit_date": "2025-04-27T13:55:59Z",
+  "commit_message": "Update README.md",
+  "commit_author": "HJY <137368487+NaVi-start@users.noreply.github.com>",
+  "upstream_lineage": "signjoey-derived code base (neccam/slt, the Sign Language Transformers codebase, whose public history ends in 2020); this repository is an independent public repo last pushed 2025-04-27, i.e. contemporaneous with the SLRTP2025 release. It is NOT a GitHub fork of neccam/slt (no parent link); the correspondence is at file/code level.",
+  "licence": "Apache-2.0 (repository LICENSE file, included verbatim). Redistribution with attribution permitted.",
+  "verification": [
+    "curl -s https://api.github.com/repos/NaVi-start/Sign-IDD-SLT/commits/main returns this SHA (checked 2026-08-21)",
+    "git clone https://github.com/NaVi-start/Sign-IDD-SLT && git rev-parse HEAD",
+    "sha256sum -c SHA256SUMS (in this directory)"
+  ],
+  "excluded_from_archive": [
+    "base_annotations/ (PHOENIX-2014T annotation pickles; RWTH Aachen licence, not redistributed)",
+    "experiment_results/ (original authors' run outputs)",
+    "untracked working-tree files (git archive of the commit is authoritative)"
+  ],
+  "load_bearing_files": {
+    "signjoey/builders.py": "build_gradient_clipper: returns None (no clipping) when neither clip_grad_val nor clip_grad_norm is present in the training config; clip_grad_val -> clip_grad_value_ (value clipping); clip_grad_norm -> clip_grad_norm_ (norm clipping); the two are mutually exclusive.",
+    "signjoey/training.py": "_train_batch: translation loss divided by num_seqs (translation_normalization: batch) * batch_multiplier; recognition (CTC) loss divided by batch_multiplier only (=1), i.e. raw sum; developer comment '# TODO (Cihan): Add Gloss Token normalization (?)' at the recognition-loss normalisation site.",
+    "run_train.sh": "training entry point of the candidate upstream (the released SLRTP2025 evaluation repository ships no training script)."
+  },
+  "archived_at": "2026-08-21"
+}

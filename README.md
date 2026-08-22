@@ -1,10 +1,9 @@
-# RCP — Reconstructing the SLRTP2025 Back-Translation Evaluator
+# RCP — Auditing and Partially Reproducing the SLRTP2025 Back-Translation Evaluator
 
 Paper sources, training scripts, and evaluation harness for the LRE
 (*Language Resources and Evaluation*, Springer 10579) submission:
 
-> **Reconstructing the SLRTP2025 Back-Translation Evaluator: An Artifact
-> Audit and Gradient-Clipping Sensitivity Study**
+> **Auditing and Partially Reproducing the SLRTP2025 Back-Translation Evaluator**
 
 An audit of whether the released SLRTP2025 back-translation (BT) evaluator
 can be reconstructed from its public artifacts (an evaluation-only
@@ -21,10 +20,13 @@ repository without training scripts). Headline results:
    memorisation signature (released 78.8 BLEU / 70.7% EM) and the positive
    response to a constructed replay probe (released +10.24). With clipping
    disabled — the default of the candidate upstream framework
-   (`neccam/slt`, commit `249d3cd`) when, as in the released config, no
-   clip field is specified — the reconstruction reproduces both signatures
-   (readout 99.98 / 99.9% EM; probe gap +11.19), confirmed across seeds and
-   on a never-explored dev split (+8.07/+8.00/+8.64 vs. released +8.10).
+   (`NaVi-start/Sign-IDD-SLT`, commit
+   `249d3cd8fc249b1a06eba39f84cb2d289ed37bce`, archived verbatim under
+   `third_party/` with per-file SHA-256 hashes) when, as in the released
+   config, no clip field is specified — the reconstruction reproduces both
+   signatures (readout 99.98 / 99.9% EM; probe gap +11.19), consistent
+   across the three tested seeds and on a never-explored dev-split
+   consistency check (+8.07/+8.00/+8.64 vs. released +8.10).
 3. The released operating point's **individual coordinates are bracketed**
    by different clip thresholds but not matched jointly; the attribution is
    source-semantic + behavioural, not transcript-confirmed
@@ -59,7 +61,7 @@ docs/                 historical plans and design notes
 python3 -m venv .venv && source .venv/bin/activate
 make install-audit    # 4 packages; CPU-only Linux x86_64, Python 3.10–3.12
 make core-audit       # rebuilds the canonical donor registry and asserts
-                      # GT 12.78 / PURE 23.02 / gap +10.24 / CI [8.88, 11.62]
+                      # GT 12.78 / PURE 23.02 / gap +10.24 / donor-cluster CI [8.87, 11.64]
 make check-consistency
 # → 40+ invariants: registry summary ↔ entry counts; accounting family sums;
 #   paper tokens (round-34 title, terminology, dev-probe gaps, split
@@ -72,20 +74,24 @@ checkpoint weights. L3 (re-decode from weights) and L4 (from-scratch
 retraining, ≈6 GPU-h per seed) require the full environment and the
 licensed SLRTP2025/PHOENIX-2014T data (see licensing).
 
-Round-34 additions:
-- `results/dev_probe_eval.json` — frozen-dev-split probe gaps for the
-  clip-ladder checkpoints (scripts/eval_dev_probe.py);
+Additional analyses:
+- `results/dev_probe_eval.json` — dev-split consistency probe gaps for
+  the clip-ladder checkpoints (scripts/eval_dev_probe.py);
 - `results/split_reconciliation.json` — ID-level classification of the
   36/4/1 official→released split difference (scripts/split_reconciliation.py);
 - multi-seed clip-ladder replicates (seeds 43/44 at clip 2/3/5) in
-  `results/faithful_steps_eval.json` and SI Sup. V.
+  `results/faithful_steps_eval.json` (SI Sup. V);
+- update-level gradient diagnostics — `results/grad_diag_*.json`
+  (src/training/train_grad_diag.py; SI Sup. W);
+- candidate-upstream source archive — `third_party/signjoey-signidd-slt-249d3cd8fc2/`
+  (verbatim code + LICENSE under Apache-2.0, per-file SHA-256 manifest).
 
 ## Data licensing (composition — read before reuse)
 
 | Component | Terms | In this artifact? |
 |---|---|---|
 | PHOENIX-2014T (RWTH Aachen) | Academic research licence. | No (not redistributed). Obtain from RWTH. |
-| SLRTP2025 pose bundle + released BT checkpoint | SLRTP2025 challenge terms (research use). | Yes — `checkpoints/released/` verbatim copy under the same terms. Other trained weights inherit the same research-use restriction. |
+| SLRTP2025 pose bundle + released BT checkpoint | SLRTP2025 challenge terms (research use). | Metadata only (`checkpoints/released/`: config, vocabularies, validations.txt) with SHA-256 hashes; **weights are NOT redistributed** — `scripts/download_checkpoints.sh` fetches them from the official distribution. |
 | Czehmann et al. (2026) human back-translations | CC BY-NC-SA 4.0. | Yes — `data/sacrebird/test_subset_backtranslations_sacrebirdphoenix.csv` and `test_full_annotations_sacrebirdphoenix.csv` are redistributed under CC BY-NC-SA 4.0, with attribution and the share-alike / non-commercial boundary documented in `data/sacrebird/LICENSE` and `data/sacrebird/NOTICE`. |
 | CSL-Daily | Provider-specific academic terms. | No (not redistributed). |
 
@@ -94,8 +100,12 @@ Round-34 additions:
   preamble enumerates the scope.
 - `/data/sacrebird/LICENSE` (CC BY-NC-SA 4.0) governs the two CSVs in that
   directory and is not overridden by the root MIT Licence.
-- `/checkpoints/released/` is governed by SLRTP2025 challenge terms; the
-  MIT Licence does not extend to it.
+- `/checkpoints/released/` contains metadata only (config, vocabularies,
+  training log) under SLRTP2025 challenge terms; the weights themselves are
+  not redistributed and must be obtained from the official challenge
+  distribution (hashes for verification are in `artifact_ledger.json`).
+- `/third_party/signjoey-signidd-slt-249d3cd8fc2/` is Apache-2.0 (upstream
+  licence file included verbatim).
 
 ## Provenance and integrity
 
@@ -117,9 +127,7 @@ is deterministic — fresh re-runs reproduce published best checkpoints
 byte-identically). Five checkpoint families listed in earlier manual
 registries could not be recovered from disk and are omitted from the
 disk-scanned registry (SI Sup. D, Table D footnote; main-text Limitations).
-The 30-rater DGS evaluation raw response CSVs are preserved under `评分/`,
-but the video stimuli and UUID-to-system manifest were lost, so that
-feasibility study is not reported in the paper. The host is treated as
+The host is treated as
 untrusted until rebuilt; credentials from before 2026-07-14 should be
 considered compromised.
 

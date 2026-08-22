@@ -281,6 +281,18 @@
       "train_readout_bleu": 99.80471996789335,
       "train_readout_em": 0.9902266288951841,
       "elapsed_s": 77.85249710083008
+    },
+    {
+      "run": "ctc_clip_sens/lrmatched5p5e4",
+      "ckpt": "ctc_clip_sens/lrmatched5p5e4/best",
+      "rec_bleu": 14.890500310575796,
+      "pure_bleu": 24.400258032246143,
+      "gap": 9.509757721670347,
+      "val_step": 1806,
+      "dev_bleu": 15.68,
+      "train_readout_bleu": 84.91104052445769,
+      "train_readout_em": 0.7514164305949008,
+      "elapsed_s": 79.92557048797607
     }
   ]
 }

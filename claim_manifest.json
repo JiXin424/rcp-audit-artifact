@@ -4,7 +4,7 @@
   "paper_file": "main_lre.tex",
   "supplementary_file": "supplementary.tex",
   "artifact_version_git_ref": "30fbd00",
-  "generated_at": "2026-08-19",
+  "generated_at": "2026-08-21",
   "canonical_materialization_sha256": "9170a53026ab3263b451a3632a9e02318745acabf12f0b679921477afbefa301",
   "sacrebleu_signature": "BLEU|c|n:4|e:no|tok:13a|s:exp|v:2.5.1",
   "claims": [
@@ -19,7 +19,9 @@
       "source_file": "results/gap_43_canonical_beam3.json",
       "ci_source_file": "results/donor_cluster_bootstrap.json",
       "verify_command": "python3 scripts/e_donor_cluster_bootstrap.py",
-      "tex_section": "sec:public-diagnostic"
+      "tex_section": "sec:public-diagnostic",
+      "ci_type": "donor-cluster bootstrap (primary)",
+      "note": "Item-level (query) bootstrap gives [8.88,11.62]; the donor-cluster interval is the primary reported CI."
     },
     {
       "id": "released_dev_bleu",
@@ -27,7 +29,7 @@
       "value": 13.38,
       "source_file": "results/full_readout/backTranslation_PHIX_model.json",
       "verify_command": "python3 scripts/e_full_readout.py --ckpt checkpoints/released/backTranslation_PHIX_model",
-      "tex_section": "sec:multiseed_factorial"
+      "tex_section": "sec:positive_evidence"
     },
     {
       "id": "released_train_readout",
@@ -129,13 +131,15 @@
     },
     {
       "id": "readout_competence_spearman",
-      "statement": "Spearman rho between training-pool readout BLEU and dev BLEU-4",
-      "value_incl_released": 0.916,
-      "value_excl_released": 0.907,
-      "n_incl_released": 31,
-      "source_file": "results/robustness_diagnostics.json",
-      "verify_command": "python3 scripts/e_robustness_diagnostics.py",
-      "tex_section": "sec:insample"
+      "statement": "Spearman rho between training-pool readout BLEU and dev BLEU-4 (current uniform-readout set)",
+      "value_incl_released": 0.88,
+      "value_excl_released": 0.858,
+      "n_incl_released": 18,
+      "source_file": "results/readout_gap_correlation.json",
+      "verify_command": "python3 scripts/e_readout_gap_correlation.py",
+      "tex_section": "sec:insample",
+      "n_excl_released": 17,
+      "note": "Supersedes the earlier 31-checkpoint estimate; current set adds the eight seven-correction full-pool readouts."
     },
     {
       "id": "probe_multiplicity",
@@ -317,6 +321,20 @@
       "source_file": "results/faithful_steps_eval.json",
       "verify_command": "python3 scripts/eval_step_ckpts.py --run-dir checkpoints/ctc_clip_sens/clip3p0_seed43 --ckpts best",
       "tex_section": "sec:sensitivity"
+    },
+    {
+      "id": "upstream_source_archive",
+      "statement": "Candidate-upstream source (NaVi-start/Sign-IDD-SLT @ 249d3cd8fc249b1a06eba39f84cb2d289ed37bce) archived verbatim with per-file SHA-256; build_gradient_clipper returns None when no clip field present",
+      "source_file": "third_party/signjoey-signidd-slt-249d3cd8fc2/PROVENANCE.json",
+      "verify_command": "cd third_party/signjoey-signidd-slt-249d3cd8fc2 && sha256sum -c SHA256SUMS",
+      "tex_section": "sec:clip_source"
+    },
+    {
+      "id": "update_level_diagnostics",
+      "statement": "Update-level gradient diagnostics (dual lockstep clip1.0/unclipped, full-horizon clipped run, update-norm-matched control)",
+      "source_file": "results/grad_diag_dual_seed42.json",
+      "verify_command": "python3 -c \"import json; d=json.load(open('results/grad_diag_dual_seed42.json')); assert 'summary' in d\"",
+      "tex_section": "sec:update_diag"
     }
   ],
   "audit_target_files": [
