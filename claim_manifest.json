@@ -3,8 +3,8 @@
   "description": "Maps each headline numerical claim in main_lre.tex to its source data file and verification command. Every entry can be checked by running the listed command or by reading the listed file. This file is the single entry point for auditors.",
   "paper_file": "main_lre.tex",
   "supplementary_file": "supplementary.tex",
-  "artifact_version_git_ref": "30fbd00",
-  "generated_at": "2026-08-21",
+  "artifact_version_git_ref": "b54164c",
+  "generated_at": "2026-08-22",
   "canonical_materialization_sha256": "9170a53026ab3263b451a3632a9e02318745acabf12f0b679921477afbefa301",
   "sacrebleu_signature": "BLEU|c|n:4|e:no|tok:13a|s:exp|v:2.5.1",
   "claims": [
