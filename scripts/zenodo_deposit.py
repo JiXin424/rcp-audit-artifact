@@ -24,23 +24,23 @@ HEADERS_BASE = {"Content-Type": "application/json"}
 
 METADATA = {
     "title": (
-        "Artifact: Auditing the Reproducibility of the SLRTP2025 "
-        "Back-Translation Evaluator from Public Artifacts - What "
-        "Reproduces, and What One Inference Hid"
+        "Artifact: Auditing and Partially Reproducing the SLRTP2025 "
+        "Back-Translation Evaluator"
     ),
     "description": (
-        "Audit artifact for the LRE submission \"Auditing the "
-        "Reproducibility of the SLRTP2025 Back-Translation Evaluator from "
-        "Public Artifacts: What Reproduces, and What One Inference Hid\". "
-        "Contains paper sources (main_lre.tex/supplementary.tex), all "
-        "per-checkpoint results, decoded hypotheses, analysis scripts, the "
-        "claim-to-file manifest, and the L1 audit environment definition "
-        "(requirements-audit.txt). Round 33 adds the gradient-clipping "
-        "sensitivity grid (results/faithful_steps_eval.json): unclipped "
-        "training reproduces both the released evaluator's training-pool "
-        "readout signature and its positive probe response, identifying "
-        "the clip-threshold inference as an eighth, load-bearing defect. "
-        "Checkpoints are hosted separately (ModelScope "
+        "Audit artifact for the LRE submission \"Auditing and Partially "
+        "Reproducing the SLRTP2025 Back-Translation Evaluator\". Contains "
+        "paper sources (main_lre.tex/supplementary.tex), all per-checkpoint "
+        "results, decoded hypotheses, analysis scripts, the claim-to-file "
+        "manifest, and the L1 audit environment definition "
+        "(requirements-audit.txt). Round 35 adds: the verbatim candidate-"
+        "upstream source archive with per-file SHA-256 hashes "
+        "(third_party/signjoey-signidd-slt-249d3cd8fc2/, Apache-2.0; full "
+        "commit 249d3cd8fc249b1a06eba39f84cb2d289ed37bce) and update-level "
+        "gradient diagnostics (results/grad_diag_*.json: dual lockstep "
+        "clip1.0/unclipped run, full-horizon clipped run, and an update-"
+        "norm-matched unclipped control that still enters the memorisation "
+        "regime). Checkpoints are hosted separately (ModelScope "
         "J1Xin424/rcp-audit-checkpoints); the released SLRTP2025 evaluator "
         "is not redistributed. The git commit this archive was built from "
         "is recorded in the Data availability section of the paper."
@@ -49,7 +49,7 @@ METADATA = {
     "upload_type": "software",
     "access_right": "open",
     "license": "MIT",
-    "version": "LRE-submission-2026-08",
+    "version": "LRE-submission-2026-08-r35",
     "keywords": [
         "sign language translation",
         "back-translation",
@@ -133,6 +133,18 @@ def main():
             sys.exit(1)
         print("uploaded", fname, "->", resp["links"]["self"])
 
+    elif cmd == "update-meta":
+        with open(st) as f:
+            s = json.load(f)
+        st_code, dep = request("PUT",
+                               API + "/deposit/depositions/%s" % s["id"], token,
+                               {"metadata": METADATA})
+        if st_code not in (200, 201):
+            print("update-meta failed:", st_code, json.dumps(dep)[:500],
+                  file=sys.stderr)
+            sys.exit(1)
+        print("metadata updated for deposit", s["id"])
+
     elif cmd == "publish":
         with open(st) as f:
             s = json.load(f)
@@ -146,6 +158,36 @@ def main():
         print("PUBLISHED DOI:", dep["doi"])
         print("record:", dep["links"]["record_html"])
 
+    elif cmd == "newversion":
+        # create a new-version draft of the (already published) deposit
+        import time
+        with open(st) as f:
+            s0 = json.load(f)
+        st_code, dep = request("POST",
+                               API + "/deposit/depositions/%s/actions/newversion" % s0["id"],
+                               token)
+        if st_code != 201:
+            print("newversion failed:", st_code, json.dumps(dep)[:500], file=sys.stderr)
+            sys.exit(1)
+        nv_url = dep["links"]["new_version"]
+        draft = None
+        for _ in range(10):
+            time.sleep(2)
+            code, draft = request("GET", nv_url, token)
+            if code == 200 and not draft.get("locked", True):
+                break
+            draft = None
+        if draft is None:
+            print("new-version draft not ready/locked", file=sys.stderr)
+            sys.exit(1)
+        s0.update({"id": draft["id"], "doi": draft.get("doi") or s0["doi"],
+                   "bucket": draft["links"]["bucket"],
+                   "deposit_url": draft["links"]["html"],
+                   "original_id": s0.get("original_id", s0["id"])})
+        with open(st, "w") as f:
+            json.dump(s0, f, indent=2)
+        print("new-version draft:", draft["id"], "->", draft["links"]["html"])
+
     elif cmd == "status":
         if os.path.exists(st):
             print(open(st).read())
@@ -153,7 +195,7 @@ def main():
             print("no deposit state yet; run 'reserve' first.")
 
     else:
-        print("usage: reserve | upload <zip> | publish | status", file=sys.stderr)
+        print("usage: reserve | newversion | update-meta | upload <zip> | publish | status", file=sys.stderr)
         sys.exit(1)
 
 
