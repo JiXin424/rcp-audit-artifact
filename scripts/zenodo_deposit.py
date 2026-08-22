@@ -49,7 +49,7 @@ METADATA = {
     "upload_type": "software",
     "access_right": "open",
     "license": "MIT",
-    "version": "LRE-submission-2026-08-r35",
+    "version": "LRE-submission-2026-08-r36",
     "keywords": [
         "sign language translation",
         "back-translation",

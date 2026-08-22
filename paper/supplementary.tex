@@ -1181,7 +1181,7 @@ Human refs, reconstructions (6 seeds) & 641 & 3.49--4.62 & 3.35--4.35 & $-0.15$ 
 \begin{table}[h]
 \centering
 \scriptsize\setlength{\tabcolsep}{3pt}
-\caption{Cross-evaluator re-decoding of the noisy-gloss retrieval outputs (641 PHX-public keys; \S\ref{sec:competition_real}). Gap = noisy-gloss $-$ REC, corpus sacreBLEU-4 (flat-reference form, \S\ref{sec:method} protocol). Rows sum to 70 cross-evaluation decodes over 69 unique evaluators (the byte-identical \texttt{cf\_202}/\texttt{ls\_202} pair counted once). The realistic retrieval pipeline is roughly even with REC under the released evaluator ($-0.13$), and every non-degenerate evaluator gives a negative gap; the five degenerate checkpoints (three $\alpha{=}1.0$ distillation students, two smallest ladder fractions) decode empty or near-empty hypotheses and are excluded.}
+\caption{Cross-evaluator re-decoding of the noisy-gloss retrieval outputs (641 PHX-public keys; \S\ref{sec:competition_real}). Gap = noisy-gloss $-$ REC, corpus sacreBLEU-4 (flat-reference form, \S\ref{sec:method} protocol). Rows sum to 70 cross-evaluation decodes over 69 unique evaluators (the byte-identical \texttt{cf\_202}/\texttt{ls\_202} pair counted once; the panel is the 74-run gap-decode set plus the rescue run, which was never gap-decoded, so the unique count is one higher than the gap panel's 68). The realistic retrieval pipeline is roughly even with REC under the released evaluator ($-0.13$), and every non-degenerate evaluator gives a negative gap; the five degenerate checkpoints (three $\alpha{=}1.0$ distillation students, two smallest ladder fractions) decode empty or near-empty hypotheses and are excluded.}
 \label{tab:s11_noisy_gloss_cross_eval}
 \begin{tabular}{lrrr}
 \toprule
@@ -1434,7 +1434,7 @@ The tables below were relocated from the main text for length (main-text pointer
 Comparison & Family $n$ & Released evaluator & Family range & Released $-$ family max \\
 \midrule
 (i) Gap--competence & 74 & $+10.24$ at dev 13.38 & $[-2.80, -0.21]$ (69 non-deg.) & $+10.45$ \\
-(ii) Train-pool readout BLEU & 38 & 78.8 (70.7\% EM) & 6.6--12.08 (1--2.5\% EM) & $+66.7$ \\
+(ii) Train-pool readout BLEU & 38 & 78.8 (70.7\% EM) & 6.6--12.08 (1.3--2.5\% EM) & $+66.7$ \\
 (iii) Competence gate (dev) & 60 & 13.38 & 6.5--12.62 (seven-correction max 12.62; 1/8 pass) & $+0.76$ \\
 \bottomrule
 \end{tabular}
