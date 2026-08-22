@@ -15,3 +15,4 @@ checkpoints/
 
 # Pose tensors (large; use external storage)
 *.pt
+.zenodo_deposit_state.json
